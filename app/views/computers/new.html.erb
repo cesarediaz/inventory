@@ -1,20 +1,5 @@
 <h1>New computer</h1>
 
-<% form_for(@computer) do |f| %>
-  <%= f.error_messages %>
-
-  <%= f.label 'name' %>  
-  <%= f.text_field :name %>  
-
-  <%= f.label 'mac' %>  
-  <%= f.text_field :mac %>  
-
-  <%= f.label 'ip' %>  
-  <%= f.text_field :ip %>  
-
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
+<%= render :partial => 'form' %>
 
 <%= link_to 'Back', computers_path %>

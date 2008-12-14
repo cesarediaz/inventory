@@ -1,12 +1,6 @@
 <h1>Editing computer</h1>
 
-<% form_for(@computer) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
+<%= render :partial => 'form' %>
 
 <%= link_to 'Show', @computer %> |
 <%= link_to 'Back', computers_path %>
