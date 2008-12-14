@@ -294,3 +294,255 @@ Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/tem
 Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:15:57) [GET]
 Rendering computers/index
 Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:19:24) [GET]
+Rendering computers/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:26:48) [GET]
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:26:53) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 35ms (View: 19, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-14 03:27:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502"}
+  [4;35;1mComputer Create (0.6ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "updated_at", "mac", "ip") VALUES(NULL, '2008-12-14 05:27:37', '2008-12-14 05:27:37', NULL, NULL)[0m
+Redirected to #<Computer:0x7ff990045970>
+Completed in 35ms (DB: 1) | 302 Found [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-14 03:27:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/computers/1]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-14 03:27:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/computers/1/edit]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-14 03:29:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://localhost/computers/1/edit]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:29:47) [GET]
+  [4;35;1mComputer Load (1.1ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:29:58) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:30:43) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 114ms (View: 100, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:31:41) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-14 03:32:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502", "computer"=>{"name"=>"fcecoop10", "mac"=>"12:32:b3:45:23:12", "ip"=>"123.432.234.432"}}
+  [4;36;1mComputer Create (0.6ms)[0m   [0;1mINSERT INTO "computers" ("name", "created_at", "updated_at", "mac", "ip") VALUES('fcecoop10', '2008-12-14 05:32:19', '2008-12-14 05:32:19', '12:32:b3:45:23:12', '123.432.234.432')[0m
+Redirected to #<Computer:0x7ff99033e6b8>
+Completed in 30ms (DB: 1) | 302 Found [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-14 03:32:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 2) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/computers/2]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:32:23) [GET]
+  [4;36;1mComputer Load (1.2ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#destroy (for 127.0.0.1 at 2008-12-14 03:32:55) [DELETE]
+  Parameters: {"authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502", "id"=>"1"}
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+  [4;36;1mComputer Destroy (0.4ms)[0m   [0;1mDELETE FROM "computers" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/computers
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/computers/1]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:32:55) [GET]
+  [4;35;1mComputer Load (0.7ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 88ms (View: 10, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:33:16) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-14 03:33:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;36;1mComputer Create (0.6ms)[0m   [0;1mINSERT INTO "computers" ("name", "created_at", "updated_at", "mac", "ip") VALUES('', '2008-12-14 05:33:18', '2008-12-14 05:33:18', '', '')[0m
+Redirected to #<Computer:0x7ff99031d170>
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-14 03:33:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 3) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/computers/3]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:33:21) [GET]
+  [4;36;1mComputer Load (1.2ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#destroy (for 127.0.0.1 at 2008-12-14 03:33:26) [DELETE]
+  Parameters: {"authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502", "id"=>"3"}
+  [4;35;1mComputer Load (0.7ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 3) [0m
+  [4;36;1mComputer Destroy (0.5ms)[0m   [0;1mDELETE FROM "computers" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/computers
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/computers/3]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-14 03:33:26) [GET]
+  [4;35;1mComputer Load (0.7ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 90ms (View: 9, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:34:09) [GET]
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x7ff9903b1208>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1833:in `method_missing'
+    /app/models/computer.rb:3
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:382:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:381:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:77:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:89:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:95:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:95:in `const_missing'
+    /app/controllers/computers_controller.rb:27:in `new'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (68.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.6ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-14 03:35:16) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-14 03:35:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 25ms (View: 8, DB: 0) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-14 03:35:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ddc14930dd2950c2f8c422806dfb62c2e9b03502", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+Rendering template within layouts/computers
+Rendering computers/new
+Completed in 94ms (View: 7, DB: 0) | 200 OK [http://localhost/computers]

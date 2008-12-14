@@ -1,2 +1,20 @@
-<h1>Computers#new</h1>
-<p>Find me in app/views/computers/new.html.erb</p>
+<h1>New computer</h1>
+
+<% form_for(@computer) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label 'name' %>  
+  <%= f.text_field :name %>  
+
+  <%= f.label 'mac' %>  
+  <%= f.text_field :mac %>  
+
+  <%= f.label 'ip' %>  
+  <%= f.text_field :ip %>  
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', computers_path %>

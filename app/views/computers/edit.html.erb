@@ -1,2 +1,12 @@
-<h1>Computers#edit</h1>
-<p>Find me in app/views/computers/edit.html.erb</p>
+<h1>Editing computer</h1>
+
+<% form_for(@computer) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @computer %> |
+<%= link_to 'Back', computers_path %>
