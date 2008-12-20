@@ -1,0 +1,147 @@
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:15:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:15:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:15:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:15:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:15:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:20:45) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:20:45) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:20:45) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:20:45) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:20:45) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:21:50) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:21:50) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:21:50) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:21:50) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:21:50) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:22:51) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:22:51) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:22:51) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-16 15:22:51) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 15:33:21) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 15:33:21) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 15:33:21) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 15:33:21) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]

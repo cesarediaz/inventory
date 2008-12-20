@@ -1,8 +1,12 @@
 class ComputersController < ApplicationController
-  # GET /computers
-  # GET /computers.xml
+
+
+
   def index
-    @computers = Computer.find(:all)
+    @computers = Computer.paginate(
+         :page => nil,
+         :conditions => nil,
+         :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,8 +14,7 @@ class ComputersController < ApplicationController
     end
   end
 
-  # GET /computers/1
-  # GET /computers/1.xml
+
   def show
     @computer = Computer.find(params[:id])
 
@@ -21,8 +24,7 @@ class ComputersController < ApplicationController
     end
   end
 
-  # GET /computers/new
-  # GET /computers/new.xml
+
   def new
     @computer = Computer.new
 
@@ -32,13 +34,12 @@ class ComputersController < ApplicationController
     end
   end
 
-  # GET /computers/1/edit
+
   def edit
     @computer = Computer.find(params[:id])
   end
 
-  # POST /computers
-  # POST /computers.xml
+
   def create
     @computer = Computer.new(params[:computer])
 
@@ -54,8 +55,7 @@ class ComputersController < ApplicationController
     end
   end
 
-  # PUT /computers/1
-  # PUT /computers/1.xml
+
   def update
     @computer = Computer.find(params[:id])
 
@@ -71,8 +71,7 @@ class ComputersController < ApplicationController
     end
   end
 
-  # DELETE /computers/1
-  # DELETE /computers/1.xml
+
   def destroy
     @computer = Computer.find(params[:id])
     @computer.destroy
