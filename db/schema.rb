@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081221183040) do
+ActiveRecord::Schema.define(:version => 20081221192242) do
 
   create_table "computers", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20081221183040) do
     t.string   "mac"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mother_board_id"
   end
 
   create_table "mother_boards", :force => true do |t|

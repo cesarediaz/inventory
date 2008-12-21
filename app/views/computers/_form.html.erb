@@ -1,17 +1,19 @@
 <% form_for(@computer) do |f| %>
   <%= f.error_messages %>
 
-  <%= f.label 'name' %>  
-  <%= f.text_field :name %>  
+  <%= f.label 'name' %>
+  <%= f.text_field :name %>
 
-  <%= f.label 'mac' %>  
-  <%= f.text_field :mac %>  
+  <%= f.label 'mac' %>
+  <%= f.text_field :mac %>
 
-  <%= f.label 'ip' %>  
-  <%= f.text_field :ip %>  
+  <%= f.label 'ip' %>
+  <%= f.text_field :ip %>
 
+  <%= collection_select 'computer', 'mother_board_id', MotherBoard.find(:all), 'id', 'title',
+      {:prompt => true} %>
   <p>
-    
+
     <% if action_name == 'new' %>
     <%= f.submit "Create" %>
     <% else %>
