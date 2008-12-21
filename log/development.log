@@ -2167,3 +2167,118 @@ Processing ComputersController#index (for 127.0.0.1 at 2008-12-20 16:20:55) [GET
 Rendering template within layouts/computers
 Rendering computers/index
 Completed in 111ms (View: 96, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-20 16:32:34) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (3.8ms)
+Completed in 21ms (View: 10, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-20 16:33:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"999c6a3437436e92f3d4a58a2ae662312d9d8049", "computer"=>{"name"=>"fcecoop10", "mac"=>"23:43:54:23:26:51:86", "ip"=>"23.42.23.43"}}
+  [4;35;1mComputer Exists (0.4ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'fcecoop10') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.42.23.43') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:51:86') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (3.5ms)
+Completed in 29ms (View: 9, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-20 16:33:17) [GET]
+  [4;36;1mComputer Load (1.2ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-20 16:33:26) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (6.2ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-20 16:33:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"999c6a3437436e92f3d4a58a2ae662312d9d8049", "computer"=>{"name"=>"qwerewr", "mac"=>"12:32:b3:45:23:12", "ip"=>"23.42.23.43"}}
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'qwerewr') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.42.23.43') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '12:32:b3:45:23:12') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (77.4ms)
+Completed in 120ms (View: 86, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-20 16:33:42) [GET]
+  [4;36;1mComputer Load (1.3ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 34ms (View: 17, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-20 16:33:57) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (3.7ms)
+Completed in 27ms (View: 10, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-20 16:34:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"999c6a3437436e92f3d4a58a2ae662312d9d8049", "computer"=>{"name"=>"erw", "mac"=>"23:43:54:23:26:51:86", "ip"=>"123.980.224.999"}}
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'erw') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.5ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.980.224.999') LIMIT 1[0m
+  [4;35;1mComputer Exists (1.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:51:86') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (7.5ms)
+Completed in 55ms (View: 17, DB: 2) | 200 OK [http://localhost/computers]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-12-21 15:16:12) [GET]
+
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:18:54) [GET]
+  [4;36;1mComputer Load (1.4ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 53ms (View: 31, DB: 1) | 200 OK [http://localhost/]

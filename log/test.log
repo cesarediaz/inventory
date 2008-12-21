@@ -145,3 +145,27 @@ Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 15:33:21) [GET]
 Rendering template within layouts/computers
 Rendering computers/index
 Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 17:10:28) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 17:10:28) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 17:10:28) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-20 17:10:28) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/computers]
