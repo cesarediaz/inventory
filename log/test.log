@@ -383,3 +383,45 @@ Processing ComputersController#destroy (for 0.0.0.0 at 2008-12-21 15:43:51) [DEL
   Parameters: {"id"=>"1"}
 Redirected to http://test.host/computers
 Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-21 15:59:58) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-21 15:59:58) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-21 15:59:58) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2008-12-21 15:59:58) [GET]
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2008-12-21 15:59:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/computers
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2008-12-21 15:59:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/computers
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2008-12-21 15:59:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/computers
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]

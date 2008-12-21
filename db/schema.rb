@@ -9,12 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081214050839) do
+ActiveRecord::Schema.define(:version => 20081221183040) do
 
   create_table "computers", :force => true do |t|
     t.string   "name"
     t.string   "ip"
     t.string   "mac"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mother_boards", :force => true do |t|
+    t.string   "title"
+    t.string   "serialnumber"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2497,3 +2497,39 @@ Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:57:48) [GET
 Rendering template within layouts/computers
 Rendering computers/index
 Completed in 31ms (View: 16, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-21 16:03:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 25ms (View: 8, DB: 1) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 16:23:31) [GET]
+  [4;35;1mComputer Load (1.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 31ms (View: 16, DB: 2) | 200 OK [http://localhost/computers]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComputers (20081214050839)
+Migrating to CreateMotherBoards (20081221183040)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mCREATE TABLE "mother_boards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "serialnumber" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (620.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081221183040')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("computers")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("mother_boards")[0m

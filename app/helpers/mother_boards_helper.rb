@@ -1,0 +1,2 @@
+module MotherBoardsHelper
+end

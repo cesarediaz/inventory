@@ -1,0 +1,12 @@
+<h1>Editing mother_board</h1>
+
+<% form_for(@mother_board) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @mother_board %> |
+<%= link_to 'Back', mother_boards_path %>
