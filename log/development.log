@@ -2304,3 +2304,196 @@ Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:44:15) [GET
 Rendering template within layouts/computers
 Rendering computers/index
 Completed in 22ms (View: 7, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-21 15:46:14) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (6.7ms)
+Completed in 34ms (View: 17, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-21 15:46:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "computer"=>{"name"=>"mi pc", "mac"=>"23:43:54:23:26:51:86", "ip"=>"123.000.324.23"}}
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'mi pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.000.324.23') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:51:86') LIMIT 1[0m
+  [4;36;1mComputer Create (0.6ms)[0m   [0;1mINSERT INTO "computers" ("name", "created_at", "updated_at", "mac", "ip") VALUES('mi pc', '2008-12-21 17:46:37', '2008-12-21 17:46:37', '23:43:54:23:26:51:86', '123.000.324.23')[0m
+Redirected to #<Computer:0x7fd337aa6100>
+Completed in 38ms (DB: 2) | 302 Found [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-21 15:46:37) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 82ms (View: 73, DB: 0) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:46:41) [GET]
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-21 15:46:44) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (6.5ms)
+Completed in 35ms (View: 17, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-21 15:46:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "computer"=>{"name"=>"otra pc", "mac"=>"23:43:54:23:26:51:86", "ip"=>"123.00q.224.23"}}
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'otra pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.00q.224.23') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:51:86') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (6.4ms)
+Completed in 126ms (View: 19, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-21 15:47:10) [POST]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "computer"=>{"name"=>"otra pc", "mac"=>"23:43:54:23:26:51:82", "ip"=>"123.001.224.23"}}
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'otra pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:51:82') LIMIT 1[0m
+  [4;35;1mComputer Create (0.5ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "updated_at", "mac", "ip") VALUES('otra pc', '2008-12-21 17:47:10', '2008-12-21 17:47:10', '23:43:54:23:26:51:82', '123.001.224.23')[0m
+Redirected to #<Computer:0x7fd337ab8850>
+Completed in 40ms (DB: 1) | 302 Found [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-21 15:47:11) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 5) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 25ms (View: 7, DB: 1) | 200 OK [http://localhost/computers/5]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:47:15) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-21 15:56:34) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.9ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (7.0ms)
+Completed in 35ms (View: 18, DB: 1) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-21 15:56:44) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"4", "computer"=>{"name"=>"mi pc", "mac"=>"23:4.:54:23:26:51:86", "ip"=>"123.000.324.23"}}
+  [4;35;1mComputer Load (0.7ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;36;1mComputer Exists (0.5ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'mi pc' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.000.324.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:4.:54:23:26:51:86' AND "computers".id <> 4) LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (3.3ms)
+Completed in 38ms (View: 9, DB: 2) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-21 15:57:10) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"4", "computer"=>{"name"=>"mi pc", "mac"=>"23:2::54:23:26:51:86", "ip"=>"123.000.324.23"}}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'mi pc' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.000.324.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:2::54:23:26:51:86' AND "computers".id <> 4) LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (3.1ms)
+Completed in 26ms (View: 9, DB: 1) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-21 15:57:15) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"4", "computer"=>{"name"=>"mi pc", "mac"=>"23:22:54:23:26:51:86", "ip"=>"123.000.324.23"}}
+  [4;35;1mComputer Load (0.6ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'mi pc' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.000.324.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51:86' AND "computers".id <> 4) LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (3.8ms)
+Completed in 105ms (View: 82, DB: 1) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-21 15:57:27) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"4", "computer"=>{"name"=>"mi pc", "mac"=>"23:22:54:23:26:51", "ip"=>"123.000.324.23"}}
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'mi pc' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.000.324.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Update (0.4ms)[0m   [0mUPDATE "computers" SET "updated_at" = '2008-12-21 17:57:27', "mac" = '23:22:54:23:26:51' WHERE "id" = 4[0m
+Redirected to #<Computer:0x7fd337d393b8>
+Completed in 34ms (DB: 1) | 302 Found [http://localhost/computers/4]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-21 15:57:27) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:57:30) [GET]
+  [4;35;1mComputer Load (1.4ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 33ms (View: 17, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-21 15:57:34) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 5) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (7.1ms)
+Completed in 35ms (View: 19, DB: 1) | 200 OK [http://localhost/computers/5/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-21 15:57:40) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"5", "computer"=>{"name"=>"otra pc", "mac"=>"23:43:54:23:26:5:", "ip"=>"123.001.224.23"}}
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 5) [0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'otra pc' AND "computers".id <> 5) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 5) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:5:' AND "computers".id <> 5) LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (5.5ms)
+Completed in 47ms (View: 15, DB: 2) | 200 OK [http://localhost/computers/5]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-21 15:57:45) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"5", "computer"=>{"name"=>"otra pc", "mac"=>"23:43:54:23:26:52", "ip"=>"123.001.224.23"}}
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 5) [0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'otra pc' AND "computers".id <> 5) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 5) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:43:54:23:26:52' AND "computers".id <> 5) LIMIT 1[0m
+  [4;35;1mComputer Update (0.4ms)[0m   [0mUPDATE "computers" SET "updated_at" = '2008-12-21 17:57:45', "mac" = '23:43:54:23:26:52' WHERE "id" = 5[0m
+Redirected to #<Computer:0x7fd337d59870>
+Completed in 33ms (DB: 1) | 302 Found [http://localhost/computers/5]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-21 15:57:45) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 5) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/computers/5]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:57:48) [GET]
+  [4;35;1mComputer Load (1.4ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 31ms (View: 16, DB: 1) | 200 OK [http://localhost/computers]
