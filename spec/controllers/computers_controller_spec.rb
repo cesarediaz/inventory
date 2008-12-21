@@ -47,4 +47,34 @@ describe ComputersController do
 
   end
 
+
+  describe "handling DELETE /computers/1" do
+
+    before(:each) do
+      @computer = mock_model(Computer, :destroy => true)
+      Computer.stub!(:find).and_return(@computer)
+      end
+
+    def do_delete
+      delete :destroy, :id => "1"
+    end
+
+    it "should find the computer requested" do
+      Computer.should_receive(:find).with("1").once.and_return(@computer)
+      do_delete
+    end
+
+    it "should call destroy on the found computer" do
+      @computer.should_receive(:destroy)
+      do_delete
+    end
+
+    it "should redirect to home" do
+      do_delete
+      response.should redirect_to(computers_url)
+    end
+  end
+
+
+
 end

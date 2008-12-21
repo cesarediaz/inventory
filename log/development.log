@@ -2282,3 +2282,25 @@ Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:18:54) [GET
 Rendering template within layouts/computers
 Rendering computers/index
 Completed in 53ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:23:00) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ComputersController#destroy (for 127.0.0.1 at 2008-12-21 15:44:15) [DELETE]
+  Parameters: {"authenticity_token"=>"6e2217c821b53d61ab50abad02ad8a84d966b52e", "id"=>"2"}
+  [4;36;1mComputer Load (0.9ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 2) [0m
+  [4;35;1mComputer Destroy (0.6ms)[0m   [0mDELETE FROM "computers" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/computers
+Completed in 673ms (DB: 1) | 302 Found [http://localhost/computers/2]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-21 15:44:15) [GET]
+  [4;36;1mComputer Load (0.8ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Completed in 22ms (View: 7, DB: 1) | 200 OK [http://localhost/computers]
