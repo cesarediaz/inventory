@@ -1,0 +1,19 @@
+<% form_for(@mother_board) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label 'title' %>
+  <%= f.text_field :title %>
+
+  <%= f.label 'serialnumber' %>
+  <%= f.text_field :serialnumber %>
+
+  <p>
+
+    <% if action_name == 'new' %>
+    <%= f.submit "Create" %>
+    <% else %>
+    <%= f.submit "Edit" %>
+    <% end %>
+
+  </p>
+<% end %>
