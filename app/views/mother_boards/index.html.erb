@@ -8,6 +8,7 @@
   <tr>
     <td><%= mother_board.title %></td>
     <td><%= mother_board.serialnumber %></td>
+    <td><%= mother_board.computer.name %></td>
     <td><%= link_to 'Show', mother_board %></td>
     <td><%= link_to 'Edit', edit_mother_board_path(mother_board) %></td>
     <td><%= link_to 'Destroy', mother_board, :confirm => 'Are you sure?', :method => :delete %></td>

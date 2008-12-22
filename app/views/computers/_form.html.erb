@@ -10,9 +10,6 @@
   <%= f.label 'ip' %>
   <%= f.text_field :ip %>
 
-  <%= collection_select 'computer', 'mother_board_id', MotherBoard.find(:all), 'id', 'title',
-      {:prompt => true} %>
-  <p>
 
     <% if action_name == 'new' %>
     <%= f.submit "Create" %>

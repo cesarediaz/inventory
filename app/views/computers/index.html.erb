@@ -1,7 +1,12 @@
 <h1>Listing computers</h1>
 
-<table>
+<table border=1>
   <tr>
+    <td>Pc</td>
+    <td>Mac</td>
+    <td>Ip</td>
+    <td>MBoard</td>
+    <td colspan='3'>Actions</td>
   </tr>
 
 <% for computer in @computers %>
@@ -9,6 +14,7 @@
     <td><%= computer.name %></td>
     <td><%= computer.mac %></td>
     <td><%= computer.ip %></td>
+    <td><%= computer.mother_board.title rescue nil %></td>
     <td><%= link_to 'Show', computer %></td>
     <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
     <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>

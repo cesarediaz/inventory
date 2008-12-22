@@ -7,6 +7,8 @@
   <%= f.label 'serialnumber' %>
   <%= f.text_field :serialnumber %>
 
+  <%= collection_select 'mother_board', 'computer_id', Computer.find(:all), 'id', 'name',
+      {:prompt => true} %>
   <p>
 
     <% if action_name == 'new' %>
