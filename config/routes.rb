@@ -1,10 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :mother_boards
-
-
   map.root :controller => 'computers'
 
   map.resources :computers
+  map.resources :harddisks
+  map.resources :mother_boards
 
   # The priority is based upon order of creation: first created -> highest priority.
 

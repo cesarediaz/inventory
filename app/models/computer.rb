@@ -1,6 +1,7 @@
 class Computer < ActiveRecord::Base
 
   has_one :mother_board
+  has_one :harddisk
 
   #################################################
   # VALIDATIONS

@@ -9,12 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081222113920) do
+ActiveRecord::Schema.define(:version => 20081222124257) do
 
   create_table "computers", :force => true do |t|
     t.string   "name"
     t.string   "ip"
     t.string   "mac"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "harddisks", :force => true do |t|
+    t.string   "model"
+    t.string   "serialnumber"
+    t.integer  "computer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

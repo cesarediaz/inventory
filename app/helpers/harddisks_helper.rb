@@ -1,0 +1,2 @@
+module HarddisksHelper
+end

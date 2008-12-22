@@ -1,0 +1,19 @@
+<% form_for(@harddisk) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label 'model' %>
+  <%= f.text_field :model %>
+
+  <%= f.label 'serialnumber' %>
+  <%= f.text_field :serialnumber %>
+
+  <%= collection_select 'harddisk', 'computer_id', Computer.find(:all), 'id', 'name',
+      {:prompt => true} %>
+  <p>
+    <% if action_name == 'new' %>
+    <%= f.submit "Create" %>
+    <% else %>
+    <%= f.submit "Edit" %>
+    <% end %>
+  </p>
+<% end %>
