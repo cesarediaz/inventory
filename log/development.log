@@ -10910,3 +10910,363 @@ Rendering computers/index
   [4;36;1mCd Load (0.5ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) LIMIT 1[0m
 Rendered shared/_menu (0.2ms)
 Completed in 64ms (View: 46, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 12:09:50) [GET]
+  [4;35;1mComputer Load (1.6ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.8ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.9ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) LIMIT 1[0m
+  [4;36;1mMemory Load (0.8ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) LIMIT 1[0m
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) LIMIT 1[0m
+Rendered shared/_menu (0.3ms)
+Completed in 82ms (View: 61, DB: 5) | 200 OK [http://localhost/computers]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:13:19) [GET]
+  [4;36;1mCd Load (1.3ms)[0m   [0;1mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 39ms (View: 22, DB: 2) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#new (for 127.0.0.1 at 2008-12-23 12:13:22) [GET]
+Rendering template within layouts/cds
+Rendering cds/new
+
+
+ActionView::TemplateError (undefined method `rewritable' for #<Cd:0x7fc0ddbaa518>) on line #9 of app/views/cds/_form.html.erb:
+6:   <%= f.label 'serialnumber' %>
+7:   <%= f.text_field :serialnumber %>
+8: 
+9:   <%= radio_button('cd', 'rewritable', 'yes') %>
+10:   <%= radio_button('cd', 'rewritable', 'no') %>
+11: 
+12: 
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:646:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:646:in `value'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:637:in `value'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:574:in `to_radio_button_tag'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:516:in `radio_button'
+    app/views/cds/_form.html.erb:9
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/cds/_form.html.erb:1
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:20:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:19:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/partials.rb:152:in `render_partial'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:258:in `render'
+    app/views/cds/new.html.erb:3
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/cds_controller.rb:29:in `new'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (56.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CdsController#new (for 127.0.0.1 at 2008-12-23 12:14:00) [GET]
+Rendering template within layouts/cds
+Rendering cds/new
+  [4;36;1mComputer Load (0.9ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendered cds/_form (28.2ms)
+Rendered shared/_menu (0.3ms)
+Completed in 57ms (View: 39, DB: 1) | 200 OK [http://localhost/cds/new]
+
+
+Processing CdsController#new (for 127.0.0.1 at 2008-12-23 12:14:32) [GET]
+Rendering template within layouts/cds
+Rendering cds/new
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendered cds/_form (18.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 36ms (View: 26, DB: 1) | 200 OK [http://localhost/cds/new]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:14:38) [GET]
+  [4;36;1mCd Load (1.2ms)[0m   [0;1mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;35;1mComputer Load (0.7ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 51ms (View: 36, DB: 2) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#edit (for 127.0.0.1 at 2008-12-23 12:14:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCd Load (0.5ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/edit
+  [4;35;1mComputer Load (0.6ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendered cds/_form (20.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 29, DB: 0) | 200 OK [http://localhost/cds/1/edit]
+
+
+Processing CdsController#update (for 127.0.0.1 at 2008-12-23 12:14:47) [PUT]
+  Parameters: {"cd"=>{"computer_id"=>"4", "model"=>"sonny 343", "writable"=>"yes", "serialnumber"=>"234234234"}, "commit"=>"Edit", "authenticity_token"=>"c95c1b98143362cc341759884233b22c148aedfb", "id"=>"1"}
+  [4;36;1mCd Load (0.5ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+  [4;35;1mCd Update (0.3ms)[0m   [0mUPDATE "cds" SET "updated_at" = '2008-12-23 14:14:47', "writable" = 'f' WHERE "id" = 1[0m
+Redirected to #<Cd:0x7fc0ddc89628>
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/cds/1]
+
+
+Processing CdsController#show (for 127.0.0.1 at 2008-12-23 12:14:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCd Load (0.4ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/show
+Rendered shared/_menu (0.2ms)
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/cds/1]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:14:49) [GET]
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;36;1mComputer Load (0.6ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 23, DB: 1) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:15:41) [GET]
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#edit (for 127.0.0.1 at 2008-12-23 12:15:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/edit
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendered cds/_form (97.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 116ms (View: 107, DB: 0) | 200 OK [http://localhost/cds/1/edit]
+
+
+Processing CdsController#update (for 127.0.0.1 at 2008-12-23 12:15:58) [PUT]
+  Parameters: {"cd"=>{"computer_id"=>"4", "model"=>"sonny 343", "writable"=>"no", "serialnumber"=>"234234234"}, "commit"=>"Edit", "authenticity_token"=>"c95c1b98143362cc341759884233b22c148aedfb", "id"=>"1"}
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Redirected to #<Cd:0x7fc0ddd62888>
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/cds/1]
+
+
+Processing CdsController#show (for 127.0.0.1 at 2008-12-23 12:15:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCd Load (0.5ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/show
+Rendered shared/_menu (0.2ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/cds/1]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:16:00) [GET]
+  [4;35;1mCd Load (1.2ms)[0m   [0mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 128ms (View: 112, DB: 2) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#edit (for 127.0.0.1 at 2008-12-23 12:16:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/edit
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendered cds/_form (18.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 37ms (View: 27, DB: 0) | 200 OK [http://localhost/cds/1/edit]
+
+
+Processing CdsController#update (for 127.0.0.1 at 2008-12-23 12:16:36) [PUT]
+  Parameters: {"cd"=>{"computer_id"=>"4", "model"=>"sonny 343", "writable"=>"yes", "serialnumber"=>"234234234"}, "commit"=>"Edit", "authenticity_token"=>"c95c1b98143362cc341759884233b22c148aedfb", "id"=>"1"}
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Redirected to #<Cd:0x7fc0ddb3f4e8>
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/cds/1]
+
+
+Processing CdsController#show (for 127.0.0.1 at 2008-12-23 12:16:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCd Load (0.8ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/show
+Rendered shared/_menu (0.2ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://localhost/cds/1]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:16:38) [GET]
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 23, DB: 1) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#edit (for 127.0.0.1 at 2008-12-23 12:17:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/edit
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendered cds/_form (15.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 24, DB: 1) | 200 OK [http://localhost/cds/1/edit]
+
+
+Processing CdsController#update (for 127.0.0.1 at 2008-12-23 12:17:16) [PUT]
+  Parameters: {"cd"=>{"computer_id"=>"4", "model"=>"sonny 343", "writable"=>"t", "serialnumber"=>"234234234"}, "commit"=>"Edit", "authenticity_token"=>"c95c1b98143362cc341759884233b22c148aedfb", "id"=>"1"}
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+  [4;36;1mCd Update (0.3ms)[0m   [0;1mUPDATE "cds" SET "updated_at" = '2008-12-23 14:17:16', "writable" = 't' WHERE "id" = 1[0m
+Redirected to #<Cd:0x7fc0dde0f948>
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/cds/1]
+
+
+Processing CdsController#show (for 127.0.0.1 at 2008-12-23 12:17:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/show
+Rendered shared/_menu (0.3ms)
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/cds/1]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:17:21) [GET]
+  [4;36;1mCd Load (1.3ms)[0m   [0;1mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 46ms (View: 30, DB: 2) | 200 OK [http://localhost/cds]
+
+
+Processing CdsController#edit (for 127.0.0.1 at 2008-12-23 12:17:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/edit
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendered cds/_form (19.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 38ms (View: 28, DB: 1) | 200 OK [http://localhost/cds/1/edit]
+
+
+Processing CdsController#update (for 127.0.0.1 at 2008-12-23 12:17:33) [PUT]
+  Parameters: {"cd"=>{"computer_id"=>"4", "model"=>"sonny 343", "writable"=>"f", "serialnumber"=>"234234234"}, "commit"=>"Edit", "authenticity_token"=>"c95c1b98143362cc341759884233b22c148aedfb", "id"=>"1"}
+  [4;36;1mCd Load (0.5ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+  [4;35;1mCd Update (0.3ms)[0m   [0mUPDATE "cds" SET "updated_at" = '2008-12-23 14:17:33', "writable" = 'f' WHERE "id" = 1[0m
+Redirected to #<Cd:0x7fc0ddc37760>
+Completed in 23ms (DB: 1) | 302 Found [http://localhost/cds/1]
+
+
+Processing CdsController#show (for 127.0.0.1 at 2008-12-23 12:17:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCd Load (0.4ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds"."id" = 1) [0m
+Rendering template within layouts/cds
+Rendering cds/show
+Rendered shared/_menu (0.2ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/cds/1]
+
+
+Processing CdsController#index (for 127.0.0.1 at 2008-12-23 12:17:38) [GET]
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" [0m
+Rendering template within layouts/cds
+Rendering cds/index
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 23, DB: 1) | 200 OK [http://localhost/cds]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 12:18:26) [GET]
+  [4;35;1mComputer Load (1.1ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) LIMIT 1[0m
+  [4;36;1mMemory Load (0.5ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) LIMIT 1[0m
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 61ms (View: 41, DB: 3) | 200 OK [http://localhost/computers]
