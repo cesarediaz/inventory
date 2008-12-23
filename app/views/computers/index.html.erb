@@ -7,6 +7,8 @@
     <td>Ip</td>
     <td>MBoard</td>
     <td>Harddisk</td>
+    <td>Memory</td>
+    <td>Cd</td>
     <td colspan='3'>Actions</td>
   </tr>
 
@@ -17,6 +19,8 @@
     <td><%= computer.ip %></td>
     <td><%= computer.mother_board.title rescue nil %></td>
     <td><%= computer.harddisk.model rescue nil %></td>
+    <td><%= computer.memory.model rescue nil %></td>
+    <td><%= computer.cd.model rescue nil %></td>
     <td><%= link_to 'Show', computer %></td>
     <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
     <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>

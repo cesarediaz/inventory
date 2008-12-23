@@ -2,6 +2,8 @@ class Computer < ActiveRecord::Base
 
   has_one :mother_board ,  :dependent => :nullify
   has_one :harddisk, :dependent => :nullify
+  has_one :memory, :dependent => :nullify
+  has_one :cd, :dependent => :nullify
 
   #################################################
   # VALIDATIONS

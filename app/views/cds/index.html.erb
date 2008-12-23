@@ -1,0 +1,25 @@
+<h1>Listing cds</h1>
+
+
+<table border='1' >
+  <tr>
+    <td>Model</td>
+    <td>SN</td>
+    <td>Computer</td>
+    <td colspan='3' align='center' >Actions</td>
+  </tr>
+<% for cd in @cds %>
+  <tr>
+    <td><%= cd.model %></td>
+    <td><%= cd.serialnumber %></td>
+    <td><%= cd.computer.name rescue nil %></td>
+    <td><%= link_to 'Show', cd %></td>
+    <td><%= link_to 'Edit', edit_cd_path(cd) %></td>
+    <td><%= link_to 'Destroy', cd, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cd', new_cd_path %>

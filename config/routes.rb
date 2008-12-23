@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :cds
+
+  map.resources :memories
+
   map.root :controller => 'computers'
 
   map.resources :computers

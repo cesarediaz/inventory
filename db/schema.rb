@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081222124257) do
+ActiveRecord::Schema.define(:version => 20081223134345) do
+
+  create_table "cds", :force => true do |t|
+    t.string   "model"
+    t.string   "serialnumber"
+    t.boolean  "writable"
+    t.integer  "computer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "computers", :force => true do |t|
     t.string   "name"
@@ -25,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20081222124257) do
     t.integer  "computer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "memories", :force => true do |t|
+    t.string   "model"
+    t.string   "serialnumber"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "computer_id"
   end
 
   create_table "mother_boards", :force => true do |t|
