@@ -12,7 +12,7 @@
   <tr>
     <td><%= harddisk.model %></td>
     <td><%= harddisk.serialnumber %></td>
-    <td><%= harddisk.computer.name %></td>
+    <td><%= harddisk.computer.name  rescue nil %></td>
     <td><%= link_to 'Show', harddisk %></td>
     <td><%= link_to 'Edit', edit_harddisk_path(harddisk) %></td>
     <td><%= link_to 'Destroy', harddisk, :confirm => 'Are you sure?', :method => :delete %></td>

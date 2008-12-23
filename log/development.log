@@ -9124,3 +9124,503 @@ Rendering harddisks/index
   [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
 Rendered shared/_menu (0.2ms)
 Completed in 27ms (View: 18, DB: 1) | 200 OK [http://localhost/harddisks]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-22 12:05:21) [GET]
+  [4;36;1mHarddisk Load (1.1ms)[0m   [0;1mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 40ms (View: 25, DB: 2) | 200 OK [http://localhost/harddisks]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:05:24) [GET]
+  [4;36;1mComputer Load (0.8ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 1) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 1) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 38ms (View: 26, DB: 2) | 200 OK [http://localhost/computers]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-22 12:05:27) [GET]
+  [4;35;1mHarddisk Load (0.7ms)[0m   [0mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://localhost/harddisks]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:06:08) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.6ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 1) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 1) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 36ms (View: 26, DB: 2) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#destroy (for 127.0.0.1 at 2008-12-22 12:14:05) [DELETE]
+  Parameters: {"authenticity_token"=>"4a076bff18cb68e78b10cb9c19e2fa441acaa30e", "id"=>"1"}
+  [4;36;1mComputer Load (0.6ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 1) [0m
+  [4;35;1mMotherBoard Load (0.6ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 1) LIMIT 1[0m
+  [4;36;1mMotherBoard Destroy (0.4ms)[0m   [0;1mDELETE FROM "mother_boards" WHERE "id" = 7[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 1) LIMIT 1[0m
+  [4;36;1mHarddisk Destroy (0.3ms)[0m   [0;1mDELETE FROM "harddisks" WHERE "id" = 2[0m
+  [4;35;1mComputer Destroy (0.2ms)[0m   [0mDELETE FROM "computers" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/computers
+Completed in 47ms (DB: 3) | 302 Found [http://localhost/computers/1]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:14:05) [GET]
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Rendered shared/_menu (0.2ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:14:08) [GET]
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Rendered shared/_menu (0.2ms)
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-22 12:14:11) [GET]
+  [4;36;1mMotherBoard Load (0.8ms)[0m   [0;1mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+Rendered shared/_menu (0.4ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/mother_boards]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-22 12:14:13) [GET]
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+Rendered shared/_menu (0.2ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/harddisks]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:14:15) [GET]
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Rendered shared/_menu (0.2ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-22 12:14:18) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (3.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-22 12:14:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4a076bff18cb68e78b10cb9c19e2fa441acaa30e", "computer"=>{"name"=>"cesar", "mac"=>"12:32:b3:45:23:12", "ip"=>"123.001.224.23"}}
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'cesar') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '12:32:b3:45:23:12') LIMIT 1[0m
+  [4;36;1mComputer Create (0.3ms)[0m   [0;1mINSERT INTO "computers" ("name", "created_at", "updated_at", "mac", "ip") VALUES('cesar', '2008-12-22 14:14:30', '2008-12-22 14:14:30', '12:32:b3:45:23:12', '123.001.224.23')[0m
+Redirected to #<Computer:0x7fba5e833978>
+Completed in 69ms (DB: 1) | 302 Found [http://localhost/computers]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-22 12:14:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 2) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Rendered shared/_menu (0.3ms)
+Completed in 18ms (View: 7, DB: 0) | 200 OK [http://localhost/computers/2]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:14:33) [GET]
+  [4;36;1mComputer Load (1.3ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.4ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.4ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.4ms)
+Completed in 53ms (View: 36, DB: 2) | 200 OK [http://localhost/computers]
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-22 12:14:35) [GET]
+  [4;35;1mMotherBoard Load (0.8ms)[0m   [0mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+Rendered shared/_menu (0.4ms)
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/mother_boards]
+
+
+Processing MotherBoardsController#new (for 127.0.0.1 at 2008-12-22 12:14:38) [GET]
+Rendering template within layouts/mother_boards
+Rendering mother_boards/new
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendered mother_boards/_form (91.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 107ms (View: 98, DB: 0) | 200 OK [http://localhost/mother_boards/new]
+
+
+Processing MotherBoardsController#create (for 127.0.0.1 at 2008-12-22 12:14:47) [POST]
+  Parameters: {"mother_board"=>{"computer_id"=>"2", "title"=>"asus", "serialnumber"=>"111111111111"}, "commit"=>"Create", "authenticity_token"=>"4a076bff18cb68e78b10cb9c19e2fa441acaa30e"}
+  [4;35;1mMotherBoard Exists (0.2ms)[0m   [0mSELECT "mother_boards".id FROM "mother_boards" WHERE ("mother_boards"."serialnumber" = '111111111111') LIMIT 1[0m
+  [4;36;1mMotherBoard Create (0.4ms)[0m   [0;1mINSERT INTO "mother_boards" ("computer_id", "created_at", "title", "updated_at", "serialnumber") VALUES(2, '2008-12-22 14:14:47', 'asus', '2008-12-22 14:14:47', '111111111111')[0m
+Redirected to #<MotherBoard:0x7fba5ea9b170>
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/mother_boards]
+
+
+Processing MotherBoardsController#show (for 127.0.0.1 at 2008-12-22 12:14:48) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards"."id" = 8) [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/show
+Rendered shared/_menu (0.3ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/mother_boards/8]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-22 12:14:50) [GET]
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+Rendered shared/_menu (0.2ms)
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/harddisks]
+
+
+Processing HarddisksController#new (for 127.0.0.1 at 2008-12-22 12:14:53) [GET]
+Rendering template within layouts/harddisks
+Rendering harddisks/new
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" [0m
+Rendered harddisks/_form (85.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 104ms (View: 92, DB: 0) | 200 OK [http://localhost/harddisks/new]
+
+
+Processing HarddisksController#create (for 127.0.0.1 at 2008-12-22 12:15:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4a076bff18cb68e78b10cb9c19e2fa441acaa30e", "harddisk"=>{"computer_id"=>"2", "model"=>"wdigital", "serialnumber"=>"123421123"}}
+  [4;36;1mHarddisk Create (0.4ms)[0m   [0;1mINSERT INTO "harddisks" ("model", "computer_id", "created_at", "updated_at", "serialnumber") VALUES('wdigital', 2, '2008-12-22 14:15:03', '2008-12-22 14:15:03', '123421123')[0m
+Redirected to #<Harddisk:0x7fba5ea954c8>
+Completed in 23ms (DB: 0) | 302 Found [http://localhost/harddisks]
+
+
+Processing HarddisksController#show (for 127.0.0.1 at 2008-12-22 12:15:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mHarddisk Load (0.4ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks"."id" = 3) [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/show
+Rendered shared/_menu (0.2ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/harddisks/3]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-22 12:15:06) [GET]
+  [4;36;1mComputer Load (0.8ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.6ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 44ms (View: 28, DB: 2) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 09:12:23) [GET]
+  [4;36;1mComputer Load (0.9ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.6ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.7ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.4ms)
+Completed in 166ms (View: 112, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 09:12:27) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 10:17:57) [GET]
+  [4;36;1mComputer Load (1.2ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.8ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.8ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.7ms)
+Completed in 116ms (View: 81, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 10:46:01) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 38ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 10:46:05) [GET]
+  [4;36;1mComputer Load (1.4ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.7ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Load (1.0ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.3ms)
+Completed in 63ms (View: 44, DB: 3) | 200 OK [http://localhost/computers]
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-23 10:46:06) [GET]
+  [4;35;1mMotherBoard Load (1.1ms)[0m   [0mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+  [4;36;1mComputer Load (0.9ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 2) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 87ms (View: 72, DB: 2) | 200 OK [http://localhost/mother_boards]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-23 10:46:09) [GET]
+  [4;35;1mHarddisk Load (1.2ms)[0m   [0mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+  [4;36;1mComputer Load (1.1ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 2) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 65ms (View: 42, DB: 2) | 200 OK [http://localhost/harddisks]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 10:46:11) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+Rendered shared/_menu (0.2ms)
+Completed in 37ms (View: 27, DB: 2) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#destroy (for 127.0.0.1 at 2008-12-23 10:46:19) [DELETE]
+  Parameters: {"authenticity_token"=>"c95c1b98143362cc341759884233b22c148aedfb", "id"=>"2"}
+  [4;36;1mComputer Load (0.6ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 2) [0m
+  [4;35;1mMotherBoard Load (0.6ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mMotherBoard Update (0.5ms)[0m   [0;1mUPDATE "mother_boards" SET "updated_at" = '2008-12-23 12:46:19', "computer_id" = NULL WHERE "id" = 8[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Update (0.3ms)[0m   [0;1mUPDATE "harddisks" SET "updated_at" = '2008-12-23 12:46:19', "computer_id" = NULL WHERE "id" = 3[0m
+  [4;35;1mComputer Destroy (0.2ms)[0m   [0mDELETE FROM "computers" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/computers
+Completed in 859ms (DB: 3) | 302 Found [http://localhost/computers/2]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-23 10:46:20) [GET]
+  [4;36;1mComputer Load (0.6ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+Rendered shared/_menu (0.2ms)
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-23 10:46:23) [GET]
+  [4;35;1mMotherBoard Load (1.2ms)[0m   [0mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #15 of app/views/mother_boards/index.html.erb:
+12:   <tr>
+13:     <td><%= mother_board.title %></td>
+14:     <td><%= mother_board.serialnumber %></td>
+15:     <td><%= mother_board.computer.name %></td>
+16:     <td><%= link_to 'Show', mother_board %></td>
+17:     <td><%= link_to 'Edit', edit_mother_board_path(mother_board) %></td>
+18:     <td><%= link_to 'Destroy', mother_board, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/mother_boards/index.html.erb:15
+    app/views/mother_boards/index.html.erb:11:in `each'
+    app/views/mother_boards/index.html.erb:11
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/mother_boards_controller.rb:7:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (75.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (81.6ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-23 10:47:03) [GET]
+  [4;36;1mMotherBoard Load (0.7ms)[0m   [0;1mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+Rendered shared/_menu (0.2ms)
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://localhost/mother_boards]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-23 10:47:06) [GET]
+  [4;35;1mHarddisk Load (1.0ms)[0m   [0mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #15 of app/views/harddisks/index.html.erb:
+12:   <tr>
+13:     <td><%= harddisk.model %></td>
+14:     <td><%= harddisk.serialnumber %></td>
+15:     <td><%= harddisk.computer.name %></td>
+16:     <td><%= link_to 'Show', harddisk %></td>
+17:     <td><%= link_to 'Edit', edit_harddisk_path(harddisk) %></td>
+18:     <td><%= link_to 'Destroy', harddisk, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/harddisks/index.html.erb:15
+    app/views/harddisks/index.html.erb:11:in `each'
+    app/views/harddisks/index.html.erb:11
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/harddisks_controller.rb:7:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (116.4ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-23 10:47:41) [GET]
+  [4;36;1mHarddisk Load (1.1ms)[0m   [0;1mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+Rendered shared/_menu (0.5ms)
+Completed in 43ms (View: 28, DB: 1) | 200 OK [http://localhost/harddisks]
