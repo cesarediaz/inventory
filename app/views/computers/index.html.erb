@@ -20,7 +20,7 @@
     <td><%= computer.mother_board.title rescue nil %></td>
     <td><%= computer.harddisk.model rescue nil %></td>
     <td><%= computer.memory.model rescue nil %></td>
-    <td><%= computer.cd.model rescue nil %></td>
+    <td><%= computer.cd.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= link_to 'Show', computer %></td>
     <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
     <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>
