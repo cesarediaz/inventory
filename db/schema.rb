@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081223134345) do
+ActiveRecord::Schema.define(:version => 20081224172121) do
 
   create_table "cds", :force => true do |t|
     t.string   "model"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20081223134345) do
     t.string   "name"
     t.string   "ip"
     t.string   "mac"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dvds", :force => true do |t|
+    t.string   "model"
+    t.string   "serialnumber"
+    t.boolean  "writable"
+    t.integer  "computer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

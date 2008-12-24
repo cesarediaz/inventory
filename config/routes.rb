@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :dvds
+
   map.resources :cds
 
   map.resources :memories

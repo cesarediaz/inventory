@@ -1,0 +1,26 @@
+<h1>Listing dvds</h1>
+
+
+<table border='1' >
+  <tr>
+    <td>Model</td>
+    <td>SN</td>
+    <td>Computer</td>
+    <td colspan='3' align='center' >Actions</td>
+  </tr>
+
+<% for dvd in @dvds %>
+  <tr>
+    <td><%= dvd.model %></td>
+    <td><%= dvd.serialnumber %></td>
+    <td><%= dvd.computer.name rescue nil %></td>
+    <td><%= link_to 'Show', dvd %></td>
+    <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>
+    <td><%= link_to 'Destroy', dvd, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dvd', new_dvd_path %>

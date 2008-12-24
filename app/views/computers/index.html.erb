@@ -9,6 +9,7 @@
     <td>Harddisk</td>
     <td>Memory</td>
     <td>Cd</td>
+    <td>Dvd</td>
     <td colspan='3'>Actions</td>
   </tr>
 
@@ -21,6 +22,7 @@
     <td><%= computer.harddisk.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= computer.memory.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= computer.cd.collect {|x| x.model + '<br>' } rescue nil %></td>
+    <td><%= computer.dvd.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= link_to 'Show', computer %></td>
     <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
     <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>

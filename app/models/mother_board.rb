@@ -1,5 +1,4 @@
 class MotherBoard < ActiveRecord::Base
-
   belongs_to :computer
 
   #################################################
