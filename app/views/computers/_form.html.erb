@@ -1,21 +1,32 @@
 <% form_for(@computer) do |f| %>
-  <%= f.error_messages %>
+<fieldset>
+  <legend>Data computer</legend>
 
-  <%= f.label 'name' %>
-  <%= f.text_field :name %>
+<%= f.error_messages %>
 
-  <%= f.label 'mac' %>
-  <%= f.text_field :mac %>
+  <fieldset>
+    <legend>Pc data</legend>
+    <%= f.label 'name' %>
+    <%= f.text_field :name %>
 
-  <%= f.label 'ip' %>
-  <%= f.text_field :ip %>
+    <%= f.label 'mac' %>
+    <%= f.text_field :mac %>
 
+    <%= f.label 'ip' %>
+    <%= f.text_field :ip %>
+  </fieldset>
 
-    <% if action_name == 'new' %>
-    <%= f.submit "Create" %>
-    <% else %>
-    <%= f.submit "Edit" %>
-    <% end %>
+  <fieldset>
+    <legend>Available</legend>
+    Yes <%= radio_button('computer', 'available', 't') %>
+    Not<%= radio_button('computer', 'available', 'f') %>
+  </fieldset>
 
-  </p>
+  <% if action_name == 'new' %>
+  <%= f.submit "Create" %>
+  <% else %>
+  <%= f.submit "Edit" %>
+  <% end %>
+</fieldset>
+
 <% end %>

@@ -12018,3 +12018,755 @@ Rendering computers/index
   [4;36;1mDvd Load (0.7ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
 Rendered shared/_menu (0.2ms)
 Completed in 157ms (View: 56, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:38:11) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 68ms (View: 51, DB: 3) | 200 OK [http://localhost/computers]
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComputers (20081214050839)
+Migrating to CreateMotherBoards (20081221183040)
+Migrating to AddMotherboardIdInComputers (20081221192242)
+Migrating to DeleteFieldMotherBoardIdFromComputer (20081222113721)
+Migrating to AddFieldComputerIdInMotherboard (20081222113920)
+Migrating to CreateHarddisks (20081222124257)
+Migrating to CreateMemories (20081223124953)
+Migrating to AddMemoryIdInComputers (20081223130236)
+Migrating to CreateCds (20081223134345)
+Migrating to CreateDvds (20081224172121)
+Migrating to AddAvailableFieldForComputers (20081224174008)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (8.2ms)[0m   [0mALTER TABLE "computers" ADD "available" boolean DEFAULT 't'[0m
+  [4;36;1mSQL (577.4ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081224174008')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("cds")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("computers")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("dvds")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("harddisks")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("memories")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("mother_boards")[0m
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:43:05) [GET]
+  [4;35;1mComputer Load (1.5ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.6ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.7ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 79ms (View: 54, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:44:04) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.7ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 146ms (View: 132, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:46:30) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.6ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.5ms)
+Completed in 72ms (View: 51, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 15:46:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (4.7ms)
+Rendered shared/_menu (0.4ms)
+Completed in 76ms (View: 61, DB: 0) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-24 15:46:42) [PUT]
+  Parameters: {"cd"=>{"available"=>"f"}, "commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "id"=>"4", "computer"=>{"name"=>"cesar", "mac"=>"23:22:54:23:26:51", "ip"=>"123.001.224.23"}}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'cesar' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+Redirected to #<Computer:0x7fe81f014f78>
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/computers/4]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-24 15:46:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Rendered shared/_menu (0.2ms)
+Completed in 63ms (View: 49, DB: 0) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:46:46) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 71ms (View: 54, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:47:08) [GET]
+  [4;35;1mComputer Load (1.4ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.7ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.9ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (1.1ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (1.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 174ms (View: 148, DB: 6) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 15:47:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (4.6ms)
+Rendered shared/_menu (0.3ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-24 15:47:17) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "id"=>"4", "computer"=>{"name"=>"cesar", "available"=>"f", "mac"=>"23:22:54:23:26:51", "ip"=>"123.001.224.23"}}
+  [4;36;1mComputer Load (1.8ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'cesar' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Update (0.3ms)[0m   [0;1mUPDATE "computers" SET "updated_at" = '2008-12-24 17:47:17', "available" = 'f' WHERE "id" = 4[0m
+Redirected to #<Computer:0x7fe81eef20a0>
+Completed in 30ms (DB: 3) | 302 Found [http://localhost/computers/4]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-24 15:47:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Rendered shared/_menu (0.2ms)
+Completed in 23ms (View: 6, DB: 1) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:47:20) [GET]
+  [4;36;1mComputer Load (1.6ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.8ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.9ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.8ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 98ms (View: 72, DB: 5) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 15:47:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (5.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-24 15:47:30) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "id"=>"4", "computer"=>{"name"=>"cesar", "available"=>"t", "mac"=>"23:22:54:23:26:51", "ip"=>"123.001.224.23"}}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'cesar' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Update (0.3ms)[0m   [0mUPDATE "computers" SET "updated_at" = '2008-12-24 17:47:30', "available" = 't' WHERE "id" = 4[0m
+Redirected to #<Computer:0x7fe81f097c48>
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/computers/4]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-24 15:47:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.6ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Rendered shared/_menu (0.3ms)
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:47:32) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (1.0ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 74ms (View: 56, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-24 15:51:23) [GET]
+  [4;35;1mMotherBoard Load (0.7ms)[0m   [0mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 33ms (View: 23, DB: 1) | 200 OK [http://localhost/mother_boards]
+
+
+Processing HarddisksController#index (for 127.0.0.1 at 2008-12-24 15:51:25) [GET]
+  [4;35;1mHarddisk Load (1.0ms)[0m   [0mSELECT * FROM "harddisks" [0m
+Rendering template within layouts/harddisks
+Rendering harddisks/index
+  [4;36;1mComputer Load (0.6ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 43ms (View: 31, DB: 2) | 200 OK [http://localhost/harddisks]
+
+
+Processing MemoriesController#index (for 127.0.0.1 at 2008-12-24 15:51:26) [GET]
+  [4;35;1mMemory Load (0.8ms)[0m   [0mSELECT * FROM "memories" [0m
+Rendering template within layouts/memories
+Rendering memories/index
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 35ms (View: 24, DB: 1) | 200 OK [http://localhost/memories]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:51:33) [GET]
+  [4;36;1mComputer Load (1.1ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.7ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 151ms (View: 60, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 15:52:12) [GET]
+  [4;36;1mComputer Load (1.0ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.7ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.7ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 67ms (View: 51, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing MotherBoardsController#index (for 127.0.0.1 at 2008-12-24 15:52:15) [GET]
+  [4;36;1mMotherBoard Load (1.5ms)[0m   [0;1mSELECT * FROM "mother_boards" [0m
+Rendering template within layouts/mother_boards
+Rendering mother_boards/index
+  [4;35;1mComputer Load (0.5ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 26, DB: 2) | 200 OK [http://localhost/mother_boards]
+
+
+Processing MotherBoardsController#new (for 127.0.0.1 at 2008-12-24 15:52:17) [GET]
+Rendering template within layouts/mother_boards
+Rendering mother_boards/new
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" [0m
+Rendered mother_boards/_form (34.4ms)
+Rendered shared/_menu (0.4ms)
+Completed in 697ms (View: 686, DB: 1) | 200 OK [http://localhost/mother_boards/new]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:13:05) [GET]
+  [4;35;1mComputer Load (1.1ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.7ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.9ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 72ms (View: 55, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:13:33) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (7.3ms)
+Rendered shared/_menu (0.3ms)
+Completed in 76ms (View: 64, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:14:24) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (5.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:14:38) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:15:28) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (82.9ms)
+Rendered shared/_menu (0.3ms)
+Completed in 117ms (View: 94, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:17:38) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:19:04) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 11, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:19:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (7.4ms)
+Rendered shared/_menu (0.4ms)
+Completed in 166ms (View: 20, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:19:24) [GET]
+  [4;36;1mComputer Load (0.8ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.7ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (1.1ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.8ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 71ms (View: 55, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:19:26) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 29ms (View: 12, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:20:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.5ms)
+Rendered shared/_menu (0.3ms)
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:21:38) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (5.0ms)
+Rendered shared/_menu (0.3ms)
+Completed in 31ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:22:13) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.8ms)
+Rendered shared/_menu (0.4ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:22:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (3.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 38ms (View: 12, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:22:24) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 74ms (View: 57, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 16:22:29) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (9.4ms)
+Rendered shared/_menu (0.3ms)
+Completed in 48ms (View: 24, DB: 1) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:22:34) [GET]
+  [4;36;1mComputer Load (1.2ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.6ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.7ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.7ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 152ms (View: 59, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:22:36) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:22:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.3ms)
+Rendered shared/_menu (0.4ms)
+Completed in 125ms (View: 13, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:22:59) [POST]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 11, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:23:04) [GET]
+  [4;36;1mComputer Load (0.8ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.7ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 151ms (View: 135, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 16:23:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (6.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:24:39) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (1.1ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.7ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 149ms (View: 133, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 16:24:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (6.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 29ms (View: 15, DB: 0) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-24 16:24:47) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "id"=>"4", "computer"=>{"name"=>"cesar", "mac"=>"23:22:54:23:26:51", "ip"=>"123.001.224.23"}}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'cesar' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+Redirected to #<Computer:0x7fe81eef5610>
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/computers/4]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-24 16:24:47) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Rendered shared/_menu (0.2ms)
+Completed in 22ms (View: 6, DB: 0) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:24:52) [GET]
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.9ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 68ms (View: 52, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:24:56) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (5.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:24:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (3.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 12, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:26:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (5.4ms)
+Rendered shared/_menu (0.3ms)
+Completed in 48ms (View: 14, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:26:06) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (1.0ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 72ms (View: 55, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:26:10) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 27ms (View: 12, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:26:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (4.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 11, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:26:26) [GET]
+  [4;36;1mComputer Load (1.4ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.3ms)
+Completed in 87ms (View: 62, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#new (for 127.0.0.1 at 2008-12-24 16:26:29) [GET]
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (5.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/new]
+
+
+Processing ComputersController#create (for 127.0.0.1 at 2008-12-24 16:26:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "computer"=>{"name"=>"", "mac"=>"", "ip"=>""}}
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '') LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/new
+Rendered computers/_form (5.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 37ms (View: 13, DB: 1) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:26:33) [GET]
+  [4;35;1mComputer Load (1.0ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.8ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 150ms (View: 58, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 16:26:40) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (0.4ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (4.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 13, DB: 0) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-24 16:26:43) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "id"=>"4", "computer"=>{"name"=>"cesar", "mac"=>"23:22:54:23:26:51", "ip"=>"123.001.224.23"}}
+  [4;36;1mComputer Load (0.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'cesar' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+Redirected to #<Computer:0x7fe81f2e5860>
+Completed in 95ms (DB: 1) | 302 Found [http://localhost/computers/4]
+
+
+Processing ComputersController#show (for 127.0.0.1 at 2008-12-24 16:26:43) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mComputer Load (0.4ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/show
+Rendered shared/_menu (0.2ms)
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-24 16:26:47) [GET]
+  [4;35;1mComputer Load (0.9ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.4ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (1.1ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered shared/_menu (0.2ms)
+Completed in 167ms (View: 150, DB: 4) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2008-12-24 16:26:50) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mComputer Load (1.0ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (5.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 16, DB: 1) | 200 OK [http://localhost/computers/4/edit]
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2008-12-24 16:26:56) [PUT]
+  Parameters: {"commit"=>"Edit", "authenticity_token"=>"d26b88c6a5e8ea9846f02848f09bc41e66845aa1", "id"=>"4", "computer"=>{"name"=>"", "mac"=>"23:22:54:23:26:51", "ip"=>"123.001.224.23"}}
+  [4;36;1mComputer Load (0.7ms)[0m   [0;1mSELECT * FROM "computers" WHERE ("computers"."id" = 4) [0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = '' AND "computers".id <> 4) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.001.224.23' AND "computers".id <> 4) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '23:22:54:23:26:51' AND "computers".id <> 4) LIMIT 1[0m
+Rendering template within layouts/computers
+Rendering computers/edit
+Rendered computers/_form (6.8ms)
+Rendered shared/_menu (0.4ms)
+Completed in 62ms (View: 21, DB: 2) | 200 OK [http://localhost/computers/4]

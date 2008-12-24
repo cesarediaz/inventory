@@ -5,6 +5,7 @@
     <td>Pc</td>
     <td>Mac</td>
     <td>Ip</td>
+    <td>Available</td>
     <td>MBoard</td>
     <td>Harddisk</td>
     <td>Memory</td>
@@ -18,6 +19,7 @@
     <td><%= computer.name %></td>
     <td><%= computer.mac %></td>
     <td><%= computer.ip %></td>
+    <td><%= computer.available %></td>
     <td><%= computer.mother_board.title rescue nil %></td>
     <td><%= computer.harddisk.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= computer.memory.collect {|x| x.model + '<br>' } rescue nil %></td>
