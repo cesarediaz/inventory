@@ -6,6 +6,9 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+li {
+  display: inline;
+}
 pre {
   background-color: #eee;
   padding: 10px;
