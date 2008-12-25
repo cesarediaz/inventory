@@ -1,15 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.resources :computers, :collection => { :available => :get, :unavailable => :get }
+  map.resources :harddisks
+  map.resources :mother_boards
   map.resources :dvds
-
   map.resources :cds
-
   map.resources :memories
 
   map.root :controller => 'computers'
 
-  map.resources :computers
-  map.resources :harddisks
-  map.resources :mother_boards
 
   # The priority is based upon order of creation: first created -> highest priority.
 

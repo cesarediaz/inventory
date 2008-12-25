@@ -15,6 +15,24 @@ class ComputersController < ApplicationController
   end
 
 
+  def available
+    @computers = Computer.available
+
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @computers }
+    end
+  end
+
+  def unavailable
+    @computers = Computer.unavailable
+
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @computers }
+    end
+  end
+
   def show
     @computer = Computer.find(params[:id])
 
