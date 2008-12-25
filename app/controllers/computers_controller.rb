@@ -4,9 +4,9 @@ class ComputersController < ApplicationController
 
   def index
     @computers = Computer.paginate(
-         :page => nil,
-         :conditions => nil,
-         :order => 'created_at DESC')
+                                   :page => nil,
+                                   :conditions => nil,
+                                   :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -99,4 +99,17 @@ class ComputersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+  def auto_complete_for_computer_name
+    @computers = Computer.find(:all,
+                            :conditions => [ 'LOWER(name) LIKE ?',
+                                             '%' + params[:computer][:name].downcase + '%' ],
+                            :order => 'name ASC',
+                            :limit => 8)
+    render :partial => 'list'
+  end
+
 end
+
+
