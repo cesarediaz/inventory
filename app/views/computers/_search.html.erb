@@ -1,4 +1,4 @@
-<% form_for :computer, :url => { :action => "auto_complete_for_computer_name" } do |f| %>
+<% form_for :computer, :url => { :action => "search" } do |f| %>
 Search for name:
 <%= text_field_with_auto_complete :computer, :name, :limit => 15, :order => 'created_at DESC' %>
 

@@ -101,13 +101,12 @@ class ComputersController < ApplicationController
   end
 
 
-  def auto_complete_for_computer_name
+  def search
     @computers = Computer.find(:all,
                             :conditions => [ 'LOWER(name) LIKE ?',
                                              '%' + params[:computer][:name].downcase + '%' ],
                             :order => 'name ASC',
                             :limit => 8)
-    render :partial => 'list'
   end
 
 end
