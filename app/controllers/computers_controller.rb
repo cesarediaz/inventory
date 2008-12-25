@@ -1,6 +1,10 @@
 class ComputersController < ApplicationController
 
+  protect_from_forgery :only => [:create, :update, :destroy]
   auto_complete_for :computer, :name
+  auto_complete_for :computer, :ip
+  auto_complete_for :computer, :mac
+
 
   def index
     @computers = Computer.paginate(
@@ -102,13 +106,25 @@ class ComputersController < ApplicationController
 
 
   def search
-    @computers = Computer.find(:all,
-                            :conditions => [ 'LOWER(name) LIKE ?',
-                                             '%' + params[:computer][:name].downcase + '%' ],
-                            :order => 'name ASC',
-                            :limit => 8)
+    if not params[:computer][:name].nil?
+        @computers = Computer.find(:all,
+                                   :conditions => [ 'LOWER(name) LIKE ?',
+                                                    '%' + params[:computer][:name].downcase + '%' ],
+                                   :order => 'name ASC',                            :limit => 8)
+    end
+    if not params[:computer][:ip].nil?
+        @computers = Computer.find(:all,
+                                   :conditions => [ 'ip LIKE ?',
+                                                    '%' + params[:computer][:ip] + '%' ],
+                                   :order => 'name ASC',                            :limit => 8)
+    end
+    if not params[:computer][:mac].nil?
+      @computers = Computer.find(:all,
+                                 :conditions => [ 'mac LIKE ?',
+                                                  '%' + params[:computer][:mac] + '%' ],
+                                   :order => 'name ASC',                            :limit => 8)
+    end
+
   end
 
 end
-
-
