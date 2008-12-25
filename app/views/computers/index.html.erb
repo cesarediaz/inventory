@@ -1,36 +1,6 @@
 <h1>Listing computers</h1>
 
-<table border='1' >
-  <tr>
-    <td>Pc</td>
-    <td>Mac</td>
-    <td>Ip</td>
-    <td>Available</td>
-    <td>MBoard</td>
-    <td>Harddisk</td>
-    <td>Memory</td>
-    <td>Cd</td>
-    <td>Dvd</td>
-    <td colspan='3'>Actions</td>
-  </tr>
-
-<% for computer in @computers %>
-  <tr>
-    <td><%= computer.name %></td>
-    <td><%= computer.mac %></td>
-    <td><%= computer.ip %></td>
-    <td><%= computer.available %></td>
-    <td><%= computer.mother_board.title rescue nil %></td>
-    <td><%= computer.harddisk.collect {|x| x.model + '<br>' } rescue nil %></td>
-    <td><%= computer.memory.collect {|x| x.model + '<br>' } rescue nil %></td>
-    <td><%= computer.cd.collect {|x| x.model + '<br>' } rescue nil %></td>
-    <td><%= computer.dvd.collect {|x| x.model + '<br>' } rescue nil %></td>
-    <td><%= link_to 'Show', computer %></td>
-    <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
-    <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= render :partial => 'list' %>
 
 <br />
 
