@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :computers, :collection => { :available => :get, :unavailable => :get }
+  map.resources :computers, :collection => { :available => :get, :unavailable => :get,
+    :auto_complete_for_computer_name => :post }
+
   map.resources :harddisks
   map.resources :mother_boards
   map.resources :dvds

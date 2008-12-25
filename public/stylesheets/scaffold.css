@@ -9,6 +9,7 @@ body, p, ol, ul, td {
 li {
   display: inline;
 }
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -55,3 +56,4 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+div.auto_complete { width: 350px; background: #fff; z-index:10005 !important; }

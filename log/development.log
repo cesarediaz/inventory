@@ -12770,3 +12770,357 @@ Rendering computers/edit
 Rendered computers/_form (6.8ms)
 Rendered shared/_menu (0.4ms)
 Completed in 62ms (View: 21, DB: 2) | 200 OK [http://localhost/computers/4]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:08:43) [GET]
+  [4;36;1mComputer Load (1.8ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;35;1mMotherBoard Load (0.2ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.7ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (73.2ms)
+Rendered shared/_menu (0.3ms)
+Rendered shared/_submenu_computer (0.3ms)
+Completed in 99ms (View: 76, DB: 10) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:09:17) [GET]
+  [4;36;1mComputer Load (1.5ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (77.2ms)
+Rendered shared/_menu (0.4ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 176ms (View: 80, DB: 10) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:10:33) [GET]
+  [4;36;1mComputer Load (1.4ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;35;1mDvd Load (0.4ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.7ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.6ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (148.1ms)
+Rendered shared/_menu (0.2ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 172ms (View: 150, DB: 10) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#available (for 127.0.0.1 at 2008-12-25 16:10:38) [GET]
+Rendering template within layouts/computers
+Rendering computers/available
+Rendered computers/_search (1.0ms)
+  [4;36;1mComputer Load (1.1ms)[0m   [0;1mSELECT * FROM "computers" WHERE (available = 't') [0m
+  [4;35;1mMotherBoard Load (0.6ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.7ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.7ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;35;1mMotherBoard Load (0.2ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+Rendered computers/_list (69.5ms)
+Rendered shared/_menu (0.2ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 94ms (View: 73, DB: 8) | 200 OK [http://localhost/computers/available]
+
+
+Processing ComputersController#unavailable (for 127.0.0.1 at 2008-12-25 16:10:40) [GET]
+Rendering template within layouts/computers
+Rendering computers/unavailable
+Rendered computers/_search (1.0ms)
+  [4;35;1mComputer Load (0.8ms)[0m   [0mSELECT * FROM "computers" WHERE (available = 'f') [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.4ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;36;1mMemory Load (0.3ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+Rendered computers/_list (35.6ms)
+Rendered shared/_menu (0.4ms)
+Rendered shared/_submenu_computer (0.3ms)
+Completed in 61ms (View: 46, DB: 2) | 200 OK [http://localhost/computers/unavailable]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:10:42) [GET]
+  [4;35;1mComputer Load (1.3ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;36;1mMemory Load (0.4ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;36;1mMemory Load (0.3ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;35;1mDvd Load (0.4ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.7ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (151.8ms)
+Rendered shared/_menu (0.2ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 176ms (View: 153, DB: 10) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:11:20) [GET]
+  [4;35;1mComputer Load (1.3ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;35;1mCd Load (0.4ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;35;1mMemory Load (0.5ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;35;1mDvd Load (0.5ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;35;1mMotherBoard Load (0.2ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;36;1mMotherBoard Load (0.6ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.8ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (74.2ms)
+Rendered shared/_menu (0.2ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 102ms (View: 75, DB: 10) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:11:21) [GET]
+  [4;35;1mComputer Load (1.4ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.4ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;36;1mMemory Load (0.3ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;35;1mMotherBoard Load (0.2ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.6ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (72.9ms)
+Rendered shared/_menu (0.3ms)
+Rendered shared/_submenu_computer (0.3ms)
+Completed in 100ms (View: 75, DB: 9) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#available (for 127.0.0.1 at 2008-12-25 16:11:51) [GET]
+Rendering template within layouts/computers
+Rendering computers/available
+Rendered computers/_search (0.8ms)
+  [4;35;1mComputer Load (1.7ms)[0m   [0mSELECT * FROM "computers" WHERE (available = 't') [0m
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.9ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;35;1mMotherBoard Load (0.2ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+Rendered computers/_list (74.2ms)
+Rendered shared/_menu (0.3ms)
+Rendered shared/_submenu_computer (0.3ms)
+Completed in 180ms (View: 79, DB: 8) | 200 OK [http://localhost/computers/available]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2008-12-25 16:11:58) [GET]
+  [4;36;1mComputer Load (1.3ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;36;1mDvd Load (0.4ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.2ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5) [0m
+  [4;36;1mMemory Load (0.3ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 5) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 5) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5) [0m
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.6ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.7ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.8ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+Rendered computers/_list (145.6ms)
+Rendered shared/_menu (0.3ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 168ms (View: 147, DB: 10) | 200 OK [http://localhost/computers]
+
+
+Processing ComputersController#available (for 127.0.0.1 at 2008-12-25 16:12:01) [GET]
+Rendering template within layouts/computers
+Rendering computers/available
+Rendered computers/_search (1.0ms)
+  [4;36;1mComputer Load (1.5ms)[0m   [0;1mSELECT * FROM "computers" WHERE (available = 't') [0m
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.6ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.6ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.8ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 6) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 6) [0m
+  [4;36;1mMemory Load (0.3ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 6) [0m
+  [4;35;1mCd Load (0.2ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 6) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 6) [0m
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 7) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 7) [0m
+  [4;35;1mMemory Load (0.2ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 7) [0m
+  [4;36;1mCd Load (0.2ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 7) [0m
+  [4;35;1mDvd Load (0.2ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 7) [0m
+  [4;36;1mMotherBoard Load (0.2ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 8) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.2ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 8) [0m
+  [4;36;1mMemory Load (0.2ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 8) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 8) [0m
+  [4;36;1mDvd Load (0.2ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 8) [0m
+Rendered computers/_list (69.0ms)
+Rendered shared/_menu (0.2ms)
+Rendered shared/_submenu_computer (0.2ms)
+Completed in 93ms (View: 74, DB: 8) | 200 OK [http://localhost/computers/available]

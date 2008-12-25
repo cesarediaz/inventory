@@ -1,5 +1,7 @@
 <h1>Listing computers</h1>
 
+<%= text_field_with_auto_complete :computer, :name, :limit => 15, :order => 'created_at DESC' %>
+
 <%= render :partial => 'list' %>
 
 <br />

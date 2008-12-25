@@ -1,6 +1,6 @@
 class ComputersController < ApplicationController
 
-
+  auto_complete_for :computer, :name
 
   def index
     @computers = Computer.paginate(
