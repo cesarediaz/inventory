@@ -1,6 +1,5 @@
 class ComputersController < ApplicationController
 
-  protect_from_forgery :only => [:create, :update, :destroy]
   auto_complete_for :computer, :name
   auto_complete_for :computer, :ip
   auto_complete_for :computer, :mac
@@ -8,8 +7,8 @@ class ComputersController < ApplicationController
 
   def index
     @computers = Computer.paginate(
-                                   :page => nil,
-                                   :conditions => nil,
+                                   :page => params[:page],
+                                   :per_page => 5,
                                    :order => 'created_at DESC')
 
     respond_to do |format|
@@ -20,7 +19,10 @@ class ComputersController < ApplicationController
 
 
   def available
-    @computers = Computer.available
+    @computers = Computer.available.paginate(
+                                   :page => params[:page],
+                                   :per_page => 5,
+                                   :order => 'created_at DESC')
 
     respond_to do |format|
       format.html
@@ -29,7 +31,10 @@ class ComputersController < ApplicationController
   end
 
   def unavailable
-    @computers = Computer.unavailable
+    @computers = Computer.unavailable.paginate(
+                                   :page => params[:page],
+                                   :per_page => 5,
+                                   :order => 'created_at DESC')
 
     respond_to do |format|
       format.html
