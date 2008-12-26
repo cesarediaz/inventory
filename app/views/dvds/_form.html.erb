@@ -7,6 +7,9 @@
   <%= f.label 'serialnumber' %>
   <%= f.text_field :serialnumber %>
 
+  Burn <%= radio_button('dvd', 'writable', 't') %>
+  Not burn<%= radio_button('dvd', 'writable', 'f') %>
+
   <%= collection_select 'dvd', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
   <p>

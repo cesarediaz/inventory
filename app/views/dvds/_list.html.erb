@@ -2,6 +2,7 @@
   <tr>
     <th>Model</th>
     <th>Serial Number</th>
+    <th>Burn</th>
     <th>Pc</th>
     <th colspan='3'>Actions</th>
   </tr>
@@ -9,6 +10,7 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= dvd.model %></td>
     <td><%= dvd.serialnumber %></td>
+    <td><%= dvd.writable %></td>
     <td><%= dvd.computer.name rescue nil  %></td>
     <td><%= link_to 'Show', dvd %></td>
     <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>

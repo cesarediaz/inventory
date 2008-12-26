@@ -3,12 +3,14 @@
     <th>Model</th>
     <th>Serial Number</th>
     <th>Pc</th>
+    <th>Burn</th>
     <th colspan='3'>Actions</th>
   </tr>
 <% for cd in @cds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= cd.model %></td>
     <td><%= cd.serialnumber %></td>
+    <td><%= cd.writable %></td>
     <td><%= cd.computer.name rescue nil  %></td>
     <td><%= link_to 'Show', cd %></td>
     <td><%= link_to 'Edit', edit_cd_path(cd) %></td>

@@ -18,7 +18,7 @@ a:hover { color: #fff; background-color:#000; }
 
 .fieldWithErrors {
   padding: 2px;
-  background-color: red;
+  background-color: brown;
   display: table;
 }
 
@@ -33,11 +33,10 @@ a:hover { color: #fff; background-color:#000; }
 
 #errorExplanation h2 {
   text-align: left;
-  font-weight: bold;
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
-  background-color: #c00;
+  background-color: brown;
   color: #fff;
 }
 
