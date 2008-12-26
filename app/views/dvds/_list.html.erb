@@ -4,6 +4,7 @@
     <th>Serial Number</th>
     <th>Burn</th>
     <th>Pc</th>
+    <th>Mark</th>
     <th colspan='3'>Actions</th>
   </tr>
 <% for dvd in @dvds %>
@@ -12,6 +13,7 @@
     <td><%= dvd.serialnumber %></td>
     <td><%= dvd.writable %></td>
     <td><%= dvd.computer.name rescue nil  %></td>
+    <td><%= dvd.mark.name rescue nil  %></td>
     <td><%= link_to 'Show', dvd %></td>
     <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>
     <td><%= link_to 'Destroy', dvd, :confirm => 'Are you sure?', :method => :delete %></td>

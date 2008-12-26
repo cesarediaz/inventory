@@ -4,14 +4,16 @@
     <th>Serial Number</th>
     <th>Pc</th>
     <th>Burn</th>
+    <th>Mark</th>
     <th colspan='3'>Actions</th>
   </tr>
-<% for cd in @cds %>
+<% for cd in @cds %>    <th>Mark</th>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= cd.model %></td>
     <td><%= cd.serialnumber %></td>
     <td><%= cd.writable %></td>
     <td><%= cd.computer.name rescue nil  %></td>
+    <td><%= cd.mark.name rescue nil  %></td>
     <td><%= link_to 'Show', cd %></td>
     <td><%= link_to 'Edit', edit_cd_path(cd) %></td>
     <td><%= link_to 'Destroy', cd, :confirm => 'Are you sure?', :method => :delete %></td>

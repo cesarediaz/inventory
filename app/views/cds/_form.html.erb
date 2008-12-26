@@ -13,7 +13,7 @@
   <%= collection_select 'cd', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
 
-  <%= collection_select 'mother_board', 'mark_id', Mark.find(:all), 'id', 'name',
+  <%= collection_select 'cd', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
   <p>
     <% if action_name == 'new' %>
