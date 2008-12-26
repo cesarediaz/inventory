@@ -16,7 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :cds, :collection => {:auto_complete_for_cd_model => :get,
     :auto_complete_for_cd_serialnumber => :get}
 
-  map.resources :dvds
+  map.resources :dvds, :collection => {:auto_complete_for_dvd_model => :get,
+    :auto_complete_for_dvd_serialnumber => :get}
 
 
 

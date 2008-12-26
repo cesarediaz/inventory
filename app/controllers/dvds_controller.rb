@@ -1,8 +1,11 @@
 class DvdsController < ApplicationController
+  auto_complete_for :dvd, :model
+  auto_complete_for :dvd, :serialnumber
+
   # GET /dvds
   # GET /dvds.xml
   def index
-    @dvds = Dvd..paginate(
+    @dvds = Dvd.paginate(
                           :page => params[:page],
                           :per_page => PER_PAGE,
                           :order => 'created_at DESC')
@@ -85,4 +88,22 @@ class DvdsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def search
+    if not params[:dvd][:model].nil?
+        @dvds = Dvd.find(:all,
+                                   :conditions => [ 'LOWER(model) LIKE ?',
+                                                    '%' + params[:dvd][:model].downcase + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
+    end
+    if not params[:dvd][:serialnumber].nil?
+        @dvds = Dvd.find(:all,
+                                   :conditions => [ 'serialnumber LIKE ?',
+                                                    '%' + params[:dvd][:serialnumber] + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
+    end
+  end
+
 end

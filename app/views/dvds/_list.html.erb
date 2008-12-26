@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Serial Number</th>
+    <th>Pc</th>
+    <th colspan='3'>Actions</th>
+  </tr>
+<% for dvd in @dvds %>
+  <tr  class="<%= cycle("rowA","rowB") %>">
+    <td><%= dvd.model %></td>
+    <td><%= dvd.serialnumber %></td>
+    <td><%= dvd.computer.name rescue nil  %></td>
+    <td><%= link_to 'Show', dvd %></td>
+    <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>
+    <td><%= link_to 'Destroy', dvd, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

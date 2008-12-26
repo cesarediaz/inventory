@@ -1,17 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Dvds: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
-</head>
-<body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-<%= render :partial => 'shared/menu' %>
-<%= yield  %>
-
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Inventory</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="default.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'default' %>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="menu">
+        <ul>
+          <li class="first">
+            <%= render :partial => 'shared/menu' %>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="primaryContentContainer">
+          <div id="primaryContent">
+            <div class="box">
+              <div class="boxContent">
+                <%= yield  %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="secondaryContent">
+          <% if controller.action_name != 'edit' && controller.action_name != 'show' %>
+          <div class="box boxB">
+            <div class="boxContent">
+              <%= render :partial => 'search' %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div id="footer">
+        <p>Copyleft. Designed by <a href="http://www.cesardiaz.com.ar">Cesar Diaz</a></p>
+      </div>
+    </div>
+  </body>
 </html>
