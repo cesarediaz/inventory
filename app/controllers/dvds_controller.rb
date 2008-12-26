@@ -2,7 +2,10 @@ class DvdsController < ApplicationController
   # GET /dvds
   # GET /dvds.xml
   def index
-    @dvds = Dvd.find(:all)
+    @dvds = Dvd..paginate(
+                          :page => params[:page],
+                          :per_page => PER_PAGE,
+                          :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

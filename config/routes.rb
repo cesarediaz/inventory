@@ -13,8 +13,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :memories, :collection => {:auto_complete_for_memory_model => :get,
     :auto_complete_for_memory_serialnumber => :get}
 
+  map.resources :cds, :collection => {:auto_complete_for_cd_model => :get,
+    :auto_complete_for_cd_serialnumber => :get}
+
   map.resources :dvds
-  map.resources :cds
+
 
 
   map.root :controller => 'computers'

@@ -8,7 +8,7 @@ class ComputersController < ApplicationController
   def index
     @computers = Computer.paginate(
                                    :page => params[:page],
-                                   :per_page => 5,
+                                   :per_page => PER_PAGE,
                                    :order => 'created_at DESC')
 
     respond_to do |format|

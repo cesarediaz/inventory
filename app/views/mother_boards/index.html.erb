@@ -1,23 +1,6 @@
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Serial Number</th>
-    <th>Computer</th>
-    <th colspan='3'>Actions</th>
-  </tr>
+<%= render :partial => 'list' %>
 
-<% for mother_board in @mother_boards %>
-  <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= mother_board.title %></td>
-    <td><%= mother_board.serialnumber %></td>
-    <td><%= mother_board.computer.name rescue nil %></td>
-    <td><%= link_to 'Show', mother_board %></td>
-    <td><%= link_to 'Edit', edit_mother_board_path(mother_board) %></td>
-    <td><%= link_to 'Destroy', mother_board, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
+<%= will_paginate @mother_boards %>
 <br />
 
 <%= link_to 'New mother_board', new_mother_board_path %>

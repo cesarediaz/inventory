@@ -8,7 +8,7 @@ class HarddisksController < ApplicationController
   def index
     @harddisks = Harddisk.paginate(
                                    :page => params[:page],
-                                   :per_page => 5,
+                                   :per_page => PER_PAGE,
                                    :order => 'created_at DESC')
 
     respond_to do |format|

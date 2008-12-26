@@ -1,8 +1,14 @@
 class CdsController < ApplicationController
+  auto_complete_for :cd, :model
+  auto_complete_for :cd, :serialnumber
+
   # GET /cds
   # GET /cds.xml
   def index
-    @cds = Cd.find(:all)
+    @cds = Cd.paginate(
+                       :page => params[:page],
+                       :per_page => PER_PAGE,
+                       :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,6 +86,23 @@ class CdsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(cds_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def search
+    if not params[:cd][:model].nil?
+        @cds = Cd.find(:all,
+                                   :conditions => [ 'LOWER(model) LIKE ?',
+                                                    '%' + params[:cd][:model].downcase + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
+    end
+    if not params[:cd][:serialnumber].nil?
+        @cds = Cd.find(:all,
+                                   :conditions => [ 'serialnumber LIKE ?',
+                                                    '%' + params[:cd][:serialnumber] + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
     end
   end
 end
