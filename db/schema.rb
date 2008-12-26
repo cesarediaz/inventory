@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081224174008) do
+ActiveRecord::Schema.define(:version => 20081226201604) do
 
   create_table "cds", :force => true do |t|
     t.string   "model"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20081224174008) do
     t.integer  "computer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mark_id"
   end
 
   create_table "computers", :force => true do |t|
@@ -36,12 +37,20 @@ ActiveRecord::Schema.define(:version => 20081224174008) do
     t.integer  "computer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mark_id"
   end
 
   create_table "harddisks", :force => true do |t|
     t.string   "model"
     t.string   "serialnumber"
     t.integer  "computer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "mark_id"
+  end
+
+  create_table "marks", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20081224174008) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "computer_id"
+    t.integer  "mark_id"
   end
 
   create_table "mother_boards", :force => true do |t|
@@ -60,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20081224174008) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "computer_id"
+    t.integer  "mark_id"
   end
 
 end

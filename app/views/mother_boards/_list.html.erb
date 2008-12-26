@@ -2,6 +2,7 @@
   <tr>
     <th>Model</th>
     <th>Serial Number</th>
+    <th>Mark</th>
     <th>Pc</th>
     <th colspan='3'>Actions</th>
   </tr>
@@ -9,6 +10,7 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= mother_board.title %></td>
     <td><%= mother_board.serialnumber %></td>
+    <td><%= mother_board.mark.name rescue nil  %></td>
     <td><%= mother_board.computer.name rescue nil  %></td>
     <td><%= link_to 'Show', mother_board %></td>
     <td><%= link_to 'Edit', edit_mother_board_path(mother_board) %></td>

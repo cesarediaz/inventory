@@ -9,6 +9,9 @@
 
   <%= collection_select 'harddisk', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
+
+  <%= collection_select 'mother_board', 'mark_id', Mark.find(:all), 'id', 'name',
+      {:prompt => true} %>
   <p>
     <% if action_name == 'new' %>
     <%= f.submit "Create" %>

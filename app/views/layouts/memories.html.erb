@@ -14,7 +14,7 @@
       <div id="menu">
         <ul>
           <li class="first">
-            <%= render :partial => 'shared/menu' %>
+            <%= render :partial => 'shared/top_menu' %>
           </li>
         </ul>
       </div>
@@ -43,6 +43,12 @@
             </div>
           </div>
           <% end %>
+        </div>
+        <div class="box">
+          <h3>Modules</h3>
+          <div class="boxContent">
+            <%= render :partial => 'shared/menu' %>
+          </div>
         </div>
         <div class="clear"></div>
       </div>

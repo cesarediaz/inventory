@@ -14,8 +14,7 @@
       <div id="menu">
         <ul>
           <li class="first">
-            <%= render :partial => 'shared/menu' %>
-            <%= render :partial => 'shared/submenu_computer' %>
+            <%= render :partial => 'shared/top_menu' %>
           </li>
         </ul>
       </div>
@@ -45,8 +44,17 @@
           </div>
           <% end %>
         </div>
-        <div class="clear"></div>
+        <div class="box">
+          <h3>Modules</h3>
+          <div class="boxContent">
+            <%= render :partial => 'shared/menu' %>
+            <ul>
+              <%= render :partial => 'shared/submenu_computer' %>
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="clear"></div>
       <div id="footer">
         <p>Copyleft. Designed by <a href="http://www.cesardiaz.com.ar">Cesar Diaz</a></p>
       </div>

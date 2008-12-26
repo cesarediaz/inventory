@@ -6,6 +6,7 @@ class Computer < ActiveRecord::Base
   has_many :cd, :dependent => :nullify
   has_many :dvd, :dependent => :nullify
 
+
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :name, :ip, :mac
