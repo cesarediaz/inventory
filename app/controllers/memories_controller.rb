@@ -1,8 +1,15 @@
 class MemoriesController < ApplicationController
+  auto_complete_for :memory, :model
+  auto_complete_for :memory, :serialnumber
+
+
   # GET /memories
   # GET /memories.xml
   def index
-    @memories = Memory.find(:all)
+    @memories = Memory.paginate(
+                                   :page => params[:page],
+                                   :per_page => 5,
+                                   :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +89,23 @@ class MemoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def search
+    if not params[:memory][:model].nil?
+        @memories = Memory.find(:all,
+                                   :conditions => [ 'LOWER(model) LIKE ?',
+                                                    '%' + params[:memory][:model].downcase + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
+    end
+    if not params[:memory][:serialnumber].nil?
+        @memories = Memory.find(:all,
+                                   :conditions => [ 'serialnumber LIKE ?',
+                                                    '%' + params[:memory][:serialnumber] + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
+    end
+  end
+
+
 end

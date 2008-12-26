@@ -10,9 +10,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :harddisks, :collection => {:auto_complete_for_harddisk_model => :get,
     :auto_complete_for_harddisk_serialnumber => :get}
 
+  map.resources :memories, :collection => {:auto_complete_for_memory_model => :get,
+    :auto_complete_for_memory_serialnumber => :get}
+
   map.resources :dvds
   map.resources :cds
-  map.resources :memories
+
 
   map.root :controller => 'computers'
 

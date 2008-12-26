@@ -6,7 +6,10 @@ class HarddisksController < ApplicationController
   # GET /harddisks
   # GET /harddisks.xml
   def index
-    @harddisks = Harddisk.find(:all)
+    @harddisks = Harddisk.paginate(
+                                   :page => params[:page],
+                                   :per_page => 5,
+                                   :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
