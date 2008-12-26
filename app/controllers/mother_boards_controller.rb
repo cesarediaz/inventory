@@ -1,4 +1,8 @@
 class MotherBoardsController < ApplicationController
+
+  auto_complete_for :mother_board, :title
+  auto_complete_for :mother_board, :serialnumber
+
   # GET /mother_boards
   # GET /mother_boards.xml
   def index
@@ -82,4 +86,23 @@ class MotherBoardsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def search
+    if not params[:mother_board][:title].nil?
+        @mother_boards = MotherBoard.find(:all,
+                                   :conditions => [ 'LOWER(title) LIKE ?',
+                                                    '%' + params[:mother_board][:title].downcase + '%' ],
+                                   :order => 'title ASC',
+                                   :limit => 8)
+    end
+    if not params[:mother_board][:serialnumber].nil?
+        @mother_boards = MotherBoard.find(:all,
+                                   :conditions => [ 'serialnumber LIKE ?',
+                                                    '%' + params[:mother_board][:serialnumber] + '%' ],
+                                   :order => 'title ASC',
+                                   :limit => 8)
+    end
+  end
+
+
 end

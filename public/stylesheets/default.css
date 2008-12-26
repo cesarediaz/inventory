@@ -1,9 +1,3 @@
-/*
-        Design by Free CSS Templates
-        http://www.freecsstemplates.org
-        Released for free under a Creative Commons Attribution 2.5 License
-*/
-
 /* Basic */
 
 *
@@ -34,6 +28,7 @@ input.button
         color: #555;
         font-size: 0.8em;
         padding: 0.35em;
+        background-color: #000000;
 }
 
 input.text
@@ -110,7 +105,7 @@ a:hover
 
 #menu ul
 {
-        padding: 0em 6.5em 1.2em 8em;
+        padding: 0em 0em 0em 12em;
         list-style: none;
 }
 
@@ -197,11 +192,11 @@ a:hover
 
 .boxB .boxContent
 {
-        margin-top: 5em;
+        margin-top: 1em;
         color: #fff;
         border-bottom: solid 1px #004466;
-        background: #007799;
-        padding: 1em 1.5em 1em 1em;
+        background: #669933;
+        padding: 1em 0em 0em 0em;
 }
 
 .boxB span
@@ -335,9 +330,10 @@ a:hover
 
 #secondaryContent
 {
+        margin: 0.01em -1em -1em -2em;
         float: left;
-        width: 22em;
-        padding: 2.5em 0.5em 0.5em 0em;
+        width: 25em;
+        padding: 2.5em 0em 0em 0em;
 }
 
 /* Footer */
@@ -352,4 +348,19 @@ a:hover
 .clear
 {
         clear: both;
+}
+
+div.auto_complete {
+    width: 350px;
+    background: #fff;
+    text: #000;
+}
+
+div.auto_complete ul {
+    border:1px solid #888;
+    margin:0;
+    padding:0;
+    width:100%;
+    list-style-type:none;
+    text: #000;
 }

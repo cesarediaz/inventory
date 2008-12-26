@@ -4,8 +4,10 @@ ActionController::Routing::Routes.draw do |map|
     :auto_complete_for_computer_name => :get, :auto_complete_for_computer_ip => :get,
     :auto_complete_for_computer_mac => :get }
 
+  map.resources :mother_boards, :collection => {:auto_complete_for_mother_board_title => :get,
+    :auto_complete_for_mother_board_serialnumber => :get}
+
   map.resources :harddisks
-  map.resources :mother_boards
   map.resources :dvds
   map.resources :cds
   map.resources :memories

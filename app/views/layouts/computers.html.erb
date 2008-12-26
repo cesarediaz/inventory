@@ -1,56 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-        Design by Free CSS Templates
-        http://www.freecsstemplates.org
-        Released for free under a Creative Commons Attribution 2.5 License
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Standardized by Free CSS Templates</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="default.css" rel="stylesheet" type="text/css" />
-  <%= stylesheet_link_tag 'scaffold' %>
-  <%= stylesheet_link_tag 'default' %>
-</head>
-<body>
-<div id="outer">
-        <div id="menu">
-                <ul>
-                        <li class="first">
-                          <%= render :partial => 'shared/menu' %>
-                          <%= render :partial => 'shared/submenu_computer' %>
-                        </li>
-                </ul>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Inventory</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="default.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'default' %>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="menu">
+        <ul>
+          <li class="first">
+            <%= render :partial => 'shared/menu' %>
+            <%= render :partial => 'shared/submenu_computer' %>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="primaryContentContainer">
+          <div id="primaryContent">
+            <div class="box">
+              <div class="boxContent">
+                <%= yield  %>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="content">
-                <div id="primaryContentContainer">
-                        <div id="primaryContent">
-                                <div class="box">
-                                        <div class="boxContent">
-                                                <p><strong>Inventory</strong> is a free program made by <a href="http://www.cesardiaz.com.ar/">Cesar Diaz</a> released under a <a href="http://creativecommons.org/licenses/by/2.5/">GPL license</a>. You're free to use it for both commercial or personal use.</p>
-                                        </div>
-                                </div>
-                                <div class="box">
-                                        <div class="boxContent">
-                                          <%= yield  %>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-                <div id="secondaryContent">
-                        <div class="box boxB">
-                                <div class="boxContent">
-                              <%= render :partial => 'search' %>
-                                </div>
-                        </div>
-                </div>
-                <div class="clear"></div>
+        <div id="secondaryContent">
+          <% if controller.action_name != 'edit' && controller.action_name != 'show' %>
+          <div class="box boxB">
+            <div class="boxContent">
+              <%= render :partial => 'search' %>
+            </div>
+          </div>
+          <% end %>
         </div>
-        <div id="footer">
-                <p>Copyright &copy; 2006 Sitename.com. Designed by <a href="http://www.freecsstemplates.org">Free CSS Templates</a></p>
-        </div>
-</div>
-</body>
+        <div class="clear"></div>
+      </div>
+      <div id="footer">
+        <p>Copyleft. Designed by <a href="http://www.cesardiaz.com.ar">Cesar Diaz</a></p>
+      </div>
+    </div>
+  </body>
 </html>
