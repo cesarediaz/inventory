@@ -1,4 +1,8 @@
 class HarddisksController < ApplicationController
+
+  auto_complete_for :harddisk, :model
+  auto_complete_for :harddisk, :serialnumber
+
   # GET /harddisks
   # GET /harddisks.xml
   def index
@@ -80,6 +84,23 @@ class HarddisksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(harddisks_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def search
+    if not params[:harddisk][:model].nil?
+        @harddisks = Harddisk.find(:all,
+                                   :conditions => [ 'LOWER(model) LIKE ?',
+                                                    '%' + params[:harddisk][:model].downcase + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
+    end
+    if not params[:harddisk][:serialnumber].nil?
+        @harddisks = Harddisk.find(:all,
+                                   :conditions => [ 'serialnumber LIKE ?',
+                                                    '%' + params[:harddisk][:serialnumber] + '%' ],
+                                   :order => 'model ASC',
+                                   :limit => 8)
     end
   end
 end

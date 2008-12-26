@@ -1,6 +1,4 @@
-<h1>Listing harddisks</h1>
-
-<table border='1' >
+<table>
   <tr>
     <td>Model</td>
     <td>SN</td>
@@ -9,7 +7,7 @@
   </tr>
 
 <% for harddisk in @harddisks %>
-  <tr>
+  <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= harddisk.model %></td>
     <td><%= harddisk.serialnumber %></td>
     <td><%= harddisk.computer.name  rescue nil %></td>

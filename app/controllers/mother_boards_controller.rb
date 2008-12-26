@@ -6,7 +6,10 @@ class MotherBoardsController < ApplicationController
   # GET /mother_boards
   # GET /mother_boards.xml
   def index
-    @mother_boards = MotherBoard.find(:all)
+    @mother_boards = MotherBoard.paginate(
+                                   :page => params[:page],
+                                   :per_page => 5,
+                                   :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

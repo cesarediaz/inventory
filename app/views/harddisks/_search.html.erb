@@ -1,0 +1,18 @@
+<%= javascript_include_tag :defaults %>
+
+<table>
+  <% form_tag :action => 'search' do %>
+  <tr>
+    <td><label>Model:</label></td>
+    <td><%= text_field_with_auto_complete :harddisk, :model, {:size => 20}, {:method => :get} %></td>
+    <td><%= submit_tag "Search" %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <% form_tag :action => 'search' do %>
+    <td><label>Serial Number:</label></td>
+    <td><%= text_field_with_auto_complete :harddisk, :serialnumber, {:size => 20}, {:method => :get} %></td>
+    <td><%= submit_tag "Search" %></td>
+  </tr>
+  <% end %>
+</table>
