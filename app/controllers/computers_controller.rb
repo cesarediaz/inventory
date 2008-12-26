@@ -110,19 +110,22 @@ class ComputersController < ApplicationController
         @computers = Computer.find(:all,
                                    :conditions => [ 'LOWER(name) LIKE ?',
                                                     '%' + params[:computer][:name].downcase + '%' ],
-                                   :order => 'name ASC',                            :limit => 8)
+                                   :order => 'name ASC',
+                                   :limit => 8)
     end
     if not params[:computer][:ip].nil?
         @computers = Computer.find(:all,
                                    :conditions => [ 'ip LIKE ?',
                                                     '%' + params[:computer][:ip] + '%' ],
-                                   :order => 'name ASC',                            :limit => 8)
+                                   :order => 'name ASC',
+                                   :limit => 8)
     end
     if not params[:computer][:mac].nil?
       @computers = Computer.find(:all,
                                  :conditions => [ 'mac LIKE ?',
                                                   '%' + params[:computer][:mac] + '%' ],
-                                   :order => 'name ASC',                            :limit => 8)
+                                 :order => 'name ASC',
+                                 :limit => 8)
     end
 
   end

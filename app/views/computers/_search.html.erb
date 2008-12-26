@@ -1,33 +1,25 @@
 <%= javascript_include_tag :defaults %>
 
 <table>
-<% form_tag :action => 'search' do %>
-
+  <% form_tag :action => 'search' do %>
   <tr>
     <td><label>Name:</label></td>
-    <td><%= text_field_with_auto_complete :computer, :name, {}, {:method => :get} %></td>
+    <td><%= text_field_with_auto_complete :computer, :name, {:size => 15}, {:method => :get} %></td>
     <td><%= submit_tag "Search" %></td>
-
-
-<% end %>
-
-<% form_tag :action => 'search' do %>
-
-
+    <% end %>
+  </tr>
+  <tr>
+    <% form_tag :action => 'search' do %>
     <td><label>Ip:</label></td>
-    <td><%= text_field_with_auto_complete :computer, :ip, {}, {:method => :get} %></td>
+    <td><%= text_field_with_auto_complete :computer, :ip, {:size => 15}, {:method => :get} %></td>
     <td><%= submit_tag "Search" %></td>
-
-
-<% end %>
-
-<% form_tag :action => 'search' do %>
-
-
+    <% end %>
+  </tr>
+  <tr>
+    <% form_tag :action => 'search' do %>
     <td><label>Mac:</label></td>
-    <td><%= text_field_with_auto_complete :computer, :mac, {}, {:method => :get} %></td>
+    <td><%= text_field_with_auto_complete :computer, :mac, {:size => 15}, {:method => :get} %></td>
     <td><%= submit_tag "Search" %></td>
   </tr>
-
-<% end %>
+  <% end %>
 </table>

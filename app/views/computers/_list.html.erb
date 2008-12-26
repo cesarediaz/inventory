@@ -1,19 +1,18 @@
-<table border='1' >
+<table>
   <tr>
-    <td>Pc</td>
-    <td>Mac</td>
-    <td>Ip</td>
-    <td>Available</td>
-    <td>MBoard</td>
-    <td>Harddisk</td>
-    <td>Memory</td>
-    <td>Cd</td>
-    <td>Dvd</td>
-    <td colspan='3'>Actions</td>
+    <th>Pc</th>
+    <th>Mac</th>
+    <th>Ip</th>
+    <th>Available</th>
+    <th>MBoard</th>
+    <th>Harddisk</th>
+    <th>Memory</th>
+    <th>Cd</th>
+    <th>Dvd</th>
+    <th colspan='3'>Actions</th>
   </tr>
-
 <% for computer in @computers %>
-  <tr>
+  <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= computer.name %></td>
     <td><%= computer.mac %></td>
     <td><%= computer.ip %></td>
