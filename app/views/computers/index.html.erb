@@ -1,5 +1,7 @@
 <%= render :partial => 'list' %>
 
+<%= will_paginate @computers %>
+
 <br />
 
 <%= link_to 'New computer', new_computer_path %>

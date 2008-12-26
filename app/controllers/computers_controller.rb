@@ -19,7 +19,7 @@ class ComputersController < ApplicationController
 
 
   def available
-    @computers = Computer.availablepaginate(
+    @computers = Computer.available.paginate(
                                    :page => params[:page],
                                    :per_page => 5,
                                    :order => 'created_at DESC')
@@ -31,7 +31,7 @@ class ComputersController < ApplicationController
   end
 
   def unavailable
-    @computers = Computer.unavailablepaginate(
+    @computers = Computer.unavailable.paginate(
                                    :page => params[:page],
                                    :per_page => 5,
                                    :order => 'created_at DESC')
@@ -111,13 +111,13 @@ class ComputersController < ApplicationController
 
 
   def search
-    if not params[:computer][:name].nil?
+     if not params[:computer][:name].nil?
         @computers = Computer.find(:all,
                                    :conditions => [ 'LOWER(name) LIKE ?',
                                                     '%' + params[:computer][:name].downcase + '%' ],
                                    :order => 'name ASC',
                                    :limit => 8)
-    end
+     end
     if not params[:computer][:ip].nil?
         @computers = Computer.find(:all,
                                    :conditions => [ 'ip LIKE ?',
@@ -132,6 +132,7 @@ class ComputersController < ApplicationController
                                  :order => 'name ASC',
                                  :limit => 8)
     end
+
 
   end
 
