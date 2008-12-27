@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Serial Number</th>
+    <th>Mark</th>
+    <th colspan='3'>Actions</th>
+  </tr>
+<% for screen in @screens %>
+  <tr  class="<%= cycle("rowA","rowB") %>">
+    <td><%= screen.model %></td>
+    <td><%= screen.serialnumber %></td>
+    <td><%= screen.mark.name rescue nil  %></td>
+    <td><%= link_to 'Show', screen %></td>
+    <td><%= link_to 'Edit', edit_screen_path(screen) %></td>
+    <td><%= link_to 'Destroy', screen, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
