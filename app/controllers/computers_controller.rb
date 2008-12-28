@@ -6,10 +6,8 @@ class ComputersController < ApplicationController
 
 
   def index
-    @computers = Computer.paginate(
-                                   :page => params[:page],
-                                   :per_page => PER_PAGE,
-                                   :order => 'created_at DESC')
+    stats
+    @computers = all_computers
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,10 +17,8 @@ class ComputersController < ApplicationController
 
 
   def available
-    @computers = Computer.available.paginate(
-                                   :page => params[:page],
-                                   :per_page => 5,
-                                   :order => 'created_at DESC')
+    stats
+    @computers = availables_computers
 
     respond_to do |format|
       format.html
@@ -31,10 +27,8 @@ class ComputersController < ApplicationController
   end
 
   def unavailable
-    @computers = Computer.unavailable.paginate(
-                                   :page => params[:page],
-                                   :per_page => 5,
-                                   :order => 'created_at DESC')
+    stats
+    @computers = unavailables_computers
 
     respond_to do |format|
       format.html
@@ -43,6 +37,7 @@ class ComputersController < ApplicationController
   end
 
   def show
+    stats
     @computer = Computer.find(params[:id])
 
     respond_to do |format|
@@ -53,6 +48,7 @@ class ComputersController < ApplicationController
 
 
   def new
+    stats
     @computer = Computer.new
 
     respond_to do |format|
@@ -63,11 +59,13 @@ class ComputersController < ApplicationController
 
 
   def edit
+    stats
     @computer = Computer.find(params[:id])
   end
 
 
   def create
+    stats
     @computer = Computer.new(params[:computer])
 
     respond_to do |format|
@@ -111,29 +109,70 @@ class ComputersController < ApplicationController
 
 
   def search
-     if not params[:computer][:name].nil?
-        @computers = Computer.find(:all,
-                                   :conditions => [ 'LOWER(name) LIKE ?',
-                                                    '%' + params[:computer][:name].downcase + '%' ],
-                                   :order => 'name ASC',
-                                   :limit => 8)
-     end
+    if not params[:computer][:name].nil?
+      @computers = Computer.find(:all,
+                                 :conditions => [ 'LOWER(name) LIKE ?',
+                                                  '%' + params[:computer][:name].downcase + '%' ],
+                                 :order => 'name ASC',
+                                 :limit => 8)
+    end
     if not params[:computer][:ip].nil?
-        @computers = Computer.find(:all,
-                                   :conditions => [ 'ip LIKE ?',
-                                                    '%' + params[:computer][:ip] + '%' ],
-                                   :order => 'name ASC',
-                                   :limit => 8)
+      @computers = Computer.find(:all,
+                                 :conditions => [ 'ip LIKE ?', '%' + params[:computer][:ip] + '%' ],
+                                 :order => 'name ASC',
+                                 :limit => 8)
     end
     if not params[:computer][:mac].nil?
       @computers = Computer.find(:all,
-                                 :conditions => [ 'mac LIKE ?',
-                                                  '%' + params[:computer][:mac] + '%' ],
+                                 :conditions => [ 'mac LIKE ?', '%' + params[:computer][:mac] + '%' ],
                                  :order => 'name ASC',
                                  :limit => 8)
     end
 
 
   end
+
+
+  private
+
+  def availables_computers
+    @computers = Computer.available.paginate(
+                                             :page => params[:page],
+                                             :per_page => 5,
+                                             :order => 'created_at DESC')
+  end
+
+
+  def unavailables_computers
+    @computers = Computer.unavailable.paginate(
+                                               :page => params[:page],
+                                               :per_page => 5,
+                                               :order => 'created_at DESC')
+  end
+
+  def all_computers
+    @computers = Computer.paginate(
+                                   :page => params[:page],
+                                   :per_page => PER_PAGE,
+                                   :order => 'created_at DESC')
+  end
+
+
+  def stats
+    @all = all_computers
+    @all = @all.count
+
+    @availables = availables_computers
+    @availables = @availables.count
+
+    @unavailables = unavailables_computers
+    @unavailables = @unavailables.count
+
+    @total = @availables + @unavailables
+
+  end
+
+
+
 
 end

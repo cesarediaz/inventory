@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Serial Number</th>
+    <th>Mark</th>
+    <th colspan='3'>Actions</th>
+  </tr>
+<% for printer in @printers %>
+  <tr  class="<%= cycle("rowA","rowB") %>">
+    <td><%= printer.model %></td>
+    <td><%= printer.serialnumber %></td>
+    <td><%= printer.mark.name rescue nil  %></td>
+    <td><%= link_to 'Show', printer %></td>
+    <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
+    <td><%= link_to 'Destroy', printer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

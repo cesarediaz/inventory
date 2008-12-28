@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-
   map.resources :computers, :collection => { :available => :get, :unavailable => :get,
     :auto_complete_for_computer_name => :get, :auto_complete_for_computer_ip => :get,
     :auto_complete_for_computer_mac => :get }
@@ -21,6 +20,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :screens, :collection => {:auto_complete_for_screen_model => :get,
     :auto_complete_for_screen_serialnumber => :get}
+
+  map.resources :printers, :collection => {:auto_complete_for_printer_model => :get,
+    :auto_complete_for_printer_serialnumber => :get}
 
   map.resources :marks
 

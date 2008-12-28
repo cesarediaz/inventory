@@ -130,8 +130,8 @@ a:hover
     margin-top: 0em;
     color: #fff;
     border-bottom: solid 1px #bb6600;
-    background: #ff8800;
-    padding: 1em 1.5em 1em 1em;
+    background: #999900;
+    padding: 0em 0em 0em 3em;
 }
 
 .boxA span
@@ -172,7 +172,7 @@ a:hover
     color: #fff;
     border-bottom: solid 1px #004466;
     background: #669933;
-    padding: 1em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
 }
 
 .boxB span
@@ -259,7 +259,7 @@ a:hover
 
 #content table
 {
-    margin-bottom: 1.5em;
+    margin-bottom: 0em;
 }
 
 #content table th

@@ -1,0 +1,2 @@
+module PrintersHelper
+end
