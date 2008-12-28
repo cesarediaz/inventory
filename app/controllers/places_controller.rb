@@ -16,6 +16,7 @@ class PlacesController < ApplicationController
   # GET /places/1.xml
   def show
     @place = Place.find(params[:id])
+    @computers = Computer.list_for_place(@place.id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -94,4 +95,6 @@ class PlacesController < ApplicationController
                                  :limit => 8)
     end
   end
+
+
 end

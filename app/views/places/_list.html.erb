@@ -7,7 +7,7 @@
   </tr>
 <% for place in @places %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= place.title %></td>
+    <td><%= link_to place.title, place %></td>
     <td><%= place.description %></td>
     <td><%= place.computer.count %></td>
     <td><%= link_to 'Show', place %></td>

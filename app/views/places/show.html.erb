@@ -1,3 +1,12 @@
 
+Place : <%= @place.title %>
+<br>
+Description: <%= @place.title %>
+<br>
+
+List of computers in this place:
+<%= render :partial => 'computers/list' %>
+<br>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>

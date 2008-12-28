@@ -21,5 +21,5 @@ class Computer < ActiveRecord::Base
   # Named Scope
   named_scope :available, :conditions => ['available = ?', true]
   named_scope :unavailable, :conditions => ['available = ?', false]
-
+  named_scope :list_for_place, lambda { |*args| { :conditions => ['place_id = ?', args]}}
 end
