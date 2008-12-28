@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th colspan='3'>Actions</th>
+  </tr>
+<% for place in @places %>
+  <tr  class="<%= cycle("rowA","rowB") %>">
+    <td><%= place.title %></td>
+    <td><%= place.description %></td>
+    <td><%= link_to 'Show', place %></td>
+    <td><%= link_to 'Edit', edit_place_path(place) %></td>
+    <td><%= link_to 'Destroy', place, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

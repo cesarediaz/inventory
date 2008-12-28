@@ -6,6 +6,8 @@ class Computer < ActiveRecord::Base
   has_many :cd, :dependent => :nullify
   has_many :dvd, :dependent => :nullify
 
+  belongs_to :place
+
 
   #################################################
   # VALIDATIONS
@@ -19,7 +21,5 @@ class Computer < ActiveRecord::Base
   # Named Scope
   named_scope :available, :conditions => ['available = ?', true]
   named_scope :unavailable, :conditions => ['available = ?', false]
-
-
 
 end

@@ -22,6 +22,9 @@
     Not<%= radio_button('computer', 'available', 'f') %>
   </fieldset>
 
+  <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
+      {:prompt => true} %>
+
   <% if action_name == 'new' %>
   <%= f.submit "Create" %>
   <% else %>

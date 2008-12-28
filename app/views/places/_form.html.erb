@@ -1,0 +1,22 @@
+<% form_for(@place) do |f| %>
+<%= f.error_messages %>
+
+<p>
+  <%= f.label 'place' %>
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label 'description' %>
+  <br>
+  <%= f.text_area :description %>
+</p>
+
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit "Create" %>
+  <% else %>
+  <%= f.submit "Edit" %>
+  <% end %>
+</p>
+<% end %>

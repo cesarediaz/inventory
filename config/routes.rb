@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :places
+
   map.resources :computers, :collection => { :available => :get, :unavailable => :get,
     :auto_complete_for_computer_name => :get, :auto_complete_for_computer_ip => :get,
     :auto_complete_for_computer_mac => :get }
