@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+  auto_complete_for :place, :title
+
   # GET /places
   # GET /places.xml
   def index
@@ -80,6 +82,16 @@ class PlacesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(places_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def search
+    if not params[:place][:title].nil?
+      @places = Place.find(:all,
+                                 :conditions => [ 'LOWER(title) LIKE ?',
+                                                  '%' + params[:place][:title].downcase + '%' ],
+                                 :order => 'title ASC',
+                                 :limit => 8)
     end
   end
 end

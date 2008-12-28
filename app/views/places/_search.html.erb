@@ -3,15 +3,8 @@
 <table>
   <% form_tag :action => 'search' do %>
   <tr>
-    <td><label>Model:</label></td>
-    <td><%= text_field_with_auto_complete :cd, :model, {:size => 20}, {:method => :get} %></td>
-    <td><%= submit_tag "Search" %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <% form_tag :action => 'search' do %>
-    <td><label>Serial Number:</label></td>
-    <td><%= text_field_with_auto_complete :cd, :serialnumber, {:size => 20}, {:method => :get} %></td>
+    <td><label>Place:</label></td>
+    <td><%= text_field_with_auto_complete :place, :title, {:size => 20}, {:method => :get} %></td>
     <td><%= submit_tag "Search" %></td>
   </tr>
   <% end %>
