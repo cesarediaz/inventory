@@ -1,3 +1,5 @@
+<% cache(:fragment => "places/_selector_places_list") do %>
+
 <% @options = [
    ['Select one','select one'],
    ['all','all'],
@@ -5,12 +7,14 @@
    ['offices','offices'],
    ['rooms','rooms'],
    ['stores','stores']]
-%>
+   %>
 
 <%= select_tag 'sort[]',
     options_for_select( @options),
     :include_prompt => false,
-    :onchange => remote_function(:url => {:controller => 'places', :action => 'list'},
-    :with => "'places='+this.value",
-    :update => "outer")
+:onchange => remote_function(:url => {:controller => 'places', :action => 'list'},
+:with => "'places='+this.value",
+:update => "outer")
 %>
+
+<% end %>
