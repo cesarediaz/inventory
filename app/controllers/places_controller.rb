@@ -105,12 +105,16 @@ class PlacesController < ApplicationController
                                :order => 'created_at DESC')
     when 'stores'
       @places = Place.stores
+      @text = 'List of stores'
     when 'offices'
       @places = Place.offices
+      @text = 'List of offices'
     when 'rooms'
       @places = Place.rooms
+      @text = 'List of rooms'
     when 'departments'
       @places = Place.departments
+      @text = 'List of departments'
     end
   end
 

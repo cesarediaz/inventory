@@ -19,7 +19,6 @@
           <div id="primaryContent">
             <div class="box">
               <div class="boxContent">
-                <h2><%= controller.controller_name %> : <%= controller.action_name %></h2>
                 <%= yield  %>
               </div>
             </div>
@@ -32,6 +31,8 @@
           <div class="box boxB">
             <div class="boxContent">
               <%= render :partial => 'search' %>
+              <div class="clear"></div>
+              <%= render :partial => 'selector_places_list' %>
             </div>
           </div>
           <% else %>
