@@ -160,13 +160,13 @@ class ComputersController < ApplicationController
 
 
   def stats
-    @all = all_computers
+    @all = Computer.find(:all)
     @all = @all.count
 
-    @availables = availables_computers
+    @availables = Computer.available
     @availables = @availables.count
 
-    @unavailables = unavailables_computers
+    @unavailables = Computer.unavailable
     @unavailables = @unavailables.count
 
     @total = @availables + @unavailables
