@@ -8,7 +8,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @places }
+      format.xml  { render :xml => @places}
     end
   end
 
@@ -89,12 +89,29 @@ class PlacesController < ApplicationController
   def search
     if not params[:place][:title].nil?
       @places = Place.find(:all,
-                                 :conditions => [ 'LOWER(title) LIKE ?',
-                                                  '%' + params[:place][:title].downcase + '%' ],
-                                 :order => 'title ASC',
-                                 :limit => 8)
+                           :conditions => [ 'LOWER(title) LIKE ?',
+                                            '%' + params[:place][:title].downcase + '%' ],
+                           :order => 'title ASC',
+                           :limit => 8)
     end
   end
 
+  def list
+    case params[:places]
+    when 'all'
+      @places = Place.paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
+    when 'stores'
+      @places = Place.stores
+    when 'offices'
+      @places = Place.offices
+    when 'rooms'
+      @places = Place.rooms
+    when 'departments'
+      @places = Place.departments
+    end
+  end
 
 end

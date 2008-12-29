@@ -26,8 +26,9 @@
           </div>
         </div>
         <div id="secondaryContent">
-          <% if controller.action_name != 'edit' && controller.action_name != 'show' &&
-             controller.action_name != 'new' && controller.action_name != 'create' %>
+          <% if (controller.action_name != 'edit' && controller.action_name != 'show' &&
+             controller.action_name != 'new' && controller.action_name != 'create') ||
+             (controller.action_name == 'list') %>
           <div class="box boxB">
             <div class="boxContent">
               <%= render :partial => 'search' %>

@@ -25,7 +25,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :printers, :collection => {:auto_complete_for_printer_model => :get,
     :auto_complete_for_printer_serialnumber => :get}
 
-  map.resources :places, :collection => {:auto_complete_for_place_title => :get}
+  map.resources :places, :collection => {:auto_complete_for_place_title => :get, :list => :get}
 
   map.resources :marks
 

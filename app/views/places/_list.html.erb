@@ -16,3 +16,13 @@
   </tr>
 <% end %>
 </table>
+
+
+<% @options = {:all => 'all',
+               :departments => 'departments',
+               :offices => 'offices',
+               :rooms => 'rooms',
+               :stores =>'stores',
+               :select =>'select'} %>
+
+<%= select_tag 'sort[]', options_for_select(@options), :include_prompt => true,:onchange => remote_function(:url => {:controller => 'places', :action => 'list'}, :with => "'places='+this.value", :update => "outer") %>
