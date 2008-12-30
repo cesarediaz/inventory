@@ -4,6 +4,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.xml
   def index
+    stats
     @places = Place.find(:all)
 
     respond_to do |format|
@@ -117,5 +118,20 @@ class PlacesController < ApplicationController
       @text = 'List of departments'
     end
   end
+
+  private
+
+  def stats
+    @all = Place.find(:all)
+    @all = @all.count
+
+    @departments = Place.departments.count
+    @offices = Place.offices.count
+    @stores = Place.stores.count
+    @rooms = Place.rooms.count
+
+    @total = @departments + @offices + @stores + @rooms
+  end
+
 
 end

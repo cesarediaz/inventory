@@ -110,6 +110,7 @@ class ComputersController < ApplicationController
 
 
   def search
+    stats
     if not params[:computer][:name].nil?
       @computers = Computer.find(:all,
                                  :conditions => [ 'LOWER(name) LIKE ?',
