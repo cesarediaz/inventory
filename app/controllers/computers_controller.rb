@@ -165,10 +165,11 @@ class ComputersController < ApplicationController
     @availables = Computer.available.count
     @unavailables = Computer.unavailable.count
 
-    @total = @availables + @unavailables
+    @p_a = (@availables * 100) / @all
+    @p_u = (@unavailables * 100) / @all
 
-    @hash = { "Availables" => @availables \
-             ,"Unavailables" => @unavailables }
+    @hash = { "Available " + @p_a.to_s + '%' => @availables \
+             ,"Unavailable " + @p_u.to_s + '%' => @unavailables }
 
 
   end

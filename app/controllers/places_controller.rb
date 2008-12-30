@@ -133,12 +133,15 @@ class PlacesController < ApplicationController
     @stores = Place.stores.count
     @rooms = Place.rooms.count
 
-    @total = @departments + @offices + @stores + @rooms
+    @p_r = (@rooms * 100) / @all
+    @p_d = (@departments * 100) / @all
+    @p_s = (@stores * 100) / @all
+    @p_o = (@offices * 100) / @all
 
-    @hash = { "departments" => @departments \
-             ,"offices" => @offices \
-             ,"stores" => @stores \
-             ,"rooms" => @rooms}
+    @hash = { "department " + @p_d.to_s + '%' => @departments \
+             ,"office " + @p_o.to_s + '%' => @offices \
+             ,"store " + @p_s.to_s + '%' => @stores \
+             ,"room " + @p_r.to_s + '%' => @rooms}
   end
 
 
