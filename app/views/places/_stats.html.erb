@@ -1,5 +1,5 @@
 <% cache(:fragment => "places/_stats") do %>
-In numbers of places: <b><%= url_google_graph_pie_3d @rooms, @departments, @offices, @stores %></b>
+In numbers of places: <b><%= url_google_graph_pie_3d @hash %></b>
 
 <div>
   <%= link_to 'All', :controller => "places", :action => "index" %>

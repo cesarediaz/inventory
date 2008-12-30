@@ -1,5 +1,6 @@
 <% cache(:fragment => "computers/_stats") do %>
-In numbers of computers: <b><%= url_google_graph_pie_3d @availables, @unavailables %></b>
+In numbers of places: <b><%= url_google_graph_pie_3d @hash %></b>
+
 
 <div>
   <%= link_to 'All', :controller => "computers", :action => "index" %>

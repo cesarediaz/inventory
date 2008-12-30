@@ -88,6 +88,7 @@ class PlacesController < ApplicationController
   end
 
   def search
+    stats
     if not params[:place][:title].nil?
       @places = Place.find(:all,
                            :conditions => [ 'LOWER(title) LIKE ?',
@@ -98,6 +99,8 @@ class PlacesController < ApplicationController
   end
 
   def list
+    stats
+
     case params[:places]
     when 'all'
       @places = Place.paginate(
@@ -131,6 +134,11 @@ class PlacesController < ApplicationController
     @rooms = Place.rooms.count
 
     @total = @departments + @offices + @stores + @rooms
+
+    @hash = { "departments" => @departments \
+             ,"offices" => @offices \
+             ,"stores" => @stores \
+             ,"rooms" => @rooms}
   end
 
 
