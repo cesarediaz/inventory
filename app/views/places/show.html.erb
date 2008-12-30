@@ -1,10 +1,8 @@
 
-Place : <%= @place.title %>
-<br>
-Description: <%= @place.title %>
-<br>
+<%= @place.description.upcase %> : <%= @place.title %>
 
 List of computers in this place:
+
 <%= render :partial => 'computers/list' %>
 <br>
 
