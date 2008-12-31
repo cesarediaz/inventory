@@ -5,7 +5,10 @@ class PlacesController < ApplicationController
   # GET /places.xml
   def index
     stats
-    @places = Place.find(:all)
+    @places = Place.paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +19,7 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.xml
   def show
+    stats
     @place = Place.find(params[:id])
     @computers = Computer.list_for_place(@place.id)
 
@@ -28,6 +32,7 @@ class PlacesController < ApplicationController
   # GET /places/new
   # GET /places/new.xml
   def new
+    stats
     @place = Place.new
 
     respond_to do |format|

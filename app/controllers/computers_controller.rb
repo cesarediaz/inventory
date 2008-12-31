@@ -9,7 +9,6 @@ class ComputersController < ApplicationController
     stats
     @computers = all_computers
 
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @computers }

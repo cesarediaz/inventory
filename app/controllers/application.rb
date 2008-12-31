@@ -13,5 +13,5 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password").
   # filter_parameter_logging :password
 
-  PER_PAGE = 5
+  PER_PAGE = 10
 end
