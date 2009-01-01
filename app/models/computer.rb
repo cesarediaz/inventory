@@ -8,7 +8,6 @@ class Computer < ActiveRecord::Base
 
   belongs_to :place
 
-
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :name, :ip, :mac

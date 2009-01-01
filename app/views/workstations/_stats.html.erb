@@ -1,0 +1,24 @@
+<% cache(:fragment => "computers/_stats") do %>
+In numbers of computers:
+
+<div>
+  <%= link_to 'All', :controller => "computers", :action => "index" %>
+  <%= @all %>
+</div>
+
+<div>
+  <%= link_to 'Availables', :controller => "computers", :action => "available" %>
+  <%= @availables %>
+</div>
+
+<div>
+  <%= link_to 'Unavailables', :controller => "computers", :action => "unavailable" %>
+  <%= @unavailables %>
+</div>
+
+
+<%  @value = GoogleChart.pie_3d_330x100(@chart).to_url %>
+<%= image_tag(@value)  rescue nil %>
+
+
+<% end %>

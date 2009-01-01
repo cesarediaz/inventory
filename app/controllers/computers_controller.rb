@@ -167,9 +167,11 @@ class ComputersController < ApplicationController
     @p_a = (@availables * 100) / @all
     @p_u = (@unavailables * 100) / @all
 
-    @hash = { "Available " + @p_a.to_s + '%' => @availables \
-             ,"Unavailable " + @p_u.to_s + '%' => @unavailables }
-
+    @chart = GoogleChart.new
+    @chart.type = :pie_3d
+    @chart.data = [@availables, @unavailables]
+    @chart.colors = '346000'
+    @chart.labels = ["Available " + @p_a.to_s + '%',"Unavailable " + @p_u.to_s + '%']
 
   end
 

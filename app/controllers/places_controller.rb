@@ -4,6 +4,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.xml
   def index
+    @text = 'List of places'
     stats
     @places = Place.paginate(
                                :page => params[:page],
@@ -22,6 +23,7 @@ class PlacesController < ApplicationController
     stats
     @place = Place.find(params[:id])
     @computers = Computer.list_for_place(@place.id)
+    @text = @place.title
 
     respond_to do |format|
       format.html # show.html.erb
@@ -108,8 +110,7 @@ class PlacesController < ApplicationController
 
     case params[:places]
     when 'all'
-      @places = Place.paginate(
-                               :page => params[:page],
+      @places = Place.paginate(:page => params[:page],
                                :per_page => PER_PAGE,
                                :order => 'created_at DESC')
     when 'stores'
@@ -143,10 +144,14 @@ class PlacesController < ApplicationController
     @p_s = (@stores * 100) / @all
     @p_o = (@offices * 100) / @all
 
-    @hash = { "department " + @p_d.to_s + '%' => @departments \
-             ,"office " + @p_o.to_s + '%' => @offices \
-             ,"store " + @p_s.to_s + '%' => @stores \
-             ,"room " + @p_r.to_s + '%' => @rooms}
+    @chart = GoogleChart.new
+    @chart.type = :pie_3d
+    @chart.data = [@rooms, @departments, @stores, @offices]
+    @chart.colors = '346000'
+    @chart.labels = ["Rooms " + @p_r.to_s + '%',
+                     "Department " + @p_d.to_s + '%',
+                     "Store " + @p_s.to_s + '%',
+                     "Office " + @p_o.to_s + '%']
   end
 
 

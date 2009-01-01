@@ -26,8 +26,9 @@ In numbers of places:
   <%= @stores %>
 </div>
 
-
-<%  @value = GoogleChart.pie_3d_330x100(@hash).to_url %>
+<br>
+A graphic percentage of places:
+<%  @value = GoogleChart.pie_3d_330x100(@chart).to_url %>
 <%= image_tag(@value)  rescue nil %>
 
 <% end %>

@@ -1,0 +1,22 @@
+<% form_for(@workstation) do |f| %>
+  <%= f.error_messages %>
+
+  Computer:
+  <%= collection_select 'workstation', 'computer_id', Computer.find(:all), 'id', 'name',
+      {:prompt => true} %>
+
+  Screen:
+  <%= collection_select 'workstation', 'screen_id', Screen.find(:all), 'id', 'model',
+      {:prompt => true} %>
+
+  Printer:
+  <%= collection_select 'workstation', 'printer_id', Printer.find(:all), 'id', 'model',
+      {:prompt => true} %>
+  <p>
+    <% if action_name == 'new' %>
+    <%= f.submit "Create" %>
+    <% else %>
+    <%= f.submit "Edit" %>
+    <% end %>
+  </p>
+<% end %>

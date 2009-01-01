@@ -1,9 +1,13 @@
-
-<%= @place.description.upcase %> : <%= @place.title %>
+<h2><%= @text %></h2>
 
 List of computers in this place:
 
-<%= render :partial => 'computers/list' %>
+<% if not @computers.empty? %>
+  <%= render :partial => 'computers/list' %>
+<% else %>
+  <%= 'empty' %>
+<% end %>
+
 <br>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
