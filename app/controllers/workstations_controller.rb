@@ -25,10 +25,7 @@ class WorkstationsController < ApplicationController
   # GET /workstations/new
   # GET /workstations/new.xml
   def new
-    @places = Place.find(:all)
-    @computers = Computer.list_for_place(params[:place_id])
-    @screens = Screen.list_for_place(params[:place_id])
-    @printers = Printer.list_for_place(params[:place_id])
+    hardware_in_place
     @workstation = Workstation.new
 
     respond_to do |format|
@@ -39,12 +36,14 @@ class WorkstationsController < ApplicationController
 
   # GET /workstations/1/edit
   def edit
+    hardware_in_place
     @workstation = Workstation.find(params[:id])
   end
 
   # POST /workstations
   # POST /workstations.xml
   def create
+    hardware_in_place
     @workstation = Workstation.new(params[:workstation])
 
     respond_to do |format|
@@ -88,4 +87,13 @@ class WorkstationsController < ApplicationController
     end
   end
 
+
+  private
+
+  def hardware_in_place
+    @places = Place.find(:all)
+    @computers = Computer.list_for_place(params[:place_id])
+    @screens = Screen.list_for_place(params[:place_id])
+    @printers = Printer.list_for_place(params[:place_id])
+  end
 end

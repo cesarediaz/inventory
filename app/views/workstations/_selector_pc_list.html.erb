@@ -10,7 +10,6 @@ Place
   <% end %>
 </select>
 
-
 Computer
 <%= collection_select 'workstation', 'computer_id', @computers, 'id', 'name',
     {:prompt => true} %>
@@ -19,22 +18,9 @@ Screen:
 <%= collection_select 'workstation', 'screen_id', @screens, 'id', 'model',
     {:prompt => true} %>
 
-
 Printer:
 <%= collection_select 'workstation', 'printer_id', @printers, 'id', 'model',
     {:prompt => true} %>
-
-
-
-
-
-<%= observe_field("places",
-    :update => "outer",
-:url => { :controller => 'workstations', :action => :new },
-:with => "'place_id='+value") %>
-
-<%= params[:place_id] %>
-<%= @workstations.size rescue nil %>
 
 
 

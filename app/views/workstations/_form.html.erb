@@ -1,7 +1,6 @@
 <% form_for(@workstation) do |f| %>
   <%= f.error_messages %>
 
-
   <%= render :partial => 'selector_pc_list' %>
 
   <p>
@@ -12,3 +11,5 @@
     <% end %>
   </p>
 <% end %>
+
+<%= debug(params) %>
