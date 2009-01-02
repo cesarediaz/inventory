@@ -1,3 +1,4 @@
+<% if not @workstations.empty? %>
 <table>
   <tr>
     <th>Computer</th>
@@ -5,10 +6,10 @@
     <th>Printer</th>
     <th colspan='3'>Actions</th>
   </tr>
-<% for workstation in @workstations %>
-   <% @c = Computer.find(workstation.computer_id).name %>
-   <% @s = Screen.find(workstation.screen_id).model %>
-   <% @p = Printer.find(workstation.printer_id).model %>
+  <% for workstation in @workstations %>
+  <% @c = Computer.find(workstation.computer_id).name %>
+  <% @s = Screen.find(workstation.screen_id).model %>
+  <% @p = Printer.find(workstation.printer_id).model %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= @c rescue nil  %></td>
     <td><%= @s rescue nil  %></td>
@@ -17,7 +18,8 @@
     <td><%= link_to 'Edit', edit_workstation_path(workstation) %></td>
     <td><%= link_to 'Destroy', workstation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 
 
+<% end %>

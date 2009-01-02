@@ -8,6 +8,9 @@
 
   <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
+
+  <%= collection_select 'screen', 'place_id', Place.find(:all), 'id', 'title',
+      {:prompt => true} %>
   <p>
     <% if action_name == 'new' %>
     <%= f.submit "Create" %>

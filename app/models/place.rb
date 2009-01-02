@@ -1,6 +1,8 @@
 class Place < ActiveRecord::Base
 
   has_many :computer, :dependent => :nullify
+  has_many :printer, :dependent => :nullify
+  has_many :screen, :dependent => :nullify
 
   #################################################
   # VALIDATIONS

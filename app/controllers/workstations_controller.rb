@@ -3,6 +3,7 @@ class WorkstationsController < ApplicationController
   # GET /workstations.xml
   def index
     @workstations = Workstation.find(:all)
+    @places = Place.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,6 +25,10 @@ class WorkstationsController < ApplicationController
   # GET /workstations/new
   # GET /workstations/new.xml
   def new
+    @places = Place.find(:all)
+    @computers = Computer.list_for_place(params[:place_id])
+    @screens = Screen.list_for_place(params[:place_id])
+    @printers = Printer.list_for_place(params[:place_id])
     @workstation = Workstation.new
 
     respond_to do |format|
@@ -82,4 +87,5 @@ class WorkstationsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end
