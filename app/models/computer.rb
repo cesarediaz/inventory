@@ -8,6 +8,7 @@ class Computer < ActiveRecord::Base
 
   belongs_to :place
 
+
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :name, :ip, :mac
@@ -21,4 +22,6 @@ class Computer < ActiveRecord::Base
   named_scope :available, :conditions => ['available = ?', true]
   named_scope :unavailable, :conditions => ['available = ?', false]
   named_scope :list_for_place, lambda { |*args| { :conditions => ['place_id = ?', args]}}
+  named_scope :list_for_place_are_not_part_a_workstation, lambda { |*args| {
+      :conditions => ['place_id = ? and is_part_of_a_workstation = ?', args, false]}}
 end

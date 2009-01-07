@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090102195153) do
+ActiveRecord::Schema.define(:version => 20090107185249) do
 
   create_table "cds", :force => true do |t|
     t.string   "model"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(:version => 20090102195153) do
     t.string   "mac"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "available",  :default => true
+    t.boolean  "available",                :default => true
     t.integer  "place_id"
+    t.boolean  "is_part_of_a_workstation", :default => false
   end
 
   create_table "dvds", :force => true do |t|
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20090102195153) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "place_id"
+    t.boolean  "is_part_of_a_workstation", :default => false
   end
 
   create_table "screens", :force => true do |t|
@@ -97,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20090102195153) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "place_id"
+    t.boolean  "is_part_of_a_workstation", :default => false
   end
 
   create_table "workstations", :force => true do |t|

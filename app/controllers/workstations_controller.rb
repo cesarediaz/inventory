@@ -2,8 +2,8 @@ class WorkstationsController < ApplicationController
   # GET /workstations
   # GET /workstations.xml
   def index
+    hardware_in_place
     @workstations = Workstation.find(:all)
-    @places = Place.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -49,7 +49,7 @@ class WorkstationsController < ApplicationController
     respond_to do |format|
       if @workstation.save
         flash[:notice] = 'Workstation was successfully created.'
-        format.html { redirect_to(@workstation) }
+        format.html { redirect_to(workstations_url) }
         format.xml  { render :xml => @workstation, :status => :created, :location => @workstation }
       else
         format.html { render :action => "new" }
@@ -91,9 +91,11 @@ class WorkstationsController < ApplicationController
   private
 
   def hardware_in_place
-    @places = Place.find(:all)
-    @computers = Computer.list_for_place(params[:place_id])
-    @screens = Screen.list_for_place(params[:place_id])
-    @printers = Printer.list_for_place(params[:place_id])
+    @place_name = Place.find(params[:place_id]).title rescue nil
+
+    @places = Place.all
+    @computers = Computer.list_for_place_are_not_part_a_workstation(params[:place_id])
+    @screens = Screen.list_for_place_are_not_part_a_workstation(params[:place_id])
+    @printers = Printer.list_for_place_are_not_part_a_workstation(params[:place_id])
   end
 end

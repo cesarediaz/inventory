@@ -10,6 +10,7 @@
     <th>Cd</th>
     <th>Dvd</th>
     <th>Place</th>
+    <th>In workstation</th>
     <th colspan='3'>Actions</th>
   </tr>
 <% for computer in @computers %>
@@ -24,6 +25,7 @@
     <td><%= computer.cd.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= computer.dvd.collect {|x| x.model + '<br>' } rescue nil %></td>
     <td><%= computer.place.title rescue nil %></td>
+    <td><%= computer.is_part_of_a_workstation rescue nil %></td>
     <td><%= link_to 'Show', computer %></td>
     <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
     <td><%= link_to 'Destroy', computer, :confirm => 'Are you sure?', :method => :delete %></td>
