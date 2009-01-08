@@ -5,7 +5,6 @@ class PlacesController < ApplicationController
   # GET /places.xml
   def index
     @text = 'List of places'
-    stats
     @places = Place.paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,
@@ -20,7 +19,6 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.xml
   def show
-    stats
     @place = Place.find(params[:id])
     @computers = Computer.list_for_place(@place.id)
     @text = @place.title
@@ -34,7 +32,6 @@ class PlacesController < ApplicationController
   # GET /places/new
   # GET /places/new.xml
   def new
-    stats
     @place = Place.new
 
     respond_to do |format|
@@ -95,7 +92,6 @@ class PlacesController < ApplicationController
   end
 
   def search
-    stats
     if not params[:place][:title].nil?
       @places = Place.find(:all,
                            :conditions => [ 'LOWER(title) LIKE ?',
@@ -106,8 +102,6 @@ class PlacesController < ApplicationController
   end
 
   def list
-    stats
-
     case params[:places]
     when 'all'
       @places = Place.paginate(:page => params[:page],
@@ -127,8 +121,6 @@ class PlacesController < ApplicationController
       @text = 'List of departments'
     end
   end
-
-  private
 
   def stats
     @all = Place.find(:all)
