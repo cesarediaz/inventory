@@ -91,11 +91,11 @@ class WorkstationsController < ApplicationController
     if not params[:place_id].nil?
       @are_not_part_a_workstation = Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count
       @are_part_workstation = Computer.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all = @are_not_part_a_workstation + @are_part_workstation
+      @all_computers = @are_not_part_a_workstation + @are_part_workstation
 
-      if @all > 0
-        @p_c_nw = (@are_not_part_a_workstation * 100) / @all
-        @p_c_w = (@are_part_workstation * 100) / @all
+      if @all_computers > 0
+        @p_c_nw = (@are_not_part_a_workstation * 100) / @all_computers
+        @p_c_w = (@are_part_workstation * 100) / @all_computers
 
         @chart = GoogleChart.new
         @chart.type = :pie_3d
@@ -111,11 +111,11 @@ class WorkstationsController < ApplicationController
     if not params[:place_id].nil?
       @are_not_part_a_workstation = Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count
       @are_part_workstation = Screen.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all = @are_not_part_a_workstation + @are_part_workstation
+      @all_screens = @are_not_part_a_workstation + @are_part_workstation
 
-      if @all > 0
-        @p_s_nw = (@are_not_part_a_workstation * 100) / @all
-        @p_s_w = (@are_part_workstation * 100) / @all
+      if @all_screens > 0
+        @p_s_nw = (@are_not_part_a_workstation * 100) / @all_screens
+        @p_s_w = (@are_part_workstation * 100) / @all_screens
 
         @chart_screen = GoogleChart.new
         @chart_screen.type = :pie_3d
@@ -132,12 +132,12 @@ class WorkstationsController < ApplicationController
 
       @are_not_part_a_workstation = Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count
       @are_part_workstation = Printer.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all = @are_not_part_a_workstation + @are_part_workstation
+      @all_printers = @are_not_part_a_workstation + @are_part_workstation
 
 
-      if @all > 0
-        @p_p_nw = (@are_not_part_a_workstation * 100) / @all
-        @p_p_w = (@are_part_workstation * 100) / @all
+      if @all_printers > 0
+        @p_p_nw = (@are_not_part_a_workstation * 100) / @all_printers
+        @p_p_w = (@are_part_workstation * 100) / @all_printers
 
         @chart_printer = GoogleChart.new
         @chart_printer.type = :pie_3d

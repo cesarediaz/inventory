@@ -14,9 +14,11 @@ class Workstation < ActiveRecord::Base
     @computer.is_part_of_a_workstation = true
     @computer.save!
 
-    @printer = Printer.find(self.printer_id)
-    @printer.is_part_of_a_workstation = true
-    @printer.save!
+    if not self.printer_id.nil?
+      @printer = Printer.find(self.printer_id)
+      @printer.is_part_of_a_workstation = true
+      @printer.save!
+    end
 
     @screen = Screen.find(self.screen_id)
     @screen.is_part_of_a_workstation = true
@@ -28,9 +30,11 @@ class Workstation < ActiveRecord::Base
     @computer.is_part_of_a_workstation = false
     @computer.save!
 
-    @printer = Printer.find(self.printer_id)
-    @printer.is_part_of_a_workstation = false
-    @printer.save!
+    if not self.printer_id.nil?
+      @printer = Printer.find(self.printer_id)
+      @printer.is_part_of_a_workstation = false
+      @printer.save!
+    end
 
     @screen = Screen.find(self.screen_id)
     @screen.is_part_of_a_workstation = false

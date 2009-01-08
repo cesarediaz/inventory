@@ -1,15 +1,15 @@
 <% cache(:fragment => "workstations/_stats") do %>
 
 
-Computers:
+Computers: <%= @all_computers %>
 <%  @value = GoogleChart.pie_3d_330x100(@chart).to_url %>
 <%= image_tag(@value)  rescue nil %>
 
-Screens:
+Screens:<%= @all_screens %>
 <%  @value = GoogleChart.pie_3d_330x100(@chart_screen).to_url %>
 <%= image_tag(@value)  rescue nil %>
 
-Printers:
+Printers:<%= @all_printers %>
 <%  @value = GoogleChart.pie_3d_330x100(@chart_printer).to_url %>
 <%= image_tag(@value)  rescue nil %>
 

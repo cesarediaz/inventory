@@ -45,7 +45,9 @@
       <div id="secondaryContent">
         <div class="box boxA">
           <div class="boxContent">
+          <% if controller.action_name == 'new' || controller.action_name == 'create' %>
             <%= render :partial => 'stats' %>
+          <% end %>
           </div>
         </div>
       </div>
