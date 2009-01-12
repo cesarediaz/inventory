@@ -15,5 +15,5 @@ class ApplicationController < ActionController::Base
 
   PER_PAGE = 10
 
-  I18n.locale = 'en'
+  I18n.locale = 'es'
 end

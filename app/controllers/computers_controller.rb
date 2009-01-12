@@ -164,14 +164,16 @@ class ComputersController < ApplicationController
     @availables = Computer.available.count
     @unavailables = Computer.unavailable.count
 
-    @p_a = (@availables * 100) / @all
-    @p_u = (@unavailables * 100) / @all
+    if @all > 0
+      @p_a = (@availables * 100) / @all
+      @p_u = (@unavailables * 100) / @all
 
-    @chart = GoogleChart.new
-    @chart.type = :pie_3d
-    @chart.data = [@availables, @unavailables]
-    @chart.colors = '346000'
-    @chart.labels = ["Available " + @p_a.to_s + '%',"Unavailable " + @p_u.to_s + '%']
+      @chart = GoogleChart.new
+      @chart.type = :pie_3d
+      @chart.data = [@availables, @unavailables]
+      @chart.colors = '346000'
+      @chart.labels = ["Available " + @p_a.to_s + '%',"Unavailable " + @p_u.to_s + '%']
+    end
 
   end
 
