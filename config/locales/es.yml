@@ -17,6 +17,23 @@ es:
   search:
     label: "Buscar"
 
+  menu:
+    workstations : "Equipos"
+    list-workstations : "Listar los equipos"
+    new : "Nuevo"
+
+    places : "Lugares"
+    list-places : "Lista de lugares"
+    new-place : "Nuevo"
+    stats-places : "Estadisticas"
+
+    #Hardware
+    computers : "Computadoras"
+    list-computers : "Listar todas las computadoras"
+    new-computer : "Nueva"
+    availables-computers : "Disponibles"
+    unavailables-computers : "No disponibles"
+
   number:
     # Used in number_with_delimiter()
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'

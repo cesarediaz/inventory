@@ -6,12 +6,12 @@
 
     <li class="top">
       <a href="/workstations" id="telmex" class="top_link">
-        <span class="down">Workstations</span>
+        <span class="down"><%= t 'menu.workstations' %></span>
         <!--[if gte IE 7]><!--></a><!--<![endif]-->
       <!--[if lte IE 6]><table><tr><td><![endif]-->
       <ul class="sub">
-        <li><a href="/workstations">List all workstations</a></li>
-        <li><a href="/workstations/new">New</a></li>
+        <li><a href="/workstations"><%= t 'menu.list-workstations' %></a></li>
+        <li><a href="/workstations/new"><%= t 'menu.new' %></a></li>
       </ul>
       <!--[if lte IE 6]></td></tr></table></a><![endif]-->
     </li>
@@ -19,13 +19,13 @@
 
     <li class="top">
       <a href="/places" id="telmex" class="top_link">
-        <span class="down">Places</span>
+        <span class="down"><%= t 'menu.places' %></span>
         <!--[if gte IE 7]><!--></a><!--<![endif]-->
       <!--[if lte IE 6]><table><tr><td><![endif]-->
       <ul class="sub">
-        <li><a href="/places">List all places</a></li>
-        <li><a href="/places/new">New</a></li>
-        <li><a href="/places/stats">Stats</a></li>
+        <li><a href="/places"><%= t 'menu.list-places' %></a></li>
+        <li><a href="/places/new"><%= t 'menu.new-place' %></a></li>
+        <li><a href="/places/stats"><%= t 'menu.stats-places' %></a></li>
       </ul>
       <!--[if lte IE 6]></td></tr></table></a><![endif]-->
     </li>
@@ -35,11 +35,11 @@
         <!--[if gte IE 7]><!--></a><!--<![endif]-->
       <!--[if lte IE 6]><table><tr><td><![endif]-->
       <ul class="sub">
-        <li><a href="/computers"  class="fly">Computers</a>
+        <li><a href="/computers"  class="fly"><%= t 'menu.computers' %></a>
           <ul>
-            <li><a href="/computers/available">Available</a></li>
-            <li><a href="/computers/unavailable">Unavailable</a></li>
-            <li><a href="/computers/new">New</a></li>
+            <li><a href="/computers/available"><%= t 'menu.availables-computers' %></a></li>
+            <li><a href="/computers/unavailable"><%= t 'menu.unavailables-computers' %></a></li>
+            <li><a href="/computers/new"><%= t 'menu.new-computer' %></a></li>
           </ul>
         </li>
         <li><a href="/mother_boards" class="fly">Motherboards</a>

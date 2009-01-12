@@ -16,3 +16,23 @@ en:
 
   search:
     label: "Search"
+
+  menu:
+    #Workstations
+    workstations : "Workstations"
+    list-workstations : "List all workstations"
+    new : "New"
+    availables-computers : "Availables"
+
+    #Places
+    places : "Places"
+    list-places : "List all places"
+    new-place : "New"
+    stats-places : "Stats"
+
+    #Hardware
+    computers : "Computers"
+    list-computers : "List all computers"
+    new-computer : "New"
+    availables-computers : "Availables"
+    unavailables-computers : "Unavailables"
