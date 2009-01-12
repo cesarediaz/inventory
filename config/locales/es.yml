@@ -34,6 +34,11 @@ es:
     availables-computers : "Disponibles"
     unavailables-computers : "No disponibles"
 
+    #MotherBoards
+    motherboards : "Placa madre"
+    list-motherboards : "Listar placas madre"
+    new-motherboard : "Nueva"
+
   number:
     # Used in number_with_delimiter()
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'

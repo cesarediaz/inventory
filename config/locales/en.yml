@@ -36,3 +36,8 @@ en:
     new-computer : "New"
     availables-computers : "Availables"
     unavailables-computers : "Unavailables"
+
+    #MotherBoards
+    motherboards : "Motherboards"
+    list-motherboards : "List all motherboards"
+    new-motherboard : "New"
