@@ -41,3 +41,8 @@ en:
     motherboards : "Motherboards"
     list-motherboards : "List all motherboards"
     new-motherboard : "New"
+
+    #Harddisks
+    harddisks : "Hard disk"
+    list-harddisks : "List hard disks"
+    new-harddisk : "New"
