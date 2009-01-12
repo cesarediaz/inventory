@@ -2,4 +2,17 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  inventory:
+    title: "Inventory"
+
+  computers:
+    title: "Computers"
+    name: "Name"
+    available: "Available"
+    harddisk: "Harddisk"
+    memory: "Memory"
+    place: "Place"
+    workstation?: "Workstation"
+
+  search:
+    label: "Search"

@@ -3,14 +3,14 @@
     <th>Pc</th>
     <th>Mac</th>
     <th>Ip</th>
-    <th>Available</th>
+    <th><%= t 'computers.available' %></th>
     <th>MBoard</th>
-    <th>Harddisk</th>
-    <th>Memory</th>
+    <th><%= t 'computers.harddisk' %></th>
+    <th><%= t 'computers.memory' %></th>
     <th>Cd</th>
     <th>Dvd</th>
-    <th>Place</th>
-    <th>In workstation</th>
+    <th><%= t 'computers.place' %></th>
+    <th><%= t 'computers.workstation?' %></th>
     <th colspan='3'>Actions</th>
   </tr>
 <% for computer in @computers %>

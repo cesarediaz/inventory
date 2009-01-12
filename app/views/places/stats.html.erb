@@ -1,0 +1,35 @@
+<% cache(:fragment => "places/_stats") do %>
+In numbers of places:
+
+<div>
+  <%= link_to 'All', :controller => "places", :action => "index" %>
+  <%= @all %>
+</div>
+
+<div>
+  Rooms
+  <%= @rooms %>
+</div>
+
+<div>
+  Departments
+  <%= @departments %>
+</div>
+
+<div>
+  Offices
+  <%= @offices %>
+</div
+
+<div>
+  Stores
+  <%= @stores %>
+</div>
+
+<br>
+A graphic percentage of places:
+<br>
+<%  @value = GoogleChart.pie_3d_530x200(@chart).to_url %>
+<%= image_tag(@value)  rescue nil %>
+
+<% end %>

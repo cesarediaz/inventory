@@ -1,0 +1,10 @@
+<%= javascript_include_tag "prototype" %>
+Place
+<select name="places" id="places">
+  <option value="">Select a place</option>
+  <% @places.each do |place| %>
+  <option value="<%= place.id %>">
+    <%= place.title %>
+  </option>
+  <% end %>
+</select>
