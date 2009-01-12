@@ -1,4 +1,6 @@
 class DvdsController < ApplicationController
+  before_filter :login_required
+
   auto_complete_for :dvd, :model
   auto_complete_for :dvd, :serialnumber
 

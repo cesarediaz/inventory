@@ -1,4 +1,6 @@
 class WorkstationsController < ApplicationController
+  before_filter :login_required
+
   # GET /workstations
   # GET /workstations.xml
   def index

@@ -1,4 +1,6 @@
 class MemoriesController < ApplicationController
+  before_filter :login_required
+
   auto_complete_for :memory, :model
   auto_complete_for :memory, :serialnumber
 

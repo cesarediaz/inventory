@@ -1,4 +1,5 @@
 class PrintersController < ApplicationController
+  before_filter :login_required
 
   auto_complete_for :printer, :model
   auto_complete_for :printer, :serialnumber

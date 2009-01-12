@@ -1,4 +1,5 @@
 class HarddisksController < ApplicationController
+  before_filter :login_required
 
   auto_complete_for :harddisk, :model
   auto_complete_for :harddisk, :serialnumber

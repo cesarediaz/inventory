@@ -1,4 +1,6 @@
 class CdsController < ApplicationController
+  before_filter :login_required
+
   auto_complete_for :cd, :model
   auto_complete_for :cd, :serialnumber
 

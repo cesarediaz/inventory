@@ -1,4 +1,5 @@
 class ComputersController < ApplicationController
+  before_filter :login_required
 
   auto_complete_for :computer, :name
   auto_complete_for :computer, :ip

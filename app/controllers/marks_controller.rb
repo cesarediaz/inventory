@@ -1,4 +1,6 @@
 class MarksController < ApplicationController
+  before_filter :login_required
+
   # GET /marks
   # GET /marks.xml
   def index

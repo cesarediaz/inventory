@@ -1,4 +1,6 @@
 class ScreensController < ApplicationController
+  before_filter :login_required
+
   auto_complete_for :screen, :model
   auto_complete_for :screen, :serialnumber
 

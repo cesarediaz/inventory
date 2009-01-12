@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+  before_filter :login_required
+
   auto_complete_for :place, :title
 
   # GET /places
