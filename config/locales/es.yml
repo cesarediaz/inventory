@@ -44,6 +44,21 @@ es:
     list-harddisks : "Listar discos"
     new-harddisk : "Nuevo"
 
+    #Memories
+    memories : "Memorias"
+    list-memories : "Listar memorias"
+    new-memorie : "Nuevo"
+
+    #Screens
+    screens : "Monitores"
+    list-screens : "Listar monitores"
+    new-screen : "Nuevo"
+
+    #Printers
+    printers : "Impresoras"
+    list-printers : "Listar impresoras"
+    new-printer : "Nuevo"
+
   number:
     # Used in number_with_delimiter()
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'

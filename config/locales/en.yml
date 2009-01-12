@@ -46,3 +46,18 @@ en:
     harddisks : "Hard disk"
     list-harddisks : "List hard disks"
     new-harddisk : "New"
+
+    #Memories
+    memories : "Memories"
+    list-memories : "List memories"
+    new-memorie : "New"
+
+    #Screens
+    screens : "Screens"
+    list-screens : "List screens"
+    new-screen : "New"
+
+    #Printers
+    printers : "Printers"
+    list-printers : "Listar printers"
+    new-printer : "New"
