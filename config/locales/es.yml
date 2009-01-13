@@ -27,6 +27,17 @@ es:
   places:
     title: "Lugar"
     name: "Nombre"
+    create: "Agregar"
+    edit: "Modificar"
+    place: "Lugar"
+    select_type_of_places: "Seleccione diferentes lugares por descripcion"
+    select_one: "Seleccione uno"
+    back: "Regresar"
+    all: "Todos"
+    departments: "Departamentos"
+    offices: "Oficinas"
+    rooms: "Salas"
+    stores: "Almacenes"
 
   motherboards:
     model: "Modelo"

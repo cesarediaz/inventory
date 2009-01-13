@@ -1,12 +1,12 @@
 <% cache(:fragment => "places/_selector_places_list") do %>
-<label>Select diferents places for description:</label>
+<label><%= t('places.select_type_of_places') %></label>
 <% @options = [
-   ['Select one','select one'],
-   ['all','all'],
-   ['departments','departments'],
-   ['offices','offices'],
-   ['rooms','rooms'],
-   ['stores','stores']]
+   [t('places.select_one'),'select one'],
+   [t('places.all'),'all'],
+   [t('places.departments'),'departments'],
+   [t('places.offices'),'offices'],
+   [t('places.rooms'),'rooms'],
+   [t('places.stores'),'stores']]
    %>
 
 <%= select_tag 'sort[]',

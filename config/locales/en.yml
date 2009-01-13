@@ -30,6 +30,17 @@ en:
   places:
     title: "Place"
     name: "Name"
+    create: "Create"
+    edit: "Edit"
+    place: "Place"
+    select_type_of_places: "Select diferents places for description"
+    select_one: "Select one"
+    back: "Back"
+    all: "All"
+    departments: "Departments"
+    offices: "Offices"
+    rooms: "Rooms"
+    stores: "Stores"
 
   motherboards:
     model: "Model"
