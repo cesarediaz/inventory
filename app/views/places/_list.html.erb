@@ -11,7 +11,7 @@
     <td><%= link_to place.title, place %></td>
     <td><%= place.description %></td>
     <td><%= place.computer.count %></td>
-    <td><%= link_to 'Show', place %></td>
+    <td><%= link_to t('places.show'), place %></td>
     <td><%= link_to t('places.edit'), edit_place_path(place) %></td>
     <td><%= link_to t('places.destroy'), place, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
