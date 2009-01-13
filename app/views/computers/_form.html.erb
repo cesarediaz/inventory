@@ -6,7 +6,7 @@
 
   <fieldset>
     <legend>Pc data</legend>
-    <%= f.label 'name' %>
+    <%= t('computers.name') %>
     <%= f.text_field :name %>
 
     <%= f.label 'mac' %>
@@ -17,18 +17,18 @@
   </fieldset>
 
   <fieldset>
-    <legend>Available</legend>
-    Yes <%= radio_button('computer', 'available', 't') %>
-    Not<%= radio_button('computer', 'available', 'f') %>
+    <legend><%= t('computers.available') %></legend>
+    <%= t('computers.y') %> <%= radio_button('computer', 'available', 't') %>
+    <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f') %>
   </fieldset>
 
   <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
       {:prompt => true} %>
 
   <% if action_name == 'new' %>
-  <%= f.submit "Create" %>
+  <%= f.submit t('computers.create') %>
   <% else %>
-  <%= f.submit "Edit" %>
+  <%= f.submit t('computers.edit') %>
   <% end %>
 </fieldset>
 

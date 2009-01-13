@@ -21,11 +21,23 @@ en:
   computers:
     title: "Computers"
     name: "Name"
+    create: "Create"
+    edit: "Edit"
+    show: "Show"
+    destroy: "Destroy"
+    stats_paragraph: "In numbers of computers"
     available: "Available"
+    unavailable: "Unavailable"
+    all : "All"
+    new: "New computer"
+    action: "Actions"
     harddisk: "Harddisk"
     memory: "Memory"
     place: "Place"
     workstation?: "Workstation"
+    back: "Back"
+    y: "Yes"
+    not: "Not"
 
   places:
     title: "Place"
