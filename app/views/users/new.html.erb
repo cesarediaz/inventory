@@ -15,5 +15,8 @@
 <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
 <%= f.password_field :password_confirmation %></p>
 
+<p><%= label_tag 'language', 'Language' %><br/>
+<%= f.select :language, [['English','en'], ['Spanish','es']] %></p>
+
 <p><%= submit_tag 'Sign up' %></p>
 <% end -%>

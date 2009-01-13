@@ -61,3 +61,15 @@ en:
     printers : "Printers"
     list-printers : "Listar printers"
     new-printer : "New"
+
+    #Marks
+    marks : "Marks"
+    list-marks : "List marks"
+    new-mark : "New"
+
+
+
+
+    #Flash
+    flash:
+      login : 'Logged in succesfully.'

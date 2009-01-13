@@ -75,13 +75,13 @@
         <li><a href="/screens" class="fly"><%= t 'menu.screens' %></a>
           <ul>
             <li><a href="/screens"><%= t 'menu.list-screens' %></a></li>
-            <li><a href="/screens/new"><%= t 'menu.new-screens' %></a></li>
+            <li><a href="/screens/new"><%= t 'menu.new-screen' %></a></li>
           </ul>
         </li>
         <li><a href="/printers" class="fly"><%= t 'menu.printers' %></a>
           <ul>
             <li><a href="/printers"><%= t 'menu.list-printers' %></a></li>
-            <li><a href="/printers/new"><%= t 'menu.new-printers' %></a></li>
+            <li><a href="/printers/new"><%= t 'menu.new-printer' %></a></li>
           </ul>
         </li>
       </ul>
@@ -90,12 +90,12 @@
 
     <li class="top">
       <a href="/marks" id="telmex" class="top_link">
-        <span class="down">Marks</span>
+        <span class="down"><%= t 'menu.marks' %></span>
         <!--[if gte IE 7]><!--></a><!--<![endif]-->
       <!--[if lte IE 6]><table><tr><td><![endif]-->
       <ul class="sub">
-        <li><a href="/marks">Lists</a></li>
-        <li><a href="/marks/new">New</a></li>
+        <li><a href="/marks"><%= t 'menu.list-marks' %></a></li>
+        <li><a href="/marks/new"><%= t 'menu.new-mark' %></a></li>
       </ul>
       <!--[if lte IE 6]></td></tr></table></a><![endif]-->
     </li>

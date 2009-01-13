@@ -17,5 +17,13 @@ class ApplicationController < ActionController::Base
 
   PER_PAGE = 10
 
-  I18n.locale = 'es'
+
+  before_filter :set_user_language
+
+  private
+
+  def set_user_language
+      I18n.locale = current_user.language if logged_in?
+  end
+
 end
