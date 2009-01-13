@@ -96,6 +96,10 @@ es:
     list-marks : "Listar marcas"
     new-mark : "Nueva"
 
+    #Login
+    login : "Ingresar"
+    logout : "Cerrar sesion"
+
     #Flash
     flash :
       login : 'Logueado satisfactoriamente.'

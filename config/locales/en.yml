@@ -26,6 +26,22 @@ en:
     model: "Model"
     sn: "Serial Number"
 
+  dvds:
+    model: "Model"
+    sn: "Serial Number"
+
+  cds:
+    model: "Model"
+    sn: "Serial Number"
+
+  screens:
+    model: "Model"
+    sn: "Serial Number"
+
+  printers:
+    model: "Model"
+    sn: "Serial Number"
+
   memories:
     model: "Model"
     sn: "Serial Number"
@@ -83,8 +99,13 @@ en:
     list-marks : "List marks"
     new-mark : "New"
 
+    #Login
+    login : "Ingresar"
+    logout : "Cerrar sesion"
 
-
+    #Login
+    login : "Login"
+    logout : "Logout"
 
     #Flash
     flash:
