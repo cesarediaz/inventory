@@ -1,9 +1,19 @@
-# Spanish translations for Rails
-# by Francisco Fernando García Nieto (ffgarcianieto@gmail.com)
-
 es:
   inventory:
     title: "Inventory"
+
+  workstations:
+    computer: "Pc"
+    screen: "Monitor"
+    printer: "Impresora"
+    action: "Accion"
+    destroy: "Eliminar"
+    new: "Agregar nuevo equipo"
+    create: "Agregar"
+    edit: "Modificar"
+    place: "Lugar"
+    select_a_place: "Seleccione un lugar"
+    back: "Regresar"
 
   computers:
     title: "Computadoras"

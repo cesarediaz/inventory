@@ -5,6 +5,19 @@ en:
   inventory:
     title: "Inventory"
 
+  workstations:
+    computer: "Computer"
+    screen: "Screen"
+    printer: "Printer"
+    action: "Action"
+    destroy: "Destroy"
+    new: "New workstation"
+    create: "Create"
+    edit: "Edit"
+    place: "Place"
+    select_a_place: "Select a place"
+    back: "Back"
+
   computers:
     title: "Computers"
     name: "Name"
