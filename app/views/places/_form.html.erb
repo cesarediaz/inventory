@@ -2,23 +2,23 @@
 <%= f.error_messages %>
 
 <p>
-  <%= f.label 'place' %>
+  <%= t('places.name') %>
   <%= f.text_field :title %>
 </p>
 
 <p>
-  <%= f.label 'description' %>
+  <%= t('places.description') %>
   <br>
-  <%= select( "place", "description", {"Department" => "department",
-    "Office" => "office", "Room" => "room", "Store" => "store"},
+  <%= select( "place", "description", {t('places.departments') => "department",
+    t('places.offices') => "office", t('places.rooms') => "room", t('places.stores') => "store"},
   { :prompt => true }) %>
 </p>
 
 <p>
   <% if action_name == 'new' %>
-  <%= f.submit "Create" %>
+  <%= f.submit t('places.create') %>
   <% else %>
-  <%= f.submit "Edit" %>
+  <%= f.submit t('places.edit') %>
   <% end %>
 </p>
 <% end %>

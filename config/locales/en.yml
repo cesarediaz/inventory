@@ -29,18 +29,24 @@ en:
 
   places:
     title: "Place"
+    computer: "Computers"
+    description: "Description"
     name: "Name"
     create: "Create"
     edit: "Edit"
+    show: "Show"
     place: "Place"
     select_type_of_places: "Select diferents places for description"
     select_one: "Select one"
     back: "Back"
     all: "All"
+    new: "New place"
     departments: "Departments"
     offices: "Offices"
     rooms: "Rooms"
     stores: "Stores"
+    action: "Action"
+    confirm: "Are you sure?"
 
   motherboards:
     model: "Model"

@@ -26,18 +26,26 @@ es:
 
   places:
     title: "Lugar"
+    computer: "Pc"
+    description: "Descripcion"
     name: "Nombre"
     create: "Agregar"
     edit: "Modificar"
+    show: "Ver"
     place: "Lugar"
     select_type_of_places: "Seleccione diferentes lugares por descripcion"
     select_one: "Seleccione uno"
     back: "Regresar"
+    new: "Agregar lugar"
     all: "Todos"
     departments: "Departamentos"
     offices: "Oficinas"
     rooms: "Salas"
     stores: "Almacenes"
+    action: "Acciones"
+    edit: "Modificar"
+    destroy: "Eliminar"
+    confirm: "Estas seguro de eliminar este registro?"
 
   motherboards:
     model: "Modelo"
