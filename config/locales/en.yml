@@ -63,26 +63,32 @@ en:
   motherboards:
     model: "Model"
     sn: "Serial number"
+    mark: "Mark"
 
   harddisks:
     model: "Model"
     sn: "Serial Number"
+    mark: "Mark"
 
   dvds:
     model: "Model"
     sn: "Serial Number"
+    mark: "Mark"
 
   cds:
     model: "Model"
     sn: "Serial Number"
+    mark: "Mark"
 
   screens:
     model: "Model"
     sn: "Serial Number"
+    mark: "Mark"
 
   printers:
     model: "Model"
     sn: "Serial Number"
+    mark: "Mark"
 
   memories:
     model: "Model"
