@@ -22,6 +22,30 @@ es:
     model: "Modelo"
     sn: "Numero de Serie"
 
+  harddisks:
+    model: "Modelo"
+    sn: "Numero de Serie"
+
+  memories:
+    model: "Modelo"
+    sn: "Numero de Serie"
+
+  dvds:
+    model: "Modelo"
+    sn: "Numero de Serie"
+
+  cds:
+    model: "Modelo"
+    sn: "Numero de Serie"
+
+  screens:
+    model: "Modelo"
+    sn: "Numero de Serie"
+
+  printers:
+    model: "Modelo"
+    sn: "Numero de Serie"
+
   search:
     label: "Buscar"
 

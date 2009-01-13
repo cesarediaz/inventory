@@ -22,6 +22,14 @@ en:
     model: "Model"
     sn: "Serial number"
 
+  harddisks:
+    model: "Model"
+    sn: "Serial Number"
+
+  memories:
+    model: "Model"
+    sn: "Serial Number"
+
   search:
     label: "Search"
 
