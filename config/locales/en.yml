@@ -14,6 +14,14 @@ en:
     place: "Place"
     workstation?: "Workstation"
 
+  places:
+    title: "Place"
+    name: "Name"
+
+  motherboards:
+    model: "Model"
+    sn: "Serial number"
+
   search:
     label: "Search"
 

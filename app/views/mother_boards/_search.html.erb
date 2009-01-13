@@ -3,16 +3,16 @@
 <table>
   <% form_tag :action => 'search' do %>
   <tr>
-    <td><label>Model:</label></td>
+    <td><label><%= t 'motherboards.model' %></label></td>
     <td><%= text_field_with_auto_complete :mother_board, :title, {:size => 20}, {:method => :get} %></td>
-    <td><%= submit_tag "Search" %></td>
+    <td><%= submit_tag  t 'search.label' %></td>
     <% end %>
   </tr>
   <tr>
     <% form_tag :action => 'search' do %>
-    <td><label>Serial Number:</label></td>
+    <td><label><%= t 'motherboards.sn' %></label></td>
     <td><%= text_field_with_auto_complete :mother_board, :serialnumber, {:size => 20}, {:method => :get} %></td>
-    <td><%= submit_tag "Search" %></td>
+    <td><%= submit_tag  t 'search.label' %></td>
   </tr>
   <% end %>
 </table>
