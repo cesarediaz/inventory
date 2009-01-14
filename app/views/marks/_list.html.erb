@@ -1,15 +1,15 @@
 <table>
   <tr>
     <th>Name</th>
-    <th colspan='3'>Actions</th>
+    <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
 <% for mark in @marks %>
   <tr  class="<%= cycle("rowA","rowB") %>">
   <tr>
     <td><%= mark.name %></td>
-    <td><%= link_to 'Show', mark %></td>
-    <td><%= link_to 'Edit', edit_mark_path(mark) %></td>
-    <td><%= link_to 'Destroy', mark, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('common-actions.show'), mark %></td>
+    <td><%= link_to t('common-actions.edit'), edit_mark_path(mark) %></td>
+    <td><%= link_to t('common-actions.destroy'), mark, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

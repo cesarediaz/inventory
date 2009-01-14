@@ -4,16 +4,16 @@
     <th><%= t('places.name') %></th>
     <th><%= t('places.description') %></th>
     <th><%= t('places.computer') %></th>
-    <th colspan='3'><%= t('places.action') %></th>
+    <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
 <% for place in @places %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= link_to place.title, place %></td>
     <td><%= place.description %></td>
     <td><%= place.computer.count %></td>
-    <td><%= link_to t('places.show'), place %></td>
-    <td><%= link_to t('places.edit'), edit_place_path(place) %></td>
-    <td><%= link_to t('places.destroy'), place, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('common-actions.show'), place %></td>
+    <td><%= link_to t('common-actions.edit'), edit_place_path(place) %></td>
+    <td><%= link_to t('common-actions.destroy'), place, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
