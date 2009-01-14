@@ -46,7 +46,7 @@ es:
     show: "Ver"
     place: "Lugar"
     select_type_of_places: "Seleccione diferentes lugares por descripcion"
-    select_one: "Seleccione uno"
+    select_one: "Seleccione una opcion"
     back: "Regresar"
     new: "Agregar lugar"
     all: "Todos"
@@ -58,6 +58,8 @@ es:
     edit: "Modificar"
     destroy: "Eliminar"
     confirm: "Estas seguro de eliminar este registro?"
+    graphic_stats_paragraph: "Un grafico en porcentajes de lugares"
+    graphic_stats_in_numbers: "En numeros de lugares"
 
   motherboards:
     model: "Modelo"
@@ -146,7 +148,7 @@ es:
 
     #Login
     login : "Ingresar"
-    logout : "Cerrar sesion"
+    logout : "Salir"
 
     #Flash
     flash :

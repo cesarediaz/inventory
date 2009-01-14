@@ -1,33 +1,34 @@
 <% cache(:fragment => "places/_stats") do %>
-In numbers of places:
+<%= t('places.graphic_stats_in_numbers') %>
 
 <div>
-  <%= link_to 'All', :controller => "places", :action => "index" %>
+  <%= link_to  t('places.all'), :controller => "places", :action => "index" %>
   <%= @all %>
 </div>
 
 <div>
-  Rooms
+  <%= t('places.rooms') %>
   <%= @rooms %>
 </div>
 
 <div>
-  Departments
+  <%= t('places.departments') %>
   <%= @departments %>
 </div>
 
 <div>
-  Offices
+  <%= t('places.offices') %>
   <%= @offices %>
 </div
 
 <div>
-  Stores
+  <%= t('places.stores') %>
   <%= @stores %>
 </div>
 
 <br>
-A graphic percentage of places:
+<%= t('places.graphic_stats_paragraph') %>
+
 <br>
 <%  @value = GoogleChart.pie_3d_530x200(@chart).to_url %>
 <%= image_tag(@value)  rescue nil %>

@@ -59,6 +59,8 @@ en:
     stores: "Stores"
     action: "Action"
     confirm: "Are you sure?"
+    graphic_stats_paragraph: "A graphic percentage of places"
+    graphic_stats_in_numbers: "In numbers of places"
 
   motherboards:
     model: "Model"
