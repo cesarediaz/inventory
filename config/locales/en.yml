@@ -66,6 +66,9 @@ en:
     model: "Model"
     sn: "Serial number"
     mark: "Mark"
+    new: "New motherboard"
+    computer: "In computer"
+    back: "Back"
 
   harddisks:
     model: "Model"
@@ -95,6 +98,13 @@ en:
   memories:
     model: "Model"
     sn: "Serial Number"
+
+  common-actions:
+    actions: "Actions"
+    edit: "Edit"
+    destroy: "Destroy"
+    show: "Show"
+    create: "Create"
 
   search:
     label: "Search"

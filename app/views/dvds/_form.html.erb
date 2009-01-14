@@ -1,10 +1,10 @@
 <% form_for(@dvd) do |f| %>
   <%= f.error_messages %>
 
-  <%= f.label 'model' %>
+  <%= t('dvds.model') %>
   <%= f.text_field :model %>
 
-  <%= f.label 'serialnumber' %>
+  <%= t('dvds.sn') %>
   <%= f.text_field :serialnumber %>
 
   Burn <%= radio_button('dvd', 'writable', 't') %>
@@ -17,9 +17,9 @@
       {:prompt => true} %>
   <p>
     <% if action_name == 'new' %>
-    <%= f.submit "Create" %>
+    <%= f.submit t('common-actions.create') %>
     <% else %>
-    <%= f.submit "Edit" %>
+    <%= f.submit t('common-actions.edit') %>
     <% end %>
   </p>
 

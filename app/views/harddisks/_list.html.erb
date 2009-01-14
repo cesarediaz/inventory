@@ -4,7 +4,7 @@
     <th><%= t('harddisks.sn') %></th>
     <th><%= t('harddisks.mark') %></th>
     <th>Pc</th>
-    <th colspan='3'>Actions</th>
+    <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
 <% for harddisk in @harddisks %>
   <tr  class="<%= cycle("rowA","rowB") %>">
@@ -12,9 +12,9 @@
     <td><%= harddisk.serialnumber %></td>
     <td><%= harddisk.mark.name rescue nil  %></td>
     <td><%= harddisk.computer.name rescue nil  %></td>
-    <td><%= link_to 'Show', harddisk %></td>
-    <td><%= link_to 'Edit', edit_harddisk_path(harddisk) %></td>
-    <td><%= link_to 'Destroy', harddisk, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('common-actions.show'), harddisk %></td>
+    <td><%= link_to t('common-actions.edit'), edit_harddisk_path(harddisk) %></td>
+    <td><%= link_to t('common-actions.destroy'), harddisk, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

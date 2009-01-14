@@ -1,11 +1,11 @@
 <table>
   <tr>
-    <th>Model</th>
-    <th>Serial Number</th>
+    <th><%= t('cds.model') %></th>
+    <th><%= t('cds.sn') %></th>
     <th>Pc</th>
     <th>Burn</th>
-    <th>Mark</th>
-    <th colspan='3'>Actions</th>
+    <th><%= t('cds.mark') %></th>
+    <th colspan='3'><%= t('common-actions.actions') %></t>
   </tr>
 <% for cd in @cds %>    <th>Mark</th>
   <tr  class="<%= cycle("rowA","rowB") %>">
@@ -14,9 +14,9 @@
     <td><%= cd.writable %></td>
     <td><%= cd.computer.name rescue nil  %></td>
     <td><%= cd.mark.name rescue nil  %></td>
-    <td><%= link_to 'Show', cd %></td>
-    <td><%= link_to 'Edit', edit_cd_path(cd) %></td>
-    <td><%= link_to 'Destroy', cd, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('common-actions.show'), cd %></td>
+    <td><%= link_to t('common-actions.edit'), edit_cd_path(cd) %></td>
+    <td><%= link_to t('common-actions.destroy'), cd, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

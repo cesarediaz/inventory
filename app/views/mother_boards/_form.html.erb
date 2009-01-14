@@ -1,23 +1,25 @@
 <% form_for(@mother_board) do |f| %>
   <%= f.error_messages %>
 
-  <%= f.label 'title' %>
+  <%= t('motherboards.model') %>
   <%= f.text_field :title %>
 
-  <%= f.label 'serialnumber' %>
+  <%= t('motherboards.sn') %>
   <%= f.text_field :serialnumber %>
 
+  <%= t('motherboards.computer') %>
   <%= collection_select 'mother_board', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
 
+  <%= t('motherboards.mark') %>
   <%= collection_select 'mother_board', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
   <p>
 
     <% if action_name == 'new' %>
-    <%= f.submit "Create" %>
+    <%= f.submit t('common-actions.create') %>
     <% else %>
-    <%= f.submit "Edit" %>
+    <%= f.submit t('common-actions.edit') %>
     <% end %>
 
   </p>

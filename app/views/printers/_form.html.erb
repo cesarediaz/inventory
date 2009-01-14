@@ -1,9 +1,10 @@
 <% form_for(@printer) do |f| %>
   <%= f.error_messages %>
-  <%= f.label 'model' %>
+
+  <%= t('printers.model') %>
   <%= f.text_field :model %>
 
-  <%= f.label 'serialnumber' %>
+  <%= t('printers.sn') %>
   <%= f.text_field :serialnumber %>
 
   <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
@@ -13,9 +14,9 @@
       {:prompt => true} %>
   <p>
     <% if action_name == 'new' %>
-    <%= f.submit "Create" %>
+    <%= f.submit  t('common-actions.create') %>
     <% else %>
-    <%= f.submit "Edit" %>
+    <%= f.submit  t('common-actions.edit') %>
     <% end %>
   </p>
 <% end %>

@@ -1,10 +1,10 @@
 <table>
   <tr>
-    <th>Model</th>
-    <th>Serial Number</th>
-    <th>Mark</th>
+    <th><%= t('memories.model') %></th>
+    <th><%= t('memories.sn') %></th>
+    <th><%= t('memories.mark') %></th>
     <th>Pc</th>
-    <th colspan='3'>Actions</th>
+    <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
 <% for memory in @memories %>
   <tr  class="<%= cycle("rowA","rowB") %>">
@@ -12,9 +12,9 @@
     <td><%= memory.serialnumber %></td>
     <td><%= memory.mark.name rescue nil  %></td>
     <td><%= memory.computer.name rescue nil  %></td>
-    <td><%= link_to 'Show', memory %></td>
-    <td><%= link_to 'Edit', edit_memory_path(memory) %></td>
-    <td><%= link_to 'Destroy', memory, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('common-actions.show'), memory %></td>
+    <td><%= link_to t('common-actions.edit'), edit_memory_path(memory) %></td>
+    <td><%= link_to t('common-actions.destroy'), memory, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

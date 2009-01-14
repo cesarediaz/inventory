@@ -7,7 +7,6 @@ es:
     screen: "Monitor"
     printer: "Impresora"
     action: "Accion"
-    destroy: "Eliminar"
     new: "Agregar nuevo equipo"
     create: "Agregar"
     edit: "Modificar"
@@ -23,11 +22,8 @@ es:
     unavailable: "No disponibles"
     all : "Total"
     new: "Agregar nueva pc"
-    action: "Acciones"
     create: "Agregar"
     edit: "Editar"
-    show: "Ver"
-    destroy: "Eliminar"
     harddisk: "Disco rigido"
     memory: "Memoria"
     place: "Lugar"
@@ -42,8 +38,6 @@ es:
     description: "Descripcion"
     name: "Nombre"
     create: "Agregar"
-    edit: "Modificar"
-    show: "Ver"
     place: "Lugar"
     select_type_of_places: "Seleccione diferentes lugares por descripcion"
     select_one: "Seleccione una opcion"
@@ -54,17 +48,18 @@ es:
     offices: "Oficinas"
     rooms: "Salas"
     stores: "Almacenes"
-    action: "Acciones"
-    edit: "Modificar"
-    destroy: "Eliminar"
     confirm: "Estas seguro de eliminar este registro?"
     graphic_stats_paragraph: "Un grafico en porcentajes de lugares"
     graphic_stats_in_numbers: "En numeros de lugares"
+
 
   motherboards:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
+    new: "Nueva placa madre"
+    computer: "En pc"
+    back: "Regresar"
 
   harddisks:
     model: "Modelo"
@@ -95,6 +90,13 @@ es:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
+
+  common-actions:
+    actions: "Acciones"
+    edit: "Modificar"
+    destroy: "Eliminar"
+    show: "Ver"
+    create: "Agregar"
 
   search:
     label: "Buscar"
