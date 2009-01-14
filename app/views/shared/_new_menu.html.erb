@@ -1,8 +1,10 @@
 <% cache(:fragment => "shared/_new_menu") do %>
+
 <div id="marco">
 
   <!--MENU-->
   <ul class="menu2">
+    <% if logged_in? %>
 
     <li class="top">
       <a href="/workstations" id="telmex" class="top_link">
@@ -108,6 +110,7 @@
 
 
   </ul>
+  <% end %>
 </ul>
 <!-- FIN MENU-->
 </div>
