@@ -425,3 +425,162 @@ Processing ComputersController#destroy (for 0.0.0.0 at 2008-12-21 15:59:58) [DEL
   Parameters: {"id"=>"1"}
 Redirected to http://test.host/computers
 Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:38:58) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:38:58) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:38:58) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:38:58) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:38:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/computers/1]
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:38:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:38:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:39:57) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:39:57) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:39:57) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:39:57) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:39:57) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:39:57) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:39:57) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:43:25) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:43:25) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:43:25) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-14 11:43:25) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:43:25) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:43:25) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-14 11:43:25) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
