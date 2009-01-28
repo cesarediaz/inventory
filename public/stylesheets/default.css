@@ -325,7 +325,15 @@ a:hover
     clear: both;
 }
 
+/* Simple Lists */
 
+#stats_data
+{
+    margin: 0em 30em 0em 0em;
+    background-color: #f0f0f0;
+    color: #000;
+    border-bottom: solid 1px #007799;
+}
 
 div.auto_complete {
     color: black;

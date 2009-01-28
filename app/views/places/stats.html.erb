@@ -1,27 +1,27 @@
 <% cache(:fragment => "places/_stats") do %>
 <%= t('places.graphic_stats_in_numbers') %>
 
-<div>
+<div id='stats_data'>
   <%= link_to  t('places.all'), :controller => "places", :action => "index" %>
   <%= @all %>
 </div>
 
-<div>
+<div id='stats_data'>
   <%= t('places.rooms') %>
   <%= @rooms %>
 </div>
 
-<div>
+<div id='stats_data'>
   <%= t('places.departments') %>
   <%= @departments %>
 </div>
 
-<div>
+<div id='stats_data'>
   <%= t('places.offices') %>
   <%= @offices %>
 </div
 
-<div>
+<div id='stats_data'>
   <%= t('places.stores') %>
   <%= @stores %>
 </div>
