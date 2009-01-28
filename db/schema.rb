@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090112233131) do
+ActiveRecord::Schema.define(:version => 20090128001724) do
 
   create_table "cds", :force => true do |t|
     t.string   "model"
@@ -119,10 +119,11 @@ ActiveRecord::Schema.define(:version => 20090112233131) do
 
   create_table "workstations", :force => true do |t|
     t.integer  "printer_id"
-    t.integer  "computer_id", :null => false
-    t.integer  "screen_id",   :null => false
+    t.integer  "computer_id",                :null => false
+    t.integer  "screen_id",                  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "place_id",    :default => 0
   end
 
 end

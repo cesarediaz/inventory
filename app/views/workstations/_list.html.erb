@@ -4,16 +4,19 @@
     <th><%= t 'workstations.computer' %></th>
     <th><%= t 'workstations.screen' %></th>
     <th><%= t 'workstations.printer' %></th>
+    <th>Place</th>
     <th colspan='3'><%= t 'workstations.action' %></th>
   </tr>
   <% for workstation in @workstations %>
   <% @c = Computer.find(workstation.computer_id).name rescue nil %>
   <% @s = Screen.find(workstation.screen_id).model rescue nil %>
   <% @p = Printer.find(workstation.printer_id).model  rescue nil %>
+  <% @place = Place.find(workstation.place_id).title  rescue nil %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= @c rescue nil  %></td>
     <td><%= @s rescue nil  %></td>
     <td><%= @p rescue nil  %></td>
+    <td><%= @place rescue nil  %></td>
     <td><%= link_to t('common-actions.destroy'), workstation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
   <% end %>
