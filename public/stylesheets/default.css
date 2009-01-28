@@ -325,15 +325,6 @@ a:hover
     clear: both;
 }
 
-/* Simple Lists */
-
-#stats_data
-{
-    margin: 0em 30em 0em 0em;
-    background-color: #f0f0f0;
-    color: #000;
-    border-bottom: solid 1px #007799;
-}
 
 div.auto_complete {
     color: black;
@@ -364,7 +355,18 @@ div.auto_complete ul strong.highlight {
 
 
 
+/* Simple Lists */
 
+#stats_data
+{
+    margin: 0em 30em 0em 0em;
+    background-color: #f0f0f0;
+    color: #000;
+    border-top: solid 1px #BBBBBB;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #DDD;
+    border-bottom: solid 1px #000000;
+}
 
 
 

@@ -1,5 +1,4 @@
 class Computer < ActiveRecord::Base
-
   has_one :mother_board ,  :dependent => :nullify
   has_many :harddisk, :dependent => :nullify
   has_many :memory, :dependent => :nullify
@@ -26,4 +25,6 @@ class Computer < ActiveRecord::Base
       :conditions => ['place_id = ? and is_part_of_a_workstation = ?', args, false]}}
   named_scope :list_for_place_as_part_a_workstation, lambda { |*args| {
       :conditions => ['place_id = ? and is_part_of_a_workstation = ?', args, true]}}
+
+
 end
