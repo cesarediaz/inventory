@@ -3,3 +3,20 @@ To build the guides:
 * Install source-highlighter (http://www.gnu.org/software/src-highlite/source-highlight.html)
 * Install the mizuho gem (http://github.com/FooBarWidget/mizuho/tree/master)
 * Run `rake guides` from the railties directory
+
+Gem list installed:
+
+
+actionmailer (2.2.2)
+actionpack (2.2.2)
+activerecord (2.2.2)
+activeresource (2.2.2)
+activesupport (2.2.2)
+faker (0.3.1)
+json (1.1.3)
+populator (0.2.5)
+rails (2.2.2)
+rake (0.8.3)
+rspec (1.1.11)
+shooting_star (3.2.7)
+simple-rss (1.1)
