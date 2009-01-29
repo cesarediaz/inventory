@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  model: WD 23424
+  serialnumber: 121232234
+  mark_id : 8
+  computer_id: 1
+
+two:
+  id: 2
+  model: WD 324234
+  serialnumber: 121234876
+  mark_id : 7
+  computer_id: 2
+
+three:
+  id: 3
+  model: WD 2312313
+  serialnumber: 121234223
+  mark_id : 8
+  computer_id: 3
+
+four:
+  id: 4
+  model: WD 2354454
+  serialnumber: 121234000
+  mark_id : 8
+  computer_id: 4

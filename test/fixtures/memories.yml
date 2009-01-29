@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  model: PC 100
+  serialnumber: 121232234
+  mark_id : 7
+  computer_id: 1
+
+two:
+  id: 2
+  model: PC 66
+  serialnumber: 121234876
+  mark_id : 7
+  computer_id: 2
+
+three:
+  id: 3
+  model: PC 121
+  serialnumber: 121234223
+  mark_id : 5
+  computer_id: 3
+
+four:
+  id: 4
+  model: PC 256
+  serialnumber: 121234000
+  mark_id : 6
+  computer_id: 4

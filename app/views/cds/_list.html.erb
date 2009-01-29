@@ -7,7 +7,7 @@
     <th><%= t('cds.mark') %></th>
     <th colspan='3'><%= t('common-actions.actions') %></t>
   </tr>
-<% for cd in @cds %>    <th>Mark</th>
+<% for cd in @cds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= cd.model %></td>
     <td><%= cd.serialnumber %></td>

@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+   id: 1
+   title: Oficina de Personal
+   description: office
+
+two:
+   id: 2
+   title: Oficina de Pasantias
+   description: office
+
+three:
+   id: 3
+   title: Sala A
+   description: room
+
+four:
+   id: 4
+   title: Sala B
+   description: room
+
+five:
+   id: 5
+   title: Deposito Informatica
+   description: store
+
+six:
+   id: 6
+   title: Departmento de Matematicas
+   description: department

@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  model: Laser 1100
+  serialnumber: 1212324001
+  mark_id : 1
+  place_id: 1
+
+two:
+  id: 2
+  model: HP Deskjet 690
+  serialnumber: 1212324001
+  mark_id : 1
+  place_id: 1
+
+three:
+  id: 3
+  model: HP 800
+  serialnumber: 1212324001
+  mark_id : 1
+  place_id: 1

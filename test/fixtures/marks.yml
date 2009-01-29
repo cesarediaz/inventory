@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+hp:
+  id: 1
+  name: Hp
+
+dell:
+  id: 2
+  name: Dell
+
+samsung:
+  id: 3
+  name: Samsung
+
+asrock:
+  id: 4
+  name: As Rock
+
+lg:
+  id: 5
+  name: Lg
+
+ge:
+  id: 6
+  name: General Electric
+
+ms:
+  id: 7
+  name: MotherStars
+
+wd:
+  id: 8
+  name: Western Digital

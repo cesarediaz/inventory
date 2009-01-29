@@ -1,0 +1,30 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+one:
+  id: 1
+  title: PM 4003
+  serialnumber: 121232234
+  mark_id : 7
+  computer_id: 1
+
+two:
+  id: 2
+  title: PM 403
+  serialnumber: 121234876
+  mark_id : 7
+  computer_id: 2
+
+three:
+  id: 3
+  title: PM 4035
+  serialnumber: 121234223
+  mark_id : 5
+  computer_id: 3
+
+four:
+  id: 4
+  title: PM 4032
+  serialnumber: 121234000
+  mark_id : 6
+  computer_id: 4

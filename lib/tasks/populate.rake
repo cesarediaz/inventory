@@ -18,16 +18,19 @@ namespace :db do
         computer.place_id = place.id
         computer.available = ['t', 'f']
         computer.name = Populator.words(1..5)
+        computer.is_part_of_a_workstation = 'f'
         computer.created_at = 2.years.ago..Time.now
       end
       Screen.populate 1..10 do |screen|
         screen.place_id = place.id
+        screen.is_part_of_a_workstation = 'f'
         screen.serialnumber = 1000000..2000000
         screen.model = Populator.words(1..5)
         screen.created_at = 2.years.ago..Time.now
       end
       Printer.populate 1..10 do |printer|
         printer.place_id = place.id
+        printer.is_part_of_a_workstation = 'f'
         printer.serialnumber = 1000000..2000000
         printer.model = Populator.words(1..5)
         printer.created_at = 2.years.ago..Time.now
