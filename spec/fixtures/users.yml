@@ -1,0 +1,31 @@
+
+quentin:
+  id:                        1
+  login:                     quentin
+  email:                     quentin@example.com
+  salt:                      1b6453892473a467d07372d45eb05abc2031647a # SHA1('0')
+  crypted_password:          4c96aff38e63458a92e16f82af9ce5dd2a27fa83 # 'monkey'
+  created_at:                <%= 5.days.ago.to_s :db  %>
+  remember_token_expires_at: <%= 1.days.from_now.to_s %>
+  remember_token:            c1dfd96eea8cc2b62785275bca38ac261256e278
+      
+aaron:
+  id:                        2
+  login:                     aaron
+  email:                     aaron@example.com
+  salt:                      ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4 # SHA1('1')
+  crypted_password:          e5cf411155a948d660bd99efb38341df6ac6989e # 'monkey'
+  created_at:                <%= 1.days.ago.to_s :db %>
+  remember_token_expires_at: 
+  remember_token:            
+
+
+old_password_holder:
+  id:                        3
+  login:                     old_password_holder
+  email:                     salty_dog@example.com
+  salt:                      7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password:          00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at:                <%= 1.days.ago.to_s :db %>
+
+

@@ -7,7 +7,8 @@ class Place < ActiveRecord::Base
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :title
-  validates_presence_of :title, :description
+  validates_presence_of :title, :description, :message => 'is required'
+  validates_size_of :title, :within => 1..100
 
   #################################################
   # Named Scope
