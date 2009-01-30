@@ -10,6 +10,7 @@ class Place < ActiveRecord::Base
   validates_presence_of :title, :description, :message => 'is required'
   validates_size_of :title, :within => 1..100
 
+
   #################################################
   # Named Scope
   named_scope :departments, :conditions => ["description = 'department'"]

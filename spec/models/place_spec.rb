@@ -25,5 +25,19 @@ describe Place do
     place.should have(2).errors_on(:title)
   end
 
+  it "should not create a new instance given invalid attributes with a title with more than 100 letter" do
+    place = Place.create({:title => '0123456789
+                                     1123456789
+                                     2123456789
+                                     3123456789
+                                     4123456789
+                                     5123456789
+                                     6123456789
+                                     7123456789
+                                     8123456789
+                                     9123456789 y mas', :description => 'room' })
+    place.should have(1).errors_on(:title)
+  end
+
 
 end

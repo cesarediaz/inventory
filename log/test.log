@@ -19202,3 +19202,1535 @@ Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/login_not_required?
   [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
   [4;35;1mPlace Create (0.3ms)[0m   [0mINSERT INTO "places" ("created_at", "title", "updated_at", "description") VALUES('2009-01-30 16:58:30', 'Office People', '2009-01-30 16:58:30', 'office')[0m
   [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People' AND "places".id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.9ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('1234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890', '41fb7905306c910056b717054570252ce3387abc', '2009-01-30 17:10:39', 'b115c79c3fc2ad571fc36ae6898fe9aa5619079f', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '88cf92aff3d45476cddae650dbefec2104996199', '2009-01-30 17:10:39', '38991683571920699b4ab3bce05be88f36fab543', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('Andre The Giant (7''4", 520 lb.) -- has a posse', 'd36794d82d22d7b2cd7d91a41507b9afd8b4f13f', '2009-01-30 17:10:39', '9d9980f007192e9e90726b5e49598f1f3d2fadb4', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket>@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket<@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'space @gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'backtick`@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tick''@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quote"@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'semicolon;@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp!addr@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail2.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@.wk') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'newline
+') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tab	') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'need.domain.and.tld@de') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'iñtërnâtiônàlizætiøn@hasnt.happened.to.email') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@toolongtld.abcdefg') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@badtld.xxx') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@no-rep-dots..com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '!!@nobadchars.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'student.name@university.edu') LIMIT 1[0m
+  [4;36;1mUser Create (1.6ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '5c11fb64885ad9da31e4c5168c4f433d03749431', '2009-01-30 17:10:39', '58e850a09de1f3ef6bd9dbafe34062b9b6ee20cb', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'student.name@university.edu')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (1.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'domain@can.haz.many.sub.doma.in') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '50b7a1f0bede5b29320f7a557099e01071c9bed6', '2009-01-30 17:10:39', 'df03210c997ae91a7f074af47d51f09ace2fea90', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'domain@can.haz.many.sub.doma.in')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello+routing-str@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '6c237898dcee1fc325a515799f10c628f10f8ea9', '2009-01-30 17:10:39', '2c6aed7ee4cbf56d4dafb19700c99d7dabfe1125', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'hello+routing-str@gmail.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp%addr@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'c1d33de14c1d1de85797c6da3f12989126e64536', '2009-01-30 17:10:39', 'b4204c6f91c4d258d4080df8e1d9da0437f4c2c3', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'uucp%addr@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'cd00086860e86b3b20a9293d0d1788d93e3ef803', '2009-01-30 17:10:39', '2b55c79b0ebfbeeef7eed9fc6694caf86b26391d', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'hello.-_there@funnychar.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '7a439a3877a21981ce39c6ce2f5198f7e966dc1d', '2009-01-30 17:10:39', '78b6e140527a8b98eec8c4eae0f936559f40b31d', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@a.wk') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'c5db4a5a08327579d91b690dca885e569a4e2fab', '2009-01-30 17:10:39', '1fa1dc2cc999031e2881df7e00adec14989cbbc8', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'r@a.wk')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@nonexistant-tld.qq') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '70843ce7c1119d1a08ad5540b3c0fc4c05966f8d', '2009-01-30 17:10:39', '68623ec4418ff1de86ab979aae7bd6490c8fd9fd', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'foo@nonexistant-tld.qq')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@twoletter-tld.de') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '08b6838f1411f17b901aeaf27c7e6e97d4964ca6', '2009-01-30 17:10:39', '245b97057d584c9e7e2e506dfc169e318314174a', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'foo@twoletter-tld.de')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@newskool-tld.museum') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '3aaab105c67a06ae16d9511a7778a587fc49ce20', '2009-01-30 17:10:39', '5589b84d9024ccf082134e3f574aeff8e5c4406f', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'foo@newskool-tld.museum')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@bar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'ed92b25e0c632352949ec58cda507858fb099e80', '2009-01-30 17:10:39', '3deaa792b032660a91eaae95f24545bd9aa7cc0c', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'foo@bar.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'space ') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'plus+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'percent%') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'backtick`') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tick''') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quote"') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'semicolon;') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'iñtërnâtiônàlizætiøn hasn''t happened to ruby 1.8 yet') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'newline
+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tab	') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890_') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '12') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'b6d94b8d241a3e7fd3e93b6cf6a4eb21b7b6b22e', '2009-01-30 17:10:39', '7a128d11adcd055dde2ba633af42a2b3d35d1860', NULL, '2009-01-30 17:10:39', 'en', NULL, 'hello.-_there@funnychar.com', 'quire@example.com')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '7fa1294c1dc5d458816d0d8005b70ee42b2fa519', '2009-01-30 17:10:39', 'bbb1d734c486019368543b3401fa5866da4b8633', NULL, '2009-01-30 17:10:39', 'en', NULL, '1234567890_234567890_234567890_234567890', 'quire@example.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '123') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '65e735f6b40838b93364d9f3656796e80c86a76f', '2009-01-30 17:10:39', '1b6e9670d94ca230958cb26520749e9d1fce6465', NULL, '2009-01-30 17:10:39', 'en', NULL, '123', 'quire@example.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '5e35067dd2f3db6c0d0e21d228d410c375b1df69', '2009-01-30 17:10:39', '2fc884502571adb3ad475d1bd8f7b743f765e1d7', NULL, '2009-01-30 17:10:39', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "remember_token" = 'e8172146cde31c23f017f31bb17be157f74294aa', "remember_token_expires_at" = '2009-02-13 17:10:39' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "remember_token" = 'f13a96ecb1a6d22a7d887b06776ad306692dcb8a', "remember_token_expires_at" = '2009-02-06 17:10:39' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "remember_token" = 'a7dcf4f631741c9effeb6661eec11799e4b2c4c4', "remember_token_expires_at" = '2009-02-06 17:10:39' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "remember_token" = 'bfdd3bbafd88af4cac0a05a123ae041d61475c59', "remember_token_expires_at" = '2009-02-13 17:10:39' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "remember_token" = 'c2d913c54c19aa84311ce2993e316dbaac27e53b', "remember_token_expires_at" = '2009-02-13 17:10:39' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'old_password_holder') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin2' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "login" = 'quentin2' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin2') LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (2.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:10:39', "crypted_password" = 'c48ff3e8615074cd78ac86ce11a9dea850a55b7b' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:10:39', NULL, 't', '2009-01-30 17:10:39', '13:23:43:15:53:30', '123.232.23.30', 'f')[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.4ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:10:39', NULL, 't', '2009-01-30 17:10:39', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.7ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:10:39', NULL, 't', '2009-01-30 17:10:39', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.5ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name', '2009-01-30 17:10:39', NULL, 't', '2009-01-30 17:10:39', '13:23:43:15:53:30', '123.232.23.32', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32' AND "computers".id <> 1) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.6ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.3ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.3ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Create (1.3ms)[0m   [0mINSERT INTO "places" ("created_at", "title", "updated_at", "description") VALUES('2009-01-30 17:10:40', 'Office People', '2009-01-30 17:10:40', 'office')[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People' AND "places".id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('1234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890', '06a4d61eb41f7ef09f77a9f8a394482d03a6f3db', '2009-01-30 17:11:03', '70b3624db29cfec4cee78cceba4bc2197501d2d2', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'fa01715c01b35ce718b3e1a38b539349fd9d241d', '2009-01-30 17:11:03', '8b2ee1591574cfa9bf08394f7f43b25b46029715', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.6ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('Andre The Giant (7''4", 520 lb.) -- has a posse', '1eb8deb8c8403181d5f0c75452db2bdf6fa43533', '2009-01-30 17:11:03', 'abded55492347625dab231b8443f69ddf6d540e1', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket>@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket<@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'space @gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'backtick`@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tick''@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quote"@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'semicolon;@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp!addr@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail2.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@.wk') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'newline
+') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tab	') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'need.domain.and.tld@de') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'iñtërnâtiônàlizætiøn@hasnt.happened.to.email') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@toolongtld.abcdefg') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@badtld.xxx') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@no-rep-dots..com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '!!@nobadchars.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'student.name@university.edu') LIMIT 1[0m
+  [4;36;1mUser Create (1.6ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '965f70f5d1ca720d89220ccb1b8fc2d75014f9b0', '2009-01-30 17:11:03', 'fa42fd8409e2018bab6012e39f3c545ae48d9d39', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'student.name@university.edu')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'domain@can.haz.many.sub.doma.in') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '992969f843efa3167af2c07ddec7f398a9b3c4b0', '2009-01-30 17:11:03', '3fc4d1eb55f18b78593072b179d04da895b0feda', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'domain@can.haz.many.sub.doma.in')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello+routing-str@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'c4c5c5015d07dbc69e35828d8ad4186968890305', '2009-01-30 17:11:03', '3398b666815de2a3059c9230ddbaf9f4549b21d2', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'hello+routing-str@gmail.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp%addr@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '265d3c30a85d70f46c52a3a30869c449e8e7536d', '2009-01-30 17:11:03', '60f10909b0d52e7e1ba33ed9f891b1111af6a22d', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'uucp%addr@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'bab2d94dc47cd6a4dcea4c1af5dbaa5641c04359', '2009-01-30 17:11:03', 'a5b4fedefefe70866dcb2b58b4d95505d8320e68', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'hello.-_there@funnychar.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'd6a4ae4dcab65a905dbe9c756228c70c15d01f85', '2009-01-30 17:11:03', '9686a26d29558e65e78af3b8d85d96af7a8cdddf', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@a.wk') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'efec668d78ec3baeb1a474e631714faac166eb1b', '2009-01-30 17:11:03', '4ca24afc7718a81ae5ee774038bef2d04c2e2800', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'r@a.wk')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@nonexistant-tld.qq') LIMIT 1[0m
+  [4;35;1mUser Create (1.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '90ab2ab1ffb4737e8635c15332cf922793defbeb', '2009-01-30 17:11:03', 'a1cec85b4416be6b59df692996618e395c49d30b', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'foo@nonexistant-tld.qq')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@twoletter-tld.de') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'e7d5a4ac90aa8137edbc29b8529d619768718559', '2009-01-30 17:11:03', 'd665e97e8cf3a28caaa9a58fac654602ee238bc9', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'foo@twoletter-tld.de')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@newskool-tld.museum') LIMIT 1[0m
+  [4;35;1mUser Create (1.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '0993bd7812f6da5d4cc954d5bc7270e8c3962c6a', '2009-01-30 17:11:03', '494092390ddf7ca9e3dc3c0dd0f2ac928f5077b8', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'foo@newskool-tld.museum')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@bar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'b72d68ae9c7c1e079e363d65a8c8e5443b6d6f35', '2009-01-30 17:11:03', '91aec20271c98ca5ac358543bb04eba7c6a140b2', NULL, '2009-01-30 17:11:03', 'en', NULL, 'quire', 'foo@bar.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'space ') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'plus+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'percent%') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'backtick`') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tick''') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quote"') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'semicolon;') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'iñtërnâtiônàlizætiøn hasn''t happened to ruby 1.8 yet') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'newline
+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tab	') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890_') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '12') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '7bdf04e765906936535577645395677d8d74b7b2', '2009-01-30 17:11:04', 'f96518bfabd94460e5d6bea2d7c5024744ef87f0', NULL, '2009-01-30 17:11:04', 'en', NULL, 'hello.-_there@funnychar.com', 'quire@example.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'df3128e8ae25c5290447cef966094c9fb5f4ed6f', '2009-01-30 17:11:04', '6d07d5a06f77818048cfae81084aaade35079520', NULL, '2009-01-30 17:11:04', 'en', NULL, '1234567890_234567890_234567890_234567890', 'quire@example.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '123') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.6ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '3e728c51387fc6bae9007343bc532242bf929e36', '2009-01-30 17:11:04', '3363ecbeec73d07ea6e8fa4d94342cadcf8937d1', NULL, '2009-01-30 17:11:04', 'en', NULL, '123', 'quire@example.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'f564869c5d1c4618e0ca25215a94ae868cec8631', '2009-01-30 17:11:04', '71ec2b51c98d4c43bbf54a9d071d291e4ee8c630', NULL, '2009-01-30 17:11:04', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "remember_token" = 'd35ae3aa478d9ed6a32b062b7c5343a91bf1b880', "remember_token_expires_at" = '2009-02-13 17:11:04' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "remember_token" = '4e2c532ec8fba6f999617071aebc46b52383692b', "remember_token_expires_at" = '2009-02-06 17:11:04' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "remember_token" = '01a38106b23ee6f07fb527c4b33937c12f6fcb38', "remember_token_expires_at" = '2009-02-06 17:11:04' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "remember_token" = '6bd1ac3e68a42f50418c0fcacc256ba5b28f31fa', "remember_token_expires_at" = '2009-02-13 17:11:04' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "remember_token" = 'a8d84927928afefa30f532d4ec77a003266bb85d', "remember_token_expires_at" = '2009-02-13 17:11:04' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'old_password_holder') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin2' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "login" = 'quentin2' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin2') LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:04', "crypted_password" = 'c48ff3e8615074cd78ac86ce11a9dea850a55b7b' WHERE "id" = 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:04', NULL, 't', '2009-01-30 17:11:04', '13:23:43:15:53:30', '123.232.23.30', 'f')[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:04', NULL, 't', '2009-01-30 17:11:04', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.4ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:04', NULL, 't', '2009-01-30 17:11:04', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.4ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name', '2009-01-30 17:11:04', NULL, 't', '2009-01-30 17:11:04', '13:23:43:15:53:30', '123.232.23.32', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32' AND "computers".id <> 1) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.3ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789 y mas') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789 y mas') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Create (1.3ms)[0m   [0mINSERT INTO "places" ("created_at", "title", "updated_at", "description") VALUES('2009-01-30 17:11:04', 'Office People', '2009-01-30 17:11:04', 'office')[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People' AND "places".id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.8ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('1234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890', '12dd5c16202921c35b34ef02820defc09b0f28e4', '2009-01-30 17:11:29', 'aeb7fd17442ad10de9724655750d20124b8ed027', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'ccc519edd980420db5b338c049197c0223382c0c', '2009-01-30 17:11:29', '40e80057bdeb8b1d6fca8262cd4f701373aeb16b', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('Andre The Giant (7''4", 520 lb.) -- has a posse', 'fc814266a136d579ee7085bb417d9fe3e77bb64e', '2009-01-30 17:11:29', '5684c9ac0566caef2ec0095a72baa9eb06591ebb', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket>@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket<@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'space @gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'backtick`@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tick''@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quote"@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'semicolon;@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp!addr@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail2.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@.wk') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'newline
+') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tab	') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'need.domain.and.tld@de') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'iñtërnâtiônàlizætiøn@hasnt.happened.to.email') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@toolongtld.abcdefg') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@badtld.xxx') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@no-rep-dots..com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '!!@nobadchars.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'student.name@university.edu') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '80dce2a13cf2d9889cff8e530b51278304159b77', '2009-01-30 17:11:29', 'fde31c647ef2d34d469f2038b537f489b9c72de6', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'student.name@university.edu')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'domain@can.haz.many.sub.doma.in') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '06b658258ee4cbacde2c2d68f2de1c4ad2183da2', '2009-01-30 17:11:29', '0057afe3ef546306dc6009b62d6340c01300e83d', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'domain@can.haz.many.sub.doma.in')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello+routing-str@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '204fdc1090109d611dfcb62a01e9bd694e28d558', '2009-01-30 17:11:29', '6bb42f8c71dff388f1225fdbb6bbeff6676342bb', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'hello+routing-str@gmail.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp%addr@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '04671cc5f9c5b521fa61e7902eadf020eb3febb4', '2009-01-30 17:11:29', '897ead62e7f3cfed518d20fc1577e8425018322a', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'uucp%addr@gmail.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '50c66bf87c64b0a59b56552cc115bdfb79f1892a', '2009-01-30 17:11:29', '03ac1052555d350c601ffe6e653186033bcedd90', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'hello.-_there@funnychar.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '7d36c64ce9ec899765a61eccd97f9cdd7acfd7f8', '2009-01-30 17:11:29', '15d2589f42726eb0e371313876fb09ab10679f90', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@a.wk') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '5c8b7d10e8416888575ae6c9af8b2aa864dda375', '2009-01-30 17:11:29', '07669d1ef8577cec4b02fd0256bc4758617dd0af', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'r@a.wk')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@nonexistant-tld.qq') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'f37165ba08b4fdf78a75192f53a72216182b3a1d', '2009-01-30 17:11:29', 'df1f61d2cbdf963359a9b001ce278c92cfc2d3ef', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'foo@nonexistant-tld.qq')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@twoletter-tld.de') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'cb50f61ef2668e47c4b6440b77278d74ebd1f41e', '2009-01-30 17:11:29', '1f29c60486901f7ea354355a2164990c868b3a2d', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'foo@twoletter-tld.de')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@newskool-tld.museum') LIMIT 1[0m
+  [4;35;1mUser Create (1.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '1a4c4c69b5d4efcb022359aa0fe4d21025683d8f', '2009-01-30 17:11:29', 'ff1f86eaabfaee438db9212d42c71da9f662bdd0', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'foo@newskool-tld.museum')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@bar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '4e1301b80eec9d35fc3d975cca5eb69e714bba3f', '2009-01-30 17:11:29', '8edd494f1c5b89b70b55450c0aaa3639f448216e', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'foo@bar.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'space ') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'plus+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'percent%') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'backtick`') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tick''') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quote"') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'semicolon;') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'iñtërnâtiônàlizætiøn hasn''t happened to ruby 1.8 yet') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'newline
+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tab	') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890_') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '12') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '8b295012108d3b2e28601b48b58590120e505eee', '2009-01-30 17:11:29', '9004827ccec440589792951afa51cbd940584e64', NULL, '2009-01-30 17:11:29', 'en', NULL, 'hello.-_there@funnychar.com', 'quire@example.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'ee05e0242f08bbb37ddb6878251287cdb90ee1f8', '2009-01-30 17:11:29', '0db31d29b706fd3aaa4a38ce0b36632c2343de54', NULL, '2009-01-30 17:11:29', 'en', NULL, '1234567890_234567890_234567890_234567890', 'quire@example.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '123') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'e19aa9f17ed3244c38e8b21670ada686a1ea7de2', '2009-01-30 17:11:29', 'ef204060c20ed9706042b3c4bbd2565f64ed7326', NULL, '2009-01-30 17:11:29', 'en', NULL, '123', 'quire@example.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'a48c18e1fb314f0ee027e686cd74af701cd51d93', '2009-01-30 17:11:29', '0ee7016c345771e3b42f1e13d30acca28d57b9aa', NULL, '2009-01-30 17:11:29', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "remember_token" = 'a09222e91841e6a28e09624eaf005df79e61df27', "remember_token_expires_at" = '2009-02-13 17:11:29' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "remember_token" = '065f1a505b0a23ed2ba4cde120eaf8026168e382', "remember_token_expires_at" = '2009-02-06 17:11:29' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "remember_token" = '8167cd586e675a00d18ccb7e39d42238caa3db1a', "remember_token_expires_at" = '2009-02-06 17:11:29' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "remember_token" = '9695a3d566c5bd79180e021418c309c51a8cd2ee', "remember_token_expires_at" = '2009-02-13 17:11:29' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (1.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "remember_token" = 'f92393d8ec3ab0a34f2339503d2de9c46b05dd3f', "remember_token_expires_at" = '2009-02-13 17:11:29' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'old_password_holder') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin2' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "login" = 'quentin2' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin2') LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:29', "crypted_password" = 'c48ff3e8615074cd78ac86ce11a9dea850a55b7b' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.5ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:29', NULL, 't', '2009-01-30 17:11:29', '13:23:43:15:53:30', '123.232.23.30', 'f')[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.4ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:29', NULL, 't', '2009-01-30 17:11:29', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.5ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:29', NULL, 't', '2009-01-30 17:11:29', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name', '2009-01-30 17:11:29', NULL, 't', '2009-01-30 17:11:29', '13:23:43:15:53:30', '123.232.23.32', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32' AND "computers".id <> 1) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.4ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.1ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.3ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.3ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.3ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Create (1.3ms)[0m   [0mINSERT INTO "places" ("created_at", "title", "updated_at", "description") VALUES('2009-01-30 17:11:29', 'Office People', '2009-01-30 17:11:29', 'office')[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People' AND "places".id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('1234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890_234567890', '5d2e30ade007f57d758d9ab7f87120e08bada78f', '2009-01-30 17:11:44', 'a2c3db49b48d1358a61c2f6858fb2b278cc5922c', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'd26aab4e50be731d3cb304de15173846fc7be0bc', '2009-01-30 17:11:44', '4ce3005eaca464148ab277ab42e457ae9f9ceab8', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.7ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('Andre The Giant (7''4", 520 lb.) -- has a posse', 'cfc491af170d8c1b310eb2f437fcfc62354c6bd5', '2009-01-30 17:11:44', 'e3c8976acff2e60d21e558aff11e093f1529897c', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket>@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bracket<@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'space @gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'backtick`@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tick''@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quote"@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'semicolon;@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp!addr@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail2.com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@.wk') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'newline
+') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tab	') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'need.domain.and.tld@de') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'iñtërnâtiônàlizætiøn@hasnt.happened.to.email') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@toolongtld.abcdefg') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@badtld.xxx') LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@no-rep-dots..com') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '!!@nobadchars.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'student.name@university.edu') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '3337ad35b4f056c7edef3f4b34fd613fd40757fc', '2009-01-30 17:11:44', '8cc126372b60b2e03160109101790a459bae211b', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'student.name@university.edu')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'domain@can.haz.many.sub.doma.in') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'eabbec9dda069b1c4ee7c5988941cd98d6476bea', '2009-01-30 17:11:44', 'c48122562361150984c62fb4c8913c349f52c1b3', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'domain@can.haz.many.sub.doma.in')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello+routing-str@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '3cd5ac356c5833d3be542229b4caa0f8f0f7e03b', '2009-01-30 17:11:44', '23cef4acd49c78025440533b0a90b122b88cc8b7', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'hello+routing-str@gmail.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'uucp%addr@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'c5f9d72ca183b2729775d183d7f8aba013fd16b9', '2009-01-30 17:11:44', '8480b3748e78228c8e578100cd5126c9a7c2c042', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'uucp%addr@gmail.com')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '336ba4fea6bf46be63fa3217a12fc11f3aff7f5b', '2009-01-30 17:11:44', '5dd9642b9cbcccbbf4e164aa1bd1dfbedfd84517', NULL, '2009-01-30 17:11:44', 'en', NULL, 'quire', 'hello.-_there@funnychar.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '7aa51ec616f4480425d92a8ffae5e0f8373e40d4', '2009-01-30 17:11:45', '7547bb758b0b4deb0e79a23955e15d1abb87169a', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', '1234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890-234567890@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'r@a.wk') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '268e2832e7f4c4d0f9fc2f7325224b594aa622a5', '2009-01-30 17:11:45', 'c14dfb80466c744f273a67594d41a13a0aff9027', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', 'r@a.wk')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@nonexistant-tld.qq') LIMIT 1[0m
+  [4;35;1mUser Create (1.6ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'd3afce06d690ae7e7ef2894eff3fe7d446f626eb', '2009-01-30 17:11:45', '56329cd51771d4fa8723f4b16e1b6c6bfe3c771b', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', 'foo@nonexistant-tld.qq')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@twoletter-tld.de') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'a9b17d827ec4a484cda23679a7d98cb0e85690c5', '2009-01-30 17:11:45', 'b46f0c2ed3e4ca18737da4d945c8586e9568f3f1', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', 'foo@twoletter-tld.de')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@newskool-tld.museum') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '822e85b7d5b9f939b551c79d4294d9f71a82d6bd', '2009-01-30 17:11:45', 'ef427b8caabce86d0767fe748faba09b373a4434', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', 'foo@newskool-tld.museum')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'foo@bar.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'c50dbc3f7506b4851b2fe62755376e9c5d6e49a2', '2009-01-30 17:11:45', 'd02fc73c5beb31d79b3c9a63af56e5e4a67ea587', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', 'foo@bar.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'space ') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'plus+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'percent%') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'backtick`') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tick''') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quote"') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'semicolon;') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'iñtërnâtiônàlizætiøn hasn''t happened to ruby 1.8 yet') LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'newline
+') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'tab	') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890_') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '12') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'hello.-_there@funnychar.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '573acd0508300e77efc421ba5660593c4c4cb9cb', '2009-01-30 17:11:45', 'b271f6e4a055d309c3146bbec0e8ee98b6c7f2f5', NULL, '2009-01-30 17:11:45', 'en', NULL, 'hello.-_there@funnychar.com', 'quire@example.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = '1234567890_234567890_234567890_234567890') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'd30b2350e9a2d7fc98690f6cc769032f71fbe866', '2009-01-30 17:11:45', '891e41d8f3affb44c41cf4624d2d477cf76c21c3', NULL, '2009-01-30 17:11:45', 'en', NULL, '1234567890_234567890_234567890_234567890', 'quire@example.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '123') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '71d578c7cb9651a79d61cbd5e7c8a6aee724d3c9', '2009-01-30 17:11:45', '4baab75da84d4faacf5898008914707fecdccab8', NULL, '2009-01-30 17:11:45', 'en', NULL, '123', 'quire@example.com')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '0af7dcb7a9ad426bbad112a61b134b0a81c248d7', '2009-01-30 17:11:45', 'e6eab3add57786ecb3969c7b1a5c4eb33f79beec', NULL, '2009-01-30 17:11:45', 'en', NULL, 'quire', 'quire@example.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (3.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "remember_token" = '5294c33c6482e37892f4b2c981a0eec543a4fab2', "remember_token_expires_at" = '2009-02-13 17:11:45' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "remember_token" = '089fca0794be311aa2cb857558890cc82d4c6e95', "remember_token_expires_at" = '2009-02-06 17:11:45' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "remember_token" = '2de1b53275ff217e408f9ba6d3628e2341e6bebd', "remember_token_expires_at" = '2009-02-06 17:11:45' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "remember_token" = 'f03000f4e03f831a979a29895b80dbc4db9aac24', "remember_token_expires_at" = '2009-02-13 17:11:45' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (1.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "remember_token" = '30c5a4cf0c973dc09295fe62454cb9a06b767e6e', "remember_token_expires_at" = '2009-02-13 17:11:45' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'old_password_holder') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin2' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "login" = 'quentin2' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin2') LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-30 17:11:45', "crypted_password" = 'c48ff3e8615074cd78ac86ce11a9dea850a55b7b' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:45', NULL, 't', '2009-01-30 17:11:45', '13:23:43:15:53:30', '123.232.23.30', 'f')[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.5ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:45', NULL, 't', '2009-01-30 17:11:45', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.6ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.4ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name1') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.31') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name1', '2009-01-30 17:11:45', NULL, 't', '2009-01-30 17:11:45', '13:23:43:15:53:30', '123.232.23.31', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.6ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name2') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Create (1.3ms)[0m   [0mINSERT INTO "computers" ("name", "created_at", "place_id", "available", "updated_at", "mac", "ip", "is_part_of_a_workstation") VALUES('name', '2009-01-30 17:11:45', NULL, 't', '2009-01-30 17:11:45', '13:23:43:15:53:30', '123.232.23.32', 'f')[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'name' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32' AND "computers".id <> 1) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30' AND "computers".id <> 1) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:301') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13-23-43-15-53.30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.3ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.3ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '223.132.00000.343') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.1ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '23.43.234.34f') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'pc') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '123.232.23.32') LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:30') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.3ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789 y mas') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '0123456789
+ 1123456789
+ 2123456789
+ 3123456789
+ 4123456789
+ 5123456789
+ 6123456789
+ 7123456789
+ 8123456789
+ 9123456789 y mas') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = '') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Exists (0.3ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mPlace Exists (0.2ms)[0m   [0mSELECT "places".id FROM "places" WHERE ("places"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People') LIMIT 1[0m
+  [4;35;1mPlace Create (1.3ms)[0m   [0mINSERT INTO "places" ("created_at", "title", "updated_at", "description") VALUES('2009-01-30 17:11:45', 'Office People', '2009-01-30 17:11:45', 'office')[0m
+  [4;36;1mPlace Exists (0.2ms)[0m   [0;1mSELECT "places".id FROM "places" WHERE ("places"."title" = 'Office People' AND "places".id <> 1) LIMIT 1[0m
