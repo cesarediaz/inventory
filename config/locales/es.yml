@@ -37,6 +37,7 @@ es:
     computer: "Pc"
     description: "Descripcion"
     name: "Nombre"
+    edit: "Editar"
     create: "Agregar"
     place: "Lugar"
     select_type_of_places: "Seleccione diferentes lugares por descripcion"
@@ -51,6 +52,7 @@ es:
     confirm: "Estas seguro de eliminar este registro?"
     graphic_stats_paragraph: "Un grafico en porcentajes de lugares"
     graphic_stats_in_numbers: "En numeros de lugares"
+    show: "Ver"
 
 
   motherboards:
