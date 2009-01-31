@@ -15,6 +15,11 @@ describe Cd do
     cd.should have(1).errors_on(:model)
   end
 
+  it "should not create a new instance given invalid attributes without a serial number" do
+    cd = Cd.create({:model => 'Lite-On', :serialnumber => nil })
+    cd.should have(1).errors_on(:serialnumber)
+  end
+
   it "should not create a new instance given two equals attributes of serial number" do
     cd1 = Cd.create({:model => 'Lite-On', :serialnumber => '1234567890' })
     cd2 = Cd.create({:model => 'Dell', :serialnumber => '1234567890' })

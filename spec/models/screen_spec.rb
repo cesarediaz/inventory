@@ -15,6 +15,11 @@ describe Screen do
     screen.should have(1).errors_on(:model)
   end
 
+  it "should not create a new instance given invalid attributes without serial number" do
+    screen = Screen.create({:model => 'SyncMaster 3v', :serialnumber => nil })
+    screen.should have(1).errors_on(:serialnumber)
+  end
+
   it "should not create a new instance given two equals attributes of serial number" do
     screen1 = Screen.create({:model => 'SyncMaster 3v', :serialnumber => '1234567890' })
     screen2 = Screen.create({:model => 'SyncMaster 3v', :serialnumber => '1234567890' })

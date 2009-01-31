@@ -15,6 +15,11 @@ describe Printer do
     printer.should have(1).errors_on(:model)
   end
 
+  it "should not create a new instance given invalid attributes without serial number " do
+    printer = Printer.create({:model => 'HP 800', :serialnumber => nil })
+    printer.should have(1).errors_on(:serialnumber)
+  end
+
   it "should not create a new instance given two equals attributes of serial number" do
     printer1 = Printer.create({:model => 'HP 800', :serialnumber => '1234567890' })
     printer2 = Printer.create({:model => 'Laser 1020', :serialnumber => '1234567890' })
