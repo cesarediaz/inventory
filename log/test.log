@@ -32216,3 +32216,926 @@ Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/login_not_required?
   [4;35;1mCd Exists (0.2ms)[0m   [0mSELECT "cds".id FROM "cds" WHERE ("cds"."serialnumber" = 'a123456') LIMIT 1[0m
   [4;36;1mCd Create (1.2ms)[0m   [0;1mINSERT INTO "cds" ("model", "computer_id", "created_at", "updated_at", "writable", "mark_id", "serialnumber") VALUES('Lite-On', NULL, '2009-01-31 19:16:52', '2009-01-31 19:16:52', NULL, NULL, 'a123456')[0m
   [4;35;1mCd Exists (0.2ms)[0m   [0mSELECT "cds".id FROM "cds" WHERE ("cds"."serialnumber" = 'a123456' AND "cds".id <> 1) LIMIT 1[0m
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-31 17:30:34) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-31 17:30:34) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+
+
+Processing ComputersController#destroy (for 0.0.0.0 at 2009-01-31 17:30:34) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers/1]
+  [4;36;1mSQL (1.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-31 17:30:34) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 2) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-31 17:30:34) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+  [4;35;1mSQL (1.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-31 17:30:34) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 2) | 302 Found [http://test.host/computers]
+
+
+Processing ComputersController#index (for 0.0.0.0 at 2009-01-31 17:30:34) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/computers]
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2009-01-31 17:30:34) [GET]
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/login]
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2009-01-31 17:30:34) [GET]
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/login]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2009-01-31 17:30:35) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:35', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 9ms (DB: 5) | 302 Found [http://test.host/logout]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2009-01-31 17:30:35) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/logout]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"FROBNOZZ"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:35', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Failed login for 'quentin' from 0.0.0.0 at Sat Jan 31 19:30:35 UTC 2009
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 6ms (View: 1, DB: 2) | 200 OK [http://test.host/session?login=quentin&password=FROBNOZZ]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:35', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Failed login for 'quentin' from 0.0.0.0 at Sat Jan 31 19:30:35 UTC 2009
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 6ms (View: 1, DB: 2) | 200 OK [http://test.host/session?login=quentin&password=test]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:35', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Failed login for 'quentin' from 0.0.0.0 at Sat Jan 31 19:30:35 UTC 2009
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 7ms (View: 1, DB: 2) | 200 OK [http://test.host/session?login=quentin&password=test]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:35', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Failed login for 'quentin' from 0.0.0.0 at Sat Jan 31 19:30:35 UTC 2009
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 6ms (View: 1, DB: 2) | 200 OK [http://test.host/session?login=quentin&password=test]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Failed login for 'quentin' from 0.0.0.0 at Sat Jan 31 19:30:35 UTC 2009
+Rendering template within layouts/places
+Rendering sessions/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/session?login=quentin&password=test]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 9ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 87ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:35) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'valid_token') LIMIT 1[0m
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"0", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"remember_me"=>"1", "login"=>"quentin", "password"=>"test"}
+Redirected to /
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/session?login=quentin&password=test&remember_me=1]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Rendering users/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/signup]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Rendering users/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/signup]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Rendering users/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/signup]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Rendering users/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/signup]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "login"=>"quire", "password"=>"quire69", "email"=>nil}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+Rendering users/new
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=&user%5Blogin%5D=quire&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=quire69]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>nil, "login"=>"quire", "password"=>"quire69", "email"=>"quire@example.com"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+Rendering users/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "login"=>"quire", "password"=>nil, "email"=>"quire@example.com"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+Rendering users/new
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=&user%5Bpassword_confirmation%5D=quire69]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "login"=>nil, "password"=>"quire69", "email"=>"quire@example.com"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+Rendering users/new
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=quire69]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-01-31 17:30:36) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "login"=>"quire", "password"=>"quire69", "email"=>"quire@example.com"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '7ea14526360afd32cc1434b5559baa3979d2ae82', '2009-01-31 19:30:36', 'b6920782f807664438ef3696a7e2c6ddfebc3f2b', NULL, '2009-01-31 19:30:36', 'en', NULL, 'quire', 'quire@example.com')[0m
+Redirected to /
+Completed in 7ms (DB: 2) | 302 Found [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=quire69]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing AccessControlTestController#login_is_required to json (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://test.host/access_control_test/login_is_required?format=json]
+
+
+Processing AccessControlTestController#login_not_required to json (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://test.host/login_not_required?format=json]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing AccessControlTestController#login_is_required to json (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/access_control_test/login_is_required?format=json]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing AccessControlTestController#login_not_required to json (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/login_not_required?format=json]
+
+
+Processing AccessControlTestController#login_is_required to xml (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://test.host/access_control_test/login_is_required?format=xml]
+
+
+Processing AccessControlTestController#login_not_required to xml (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/login_not_required?format=xml]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing AccessControlTestController#login_is_required to xml (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/access_control_test/login_is_required?format=xml]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing AccessControlTestController#login_not_required to xml (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/login_not_required?format=xml]
+
+
+Processing AccessControlTestController#login_is_required to  (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/access_control_test/login_is_required?format=]
+
+
+Processing AccessControlTestController#login_not_required to  (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/login_not_required?format=]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing AccessControlTestController#login_is_required to  (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/access_control_test/login_is_required?format=]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing AccessControlTestController#login_not_required to  (for 0.0.0.0 at 2009-01-31 17:30:36) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/login_not_required?format=]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = 'hello!', "remember_token_expires_at" = '2009-01-31 19:35:36' WHERE "id" = 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token_expires_at" = '2009-01-31 19:25:36' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'hello!') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = 'hello!', "remember_token_expires_at" = '2009-01-31 19:35:36' WHERE "id" = 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = 'hello!', "remember_token_expires_at" = '2009-01-31 19:35:36' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'i_haxxor_joo') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (1.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = 'hello!', "remember_token_expires_at" = '2009-01-31 19:35:36' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'hello!') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = '0df256a0d3ea40aea07c449db1b654a61469a1c9' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = '623cce5fdaf81c0f7deb8066f9624915a4d8b4a2', "remember_token_expires_at" = '2009-02-14 19:30:36' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = '48498f23492aae9b03863e8614af4053be3a592a', "remember_token_expires_at" = '2009-02-14 19:30:36' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-01-31 19:30:36', "remember_token" = NULL, "remember_token_expires_at" = NULL WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
