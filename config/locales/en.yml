@@ -99,6 +99,14 @@ en:
     model: "Model"
     sn: "Serial Number"
 
+  marks:
+    mark: "Mark"
+    new: "New"
+    edit : "Edit"
+    show : "Show"
+    destroy: "Destroy"
+    back: "Back"
+
   common-actions:
     actions: "Actions"
     edit: "Edit"

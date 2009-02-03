@@ -18,12 +18,39 @@ class ApplicationController < ActionController::Base
   PER_PAGE = 10
 
 
+  def google_chart(collect_values, collect_strings, all)
+    @data = []
+    @labels = []
+
+    @collect_values_position = 0
+    @chart_values_position = 0
+    collect_values.collect { |x|
+      if x > 0
+        @percent = (x * 100) / all
+        @data << @percent
+        @labels[@chart_values_position] = collect_strings[@collect_values_position] + '' + @percent.to_s + '%'
+        @chart_values_position = @chart_values_position + 1
+      end
+      @collect_values_position = @collect_values_position + 1
+    }
+    pie_3d(@data, @labels)
+  end
+
   before_filter :set_user_language
 
   private
 
   def set_user_language
       I18n.locale = current_user.language if logged_in?
+  end
+
+
+  def pie_3d(data, labels)
+    @chart = GoogleChart.new
+    @chart.type = :pie_3d
+    @chart.data = @data
+    @chart.colors = '346000'
+    @chart.labels = @labels
   end
 
 end

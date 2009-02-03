@@ -93,6 +93,14 @@ es:
     sn: "Numero de Serie"
     mark: "Marca"
 
+  marks:
+    mark: "Marca"
+    new: "Nueva"
+    edit : "Editar"
+    show : "Ver"
+    destroy: "Eliminar"
+    back: "Regresar"
+
   common-actions:
     actions: "Acciones"
     edit: "Modificar"

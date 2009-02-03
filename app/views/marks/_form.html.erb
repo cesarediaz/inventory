@@ -1,13 +1,13 @@
 <% form_for(@mark) do |f| %>
   <%= f.error_messages %>
 
-  <%= f.label 'name' %>
+  <%= t('marks.mark') %>
   <%= f.text_field :name %>
   <p>
     <% if action_name == 'new' %>
-    <%= f.submit "Create" %>
+    <%= f.submit t('marks.create') %>
     <% else %>
-    <%= f.submit "Edit" %>
+    <%= f.submit t('marks.edit') %>
     <% end %>
   </p>
 <% end %>

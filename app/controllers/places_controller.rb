@@ -133,21 +133,10 @@ class PlacesController < ApplicationController
     @stores = Place.stores.count
     @rooms = Place.rooms.count
 
-    if @all > 0
-      @p_r = (@rooms * 100) / @all
-      @p_d = (@departments * 100) / @all
-      @p_s = (@stores * 100) / @all
-      @p_o = (@offices * 100) / @all
+    @values = [@departments, @offices, @stores, @rooms]
+    @strings = ['Departaments', 'Offices', 'Stores', 'Rooms']
 
-      @chart = GoogleChart.new
-      @chart.type = :pie_3d
-      @chart.data = [@rooms, @departments, @stores, @offices]
-      @chart.colors = '346000'
-      @chart.labels = ["Rooms " + @p_r.to_s + '%',
-                       "Department " + @p_d.to_s + '%',
-                       "Store " + @p_s.to_s + '%',
-                       "Office " + @p_o.to_s + '%']
-    end
+    google_chart(@values, @strings, @all)
   end
 
 

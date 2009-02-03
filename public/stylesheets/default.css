@@ -54,6 +54,11 @@ a:hover
     text-decoration: none;
 }
 
+td
+{
+    font-size: 9pt;
+}
+
 /* Outer */
 
 #outer
