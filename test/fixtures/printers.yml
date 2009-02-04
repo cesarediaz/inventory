@@ -3,7 +3,7 @@
 one:
   id: 1
   model: Laser 1100
-  serialnumber: 1212324001
+  serialnumber: 1212324000
   mark_id : 1
   place_id: 1
 
@@ -17,6 +17,6 @@ two:
 three:
   id: 3
   model: HP 800
-  serialnumber: 1212324001
+  serialnumber: 1212324002
   mark_id : 1
   place_id: 1

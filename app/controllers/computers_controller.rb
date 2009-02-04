@@ -161,15 +161,10 @@ class ComputersController < ApplicationController
 
 
   def stats
-    @all = Computer.find(:all).count
-    @availables = Computer.available.count
-    @unavailables = Computer.unavailable.count
-
-    @values = [@availables, @unavailables]
-    @strings = ['Availables', 'Unavailables']
-
-    google_chart(@values, @strings, @all)
-
+    google_chart([Computer.available.count, Computer.unavailable.count],
+                 ['Availables', 'Unavailables'],
+                 Computer.find(:all).count, 'chart'
+                 )
   end
 
 

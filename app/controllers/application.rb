@@ -18,9 +18,10 @@ class ApplicationController < ActionController::Base
   PER_PAGE = 10
 
 
-  def google_chart(collect_values, collect_strings, all)
+  def google_chart(collect_values, collect_strings, all, elements)
     @data = []
     @labels = []
+    @elements = elements
 
     @collect_values_position = 0
     @chart_values_position = 0
@@ -33,7 +34,8 @@ class ApplicationController < ActionController::Base
       end
       @collect_values_position = @collect_values_position + 1
     }
-    pie_3d(@data, @labels)
+
+    pie3d(@data, @labels, @elements)
   end
 
   before_filter :set_user_language
@@ -45,12 +47,15 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def pie_3d(data, labels)
-    @chart = GoogleChart.new
-    @chart.type = :pie_3d
-    @chart.data = @data
-    @chart.colors = '346000'
-    @chart.labels = @labels
-  end
+  def pie3d(data, labels, elements)
+    eval %"
 
+    @#{elements} = GoogleChart.new
+    @#{elements}.type = :pie_3d
+    @#{elements}.data = data
+    @#{elements}.colors = '346000'
+    @#{elements}.labels = labels
+
+    ";
+  end
 end

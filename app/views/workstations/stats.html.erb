@@ -4,31 +4,21 @@
 :url => { :controller => 'workstations', :action => :stats },
 :with => "'place_id='+value") %>
 
-
-<% if not @all_computers.nil? %>
 <div id='stats'>
-Computers: <%= @all_computers %>
+Computers: <%= @all %>
 <%  @value = GoogleChart.pie_3d_330x100(@chart).to_url %>
 <%= image_tag(@value)  rescue nil %>
 </div>
-<% end %>
 
-
-
-<% if not @all_printers.nil? %>
 <div id='stats'>
-Printers:<%= @all_printers %>
+Printers:<%= @all %>
 <%  @value = GoogleChart.pie_3d_330x100(@chart_printer).to_url %>
 <%= image_tag(@value)  rescue nil %>
 </div>
-<% end %>
-
 
 <div id='stats'>
-<% if not @all_screens.nil? %>
 Screens:<%= @all_screens %>
 <%  @value = GoogleChart.pie_3d_330x100(@chart_screen).to_url %>
 <%= image_tag(@value)  rescue nil %>
 </div>
-<% end %>
 

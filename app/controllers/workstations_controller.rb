@@ -93,60 +93,35 @@ class WorkstationsController < ApplicationController
     if not params[:place_id].nil?
       @are_not_part_a_workstation = Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count
       @are_part_workstation = Computer.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all_computers = @are_not_part_a_workstation + @are_part_workstation
+      @all = @are_not_part_a_workstation + @are_part_workstation
 
-      if @all_computers > 0
-        @p_c_nw = (@are_not_part_a_workstation * 100) / @all_computers
-        @p_c_w = (@are_part_workstation * 100) / @all_computers
+      @values = [@are_not_part_a_workstation, @are_part_workstation]
+      @strings = ['Alone', 'Part a workstation']
 
-        @chart = GoogleChart.new
-        @chart.type = :pie_3d
-        @chart.data = [@are_part_workstation, @are_not_part_a_workstation]
-        @chart.colors = '346000'
-        @chart.labels = ["Workstations " + @p_c_w.to_s + '%',"Alone " + @p_c_nw.to_s + '%']
-      end
-
+      google_chart(@values, @strings, @all, 'chart')
     end
   end
 
   def stats_screens
     if not params[:place_id].nil?
-      @are_not_part_a_workstation = Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count
-      @are_part_workstation = Screen.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all_screens = @are_not_part_a_workstation + @are_part_workstation
-
-      if @all_screens > 0
-        @p_s_nw = (@are_not_part_a_workstation * 100) / @all_screens
-        @p_s_w = (@are_part_workstation * 100) / @all_screens
-
-        @chart_screen = GoogleChart.new
-        @chart_screen.type = :pie_3d
-        @chart_screen.data = [@are_part_workstation, @are_not_part_a_workstation]
-        @chart_screen.colors = '3460FF'
-        @chart_screen.labels = ["Workstations " + @p_s_w.to_s + '%',"Alone " + @p_s_nw.to_s + '%']
-      end
+      google_chart([Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
+                    Screen.list_for_place_as_part_a_workstation(params[:place_id]).count],
+                   ['Alone', 'Part a workstation'],
+                   Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
+                   Screen.list_for_place_as_part_a_workstation(params[:place_id]).count,
+                   'chart_screen')
 
     end
   end
 
   def stats_printers
     if not params[:place_id].nil?
-
-      @are_not_part_a_workstation = Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count
-      @are_part_workstation = Printer.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all_printers = @are_not_part_a_workstation + @are_part_workstation
-
-
-      if @all_printers > 0
-        @p_p_nw = (@are_not_part_a_workstation * 100) / @all_printers
-        @p_p_w = (@are_part_workstation * 100) / @all_printers
-
-        @chart_printer = GoogleChart.new
-        @chart_printer.type = :pie_3d
-        @chart_printer.data = [@are_part_workstation, @are_not_part_a_workstation]
-        @chart_printer.colors = '346099'
-        @chart_printer.labels = ["Workstations " + @p_p_w.to_s + '%',"Alone " + @p_p_nw.to_s + '%']
-      end
+      google_chart([Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
+                    Printer.list_for_place_as_part_a_workstation(params[:place_id]).count],
+                   ['Alone', 'Part a workstation'],
+                   Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
+                   Printer.list_for_place_as_part_a_workstation(params[:place_id]).count,
+                   'chart_printer')
 
     end
   end
