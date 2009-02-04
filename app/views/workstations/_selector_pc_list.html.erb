@@ -19,7 +19,7 @@
   <tr>
     <td valign='top'>
       <% if not @computers.empty? %>
-      <%= label_tag('computers', 'List of computers') %>
+      <%= label_tag('computers', t('phrases.list_of') + ' ' + t('computers.title')) %>
       <br>
       <%= collection_select 'workstation', 'computer_id', @computers, 'id', 'name',{},
           {:prompt => true, :size => @computers.count + 1 } %>
@@ -27,7 +27,7 @@
     </td>
     <td valign='top'>
       <% if not @screens.empty? %>
-      <%= label_tag('screens', 'List of screens') %>
+      <%= label_tag('screens',  t('phrases.list_of') + ' ' + t('screens.title')) %>
       <br>
       <%= collection_select 'workstation', 'screen_id', @screens, 'id', 'model',{},
           {:prompt => true, :size => @screens.count + 1 } %>
@@ -36,7 +36,7 @@
     <td valign='top'>
 
       <% if not @printers.empty? %>
-      <%= label_tag('printers', 'List of printers') %>
+      <%= label_tag('printers',  t('phrases.list_of') + ' ' + t('printers.title')) %>
       <br>
       <%= collection_select 'workstation', 'printer_id', @printers, 'id', 'model',{},
           {:prompt => true, :size => @printers.count + 1 } %>

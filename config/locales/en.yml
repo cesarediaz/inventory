@@ -86,11 +86,13 @@ en:
     mark: "Mark"
 
   screens:
+    title: 'Screens'
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
 
   printers:
+    title: 'Printers'
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
@@ -116,6 +118,13 @@ en:
 
   search:
     label: "Search"
+
+  stats:
+    alone: 'Alone'
+    workstation: 'In station'
+
+  phrases:
+    list_of : 'List of'
 
   menu:
     #Workstations

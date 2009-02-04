@@ -84,11 +84,13 @@ es:
     mark: "Marca"
 
   screens:
+    title: 'Monitores'
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
 
   printers:
+    title: 'Impresoras'
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
@@ -110,6 +112,13 @@ es:
 
   search:
     label: "Buscar"
+
+  stats:
+    alone: 'Libre'
+    workstation: 'En equipos'
+
+  phrases:
+    list_of : 'Lista de'
 
   menu:
     workstations : "Equipos"

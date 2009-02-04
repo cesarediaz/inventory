@@ -91,14 +91,12 @@ class WorkstationsController < ApplicationController
 
   def stats_computers
     if not params[:place_id].nil?
-      @are_not_part_a_workstation = Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count
-      @are_part_workstation = Computer.list_for_place_as_part_a_workstation(params[:place_id]).count
-      @all = @are_not_part_a_workstation + @are_part_workstation
-
-      @values = [@are_not_part_a_workstation, @are_part_workstation]
-      @strings = ['Alone', 'Part a workstation']
-
-      google_chart(@values, @strings, @all, 'chart')
+      google_chart([Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
+                    Computer.list_for_place_as_part_a_workstation(params[:place_id]).count],
+                   [t('stats.alone'), t('stats.workstation')],
+                   Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
+                   Computer.list_for_place_as_part_a_workstation(params[:place_id]).count,
+                   'chart')
     end
   end
 
@@ -106,7 +104,7 @@ class WorkstationsController < ApplicationController
     if not params[:place_id].nil?
       google_chart([Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
                     Screen.list_for_place_as_part_a_workstation(params[:place_id]).count],
-                   ['Alone', 'Part a workstation'],
+                   [t('stats.alone'), t('stats.workstation')],
                    Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
                    Screen.list_for_place_as_part_a_workstation(params[:place_id]).count,
                    'chart_screen')
@@ -118,7 +116,7 @@ class WorkstationsController < ApplicationController
     if not params[:place_id].nil?
       google_chart([Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
                     Printer.list_for_place_as_part_a_workstation(params[:place_id]).count],
-                   ['Alone', 'Part a workstation'],
+                   [t('stats.alone'), t('stats.workstation')],
                    Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
                    Printer.list_for_place_as_part_a_workstation(params[:place_id]).count,
                    'chart_printer')

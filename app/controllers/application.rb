@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
       if x > 0
         @percent = (x * 100) / all
         @data << @percent
-        @labels[@chart_values_position] = collect_strings[@collect_values_position] + '' + @percent.to_s + '%'
+        @labels[@chart_values_position] = collect_strings[@collect_values_position] + ' ' + @percent.to_s + '%'
         @chart_values_position = @chart_values_position + 1
       end
       @collect_values_position = @collect_values_position + 1
