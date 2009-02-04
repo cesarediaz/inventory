@@ -162,7 +162,7 @@ class ComputersController < ApplicationController
 
   def stats
     google_chart([Computer.available.count, Computer.unavailable.count],
-                 ['Availables', 'Unavailables'],
+                 [t('stats.available'), t('stats.unavailable')],
                  Computer.find(:all).count, 'chart'
                  )
   end

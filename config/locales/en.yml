@@ -120,6 +120,8 @@ en:
     label: "Search"
 
   stats:
+    available: 'Disponibles'
+    unavailable: 'No disponibles'
     alone: 'Alone'
     workstation: 'In station'
 

@@ -114,6 +114,8 @@ es:
     label: "Buscar"
 
   stats:
+    available: 'Disponibles'
+    unavailable: 'En uso'
     alone: 'Libre'
     workstation: 'En equipos'
 
