@@ -1,118 +1,120 @@
 <% cache(:fragment => "shared/_new_menu") do %>
 
-<div id="marco">
+<div id="menu">
+  <div id="marco">
 
-  <!--MENU-->
-  <ul class="menu2">
-    <% if logged_in? %>
+    <!--MENU-->
+    <ul class="menu2">
+      <% if logged_in? %>
 
-    <li class="top">
-      <a href="/workstations" id="telmex" class="top_link">
-        <span class="down"><%= t 'menu.workstations' %></span>
-        <!--[if gte IE 7]><!--></a><!--<![endif]-->
-      <!--[if lte IE 6]><table><tr><td><![endif]-->
-      <ul class="sub">
-        <li><a href="/workstations"><%= t 'menu.list-workstations' %></a></li>
-        <li><a href="/workstations/new"><%= t 'menu.new' %></a></li>
-      </ul>
-      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-    </li>
-
-
-    <li class="top">
-      <a href="/places" id="telmex" class="top_link">
-        <span class="down"><%= t 'menu.places' %></span>
-        <!--[if gte IE 7]><!--></a><!--<![endif]-->
-      <!--[if lte IE 6]><table><tr><td><![endif]-->
-      <ul class="sub">
-        <li><a href="/places"><%= t 'menu.list-places' %></a></li>
-        <li><a href="/places/new"><%= t 'menu.new-place' %></a></li>
-        <li><a href="/places/stats"><%= t 'menu.stats-places' %></a></li>
-      </ul>
-      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-    </li>
+      <li class="top">
+        <a href="/workstations" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.workstations' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/workstations"><%= t 'menu.list-workstations' %></a></li>
+          <li><a href="/workstations/new"><%= t 'menu.new' %></a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
 
 
-    <li class="top"><a href="#" id="telmex" class="top_link"><span class="down">Hardware</span>
-        <!--[if gte IE 7]><!--></a><!--<![endif]-->
-      <!--[if lte IE 6]><table><tr><td><![endif]-->
-      <ul class="sub">
-        <li><a href="/computers"  class="fly"><%= t 'menu.computers' %></a>
-          <ul>
-            <li><a href="/computers"  class="fly"><%= t 'menu.list-computers' %></a>
-            <li><a href="/computers/available"><%= t 'menu.availables-computers' %></a></li>
-            <li><a href="/computers/unavailable"><%= t 'menu.unavailables-computers' %></a></li>
-            <li><a href="/computers/new"><%= t 'menu.new-computer' %></a></li>
-          </ul>
-        </li>
-        <li><a href="/mother_boards" class="fly"><%= t 'menu.motherboards' %></a>
-          <ul>
-            <li><a href="/mother_boards"><%= t 'menu.list-motherboards' %></a></li>
-            <li><a href="/mother_boards/new"><%= t 'menu.new-motherboard' %></a></li>
-          </ul>
-        </li>
-        <li><a href="/harddisks" class="fly"><%= t 'menu.harddisks' %></a>
-          <ul>
-            <li><a href="/harddisks"><%= t 'menu.list-harddisks' %></a></li>
-            <li><a href="/harddisks/new"><%= t 'menu.new-harddisk' %></a></li>
-          </ul>
-        </li>
-        <li><a href="/memories" class="fly"><%= t 'menu.memories' %></a>
-          <ul>
-            <li><a href="/memories"><%= t 'menu.list-memories' %></a></li>
-            <li><a href="/memories/new"><%= t 'menu.new-memorie' %></a></li>
-          </ul>
-        </li>
-        <li><a href="/cds" class="fly">Cds</a>
-          <ul>
-            <li><a href="/cds">List</a></li>
-            <li><a href="/cds/new">New</a></li>
-          </ul>
-        </li>
-        <li><a href="/dvds" class="fly">Dvs</a>
-          <ul>
-            <li><a href="/dvds">List</a></li>
-            <li><a href="/dvds/new">New</a></li>
-          </ul>
-        </li>
-        <li><a href="/screens" class="fly"><%= t 'menu.screens' %></a>
-          <ul>
-            <li><a href="/screens"><%= t 'menu.list-screens' %></a></li>
-            <li><a href="/screens/new"><%= t 'menu.new-screen' %></a></li>
-          </ul>
-        </li>
-        <li><a href="/printers" class="fly"><%= t 'menu.printers' %></a>
-          <ul>
-            <li><a href="/printers"><%= t 'menu.list-printers' %></a></li>
-            <li><a href="/printers/new"><%= t 'menu.new-printer' %></a></li>
-          </ul>
-        </li>
-      </ul>
-      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-    </li>
-
-    <li class="top">
-      <a href="/marks" id="telmex" class="top_link">
-        <span class="down"><%= t 'menu.marks' %></span>
-        <!--[if gte IE 7]><!--></a><!--<![endif]-->
-      <!--[if lte IE 6]><table><tr><td><![endif]-->
-      <ul class="sub">
-        <li><a href="/marks"><%= t 'menu.list-marks' %></a></li>
-        <li><a href="/marks/new"><%= t 'menu.new-mark' %></a></li>
-      </ul>
-      <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-    </li>
-
-    <li class="top">
-      <a href="/logout" id="telmex" class="top_link">
-        <span class="down"><%= t 'menu.logout' %></span>
-        <!--[if gte IE 7]><!--></a><!--<![endif]-->
-    </li>
+      <li class="top">
+        <a href="/places" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.places' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/places"><%= t 'menu.list-places' %></a></li>
+          <li><a href="/places/new"><%= t 'menu.new-place' %></a></li>
+          <li><a href="/places/stats"><%= t 'menu.stats-places' %></a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
 
 
-  </ul>
-  <% end %>
+      <li class="top"><a href="#" id="telmex" class="top_link"><span class="down">Hardware</span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/computers"  class="fly"><%= t 'menu.computers' %></a>
+            <ul>
+              <li><a href="/computers"  class="fly"><%= t 'menu.list-computers' %></a>
+              <li><a href="/computers/available"><%= t 'menu.availables-computers' %></a></li>
+              <li><a href="/computers/unavailable"><%= t 'menu.unavailables-computers' %></a></li>
+              <li><a href="/computers/new"><%= t 'menu.new-computer' %></a></li>
+            </ul>
+          </li>
+          <li><a href="/mother_boards" class="fly"><%= t 'menu.motherboards' %></a>
+            <ul>
+              <li><a href="/mother_boards"><%= t 'menu.list-motherboards' %></a></li>
+              <li><a href="/mother_boards/new"><%= t 'menu.new-motherboard' %></a></li>
+            </ul>
+          </li>
+          <li><a href="/harddisks" class="fly"><%= t 'menu.harddisks' %></a>
+            <ul>
+              <li><a href="/harddisks"><%= t 'menu.list-harddisks' %></a></li>
+              <li><a href="/harddisks/new"><%= t 'menu.new-harddisk' %></a></li>
+            </ul>
+          </li>
+          <li><a href="/memories" class="fly"><%= t 'menu.memories' %></a>
+            <ul>
+              <li><a href="/memories"><%= t 'menu.list-memories' %></a></li>
+              <li><a href="/memories/new"><%= t 'menu.new-memorie' %></a></li>
+            </ul>
+          </li>
+          <li><a href="/cds" class="fly">Cds</a>
+            <ul>
+              <li><a href="/cds">List</a></li>
+              <li><a href="/cds/new">New</a></li>
+            </ul>
+          </li>
+          <li><a href="/dvds" class="fly">Dvs</a>
+            <ul>
+              <li><a href="/dvds">List</a></li>
+              <li><a href="/dvds/new">New</a></li>
+            </ul>
+          </li>
+          <li><a href="/screens" class="fly"><%= t 'menu.screens' %></a>
+            <ul>
+              <li><a href="/screens"><%= t 'menu.list-screens' %></a></li>
+              <li><a href="/screens/new"><%= t 'menu.new-screen' %></a></li>
+            </ul>
+          </li>
+          <li><a href="/printers" class="fly"><%= t 'menu.printers' %></a>
+            <ul>
+              <li><a href="/printers"><%= t 'menu.list-printers' %></a></li>
+              <li><a href="/printers/new"><%= t 'menu.new-printer' %></a></li>
+            </ul>
+          </li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+
+      <li class="top">
+        <a href="/marks" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.marks' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/marks"><%= t 'menu.list-marks' %></a></li>
+          <li><a href="/marks/new"><%= t 'menu.new-mark' %></a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+
+      <li class="top">
+        <a href="/logout" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.logout' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+      </li>
+
+
+    </ul>
+    <% end %>
 </ul>
 <!-- FIN MENU-->
+</div>
 </div>
 <% end %>

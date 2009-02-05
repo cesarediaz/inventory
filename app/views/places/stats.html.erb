@@ -3,27 +3,32 @@
 
 <div id='stats_data'>
   <%= link_to  t('places.all'), :controller => "places", :action => "index" %>
-  <%= @all %>
+  <%=
+     Place.rooms.count + Place.rooms.count +
+     Place.departments.count + Place.stores.count \
+     rescue nil
+     %>
+
 </div>
 
 <div id='stats_data'>
   <%= t('places.rooms') %>
-  <%= @rooms %>
+  <%= Place.rooms.count %>
 </div>
 
 <div id='stats_data'>
   <%= t('places.departments') %>
-  <%= @departments %>
+  <%= Place.departments.count %>
 </div>
 
 <div id='stats_data'>
   <%= t('places.offices') %>
-  <%= @offices %>
+  <%= Place.offices.count %>
 </div
 
 <div id='stats_data'>
   <%= t('places.stores') %>
-  <%= @stores %>
+  <%= Place.stores.count %>
 </div>
 
 <br>

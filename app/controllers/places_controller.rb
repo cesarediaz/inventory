@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  include ChartSystem
   before_filter :login_required
 
   auto_complete_for :place, :title
@@ -125,18 +126,17 @@ class PlacesController < ApplicationController
   end
 
   def stats
-    @all = Place.find(:all)
-    @all = @all.count
-
-    @departments = Place.departments.count
-    @offices = Place.offices.count
-    @stores = Place.stores.count
-    @rooms = Place.rooms.count
-
-    @values = [@departments, @offices, @stores, @rooms]
-    @strings = ['Departaments', 'Offices', 'Stores', 'Rooms']
-
-    google_chart(@values, @strings, @all)
+    google_chart([Place.departments.count,
+                  Place.offices.count,
+                  Place.stores.count,
+                  Place.rooms.count],
+                 [t('places.departments'),
+                  t('places.offices'),
+                  t('places.stores'),
+                  t('places.rooms')
+                 ],
+                 Place.find(:all).count,
+                 'chart')
   end
 
 

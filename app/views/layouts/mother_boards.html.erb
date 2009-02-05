@@ -1,29 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Inventory</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link href="default.css" rel="stylesheet" type="text/css" />
-    <%= stylesheet_link_tag 'scaffold' %>
-    <%= stylesheet_link_tag 'default' %>
-  </head>
+  <%= render :partial => 'shared/head' %>
   <body>
     <div id="outer">
-      <div id="menu">
-        <%= render :partial => 'shared/new_menu' %>
-      </div>
+
+      <%= render :partial => 'shared/new_menu' %>
+
       <div id="content">
-        <div id="primaryContentContainer">
-          <div id="primaryContent">
-            <div class="box">
-              <div class="boxContent">
-                <%= yield  %>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <%= render :partial => 'shared/primary_content' %>
 
         <div id="secondaryContent">
           <% if controller.action_name != 'edit' && controller.action_name != 'show' &&
@@ -44,9 +29,9 @@
       </div>
         <div class="clear"></div>
       </div>
-      <div id="footer">
-        <p>Copyleft. Designed by <a href="http://www.cesardiaz.com.ar">Cesar Diaz</a></p>
-      </div>
+
+      <%= render :partial => 'shared/footer' %>
+
     </div>
   </body>
 </html>
