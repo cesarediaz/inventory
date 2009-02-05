@@ -1,4 +1,5 @@
 class ComputersController < ApplicationController
+  include ChartSystem
   before_filter :login_required
 
   auto_complete_for :computer, :name

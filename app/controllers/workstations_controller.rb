@@ -1,4 +1,5 @@
 class WorkstationsController < ApplicationController
+  include ChartSystem
   before_filter :login_required
 
   # GET /workstations

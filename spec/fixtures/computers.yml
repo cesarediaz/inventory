@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: computer_one
+  mac: '13:23:43:15:53:30'
+  ip: 132.54.23.60
+  place_id: 1
+  available: true
+  is_part_of_a_workstation: false
+
+two:
+  id: 2
+  name: computer_two
+  mac: '13:23:43:15:53:31'
+  ip: 132.54.23.61
+  place_id: 2
+  available: true
+  is_part_of_a_workstation: false
+
+three:
+  id: 3
+  name: computer_three
+  mac: '13:23:43:15:53:32'
+  ip: 132.54.23.62
+  place_id: 2
+  available: true
+  is_part_of_a_workstation: false
+
+four:
+  id: 4
+  name: computer_four
+  mac: '13:23:43:15:53:33'
+  ip: 132.54.23.63
+  place_id: 3
+  available: false
+  is_part_of_a_workstation: false
