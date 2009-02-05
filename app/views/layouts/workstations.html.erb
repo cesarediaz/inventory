@@ -4,26 +4,24 @@
   <body>
     <div id="outer">
 
+      <% 3.times do %>
+        <br>
+      <% end %>
+
       <%= render :partial => 'shared/new_menu' %>
 
       <div id="content">
+          <%= yield  %>
 
-        <%= render :partial => 'shared/primary_content' %>
+          <% if controller.action_name == 'new' || controller.action_name == 'create' %>
+          <%= render :partial => 'stats' %>
+          <% end %>
 
+          <div class="clear"></div>
 
-        <div id="secondaryContent">
-          <div class="box boxA">
-            <div class="boxContent">
-              <% if controller.action_name == 'new' || controller.action_name == 'create' %>
-              <%= render :partial => 'stats' %>
-              <% end %>
-            </div>
-          </div>
+          <%= render :partial => 'shared/footer' %>
+
         </div>
-        <div class="clear"></div>
-
-        <%= render :partial => 'shared/footer' %>
-
       </div>
     </body>
   </html>

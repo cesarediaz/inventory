@@ -30,29 +30,29 @@
     <div id='stats_data'>
       <%= t('places.offices') %>
       <%= Place.offices.count %>
-</div
-
-<div id='stats_data'>
-  <%= t('places.stores') %>
-  <%= Place.stores.count %>
-</div>
-
-</div>
-</div>
-
-
-  <a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
-    Mostrar/ocultar grafico estadistico</a>
-  <div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
-    <div>
-      <br>
-      <%= t('places.graphic_stats_paragraph') %>
-
-      <br>
-      <%  @value = GoogleChart.pie_3d_530x200(@chart).to_url %>
-      <%= image_tag(@value)  rescue nil %>
-
     </div>
+
+    <div id='stats_data'>
+      <%= t('places.stores') %>
+      <%= Place.stores.count %>
+    </div>
+
   </div>
+</div>
+
+<br/>
+<a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
+  Mostrar/ocultar grafico estadistico</a>
+<div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
+  <div>
+    <br>
+    <%= t('places.graphic_stats_paragraph') %>
+
+    <br>
+    <%  @value = GoogleChart.pie_3d_530x200(@chart).to_url %>
+    <%= image_tag(@value)  rescue nil %>
+
+  </div>
+</div>
 <% end %>
 

@@ -6,7 +6,7 @@ module ChartSystem
   #a string to make the instance variable in the pie3d method
   #
   #Return a pie_3d chart link to get the chart graph from Google Api
-  def google_chart(collect_values, collect_strings, total_count, elements)
+  def google_chart(collect_values, collect_strings, total_count, elements, title)
     @data = []
     @labels = []
     @elements = elements
@@ -23,7 +23,7 @@ module ChartSystem
       @collect_values_position = @collect_values_position + 1
     }
 
-    pie3d(@data, @labels, @elements)
+    pie3d(@data, @labels, @elements, title)
   end
 
   #Get the below params:
@@ -33,10 +33,11 @@ module ChartSystem
   #
   #Return: the instance var with the values to use in Google Api
   #        Chart method
-  def pie3d(data, labels, elements)
+  def pie3d(data, labels, elements, title)
     eval %"
 
     @#{elements} = GoogleChart.new
+    @#{elements}.title = title
     @#{elements}.type = :pie_3d
     @#{elements}.data = data
     @#{elements}.colors = '346000'

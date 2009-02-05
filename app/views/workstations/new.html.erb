@@ -4,7 +4,6 @@
 <%= observe_field("places", :update => "outer",
 :url => { :controller => 'workstations', :action => :new },
 :with => "'place_id='+value") %>
-
-</div>
 <%= link_to t('workstations.back'), workstations_path %>
+</div>
 
