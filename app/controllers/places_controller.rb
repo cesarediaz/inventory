@@ -136,7 +136,7 @@ class PlacesController < ApplicationController
                   t('places.rooms')
                  ],
                  Place.find(:all).count,
-                 'chart')
+                 'chart', t('places.graphic_stats_paragraph'))
   end
 
 
