@@ -4,18 +4,13 @@
 :url => { :controller => 'workstations', :action => :stats },
 :with => "'place_id='+value") %>
 
+<%= @place_name rescue nil %>
+
 <div id='stats_lateral_panel'>
 
-  Computers: <%= @all %>
-  <%  @value = GoogleChart.pie_3d_330x100(@chart).to_url %>
-  <%= image_tag(@value)  rescue nil %>
+  <%= render :partial => 'stats' %>
 
-  Printers:<%= @all %>
-  <%  @value = GoogleChart.pie_3d_330x100(@chart_printer).to_url %>
-  <%= image_tag(@value)  rescue nil %>
-
-  Screens:<%= @all_screens %>
-  <%  @value = GoogleChart.pie_3d_330x100(@chart_screen).to_url %>
-  <%= image_tag(@value)  rescue nil %>
 
 </div>
+
+

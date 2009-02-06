@@ -126,6 +126,7 @@ es:
     workstations : "Equipos"
     list-workstations : "Listar los equipos"
     new : "Nuevo"
+    stats-workstations : "Estadisticas"
 
     places : "Lugares"
     list-places : "Lista de lugares"

@@ -13,10 +13,6 @@
       <div id="content">
           <%= yield  %>
 
-          <% if controller.action_name == 'new' || controller.action_name == 'create' %>
-          <%= render :partial => 'stats' %>
-          <% end %>
-
           <div class="clear"></div>
 
           <%= render :partial => 'shared/footer' %>

@@ -90,48 +90,18 @@ class WorkstationsController < ApplicationController
     end
   end
 
-  def stats_computers
+  def stats
+    hardware_in_place
     if not params[:place_id].nil?
-      google_chart([Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
-                    Computer.list_for_place_as_part_a_workstation(params[:place_id]).count],
-                   [t('stats.alone'), t('stats.workstation')],
-                   Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
-                   Computer.list_for_place_as_part_a_workstation(params[:place_id]).count,
-                   'chart', t('workstations.computer'))
-    end
-  end
-
-  def stats_screens
-    if not params[:place_id].nil?
-      google_chart([Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
-                    Screen.list_for_place_as_part_a_workstation(params[:place_id]).count],
-                   [t('stats.alone'), t('stats.workstation')],
-                   Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
-                   Screen.list_for_place_as_part_a_workstation(params[:place_id]).count,
-                   'chart_screen', t('workstations.screen'))
-
-    end
-  end
-
-  def stats_printers
-    if not params[:place_id].nil?
-      google_chart([Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count,
-                    Printer.list_for_place_as_part_a_workstation(params[:place_id]).count],
-                   [t('stats.alone'), t('stats.workstation')],
-                   Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count +
-                   Printer.list_for_place_as_part_a_workstation(params[:place_id]).count,
-                   'chart_printer', t('workstations.printer'))
-
+      chart('Printer', params[:place_id],'chart_printer', @computers)
+      chart('Computer', params[:place_id],'chart_computer', @printers)
+      chart('Screen', params[:place_id],'chart_screen', @screens)
     end
   end
 
   private
 
   def hardware_in_place
-    self.stats_computers
-    self.stats_screens
-    self.stats_printers
-
     @place_name = Place.find(params[:place_id]).title rescue nil
     @place_id = params[:place_id] rescue nil
 
@@ -141,5 +111,17 @@ class WorkstationsController < ApplicationController
     @printers = Printer.list_for_place_are_not_part_a_workstation(params[:place_id])
   end
 
+  def chart(element, place, chart_type, number)
+    eval %"
+
+      google_chart([#{element}.list_for_place_are_not_part_a_workstation(#{place}).count,
+                    #{element}.list_for_place_as_part_a_workstation(#{place}).count],
+                   [t('stats.alone'), t('stats.workstation')],
+                   #{element}.list_for_place_are_not_part_a_workstation(#{place}).count +
+                   #{element}.list_for_place_as_part_a_workstation(#{place}).count,
+                   chart_type, t('workstations.#{element.downcase}'))
+
+    ";
+  end
 
 end

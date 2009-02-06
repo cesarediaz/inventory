@@ -1,13 +1,60 @@
+<%= javascript_include_tag "prototype" %>
+
 <% form_for(@workstation) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages %>
 
-  <%= render :partial => 'selector_pc_list' %>
+<%= t('workstations.place') %>
+<select name="places" id="places">
+  <option value=""><%= t('workstations.select_a_place') %></option>
+  <% @places.each do |place| %>
+  <option value="<%= place.id %>">
+    <%= place.title %>
+  </option>
+  <% end %>
+</select>
 
-  <p>
-    <% if action_name == 'new' %>
-    <%= f.submit t('workstations.create') %>
-    <% else %>
-    <%= f.submit t('workstations.edit') %>
-    <% end %>
-  </p>
+<%= @place_name rescue nil %>
+
+
+<%= hidden_field(:workstation, :place_id, :value => @place_id) %>
+
+
+<table>
+  <tr>
+    <td valign='top'>
+      <% if not @computers.empty? %>
+      <%= label_tag('computers', t('phrases.list_of') + ' ' + t('computers.title')) %>
+      <br>
+      <%= collection_select 'workstation', 'computer_id', @computers, 'id', 'name',{},
+          {:prompt => true, :size => @computers.count + 1 } %>
+      <% end %>
+    </td>
+    <td valign='top'>
+      <% if not @screens.empty? %>
+      <%= label_tag('screens',  t('phrases.list_of') + ' ' + t('screens.title')) %>
+      <br>
+      <%= collection_select 'workstation', 'screen_id', @screens, 'id', 'model',{},
+          {:prompt => true, :size => @screens.count + 1 } %>
+      <% end %>
+    </td>
+    <td valign='top'>
+
+      <% if not @printers.empty? %>
+      <%= label_tag('printers',  t('phrases.list_of') + ' ' + t('printers.title')) %>
+      <br>
+      <%= collection_select 'workstation', 'printer_id', @printers, 'id', 'model',{},
+          {:prompt => true, :size => @printers.count + 1 } %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit t('workstations.create') %>
+  <% else %>
+  <%= f.submit t('workstations.edit') %>
+  <% end %>
+</p>
 <% end %>

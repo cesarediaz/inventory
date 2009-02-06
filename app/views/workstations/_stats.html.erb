@@ -1,6 +1,6 @@
 <% cache(:fragment => "workstations/_stats") do %>
 
-<%  @value = GoogleChart.pie_3d_380x150(@chart).to_url %>
+<%  @value = GoogleChart.pie_3d_380x150(@chart_computer).to_url %>
 <%= image_tag(@value)  rescue nil %>
 
 <%  @value = GoogleChart.pie_3d_380x150(@chart_screen).to_url %>

@@ -133,7 +133,7 @@ en:
     workstations : "Workstations"
     list-workstations : "List all workstations"
     new : "New"
-    availables-computers : "Availables"
+    stats-workstations : "Stats"
 
     #Places
     places : "Places"
