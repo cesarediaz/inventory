@@ -1,12 +1,27 @@
-<% cache(:fragment => "workstations/_stats") do %>
+  <div>Listado de equipos en <%= @place_name rescue nil %> :  </div>
+  <div id='stats_data'>
+    <%= t('workstations.computer') %> : <%= Computer.list_for_place(params[:place_id]).count rescue nil %>
+  </div>
+  <div id='stats_data'>
+    <%= t('workstations.screen') %> : <%= Screen.list_for_place(params[:place_id]).count rescue nil %>
+  </div>
+  <div id='stats_data'>
+    <%= t('workstations.printer') %> <%= Printer.list_for_place(params[:place_id]).count rescue nil %>
+  </div>
 
-<%  @value = GoogleChart.pie_3d_380x150(@chart_computer).to_url %>
-<%= image_tag(@value)  rescue nil %>
 
-<%  @value = GoogleChart.pie_3d_380x150(@chart_screen).to_url %>
-<%= image_tag(@value)  rescue nil %>
+<div id='stats_lateral_panel'>
+  <% cache(:fragment => "workstations/_stats") do %>
 
-<%  @value = GoogleChart.pie_3d_380x150(@chart_printer).to_url %>
-<%= image_tag(@value)  rescue nil %>
+  <%  @value = GoogleChart.pie_3d_380x150(@chart_computer).to_url %>
+  <%= image_tag(@value)  rescue nil %>
 
-<% end %>
+  <%  @value = GoogleChart.pie_3d_380x150(@chart_screen).to_url %>
+  <%= image_tag(@value)  rescue nil %>
+
+  <%  @value = GoogleChart.pie_3d_380x150(@chart_printer).to_url %>
+  <%= image_tag(@value)  rescue nil %>
+
+  <% end %>
+
+</div>

@@ -4,13 +4,9 @@
 :url => { :controller => 'workstations', :action => :stats },
 :with => "'place_id='+value") %>
 
-<%= @place_name rescue nil %>
-
-<div id='stats_lateral_panel'>
-
-  <%= render :partial => 'stats' %>
+<%= render :partial => 'stats' %>
 
 
-</div>
+
 
 
