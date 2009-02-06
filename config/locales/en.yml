@@ -42,6 +42,8 @@ en:
   places:
     title: "Place"
     computer: "Computers"
+    screen: "Screens"
+    printer: "Printers"
     description: "Description"
     name: "Name"
     create: "Create"
@@ -127,6 +129,7 @@ en:
 
   phrases:
     list_of : 'List of'
+    units: 'units'
 
   menu:
     #Workstations

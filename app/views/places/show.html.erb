@@ -1,14 +1,43 @@
 <h2><%= @text %></h2>
 
-List of computers in this place:
-
+<div>
+<%= t('phrases.list_of') + ' ' + t('places.computer') %>
 <% if not @computers.empty? %>
-  <%= render :partial => 'computers/list' %>
+<%= render :partial => 'computers/list' %>
 <% else %>
-  <%= 'empty' %>
+<%= 'empty' %>
 <% end %>
+</div>
 
+<% 2.times do %>
 <br>
+<%  end %>
+
+<div>
+<%= t('phrases.list_of') + ' ' + t('places.screen') %>
+<% if not @screens.empty? %>
+<%= render :partial => 'screens/list' %>
+<% else %>
+<%= 'empty' %>
+<% end %>
+</div>
+
+<% 2.times do %>
+<br>
+<%  end %>
+
+<div>
+<%= t('phrases.list_of') + ' ' + t('places.printer') %>
+<% if not @printers.empty? %>
+<%= render :partial => 'printers/list' %>
+<% else %>
+<%= 'empty' %>
+<% end %>
+</div>
+
+<% 2.times do %>
+<br>
+<%  end %>
 
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
 <%= link_to t('places.back'), places_path %>

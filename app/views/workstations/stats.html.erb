@@ -4,8 +4,9 @@
 :url => { :controller => 'workstations', :action => :stats },
 :with => "'place_id='+value") %>
 
+<% if not params[:place_id].nil? %>
 <%= render :partial => 'stats' %>
-
+<% end %>
 
 
 

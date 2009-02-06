@@ -24,6 +24,8 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     @computers = Computer.list_for_place(@place.id)
+    @screens = Screen.list_for_place(@place.id)
+    @printers = Printer.list_for_place(@place.id)
     @text = @place.title
 
     respond_to do |format|

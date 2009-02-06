@@ -34,7 +34,9 @@ es:
 
   places:
     title: "Lugar"
-    computer: "Pc"
+    computer: "Computadoras"
+    screen: "Monitores"
+    printer: "Impresoras"
     description: "Descripcion"
     name: "Nombre"
     edit: "Editar"
@@ -121,6 +123,7 @@ es:
 
   phrases:
     list_of : 'Lista de'
+    units: 'unidades'
 
   menu:
     workstations : "Equipos"
