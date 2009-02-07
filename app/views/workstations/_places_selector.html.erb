@@ -1,7 +1,7 @@
 <%= javascript_include_tag "prototype" %>
-Place
+<%= t('workstations.place') %>
 <select name="places" id="places">
-  <option value="">Select a place</option>
+  <option value=""><%= t('workstations.select_a_place') %></option>
   <% @places.each do |place| %>
   <option value="<%= place.id %>">
     <%= place.title %>

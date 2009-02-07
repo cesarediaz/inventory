@@ -12,6 +12,7 @@ es:
     edit: "Modificar"
     place: "Lugar"
     select_a_place: "Seleccione un lugar"
+    list_of_equipments: 'Listado de equipos en'
     back: "Regresar"
 
   computers:
@@ -111,6 +112,7 @@ es:
     destroy: "Eliminar"
     show: "Ver"
     create: "Agregar"
+    top-page: "Ir al inicio de pagina"
 
   search:
     label: "Buscar"

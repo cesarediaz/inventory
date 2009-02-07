@@ -16,6 +16,7 @@ en:
     edit: "Edit"
     place: "Place"
     select_a_place: "Select a place"
+    list_of_equipments: 'List of equipments in'
     back: "Back"
 
   computers:
@@ -117,6 +118,7 @@ en:
     destroy: "Destroy"
     show: "Show"
     create: "Create"
+    top-page: "Go to top page"
 
   search:
     label: "Search"

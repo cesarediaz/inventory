@@ -1,6 +1,6 @@
 <div>
 
-  <div>Listado de equipos en <%= @place_name rescue nil %> :  </div>
+  <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
   <div id='stats_data'>
     <%= t('workstations.computer') %> : <%= Computer.list_for_place(params[:place_id]).count rescue nil %>
     <%= t('phrases.units') %>
