@@ -3,16 +3,17 @@
   <%= render :partial => 'shared/head' %>
   <body>
     <div id="outer">
-      <div id="menu">
-        <%= render :partial => 'shared/new_menu' %>
-      </div>
+
+      <%= render :partial => 'shared/new_menu' %>
+
       <div id="content">
 
         <%= render :partial => 'shared/primary_content' %>
 
         <div id="secondaryContent">
           <% if controller.action_name != 'edit' && controller.action_name != 'show' &&
-             controller.action_name != 'new' && controller.action_name != 'create' %>
+             controller.action_name != 'new' && controller.action_name != 'create' \
+             && controller.action_name != 'stats' %>
           <div class="box boxB">
             <div class="boxContent">
               <%= render :partial => 'search' %>
@@ -27,15 +28,7 @@
           <% end %>
         </div>
       </div>
-      <div id="secondaryContent">
-        <div class="box boxA">
-          <div class="boxContent">
-            <%= render :partial => 'stats' %>
-          </div>
-        </div>
-      </div>
       <div class="clear"></div>
-
       <%= render :partial => 'shared/footer' %>
 
     </div>

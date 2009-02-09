@@ -144,6 +144,7 @@ es:
     new-computer : "Nueva"
     availables-computers : "Disponibles"
     unavailables-computers : "No disponibles"
+    stats-computers: "Estadisticas"
 
     #MotherBoards
     motherboards : "Placa madre"

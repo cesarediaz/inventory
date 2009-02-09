@@ -8,7 +8,6 @@ class ComputersController < ApplicationController
 
 
   def index
-    stats
     @computers = all_computers
 
     respond_to do |format|
@@ -19,7 +18,6 @@ class ComputersController < ApplicationController
 
 
   def available
-    stats
     @computers = availables_computers
 
     respond_to do |format|
@@ -29,7 +27,6 @@ class ComputersController < ApplicationController
   end
 
   def unavailable
-    stats
     @computers = unavailables_computers
 
     respond_to do |format|
@@ -136,6 +133,16 @@ class ComputersController < ApplicationController
   end
 
 
+  def stats
+    @availables_computers = availables_computers
+    @unavailables_computers = unavailables_computers
+    google_chart([Computer.available.count, Computer.unavailable.count],
+                 [t('stats.available'), t('stats.unavailable')],
+                 Computer.find(:all).count, 'chart',
+                 t('computers.title')
+                 )
+  end
+
   private
 
   def availables_computers
@@ -159,17 +166,6 @@ class ComputersController < ApplicationController
                                    :per_page => PER_PAGE,
                                    :order => 'created_at DESC')
   end
-
-
-  def stats
-    google_chart([Computer.available.count, Computer.unavailable.count],
-                 [t('stats.available'), t('stats.unavailable')],
-                 Computer.find(:all).count, 'chart',
-                 t('computers.title')
-                 )
-  end
-
-
 
 
 end

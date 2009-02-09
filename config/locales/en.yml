@@ -152,6 +152,7 @@ en:
     new-computer : "New"
     availables-computers : "Availables"
     unavailables-computers : "Unavailables"
+    stats-computers: "Statistics"
 
     #MotherBoards
     motherboards : "Motherboards"
