@@ -1,5 +1,6 @@
 class MarksController < ApplicationController
   before_filter :login_required
+  layout "primary-content"
 
   # GET /marks
   # GET /marks.xml
