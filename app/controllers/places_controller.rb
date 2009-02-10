@@ -28,10 +28,7 @@ class PlacesController < ApplicationController
     @printers = Printer.list_for_place(@place.id)
     @text = @place.title
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @place }
-    end
+    render :action => "show", :layout => "primary-content"
   end
 
   # GET /places/new
