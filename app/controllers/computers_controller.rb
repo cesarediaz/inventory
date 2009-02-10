@@ -36,7 +36,6 @@ class ComputersController < ApplicationController
   end
 
   def show
-    stats
     @computer = Computer.find(params[:id])
 
     respond_to do |format|
@@ -47,24 +46,18 @@ class ComputersController < ApplicationController
 
 
   def new
-    stats
     @computer = Computer.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @computer }
-    end
+    render :action => "new", :layout => "primary-content"
   end
 
 
   def edit
-    stats
     @computer = Computer.find(params[:id])
+    render :action => "new", :layout => "primary-content"
   end
 
 
   def create
-    stats
     @computer = Computer.new(params[:computer])
 
     respond_to do |format|
@@ -108,25 +101,17 @@ class ComputersController < ApplicationController
 
 
   def search
-    stats
+
     if not params[:computer][:name].nil?
-      @computers = Computer.find(:all,
-                                 :conditions => [ 'LOWER(name) LIKE ?',
-                                                  '%' + params[:computer][:name].downcase + '%' ],
-                                 :order => 'name ASC',
-                                 :limit => 8)
+      search_by(params[:computer][:name], 'name')
     end
+
     if not params[:computer][:ip].nil?
-      @computers = Computer.find(:all,
-                                 :conditions => [ 'ip LIKE ?', '%' + params[:computer][:ip] + '%' ],
-                                 :order => 'name ASC',
-                                 :limit => 8)
+      search_by(params[:computer][:ip], 'ip')
     end
+
     if not params[:computer][:mac].nil?
-      @computers = Computer.find(:all,
-                                 :conditions => [ 'mac LIKE ?', '%' + params[:computer][:mac] + '%' ],
-                                 :order => 'name ASC',
-                                 :limit => 8)
+      search_by(params[:computer][:mac], 'mac')
     end
 
 
@@ -141,9 +126,24 @@ class ComputersController < ApplicationController
                  Computer.find(:all).count, 'chart',
                  t('computers.title')
                  )
+    render :action => "stats", :layout => "primary-content"
+
   end
 
   private
+
+
+  def search_by(data, field)
+    eval %"
+
+    @computers = Computer.find(:all,
+                               :conditions => [ '#{field} LIKE ?',
+                                                '%' + '#{data}' + '%' ],
+                                 :order => '#{field} ASC',
+                                 :limit => 8)
+
+    ";
+  end
 
   def availables_computers
     @computers = Computer.available.paginate(
