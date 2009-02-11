@@ -113,6 +113,7 @@ es:
     show: "Ver"
     create: "Agregar"
     top-page: "Ir al inicio de pagina"
+    download: 'Descargar un archivo xls'
 
   search:
     label: "Buscar"

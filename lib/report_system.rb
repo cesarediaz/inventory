@@ -1,47 +1,68 @@
 module ReportSystem
   protected
 
-  #Take the collected values and strings, total_count where is the value
-  #of the sum between all the elements for the stats and elements what is
-  #a string to make the instance variable in the pie3d method
-  #
-  #Return a pie_3d chart link to get the chart graph from Google Api
-  def xls_report(path, head, model, elements, fields, param_id)
+  #Return a .xls file with the report
+  def xls_report(path, worksheet, model, elements, heads, method, param_id)
 
     eval %"
 
-     # Creamos un nuevo archivo Excel en disco
      workbook = Excel.new('#{RAILS_ROOT}#{path}')
-     # Añadimo hoja INSCRIPTOS
-     head = workbook.add_worksheet('#{head}')
+     head = workbook.add_worksheet('#{worksheet}')
 
-     # Row de cabecera
-     @head = #{fields}
+     @heads = #{heads}
      columna = 0
-     @head.each do |cab|
+     @heads.each do |cab|
       head.write(0,columna,cab)
       columna += 1
      end
 
-     # Una row para cada empresa
-     @#{elements} = #{model}.list_for_place(#{param_id})
+     @#{elements} = #{model}.#{method}(#{param_id})
 
-     row = 1
-     for c in @#{elements}
-      # Añado la row con los datos en sus respectivas columnas
-      head.write(row,0,c.name)
-      head.write(row,1,c.mac)
-      head.write(row,2,c.ip)
-      # Pasamos al siguiente tutor en una nueva row
-      row += 1
-    end
 
-    # Cerramos el libro
+    report_of(elements, head, @#{elements})
     workbook.close
-    # Enviamos el fichero al navegador
     send_file '#{RAILS_ROOT}#{path}'
 
     ";
+  end
+
+  def report_of(type, head, elements)
+    case type
+    when 'computers'
+      computers_report(head, elements)
+    when 'screens'
+      screens_report(head, elements)
+    when 'printers'
+      printers_report(head, elements)
+    end
+  end
+
+  def computers_report(head, elements)
+    row = 1
+     for object in elements
+       head.write(row,0,object.name)
+       head.write(row,1,object.mac)
+       head.write(row,2,object.ip)
+       row += 1
+     end
+  end
+
+  def screens_report(head, elements)
+    row = 1
+     for object in elements
+       head.write(row,0,object.model)
+       head.write(row,1,object.serialnumber)
+       row += 1
+     end
+  end
+
+  def printers_report(head, elements)
+    row = 1
+     for object in elements
+       head.write(row,0,object.model)
+       head.write(row,1,object.serialnumber)
+       row += 1
+     end
   end
 
 end

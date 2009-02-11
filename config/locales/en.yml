@@ -119,6 +119,7 @@ en:
     show: "Show"
     create: "Create"
     top-page: "Go to top page"
+    download: 'Download a xls file'
 
   search:
     label: "Search"

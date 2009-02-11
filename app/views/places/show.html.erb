@@ -1,15 +1,17 @@
 <h2><%= @text %></h2>
-<%= debug(params) %>
+
 <a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
 Mostrar/ocultar monitores</a>
 <div id="screens">
 <%= t('phrases.list_of') + ' ' + t('places.screen') %>
+<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
 <% if not @screens.empty? %>
 <%= render :partial => 'screens/list' %>
 <% else %>
 <%= 'empty' %>
 <% end %>
 </div>
+
 
 <% 2.times do %>
 <br>
@@ -19,12 +21,14 @@ Mostrar/ocultar monitores</a>
 Mostrar/ocultar impresoras</a>
 <div id="printers">
 <%= t('phrases.list_of') + ' ' + t('places.printer') %>
+<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_printers', :id => params[:id] %>
 <% if not @printers.empty? %>
 <%= render :partial => 'printers/list' %>
 <% else %>
 <%= 'empty' %>
 <% end %>
 </div>
+
 
 <% 2.times do %>
 <br>
@@ -34,6 +38,7 @@ Mostrar/ocultar impresoras</a>
 Mostrar/ocultar computadoras</a>
 <div id="x">
 <%= t('phrases.list_of') + ' ' + t('places.computer') %>
+<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
 <% if not @computers.empty? %>
 <%= render :partial => 'computers/list' %>
 <% else %>
@@ -46,7 +51,6 @@ Mostrar/ocultar computadoras</a>
 <br>
 <%  end %>
 
-<%= link_to('Xls', :controller => 'places', :action => 'xls', :id => params[:id]) %> |
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
 <%= link_to t('places.back'), places_path %> |
 <a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common-actions.top-page') %></a>

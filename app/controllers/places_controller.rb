@@ -109,16 +109,50 @@ class PlacesController < ApplicationController
   end
 
 
-  def xls
-    xls_report('/public/xls/computers.xls',
+  def xls_computers
+    xls_report('/public/xls/' +
+               t('places.computer') +
+               '_' +
+               Place.find(params[:id]).title  +
+               '.xls',
                'computers',
                'Computer',
                'computers',
-               "['name', 'maquitosh', 'ip']",
-               params[:id])
- end
+               "['name', 'mac', 'ip']",
+               "list_for_place",
+               params[:id]
+               )
+  end
 
+  def xls_printers
+    xls_report('/public/xls/' +
+               t('places.printer') +
+               '_' +
+               Place.find(params[:id]).title  +
+               '.xls',
+               'printers',
+               'Printer',
+               'printers',
+               "['model', 'serial number']",
+               "list_for_place",
+               params[:id]
+               )
+  end
 
+  def xls_screens
+    xls_report('/public/xls/' +
+               t('places.screen') +
+               '_' +
+               Place.find(params[:id]).title  +
+               '.xls',
+               'screens',
+               'Screen',
+               'screens',
+               "['model', 'serial number']",
+               "list_for_place",
+               params[:id]
+               )
+  end
 
 
   def list
