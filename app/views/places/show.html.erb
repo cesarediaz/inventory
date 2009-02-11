@@ -1,5 +1,5 @@
 <h2><%= @text %></h2>
-
+<%= debug(params) %>
 <a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
 Mostrar/ocultar monitores</a>
 <div id="screens">
@@ -46,6 +46,7 @@ Mostrar/ocultar computadoras</a>
 <br>
 <%  end %>
 
+<%= link_to('Xls', :controller => 'places', :action => 'xls', :id => params[:id]) %> |
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
 <%= link_to t('places.back'), places_path %> |
 <a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common-actions.top-page') %></a>
