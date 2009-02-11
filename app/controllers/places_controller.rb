@@ -3,6 +3,8 @@ include Spreadsheet
 
 class PlacesController < ApplicationController
   include ChartSystem
+  include ReportSystem
+
   before_filter :login_required
 
   auto_complete_for :place, :title
@@ -108,34 +110,12 @@ class PlacesController < ApplicationController
 
 
   def xls
-   # Creamos un nuevo archivo Excel en disco
-   workbook = Excel.new("#{RAILS_ROOT}/public/xls/computers.xls")
-   # Añadimos hoja INSCRIPTOS
-   hoja_inscriptos = workbook.add_worksheet("Computers")
-   # Fila de cabecera
-   @cabecera = %w(Name Mac Ip)
-   columna = 0
-   @cabecera.each do |cab|
-     hoja_inscriptos.write(0,columna,cab)
-     columna += 1
-   end
-
-   # Una fila para cada empresa
-   @computers = Computer.list_for_place(params[:id])
-
-   fila = 1
-   for c in @computers
-     # Añado la fila con los datos en sus respectivas columnas
-     hoja_inscriptos.write(fila,0,c.name)
-     hoja_inscriptos.write(fila,1,c.mac)
-     hoja_inscriptos.write(fila,2,c.ip)
-     # Pasamos al siguiente tutor en una nueva fila
-     fila += 1
-   end
-   # Cerramos el libro
-   workbook.close
-   # Enviamos el fichero al navegador
-   send_file "#{RAILS_ROOT}/public/xls/computers.xls"
+    xls_report('/public/xls/computers.xls',
+               'computers',
+               'Computer',
+               'computers',
+               "['name', 'maquitosh', 'ip']",
+               params[:id])
  end
 
 
