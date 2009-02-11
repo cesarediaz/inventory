@@ -1,21 +1,5 @@
 <h2><%= @text %></h2>
 
-<a href="#" onclick="Effect.toggle('x', 'appear'); return false;">
-Mostrar/ocultar computadoras</a>
-<div id="x">
-<%= t('phrases.list_of') + ' ' + t('places.computer') %>
-<% if not @computers.empty? %>
-<%= render :partial => 'computers/list' %>
-<% else %>
-<%= 'empty' %>
-<% end %>
-</div>
-
-
-<% 2.times do %>
-<br>
-<%  end %>
-
 <a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
 Mostrar/ocultar monitores</a>
 <div id="screens">
@@ -41,6 +25,22 @@ Mostrar/ocultar impresoras</a>
 <%= 'empty' %>
 <% end %>
 </div>
+
+<% 2.times do %>
+<br>
+<%  end %>
+
+<a href="#" onclick="Effect.toggle('x', 'appear'); return false;">
+Mostrar/ocultar computadoras</a>
+<div id="x">
+<%= t('phrases.list_of') + ' ' + t('places.computer') %>
+<% if not @computers.empty? %>
+<%= render :partial => 'computers/list' %>
+<% else %>
+<%= 'empty' %>
+<% end %>
+</div>
+
 
 <% 2.times do %>
 <br>
