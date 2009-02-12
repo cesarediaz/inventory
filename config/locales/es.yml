@@ -91,12 +91,14 @@ es:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
+    workstation?: "Puesto?"
 
   printers:
     title: 'Impresoras'
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
+    workstation?: "Puesto?"
 
   marks:
     mark: "Marca"

@@ -35,7 +35,7 @@ en:
     harddisk: "Harddisk"
     memory: "Memory"
     place: "Place"
-    workstation?: "Workstation"
+    workstation?: "Workstation?"
     back: "Back"
     y: "Yes"
     not: "Not"
@@ -93,12 +93,14 @@ en:
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
+    workstation?: "Workstation?"
 
   printers:
     title: 'Printers'
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
+    workstation?: "Workstation?"
 
   memories:
     model: "Model"
