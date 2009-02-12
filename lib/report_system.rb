@@ -22,10 +22,10 @@ module ReportSystem
      head = workbook.add_worksheet('#{worksheet}')
 
      @heads = #{heads}
-     columna = 0
+     column = 0
      @heads.each do |cab|
-      head.write(0,columna,cab)
-      columna += 1
+      head.write(0,column,cab)
+      column += 1
      end
 
      @#{elements} = #{model}.#{method}(#{param_id})
