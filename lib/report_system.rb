@@ -1,6 +1,18 @@
 module ReportSystem
   protected
 
+
+  #This method generate a xls file to download
+  #
+  #Parameters:
+  # path: way where the xls file will be save in the server application
+  # worksheet: name of worksheet
+  # model: model of data to get
+  # elements: name that will be provide to the array when we get records
+  # heads: the names of first row in the xls file
+  # method: is the name of method to implment in the rescue of records
+  # param_id: parameter to provide the place from we need get records
+  #
   #Return a .xls file with the report
   def xls_report(path, worksheet, model, elements, heads, method, param_id)
 
