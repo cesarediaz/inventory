@@ -1,7 +1,7 @@
 <h2><%= @text %></h2>
 
 <a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
-Mostrar/ocultar monitores</a>
+<%= t('common-actions.show-hide') %></a>
 <div id="screens">
 <%= t('phrases.list_of') + ' ' + t('places.screen') %>
 <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
@@ -18,7 +18,7 @@ Mostrar/ocultar monitores</a>
 <%  end %>
 
 <a href="#" onclick="Effect.toggle('printers', 'appear'); return false;">
-Mostrar/ocultar impresoras</a>
+<%= t('common-actions.show-hide') %></a>
 <div id="printers">
 <%= t('phrases.list_of') + ' ' + t('places.printer') %>
 <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_printers', :id => params[:id] %>
@@ -35,7 +35,7 @@ Mostrar/ocultar impresoras</a>
 <%  end %>
 
 <a href="#" onclick="Effect.toggle('x', 'appear'); return false;">
-Mostrar/ocultar computadoras</a>
+<%= t('common-actions.show-hide') %></a>
 <div id="x">
 <%= t('phrases.list_of') + ' ' + t('places.computer') %>
 <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>

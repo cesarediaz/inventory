@@ -116,6 +116,7 @@ es:
     create: "Agregar"
     top-page: "Ir al inicio de pagina"
     download: 'Descargar un archivo xls'
+    show-hide: 'Mostrar/Ocultar'
 
   search:
     label: "Buscar"
