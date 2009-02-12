@@ -1,0 +1,15 @@
+<a href="#" onclick="Effect.toggle('printers', 'appear'); return false;">
+<%= t('common-actions.show-hide') %></a>
+<div id="printers">
+<%= t('phrases.list_of') + ' ' + t('places.printer') %>
+<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_printers', :id => params[:id] %>
+<% if not @printers.empty? %>
+<%= render :partial => 'printers/list' %>
+<% else %>
+<%= 'empty' %>
+<% end %>
+</div>
+
+<% 2.times do %>
+<br>
+<%  end %>

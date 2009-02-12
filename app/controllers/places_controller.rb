@@ -6,7 +6,6 @@ class PlacesController < ApplicationController
   include ReportSystem
 
   before_filter :login_required
-
   auto_complete_for :place, :title
 
   # GET /places
@@ -31,8 +30,7 @@ class PlacesController < ApplicationController
     @computers = Computer.list_for_place(@place.id)
     @screens = Screen.list_for_place(@place.id)
     @printers = Printer.list_for_place(@place.id)
-    @text = @place.title
-
+    @name_of_place = @place.title
     render :action => "show", :layout => "primary-content"
   end
 

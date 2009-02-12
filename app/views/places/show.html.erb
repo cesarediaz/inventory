@@ -1,55 +1,16 @@
-<h2><%= @text %></h2>
+<h2><%= @name_of_place %></h2>
 
-<a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
-<%= t('common-actions.show-hide') %></a>
-<div id="screens">
-<%= t('phrases.list_of') + ' ' + t('places.screen') %>
-<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
-<% if not @screens.empty? %>
-<%= render :partial => 'screens/list' %>
-<% else %>
-<%= 'empty' %>
-<% end %>
-</div>
+<!-- Rendering screens in place -->
+<%= render :partial => 'render_screens', :locals => { :account => @screens } %>
+<!-- end -->
 
+<!-- Rendering printers in place -->
+<%= render :partial => 'render_printers', :locals => { :account => @printers } %>
+<!-- end -->
 
-<% 2.times do %>
-<br>
-<%  end %>
-
-<a href="#" onclick="Effect.toggle('printers', 'appear'); return false;">
-<%= t('common-actions.show-hide') %></a>
-<div id="printers">
-<%= t('phrases.list_of') + ' ' + t('places.printer') %>
-<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_printers', :id => params[:id] %>
-<% if not @printers.empty? %>
-<%= render :partial => 'printers/list' %>
-<% else %>
-<%= 'empty' %>
-<% end %>
-</div>
-
-
-<% 2.times do %>
-<br>
-<%  end %>
-
-<a href="#" onclick="Effect.toggle('x', 'appear'); return false;">
-<%= t('common-actions.show-hide') %></a>
-<div id="x">
-<%= t('phrases.list_of') + ' ' + t('places.computer') %>
-<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
-<% if not @computers.empty? %>
-<%= render :partial => 'computers/list' %>
-<% else %>
-<%= 'empty' %>
-<% end %>
-</div>
-
-
-<% 2.times do %>
-<br>
-<%  end %>
+<!-- Rendering computers in place -->
+<%= render :partial => 'render_computers', :locals => { :account => @computers } %>
+<!-- end -->
 
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
 <%= link_to t('places.back'), places_path %> |
