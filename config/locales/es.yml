@@ -131,6 +131,8 @@ es:
     list_of : 'Lista de '
     units: ' unidades '
     has: ' tiene '
+    y: 'si'
+    n: 'no'
 
   menu:
     workstations : "Equipos"

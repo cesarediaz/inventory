@@ -88,6 +88,7 @@ module ReportSystem
        head.write(row,0,object.name)
        head.write(row,1,object.mac)
        head.write(row,2,object.ip)
+       head.write(row,3,object.available == true ? t('phrases.y') : t('phrases.n'))
        row += 1
      end
   end
