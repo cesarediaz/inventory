@@ -113,8 +113,8 @@ class PlacesController < ApplicationController
                'Place',
                'places',
                "['title', 'description', 'computers', 'screens', 'printers']",
-               'find',
-               ':all'
+               params[:places].nil? ? 'find' : params[:places],
+               params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
                )
   end
 
@@ -129,7 +129,7 @@ class PlacesController < ApplicationController
                'computers',
                "['name', 'mac', 'ip']",
                "list_for_place",
-               params[:id]
+               '(' + params[:id] + ')'
                )
   end
 
@@ -144,7 +144,7 @@ class PlacesController < ApplicationController
                'printers',
                "['model', 'serial number']",
                "list_for_place",
-               params[:id]
+               '(' + params[:id] + ')'
                )
   end
 
@@ -159,7 +159,7 @@ class PlacesController < ApplicationController
                'screens',
                "['model', 'serial number']",
                "list_for_place",
-               params[:id]
+               '(' + params[:id] + ')'
                )
   end
 

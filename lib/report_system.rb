@@ -10,7 +10,7 @@ module ReportSystem
   # model: model of data to get
   # elements: name that will be provide to the array when we get records
   # heads: the names of first row in the xls file
-  # method: is the name of method to implment in the rescue of records
+  # method: is the name of method to implement in the rescue of records
   # param_id: parameter to provide the place from we need get records
   #
   #Return a .xls file with the report
@@ -28,8 +28,7 @@ module ReportSystem
       column += 1
      end
 
-     @#{elements} = #{model}.#{method}(#{param_id})
-
+     get_elements(elements, model, method, param_id)
 
     report_of(elements, head, @#{elements})
     workbook.close
@@ -38,6 +37,37 @@ module ReportSystem
     ";
   end
 
+
+  #This method get an array of elements depending of the parameters
+  #
+  #Parameters:
+  # elements: name that will be provide to the array when we get records
+  # model: model of data to get
+  # method: is the name of method to implement in the rescue of records
+  # param_id: parameter to provide the place from we need get records
+  #
+  #Return an array of elements
+  def get_elements(elements, model, method, param_id)
+    if param_id.empty?
+      eval %"
+           @#{elements} = #{model}.#{method}
+      ";
+    else
+      eval %"
+           @#{elements} = #{model}.#{method}#{param_id}
+      ";
+    end
+  end
+
+  #This method call distinct methods of reports depending of the type
+  # of report elements
+  #
+  #Parameters:
+  # elements: name that will be provide to the array when we get records
+  # head: first row of each column
+  # elements: array with elements
+  #
+  #Return: nothing
   def report_of(type, head, elements)
     case type
     when 'computers'
@@ -51,6 +81,7 @@ module ReportSystem
     end
   end
 
+  #This method fill the the computers report
   def computers_report(head, elements)
     row = 1
      for object in elements
@@ -61,6 +92,7 @@ module ReportSystem
      end
   end
 
+  #This method fill the the screens report
   def screens_report(head, elements)
     row = 1
      for object in elements
@@ -70,6 +102,7 @@ module ReportSystem
      end
   end
 
+  #This method fill the the printers report
   def printers_report(head, elements)
     row = 1
      for object in elements
@@ -79,6 +112,7 @@ module ReportSystem
      end
   end
 
+  #This method fill the the places report
   def places_report(head, elements)
     row = 1
      for object in elements
