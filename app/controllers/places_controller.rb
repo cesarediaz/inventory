@@ -127,7 +127,7 @@ class PlacesController < ApplicationController
                'computers',
                'Computer',
                'computers',
-               "['name', 'mac', 'ip', 'workstation?']",
+               "[t('computers.name'), 'mac', 'ip', t('computers.workstation?')]",
                "list_for_place",
                '(' + params[:id] + ')'
                )
