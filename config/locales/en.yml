@@ -134,8 +134,9 @@ en:
     workstation: 'In station'
 
   phrases:
-    list_of : 'List of'
-    units: 'units'
+    list_of : 'List of '
+    units: ' units '
+    has: ' has '
 
   menu:
     #Workstations

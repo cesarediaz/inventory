@@ -1,16 +1,16 @@
-<a href="#" onclick="Effect.toggle('computers', 'appear'); return false;">
-<%= t('common-actions.show-hide') %></a>
-<div id="computers">
-<%= t('phrases.list_of') + ' ' + t('places.computer') %>
-<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
 <% if not @computers.empty? %>
-<%= render :partial => 'computers/list' %>
+ <a href="#" onclick="Effect.toggle('computers', 'appear'); return false;">
+ <%= t('common-actions.show-hide') %></a>
+ <div id="computers">
+  <%= t('phrases.list_of') + ' ' + t('places.computer') %>
+  <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
+  <%= render :partial => 'computers/list' %>
+ </div>
 <% else %>
-<%= 'empty' %>
+ <%= t('phrases.list_of') + t('places.computer')+  t('phrases.has') + @computers.count.to_s +  t('phrases.units') %>
 <% end %>
 
 
-</div>
 <% 2.times do %>
 <br>
 <%  end %>

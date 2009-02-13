@@ -128,8 +128,9 @@ es:
     workstation: 'En equipos'
 
   phrases:
-    list_of : 'Lista de'
-    units: 'unidades'
+    list_of : 'Lista de '
+    units: ' unidades '
+    has: ' tiene '
 
   menu:
     workstations : "Equipos"

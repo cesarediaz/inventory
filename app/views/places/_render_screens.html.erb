@@ -1,14 +1,14 @@
-<a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
-<%= t('common-actions.show-hide') %></a>
-<div id="screens">
-<%= t('phrases.list_of') + ' ' + t('places.screen') %>
-<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
 <% if not @screens.empty? %>
-<%= render :partial => 'screens/list' %>
+ <a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
+ <%= t('common-actions.show-hide') %></a>
+ <div id="screens">
+  <%= t('phrases.list_of') + ' ' + t('places.screen') %>
+  <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
+  <%= render :partial => 'screens/list' %>
+ </div>
 <% else %>
-<%= 'empty' %>
+ <%= t('phrases.list_of') + t('places.screen')+  t('phrases.has') + @screens.count.to_s +  t('phrases.units') %>
 <% end %>
-</div>
 
 <% 2.times do %>
 <br>
