@@ -85,10 +85,28 @@ module ReportSystem
   def computers_report(head, elements)
     row = 1
      for object in elements
+       @disks = ''
+       object.harddisk.empty? ? t('phrases.n') : object.harddisk.collect {|x|
+       @disks = @disks + x.model + "\n"} rescue nil
+       @memories = ''
+       object.memory.empty? ? t('phrases.n') : object.memory.collect {|x|
+       @memories = @memories + x.model + "\n"} rescue nil
+       @cds = ''
+       object.cd.empty? ? t('phrases.n') : object.cd.collect {|x|
+       @cds = @cds + x.model + "\n"} rescue nil
+       @dvds = ''
+       object.dvd.empty? ? t('phrases.n') : object.dvd.collect {|x|
+       @dvds = @dvds + x.model + "\n"} rescue nil
+
        head.write(row,0,object.name)
        head.write(row,1,object.mac)
        head.write(row,2,object.ip)
        head.write(row,3,object.available == true ? t('phrases.y') : t('phrases.n'))
+       head.write(row,4,object.mother_board.title.nil? ? t('phrases.n') : object.mother_board.title) rescue nil
+       head.write(row,5,@disks)
+       head.write(row,6,@memories)
+       head.write(row,7,@cds)
+       head.write(row,8,@dvds)
        row += 1
      end
   end
