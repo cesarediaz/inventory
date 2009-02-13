@@ -1,7 +1,7 @@
 <% cache(:fragment => "places/_stats") do %>
 
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
-  Mostrar/ocultar tabla de lugares</a>
+  <%= t('common-actions.show-hide') %></a>
 <div id='toggle_appear_table_list_places' style='border: solid 1px #eee;'  >
   <div>
 
@@ -42,7 +42,7 @@
 
 <br/>
 <a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
-  Mostrar/ocultar grafico estadistico</a>
+  <%= t('common-actions.show-hide') %></a>
 <div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
   <div>
     <%  @value = GoogleChart.pie_3d_530x200(@chart).to_url %>
