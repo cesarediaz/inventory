@@ -29,7 +29,7 @@ ActionController::Routing::Routes.draw do |map|
     :auto_complete_for_printer_serialnumber => :get}
 
   map.resources :places, :collection => {:auto_complete_for_place_title => :get, :list => :get,
-    :stats => :get, :xls => :get }
+    :stats => :get, :xls => :get, :xls_places => :get }
 
   map.resources :marks
 

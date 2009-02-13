@@ -107,6 +107,17 @@ class PlacesController < ApplicationController
   end
 
 
+  def xls_places
+    xls_report('/public/xls/' + t('menu.places') + '.xls',
+               'places',
+               'Place',
+               'places',
+               "['title', 'description', 'computers', 'screens', 'printers']",
+               'find',
+               ':all'
+               )
+  end
+
   def xls_computers
     xls_report('/public/xls/' +
                t('places.computer') +

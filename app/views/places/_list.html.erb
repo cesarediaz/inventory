@@ -1,5 +1,6 @@
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
  <%= t('common-actions.show-hide') %></a>
+<%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_places'%>
 <div id='toggle_appear_table_list_places' style='background:#eee;' >
   <div>
     <h2><%= @text %></h2>

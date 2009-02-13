@@ -46,6 +46,8 @@ module ReportSystem
       screens_report(head, elements)
     when 'printers'
       printers_report(head, elements)
+    when 'places'
+      places_report(head, elements)
     end
   end
 
@@ -73,6 +75,18 @@ module ReportSystem
      for object in elements
        head.write(row,0,object.model)
        head.write(row,1,object.serialnumber)
+       row += 1
+     end
+  end
+
+  def places_report(head, elements)
+    row = 1
+     for object in elements
+       head.write(row,0,object.title)
+       head.write(row,1,object.description)
+       head.write(row,2,object.computer.count)
+       head.write(row,3,object.screen.count)
+       head.write(row,4,object.printer.count)
        row += 1
      end
   end
