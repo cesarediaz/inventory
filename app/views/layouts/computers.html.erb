@@ -7,7 +7,7 @@
       <%= render :partial => 'shared/menu' %>
 
       <div id="content">
-
+        <%= render :partial => 'shared/primary_content' %>
         <div id="secondaryContent">
           <% if controller.action_name != 'edit' && controller.action_name != 'show' &&
              controller.action_name != 'new' && controller.action_name != 'create' \
@@ -26,7 +26,7 @@
           <% end %>
         </div>
 
-        <%= render :partial => 'shared/primary_content' %>
+
 
       </div>
       <div class="clear"></div>

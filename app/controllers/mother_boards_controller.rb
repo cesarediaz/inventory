@@ -1,4 +1,5 @@
 class MotherBoardsController < ApplicationController
+  include SearchSystem
 
   auto_complete_for :mother_board, :title
   auto_complete_for :mother_board, :serialnumber
@@ -92,18 +93,11 @@ class MotherBoardsController < ApplicationController
 
   def search
     if not params[:mother_board][:title].nil?
-        @mother_boards = MotherBoard.find(:all,
-                                   :conditions => [ 'LOWER(title) LIKE ?',
-                                                    '%' + params[:mother_board][:title].downcase + '%' ],
-                                   :order => 'title ASC',
-                                   :limit => 8)
+      search_by('mother_boards', 'MotherBoard', params[:mother_board][:title], 'title', 10)
     end
+
     if not params[:mother_board][:serialnumber].nil?
-        @mother_boards = MotherBoard.find(:all,
-                                   :conditions => [ 'serialnumber LIKE ?',
-                                                    '%' + params[:mother_board][:serialnumber] + '%' ],
-                                   :order => 'title ASC',
-                                   :limit => 8)
+      search_by('mother_boards', 'MotherBoard', params[:mother_board][:serialnumber], 'serialnumber', 10)
     end
   end
 

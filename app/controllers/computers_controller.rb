@@ -1,5 +1,7 @@
 class ComputersController < ApplicationController
   include ChartSystem
+  include SearchSystem
+
   before_filter :login_required
 
   auto_complete_for :computer, :name
@@ -103,15 +105,15 @@ class ComputersController < ApplicationController
   def search
 
     if not params[:computer][:name].nil?
-      search_by(params[:computer][:name], 'name')
+      search_by('computers', 'Computer', params[:computer][:name], 'name', 10)
     end
 
     if not params[:computer][:ip].nil?
-      search_by(params[:computer][:ip], 'ip')
+      search_by('computers', 'Computer', params[:computer][:ip], 'ip', 10)
     end
 
     if not params[:computer][:mac].nil?
-      search_by(params[:computer][:mac], 'mac')
+      search_by('computers', 'Computer', params[:computer][:mac], 'mac', 10)
     end
 
 
@@ -133,17 +135,6 @@ class ComputersController < ApplicationController
   private
 
 
-  def search_by(data, field)
-    eval %"
-
-    @computers = Computer.find(:all,
-                               :conditions => [ '#{field} LIKE ?',
-                                                '%' + '#{data}' + '%' ],
-                                 :order => '#{field} ASC',
-                                 :limit => 8)
-
-    ";
-  end
 
   def availables_computers
     @computers = Computer.available.paginate(
