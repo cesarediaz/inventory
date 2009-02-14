@@ -1,6 +1,6 @@
 class ScreensController < ApplicationController
+  include SearchSystem
   before_filter :login_required
-
   auto_complete_for :screen, :model
   auto_complete_for :screen, :serialnumber
 
@@ -90,18 +90,11 @@ class ScreensController < ApplicationController
 
   def search
     if not params[:screen][:model].nil?
-        @screens = Screen.find(:all,
-                                   :conditions => [ 'LOWER(model) LIKE ?',
-                                                    '%' + params[:screen][:model].downcase + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('screens', 'Screen', params[:screen][:model], 'model', 10)
     end
+
     if not params[:screen][:serialnumber].nil?
-        @screens = Screen.find(:all,
-                                   :conditions => [ 'serialnumber LIKE ?',
-                                                    '%' + params[:screen][:serialnumber] + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('screens', 'Screen', params[:screen][:serialnumber], 'serialnumber', 10)
     end
   end
 

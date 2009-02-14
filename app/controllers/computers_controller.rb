@@ -8,7 +8,6 @@ class ComputersController < ApplicationController
   auto_complete_for :computer, :ip
   auto_complete_for :computer, :mac
 
-
   def index
     @computers = all_computers
 
@@ -46,18 +45,15 @@ class ComputersController < ApplicationController
     end
   end
 
-
   def new
     @computer = Computer.new
     render :action => "new", :layout => "primary-content"
   end
 
-
   def edit
     @computer = Computer.find(params[:id])
     render :action => "new", :layout => "primary-content"
   end
-
 
   def create
     @computer = Computer.new(params[:computer])
@@ -74,7 +70,6 @@ class ComputersController < ApplicationController
     end
   end
 
-
   def update
     @computer = Computer.find(params[:id])
 
@@ -90,7 +85,6 @@ class ComputersController < ApplicationController
     end
   end
 
-
   def destroy
     @computer = Computer.find(params[:id])
     @computer.destroy
@@ -101,9 +95,7 @@ class ComputersController < ApplicationController
     end
   end
 
-
   def search
-
     if not params[:computer][:name].nil?
       search_by('computers', 'Computer', params[:computer][:name], 'name', 10)
     end
@@ -115,10 +107,7 @@ class ComputersController < ApplicationController
     if not params[:computer][:mac].nil?
       search_by('computers', 'Computer', params[:computer][:mac], 'mac', 10)
     end
-
-
   end
-
 
   def stats
     @availables_computers = availables_computers
@@ -133,9 +122,6 @@ class ComputersController < ApplicationController
   end
 
   private
-
-
-
   def availables_computers
     @computers = Computer.available.paginate(
                                              :page => params[:page],
@@ -157,6 +143,5 @@ class ComputersController < ApplicationController
                                    :per_page => PER_PAGE,
                                    :order => 'created_at DESC')
   end
-
 
 end

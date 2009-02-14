@@ -1,6 +1,6 @@
 class PrintersController < ApplicationController
+  include SearchSystem
   before_filter :login_required
-
   auto_complete_for :printer, :model
   auto_complete_for :printer, :serialnumber
 
@@ -90,18 +90,11 @@ class PrintersController < ApplicationController
 
   def search
     if not params[:printer][:model].nil?
-        @printers = Printer.find(:all,
-                                   :conditions => [ 'LOWER(model) LIKE ?',
-                                                    '%' + params[:printer][:model].downcase + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('printers', 'Printer', params[:printer][:model], 'model', 10)
     end
+
     if not params[:printer][:serialnumber].nil?
-        @printers = Printer.find(:all,
-                                   :conditions => [ 'serialnumber LIKE ?',
-                                                    '%' + params[:printer][:serialnumber] + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('printers', 'Printer', params[:printer][:serialnumber], 'serialnumber', 10)
     end
   end
 
