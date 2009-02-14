@@ -4,6 +4,7 @@ include Spreadsheet
 class PlacesController < ApplicationController
   include ChartSystem
   include ReportSystem
+  include SearchSystem
 
   before_filter :login_required
   auto_complete_for :place, :title
@@ -11,7 +12,6 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.xml
   def index
-    @text = 'List of places'
     @places = Place.paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,
@@ -98,11 +98,7 @@ class PlacesController < ApplicationController
 
   def search
     if not params[:place][:title].nil?
-      @places = Place.find(:all,
-                           :conditions => [ 'LOWER(title) LIKE ?',
-                                            '%' + params[:place][:title].downcase + '%' ],
-                           :order => 'title ASC',
-                           :limit => 8)
+      search_by('places', 'Place', params[:place][:title], 'title', 10)
     end
   end
 
@@ -173,16 +169,12 @@ class PlacesController < ApplicationController
                                :order => 'created_at DESC')
     when 'stores'
       @places = Place.stores
-      @text = 'List of stores'
     when 'offices'
       @places = Place.offices
-      @text = 'List of offices'
     when 'rooms'
       @places = Place.rooms
-      @text = 'List of rooms'
     when 'departments'
       @places = Place.departments
-      @text = 'List of departments'
     end
   end
 
