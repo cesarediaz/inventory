@@ -19,20 +19,29 @@ module ReportSystem
     eval %"
 
      workbook = Excel.new('#{RAILS_ROOT}#{path}')
-     head = workbook.add_worksheet('#{worksheet}')
+     page = workbook.add_worksheet('#{worksheet}')
 
-     @heads = #{heads}
-     column = 0
-     @heads.each do |cab|
-      head.write(0,column,cab)
-      column += 1
-     end
-
+     get_heads(page, heads)
      get_elements(elements, model, method, param_id)
-     report_of(elements, head, @#{elements})
+     report_of(elements, page, @#{elements})
 
      workbook.close
      send_file '#{RAILS_ROOT}#{path}'
+
+    ";
+  end
+
+  #This method take the parameters and write in the page of a xls
+  #file the heads(first line in each column)
+  def get_heads(page, heads)
+    eval %"
+
+    @heads = #{heads}
+     column = 0
+     @heads.each do |cab|
+      page.write(0,column,cab)
+      column += 1
+     end
 
     ";
   end
@@ -64,25 +73,25 @@ module ReportSystem
   #
   #Parameters:
   # elements: name that will be provide to the array when we get records
-  # head: first row of each column
+  # page: first row of each column
   # elements: array with elements
   #
   #Return: nothing
-  def report_of(type, head, elements)
+  def report_of(type, page, elements)
     case type
     when 'computers'
-      computers_report(head, elements)
+      computers_report(page, elements)
     when 'screens'
-      generic_report(head, elements)
+      generic_report(page, elements)
     when 'printers'
-      generic_report(head, elements)
+      generic_report(page, elements)
     when 'places'
-      places_report(head, elements)
+      places_report(page, elements)
     end
   end
 
   #This method fill the the computers report
-  def computers_report(head, elements)
+  def computers_report(page, elements)
     row = 1
      for object in elements
        @disks = ''
@@ -98,48 +107,39 @@ module ReportSystem
        object.dvd.empty? ? t('phrases.n') : object.dvd.collect {|x|
        @dvds = @dvds + x.model + " "} rescue nil
 
-       head.write(row,0,object.name)
-       head.write(row,1,object.mac)
-       head.write(row,2,object.ip)
-       head.write(row,3,object.available == true ? t('phrases.y') : t('phrases.n'))
-       head.write(row,4,object.mother_board.title.nil? ? t('phrases.n') : object.mother_board.title) rescue nil
-       head.write(row,5,@disks)
-       head.write(row,6,@memories)
-       head.write(row,7,@cds)
-       head.write(row,8,@dvds)
+       page.write(row,0,object.name)
+       page.write(row,1,object.mac)
+       page.write(row,2,object.ip)
+       page.write(row,3,object.available == true ? t('phrases.y') : t('phrases.n'))
+       page.write(row,4,object.mother_board.title.nil? ? t('phrases.n') : object.mother_board.title) rescue nil
+       page.write(row,5,@disks)
+       page.write(row,6,@memories)
+       page.write(row,7,@cds)
+       page.write(row,8,@dvds)
        row += 1
      end
   end
 
   #This method fill the the screens report
-  def generic_report(head, elements)
+  def generic_report(page, elements)
     row = 1
      for object in elements
-       head.write(row,0,object.model)
-       head.write(row,1,object.serialnumber)
+       page.write(row,0,object.model)
+       page.write(row,1,object.serialnumber)
        row += 1
      end
   end
 
-#   #This method fill the the printers report
-#   def printers_report(head, elements)
-#     row = 1
-#      for object in elements
-#        head.write(row,0,object.model)
-#        head.write(row,1,object.serialnumber)
-#        row += 1
-#      end
-#   end
 
   #This method fill the the places report
-  def places_report(head, elements)
+  def places_report(page, elements)
     row = 1
      for object in elements
-       head.write(row,0,object.title)
-       head.write(row,1,object.description)
-       head.write(row,2,object.computer.count)
-       head.write(row,3,object.screen.count)
-       head.write(row,4,object.printer.count)
+       page.write(row,0,object.title)
+       page.write(row,1,object.description)
+       page.write(row,2,object.computer.count)
+       page.write(row,3,object.screen.count)
+       page.write(row,4,object.printer.count)
        row += 1
      end
   end
