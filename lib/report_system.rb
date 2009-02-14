@@ -23,13 +23,14 @@ module ReportSystem
 
      get_heads(page, heads)
      get_elements(elements, model, method, param_id)
-     report_of(elements, page, @#{elements})
+     make_a_report_of(elements, page, @#{elements})
 
      workbook.close
      send_file '#{RAILS_ROOT}#{path}'
 
     ";
   end
+
 
   #This method take the parameters and write in the page of a xls
   #file the heads(first line in each column)
@@ -77,7 +78,7 @@ module ReportSystem
   # elements: array with elements
   #
   #Return: nothing
-  def report_of(type, page, elements)
+  def make_a_report_of(type, page, elements)
     case type
     when 'computers'
       computers_report(page, elements)
