@@ -29,10 +29,10 @@ module ReportSystem
      end
 
      get_elements(elements, model, method, param_id)
+     report_of(elements, head, @#{elements})
 
-    report_of(elements, head, @#{elements})
-    workbook.close
-    send_file '#{RAILS_ROOT}#{path}'
+     workbook.close
+     send_file '#{RAILS_ROOT}#{path}'
 
     ";
   end
@@ -73,9 +73,9 @@ module ReportSystem
     when 'computers'
       computers_report(head, elements)
     when 'screens'
-      screens_report(head, elements)
+      generic_report(head, elements)
     when 'printers'
-      printers_report(head, elements)
+      generic_report(head, elements)
     when 'places'
       places_report(head, elements)
     end
@@ -87,16 +87,16 @@ module ReportSystem
      for object in elements
        @disks = ''
        object.harddisk.empty? ? t('phrases.n') : object.harddisk.collect {|x|
-       @disks = @disks + x.model + "\n"} rescue nil
+       @disks = @disks + x.model + " "} rescue nil
        @memories = ''
        object.memory.empty? ? t('phrases.n') : object.memory.collect {|x|
-       @memories = @memories + x.model + "\n"} rescue nil
+       @memories = @memories + x.model + " "} rescue nil
        @cds = ''
        object.cd.empty? ? t('phrases.n') : object.cd.collect {|x|
-       @cds = @cds + x.model + "\n"} rescue nil
+       @cds = @cds + x.model + " "} rescue nil
        @dvds = ''
        object.dvd.empty? ? t('phrases.n') : object.dvd.collect {|x|
-       @dvds = @dvds + x.model + "\n"} rescue nil
+       @dvds = @dvds + x.model + " "} rescue nil
 
        head.write(row,0,object.name)
        head.write(row,1,object.mac)
@@ -112,7 +112,7 @@ module ReportSystem
   end
 
   #This method fill the the screens report
-  def screens_report(head, elements)
+  def generic_report(head, elements)
     row = 1
      for object in elements
        head.write(row,0,object.model)
@@ -121,15 +121,15 @@ module ReportSystem
      end
   end
 
-  #This method fill the the printers report
-  def printers_report(head, elements)
-    row = 1
-     for object in elements
-       head.write(row,0,object.model)
-       head.write(row,1,object.serialnumber)
-       row += 1
-     end
-  end
+#   #This method fill the the printers report
+#   def printers_report(head, elements)
+#     row = 1
+#      for object in elements
+#        head.write(row,0,object.model)
+#        head.write(row,1,object.serialnumber)
+#        row += 1
+#      end
+#   end
 
   #This method fill the the places report
   def places_report(head, elements)
