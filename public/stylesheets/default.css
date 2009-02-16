@@ -301,6 +301,12 @@ td
     width: 100%;
 }
 
+#left-content
+{
+    float: right;
+    padding: 0.5em;
+}
+
 #primaryContent
 {
     margin: 0em 0em 0em 20em;

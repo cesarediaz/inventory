@@ -2,7 +2,9 @@
   <%= @name_of_place %>
 </h2>
 
-<%= link_to t('common-actions.download-all'), :controller => 'places', :action => 'all_hardware', :id => params[:id] %>
+<div id='left-content' >
+  <%= link_to t('common-actions.download-all'), :controller => 'places', :action => 'all_hardware', :id => params[:id] %>
+</div>
 
 <!-- Rendering screens in place -->
 <%= render :partial => 'render_screens', :locals => { :account => @screens } %>

@@ -133,7 +133,7 @@ class PlacesController < ApplicationController
   def all_hardware
 
        xls_report_complete_for_a_place('/public/xls/' +
-               'hardware' +
+               'hardware ' +
                Place.find(params[:id]).title  +
                '.xls',
                'todos los elementos' ,
