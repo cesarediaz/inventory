@@ -1,13 +1,15 @@
 <% if not @computers.empty? %>
- <a href="#" onclick="Effect.toggle('computers', 'appear'); return false;">
- <%= t('common-actions.show-hide') %></a>
- <div id="computers">
+<a href="#" onclick="Effect.toggle('computers', 'appear'); return false;">
+  <%= t('common-actions.show-hide') %></a>
+<div id="computers" >
   <%= t('phrases.list_of') + ' ' + t('places.computer') %>
-  <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
+  <div id='left-content' >
+    <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
+  </div>
   <%= render :partial => 'computers/list' %>
- </div>
+</div>
 <% else %>
- <%= t('phrases.list_of') + t('places.computer')+  t('phrases.has') + @computers.count.to_s +  t('phrases.units') %>
+<%= t('phrases.list_of') + t('places.computer')+  t('phrases.has') + @computers.count.to_s +  t('phrases.units') %>
 <% end %>
 
 

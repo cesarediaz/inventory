@@ -301,10 +301,20 @@ td
     width: 100%;
 }
 
+#subtitles
+{
+    background-color: #dddddd;
+    text-align: left;
+    font-weight: bold;
+    padding: 0.1em;
+    color: #0000;
+    border-bottom: solid 1px #000;
+}
+
 #left-content
 {
     float: right;
-    padding: 0.5em;
+    padding: 0.1em;
 }
 
 #primaryContent
