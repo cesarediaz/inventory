@@ -130,6 +130,20 @@ class PlacesController < ApplicationController
                )
   end
 
+  def all_hardware
+
+       xls_report_complete_for_a_place('/public/xls/' +
+               'hardware' +
+               Place.find(params[:id]).title  +
+               '.xls',
+               'todos los elementos' ,
+               "list_for_place",
+               '(' + params[:id] + ')',
+               "[t('computers.name'),'mac','ip',t('computers.workstation?'),
+               'montherboard', 'harddisk', 'memory', 'cds', 'dvds']"
+               )
+  end
+
   def xls_printers
     xls_report('/public/xls/' +
                t('places.printer') +

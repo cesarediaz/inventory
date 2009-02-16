@@ -1,6 +1,43 @@
 module ReportSystem
   protected
 
+  #This method generate a xls file to download with a complete list of
+  #hardware for a specific place
+  #
+  #Parameters:
+  # path: way where the xls file will be save in the server application
+  # worksheet: name of worksheet
+  # heads: the names of first row in the xls file
+  # method: is the name of method to implement in the rescue of records
+  # param_id: parameter to provide the place from we need get records
+  #
+  #Return a .xls file with the report
+  def xls_report_complete_for_a_place(path, worksheet,method, param_id, heads)
+    eval %"
+
+    workbook = Excel.new('#{RAILS_ROOT}#{path}')
+    page = workbook.add_worksheet('#{worksheet}')
+
+    get_elements('computers', 'Computer', method, param_id)
+    get_elements('screens', 'Screen', method, param_id)
+    get_elements('printers', 'Printer', method, param_id)
+
+    row = 1
+    get_heads(page, heads)
+    computers_report(page, @computers, row)
+
+    row = @computers.count + 2
+    generic_report(page, @screens, row)
+
+    row = @screens.count + @computers.count + 4
+    generic_report(page, @printers, row)
+
+    workbook.close
+    send_file '#{RAILS_ROOT}#{path}'
+
+    ";
+  end
+
 
   #This method generate a xls file to download
   #
@@ -15,7 +52,6 @@ module ReportSystem
   #
   #Return a .xls file with the report
   def xls_report(path, worksheet, model, elements, heads, method, param_id)
-
     eval %"
 
      workbook = Excel.new('#{RAILS_ROOT}#{path}')
@@ -47,7 +83,6 @@ module ReportSystem
     ";
   end
 
-
   #This method get an array of elements depending of the parameters
   #
   #Parameters:
@@ -69,6 +104,7 @@ module ReportSystem
     end
   end
 
+
   #This method call distinct methods of reports depending of the type
   # of report elements
   #
@@ -78,22 +114,23 @@ module ReportSystem
   # elements: array with elements
   #
   #Return: nothing
-  def make_a_report_of(type, page, elements)
-    case type
+  def make_a_report_of(this_hardware, page, elements)
+    case this_hardware
     when 'computers'
-      computers_report(page, elements)
+      computers_report(page, elements, nil)
     when 'screens'
-      generic_report(page, elements)
+      generic_report(page, elements, nil)
     when 'printers'
-      generic_report(page, elements)
+      generic_report(page, elements, nil)
     when 'places'
       places_report(page, elements)
     end
   end
 
+
   #This method fill the the computers report
-  def computers_report(page, elements)
-    row = 1
+  def computers_report(page, elements, row)
+    row.nil? ? row = 1 : row = row
      for object in elements
        @disks = ''
        object.harddisk.empty? ? t('phrases.n') : object.harddisk.collect {|x|
@@ -121,9 +158,11 @@ module ReportSystem
      end
   end
 
-  #This method fill the the screens report
-  def generic_report(page, elements)
-    row = 1
+
+  #This method fill the a generic report that
+  #can be screens or printers
+  def generic_report(page, elements, row)
+    row.nil? ? row = 1 : row = row
      for object in elements
        page.write(row,0,object.model)
        page.write(row,1,object.serialnumber)
