@@ -45536,3 +45536,530 @@ ActionController::RoutingError (No route matches "/default.css" with {:method=>:
     script/server:3
 
 Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2009-02-17 16:01:58) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+  [4;35;1mComputer Load (1.1ms)[0m   [0mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;36;1mMotherBoard Load (0.3ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5504) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.3ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5504) [0m
+  [4;36;1mMemory Load (0.3ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 5504) [0m
+  [4;35;1mCd Load (0.3ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 5504) [0m
+  [4;36;1mDvd Load (0.3ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5504) [0m
+  [4;35;1mPlace Load (0.5ms)[0m   [0mSELECT * FROM "places" WHERE ("places"."id" = 1) [0m
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 1) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.7ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 1) [0m
+  [4;36;1mMemory Load (0.5ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 1) [0m
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 1) [0m
+  [4;36;1mDvd Load (0.5ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "places" WHERE ("places"."id" = 1) [0m
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) [0m
+  [4;36;1mMemory Load (0.5ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 2) [0m
+  [4;35;1mCd Load (0.5ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 2) [0m
+  [4;36;1mDvd Load (0.5ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "places" WHERE ("places"."id" = 1) [0m
+  [4;36;1mMotherBoard Load (0.5ms)[0m   [0;1mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;35;1mHarddisk Load (0.5ms)[0m   [0mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;36;1mMemory Load (0.6ms)[0m   [0;1mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;35;1mCd Load (0.7ms)[0m   [0mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;36;1mDvd Load (0.6ms)[0m   [0;1mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+  [4;35;1mPlace Load (0.5ms)[0m   [0mSELECT * FROM "places" WHERE ("places"."id" = 6) [0m
+Rendered computers/_list (111.4ms)
+Rendered shared/_head (2.3ms)
+Rendered shared/_menu (2.9ms)
+Rendered shared/_primary_content (0.3ms)
+Rendered computers/_search (9.8ms)
+Rendered shared/_footer (0.5ms)
+Completed in 182ms (View: 135, DB: 12) | 200 OK [http://localhost/computers]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-17 16:01:58) [GET]
+
+
+ActionController::RoutingError (No route matches "/default.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ComputersController#edit (for 127.0.0.1 at 2009-02-17 16:02:05) [GET]
+  Parameters: {"id"=>"5504"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+  [4;35;1mComputer Load (0.6ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 5504) [0m
+Rendering template within layouts/primary-content
+Rendering computers/new
+  [4;36;1mPlace Load (1.2ms)[0m   [0;1mSELECT * FROM "places" [0m
+Rendered computers/_form (35.4ms)
+Rendered shared/_head (1.5ms)
+Rendered shared/_menu (3.4ms)
+Rendered shared/_footer (0.4ms)
+Completed in 93ms (View: 54, DB: 2) | 200 OK [http://localhost/computers/5504/edit]
+
+
+Processing ComputersController#5504 to css (for 127.0.0.1 at 2009-02-17 16:02:06) [GET]
+  Parameters: {"id"=>"default"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+
+
+ActionController::UnknownAction (No action responded to 5504. Actions: auto_complete_for_computer_ip, auto_complete_for_computer_mac, auto_complete_for_computer_name, available, create, destroy, edit, index, new, search, show, stats, unavailable y update):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ComputersController#update (for 127.0.0.1 at 2009-02-17 16:02:13) [PUT]
+  Parameters: {"commit"=>"Editar", "authenticity_token"=>"ee41c122997c0bf5444af682dbca4df07db3745f", "id"=>"5504", "computer"=>{"name"=>"computer_five", "place_id"=>"1", "mac"=>"13:23:43:15:53:40", "ip"=>""}}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+  [4;35;1mComputer Load (0.6ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 5504) [0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."name" = 'computer_five' AND "computers".id <> 5504) LIMIT 1[0m
+  [4;35;1mComputer Exists (0.2ms)[0m   [0mSELECT "computers".id FROM "computers" WHERE ("computers"."ip" = '' AND "computers".id <> 5504) LIMIT 1[0m
+  [4;36;1mComputer Exists (0.2ms)[0m   [0;1mSELECT "computers".id FROM "computers" WHERE ("computers"."mac" = '13:23:43:15:53:40' AND "computers".id <> 5504) LIMIT 1[0m
+Rendering template within layouts/primary-content
+Rendering computers/edit
+  [4;35;1mPlace Load (1.0ms)[0m   [0mSELECT * FROM "places" [0m
+Rendered computers/_form (20.7ms)
+Rendered shared/_head (1.5ms)
+Rendered shared/_menu (3.1ms)
+Rendered shared/_footer (0.3ms)
+Completed in 95ms (View: 39, DB: 3) | 200 OK [http://localhost/computers/5504]
+
+
+Processing ComputersController#show to css (for 127.0.0.1 at 2009-02-17 16:02:14) [GET]
+  Parameters: {"id"=>"default"}
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+  [4;35;1mComputer Load (0.3ms)[0m   [0mSELECT * FROM "computers" WHERE ("computers"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Computer with ID=default):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1528:in `find_one'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1511:in `find_from_ids'
+    /vendor/rails/activerecord/lib/active_record/base.rb:590:in `find'
+    /app/controllers/computers_controller.rb:39:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (22.0ms)
+Rendered /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.5ms)
+Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComputers (20081214050839)
+Migrating to CreateMotherBoards (20081221183040)
+Migrating to AddMotherboardIdInComputers (20081221192242)
+Migrating to DeleteFieldMotherBoardIdFromComputer (20081222113721)
+Migrating to AddFieldComputerIdInMotherboard (20081222113920)
+Migrating to CreateHarddisks (20081222124257)
+Migrating to CreateMemories (20081223124953)
+Migrating to AddMemoryIdInComputers (20081223130236)
+Migrating to CreateCds (20081223134345)
+Migrating to CreateDvds (20081224172121)
+Migrating to AddAvailableFieldForComputers (20081224174008)
+Migrating to CreateMarks (20081226195533)
+Migrating to AddMarkIdInAllTypesOfHardware (20081226201604)
+Migrating to CreateScreens (20081227175420)
+Migrating to CreatePrinters (20081227185555)
+Migrating to CreatePlaces (20081228120204)
+Migrating to AddPlaceIdFieldInComputerTable (20081228154833)
+Migrating to CreateWorkstations (20081231233842)
+Migrating to AddPlaceIdInScreenAndPrinterTables (20090102195153)
+Migrating to AddIsPartOfAWorkstation (20090107183456)
+Migrating to AddIsPartOfAWorkstationInScreenAndPrinterTables (20090107185249)
+Migrating to CreateUsers (20090112185459)
+Migrating to AddFieldLanguageInUserModel (20090112233131)
+Migrating to AddFieldPlaceIdInWorkstationsTable (20090128001724)
+Migrating to AddAdminUser (20090217181501)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: last_name, first_name
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@inventory.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', 'eddd3ff464e75819a6fce93a7d448b330094ef77', '2009-02-17 18:16:43', 'f4d64ca32a083c5f20557f58d34f600f4ccd53bc', NULL, '2009-02-17 18:16:43', 'en', NULL, 'admin', 'admin@inventory.com')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComputers (20081214050839)
+Migrating to CreateMotherBoards (20081221183040)
+Migrating to AddMotherboardIdInComputers (20081221192242)
+Migrating to DeleteFieldMotherBoardIdFromComputer (20081222113721)
+Migrating to AddFieldComputerIdInMotherboard (20081222113920)
+Migrating to CreateHarddisks (20081222124257)
+Migrating to CreateMemories (20081223124953)
+Migrating to AddMemoryIdInComputers (20081223130236)
+Migrating to CreateCds (20081223134345)
+Migrating to CreateDvds (20081224172121)
+Migrating to AddAvailableFieldForComputers (20081224174008)
+Migrating to CreateMarks (20081226195533)
+Migrating to AddMarkIdInAllTypesOfHardware (20081226201604)
+Migrating to CreateScreens (20081227175420)
+Migrating to CreatePrinters (20081227185555)
+Migrating to CreatePlaces (20081228120204)
+Migrating to AddPlaceIdFieldInComputerTable (20081228154833)
+Migrating to CreateWorkstations (20081231233842)
+Migrating to AddPlaceIdInScreenAndPrinterTables (20090102195153)
+Migrating to AddIsPartOfAWorkstation (20090107183456)
+Migrating to AddIsPartOfAWorkstationInScreenAndPrinterTables (20090107185249)
+Migrating to CreateUsers (20090112185459)
+Migrating to AddFieldLanguageInUserModel (20090112233131)
+Migrating to AddFieldPlaceIdInWorkstationsTable (20090128001724)
+Migrating to AddAdminUser (20090217181501)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Destroy (0.6ms)[0m   [0mDELETE FROM "users" WHERE "id" = 8[0m
+WARNING: Can't mass-assign these protected attributes: last_name, first_name
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@inventory.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "language", "remember_token", "login", "email") VALUES('', '360fea7673415e8089928ec38361c8c40613c933', '2009-02-17 18:17:07', '99c908148a02f0fc1fb00bc6de3a58539d482c80', NULL, '2009-02-17 18:17:07', 'en', NULL, 'admin', 'admin@inventory.com')[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'admin' AND "users".id <> 9) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@inventory.com' AND "users".id <> 9) LIMIT 1[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090217181501')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("cds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("computers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("dvds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("harddisks")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("marks")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("memories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("mother_boards")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("places")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("printers")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("screens")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workstations")[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-02-17 16:17:14) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) LIMIT 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 146ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2009-02-17 16:17:14) [GET]
+Redirected to /session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-02-17 16:17:14) [GET]
+Rendering template within layouts/primary-content
+Rendering sessions/new
+Rendered shared/_head (1.3ms)
+Rendered shared/_menu (1.0ms)
+Rendered shared/_footer (0.4ms)
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-17 16:17:15) [GET]
+
+
+ActionController::RoutingError (No route matches "/session/default.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-17 16:17:21) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"7b4d98a7fe47b45adaa3e426315a0c7e7ccb77f2", "login"=>"admin", "password"=>"admin"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Tue Feb 17 18:17:21 UTC 2009
+Rendering template within layouts/primary-content
+Rendering sessions/new
+Rendered shared/_head (1.7ms)
+Rendered shared/_menu (0.7ms)
+Rendered shared/_footer (0.4ms)
+Completed in 36ms (View: 15, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-17 16:17:21) [GET]
+
+
+ActionController::RoutingError (No route matches "/default.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-02-17 16:17:29) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"7b4d98a7fe47b45adaa3e426315a0c7e7ccb77f2", "login"=>"admin", "password"=>"testing"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to /
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ComputersController#index (for 127.0.0.1 at 2009-02-17 16:17:29) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mComputer Load (1.3ms)[0m   [0;1mSELECT * FROM "computers" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/computers
+Rendering computers/index
+  [4;35;1mMotherBoard Load (0.3ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 5504) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.3ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 5504) [0m
+  [4;35;1mMemory Load (0.3ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 5504) [0m
+  [4;36;1mCd Load (0.3ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 5504) [0m
+  [4;35;1mDvd Load (0.3ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 5504) [0m
+  [4;36;1mPlace Load (0.7ms)[0m   [0;1mSELECT * FROM "places" WHERE ("places"."id" = 1) [0m
+  [4;35;1mMotherBoard Load (0.6ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 1) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.7ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 1) [0m
+  [4;35;1mMemory Load (0.5ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 1) [0m
+  [4;36;1mCd Load (0.7ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 1) [0m
+  [4;35;1mDvd Load (0.5ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "places" WHERE ("places"."id" = 1) [0m
+  [4;35;1mMotherBoard Load (0.5ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 2) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 2) [0m
+  [4;35;1mMemory Load (0.5ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 2) [0m
+  [4;36;1mCd Load (0.6ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 2) [0m
+  [4;35;1mDvd Load (0.7ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "places" WHERE ("places"."id" = 1) [0m
+  [4;35;1mMotherBoard Load (0.6ms)[0m   [0mSELECT * FROM "mother_boards" WHERE ("mother_boards".computer_id = 4) LIMIT 1[0m
+  [4;36;1mHarddisk Load (0.5ms)[0m   [0;1mSELECT * FROM "harddisks" WHERE ("harddisks".computer_id = 4) [0m
+  [4;35;1mMemory Load (0.5ms)[0m   [0mSELECT * FROM "memories" WHERE ("memories".computer_id = 4) [0m
+  [4;36;1mCd Load (0.5ms)[0m   [0;1mSELECT * FROM "cds" WHERE ("cds".computer_id = 4) [0m
+  [4;35;1mDvd Load (0.5ms)[0m   [0mSELECT * FROM "dvds" WHERE ("dvds".computer_id = 4) [0m
+  [4;36;1mPlace Load (0.4ms)[0m   [0;1mSELECT * FROM "places" WHERE ("places"."id" = 6) [0m
+Rendered computers/_list (113.3ms)
+Rendered shared/_head (1.3ms)
+Rendered shared/_menu (3.1ms)
+Rendered shared/_primary_content (0.3ms)
+Rendered computers/_search (4.3ms)
+Rendered shared/_footer (0.4ms)
+Completed in 256ms (View: 130, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-17 16:17:30) [GET]
+
+
+ActionController::RoutingError (No route matches "/default.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/cesar/src-rails/inventory/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
