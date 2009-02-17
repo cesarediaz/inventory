@@ -1,5 +1,6 @@
 class Workstation < ActiveRecord::Base
   after_create :update_devices_after_create
+  after_update :update_devices_after_update
   after_destroy :update_devices_after_destroy
 
   #################################################
@@ -22,6 +23,22 @@ class Workstation < ActiveRecord::Base
 
     @screen = Screen.find(self.screen_id)
     @screen.is_part_of_a_workstation = true
+    @screen.save!
+  end
+
+  def update_devices_after_update
+    @computer = Computer.find(self.computer_id)
+    @computer.place_id = self.place_id
+    @computer.save!
+
+    if not self.printer_id.nil?
+      @printer = Printer.find(self.printer_id)
+      @printer.place_id = self.place_id
+      @printer.save!
+    end
+
+    @screen = Screen.find(self.screen_id)
+    @screen.place_id = self.place_id
     @screen.save!
   end
 

@@ -136,7 +136,6 @@ class PlacesController < ApplicationController
                'hardware ' +
                Place.find(params[:id]).title  +
                '.xls',
-               'todos los elementos' ,
                "list_for_place",
                '(' + params[:id] + ')',
                "[t('computers.name'),'mac','ip',t('computers.workstation?'),

@@ -12,7 +12,7 @@ module ReportSystem
   # param_id: parameter to provide the place from we need get records
   #
   #Return a .xls file with the report
-  def xls_report_complete_for_a_place(path, worksheet,method, param_id, heads)
+  def xls_report_complete_for_a_place(path,method, param_id, heads)
     eval %"
 
     workbook = Excel.new('#{RAILS_ROOT}#{path}')

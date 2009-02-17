@@ -1,20 +1,18 @@
-<% @c = Computer.find(@workstation.computer_id).name %>
-<% @s = Screen.find(@workstation.screen_id).model %>
-<% @p = Printer.find(@workstation.printer_id).model %>
+<% form_for(@workstation) do |f| %>
+<%= f.error_messages %>
+  <%= collection_select(:workstation, :place_id, Place.all, :id, :title,{},
+    {:prompt => true, :size => Place.all.count + 1 }) %>
 
-<%= 'Computer:' + @c %>
-<br>
-<%=  'Screen:' + @s %>
-<br>
-<%=  'Print:' + @p %>
-<br>
 
-<%= render :partial => 'form' %>
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit t('workstations.create') %>
+  <% else %>
+  <%= f.submit t('workstations.edit') %>
+  <% end %>
+</p>
 
-<%= observe_field("places", :update => "outer",
-:url => { :controller => 'workstations', :action => :new },
-:with => "'place_id='+value") %>
-
+<% end %>
 
 <%= link_to 'Show', @workstation %> |
 <%= link_to 'Back', workstations_path %>
