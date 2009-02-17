@@ -1,8 +1,10 @@
 <% form_for(@workstation) do |f| %>
 <%= f.error_messages %>
-  <%= collection_select(:workstation, :place_id, Place.all, :id, :title,{},
+<div style="width: 50%;">
+  <%= t('phrases.list_of') + t('menu.places') %>
+  <%= collection_select(:workstation, :place_id, Place.find(:all, :order => 'title'), :id, :title,{},
     {:prompt => true, :size => Place.all.count + 1 }) %>
-
+</div>
 
 <p>
   <% if action_name == 'new' %>

@@ -46,7 +46,7 @@ input.text
 a
 {
     color: #006699;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover
@@ -54,9 +54,23 @@ a:hover
     text-decoration: none;
 }
 
+a:visited
+{
+    color: #006699;
+}
+
 td
 {
     font-size: 9pt;
+}
+
+select
+{
+    color: #fff;
+    font-size: 10pt;
+    background-color: #666699;
+    border-bottom: solid 1px #336600;
+    width: 100%;
 }
 
 /* Outer */
