@@ -1,4 +1,10 @@
-<%= render :partial => 'list' %>
+<div id='subtitles' >
+  <%= t('phrases.list_of') + ' ' + t('places.computer') + ' ' + t('computers.available') %>
+</div>
+<div id='left-content' >
+  <%= render :partial => 'list' %>
+</div>
+
 
 <%= will_paginate @computers %>
 

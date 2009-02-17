@@ -1,11 +1,10 @@
 <table>
   <tr>
     <th><%= t('marks.mark') %></th>
-    <th colspan='3'><%= t('common-actions.actions') %></th>
+    <th colspan='3' width='100px'><%= t('common-actions.actions') %></th>
   </tr>
 <% for mark in @marks %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-  <tr>
     <td><%= mark.name %></td>
     <td><%= link_to t('common-actions.show'), mark %></td>
     <td><%= link_to t('common-actions.edit'), edit_mark_path(mark) %></td>

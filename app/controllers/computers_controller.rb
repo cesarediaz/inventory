@@ -22,7 +22,7 @@ class ComputersController < ApplicationController
     @computers = availables_computers
 
     respond_to do |format|
-      format.html
+      format.html { render :action => "available", :layout => "primary-content" }
       format.xml  { render :xml => @computers }
     end
   end
@@ -31,7 +31,7 @@ class ComputersController < ApplicationController
     @computers = unavailables_computers
 
     respond_to do |format|
-      format.html
+      format.html { render :action => "unavailable", :layout => "primary-content" }
       format.xml  { render :xml => @computers }
     end
   end
@@ -40,7 +40,7 @@ class ComputersController < ApplicationController
     @computer = Computer.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :action => "show", :layout => "primary-content" }
       format.xml  { render :xml => @computer }
     end
   end
@@ -64,7 +64,7 @@ class ComputersController < ApplicationController
         format.html { redirect_to(@computer) }
         format.xml  { render :xml => @computer, :status => :created, :location => @computer }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content" }
         format.xml  { render :xml => @computer.errors, :status => :unprocessable_entity }
       end
     end
@@ -79,7 +79,7 @@ class ComputersController < ApplicationController
         format.html { redirect_to(@computer) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @computer.errors, :status => :unprocessable_entity }
       end
     end

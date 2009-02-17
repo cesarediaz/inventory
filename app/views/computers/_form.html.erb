@@ -1,11 +1,8 @@
+<div id="writer" >
 <% form_for(@computer) do |f| %>
-<fieldset>
-  <legend>Data computer</legend>
-
 <%= f.error_messages %>
 
-  <fieldset>
-    <legend>Pc data</legend>
+
     <%= t('computers.name') %>
     <%= f.text_field :name %>
 
@@ -14,22 +11,22 @@
 
     <%= f.label 'ip' %>
     <%= f.text_field :ip %>
-  </fieldset>
 
-  <fieldset>
-    <legend><%= t('computers.available') %></legend>
+    <%= t('computers.available') %>
     <%= t('computers.y') %> <%= radio_button('computer', 'available', 't') %>
     <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f') %>
-  </fieldset>
 
-  <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
-      {:prompt => true} %>
+
+  <% if not @computer.is_part_of_a_workstation %>
+    <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
+    {:prompt => true} %>
+  <% end %>
 
   <% if action_name == 'new' %>
   <%= f.submit t('computers.create') %>
   <% else %>
   <%= f.submit t('computers.edit') %>
   <% end %>
-</fieldset>
 
 <% end %>
+</div>

@@ -73,6 +73,21 @@ select
     width: 100%;
 }
 
+form
+{
+    color: #000;
+    font-size: 12pt;
+    border-bottom: solid 1px #336600;
+    width: 100%;
+}
+
+table
+{
+    color: #000;
+    font-size: 9pt;
+    border-bottom: solid 1px #336600;
+}
+
 /* Outer */
 
 #outer
@@ -109,6 +124,8 @@ select
     color: #343434;
     text-decoration: none;
 }
+
+
 
 /* Menu */
 
@@ -288,6 +305,7 @@ select
     color: #000;
     background-color: #DDDDDD;
     border-bottom: solid 1px #000;
+    width: 100%;
 }
 
 #content table td

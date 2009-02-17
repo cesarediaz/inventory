@@ -10,8 +10,11 @@
   <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
 
-  <%= collection_select 'printer', 'place_id', Place.find(:all), 'id', 'title',
+  <% if not @printer.is_part_of_a_workstation %>
+   <%= collection_select 'printer', 'place_id', Place.find(:all), 'id', 'title',
       {:prompt => true} %>
+  <% end %>
+
   <p>
     <% if action_name == 'new' %>
     <%= f.submit  t('common-actions.create') %>
