@@ -1,6 +1,4 @@
 class MotherBoardsController < ApplicationController
-  include SearchSystem
-
   auto_complete_for :mother_board, :title
   auto_complete_for :mother_board, :serialnumber
 
@@ -24,7 +22,7 @@ class MotherBoardsController < ApplicationController
     @mother_board = MotherBoard.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :action => "show", :layout => "primary-content" }
       format.xml  { render :xml => @mother_board }
     end
   end
@@ -35,7 +33,7 @@ class MotherBoardsController < ApplicationController
     @mother_board = MotherBoard.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :action => "new", :layout => "primary-content" }
       format.xml  { render :xml => @mother_board }
     end
   end
@@ -43,6 +41,7 @@ class MotherBoardsController < ApplicationController
   # GET /mother_boards/1/edit
   def edit
     @mother_board = MotherBoard.find(params[:id])
+    render :action => "edit", :layout => "primary-content"
   end
 
   # POST /mother_boards
@@ -56,7 +55,7 @@ class MotherBoardsController < ApplicationController
         format.html { redirect_to(@mother_board) }
         format.xml  { render :xml => @mother_board, :status => :created, :location => @mother_board }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content" }
         format.xml  { render :xml => @mother_board.errors, :status => :unprocessable_entity }
       end
     end
@@ -73,7 +72,7 @@ class MotherBoardsController < ApplicationController
         format.html { redirect_to(@mother_board) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @mother_board.errors, :status => :unprocessable_entity }
       end
     end
@@ -99,6 +98,7 @@ class MotherBoardsController < ApplicationController
     if not params[:mother_board][:serialnumber].nil?
       search_by('mother_boards', 'MotherBoard', params[:mother_board][:serialnumber], 'serialnumber', 10)
     end
+
   end
 
 

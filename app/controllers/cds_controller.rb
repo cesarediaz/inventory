@@ -24,7 +24,7 @@ class CdsController < ApplicationController
     @cd = Cd.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :action => "show", :layout => "primary-content"}
       format.xml  { render :xml => @cd }
     end
   end
@@ -35,7 +35,7 @@ class CdsController < ApplicationController
     @cd = Cd.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :action => "new", :layout => "primary-content"}
       format.xml  { render :xml => @cd }
     end
   end
@@ -43,6 +43,7 @@ class CdsController < ApplicationController
   # GET /cds/1/edit
   def edit
     @cd = Cd.find(params[:id])
+    render :action => "edit", :layout => "primary-content"
   end
 
   # POST /cds
@@ -56,7 +57,7 @@ class CdsController < ApplicationController
         format.html { redirect_to(@cd) }
         format.xml  { render :xml => @cd, :status => :created, :location => @cd }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content" }
         format.xml  { render :xml => @cd.errors, :status => :unprocessable_entity }
       end
     end
@@ -73,7 +74,7 @@ class CdsController < ApplicationController
         format.html { redirect_to(@cd) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @cd.errors, :status => :unprocessable_entity }
       end
     end
@@ -93,18 +94,10 @@ class CdsController < ApplicationController
 
   def search
     if not params[:cd][:model].nil?
-        @cds = Cd.find(:all,
-                                   :conditions => [ 'LOWER(model) LIKE ?',
-                                                    '%' + params[:cd][:model].downcase + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('cds', 'Cd', params[:cd][:model], 'model', 10)
     end
     if not params[:cd][:serialnumber].nil?
-        @cds = Cd.find(:all,
-                                   :conditions => [ 'serialnumber LIKE ?',
-                                                    '%' + params[:cd][:serialnumber] + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('cds', 'Cd', params[:cd][:serialnumber], 'serialnumber', 10)
     end
   end
 end

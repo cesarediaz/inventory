@@ -24,7 +24,7 @@ class HarddisksController < ApplicationController
     @harddisk = Harddisk.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :action => "show", :layout => "primary-content"}
       format.xml  { render :xml => @harddisk }
     end
   end
@@ -35,7 +35,7 @@ class HarddisksController < ApplicationController
     @harddisk = Harddisk.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :action => "new", :layout => "primary-content"}
       format.xml  { render :xml => @harddisk }
     end
   end
@@ -43,6 +43,7 @@ class HarddisksController < ApplicationController
   # GET /harddisks/1/edit
   def edit
     @harddisk = Harddisk.find(params[:id])
+    render :action => "edit", :layout => "primary-content"
   end
 
   # POST /harddisks
@@ -56,7 +57,7 @@ class HarddisksController < ApplicationController
         format.html { redirect_to(@harddisk) }
         format.xml  { render :xml => @harddisk, :status => :created, :location => @harddisk }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content" }
         format.xml  { render :xml => @harddisk.errors, :status => :unprocessable_entity }
       end
     end
@@ -73,7 +74,7 @@ class HarddisksController < ApplicationController
         format.html { redirect_to(@harddisk) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @harddisk.errors, :status => :unprocessable_entity }
       end
     end
@@ -93,18 +94,10 @@ class HarddisksController < ApplicationController
 
   def search
     if not params[:harddisk][:model].nil?
-        @harddisks = Harddisk.find(:all,
-                                   :conditions => [ 'LOWER(model) LIKE ?',
-                                                    '%' + params[:harddisk][:model].downcase + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('harddisks', 'Harddisk', params[:harddisk][:model], 'model', 10)
     end
     if not params[:harddisk][:serialnumber].nil?
-        @harddisks = Harddisk.find(:all,
-                                   :conditions => [ 'serialnumber LIKE ?',
-                                                    '%' + params[:harddisk][:serialnumber] + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('harddisks', 'Harddisk', params[:harddisk][:serialnumber], 'serialnumber', 10)
     end
   end
 end

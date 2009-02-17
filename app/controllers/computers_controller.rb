@@ -1,6 +1,5 @@
 class ComputersController < ApplicationController
   include ChartSystem
-  include SearchSystem
 
   before_filter :login_required
 

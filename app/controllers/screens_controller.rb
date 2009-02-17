@@ -1,5 +1,4 @@
 class ScreensController < ApplicationController
-  include SearchSystem
   before_filter :login_required
   auto_complete_for :screen, :model
   auto_complete_for :screen, :serialnumber
@@ -21,7 +20,7 @@ class ScreensController < ApplicationController
     @screen = Screen.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :action => "show", :layout => "primary-content"}
       format.xml  { render :xml => @screen }
     end
   end
@@ -32,7 +31,7 @@ class ScreensController < ApplicationController
     @screen = Screen.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :action => "new", :layout => "primary-content"}
       format.xml  { render :xml => @screen }
     end
   end
@@ -40,6 +39,7 @@ class ScreensController < ApplicationController
   # GET /screens/1/edit
   def edit
     @screen = Screen.find(params[:id])
+    render :action => "edit", :layout => "primary-content"
   end
 
   # POST /screens
@@ -53,7 +53,7 @@ class ScreensController < ApplicationController
         format.html { redirect_to(@screen) }
         format.xml  { render :xml => @screen, :status => :created, :location => @screen }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content" }
         format.xml  { render :xml => @screen.errors, :status => :unprocessable_entity }
       end
     end
@@ -70,7 +70,7 @@ class ScreensController < ApplicationController
         format.html { redirect_to(@screen) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @screen.errors, :status => :unprocessable_entity }
       end
     end

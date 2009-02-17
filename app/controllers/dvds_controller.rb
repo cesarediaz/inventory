@@ -24,7 +24,7 @@ class DvdsController < ApplicationController
     @dvd = Dvd.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :action => "show", :layout => "primary-content" }
       format.xml  { render :xml => @dvd }
     end
   end
@@ -35,7 +35,7 @@ class DvdsController < ApplicationController
     @dvd = Dvd.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :action => "new", :layout => "primary-content" }
       format.xml  { render :xml => @dvd }
     end
   end
@@ -43,6 +43,7 @@ class DvdsController < ApplicationController
   # GET /dvds/1/edit
   def edit
     @dvd = Dvd.find(params[:id])
+    render :action => "edit", :layout => "primary-content"
   end
 
   # POST /dvds
@@ -56,7 +57,7 @@ class DvdsController < ApplicationController
         format.html { redirect_to(@dvd) }
         format.xml  { render :xml => @dvd, :status => :created, :location => @dvd }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content"}
         format.xml  { render :xml => @dvd.errors, :status => :unprocessable_entity }
       end
     end
@@ -73,7 +74,7 @@ class DvdsController < ApplicationController
         format.html { redirect_to(@dvd) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @dvd.errors, :status => :unprocessable_entity }
       end
     end
@@ -93,18 +94,10 @@ class DvdsController < ApplicationController
 
   def search
     if not params[:dvd][:model].nil?
-        @dvds = Dvd.find(:all,
-                                   :conditions => [ 'LOWER(model) LIKE ?',
-                                                    '%' + params[:dvd][:model].downcase + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('dvds', 'Dvd', params[:dvd][:model], 'model', 10)
     end
     if not params[:dvd][:serialnumber].nil?
-        @dvds = Dvd.find(:all,
-                                   :conditions => [ 'serialnumber LIKE ?',
-                                                    '%' + params[:dvd][:serialnumber] + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
+      search_by('dvds', 'Dvd', params[:dvd][:serialnumber], 'serialnumber', 10)
     end
   end
 
