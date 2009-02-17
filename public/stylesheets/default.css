@@ -268,15 +268,18 @@ td
 
 #content table th
 {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
-    padding: 0.5em;
-    color: #444;
+    padding: 0.1em;
+    color: #000;
+    background-color: #DDDDDD;
+
+    border-bottom: solid 1px #000;
 }
 
 #content table td
 {
-    padding: 0.2em;
+    padding: 0.1em;
 }
 
 #content table tr.rowA

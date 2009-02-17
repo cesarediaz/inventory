@@ -16,20 +16,20 @@ module ReportSystem
     eval %"
 
     workbook = Excel.new('#{RAILS_ROOT}#{path}')
-    page = workbook.add_worksheet('#{worksheet}')
 
     get_elements('computers', 'Computer', method, param_id)
     get_elements('screens', 'Screen', method, param_id)
     get_elements('printers', 'Printer', method, param_id)
 
     row = 1
+    page = workbook.add_worksheet(t('places.computer'))
     get_heads(page, heads)
     computers_report(page, @computers, row)
 
-    row = @computers.count + 2
+    page = workbook.add_worksheet(t('places.screen'))
     generic_report(page, @screens, row)
 
-    row = @screens.count + @computers.count + 4
+    page = workbook.add_worksheet(t('places.printer'))
     generic_report(page, @printers, row)
 
     workbook.close
