@@ -1,4 +1,9 @@
+require 'spreadsheet/excel'
+include Spreadsheet
+
 class ScreensController < ApplicationController
+  include ReportSystem
+
   before_filter :login_required
   auto_complete_for :screen, :model
   auto_complete_for :screen, :serialnumber
@@ -96,6 +101,17 @@ class ScreensController < ApplicationController
     if not params[:screen][:serialnumber].nil?
       search_by('screens', 'Screen', params[:screen][:serialnumber], 'serialnumber', 10)
     end
+  end
+
+  def xls_screens
+    xls_report(t('places.screen') + '.xls',
+               'screens',
+               'Screen',
+               'screens',
+               "['model', 'serial number', 'mark', 'place']",
+               params[:places].nil? ? 'find' : params[:places],
+               params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
+               )
   end
 
 end

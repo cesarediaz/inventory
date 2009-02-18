@@ -4,7 +4,6 @@ include Spreadsheet
 class PlacesController < ApplicationController
   include ChartSystem
   include ReportSystem
-  include SearchSystem
 
   before_filter :login_required
   auto_complete_for :place, :title

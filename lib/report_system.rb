@@ -27,10 +27,10 @@ module ReportSystem
     computers_report(page, @computers, row)
 
     page = workbook.add_worksheet(t('places.screen'))
-    generic_report(page, @screens, row)
+    generic_report(page, @screens, row, false)
 
     page = workbook.add_worksheet(t('places.printer'))
-    generic_report(page, @printers, row)
+    generic_report(page, @printers, row, false)
 
     workbook.close
     send_file '#{RAILS_ROOT}#{path}'
@@ -117,11 +117,13 @@ module ReportSystem
   def make_a_report_of(this_hardware, page, elements)
     case this_hardware
     when 'computers'
-      computers_report(page, elements, nil)
+      computers_report(page, elements, nil, false)
     when 'screens'
-      generic_report(page, elements, nil)
+      generic_report(page, elements, nil, false)
     when 'printers'
-      generic_report(page, elements, nil)
+      generic_report(page, elements, nil, false)
+    when 'screens'
+      generic_report(page, elements, nil, true)
     when 'places'
       places_report(page, elements)
     end
@@ -161,11 +163,13 @@ module ReportSystem
 
   #This method fill the a generic report that
   #can be screens or printers
-  def generic_report(page, elements, row)
+  def generic_report(page, elements, row, with_place)
     row.nil? ? row = 1 : row = row
      for object in elements
        page.write(row,0,object.model)
        page.write(row,1,object.serialnumber)
+       page.write(row,2,object.mark.name)
+       page.write(row,3,object.place.title)
        row += 1
      end
   end

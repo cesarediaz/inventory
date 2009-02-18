@@ -1,4 +1,8 @@
+require 'spreadsheet/excel'
+include Spreadsheet
+
 class PrintersController < ApplicationController
+  include ReportSystem
   before_filter :login_required
   auto_complete_for :printer, :model
   auto_complete_for :printer, :serialnumber
@@ -96,6 +100,18 @@ class PrintersController < ApplicationController
     if not params[:printer][:serialnumber].nil?
       search_by('printers', 'Printer', params[:printer][:serialnumber], 'serialnumber', 10)
     end
+  end
+
+
+  def xls_printers
+    xls_report(t('places.printer') + '.xls',
+               'printers',
+               'Printer',
+               'printers',
+               "['model', 'serial number', 'mark', 'place']",
+               params[:places].nil? ? 'find' : params[:places],
+               params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
+               )
   end
 
 end
