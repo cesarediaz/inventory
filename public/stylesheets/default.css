@@ -69,7 +69,6 @@ select
     color: #000;
     font-size: 9pt;
     background-color: #fff;
-    border-bottom: solid 1px #000;
     width: 100%;
 }
 
@@ -77,7 +76,6 @@ form
 {
     color: #000;
     font-size: 12pt;
-    border-bottom: solid 1px #336600;
     width: 100%;
 }
 
@@ -380,6 +378,14 @@ table
 #third-quarter
 {
     width: 75%;
+}
+
+#advice-quarter
+{
+    border: solid 1px #000;
+    background-color: #FFFF99;
+    width: 25%;
+    float: right;
 }
 
 /* Footer */

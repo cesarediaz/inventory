@@ -118,6 +118,13 @@ es:
     download: 'Descargar un archivo xls'
     download-all: 'Descargar todo en un archivo xls'
     show-hide: 'Mostrar/Ocultar'
+    show-hide-advice: 'Mostrar/Ocultar aviso'
+    hide-advice: 'Ocultar aviso'
+
+  help-phrases:
+    in-workstation: 'Este dispositivo esta asignada como una estacion de trabajo.
+                    Para cambiar el atributo Lugar debe ir a la seccion Equipos.'
+
 
   search:
     label: "Buscar"
