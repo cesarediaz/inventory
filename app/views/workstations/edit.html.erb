@@ -1,6 +1,6 @@
 <% form_for(@workstation) do |f| %>
 <%= f.error_messages %>
-<div style="width: 50%;">
+<div id='quarter' >
   <%= t('phrases.list_of') + t('menu.places') %>
   <%= collection_select(:workstation, :place_id, Place.find(:all, :order => 'title'), :id, :title,{},
     {:prompt => true, :size => Place.all.count + 1 }) %>

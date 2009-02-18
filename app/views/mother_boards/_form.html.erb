@@ -8,12 +8,17 @@
   <%= f.text_field :serialnumber %>
 
   <%= t('motherboards.computer') %>
+
+  <div id="quarter" >
   <%= collection_select 'mother_board', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
+  </div>
 
   <%= t('motherboards.mark') %>
+  <div id="quarter" >
   <%= collection_select 'mother_board', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
+  </div>
   <p>
 
     <% if action_name == 'new' %>

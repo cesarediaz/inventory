@@ -18,8 +18,10 @@
 
 
   <% if not @computer.is_part_of_a_workstation %>
+  <div id="quarter" >
     <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
     {:prompt => true} %>
+  </div>
   <% end %>
 
   <% if action_name == 'new' %>

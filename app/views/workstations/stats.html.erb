@@ -1,13 +1,11 @@
-<%= render :partial => 'places_selector' %>
+<div id="quarter" >
+  <%= render :partial => 'places_selector' %>
 
-<%= observe_field("places", :update => "outer",
-:url => { :controller => 'workstations', :action => :stats },
-:with => "'place_id='+value") %>
+  <%= observe_field("places", :update => "outer",
+  :url => { :controller => 'workstations', :action => :stats },
+  :with => "'place_id='+value") %>
+</div>
 
 <% if not params[:place_id].nil? %>
 <%= render :partial => 'stats' %>
 <% end %>
-
-
-
-

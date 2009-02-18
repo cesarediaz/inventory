@@ -1,8 +1,7 @@
 <br>
-
 <%= javascript_include_tag :defaults %>
-  <% form_tag :action => 'search' do %>
-    <label><%= t 'places.title' %></label>
-    <%= text_field_with_auto_complete :place, :title, {:size => 20}, {:method => :get} %>
-    <%= submit_tag t 'search.label' %>
-  <% end %>
+<% form_tag :action => 'search' do %>
+<label><%= t 'places.title' %></label>
+<%= text_field_with_auto_complete :place, :title, {:size => 20}, {:method => :get} %>
+<%= submit_tag t 'search.label' %>
+<% end %>

@@ -9,6 +9,7 @@
    [t('places.stores'),'stores']]
    %>
 
+<div id='half' >
 <%= select_tag 'sort[]',
     options_for_select( @options),
     :include_prompt => false,
@@ -17,4 +18,5 @@
 :update => "outer")
 %>
 
+</div>
 <% end %>
