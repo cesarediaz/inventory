@@ -104,7 +104,7 @@ class PrintersController < ApplicationController
 
 
   def xls_printers
-    xls_report(t('places.printer') + '.xls',
+    xls_report('/public/xls/' + t('places.printer') + '.xls',
                'printers',
                'Printer',
                'printers',

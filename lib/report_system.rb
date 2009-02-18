@@ -117,12 +117,10 @@ module ReportSystem
   def make_a_report_of(this_hardware, page, elements)
     case this_hardware
     when 'computers'
-      computers_report(page, elements, nil, false)
+      computers_report(page, elements, nil)
     when 'screens'
       generic_report(page, elements, nil, false)
     when 'printers'
-      generic_report(page, elements, nil, false)
-    when 'screens'
       generic_report(page, elements, nil, true)
     when 'places'
       places_report(page, elements)

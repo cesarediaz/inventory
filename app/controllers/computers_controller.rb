@@ -1,4 +1,8 @@
+require 'spreadsheet/excel'
+include Spreadsheet
+
 class ComputersController < ApplicationController
+  include ReportSystem
   include ChartSystem
 
   before_filter :login_required
@@ -118,6 +122,20 @@ class ComputersController < ApplicationController
                  )
     render :action => "stats", :layout => "primary-content"
 
+  end
+
+
+  def xls_computers
+    xls_report('/public/xls/' +
+               t('places.computer') + '.xls',
+               'computers',
+               'Computer',
+               'computers',
+               "[t('computers.name'),'mac','ip',t('computers.workstation?'),
+                 'montherboard', 'harddisk', 'memory', 'cds', 'dvds']",
+               params[:places].nil? ? 'find' : params[:places],
+               params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
+               )
   end
 
   private

@@ -1,3 +1,7 @@
+<div id='left-content' >
+  <%= link_to t('common-actions.download-all'), :controller => 'computers', :action => 'xls_computers' %>
+</div>
+
 <%= render :partial => 'list' %>
 
 <%= will_paginate @computers %>
