@@ -40,7 +40,7 @@ class PlacesController < ApplicationController
     @place = Place.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :action => "new", :layout => "primary-content"}
       format.xml  { render :xml => @place }
     end
   end
@@ -48,6 +48,7 @@ class PlacesController < ApplicationController
   # GET /places/1/edit
   def edit
     @place = Place.find(params[:id])
+    render :action => "edit", :layout => "primary-content"
   end
 
   # POST /places
@@ -61,7 +62,7 @@ class PlacesController < ApplicationController
         format.html { redirect_to(@place) }
         format.xml  { render :xml => @place, :status => :created, :location => @place }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content" }
         format.xml  { render :xml => @place.errors, :status => :unprocessable_entity }
       end
     end
@@ -78,7 +79,7 @@ class PlacesController < ApplicationController
         format.html { redirect_to(@place) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @place.errors, :status => :unprocessable_entity }
       end
     end

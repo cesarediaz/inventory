@@ -9,9 +9,11 @@
 <p>
   <%= t('places.description') %>
   <br>
-  <%= select( "place", "description", {t('places.departments') => "department",
+  <div id="quarter" >
+    <%= select( "place", "description", {t('places.departments') => "department",
     t('places.offices') => "office", t('places.rooms') => "room", t('places.stores') => "store"},
-  { :prompt => true }) %>
+    { :prompt => true }) %>
+  </div>
 </p>
 
 <p>
