@@ -9,12 +9,16 @@
   <%= t('screens.sn') %>
   <%= f.text_field :serialnumber %>
 
-  <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
-      {:prompt => true} %>
+  <div id="quarter" >
+    <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
+        {:prompt => true} %>
+  </div >
 
   <% if not @screen.is_part_of_a_workstation %>
+  <div id="quarter" >
     <%= collection_select 'screen', 'place_id', Place.find(:all), 'id', 'title',
-      {:prompt => true} %>
+        {:prompt => true} %>
+  </div>
   <% end %>
   <p>
     <% if action_name == 'new' %>

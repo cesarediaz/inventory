@@ -122,7 +122,7 @@ es:
     hide-advice: 'Ocultar aviso'
 
   help-phrases:
-    in-workstation: 'Este dispositivo esta asignada como una estacion de trabajo.
+    in-workstation: 'Este dispositivo esta asignado en una estacion de trabajo.
                     Para cambiar el atributo Lugar debe ir a la seccion Equipos.'
 
 
