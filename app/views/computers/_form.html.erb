@@ -1,6 +1,5 @@
-<%= advice( @computer.is_part_of_a_workstation)%>
+<%= advice( @computer.is_part_of_a_workstation, t('help-phrases.in-workstation'))%>
 
-<div id="writer" >
 <% form_for(@computer) do |f| %>
 <%= f.error_messages %>
 
@@ -33,4 +32,3 @@
   <% end %>
 
 <% end %>
-</div>

@@ -104,7 +104,7 @@ class ScreensController < ApplicationController
   end
 
   def xls_screens
-    xls_report('/public/xls/' + t('places.printer') + '.xls',
+    xls_report('/public/xls/' + t('places.screen') + '.xls',
                'screens',
                'Screen',
                'screens',

@@ -129,6 +129,8 @@ en:
 
   help-phrases:
     in-workstation: 'This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations.'
+    stats-in-place: 'Free: equipment which are not part of a workstation.
+                     In workstation: equipment which is in a workstation'
 
   search:
     label: "Search"

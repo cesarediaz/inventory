@@ -4,17 +4,21 @@
 <%= f.error_messages %>
 
 <%= t('workstations.place') %>
-<select name="places" id="places">
-  <option value=""><%= t('workstations.select_a_place') %></option>
-  <% @places.each do |place| %>
-  <option value="<%= place.id %>">
-    <%= place.title %>
-  </option>
-  <% end %>
-</select>
 
-<%= @place_name rescue nil %>
+<div id="quarter" >
+  <select name="places" id="places">
+    <option value=""><%= t('workstations.select_a_place') %></option>
+    <% @places.each do |place| %>
+    <option value="<%= place.id %>">
+      <%= place.title %>
+    </option>
+    <% end %>
+  </select>
+</div >
 
+<div id="right-content" >
+  <%= @place_name rescue nil %>
+</div>
 
 <%= hidden_field(:workstation, :place_id, :value => @place_id) %>
 
@@ -58,3 +62,4 @@
   <% end %>
 </p>
 <% end %>
+

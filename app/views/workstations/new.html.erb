@@ -1,9 +1,6 @@
-<div id='stats_data'>
 <%= render :partial => 'form' %>
 
 <%= observe_field("places", :update => "outer",
 :url => { :controller => 'workstations', :action => :new },
 :with => "'place_id='+value") %>
 <%= link_to t('workstations.back'), workstations_path %>
-</div>
-
