@@ -1,5 +1,5 @@
 <div>
-
+  <!--   computers -->
   <div id='description' >
     <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
   </div>
@@ -8,15 +8,57 @@
     <%= t('workstations.computer') %> : <%= Computer.list_for_place(params[:place_id]).count rescue nil %>
     <%= t('phrases.units') %>
   </div>
-  <div id='stats_data'>
-    <%= t('workstations.screen') %> : <%= Screen.list_for_place(params[:place_id]).count rescue nil %>
+
+  <div id='stats_data_centered'>
+    <%= t('stats.alone') %> :
+    <%= Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
     <%= t('phrases.units') %>
   </div>
+
+  <div id='stats_data_centered'>
+    <%= t('stats.workstation') %> :
+    <%= Computer.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
+    <%= t('phrases.units') %>
+  </div>
+
+
+  <!--   screens -->
+  <div id='stats_data'>
+    <%= t('workstations.screen') %> :
+    <%= Screen.list_for_place(params[:place_id]).count rescue nil %>
+    <%= t('phrases.units') %>
+  </div>
+
+  <div id='stats_data_centered'>
+    <%= t('stats.alone') %> :
+    <%= Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
+    <%= t('phrases.units') %>
+  </div>
+
+  <div id='stats_data_centered'>
+    <%= t('stats.workstation') %> :
+    <%= Screen.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
+    <%= t('phrases.units') %>
+  </div>
+
+
+  <!--   printers -->
   <div id='stats_data'>
     <%= t('workstations.printer') %> : <%= Printer.list_for_place(params[:place_id]).count rescue nil %>
     <%= t('phrases.units') %>
   </div>
 
+  <div id='stats_data_centered'>
+    <%= t('stats.alone') %> :
+    <%= Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
+    <%= t('phrases.units') %>
+  </div>
+
+  <div id='stats_data_centered'>
+    <%= t('stats.workstation') %> :
+    <%= Printer.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
+    <%= t('phrases.units') %>
+  </div>
 
   <div id='stats_lateral_panel'>
     <% cache(:fragment => "workstations/_stats") do %>

@@ -450,11 +450,19 @@ div.auto_complete ul strong.highlight {
 
 #stats_data
 {
-    margin: 0em 30em 0em 3em;
+    margin: 0em 70em 0em 3em;
     color: #000;
+    background-color: #F5FBEF;
+    border-bottom: solid 1px #888;
 }
 
-
+#stats_data_centered
+{
+    margin: 0em 70em 0em 8em;
+    color: #000;
+    background-color: #EFF5FB;
+    border-bottom: solid 1px #888;
+}
 
 
 
