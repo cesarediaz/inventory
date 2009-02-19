@@ -1,5 +1,10 @@
+require 'spreadsheet/excel'
+include Spreadsheet
+
 class WorkstationsController < ApplicationController
   include ChartSystem
+  include ReportSystem
+
   before_filter :login_required
 
   # GET /workstations
@@ -97,6 +102,17 @@ class WorkstationsController < ApplicationController
       chart('Computer', params[:place_id],'chart_computer', @printers)
       chart('Screen', params[:place_id],'chart_screen', @screens)
     end
+  end
+
+  def xls_workstations
+    xls_report_workstations('/public/xls/' + t('menu.workstations') + '.xls',
+                            params[:id].nil? ? 'find' : params[:id],
+                            params[:id].nil? ? '(:all)' : '(' + params[:id] + ')',
+                            "[t('computers.title') + ' ' + t('computers.name'), 'ip', 'mac',
+                              t('screens.title') + ' ' + t('screens.model'), t('screens.sn'),
+                              t('printers.title') + ' ' + t('printers.model'), t('printers.sn'),
+                              t('places.title')]"
+                            )
   end
 
   private

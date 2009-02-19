@@ -1,5 +1,9 @@
 <%= javascript_include_tag "prototype" %>
-<%= t('workstations.place') %>
+
+<div id='subtitles' >
+  <%= t('workstations.place') %>
+</div>
+
 <select name="places" id="places">
   <option value=""><%= t('workstations.select_a_place') %></option>
   <% @places.each do |place| %>

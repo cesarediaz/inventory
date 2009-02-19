@@ -1,4 +1,5 @@
-<%= advice( @computer.is_part_of_a_workstation, t('help-phrases.in-workstation'))%>
+<%= advice( @computer.is_part_of_a_workstation,t('common-actions.hide-advice'),
+ t('help-phrases.in-workstation'))%>
 
 <% form_for(@computer) do |f| %>
 <%= f.error_messages %>

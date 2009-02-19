@@ -2,6 +2,34 @@ module ReportSystem
   protected
 
   #This method generate a xls file to download with a complete list of
+  #workstations
+  #
+  #Parameters:
+  # path: way where the xls file will be save in the server application
+  # worksheet: name of worksheet
+  # heads: the names of first row in the xls file
+  # method: is the name of method to implement in the rescue of records
+  # param_id: parameter to provide the place from we need get records
+  #
+  #Return a .xls file with the report
+  def xls_report_workstations(path,method, param_id, heads)
+    eval %"
+
+    workbook = Excel.new('#{RAILS_ROOT}#{path}')
+
+    get_elements('workstations', 'Workstation', method, param_id)
+    page = workbook.add_worksheet(t('workstations.list_of_equipments'))
+    get_heads(page, heads)
+    workstations_report(page, @workstations)
+
+    workbook.close
+    send_file '#{RAILS_ROOT}#{path}'
+
+    ";
+  end
+
+
+  #This method generate a xls file to download with a complete list of
   #hardware for a specific place
   #
   #Parameters:
@@ -122,6 +150,8 @@ module ReportSystem
       generic_report(page, elements, nil, false)
     when 'printers'
       generic_report(page, elements, nil, true)
+    when 'workstations'
+      workstations_report(page, elements, nil, true)
     when 'places'
       places_report(page, elements)
     end
@@ -182,6 +212,28 @@ module ReportSystem
        page.write(row,2,object.computer.count)
        page.write(row,3,object.screen.count)
        page.write(row,4,object.printer.count)
+       row += 1
+     end
+  end
+
+
+  #This method fill the the places report
+  def workstations_report(page, elements)
+    row = 1
+     for object in elements
+       @computer = Computer.find(object.computer_id)
+       @screen = Screen.find(object.screen_id)
+       @printer = Printer.find(object.printer_id) rescue nil
+       @place = Place.find(object.place_id)
+
+       page.write(row,0,@computer.name)
+       page.write(row,1,@computer.ip)
+       page.write(row,2,@computer.mac)
+       page.write(row,3,@screen.model)
+       page.write(row,4,@screen.serialnumber)
+       page.write(row,5,@printer.model) rescue nil
+       page.write(row,6,@printer.serialnumber) rescue nil
+       page.write(row,7,@place.title)
        row += 1
      end
   end

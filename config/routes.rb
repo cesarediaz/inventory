@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :workstations, :collection => {:stats => :get}
+  map.resources :workstations, :collection => {:stats => :get, :xls_workstations  => :get}
 
 
   map.resources :computers, :collection => { :available => :get, :unavailable => :get,

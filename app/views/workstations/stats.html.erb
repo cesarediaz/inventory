@@ -1,8 +1,8 @@
-<%= advice( true, t('help-phrases.stats-in-place'))%>
+<%= advice( true, t('common-actions.hide-advice'),
+ t('help-phrases.stats-in-place'))%>
+
 <div id="quarter" >
-  <div id='left-content' >
-    <%= render :partial => 'places_selector' %>
-  </div>
+  <%= render :partial => 'places_selector' %>
 
   <%= observe_field("places", :update => "outer",
   :url => { :controller => 'workstations', :action => :stats },
