@@ -106,7 +106,7 @@ class WorkstationsController < ApplicationController
 
   def xls_workstations
     xls_report_workstations('/public/xls/' + t('menu.workstations') + '.xls',
-                            params[:id].nil? ? 'find' : params[:id],
+                            params[:id].nil? ? 'find' : 'list_for_place',
                             params[:id].nil? ? '(:all)' : '(' + params[:id] + ')',
                             "[t('computers.title') + ' ' + t('computers.name'), 'ip', 'mac',
                               t('screens.title') + ' ' + t('screens.model'), t('screens.sn'),

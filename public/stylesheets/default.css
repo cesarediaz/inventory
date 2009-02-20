@@ -450,10 +450,11 @@ div.auto_complete ul strong.highlight {
 
 #stats_data
 {
-    margin: 0em 70em 0em 3em;
+    margin: 1em 70em 0.5em 3em;
     color: #000;
     background-color: #F5FBEF;
     border-bottom: solid 1px #888;
+    font-size: 10pt;
 }
 
 #stats_data_centered
@@ -523,3 +524,5 @@ div.auto_complete ul strong.highlight {
 .menu2 :hover ul :hover ul :hover ul :hover ul :hover ul
 {left:160px; top:-1px; background: #fff; padding:0; /* white-space:nowrap; */width:auto; z-index:300; height:auto;}
 .menu2 :hover ul.sub li ul {border-top:1px solid #000000; background: #fff; z-index:300;}
+
+

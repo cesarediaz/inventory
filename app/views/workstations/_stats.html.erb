@@ -1,77 +1,122 @@
-<div>
-  <!--   computers -->
+<%  @workstations = Workstation.list_for_place(params[:place_id]) %>
+<% if not @workstations.empty? %>
+
+
+<!-- small resume of stats -->
+<div id='left-right' >
+    <a href="#" onclick="Effect.toggle('small_stats', 'appear'); return false;">
+  <%= t('common-actions.show-hide') %></a>
+</div>
+
+<div id='small_stats'>
+
   <div id='description' >
     <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
   </div>
 
-  <div id='stats_data'>
-    <%= t('workstations.computer') %> : <%= Computer.list_for_place(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
+  <!--   computers -->
+  <div id='left-content' >
+    <div id='stats_data'>
+      <%= t('workstations.computer') %> : <%= Computer.list_for_place(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
+
+    <div id='stats_data_centered'>
+      <%= t('stats.alone') %> :
+      <%= Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
+
+    <div id='stats_data_centered'>
+      <%= t('stats.workstation') %> :
+      <%= Computer.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
   </div>
 
-  <div id='stats_data_centered'>
-    <%= t('stats.alone') %> :
-    <%= Computer.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
+  <div id='left-content' >
+    <!--   screens -->
+    <div id='stats_data'>
+      <%= t('workstations.screen') %> :
+      <%= Screen.list_for_place(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
 
-  <div id='stats_data_centered'>
-    <%= t('stats.workstation') %> :
-    <%= Computer.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
+    <div id='stats_data_centered'>
+      <%= t('stats.alone') %> :
+      <%= Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
 
-
-  <!--   screens -->
-  <div id='stats_data'>
-    <%= t('workstations.screen') %> :
-    <%= Screen.list_for_place(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
-
-  <div id='stats_data_centered'>
-    <%= t('stats.alone') %> :
-    <%= Screen.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
-
-  <div id='stats_data_centered'>
-    <%= t('stats.workstation') %> :
-    <%= Screen.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
+    <div id='stats_data_centered'>
+      <%= t('stats.workstation') %> :
+      <%= Screen.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
 
 
-  <!--   printers -->
-  <div id='stats_data'>
-    <%= t('workstations.printer') %> : <%= Printer.list_for_place(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
 
-  <div id='stats_data_centered'>
-    <%= t('stats.alone') %> :
-    <%= Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
+    <!--   printers -->
+    <div id='stats_data'>
+      <%= t('workstations.printer') %> : <%= Printer.list_for_place(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
 
-  <div id='stats_data_centered'>
-    <%= t('stats.workstation') %> :
-    <%= Printer.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
-    <%= t('phrases.units') %>
-  </div>
+    <div id='stats_data_centered'>
+      <%= t('stats.alone') %> :
+      <%= Printer.list_for_place_are_not_part_a_workstation(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
 
-  <div id='stats_lateral_panel'>
-    <% cache(:fragment => "workstations/_stats") do %>
-
-    <%  @value = GoogleChart.pie_3d_380x150(@chart_computer).to_url %>
-    <%= image_tag(@value)  rescue nil %>
-
-    <%  @value = GoogleChart.pie_3d_380x150(@chart_screen).to_url %>
-    <%= image_tag(@value)  rescue nil %>
-
-    <%  @value = GoogleChart.pie_3d_380x150(@chart_printer).to_url %>
-    <%= image_tag(@value)  rescue nil %>
-
-    <% end %>
+    <div id='stats_data_centered'>
+      <%= t('stats.workstation') %> :
+      <%= Printer.list_for_place_as_part_a_workstation(params[:place_id]).count rescue nil %>
+      <%= t('phrases.units') %>
+    </div>
 
   </div>
+</div>
+
+
+<br>
+
+<!-- list hardware of stats -->
+<a href="#" onclick="Effect.toggle('list_workstations', 'appear'); return false;">
+  <%= t('common-actions.show-hide') %></a>
+|
+<%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
+:id => params[:place_id]  %>
+
+<div id='list_workstations'>
+  <%= render :partial => 'list' %>
+</div>
+
+
+<!-- graphics statistics -->
+<div id='stats_lateral_panel'>
+  <% cache(:fragment => "workstations/_stats") do %>
+
+  <%  @value = GoogleChart.pie_3d_380x150(@chart_computer).to_url %>
+  <%= image_tag(@value)  rescue nil %>
+
+  <%  @value = GoogleChart.pie_3d_380x150(@chart_screen).to_url %>
+  <%= image_tag(@value)  rescue nil %>
+
+  <%  @value = GoogleChart.pie_3d_380x150(@chart_printer).to_url %>
+  <%= image_tag(@value)  rescue nil %>
+
+  <% end %>
+
+</div>
+
+<% else %>
+
+  <div id='description' >
+    <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
+  </div>
+
+  <div id='left-content' >
+    <div>-</div>
+  </div>
+
+<% end %>

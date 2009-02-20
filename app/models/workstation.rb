@@ -58,4 +58,9 @@ class Workstation < ActiveRecord::Base
     @screen.save!
   end
 
+
+  #################################################
+  # Named Scope
+  named_scope :list_for_place, lambda { |*args| { :conditions => ['place_id = ?', args]}}
+
 end
