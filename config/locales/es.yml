@@ -178,6 +178,16 @@ es:
     list-memories : "Listar memorias"
     new-memorie : "Nuevo"
 
+    #Dvds
+    dvds : "R/W dvds"
+    list-dvds : "Listar dispositivos"
+    new-dvd : "Nuevo"
+
+    #Cds
+    cds : "R/W cds"
+    list-cds : "Listar dispositivos"
+    new-cd : "Nuevo"
+
     #Screens
     screens : "Monitores"
     list-screens : "Listar monitores"

@@ -184,6 +184,16 @@ en:
     list-memories : "List memories"
     new-memorie : "New"
 
+    #Dvds
+    dvds : "R/W dvds"
+    list-dvds : "List devices"
+    new-dvd : "New"
+
+    #Cds
+    cds : "R/W cds"
+    list-cds : "List devices"
+    new-cd : "New"
+
     #Screens
     screens : "Screens"
     list-screens : "List screens"
