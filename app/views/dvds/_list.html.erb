@@ -11,7 +11,7 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= dvd.model %></td>
     <td><%= dvd.serialnumber %></td>
-    <td><%= dvd.writable %></td>
+    <td><%= check(dvd.writable) %></td>
     <td><%= dvd.computer.name rescue nil  %></td>
     <td><%= dvd.mark.name rescue nil  %></td>
     <td><%= link_to t('common-actions.show'), dvd %></td>

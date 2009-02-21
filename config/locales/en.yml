@@ -147,7 +147,7 @@ en:
     list_of : 'List of '
     units: ' units '
     has: ' has '
-    y: 'si'
+    y: 'yes'
     n: 'no'
 
   menu:

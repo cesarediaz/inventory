@@ -11,7 +11,7 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= cd.model %></td>
     <td><%= cd.serialnumber %></td>
-    <td><%= cd.writable %></td>
+    <td><%= check(cd.writable) %></td>
     <td><%= cd.computer.name rescue nil  %></td>
     <td><%= cd.mark.name rescue nil  %></td>
     <td><%= link_to t('common-actions.show'), cd %></td>
