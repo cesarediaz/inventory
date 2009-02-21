@@ -108,7 +108,8 @@ class PlacesController < ApplicationController
                'places',
                'Place',
                'places',
-               "['title', 'description', 'computers', 'screens', 'printers']",
+               "[t('places.title'), t('places.description'), t('places.computer'),
+                 t('places.screen'), t('places.printer')]",
                params[:places].nil? ? 'find' : params[:places],
                params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
                )
