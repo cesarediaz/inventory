@@ -80,11 +80,13 @@ es:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
+    burn: "Grabadora"
 
   cds:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
+    burn: "Grabadora"
 
   screens:
     title: 'Monitores'
