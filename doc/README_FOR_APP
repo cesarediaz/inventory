@@ -1,11 +1,33 @@
-To build the guides:
+== Welcome to Inventory
 
-* Install source-highlighter (http://www.gnu.org/software/src-highlite/source-highlight.html)
-* Install the mizuho gem (http://github.com/FooBarWidget/mizuho/tree/master)
-* Run `rake guides` from the railties directory
+Inventory is a web-application that includes everything needed to mantain
+a database-backed web application which manage the data about an informatic
+inventory. With ths software you will have a detailed control about the
+things(devices) availables how the unavailables too.
 
-Gem list installed:
 
+This application has control of access to the administration part. For default
+the application generate an user account with the below data:
+
+user: admin
+password: testing
+
+, you must run the migration task how first step before to try to use the application:
+
+rake db:migrate
+
+and then go to the root path in the application to use with Webrick for local proves
+
+user@machine:~/ cd 'application_path'
+
+and so
+
+user@machine:~/ script/server
+
+          to watch in http://127.0.0.1:3000 the application running
+
+
+== Gems that the application use  ==
 
 actionmailer (2.2.2)
 actionpack (2.2.2)
