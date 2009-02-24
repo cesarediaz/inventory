@@ -1,7 +1,6 @@
 *.log
 *.*~
 doc/*.*~
-log/*
 
 public/xls/*.*
 *.xls
