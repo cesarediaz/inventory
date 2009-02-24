@@ -2,7 +2,6 @@
 *.*~
 doc/*.*~
 
-public/xls/*.*
 *.xls
 
 config/database.yml
