@@ -20,10 +20,7 @@ describe PrintersController do
     @printer_one = mock_model(Printer, :model => "pc_1", :sn => '12345678', :available => true)
     @printer_two = mock_model(Printer, :model => "pc_2", :sn => '01020304', :available => false)
     @printers = [@printer_one, @printer_two]
-    @printers_available = [@printer_one]
-    @printers_unavailable = [@printer_two]
-    Printer.stub!(:available).and_return(@printers_available)
-    Printer.stub!(:unavailable).and_return(@printers_unavailable)
+    Printer.stub!(:search).and_return(@printers)
     @printers.stub!(:find).and_return(@printers)
   end
 
@@ -65,6 +62,28 @@ describe PrintersController do
       Printer.should_receive(:paginate).with(:page => nil,
                                               :per_page => 10,
                                               :order => 'created_at DESC')
+    end
+
+  end
+
+  describe "handling GET search" do
+    before(:each) do
+      login
+      mock_printers
+    end
+
+    def do_get_search
+      get 'printers/search'
+    end
+
+    it "should be successful" do
+      do_get_search
+      response.should be_success
+    end
+
+    it "should render edit template" do
+      do_get_search
+      response.should render_template('search')
     end
 
   end
