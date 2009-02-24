@@ -15,7 +15,6 @@ module ApplicationHelper
 
   end
 
-
   def check(value)
     html = ''
     if value

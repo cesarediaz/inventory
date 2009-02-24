@@ -19,14 +19,14 @@
       <td><%= computer.name %></td>
       <td><%= computer.mac %></td>
       <td><%= computer.ip %></td>
-      <td><%= computer.available %></td>
+      <td><%= check(computer.available) %></td>
       <td><%= computer.mother_board.title rescue nil %></td>
       <td><%= computer.harddisk.collect {|x| x.model + '<br>' } rescue nil %></td>
       <td><%= computer.memory.collect {|x| x.model + '<br>' } rescue nil %></td>
       <td><%= computer.cd.collect {|x| x.model + '<br>' } rescue nil %></td>
       <td><%= computer.dvd.collect {|x| x.model + '<br>' } rescue nil %></td>
       <td><%= computer.place.title rescue nil %></td>
-      <td><%= computer.is_part_of_a_workstation rescue nil %></td>
+      <td><%= check(computer.is_part_of_a_workstation) %></td>
       <td><%= link_to t('common-actions.show') , computer %></td>
       <td><%= link_to t('common-actions.edit') , edit_computer_path(computer) %></td>
       <td><%= link_to t('common-actions.destroy') , computer, :confirm => 'Are you sure?', :method => :delete %></td>
