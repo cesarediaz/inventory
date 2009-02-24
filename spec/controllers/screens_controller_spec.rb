@@ -31,14 +31,6 @@ describe ScreensController do
     get :index
   end
 
-  def do_get_available
-    get :available
-  end
-
-  def do_get_unavailable
-    get :unavailable
-  end
-
   describe "get index" do
     before(:each) do
       @screen = [mock_model(Screen)]
@@ -76,10 +68,5 @@ describe ScreensController do
     end
 
   end
-
-
-
-
-
 
 end
