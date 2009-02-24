@@ -19,11 +19,15 @@ describe ComputersController do
   end
 
   def mock_computers
-    @computer = mock_model(Computer, :name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30',
+    @computer_one = mock_model(Computer, :name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30',
                            :available => true)
-    @computers = [@computer]
-    Computer.stub!(:available).and_return(@computers)
-    Computer.stub!(:unavailable).and_return(@computers)
+    @computer_two = mock_model(Computer, :name => "pc_2", :ip => '132.54.23.61', :mac => '13:23:43:15:53:31',
+                           :available => false)
+    @computers = [@computer_one, @computer_two]
+    @computers_available = [@computer_one]
+    @computers_unavailable = [@computer_two]
+    Computer.stub!(:available).and_return(@computers_available)
+    Computer.stub!(:unavailable).and_return(@computers_unavailable)
     @computers.stub!(:find).and_return(@computers)
   end
 
@@ -49,6 +53,12 @@ describe ComputersController do
       login
       do_get_index
       response.should be_success
+    end
+
+    it "should have n records" do
+      login
+      do_get_index
+      @computer.should have(1).items
     end
 
     it "should assings computers" do
@@ -82,6 +92,12 @@ describe ComputersController do
       response.should be_success
     end
 
+    it "should have n records" do
+      login
+      do_get_available
+      @computers_available.should have(1).items
+    end
+
     it 'should find all computers availables' do
       do_get_available
       Computer.should_receive(:available).and_return(@computers)
@@ -89,7 +105,7 @@ describe ComputersController do
 
     it 'should find all computers availables and assigns an @computers variable' do
       do_get_available
-      assigns[:computers].should == @computers
+      assigns[:computers].should == @computers_available
     end
 
   end
@@ -108,7 +124,12 @@ describe ComputersController do
 
     it 'should find all computers unavailables and assigns an @computers variable' do
       do_get_unavailable
-      assigns[:computers].should == @computers
+      assigns[:computers].should == @computers_unavailable
+    end
+
+    it "should have n records" do
+      login
+      @computers_unavailable.should have(1).items
     end
 
     it 'should find all computers unavailables' do
@@ -116,40 +137,36 @@ describe ComputersController do
       Computer.should_receive(:unavailable).and_return(@computers)
     end
 
-  describe "handling GET /computers/1/edit" do
+    describe "handling GET /computers/1/edit" do
 
-    before(:each) do
-      login
-      mock_computers
-      Computer.stub!(:find).and_return(@computer)
-    end
+      before(:each) do
+        login
+        mock_computers
+        Computer.stub!(:find).and_return(@computer)
+      end
 
-    def do_get
-      get :edit, :id => "1"
-    end
+      def do_get
+        get :edit, :id => "1"
+      end
 
-    it "should be successful" do
-      do_get
-      response.should be_success
-    end
+      it "should be successful" do
+        do_get
+        response.should be_success
+      end
 
-    it "should render edit template" do
-      do_get
-      response.should render_template('edit')
-    end
+      it "should render edit template" do
+        do_get
+        response.should render_template('edit')
+      end
 
-    it "should assign the found Computer for the view" do
-      do_get
-      assigns[:computer].should equal(@computer)
+      it "should assign the found Computer for the view" do
+        do_get
+        assigns[:computer].should equal(@computer)
+      end
+
     end
 
   end
-
-  end
-
-
-
-
 
 
   describe "route generation" do
