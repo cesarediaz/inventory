@@ -8,10 +8,10 @@ include AuthenticatedTestHelper
 describe ComputersController do
   fixtures        :users
 
-  before(:each) do
-    @computer = mock_model(Computer, {:name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30' })
-    Computer.stub!(:find).and_return([@computer])
-  end
+#   before(:each) do
+#     @computer = mock_model(Computer, {:name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30' })
+#     Computer.stub!(:find).and_return([@computer])
+#   end
 
   def login
     @user = mock_model(User)
@@ -22,17 +22,69 @@ describe ComputersController do
     controller.stub!(:set_user_language).and_return('en')
   end
 
-  def do_get
+  def mock_computers
+    @computer = mock_model(Computer, :name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30',
+                           :available => true)
+    @computers = [@computer]
+    Computer.stub!(:available).and_return(@computers)
+    Computer.stub!(:unavailable).and_return(@computers)
+    @computers.stub!(:find).and_return(@computers)
+  end
+
+  def do_get_index
     get :index
   end
 
+  def do_get_available
+    get :available
+  end
 
-  describe "in index" do
+  def do_get_unavailable
+    get :unavailable
+  end
+
+  describe "get index" do
 
     it "should be successful" do
       login
-      do_get
+      do_get_index
       response.should be_success
+    end
+
+  end
+
+  describe "get computers/available" do
+    before(:each) do
+      login
+      mock_computers
+    end
+
+    it "should be successful" do
+      do_get_available
+      response.should be_success
+    end
+
+    it 'should find all computers availables' do
+      do_get_available
+      Computer.should_receive(:available).and_return(@computers)
+    end
+
+  end
+
+  describe "get computers/unavailable" do
+    before(:each) do
+      login
+      mock_computers
+    end
+
+    it "should be successful" do
+      do_get_unavailable
+      response.should be_success
+    end
+
+    it 'should find all computers unavailables' do
+      do_get_unavailable
+      Computer.should_receive(:unavailable).and_return(@computers)
     end
 
   end
