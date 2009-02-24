@@ -47,6 +47,12 @@ describe ComputersController do
       response.should be_success
     end
 
+    it "should be unsuccessful without logged in and get sessions new" do
+      do_get_index
+      response.should_not be_success
+      get 'sessions/new'
+    end
+
   end
 
   describe "get computers/available" do
