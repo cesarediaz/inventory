@@ -5,62 +5,42 @@ require File.dirname(__FILE__) + '/../spec_helper'
 include AuthenticatedTestHelper
 
 
-
-
 describe ComputersController do
-  integrate_views
-  fixtures :computers
+  fixtures        :users
 
+  before(:each) do
+    @computer = mock_model(Computer, {:name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30' })
+    Computer.stub!(:find).and_return([@computer])
+  end
 
-  it "should set @computers when accessing GET /index" do
+  def login
+    @user = mock_model(User)
+    @login_params = { :login => 'admin', :password => 'testing' }
+    post :create, @login_params
+    User.stub!(:authenticate).with(@login_params[:login], @login_params[:password]).and_return(@user)
+    controller.stub!(:logged_in?).and_return(true)
+    controller.stub!(:set_user_language).and_return('en')
+  end
+
+  def do_get
     get :index
-    assigns[:computers].should_not be_nil
-    response.should be_success
   end
 
 
-#   it 'requires login on signup' do
-#     lambda do
-#       create_computer(:login => nil)
-#       assigns[:computer].errors.on(:login).should_not be_nil
-#       response.should be_success
-#     end.should_not change(Computer, :count)
-#   end
+  describe "in index" do
 
-#   it 'requires password on signup' do
-#     lambda do
-#       create_computer(:password => nil)
-#       assigns[:computer].errors.on(:password).should_not be_nil
-#       response.should be_success
-#     end.should_not change(Computer, :count)
-#   end
+    it "should be successful" do
+      login
+      do_get
+      response.should be_success
+    end
 
-#   it 'requires password confirmation on signup' do
-#     lambda do
-#       create_computer(:password_confirmation => nil)
-#       assigns[:computer].errors.on(:password_confirmation).should_not be_nil
-#       response.should be_success
-#     end.should_not change(Computer, :count)
-#   end
-
-#   it 'requires email on signup' do
-#     lambda do
-#       create_computer(:email => nil)
-#       assigns[:computer].errors.on(:email).should_not be_nil
-#       response.should be_success
-#     end.should_not change(Computer, :count)
-#   end
-
-
-
-  def create_computer(options = {})
-    post :create, :computer => { :login => 'quire', :email => 'quire@example.com',
-      :password => 'quire69', :password_confirmation => 'quire69' }.merge(options)
   end
-end
 
-describe ComputersController do
+
   describe "route generation" do
+
+
     it "should route computers's 'index' action correctly" do
       route_for(:controller => 'computers', :action => 'index').should == "/computers"
     end
