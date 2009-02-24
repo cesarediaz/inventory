@@ -42,6 +42,7 @@ describe ComputersController do
   describe "get index" do
     before(:each) do
       @computer = [mock_model(Computer)]
+      Computer.stub!(:paginate).and_return(@computer)
     end
 
     it "should be successful" do
@@ -58,6 +59,14 @@ describe ComputersController do
     it "should be unsuccessful without logged in and get sessions new" do
       response.should_not be_success
       get 'sessions/new'
+    end
+
+    it "should paginate computers" do
+      login
+      do_get_index
+      Computer.should_receive(:paginate).with(:page => nil,
+                                              :per_page => 10,
+                                              :order => 'created_at DESC')
     end
 
   end
