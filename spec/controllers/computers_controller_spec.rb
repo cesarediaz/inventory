@@ -6,8 +6,6 @@ include AuthenticatedTestHelper
 
 
 describe ComputersController do
-  fixtures        :users
-
 
   def login
     @user = mock_model(User)
