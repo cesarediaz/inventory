@@ -11,7 +11,10 @@ class ScreensController < ApplicationController
   # GET /screens
   # GET /screens.xml
   def index
-    @screens = Screen.find(:all)
+    @screens = Screen.paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
