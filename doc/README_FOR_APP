@@ -12,7 +12,11 @@ the application generate an user account with the below data:
 user: admin
 password: testing
 
-, you must run the migration task how first step before to try to use the application:
+,generate a key value for security site
+
+rake auth:gen:site_key
+
+then you must run the migration task how first step before to try to use the application:
 
 rake db:migrate
 
