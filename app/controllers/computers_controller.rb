@@ -50,7 +50,7 @@ class ComputersController < ApplicationController
 
   def new
     @computer = Computer.new
-    render :action => "new", :layout => "primary-content"
+    render :layout => "primary-content"
   end
 
   def edit
