@@ -55,7 +55,7 @@ class ComputersController < ApplicationController
 
   def edit
     @computer = Computer.find(params[:id])
-    render :action => "new", :layout => "primary-content"
+    render  :layout => "primary-content"
   end
 
   def create

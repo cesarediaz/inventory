@@ -8,10 +8,6 @@ include AuthenticatedTestHelper
 describe ComputersController do
   fixtures        :users
 
-#   before(:each) do
-#     @computer = mock_model(Computer, {:name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30' })
-#     Computer.stub!(:find).and_return([@computer])
-#   end
 
   def login
     @user = mock_model(User)
@@ -87,7 +83,41 @@ describe ComputersController do
       Computer.should_receive(:unavailable).and_return(@computers)
     end
 
+
+  describe "handling GET /computers/1/edit" do
+
+    before(:each) do
+      login
+      mock_computers
+      Computer.stub!(:find).and_return(@computer)
+    end
+
+    def do_get
+      get :edit, :id => "1"
+    end
+
+    it "should be successful" do
+      do_get
+      response.should be_success
+    end
+
+    it "should render edit template" do
+      do_get
+      response.should render_template('edit')
+    end
+
+    it "should assign the found Computer for the view" do
+      do_get
+      assigns[:computer].should equal(@computer)
+    end
+
   end
+
+  end
+
+
+
+
 
 
   describe "route generation" do
