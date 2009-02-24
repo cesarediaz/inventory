@@ -40,6 +40,9 @@ describe ComputersController do
   end
 
   describe "get index" do
+    before(:each) do
+      @computer = [mock_model(Computer)]
+    end
 
     it "should be successful" do
       login
@@ -47,8 +50,12 @@ describe ComputersController do
       response.should be_success
     end
 
+    it "should assings computers" do
+      login
+      assigns[:computers].should == @computers
+    end
+
     it "should be unsuccessful without logged in and get sessions new" do
-      do_get_index
       response.should_not be_success
       get 'sessions/new'
     end
