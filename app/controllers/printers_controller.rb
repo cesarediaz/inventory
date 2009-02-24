@@ -10,7 +10,10 @@ class PrintersController < ApplicationController
   # GET /printers
   # GET /printers.xml
   def index
-    @printers = Printer.find(:all)
+    @printers = Printer.paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
