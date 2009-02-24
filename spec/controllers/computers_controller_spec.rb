@@ -78,9 +78,15 @@ describe ComputersController do
       Computer.should_receive(:available).and_return(@computers)
     end
 
+    it 'should find all computers availables and assigns an @computers variable' do
+      do_get_available
+      assigns[:computers].should == @computers
+    end
+
   end
 
   describe "get computers/unavailable" do
+
     before(:each) do
       login
       mock_computers
@@ -91,11 +97,15 @@ describe ComputersController do
       response.should be_success
     end
 
+    it 'should find all computers unavailables and assigns an @computers variable' do
+      do_get_unavailable
+      assigns[:computers].should == @computers
+    end
+
     it 'should find all computers unavailables' do
       do_get_unavailable
       Computer.should_receive(:unavailable).and_return(@computers)
     end
-
 
   describe "handling GET /computers/1/edit" do
 
