@@ -69,4 +69,34 @@ describe ScreensController do
 
   end
 
+
+  describe "handling GET /screens/1/edit" do
+
+      before(:each) do
+        login
+        mock_screens
+        Screen.stub!(:find).and_return(@screen)
+      end
+
+      def do_get
+        get :edit, :id => "1"
+      end
+
+      it "should be successful" do
+        do_get
+        response.should be_success
+      end
+
+      it "should render edit template" do
+        do_get
+        response.should render_template('edit')
+      end
+
+      it "should assign the found Screen for the view" do
+        do_get
+        assigns[:screen].should equal(@screen)
+      end
+
+    end
+
 end
