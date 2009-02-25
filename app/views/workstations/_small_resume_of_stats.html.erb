@@ -1,0 +1,17 @@
+<!-- small resume of stats -->
+<div id='left-right' >
+  <a href="#" onclick="Effect.toggle('small_stats', 'appear'); return false;">
+    <%= t('common-actions.show-hide') %></a>
+</div>
+
+<div id='small_stats'>
+  <div id='description' >
+    <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
+  </div>
+  <div id='left-content' >
+    <%= statistics(t('workstations.computer'), Computer, params[:place_id]) %>
+    <%= statistics(t('workstations.screen'), Screen, params[:place_id]) %>
+    <%= statistics(t('workstations.printer'), Printer, params[:place_id]) %>
+  </div>
+</div>
+
