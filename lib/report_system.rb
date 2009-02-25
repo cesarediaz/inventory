@@ -13,12 +13,18 @@ module ReportSystem
   #
   #Return a .xls file with the report
   def xls_report_workstations(path,method, param_id, heads)
+    param_id.empty? ?
+    @worksheet = t('workstations.list_of_equipments'): \
+    @worksheet = t('workstations.list_of_equipments')  \
+                   + ' '                               \
+                   + Place.find(param_id.to_i).title
+
     eval %"
 
     workbook = Excel.new('#{RAILS_ROOT}#{path}')
 
-    get_elements('workstations', 'Workstation', method, param_id)
-    page = workbook.add_worksheet(t('workstations.list_of_equipments'))
+    get_elements('workstations', 'Workstation', method, '(' + param_id + ')')
+    page = workbook.add_worksheet(@worksheet)
     get_heads(page, heads)
     workstations_report(page, @workstations)
 
