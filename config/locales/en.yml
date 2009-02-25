@@ -151,6 +151,10 @@ en:
     n: 'no'
 
   menu:
+    account : "Your account"
+    new-account : "New account"
+    account-edit : "Edit data of your account"
+
     #Workstations
     workstations : "Workstations"
     list-workstations : "List all workstations"

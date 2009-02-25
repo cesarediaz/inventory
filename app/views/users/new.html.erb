@@ -1,4 +1,6 @@
-<h1>Sign up as a new user</h1>
+<% if is_admin? %>
+
+<h6>Sign up as a new user</h6>
 <% @user.password = @user.password_confirmation = nil %>
 
 <%= error_messages_for :user %>
@@ -19,4 +21,6 @@
 <%= f.select :language, [['English','en'], ['Spanish','es']] %></p>
 
 <p><%= submit_tag 'Sign up' %></p>
+<% end -%>
+
 <% end -%>

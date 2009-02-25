@@ -1,0 +1,16 @@
+<% form_for(@user) do |f| %>
+   <% if current_user.login == 'admin' %>
+    <p><label for="email">Email</label><br/>
+    <%= f.text_field :email %></p>
+    <p><label for="password">Password</label><br/>
+    <%= f.password_field :password %></p>
+    <p><label for="password_confirmation">Confirm Password</label><br/>
+    <%= f.password_field :password_confirmation %></p>
+    <div id='quarter'>
+      <%= label_tag 'language', 'Language' %><br/>
+      <%= f.select :language, [['English','en'], ['Spanish','es']] %>
+    </div>
+   <% end %>
+
+   <%= f.submit "Modificar", :class => "boton"  %>
+<% end %>

@@ -146,7 +146,12 @@ es:
     y: 'si'
     n: 'no'
 
+
   menu:
+    account : "Su cuenta"
+    new-account : "Nueva cuenta"
+    account-edit : "Editar datos de su cuenta"
+
     workstations : "Equipos"
     list-workstations : "Listar los equipos"
     new : "Nuevo"
