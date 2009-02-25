@@ -1,3 +1,32 @@
 
+<%= show_info(t('workstations.place'), 'principal-device', 'Place', @workstation.place_id, 'title') %>
+
+<!-- Computer info -->
+<%= show_info(t('workstations.computer'), 'principal-device', 'Computer', @workstation.computer_id, 'name') %>
+
+<%= show_info('Ip', 'data-principal-device', 'Computer', @workstation.computer_id, 'ip') %>
+
+<%= show_info('Mac', 'data-principal-device', 'Computer', @workstation.computer_id, 'mac') %>
+
+<br>
+<br>
+
+<!-- Screen info -->
+<%= show_info(t('workstations.screen'), 'principal-device', 'Screen', @workstation.screen_id, 'model')%>
+
+<%= show_info('Sn', 'data-principal-device', 'Screen', @workstation.screen_id, 'serialnumber') %>
+
+<br>
+<br>
+
+<!-- Printer info -->
+<%= show_info(t('workstations.printer'), 'principal-device', 'Printer', @workstation.printer_id, 'model')  rescue nil %>
+
+<%= show_info('Sn', 'data-principal-device', 'Printer', @workstation.printer_id, 'serialnumber')  rescue nil %>
+
+
+<br>
+<br>
+
 <%= link_to 'Edit', edit_workstation_path(@workstation) %> |
 <%= link_to 'Back', workstations_path %>
