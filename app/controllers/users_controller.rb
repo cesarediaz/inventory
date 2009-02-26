@@ -3,6 +3,18 @@ class UsersController < ApplicationController
   include AuthenticatedSystem
   layout "primary-content"
 
+  def list
+    @users = User.paginate(
+                           :page => params[:page],
+                           :per_page => PER_PAGE,
+                           :order => 'created_at DESC')
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @users}
+    end
+  end
+
   def new
     @user = User.new
   end

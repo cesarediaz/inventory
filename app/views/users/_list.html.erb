@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th><%= t('menu.users-list') %></th>
+    <th><%= t('menu.users-admin?') %></th>
+    <th colspan='2'><%= t('common-actions.actions') %></th>
+  </tr>
+<% for user in @users %>
+  <tr  class="<%= cycle("rowA","rowB") %>">
+    <td><%= user.login %></td>
+    <td><%= check(user.is_admin) %></td>
+    <td><%= link_to t('common-actions.edit'), edit_user_path(user) %></td>
+    <% if is_admin? %>
+    <td><%= link_to t('common-actions.destroy'), user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>

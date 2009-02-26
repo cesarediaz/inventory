@@ -1,6 +1,11 @@
 <% form_for(@user) do |f| %>
 
-   <% if current_user.id == @user.id %>
+   <div>
+     <p><label for="login-label">Login : </label>
+       <label for="login"><%= @user.login %></label><br/>
+   </div>
+
+   <% if current_user.id == @user.id || is_admin? %>
     <p><label for="email">Email</label><br/>
     <%= f.text_field :email %></p>
     <p><label for="password">Password</label><br/>
@@ -11,6 +16,15 @@
       <%= label_tag 'language', 'Language' %><br/>
       <%= f.select :language, [['English','en'], ['Spanish','es']] %>
     </div>
+   <% end %>
+
+   <% if is_admin? %>
+   <div id='quarter'>
+     <p>
+       <%= f.label :is_admin %><br />
+       <%= f.check_box :is_admin %>
+     </p>
+   </div>
    <% end %>
 
    <%= f.submit "Modificar", :class => "boton"  %>

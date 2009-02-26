@@ -148,6 +148,10 @@ es:
 
 
   menu:
+    users: 'Usuarios'
+    users-list: 'Lista de usuarios'
+    users-admin?: 'Administrador?'
+
     account : "Su cuenta"
     new-account : "Nueva cuenta"
     account-edit : "Editar datos de su cuenta"

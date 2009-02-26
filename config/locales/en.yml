@@ -151,6 +151,10 @@ en:
     n: 'no'
 
   menu:
+    users: 'Users'
+    users-list: 'List of Users'
+    users-admin?: 'Administrator?'
+
     account : "Your account"
     new-account : "New account"
     account-edit : "Edit data of your account"

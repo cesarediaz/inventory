@@ -106,6 +106,17 @@
         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
       </li>
 
+      <li class="top">
+        <a href="#" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.users' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/users/list"><%= t 'menu.users-list' %></a></li>
+          <li><a href="/signup"><%= t 'menu.new-account' %></a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
 
       <li class="top">
         <a href="/users/<%= current_user.id %>/edit" id="telmex" class="top_link">
@@ -114,7 +125,6 @@
         <!--[if lte IE 6]><table><tr><td><![endif]-->
         <ul class="sub">
           <li><a href="/users/<%= current_user.id %>/edit"><%= t 'menu.account-edit' %></a></li>
-          <li><a href="/signup"><%= t 'menu.new-account' %></a></li>
         </ul>
         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
       </li>
