@@ -1,6 +1,6 @@
-<% if is_admin? %>
+<% if current_user.is_admin? %>
 
-<h6>Sign up as a new user</h6>
+<h4>Sign up as a new user</h4>
 <% @user.password = @user.password_confirmation = nil %>
 
 <%= error_messages_for :user %>
@@ -17,8 +17,18 @@
 <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
 <%= f.password_field :password_confirmation %></p>
 
-<p><%= label_tag 'language', 'Language' %><br/>
-<%= f.select :language, [['English','en'], ['Spanish','es']] %></p>
+<div id='quarter'>
+  <%= label_tag 'language', 'Language' %>
+  <%= f.select :language, [['English','en'], ['Spanish','es']] %>
+
+
+  <div class='clear'></div>
+
+  <p>
+    <%= f.label :is_admin %><br />
+    <%= f.check_box :is_admin %>
+  </p>
+</div>
 
 <p><%= submit_tag 'Sign up' %></p>
 <% end -%>
