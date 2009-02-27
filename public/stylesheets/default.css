@@ -46,13 +46,14 @@ input.text
 
 a
 {
-text-decoration: none;
-color: #D90000;
+    text-decoration: none;
+    color: #D90000;
 }
 
 a:hover
 {
-text-decoration: none;
+    background-color: #C4CFD2;
+    text-decoration: none;
 }
 
 a:visited
@@ -324,7 +325,7 @@ table
 
 #content table tr.rowB
 {
-    background-color: #fafafa;
+    background-color: #F5F6EF;
     color: inherit;
 }
 
@@ -508,15 +509,16 @@ body {
         margin:10px 0;
         padding:0px;
         text-align:left;
+        padding: 1.0em 0.5em 0em 2em;
         }
 
 .preload2
-.menu2 {color: #fff; padding:0; margin:0; margin-bottom:0; list-style:none; height:25px; position:relative; font-family:arial, verdana, sans-serif; }
+.menu2 {color: #fff; padding:0; margin:0; margin-bottom:0; list-style:none; height:25px; position:relative; font-family:arial, verdana, sans-serif;}
 .menu2 li.top {display:block; float:left; position:relative;}
 .menu2 li a.top_link {display:block; float:left; height:25px; margin-left:6px; line-height:25px; color:#fff; text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 6px; cursor:pointer;}
 .menu2 li a.top_link span {float:left; display:block; padding:0 10px 0 6px; height:40px;}
 .menu2 li a.top_link span.down {float:left; display:block; padding:0 10px 0 6px; height:25px;}
-.menu2 li a.top_link:hover {color: #FFF;background: #CA2F2F url('../images/n3.gif') repeat-x;}
+.menu2 li a.top_link:hover {color: #FFF;background: #CA2F2F url('../images/n3.gif') repeat-x;font-size: 15px; font-weight: bold;}
 .menu2 li a.top_link:hover span
 .menu2 li a.top_link:hover span.down
 
@@ -545,13 +547,13 @@ body {
 .menu2 :hover ul.sub li {display:block; /*height:20px; */position:relative; float:left; width:160px; border-bottom:1px solid #000; border-left:1px solid #000; border-right:1px solid #000; margin-bottom:0;}
 .menu2 :hover ul.sub li a {display:block; height:auto; font-size:11px; padding:4px 3px; line-height:1; color:#000; text-decoration:none;}
 .menu2 :hover ul.sub li a.fly {background:#fff}
-.menu2 :hover ul.sub li a:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;font-size: 15px;    font-weight: bold;}
-.menu2 :hover ul.sub li a.fly:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;font-size: 15px;    font-weight: bold;}
-.menu2 :hover ul li:hover > a.fly {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;}
+.menu2 :hover ul.sub li a:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:yellow;font-size: 15px;font-weight: bold;}
+.menu2 :hover ul.sub li a.fly:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:yellow;font-size: 15px; font-weight: bold;}
+.menu2 :hover ul li:hover > a.fly {background: #CA2F2F url('../images/n3.gif') repeat-x; color:yellow;}
 
 .menu2 :hover ul :hover ul,
 .menu2 :hover ul :hover ul :hover ul,
 .menu2 :hover ul :hover ul :hover ul :hover ul,
 .menu2 :hover ul :hover ul :hover ul :hover ul :hover ul
 {left:160px; top:-1px; background: #fff; padding:0; /* white-space:nowrap; */width:auto; z-index:300; height:auto;}
-.menu2 :hover ul.sub li ul {border-top:1px solid #005FB9; background: #fff; z-index:300;}
+.menu2 :hover ul.sub li ul {border-top:1px solid #000; background: #fff; z-index:300;}
