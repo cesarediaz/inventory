@@ -18,7 +18,8 @@
     </div>
    <% end %>
 
-   <% if is_admin? %>
+
+   <% if is_admin? && @user.login != 'admin' %>
    <div id='quarter'>
      <p>
        <%= f.label :is_admin %><br />
