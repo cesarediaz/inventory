@@ -496,28 +496,33 @@ div.auto_complete ul strong.highlight {
 
 /* MENUS */
 
+
+
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        }
 #marco {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    margin:30px 1px 1px 0px;
-    padding:0px;
-}
+        width:700px;
+        margin:10px 0;
+        padding:0px;
+        text-align:left;
+        }
 
 .preload2
-.menu2 {padding:0; margin:0; margin-bottom:0; list-style:none; height:25px; background:red; position:relative; font-family:arial, verdana, sans-serif; }
-.menu2 li.top {display:block; margin:0px 50px 1px 2px; float:left; position:relative;}
-.menu2 li a.top_link {display:block; float:right; height:25px; margin-left:6px; line-height:25px; color:#FFF;
- text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 6px; cursor:pointer;}
+.menu2 {color: #fff; padding:0; margin:0; margin-bottom:0; list-style:none; height:25px; position:relative; font-family:arial, verdana, sans-serif; }
+.menu2 li.top {display:block; float:left; position:relative;}
+.menu2 li a.top_link {display:block; float:left; height:25px; margin-left:6px; line-height:25px; color:#fff; text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 6px; cursor:pointer;}
 .menu2 li a.top_link span {float:left; display:block; padding:0 10px 0 6px; height:40px;}
 .menu2 li a.top_link span.down {float:left; display:block; padding:0 10px 0 6px; height:25px;}
 .menu2 li a.top_link:hover {color: #FFF;background: #CA2F2F url('../images/n3.gif') repeat-x;}
-.menu2 li a.top_link:hover
-.menu2 li a.top_link:hover
+.menu2 li a.top_link:hover span
+.menu2 li a.top_link:hover span.down
 
 .menu2 li:hover > a.top_link {color:#555;}
-.menu2 li:hover > a.top_link
-.menu2 li:hover > a.top_link
+.menu2 li:hover > a.top_link span
+.menu2 li:hover > a.top_link span.down
 
 
 .menu2 table {border-collapse:collapse; width:0; height:0; position:absolute; top:0; left:0;}
@@ -536,19 +541,17 @@ div.auto_complete ul strong.highlight {
 .menu2 :hover ul :hover ul :hover ul ul,
 .menu2 :hover ul :hover ul :hover ul :hover ul ul {position:absolute; left:-9999px; top:-9999px; width:0; height:0; margin:0; padding:0; list-style:none;}
 
-.menu2 :hover ul.sub {left:6px; top:25px; padding:0; border:1px solid #000; white-space:nowrap; width:auto; height:auto; font-weight:normal;background:url(../images/a1.gif) repeat-x;}
-.menu2 :hover ul.sub li {display:block; /*height:20px; */position:relative; float:left; width:160px; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; margin-bottom:0;}
-.menu2 :hover ul.sub li a {display:block; height:auto; font-size:11px; padding:4px 3px; line-height:1; color:#000000; text-decoration:none;}
-.menu2 :hover ul.sub li a.fly {background: #fff;}
-.menu2 :hover ul.sub li a:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;}
-.menu2 :hover ul.sub li a.fly:hover {color:#FFFFFF;}
-.menu2 :hover ul li:hover > a.fly {}
+.menu2 :hover ul.sub {left:6px; top:25px; background: #fff; padding:0; /*border:1px solid #1E8BB5; white-space:nowrap;*/ width:auto; height:auto; font-weight:normal;background:url(../images/a1.gif) repeat-x;}
+.menu2 :hover ul.sub li {display:block; /*height:20px; */position:relative; float:left; width:160px; border-bottom:1px solid #000; border-left:1px solid #000; border-right:1px solid #000; margin-bottom:0;}
+.menu2 :hover ul.sub li a {display:block; height:auto; font-size:11px; padding:4px 3px; line-height:1; color:#000; text-decoration:none;}
+.menu2 :hover ul.sub li a.fly {background:#fff}
+.menu2 :hover ul.sub li a:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;font-size: 15px;    font-weight: bold;}
+.menu2 :hover ul.sub li a.fly:hover {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;font-size: 15px;    font-weight: bold;}
+.menu2 :hover ul li:hover > a.fly {background: #CA2F2F url('../images/n3.gif') repeat-x; color:#FFFFFF;}
 
 .menu2 :hover ul :hover ul,
 .menu2 :hover ul :hover ul :hover ul,
 .menu2 :hover ul :hover ul :hover ul :hover ul,
 .menu2 :hover ul :hover ul :hover ul :hover ul :hover ul
 {left:160px; top:-1px; background: #fff; padding:0; /* white-space:nowrap; */width:auto; z-index:300; height:auto;}
-.menu2 :hover ul.sub li ul {border-top:1px solid #000; background: #fff; z-index:300;}
-
-
+.menu2 :hover ul.sub li ul {border-top:1px solid #005FB9; background: #fff; z-index:300;}
