@@ -154,6 +154,7 @@ en:
     users: 'Users'
     users-list: 'List of Users'
     users-admin?: 'Administrator?'
+    user: 'User : '
 
     account : "Your account"
     new-account : "New account"

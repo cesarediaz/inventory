@@ -151,6 +151,7 @@ es:
     users: 'Usuarios'
     users-list: 'Lista de usuarios'
     users-admin?: 'Administrador?'
+    user: 'Usuario : '
 
     account : "Su cuenta"
     new-account : "Nueva cuenta"

@@ -142,6 +142,15 @@ table
     background:url(../images/n1.gif) repeat-x;
 }
 
+#user
+{
+    color: #fff;
+    position:absolute;
+    top: 7px;
+    left: 700px;
+    padding: 0.1em;
+}
+
 /* Content */
 
 #content
@@ -557,3 +566,7 @@ body {
 .menu2 :hover ul :hover ul :hover ul :hover ul :hover ul
 {left:160px; top:-1px; background: #fff; padding:0; /* white-space:nowrap; */width:auto; z-index:300; height:auto;}
 .menu2 :hover ul.sub li ul {border-top:1px solid #000; background: #fff; z-index:300;}
+
+
+
+

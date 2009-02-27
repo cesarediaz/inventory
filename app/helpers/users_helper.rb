@@ -102,4 +102,11 @@ module UsersHelper
     end
   end
 
+  #Check if an user is logged in
+  def login_if_someone_is_logged_in?
+    if logged_in?
+      return t('menu.user') + current_user.login
+    end
+  end
+
 end
