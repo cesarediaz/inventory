@@ -12,14 +12,14 @@
   <p><%= label_tag 'email' %><br/>
   <%= f.text_field :email %></p>
 
-  <p><%= label_tag 'password' %><br/>
+  <p><%= label_tag 'password', t('user.password') %><br/>
   <%= f.password_field :password %></p>
 
-  <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+  <p><%= label_tag 'password_confirmation', t('user.confirm-password') %><br/>
   <%= f.password_field :password_confirmation %></p>
 
   <div id='quarter'>
-    <%= label_tag 'language', 'Language' %>
+    <%= label_tag 'language', t('user.language') %>
     <%= f.select :language, [['English','en'], ['Spanish','es']] %>
 
     <div class='clear'></div>

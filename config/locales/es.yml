@@ -1,4 +1,9 @@
 es:
+  user:
+    confirm-password: 'Confirmar clave'
+    password: 'Clave'
+    language: 'Idioma'
+
   inventory:
     title: "Inventory"
 
