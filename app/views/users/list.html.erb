@@ -1,1 +1,5 @@
-<%= render :partial => 'list' %>
+<% if logged_in? %>
+  <% if is_an_admin_user? %>
+    <%= render :partial => 'list' %>
+  <% end %>
+<% end %>

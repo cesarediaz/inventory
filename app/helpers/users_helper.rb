@@ -109,4 +109,16 @@ module UsersHelper
     end
   end
 
+  #Check if an user is logged in and if
+  # this user is_admin
+  def is_an_admin_user?
+    if logged_in?
+      if current_user.is_admin === true
+        return true
+      else
+        return false
+      end
+    end
+  end
+
 end
