@@ -16,12 +16,12 @@
   </select>
 </div >
 
-<div id="right-content" >
+<div class="clear" ></div>
+<div id="left-content" >
   <%= @place_name rescue nil %>
 </div>
 
 <%= hidden_field(:workstation, :place_id, :value => @place_id) %>
-
 
 <table>
   <tr>
