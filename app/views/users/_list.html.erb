@@ -9,7 +9,7 @@
     <td><%= user.login %></td>
     <td><%= check(user.is_admin) %></td>
     <td><%= link_to t('common-actions.edit'), edit_user_path(user) %></td>
-    <% if is_admin? %>
+    <% if is_admin?  && user.login != 'admin'  %>
     <td><%= link_to t('common-actions.destroy'), user, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
   </tr>
