@@ -35,3 +35,66 @@ four:
   place_id: 3
   available: false
   is_part_of_a_workstation: false
+
+five:
+  id: 5
+  name: computer_five
+  mac: '13:23:43:15:53:34'
+  ip: 132.54.23.64
+  place_id: 2
+  available: true
+  is_part_of_a_workstation: false
+
+six:
+  id: 6
+  name: computer_six
+  mac: '13:23:43:15:53:35'
+  ip: 132.54.23.65
+  place_id: 2
+  available: true
+  is_part_of_a_workstation: false
+
+seven:
+  id: 7
+  name: computer_three
+  mac: '13:23:43:15:53:36'
+  ip: 132.54.23.66
+  place_id: 5
+  available: true
+  is_part_of_a_workstation: false
+
+eigth:
+  id: 8
+  name: computer_eigth
+  mac: '13:23:43:15:53:37'
+  ip: 132.54.23.67
+  place_id: 4
+  available: false
+  is_part_of_a_workstation: false
+
+nine:
+  id: 9
+  name: computer_nine
+  mac: '13:23:43:15:53:38'
+  ip: 132.54.23.68
+  place_id: 5
+  available: true
+  is_part_of_a_workstation: false
+
+ten:
+  id: 10
+  name: computer_ten
+  mac: '13:23:43:15:53:39'
+  ip: 132.54.23.69
+  place_id: 4
+  available: true
+  is_part_of_a_workstation: false
+
+eleven:
+  id: 11
+  name: computer_eleven
+  mac: '13:23:43:15:53:40'
+  ip: 132.54.23.70
+  place_id: 5
+  available: false
+  is_part_of_a_workstation: false
