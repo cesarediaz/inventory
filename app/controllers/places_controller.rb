@@ -1,9 +1,13 @@
+require 'pdf/writer'
+require 'pdf/simpletable'
+
 require 'spreadsheet/excel'
 include Spreadsheet
 
 class PlacesController < ApplicationController
   include ChartSystem
   include ReportSystem
+  include PdfReportSystem
 
   before_filter :login_required
   auto_complete_for :place, :title
@@ -206,5 +210,15 @@ class PlacesController < ApplicationController
                  'chart', t('places.graphic_stats_paragraph'))
   end
 
+  def pdf
+    pdf_report(Place.find(:all),
+               "A4",
+               'Report of' + t('menu.places'),
+               10,
+               ["col1", "col2", "col3", "col4", "col5"],
+               [100, 10, 10, 10, 10],
+               [t('places.title'), t('places.description'), t('places.computer'), t('places.screen'), t('places.screen')]
+               )
+  end
 
 end
