@@ -121,4 +121,21 @@ module UsersHelper
     end
   end
 
+
+  #Check if an user is logged in and if
+  # the language
+  #
+  #Return: tag image with a flag
+  def language_current_user?
+    if logged_in?
+      case current_user.language
+      when 'es'
+        return t('user.language') + ' : ' + image_tag("es.gif")
+      when 'en'
+        return t('user.language') + ' : ' + image_tag("en.gif")
+      end
+    end
+
+  end
+
 end

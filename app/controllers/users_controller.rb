@@ -52,7 +52,7 @@ class UsersController < ApplicationController
     load_user
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to('/') }
+        format.html { redirect_to('/users/list') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
