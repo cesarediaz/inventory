@@ -2,7 +2,9 @@
   <%= t('common-actions.show-hide') %></a>
 <div id='right-content' >
   <%= link_to t('common-actions.download'), :controller => 'places',
-  :action => 'xls_places' %>
+  :action => 'xls_places' %> |
+  <%= link_to  t('common-actions.download-pdf'), :controller => 'places',
+  :action => 'pdf' %>
 </div>
 <div id='toggle_appear_table_list_places' >
   <div>

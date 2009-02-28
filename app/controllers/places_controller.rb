@@ -215,9 +215,7 @@ class PlacesController < ApplicationController
                "A4",
                'Report of' + t('menu.places'),
                10,
-               ["col1", "col2", "col3", "col4", "col5"],
-               [100, 10, 10, 10, 10],
-               [t('places.title'), t('places.description'), t('places.computer'), t('places.screen'), t('places.screen')]
+               ["col1", "col2", "col3", "col4", "col5"]
                )
   end
 

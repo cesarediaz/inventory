@@ -1,7 +1,6 @@
 module ReportSystem
   protected
 
-
   #This method generate a xls file to download with a complete list of
   #workstations
   #

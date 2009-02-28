@@ -1,7 +1,7 @@
 module PdfReportSystem
   protected
 
-  def pdf_report(elements, paper, title, font, columns_order, columns_size, columns_header)
+  def pdf_report(elements, paper, title, font, columns_order)
     pdf = PDF::Writer.new(:paper => paper)
     pdf.select_font "Times-Roman"
     pdf.text title, :font_size => font, :justification => :center
@@ -18,8 +18,7 @@ module PdfReportSystem
       tab.render_on(pdf)
     end
 
-    send_data pdf.render, :filename => 'mi.pdf', :type => 'application/pdf'
-
+    send_data pdf.render, :filename => title, :type => 'application/pdf'
   end
 
   def columns_places_pdf_report(tab, columns_order)

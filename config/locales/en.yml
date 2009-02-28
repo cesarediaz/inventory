@@ -128,6 +128,7 @@ en:
     show: "Show"
     create: "Create"
     top-page: "Go to top page"
+    download-pdf: 'Download a pdf file'
     download: 'Download a xls file'
     download-all: 'Download all in a xls file'
     show-hide: 'Show/Hide'

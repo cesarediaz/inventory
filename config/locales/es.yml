@@ -122,6 +122,7 @@ es:
     show: "Ver"
     create: "Agregar"
     top-page: "Ir al inicio de pagina"
+    download-pdf: 'Descargar un archivo pdf'
     download: 'Descargar un archivo xls'
     download-all: 'Descargar todo en un archivo xls'
     show-hide: 'Mostrar/Ocultar'
@@ -376,7 +377,7 @@ es:
     am: "am"
     pm: "pm"
 
-# Used in array.to_sentence.
+# Used in array.to_sentence
   support:
     array:
       sentence_connector: "y"
