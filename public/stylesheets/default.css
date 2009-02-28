@@ -139,7 +139,7 @@ table
     background-color: #558800;
     border-bottom: solid 1px #336600;
     width: 100%;
-    background:url(../images/n1.gif) repeat-x;
+    background: #3F1919;
 }
 
 #user
@@ -147,7 +147,7 @@ table
     color: #fff;
     position:absolute;
     top: 7px;
-    left: 700px;
+    right: 0px;
     padding: 0.1em;
 }
 
