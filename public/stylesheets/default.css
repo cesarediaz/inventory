@@ -379,7 +379,7 @@ table
     padding: 0.1em;
 }
 
-#left-content-small-resume-of-stats
+#left-content-small-resume-of-statsxb
 {
     float: left;
     padding: 0.1em;
@@ -486,9 +486,6 @@ div.auto_complete ul strong.highlight {
 }
 
 
-
-
-
 /* Simple Lists */
 
 #stats_data
@@ -498,6 +495,7 @@ div.auto_complete ul strong.highlight {
     background-color: #F5FBEF;
     border-bottom: solid 1px #888;
     font-size: 10pt;
+    width: 25%;
 }
 
 #stats_data_centered
