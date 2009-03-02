@@ -4,21 +4,9 @@
 <!-- small resume of stats -->
 <%= render :partial=> 'small_resume_of_stats' %>
 
-
+<% 2.times do %>
 <br>
-
-<!-- ###################### -->
-<!-- list hardware of stats -->
-<a href="#" onclick="Effect.toggle('list_workstations', 'appear'); return false;">
-  <%= t('common-actions.show-hide') %></a>
-|
-<%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
-:id => params[:place_id]  %>
-
-<div id='list_workstations'>
-  <%= render :partial => 'list' %>
-</div>
-
+<%  end %>
 
 <!-- ################### -->
 <!-- graphics statistics -->
@@ -36,6 +24,22 @@
 
   <% end %>
 
+</div>
+
+<% 2.times do %>
+<br>
+<%  end %>
+
+<!-- ###################### -->
+<!-- list hardware of stats -->
+<a href="#" onclick="Effect.toggle('list_workstations', 'appear'); return false;">
+  <%= t('common-actions.show-hide') %></a>
+|
+<%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
+:id => params[:place_id]  %>
+
+<div id='list_workstations'>
+  <%= render :partial => 'list' %>
 </div>
 
 <% else %>

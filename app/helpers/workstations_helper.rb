@@ -15,7 +15,7 @@ module WorkstationsHelper
     html = html +  '</div>'
 
     eval %" @out = #{object}.list_for_place_are_not_part_a_workstation(place).count.to_s rescue nil ";
-    html = html + "<div place='stats_data_centered'>"
+    html = html + "<div id='stats_data_centered'>"
     html = html + t('stats.alone') + ':' + @out rescue nil + t('phrases.units')
     html = html + '</div>'
 
@@ -27,7 +27,6 @@ module WorkstationsHelper
 
     return html
   end
-
 
   # Take and object and depending if it is true make a help advice
   #

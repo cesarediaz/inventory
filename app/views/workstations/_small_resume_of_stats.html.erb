@@ -8,10 +8,9 @@
   <div id='description' >
     <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
   </div>
-  <div id='left-content' >
+  <div id='left-content-small-resume-of-stats' >
     <%= statistics(t('workstations.computer'), Computer, params[:place_id]) %>
     <%= statistics(t('workstations.screen'), Screen, params[:place_id]) %>
     <%= statistics(t('workstations.printer'), Printer, params[:place_id]) %>
   </div>
 </div>
-

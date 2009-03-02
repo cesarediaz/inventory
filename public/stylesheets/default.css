@@ -379,6 +379,13 @@ table
     padding: 0.1em;
 }
 
+#left-content-small-resume-of-stats
+{
+    float: left;
+    padding: 0.1em;
+    width: 100%;
+}
+
 #primaryContent
 {
     margin: 0em 0em 0em 20em;
@@ -534,7 +541,6 @@ body {
 
 
 .menu2 table {border-collapse:collapse; width:0; height:0; position:absolute; top:0; left:0;}
-
 /* Default link styling */
 
 /* Style the list OR link hover. Depends on which browser is used */
