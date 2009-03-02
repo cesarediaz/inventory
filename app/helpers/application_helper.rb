@@ -49,4 +49,18 @@ module ApplicationHelper
     return html
   end
 
+  # Take and object and depending if it is true make a help advice
+  #
+  # Return: html
+  def show_info(label, css, object, value, field)
+    html = "<div id='#{css}'>"
+    html = html + label + ' : '
+    eval %"
+        @value = #{object}.find(:first, :conditions => [ 'id = ?', #{value}]).#{field}
+    ";
+    html = html +  @value
+    html = html + '</div>'
+    return html
+  end
+
 end
