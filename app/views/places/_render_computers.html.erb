@@ -4,16 +4,15 @@
 <div id="computers"  style="border: solid 1px #000;">
   <div id='subtitles' >
     <%= t('phrases.list_of') + ' ' + t('places.computer') %>
-  </div>
-  <div id='right-content' >
-    <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_computers', :id => params[:id] %>
+    |
+    <%= link_to t('common-actions.download'), :controller => 'places',
+    :action => 'xls_computers', :id => params[:id] %>
   </div>
   <%= render :partial => 'computers/list' %>
 </div>
 <% else %>
 <%= t('phrases.list_of') + t('places.computer')+  t('phrases.has') + @computers.count.to_s +  t('phrases.units') %>
 <% end %>
-
 
 <% 2.times do %>
 <br>
