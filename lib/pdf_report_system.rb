@@ -18,7 +18,7 @@ module PdfReportSystem
     pdf.select_font "Times-Roman"
     pdf.start_page_numbering(500, 50, 10, nil, nil, 1)
 
-    pdf.image 'public/images/inventory.jpg', :justification => :right, :resize => 0.30
+    pdf.image 'public/images/block-pen.jpg', :justification => :right, :resize => 0.30
     pdf.text title, :font_size => font_size, :justification => :center, :spacing => 2
 
     PDF::SimpleTable.new do |tab|
