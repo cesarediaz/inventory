@@ -5,7 +5,7 @@ doc/*.*~
 *.xls
 
 config/database.yml
-
+config/initializers/site_keys.rb
 
 db/development.sqlite3
 *.sqlite3
