@@ -8,16 +8,31 @@
     <%= t('computers.name') %>
     <%= f.text_field :name %>
 
+    <% 2.times do %>
+    <br>
+    <%  end %>
+
     <%= f.label 'mac' %>
     <%= f.text_field :mac %>
 
+    <% 2.times do %>
+    <br>
+    <% end %>
+
     <%= f.label 'ip' %>
     <%= f.text_field :ip %>
+
+    <% 2.times do %>
+    <br>
+    <% end %>
 
     <%= t('computers.available') %>
     <%= t('computers.y') %> <%= radio_button('computer', 'available', 't') %>
     <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f') %>
 
+    <% 2.times do %>
+    <br>
+    <%  end %>
 
   <% if not @computer.is_part_of_a_workstation %>
   <div id="quarter" >
@@ -25,6 +40,11 @@
     {:prompt => true} %>
   </div>
   <% end %>
+
+
+  <% 2.times do %>
+  <br>
+  <%  end %>
 
   <% if action_name == 'new' %>
   <%= f.submit t('computers.create') %>
