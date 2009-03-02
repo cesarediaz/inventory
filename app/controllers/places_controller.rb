@@ -214,7 +214,7 @@ class PlacesController < ApplicationController
     pdf_report(Place.find(:all),
                "A4",
                t('common-actions.report-of') + t('menu.places'),
-               10,
+               15,
                ["col1", "col2", "col3", "col4", "col5"]
                )
   end

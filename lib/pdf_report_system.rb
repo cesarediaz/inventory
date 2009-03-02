@@ -18,8 +18,8 @@ module PdfReportSystem
     pdf.select_font "Times-Roman"
     pdf.start_page_numbering(500, 50, 10, nil, nil, 1)
 
-    pdf.text title, :font_size => font_size, :justification => :center,
-    :spacing => 2
+    pdf.image 'public/images/inventory.jpg', :justification => :right, :resize => 0.30
+    pdf.text title, :font_size => font_size, :justification => :center, :spacing => 2
 
     PDF::SimpleTable.new do |tab|
       columns_places_pdf_report(tab, columns_order)
@@ -32,6 +32,8 @@ module PdfReportSystem
       tab.data.replace data
       tab.render_on(pdf)
     end
+
+
 
     send_data pdf.render, :filename => title, :type => 'application/pdf'
   end
