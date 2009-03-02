@@ -16,6 +16,7 @@ module PdfReportSystem
   def pdf_report(elements, paper, title, font_size, columns_order)
     pdf = PDF::Writer.new(:paper => paper)
     pdf.select_font "Times-Roman"
+    pdf.start_page_numbering(500, 50, 10, nil, nil, 1)
 
     pdf.text title, :font_size => font_size, :justification => :center,
     :spacing => 2

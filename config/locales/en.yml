@@ -134,6 +134,7 @@ en:
     show-hide: 'Show/Hide'
     show-hideadvice: 'Show/Hide advice'
     hide-advice: 'Hide advice'
+    report-of: 'Report of '
 
   help-phrases:
     in-workstation: 'This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations.'

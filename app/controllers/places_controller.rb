@@ -213,7 +213,7 @@ class PlacesController < ApplicationController
   def pdf
     pdf_report(Place.find(:all),
                "A4",
-               'Report of' + t('menu.places'),
+               t('common-actions.report-of') + t('menu.places'),
                10,
                ["col1", "col2", "col3", "col4", "col5"]
                )
