@@ -3,8 +3,10 @@
   :action => 'xls_workstations' %>
 </div>
 
-<%= render :partial => 'list' %>
+<% 2.times do %>
+<br>
+<%  end %>
 
-<br />
+<%= render :partial => 'list' %>
 
 <%= link_to t('workstations.new'), new_workstation_path %>
