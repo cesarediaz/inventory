@@ -11,10 +11,10 @@
                  <%= content_tag('br') %>
 
   <%= content_tag('th', t('computers.harddisk')) %>
-                 <%= @computer.harddisk.collect {|x| x.model + '<br>' }  rescue nil%>
+                 <%= @computer.harddisk.collect {|x| x.model + ' ' + x.size.to_s + '<br>' }  rescue nil%>
 
   <%= content_tag('th', t('computers.memory')) %>
-                 <%= @computer.memory.collect {|x| x.model + '<br>' }  rescue nil %>
+                 <%= @computer.memory.collect {|x| x.model +  ' ' + x.size.to_s + '<br>' }  rescue nil %>
 
   <%= content_tag('th', 'Cd :') %>
                  <%= @computer.cd.collect {|x| x.model + '<br>' }  rescue nil %>

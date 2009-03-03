@@ -4,8 +4,23 @@
   <%= f.label 'model' %>
   <%= f.text_field :model %>
 
+    <% 2.times do %>
+    <br>
+    <%  end %>
+
   <%= f.label 'serialnumber' %>
   <%= f.text_field :serialnumber %>
+
+    <% 2.times do %>
+    <br>
+    <%  end %>
+
+  <%= f.label 'size' %>
+  <%= f.text_field :size %>
+
+    <% 2.times do %>
+    <br>
+    <%  end %>
 
   <%= collection_select 'memory', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
