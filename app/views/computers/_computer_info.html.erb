@@ -1,0 +1,23 @@
+<!-- Computer info -->
+<%= show_info(t('computers.name'), 'principal-device', 'Computer', @computer.id, 'name') %>
+<%= show_info('Ip', 'data-principal-device', 'Computer', @computer.id, 'ip') %>
+<%= show_info('Mac', 'data-principal-device', 'Computer', @computer.id, 'mac') %>
+
+
+  <% content_tag :div, :id => 'data-principal-device' do %>
+
+  <%= content_tag('th', 'Motherboard : ') %>
+                 <%= @computer.mother_board.title  rescue nil%>
+                 <%= content_tag('br') %>
+  <%= content_tag('th', t('computers.memory')) %>
+                 <%= @computer.memory.collect {|x| x.model + '<br>' }  rescue nil %>
+  <%= content_tag('th', 'Cd :') %>
+                 <%= @computer.cd.collect {|x| x.model + '<br>' }  rescue nil %>
+  <%= content_tag('th', 'Dvd :') %>
+                 <%= @computer.dvd.collect {|x| x.model + '<br>' }  rescue nil %>
+
+<% end -%>
+
+<% 6.times do %>
+<br>
+<% end %>

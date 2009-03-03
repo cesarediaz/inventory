@@ -1,12 +1,4 @@
-<!-- Computer info -->
-<%= show_info(t('computers.name'), 'principal-device', 'Computer', @computer.id, 'name') %>
-<%= show_info('Ip', 'data-principal-device', 'Computer', @computer.id, 'ip') %>
-<%= show_info('Mac', 'data-principal-device', 'Computer', @computer.id, 'mac') %>
-
-
-<% 2.times do %>
-<br>
-<% end %>
+<%= render :partial => 'computer_info' %>
 
 
 <%= link_to 'Edit', edit_computer_path(@computer) %> |
