@@ -63,4 +63,23 @@ module ApplicationHelper
     return html
   end
 
+  # Take and object and depending of the attribute 'description'
+  # it will return a translate value
+  #
+  # Return: html
+  def which_type_of_place_is?(place)
+    case place
+    when 'stores'
+      html = t('places.stores')
+    when 'offices'
+      html = t('places.offices')
+    when 'rooms'
+      html = t('places.rooms')
+    when 'departments'
+      html = t('places.departments')
+    end
+
+    return html
+  end
+
 end
