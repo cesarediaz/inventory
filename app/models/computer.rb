@@ -16,6 +16,7 @@ class Computer < ActiveRecord::Base
   validates_format_of :ip, :with => /^\b(?:\d{1,3}\.){3}\d{1,3}\b/i
   validates_format_of :mac, :with => /^([0-9a-f]{2}([:-]|$)){6}$/i
 
+
   #################################################
   # Named Scope
   named_scope :available, :conditions => ['available = ?', true]
