@@ -68,18 +68,19 @@ module ApplicationHelper
   #
   # Return: html
   def which_type_of_place_is?(place)
+    html = ''
     case place
-    when 'stores'
-      html = t('places.stores')
-    when 'offices'
-      html = t('places.offices')
-    when 'rooms'
-      html = t('places.rooms')
-    when 'departments'
-      html = t('places.departments')
+    when 'store'
+      html = html + t('places.stores')
+    when 'office'
+      html = html + t('places.offices')
+    when 'room'
+      html = html + t('places.rooms')
+    when 'department'
+      html = html + t('places.departments')
     end
 
-    return html
+    return html.to_s
   end
 
 end

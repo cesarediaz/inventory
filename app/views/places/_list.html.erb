@@ -11,17 +11,17 @@
     <h2><%= t('phrases.list_of') + t('menu.places') %></h2>
     <table>
       <tr>
-        <th><%= t('places.name') %></th>
-        <th><%= t('places.description') %></th>
-        <th><%= t('places.computer') %></th>
-        <th><%= t('places.screen') %></th>
-        <th><%= t('places.printer') %></th>
+        <%= content_tag('th', t('places.name')) %>
+        <%= content_tag('th', t('places.description')) %>
+        <%= content_tag('th', t('places.computer')) %>
+        <%= content_tag('th', t('places.screen')) %>
+        <%= content_tag('th', t('places.printer')) %>
         <th colspan='3'><%= t('common-actions.actions') %></th>
       </tr>
       <% for place in @places %>
       <tr  class="<%= cycle("rowA","rowB") %>">
         <td><%= link_to place.title, place %></td>
-        <td><%= place.description %></td>
+        <td><%= which_type_of_place_is?(place.description) %></td>
         <td><%= place.computer.count %></td>
         <td><%= place.screen.count %></td>
         <td><%= place.printer.count %></td>
