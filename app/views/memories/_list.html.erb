@@ -11,7 +11,7 @@
     <td><%= memory.model %></td>
     <td><%= memory.serialnumber %></td>
     <td><%= memory.mark.name rescue nil  %></td>
-    <td><%= memory.computer.name rescue nil  %></td>
+    <td><%= link_to(memory.computer.name , 'computers/' + memory.computer.id.to_s)  rescue nil%></td>
     <td><%= link_to t('common-actions.show'), memory %></td>
     <td><%= link_to t('common-actions.edit'), edit_memory_path(memory) %></td>
     <td><%= link_to t('common-actions.destroy'), memory, :confirm => 'Are you sure?', :method => :delete %></td>

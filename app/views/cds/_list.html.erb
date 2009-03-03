@@ -2,18 +2,18 @@
   <tr>
     <th><%= t('cds.model') %></th>
     <th><%= t('cds.sn') %></th>
+    <th><%= t('cds.mark') %></th>
     <th><%= t('cds.burn') %></th>
     <th>Pc</th>
-    <th><%= t('cds.mark') %></th>
     <th colspan='3'><%= t('common-actions.actions') %></t>
   </tr>
 <% for cd in @cds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <td><%= cd.model %></td>
     <td><%= cd.serialnumber %></td>
-    <td><%= check(cd.writable) %></td>
-    <td><%= cd.computer.name rescue nil  %></td>
     <td><%= cd.mark.name rescue nil  %></td>
+    <td><%= check(cd.writable) %></td>
+    <td><%= link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s)  rescue nil%></td>
     <td><%= link_to t('common-actions.show'), cd %></td>
     <td><%= link_to t('common-actions.edit'), edit_cd_path(cd) %></td>
     <td><%= link_to t('common-actions.destroy'), cd, :confirm => 'Are you sure?', :method => :delete %></td>
