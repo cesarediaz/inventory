@@ -11,7 +11,7 @@
     <td><%= mother_board.title %></td>
     <td><%= mother_board.serialnumber %></td>
     <td><%= mother_board.mark.name rescue nil  %></td>
-    <td><%= mother_board.computer.name rescue nil  %></td>
+    <td><%= link_to(mother_board.computer.name , 'computers/' + mother_board.computer.id.to_s)  rescue nil%></td>
     <td><%= link_to t('common-actions.show'), mother_board %></td>
     <td><%= link_to t('common-actions.edit'), edit_mother_board_path(mother_board) %></td>
     <td><%= link_to t('common-actions.destroy'), mother_board, :confirm => 'Are you sure?', :method => :delete %></td>
