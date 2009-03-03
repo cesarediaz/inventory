@@ -74,11 +74,13 @@ es:
   harddisks:
     model: "Modelo"
     sn: "Numero de Serie"
+    size : "Capacidad"
     mark: "Marca"
 
   memories:
     model: "Modelo"
     sn: "Numero de Serie"
+    size : "Capacidad"
     mark: "Marca"
 
   dvds:

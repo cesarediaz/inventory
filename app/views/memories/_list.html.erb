@@ -3,6 +3,7 @@
     <th><%= t('memories.model') %></th>
     <th><%= t('memories.sn') %></th>
     <th><%= t('memories.mark') %></th>
+    <th><%= t('memories.size') %></th>
     <th>Pc</th>
     <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
@@ -11,6 +12,7 @@
     <td><%= memory.model %></td>
     <td><%= memory.serialnumber %></td>
     <td><%= memory.mark.name rescue nil  %></td>
+    <td><%= memory.size rescue nil  %></td>
     <td><%= link_to(memory.computer.name , 'computers/' + memory.computer.id.to_s)  rescue nil%></td>
     <td><%= link_to t('common-actions.show'), memory %></td>
     <td><%= link_to t('common-actions.edit'), edit_memory_path(memory) %></td>

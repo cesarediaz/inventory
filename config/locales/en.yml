@@ -82,6 +82,7 @@ en:
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
+    size : "Size"
 
   dvds:
     model: "Model"
@@ -112,6 +113,7 @@ en:
   memories:
     model: "Model"
     sn: "Serial Number"
+    size : "Size"
 
   marks:
     mark: "Mark"
@@ -238,4 +240,3 @@ en:
     #Flash
     flash:
       login : 'Logged in succesfully.'
-
