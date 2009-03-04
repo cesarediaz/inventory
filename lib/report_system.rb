@@ -170,10 +170,10 @@ module ReportSystem
      for object in elements
        @disks = ''
        object.harddisk.empty? ? t('phrases.n') : object.harddisk.collect {|x|
-       @disks = @disks + x.model + " "} rescue nil
+       @disks = @disks + x.model + " - " + x.size.to_s + " " + x.unit} rescue nil
        @memories = ''
        object.memory.empty? ? t('phrases.n') : object.memory.collect {|x|
-       @memories = @memories + x.model + " "} rescue nil
+       @memories = @memories + x.model + " - " + x.size.to_s + " " + x.unit} rescue nil
        @cds = ''
        object.cd.empty? ? t('phrases.n') : object.cd.collect {|x|
        @cds = @cds + x.model + " "} rescue nil
