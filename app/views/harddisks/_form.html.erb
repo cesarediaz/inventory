@@ -17,6 +17,9 @@
 
   <%= f.label 'size' %>
   <%= f.text_field :size %>
+  <% content_tag :div, :id => "quarter" do %>
+  <%= select 'harddisk', 'unit', [['mb', 'mb'], ['gb', 'gb']], {:include_blank => true} %>
+  <% end -%>
 
     <% 2.times do %>
     <br>
