@@ -8,16 +8,15 @@
    <% if current_user.id == @user.id || is_admin? %>
     <p><label for="email">Email</label><br/>
     <%= f.text_field :email %></p>
-    <p><label for="password">Password</label><br/>
+    <p><label for="password"><%= t('user.password') %></label><br/>
     <%= f.password_field :password %></p>
-    <p><label for="password_confirmation">Confirm Password</label><br/>
+    <p><label for="password_confirmation"><%= t('user.confirm-password') %></label><br/>
     <%= f.password_field :password_confirmation %></p>
     <div id='quarter'>
-      <%= label_tag 'language', 'Language' %><br/>
+      <%= label_tag 'language', t('user.language') %><br/>
       <%= f.select :language, [['English','en'], ['Spanish','es']] %>
     </div>
    <% end %>
-
 
    <% if is_admin? && @user.login != 'admin' %>
    <div id='quarter'>
@@ -28,5 +27,5 @@
    </div>
    <% end %>
 
-   <%= f.submit "Modificar", :class => "boton"  %>
+   <%= f.submit t('user.edit') , :class => "boton"  %>
 <% end %>

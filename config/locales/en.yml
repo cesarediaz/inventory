@@ -6,6 +6,7 @@ en:
     confirm-password: 'Confirm password'
     password: 'Password'
     language: 'Language'
+    edit: "Edit"
 
   inventory:
     title: "Inventory"

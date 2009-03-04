@@ -18,8 +18,8 @@
       <%= content_tag('td', computer.name) %>
       <%= content_tag('td', computer.mac) %>
       <%= content_tag('td', computer.ip) %>
-      <%= content_tag('td', computer.memory.collect {|x| x.size.to_s + ' ' + x.unit + '<br>' } ) rescue nil%>
-      <%= content_tag('td', computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit + '<br>' } ) rescue nil %>
+      <%= content_tag('td', computer.memory.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' } ) rescue nil%>
+      <%= content_tag('td', computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' } ) rescue nil %>
       <%= content_tag('td', computer.cd.collect {|x| x.model + '<br>' } ) rescue nil%>
       <%= content_tag('td', computer.dvd.collect {|x| x.model + '<br>' } ) rescue nil %>
       <%= content_tag('td', link_to(computer.place.title, 'places/' + computer.place.id.to_s) ) rescue nil%>

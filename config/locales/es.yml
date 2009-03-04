@@ -3,6 +3,7 @@ es:
     confirm-password: 'Confirmar clave'
     password: 'Clave'
     language: 'Idioma'
+    edit: "Editar"
 
   inventory:
     title: "Inventory"
