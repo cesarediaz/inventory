@@ -12,7 +12,7 @@
     <td><%= screen.model %></td>
     <td><%= screen.serialnumber %></td>
     <td><%= screen.mark.name rescue nil  %></td>
-    <td><%= screen.place.title rescue nil %></td>
+    <%= content_tag('td', link_to(screen.place.title, 'places/' + screen.place.id.to_s) ) rescue nil%>
     <td><%= screen.is_part_of_a_workstation rescue nil %></td>
     <td><%= link_to t('common-actions.show'), screen %></td>
     <td><%= link_to t('common-actions.edit'), edit_screen_path(screen) %></td>

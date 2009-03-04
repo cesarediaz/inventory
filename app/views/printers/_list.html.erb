@@ -12,7 +12,7 @@
     <td><%= printer.model %></td>
     <td><%= printer.serialnumber %></td>
     <td><%= printer.mark.name rescue nil  %></td>
-    <td><%= printer.place.title rescue nil %></td>
+    <%= content_tag('td', link_to(printer.place.title, 'places/' + printer.place.id.to_s) ) rescue nil%>
     <td><%= printer.is_part_of_a_workstation rescue nil %></td>
     <td><%= link_to t('common-actions.show'), printer %></td>
     <td><%= link_to t('common-actions.edit'), edit_printer_path(printer) %></td>
