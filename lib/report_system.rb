@@ -13,12 +13,8 @@ module ReportSystem
   #
   #Return a .xls file with the report
   def xls_report_workstations(path,method, param_id, heads)
-    param_id.empty? ?
-    @worksheet = t('workstations.list_of_equipments'): \
-    @worksheet = t('workstations.list_of_equipments')  \
-                   + ' '                               \
-                   + Place.find(param_id.to_i).title
 
+    @worksheet = t('workstations.list_of_equipments')
     eval %"
 
     workbook = Excel.new('#{RAILS_ROOT}#{path}')
