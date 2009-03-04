@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Fax</th>
+    <th>Email</th>
+    <th colspan='3'><%= t 'common-actions.actions' %></th>
+  </tr>
+
+<% for company in @companies %>
+  <tr>
+    <td><%=h company.name %></td>
+    <td><%=h company.address %></td>
+    <td><%=h company.phone %></td>
+    <td><%=h company.fax %></td>
+    <td><%=h company.email %></td>
+    <td><%= link_to 'Show', company %></td>
+    <td><%= link_to 'Edit', edit_company_path(company) %></td>
+    <td><%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

@@ -158,6 +158,10 @@ es:
 
 
   menu:
+    companies : "Empresas"
+    list-companies : "Listar empresas"
+    company-new : "Nueva"
+
     users: 'Usuarios'
     users-list: 'Lista de usuarios'
     users-admin?: 'Administrador?'

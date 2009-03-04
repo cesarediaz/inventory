@@ -162,6 +162,10 @@ en:
     n: 'no'
 
   menu:
+    companies : "Companies"
+    list-companies : "List of companies"
+    company-new : "New"
+
     users: 'Users'
     users-list: 'List of Users'
     users-admin?: 'Administrator?'

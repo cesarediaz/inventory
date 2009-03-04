@@ -1,0 +1,20 @@
+<% cache(:fragment => "companies/_search") do %>
+<%= javascript_include_tag :defaults %>
+
+<table>
+  <% form_tag :action => 'search' do %>
+  <tr>
+    <td><label><%= t 'computers.name' %></label></td>
+    <td><%= text_field_with_auto_complete :company, :name, {:size => 20}, {:method => :get} %></td>
+    <td><%= submit_tag t 'search.label' %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <% form_tag :action => 'search' do %>
+    <td><label>Email:</label></td>
+    <td><%= text_field_with_auto_complete :company, :email, {:size => 20}, {:method => :get} %></td>
+    <td><%= submit_tag t 'search.label' %></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>

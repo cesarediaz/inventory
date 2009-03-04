@@ -106,6 +106,18 @@
         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
       </li>
 
+      <li class="top">
+        <a href="/companies/list" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.companies' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/companies/"><%= t 'menu.list-companies' %></a></li>
+          <li><a href="/companies/new"><%= t 'menu.company-new' %></a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+
       <% if is_an_admin_user? %>
       <li class="top">
         <a href="#" id="telmex" class="top_link">

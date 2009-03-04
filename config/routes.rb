@@ -31,6 +31,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :places, :collection => {:auto_complete_for_place_title => :get, :list => :get,
     :stats => :get, :xls => :get, :xls_places => :get, :pdf => :get }
 
+  map.resources :companies, :collection => {:auto_complete_for_company_name => :get,
+    :auto_complete_for_company_email => :get}
+
   map.resources :marks
 
   map.root :controller => 'computers'
