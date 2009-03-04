@@ -114,6 +114,7 @@ en:
     model: "Model"
     sn: "Serial Number"
     size : "Size"
+    mark: "Mark"
 
   marks:
     mark: "Mark"

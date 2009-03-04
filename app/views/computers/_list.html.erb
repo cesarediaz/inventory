@@ -4,22 +4,26 @@
       <%= content_tag('th', 'Pc') %>
       <%= content_tag('th', 'Mac') %>
       <%= content_tag('th', 'Ip') %>
-      <%= content_tag('th', t('computers.available')) %>
+      <%= content_tag('th', t('computers.memory')) %>
+      <%= content_tag('th', t('computers.harddisk')) %>
       <%= content_tag('th', 'Cd') %>
       <%= content_tag('th', 'Dvd') %>
       <%= content_tag('th', t('computers.place')) %>
+      <%= content_tag('th', t('computers.available')) %>
       <%= content_tag('th', t('computers.workstation?')) %>
       <th colspan='3'><%= t 'common-actions.actions' %></th>
     </tr>
     <% for computer in @computers %>
     <tr  class="<%= cycle("rowA","rowB") %>">
       <%= content_tag('td', computer.name) %>
-      <%= content_tag('td', computer.ip) %>
       <%= content_tag('td', computer.mac) %>
-      <%= content_tag('td', check(computer.available)) %>
+      <%= content_tag('td', computer.ip) %>
+      <%= content_tag('td', computer.memory.collect {|x| x.size.to_s + ' ' + x.unit + '<br>' } ) rescue nil%>
+      <%= content_tag('td', computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit + '<br>' } ) rescue nil %>
       <%= content_tag('td', computer.cd.collect {|x| x.model + '<br>' } ) rescue nil%>
       <%= content_tag('td', computer.dvd.collect {|x| x.model + '<br>' } ) rescue nil %>
       <%= content_tag('td', link_to(computer.place.title, 'places/' + computer.place.id.to_s) ) rescue nil%>
+      <%= content_tag('td', check(computer.available)) %>
       <%= content_tag('td', in_workstation?(computer )) %>
       <td><%= link_to t('common-actions.show') , computer %></td>
       <td><%= link_to t('common-actions.edit') , edit_computer_path(computer) %></td>
