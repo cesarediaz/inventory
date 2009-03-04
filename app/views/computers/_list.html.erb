@@ -19,7 +19,7 @@
       <%= content_tag('td', check(computer.available)) %>
       <%= content_tag('td', computer.cd.collect {|x| x.model + '<br>' } ) rescue nil%>
       <%= content_tag('td', computer.dvd.collect {|x| x.model + '<br>' } ) rescue nil %>
-      <%= content_tag('td', computer.place.title ) rescue nil%>
+      <%= content_tag('td', link_to(computer.place.title, 'places/' + computer.place.id.to_s) ) rescue nil%>
       <%= content_tag('td', in_workstation?(computer )) %>
       <td><%= link_to t('common-actions.show') , computer %></td>
       <td><%= link_to t('common-actions.edit') , edit_computer_path(computer) %></td>
@@ -28,5 +28,3 @@
     <% end %>
   </table>
 </div>
-
-
