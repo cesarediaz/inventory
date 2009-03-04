@@ -15,18 +15,27 @@
     <br>
     <%  end %>
 
-  <%= f.label 'size' %>
-  <%= f.text_field :size %>
+    <%= f.label 'size' %>
+    <%= f.text_field :size %>
+    <% content_tag :div, :id => "quarter" do %>
+      <%= select 'memory', 'unit', [['mb', 'mb'], ['gb', 'gb']], {:include_blank => true} %>
+    <% end -%>
 
     <% 2.times do %>
     <br>
     <%  end %>
+  <% content_tag :div, :id => "quarter" do %>
 
+  Computer:
   <%= collection_select 'memory', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
+  <% end -%>
 
+  <% content_tag :div, :id => "quarter" do %>
+  Mark:
   <%= collection_select 'memory', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
+  <% end -%>
   <p>
     <% if action_name == 'new' %>
     <%= f.submit "Create" %>

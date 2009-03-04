@@ -25,7 +25,7 @@ class MemoriesController < ApplicationController
     @memory = Memory.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @memory }
     end
   end
@@ -44,6 +44,7 @@ class MemoriesController < ApplicationController
   # GET /memories/1/edit
   def edit
     @memory = Memory.find(params[:id])
+    render :layout => "primary-content"
   end
 
   # POST /memories
@@ -74,7 +75,7 @@ class MemoriesController < ApplicationController
         format.html { redirect_to(@memory) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => 'edit', :layout => "primary-content"  }
         format.xml  { render :xml => @memory.errors, :status => :unprocessable_entity }
       end
     end
