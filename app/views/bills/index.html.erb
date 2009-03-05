@@ -1,0 +1,20 @@
+<table>
+  <% content_tag :tr do %>
+    <%= content_tag('th', t('company.name')) %>
+    <th colspan='3'><%= t 'common-actions.actions' %></th>
+  <% end %>
+
+<% for bill in @bills %>
+  <tr>
+    <%= content_tag('td', bill.code) %>
+    <%= content_tag('td', bill.companies.collect {|x| x.name.to_s + '<br>' }) %>
+    <td><%= link_to 'Show', bill %></td>
+    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+    <td><%= link_to 'Destroy', bill, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bill', new_bill_path %>
