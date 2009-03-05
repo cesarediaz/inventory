@@ -1,14 +1,16 @@
 <% form_for(@bill) do |f| %>
   <%= f.error_messages %>
 
-  <div id="quarter" >
+  <% content_tag :div, :id => 'quarter' do %>
+  <%= t('bill.company') %>
   <%= collection_select 'company', 'company_id', Company.find(:all), 'id', 'name',
       {:prompt => true} %>
-  </div>
-  <p>
-     Codigo <br />
-    <%= f.text_field :code %>
-  </p>
+  <% end %>
+
+  <% content_tag :div, :id => 'quarter' do %>
+  <%= t('bill.code') %>
+  <%= f.text_field :code %>
+  <% end %>
 
   <% if action_name == 'new' %>
   <%= f.submit t('bill.create') %>
