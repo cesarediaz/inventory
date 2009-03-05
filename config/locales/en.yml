@@ -123,6 +123,7 @@ en:
     sn: "Serial Number"
     mark: "Mark"
     workstation?: "Workstation?"
+    bill: "Bill"
 
   printers:
     title: "Printers"
@@ -185,6 +186,10 @@ en:
     companies : "Companies"
     list-companies : "List of companies"
     company-new : "New"
+
+    bills : "Bills"
+    list-bills : "List all bills"
+    bill-new : "New bill"
 
     users: "Users"
     users-list: "List of Users"

@@ -21,6 +21,13 @@ t('help-phrases.in-workstation'))%>
         {:prompt => true} %>
   </div>
   <% end %>
+
+  <div id="quarter" >
+    <%= t 'bill.code' %>
+    <%= collection_select 'screen', 'bill_id', Bill.find(:all), 'id', 'code',
+        {:prompt => true} %>
+  </div >
+
   <p>
     <% if action_name == 'new' %>
     <%= f.submit  t('common-actions.create') %>
