@@ -1,4 +1,11 @@
 es:
+  company:
+    name: 'Nombre'
+    address: 'Direccion'
+    phone: 'Telefono'
+    fax: 'Fax'
+    email: 'Email'
+
   user:
     confirm-password: 'Confirmar clave'
     password: 'Clave'

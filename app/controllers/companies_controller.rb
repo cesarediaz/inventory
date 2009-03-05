@@ -55,7 +55,7 @@ class CompaniesController < ApplicationController
         format.html { redirect_to(@company) }
         format.xml  { render :xml => @company, :status => :created, :location => @company }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "primary-content"}
         format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
       end
     end
@@ -72,7 +72,7 @@ class CompaniesController < ApplicationController
         format.html { redirect_to(@company) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content" }
         format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
       end
     end
