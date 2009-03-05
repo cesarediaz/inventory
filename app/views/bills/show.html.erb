@@ -1,3 +1,10 @@
+<%= content_tag('label', t('bill.code')) %>
+<%= content_tag('label', @bill.code) %>
+
+<%= content_tag('div') %>
+
+<%= content_tag('label', t('bill.company')) %>
+<%= content_tag('label', @bill.companies.collect {|x| x.name.to_s + '<br>' }) %>
 
 <%= link_to t('bill.edit'), edit_bill_path(@bill) %> |
 <%= link_to t('bill.back'), bills_path %>
