@@ -3,16 +3,19 @@
 
 en:
   company:
-    name: 'Name'
-    address: 'Address'
-    phone: 'Phone'
-    fax: 'Fax'
-    email: 'Email'
+    name: "Name"
+    address: "Address"
+    phone: "Phone"
+    fax: "Fax"
+    email: "Email"
+    edit: "Edit"
+    create: "Create"
+    back: "Back"
 
   user:
-    confirm-password: 'Confirm password'
-    password: 'Password'
-    language: 'Language'
+    confirm-password: "Confirm password"
+    password: "Password"
+    language: "Language"
     edit: "Edit"
 
   inventory:
@@ -29,7 +32,7 @@ en:
     edit: "Edit"
     place: "Place"
     select_a_place: "Select a place"
-    list_of_equipments: 'List of equipments in'
+    list_of_equipments: "List of equipments in"
     back: "Back"
 
   computers:
@@ -105,14 +108,14 @@ en:
     burn: "Burn"
 
   screens:
-    title: 'Screens'
+    title: "Screens"
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
     workstation?: "Workstation?"
 
   printers:
-    title: 'Printers'
+    title: "Printers"
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
@@ -139,44 +142,44 @@ en:
     show: "Show"
     create: "Create"
     top-page: "Go to top page"
-    download-pdf: 'Download a pdf file'
-    download: 'Download a xls file'
-    download-all: 'Download all in a xls file'
-    show-hide: 'Show/Hide'
-    show-hideadvice: 'Show/Hide advice'
-    hide-advice: 'Hide advice'
-    report-of: 'Report of '
+    download-pdf: "Download a pdf file"
+    download: "Download a xls file"
+    download-all: "Download all in a xls file"
+    show-hide: "Show/Hide"
+    show-hideadvice: "Show/Hide advice"
+    hide-advice: "Hide advice"
+    report-of: "Report of "
 
   help-phrases:
-    in-workstation: 'This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations.'
-    stats-in-place: 'Free: equipment which are not part of a workstation.
-                     In workstation: equipment which is in a workstation'
+    in-workstation: "This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations."
+    stats-in-place: "Free: equipment which are not part of a workstation.
+                     In workstation: equipment which is in a workstation"
 
   search:
     label: "Search"
 
   stats:
-    available: 'Disponibles'
-    unavailable: 'No disponibles'
-    alone: 'Alone'
-    workstation: 'In station'
+    available: "Disponibles"
+    unavailable: "No disponibles"
+    alone: "Alone"
+    workstation: "In station"
 
   phrases:
-    list_of : 'List of '
-    units: ' units '
-    has: ' has '
-    y: 'yes'
-    n: 'no'
+    list_of : "List of "
+    units: " units "
+    has: " has "
+    y: "yes"
+    n: "no"
 
   menu:
     companies : "Companies"
     list-companies : "List of companies"
     company-new : "New"
 
-    users: 'Users'
-    users-list: 'List of Users'
-    users-admin?: 'Administrator?'
-    user: 'User : '
+    users: "Users"
+    users-list: "List of Users"
+    users-admin?: "Administrator?"
+    user: "User : "
 
     account : "Your account"
     new-account : "New account"
@@ -252,4 +255,4 @@ en:
 
     #Flash
     flash:
-      login : 'Logged in succesfully.'
+      login : "Logged in succesfully."

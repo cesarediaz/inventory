@@ -2,26 +2,30 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= t('company.name') %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :address %><br />
+    <%= t('company.address') %><br />
     <%= f.text_field :address %>
   </p>
   <p>
-    <%= f.label :phone %><br />
+    <%= t('company.phone') %><br />
     <%= f.text_field :phone %>
   </p>
   <p>
-    <%= f.label :fax %><br />
+    <%= t('company.fax') %><br />
     <%= f.text_field :fax %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= t('company.email') %><br />
     <%= f.text_field :email %>
   </p>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
+
+  <% if action_name == 'new' %>
+  <%= f.submit t('company.create') %>
+  <% else %>
+  <%= f.submit t('company.edit') %>
+  <% end %>
+
 <% end %>
