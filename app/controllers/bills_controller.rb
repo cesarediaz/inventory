@@ -5,7 +5,7 @@ class BillsController < ApplicationController
     @bills = Bill.find(:all)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @bills }
     end
   end
@@ -16,7 +16,7 @@ class BillsController < ApplicationController
     @bill = Bill.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @bill }
     end
   end
@@ -27,7 +27,7 @@ class BillsController < ApplicationController
     @bill = Bill.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @bill }
     end
   end
@@ -35,6 +35,7 @@ class BillsController < ApplicationController
   # GET /bills/1/edit
   def edit
     @bill = Bill.find(params[:id])
+    render :layout => "primary-content"
   end
 
   # POST /bills
@@ -66,7 +67,7 @@ class BillsController < ApplicationController
         format.html { redirect_to(@bill) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "edit", :layout => "primary-content"  }
         format.xml  { render :xml => @bill.errors, :status => :unprocessable_entity }
       end
     end

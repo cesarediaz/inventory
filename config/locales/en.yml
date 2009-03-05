@@ -2,6 +2,15 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  bill:
+    code: 'Code'
+    company: 'Company'
+    edit: "Modify"
+    create: "Create"
+    back: "Back"
+    new: "Add new bill"
+    show: "Show"
+
   company:
     name: "Name"
     address: "Address"

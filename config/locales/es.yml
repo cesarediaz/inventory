@@ -1,4 +1,13 @@
 es:
+  bill:
+    code: 'Codigo'
+    company: 'Empresa'
+    edit: "Modificar"
+    create: "Agregar"
+    back: "Regresar"
+    new: "Agregar nuevo recibo"
+    show: "Ver"
+
   company:
     name: "Nombre"
     address: "Direccion"
