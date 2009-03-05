@@ -1,15 +1,18 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  address: MyString
-  phone: MyString
-  fax: MyString
-  email: MyString
+  id: 1
+  name: one
+  address: an address
+  phone: 4555555
+  fax: 4555556
+  email: one@one.com
 
 two:
-  name: MyString
-  address: MyString
-  phone: MyString
-  fax: MyString
-  email: MyString
+  id: 2
+  name: two
+  address: other address
+  phone: 4333333
+  fax: 4333336
+  email: two@two.com
+
