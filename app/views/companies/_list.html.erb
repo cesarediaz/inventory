@@ -1,25 +1,23 @@
 <table>
   <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Phone</th>
-    <th>Fax</th>
-    <th>Email</th>
+    <%= content_tag('th', t('company.name')) %>
+    <%= content_tag('th', t('company.address')) %>
+    <%= content_tag('th', t('company.phone')) %>
+    <%= content_tag('th', t('company.fax')) %>
+    <%= content_tag('th', t('company.email')) %>
     <th colspan='3'><%= t 'common-actions.actions' %></th>
   </tr>
-
 <% for company in @companies %>
   <tr>
-    <td><%=h company.name %></td>
-    <td><%=h company.address %></td>
-    <td><%=h company.phone %></td>
-    <td><%=h company.fax %></td>
-    <td><%=h company.email %></td>
-    <td><%= link_to 'Show', company %></td>
-    <td><%= link_to 'Edit', edit_company_path(company) %></td>
-    <td><%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td', company.name) %>
+    <%= content_tag('td', company.address) %>
+    <%= content_tag('td', company.phone) %>
+    <%= content_tag('td', company.fax) %>
+    <%= content_tag('td', company.email) %>
+    <%= content_tag('td', link_to(t('common-actions.show'), company)) %>
+    <%= content_tag('td', link_to(t('common-actions.edit'), edit_company_path(company))) %>
+    <%= content_tag('td', link_to(t('common-actions.destroy'), company, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
 </table>
-
 <br />

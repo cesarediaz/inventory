@@ -11,6 +11,7 @@ en:
     edit: "Edit"
     create: "Create"
     back: "Back"
+    new: "Add new company"
 
   user:
     confirm-password: "Confirm password"

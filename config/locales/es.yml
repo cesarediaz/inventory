@@ -5,9 +5,10 @@ es:
     phone: "Telefono"
     fax: "Fax"
     email: "Email"
-    edit: "Editar"
+    edit: "Modificar"
     create: "Agregar"
     back: "Regresar"
+    new: "Agregar nueva empresa"
 
   user:
     confirm-password: "Confirmar clave"
