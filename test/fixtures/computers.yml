@@ -8,6 +8,7 @@ one:
   place_id: 1
   available: true
   is_part_of_a_workstation: false
+  bill_id: 1
 
 two:
   id: 2
@@ -17,6 +18,7 @@ two:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  bill_id: 1
 
 three:
   id: 3
@@ -26,6 +28,7 @@ three:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  bill_id: 1
 
 four:
   id: 4
@@ -44,6 +47,7 @@ five:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  bill_id: 1
 
 six:
   id: 6
@@ -53,6 +57,7 @@ six:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  bill_id: 1
 
 seven:
   id: 7
@@ -62,6 +67,7 @@ seven:
   place_id: 5
   available: true
   is_part_of_a_workstation: false
+  bill_id: 2
 
 eigth:
   id: 8
@@ -71,6 +77,7 @@ eigth:
   place_id: 4
   available: false
   is_part_of_a_workstation: false
+  bill_id: 2
 
 nine:
   id: 9
@@ -80,6 +87,7 @@ nine:
   place_id: 5
   available: true
   is_part_of_a_workstation: false
+  bill_id: 2
 
 ten:
   id: 10
@@ -89,6 +97,7 @@ ten:
   place_id: 4
   available: true
   is_part_of_a_workstation: false
+  bill_id: 2
 
 eleven:
   id: 11
@@ -98,3 +107,4 @@ eleven:
   place_id: 5
   available: false
   is_part_of_a_workstation: false
+  bill_id: 2

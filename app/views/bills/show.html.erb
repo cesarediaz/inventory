@@ -1,15 +1,13 @@
-<%= content_tag('label', t('bill.code')) %>
-<%= content_tag('label', @bill.code) %>
+<% content_tag :div do %>
+  <!-- Company name -->
+  <%= content_tag('label', t('bill.company')) %>
+  <%= content_tag('b', @bill.companies.collect {|x| x.name.to_s }) %>
 
-<% 2.times do %>
-<%= content_tag('br') %>
+  <!-- Bill code -->
+  <%= content_tag('label', t('bill.code')) %>
+  <%= content_tag('b', @bill.code) %>
 <% end %>
 
-<!-- Company name -->
-<% content_tag :div do %>
-<%= content_tag('label', t('bill.company')) %>
-<%= content_tag('label', @bill.companies.collect {|x| x.name.to_s + '<br>' }) %>
-<% end -%>
 
 <% 2.times do %>
 <%= content_tag('br') %>
