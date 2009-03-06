@@ -1,6 +1,7 @@
 class Cd < ActiveRecord::Base
   belongs_to :computer
   belongs_to :mark
+  has_one :bill
 
   #################################################
   # VALIDATIONS

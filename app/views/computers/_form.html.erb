@@ -41,6 +41,12 @@
   </div>
   <% end %>
 
+  <div id="quarter" >
+    <%= t 'bill.code' %>
+    <%= collection_select 'computer', 'bill_id', Bill.find(:all), 'id', 'code',
+        {:prompt => true} %>
+  </div >
+
 
   <% 2.times do %>
   <br>

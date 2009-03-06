@@ -98,24 +98,28 @@ en:
     new: "New motherboard"
     computer: "In computer"
     back: "Back"
+    bill: "Bill"
 
   harddisks:
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
     size : "Size"
+    bill: "Bill"
 
   dvds:
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
     burn: "Burn"
+    bill: "Bill"
 
   cds:
     model: "Model"
     sn: "Serial Number"
     mark: "Mark"
     burn: "Burn"
+    bill: "Bill"
 
   screens:
     title: "Screens"
@@ -131,12 +135,14 @@ en:
     sn: "Serial Number"
     mark: "Mark"
     workstation?: "Workstation?"
+    bill: "Bill"
 
   memories:
     model: "Model"
     sn: "Serial Number"
     size : "Size"
     mark: "Mark"
+    bill: "Bill"
 
   marks:
     mark: "Mark"

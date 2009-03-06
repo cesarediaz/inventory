@@ -91,30 +91,35 @@ es:
     new: "Nueva placa madre"
     computer: "En pc"
     back: "Regresar"
+    bill: "Recibo"
 
   harddisks:
     model: "Modelo"
     sn: "Numero de Serie"
     size : "Capacidad"
     mark: "Marca"
+    bill: "Recibo"
 
   memories:
     model: "Modelo"
     sn: "Numero de Serie"
     size : "Capacidad"
     mark: "Marca"
+    bill: "Recibo"
 
   dvds:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
     burn: "Grabadora"
+    bill: "Recibo"
 
   cds:
     model: "Modelo"
     sn: "Numero de Serie"
     mark: "Marca"
     burn: "Grabadora"
+    bill: "Recibo"
 
   screens:
     title: "Monitores"
@@ -130,6 +135,7 @@ es:
     sn: "Numero de Serie"
     mark: "Marca"
     workstation?: "Puesto?"
+    bill: "Recibo"
 
   marks:
     mark: "Marca"

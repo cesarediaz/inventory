@@ -1,6 +1,7 @@
 class Printer < ActiveRecord::Base
   belongs_to :mark
   belongs_to :place
+  has_one :bill
 
   #################################################
   # VALIDATIONS

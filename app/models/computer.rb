@@ -5,7 +5,10 @@ class Computer < ActiveRecord::Base
   has_many :cd, :dependent => :nullify
   has_many :dvd, :dependent => :nullify
 
+  has_one :bill
+
   belongs_to :place
+
 
 
   #################################################

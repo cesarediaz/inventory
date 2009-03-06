@@ -36,6 +36,13 @@
   <%= collection_select 'memory', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
   <% end -%>
+
+  <div id="quarter" >
+    <%= t 'menu.bills' %><%= t 'bill.code' %>
+    <%= collection_select 'memory', 'bill_id', Bill.find(:all), 'id', 'code',
+        {:prompt => true} %>
+  </div >
+
   <p>
     <% if action_name == 'new' %>
     <%= f.submit "Create" %>

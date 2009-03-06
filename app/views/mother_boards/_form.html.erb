@@ -19,6 +19,13 @@
   <%= collection_select 'mother_board', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
   </div>
+
+  <div id="quarter" >
+    <%= t 'bill.code' %>
+    <%= collection_select 'screen', 'bill_id', Bill.find(:all), 'id', 'code',
+        {:prompt => true} %>
+  </div >
+
   <p>
 
     <% if action_name == 'new' %>

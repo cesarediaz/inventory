@@ -39,6 +39,12 @@
       {:prompt => true} %>
   </div>
 
+  <div id="quarter" >
+    <%= t 'bill.code' %>
+    <%= collection_select 'harddisk', 'bill_id', Bill.find(:all), 'id', 'code',
+        {:prompt => true} %>
+  </div >
+
   <p>
     <% if action_name == 'new' %>
     <%= f.submit  t('common-actions.create') %>

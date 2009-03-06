@@ -22,6 +22,12 @@
   </div>
   <% end %>
 
+  <div id="quarter" >
+    <%= t 'menu.bills' %><%= t 'bill.code' %>
+    <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', 'code',
+        {:prompt => true} %>
+  </div >
+
   <p>
     <% if action_name == 'new' %>
     <%= f.submit  t('common-actions.create') %>

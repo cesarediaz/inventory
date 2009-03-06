@@ -1,6 +1,7 @@
 class Screen < ActiveRecord::Base
   belongs_to :place
   belongs_to :mark
+  has_one :bill
 
   #################################################
   # VALIDATIONS

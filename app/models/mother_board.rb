@@ -1,6 +1,7 @@
 class MotherBoard < ActiveRecord::Base
   belongs_to :computer
   belongs_to :mark
+  has_one :bill
 
 
   #################################################

@@ -5,6 +5,7 @@
     <th><%= t('printers.mark') %></th>
     <th>Place</th>
     <th><%= t('printers.workstation?') %></th>
+    <th><%= t('screens.bill') %></th>
     <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
 <% for printer in @printers %>
@@ -14,6 +15,7 @@
     <td><%= printer.mark.name rescue nil  %></td>
     <%= content_tag('td', link_to(printer.place.title, 'places/' + printer.place.id.to_s) ) rescue nil%>
     <td><%= printer.is_part_of_a_workstation rescue nil %></td>
+    <td><%= link_to t('printers.bill'), 'bills/'+ printer.bill_id.to_s %></td>
     <td><%= link_to t('common-actions.show'), printer %></td>
     <td><%= link_to t('common-actions.edit'), edit_printer_path(printer) %></td>
     <td><%= link_to t('common-actions.destroy'), printer, :confirm => 'Are you sure?', :method => :delete %></td>
