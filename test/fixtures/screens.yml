@@ -6,7 +6,6 @@ one:
   serialnumber: 1212324325
   mark_id : 3
   place_id: 1
-  bill_id: 1
 
 two:
   id: 2
@@ -14,7 +13,6 @@ two:
   serialnumber: 12123243434
   mark_id : 3
   place_id: 4
-  bill_id: 1
 
 three:
   id: 3
@@ -22,5 +20,4 @@ three:
   serialnumber: 1212324322
   mark_id : 3
   place_id: 1
-  bill_id: 2
 
