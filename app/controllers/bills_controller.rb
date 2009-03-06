@@ -42,7 +42,6 @@ class BillsController < ApplicationController
   # POST /bills.xml
   def create
     @bill = Bill.new(params[:bill])
-    @bill.companies << Company.find_by_id(params[:company][:company_id])
 
     respond_to do |format|
       if @bill.save

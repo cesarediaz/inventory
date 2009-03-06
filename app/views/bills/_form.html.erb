@@ -3,7 +3,7 @@
 
   <% content_tag :div, :id => 'quarter' do %>
   <%= t('bill.company') %>
-  <%= collection_select 'company', 'company_id', Company.find(:all), 'id', 'name',
+  <%= collection_select 'bill', 'company_id', Company.find(:all), 'id', 'name',
       {:prompt => true} %>
   <% end %>
 

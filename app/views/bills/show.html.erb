@@ -1,7 +1,7 @@
 <% content_tag :div do %>
   <!-- Company name -->
   <%= content_tag('label', t('bill.company')) %>
-  <%= content_tag('b', @bill.companies.collect {|x| x.name.to_s }) %>
+  <%= content_tag('b', @bill.company.name) %>
 
   <!-- Bill code -->
   <%= content_tag('label', t('bill.code')) %>
@@ -28,7 +28,7 @@
 <!-- Motherboards list -->
 <%= content_tag('label', t('menu.motherboards')) %>
 <% content_tag :div do %>
-<%= content_tag('ul', @bill.mother_boards.collect {|x| x.model.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
+<%= content_tag('ul', @bill.mother_boards.collect {|x| x.title.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
 <% end -%>
 
 <!-- Harddisks list -->
