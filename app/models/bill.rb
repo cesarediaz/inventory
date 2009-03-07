@@ -8,4 +8,8 @@ class Bill < ActiveRecord::Base
   has_many :memories
   has_many :cds
   has_many :dvds
+
+  def company_bill
+    "#{self.company.name.upcase} #{code}"
+  end
 end
