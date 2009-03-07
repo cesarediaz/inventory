@@ -7,7 +7,6 @@ one:
   mark_id : 3
   writable: false
   computer_id: 1
-  bill_id: 1
 
 two:
   id: 2
@@ -16,7 +15,6 @@ two:
   mark_id : 5
   writable: false
   computer_id: 2
-  bill_id: 2
 
 three:
   id: 3
@@ -25,7 +23,6 @@ three:
   mark_id : 7
   writable: false
   computer_id: 3
-  bill_id: 1
 
 four:
   id: 4
@@ -34,5 +31,3 @@ four:
   mark_id : 8
   writable: false
   computer_id: 4
-  bill_id: 1
-

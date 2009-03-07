@@ -1,22 +1,24 @@
-<table>
-  <tr>
-    <th><%= t('cds.model') %></th>
-    <th><%= t('cds.sn') %></th>
-    <th><%= t('cds.mark') %></th>
-    <th><%= t('cds.burn') %></th>
-    <th>Pc</th>
-    <th colspan='3'><%= t('common-actions.actions') %></t>
-  </tr>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+  <%= content_tag('th', t('cds.model')) %>
+  <%= content_tag('th', t('cds.sn')) %>
+  <%= content_tag('th', t('cds.mark')) %>
+  <%= content_tag('th', t('cds.burn')) %>
+  <%= content_tag('th', 'Pc') %>
+  <%= content_tag('th', t('cds.bill')) %>
+  <th colspan='3'><%= t('common-actions.actions') %></th>
+  <% end -%>
 <% for cd in @cds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= cd.model %></td>
-    <td><%= cd.serialnumber %></td>
-    <td><%= cd.mark.name rescue nil  %></td>
-    <td><%= check(cd.writable) %></td>
-    <td><%= link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s)  rescue nil%></td>
-    <td><%= link_to t('common-actions.show'), cd %></td>
-    <td><%= link_to t('common-actions.edit'), edit_cd_path(cd) %></td>
-    <td><%= link_to t('common-actions.destroy'), cd, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td', cd.model) %>
+    <%= content_tag('td', cd.serialnumber) %>
+    <%= content_tag('td', cd.mark.name) rescue nil  %>
+    <%= content_tag('td', check(cd.writable)) %>
+    <%= content_tag('td', link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s))  rescue nil %>
+    <%= content_tag('td', link_to(t('cds.bill'), 'bills/'+ cd.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('common-actions.show'), cd )) %>
+    <%= content_tag('td', link_to(t('common-actions.edit'), edit_cd_path(cd))) %>
+    <%= content_tag('td', link_to(t('common-actions.destroy'), cd, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
-</table>
+<% end -%>
