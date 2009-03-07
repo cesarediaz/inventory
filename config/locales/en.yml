@@ -65,6 +65,7 @@ en:
     back: "Back"
     y: "Yes"
     not: "Not"
+    bill: "Bill"
 
   places:
     title: "Place"

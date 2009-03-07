@@ -58,6 +58,7 @@ es:
     back: "Regresar"
     y: "Si"
     not: "No"
+    bill: "Recibo"
 
   places:
     title: "Lugar"
