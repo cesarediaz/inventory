@@ -1,22 +1,24 @@
-<table>
-  <tr>
-    <th><%= t('dvds.model') %></th>
-    <th><%= t('dvds.sn') %></th>
-    <th><%= t('dvds.mark') %></th>
-    <th><%= t('dvds.burn') %></th>
-    <th>Pc</th>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', t('dvds.model')) %>
+    <%= content_tag('th', t('dvds.sn')) %>
+    <%= content_tag('th', t('dvds.mark')) %>
+    <%= content_tag('th', t('dvds.burn')) %>
+    <%= content_tag('th', 'Pc') %>
+    <%= content_tag('th', t('dvds.bill')) %>
     <th colspan='3'><%= t('common-actions.actions') %></th>
-  </tr>
+    <% end -%>
 <% for dvd in @dvds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= dvd.model %></td>
-    <td><%= dvd.serialnumber %></td>
-    <td><%= dvd.mark.name rescue nil  %></td>
-    <td><%= check(dvd.writable) %></td>
-    <td><%= link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s)  rescue nil%></td>
-    <td><%= link_to t('common-actions.show'), dvd %></td>
-    <td><%= link_to t('common-actions.edit'), edit_dvd_path(dvd) %></td>
-    <td><%= link_to t('common-actions.destroy'), dvd, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td', dvd.model ) %>
+    <%= content_tag('td', dvd.serialnumber ) %>
+    <%= content_tag('td', dvd.mark.name) rescue nil %>
+    <%= content_tag('td', check(dvd.writable) ) %>
+    <%= content_tag('td', link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s))  rescue nil %>
+    <%= content_tag('td', link_to(t('computers.bill'), 'bills/'+ dvd.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('common-actions.show'), dvd )) %>
+    <%= content_tag('td', link_to(t('common-actions.edit'), edit_dvd_path(dvd))) %>
+    <%= content_tag('td', link_to(t('common-actions.destroy'), dvd, :confirm => 'Are you sure?', :method => :delete )) %>
   </tr>
 <% end %>
-</table>
+<% end -%>
