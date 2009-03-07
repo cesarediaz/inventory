@@ -18,6 +18,17 @@ module ApplicationHelper
 
   end
 
+  # Take and object and depending if it is true make a help advice
+  #
+  # Return: html
+  def front_end_pages()
+    html = ''
+    html = html + '<div id="marco" >'
+    Page.find(:all).collect { |page| html = html + link_to(page.permalink, '/' + page.permalink ) + '|'}
+    html = html +  '</div>'
+    return html
+  end
+
   #Get a value and depending of the value return a phrase
   #
   #Return: - yes if value is true

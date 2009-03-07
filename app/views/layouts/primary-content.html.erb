@@ -10,6 +10,8 @@
 
         <% if logged_in? %>
         <%= render :partial => 'shared/menu' %>
+        <% else %>
+        <%= front_end_pages %>
         <% end %>
 
         <div id="content">
