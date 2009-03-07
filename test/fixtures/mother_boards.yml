@@ -7,7 +7,6 @@ one:
   serialnumber: 121232234
   mark_id : 7
   computer_id: 1
-  bill_id: 1
 
 two:
   id: 2
@@ -15,7 +14,6 @@ two:
   serialnumber: 121234876
   mark_id : 7
   computer_id: 2
-  bill_id: 1
 
 three:
   id: 3
@@ -23,7 +21,6 @@ three:
   serialnumber: 121234223
   mark_id : 5
   computer_id: 3
-  bill_id: 1
 
 four:
   id: 4
@@ -31,4 +28,3 @@ four:
   serialnumber: 121234000
   mark_id : 6
   computer_id: 4
-  bill_id: 2
