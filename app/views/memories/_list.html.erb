@@ -1,23 +1,25 @@
-<table>
-  <tr>
-    <th><%= t('memories.model') %></th>
-    <th><%= t('memories.sn') %></th>
-    <th><%= t('memories.mark') %></th>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', t('memories.model')) %>
+    <%= content_tag('th', t('memories.sn')) %>
+    <%= content_tag('th', t('memories.mark')) %>
     <th colspan='2'><%= t('memories.size') %></th>
-    <th>Pc</th>
+    <%= content_tag('th', 'Pc') %>
+    <%= content_tag('th', t('memories.bill')) %>
     <th colspan='3'><%= t('common-actions.actions') %></th>
-  </tr>
+  <% end -%>
 <% for memory in @memories %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= memory.model %></td>
-    <td><%= memory.serialnumber %></td>
-    <td><%= memory.mark.name rescue nil  %></td>
-    <td><%= memory.size rescue nil  %></td>
-    <td><%= memory.unit.to_s rescue nil  %></td>
-    <td><%= link_to(memory.computer.name , 'computers/' + memory.computer.id.to_s)  rescue nil%></td>
-    <td><%= link_to t('common-actions.show'), memory %></td>
-    <td><%= link_to t('common-actions.edit'), edit_memory_path(memory) %></td>
-    <td><%= link_to t('common-actions.destroy'), memory, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td', memory.model) %>
+    <%= content_tag('td', memory.serialnumber) %>
+    <%= content_tag('td', memory.mark.name) rescue nil  %>
+    <%= content_tag('td', memory.size) rescue nil  %>
+    <%= content_tag('td', memory.unit.to_s) rescue nil  %>
+    <%= content_tag('td', link_to(memory.computer.name , 'computers/' + memory.computer.id.to_s))  rescue nil%>
+    <%= content_tag('td', link_to(t('memories.bill'), 'bills/'+ memory.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('common-actions.show'), memory)) %>
+    <%= content_tag('td', link_to(t('common-actions.edit'), edit_memory_path(memory))) %>
+    <%= content_tag('td', link_to(t('common-actions.destroy'), memory, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
-</table>
+<% end -%>
