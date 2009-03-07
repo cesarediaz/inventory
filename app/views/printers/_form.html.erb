@@ -24,7 +24,7 @@
 
   <div id="quarter" >
     <%= t 'menu.bills' %><%= t 'bill.code' %>
-    <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', 'code',
+    <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', :company_bill,
         {:prompt => true} %>
   </div >
 

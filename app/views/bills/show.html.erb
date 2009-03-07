@@ -13,6 +13,13 @@
 <%= content_tag('br') %>
 <% end %>
 
+
+<!-- Screens list -->
+<%= content_tag('label', t('menu.computers')) %>
+<% content_tag :div do %>
+<%= content_tag('ul', @bill.computers.collect {|x| x.name + ' ' + x.ip.to_s + '<br>' }) %>
+<% end -%>
+
 <!-- Screens list -->
 <%= content_tag('label', t('menu.screens')) %>
 <% content_tag :div do %>
