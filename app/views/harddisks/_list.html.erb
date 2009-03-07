@@ -1,23 +1,26 @@
-<table>
-  <tr>
-    <th><%= t('harddisks.model') %></th>
-    <th><%= t('harddisks.sn') %></th>
-    <th><%= t('harddisks.mark') %></th>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', t('harddisks.model')) %>
+    <%= content_tag('th', t('harddisks.sn')) %>
+    <%= content_tag('th', t('harddisks.mark')) %>
     <th colspan='2'><%= t('harddisks.size') %></th>
-    <th>Pc</th>
+    <%= content_tag('th', 'Pc') %>
+    <%= content_tag('th', t('harddisks.bill')) %>
     <th colspan='3'><%= t('common-actions.actions') %></th>
   </tr>
+ <% end %>
 <% for harddisk in @harddisks %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= harddisk.model %></td>
-    <td><%= harddisk.serialnumber %></td>
-    <td><%= harddisk.mark.name rescue nil  %></td>
-    <td><%= harddisk.size rescue nil  %></td>
-    <td><%= harddisk.unit.to_s rescue nil  %></td>
-    <td><%= link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s)  rescue nil%></td>
-    <td><%= link_to t('common-actions.show'), harddisk %></td>
-    <td><%= link_to t('common-actions.edit'), edit_harddisk_path(harddisk) %></td>
-    <td><%= link_to t('common-actions.destroy'), harddisk, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td',harddisk.model) %>
+    <%= content_tag('td',harddisk.serialnumber) %>
+    <%= content_tag('td',harddisk.mark.name) rescue nil  %>
+    <%= content_tag('td',harddisk.size) rescue nil  %>
+    <%= content_tag('td',harddisk.unit.to_s) rescue nil  %>
+    <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s))  rescue nil%>
+    <%= content_tag('td', link_to(t('harddisks.bill'), 'bills/'+ harddisk.bill_id.to_s)) %>
+    <%= content_tag('td',link_to(t('common-actions.show'), harddisk)) %>
+    <%= content_tag('td',link_to(t('common-actions.edit'), edit_harddisk_path(harddisk))) %>
+    <%= content_tag('td',link_to(t('common-actions.destroy'), harddisk, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
-</table>
+<% end %>
