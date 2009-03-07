@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :pages
+
   map.resources :bills
 
 
@@ -55,6 +57,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
 
+  map.static ':permalink', :controller => 'pages', :action => 'show'
 
 
 

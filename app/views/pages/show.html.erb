@@ -1,0 +1,13 @@
+<% content_tag :div, :id => 'subtitles' do %>
+
+<%= @page.name %>
+
+<% end %>
+
+<%= simple_format h(@page.content) %>
+
+<% if logged_in? %>
+  <% if @current_user.login === 'admin' %>
+    <%= link_to 'Edit', edit_page_path(@page) %> | <%= link_to 'Back', pages_path %>
+  <% end %>
+<% end %>
