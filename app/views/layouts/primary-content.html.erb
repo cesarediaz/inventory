@@ -5,12 +5,14 @@
     <div id="outer">
 
       <% 3.times do %>
-        <br>
-      <% end %>
+      <br>
+        <% end %>
 
-      <%= render :partial => 'shared/menu' %>
+        <% if logged_in? %>
+        <%= render :partial => 'shared/menu' %>
+        <% end %>
 
-      <div id="content">
+        <div id="content">
           <%= yield  %>
 
           <div class="clear"></div>
