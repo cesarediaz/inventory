@@ -5,6 +5,7 @@ en:
   bill:
     code: 'Code'
     company: 'Company'
+    date: 'Date of bill'
     edit: "Modify"
     create: "Create"
     back: "Back"

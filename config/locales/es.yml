@@ -2,6 +2,7 @@ es:
   bill:
     code: 'Codigo'
     company: 'Empresa'
+    date: 'Fecha de recibo'
     edit: "Modificar"
     create: "Agregar"
     back: "Regresar"

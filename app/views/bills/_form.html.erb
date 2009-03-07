@@ -12,6 +12,10 @@
   <%= f.text_field :code %>
   <% end %>
 
+  <% content_tag :div, :id => 'quarter' do %>
+  <%= date_select('bill', 'date', :start_year => 1995, :order => [:day, :month, :year]) %>
+  <% end %>
+
   <% if action_name == 'new' %>
   <%= f.submit t('bill.create') %>
   <% else %>
