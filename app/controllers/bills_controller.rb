@@ -104,12 +104,23 @@ class BillsController < ApplicationController
   end
 
   def pdf
-    pdf_report(Bill.find(:all),
+    pdf_report(Bill.find(:all,:order => 'date ASC'),
                "A4",
                t('common-actions.report-of') + t('menu.bills'),
                15,
                ["col1", "col2", "col3"],
                'bills'
+               )
+  end
+
+  def xls
+    xls_report('/public/xls/' + t('menu.bills') + '.xls',
+               'bills',
+               'Bill',
+               'bills',
+               "[t('bill.code'), t('bill.company'), t('bill.date')]",
+               params[:company_id].nil? ? 'find' : params[:comapay_id],
+               params[:company_id].nil? ? '(:all)' : '(' + params[:company_id] + ')'
                )
   end
 end

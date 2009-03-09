@@ -144,8 +144,8 @@ module ReportSystem
   # elements: array with elements
   #
   #Return: nothing
-  def make_a_report_of(this_hardware, page, elements)
-    case this_hardware
+  def make_a_report_of(this, page, elements)
+    case this
     when 'computers'
       computers_report(page, elements, nil)
     when 'screens'
@@ -156,6 +156,8 @@ module ReportSystem
       workstations_report(page, elements, nil, true)
     when 'places'
       places_report(page, elements)
+    when 'bills'
+      bills_report(page, elements)
     end
   end
 
@@ -218,6 +220,16 @@ module ReportSystem
      end
   end
 
+  #This method fill the the places report
+  def bills_report(page, elements)
+    row = 1
+     for object in elements
+       page.write(row,0,object.code)
+       page.write(row,1,object.company.name)
+       page.write(row,2,object.date.strftime("%d/%m/%Y"))
+       row += 1
+     end
+  end
 
   #This method fill the the places report
   def workstations_report(page, elements)
