@@ -1,0 +1,16 @@
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', 'Name') %>
+    <%= content_tag('th', 'Permalink') %>
+    <th colspan='3'><%= t 'common-actions.actions' %></th>
+  <% end -%>
+  <% for page in @pages %>
+    <tr  class="<%= cycle("rowA","rowB") %>">
+      <%= content_tag('td', page.name) %>
+      <%= content_tag('td', page.permalink) %>
+      <%= content_tag('td', link_to('Show', page)) %>
+      <%= content_tag('td', link_to('Edit', edit_page_path(page))) %>
+      <%= content_tag('td', link_to('Destroy', page, :confirm => 'Are you sure?', :method => :delete)) %>
+    </tr>
+  <% end %>
+<% end -%>

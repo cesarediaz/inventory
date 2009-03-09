@@ -1,14 +1,14 @@
-<table>
-  <tr>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
     <%= content_tag('th', t('company.name')) %>
     <%= content_tag('th', t('company.address')) %>
     <%= content_tag('th', t('company.phone')) %>
     <%= content_tag('th', t('company.fax')) %>
     <%= content_tag('th', t('company.email')) %>
     <th colspan='3'><%= t 'common-actions.actions' %></th>
-  </tr>
+  <% end -%>
 <% for company in @companies %>
-  <tr>
+  <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', company.name) %>
     <%= content_tag('td', company.address) %>
     <%= content_tag('td', company.phone) %>
@@ -19,5 +19,5 @@
     <%= content_tag('td', link_to(t('common-actions.destroy'), company, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
-</table>
+<% end -%>
 <br />
