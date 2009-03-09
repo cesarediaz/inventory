@@ -507,7 +507,17 @@ div.auto_complete ul strong.highlight {
 }
 
 
+/* Statics Pages */
 
+#options
+{
+    margin: 1em 1em 0.5em 0em;
+    color: #000;
+    background-color: #fff;
+    font-size: 12pt;
+    padding: 1px 1px 1px 1px;
+    display:block; float:left; position:relative;
+}
 
 /* MENUS */
 body {

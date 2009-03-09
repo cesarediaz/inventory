@@ -3,13 +3,13 @@
   <%= render :partial => 'shared/head' %>
   <body>
     <div id="outer">
-
-      <% 3.times do %>
-      <br>
-        <% end %>
-
         <% if logged_in? %>
-        <%= render :partial => 'shared/menu' %>
+          <%= render :partial => 'shared/menu' %>
+        <% else %>
+          <%= front_end_pages %>
+          <% 3.times do %>
+          <br>
+          <% end %>
         <% end %>
 
         <div id="content">

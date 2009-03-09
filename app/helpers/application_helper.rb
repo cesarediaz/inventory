@@ -23,9 +23,12 @@ module ApplicationHelper
   # Return: html
   def front_end_pages()
     html = ''
-    html = html + '<div id="marco" >'
-    Page.find(:all).collect { |page| html = html + link_to(page.permalink, '/' + page.permalink ) + '|'}
-    html = html +  '</div>'
+
+    Page.find(:all).collect { |page|
+      html = html + '<div id="options" >'
+      html = html + link_to(page.permalink, '/' + page.permalink )
+      html = html +  '</div>'
+    }
     return html
   end
 
