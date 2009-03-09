@@ -1,10 +1,10 @@
-<% content_tag :div, :id => 'subtitles' do %>
-
-<%= @page.name %>
-
+<% content_tag :div, :id => 'title' do %>
+  <%= @page.name %>
 <% end %>
 
-<%= simple_format h(@page.content) %>
+<% content_tag :div, :id => 'page-content' do %>
+  <%= simple_format h(@page.content) %>
+<% end %>
 
 <% if logged_in? %>
   <% if @current_user.login === 'admin' %>

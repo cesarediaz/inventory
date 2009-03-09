@@ -509,15 +509,37 @@ div.auto_complete ul strong.highlight {
 
 /* Statics Pages */
 
+#title
+{
+    margin: 1em 1em 1.5em 10em;
+    color: #000;
+    background-color: #fff;
+    font-size: 18pt;
+    padding: 1px 1px 1px 10px;
+    display:block;
+    position:relative;
+    border-bottom: solid 1px #000;
+    width: 25%;
+}
+
+#page-content
+{
+    margin: 1em 1em 1.5em 20em;
+}
+
 #options
 {
-    margin: 1em 1em 0.5em 0em;
-    color: #000;
+    margin: 0em 10em 0.4em 0em;
+    color: #fff;
     background-color: #fff;
     font-size: 12pt;
     padding: 1px 1px 1px 1px;
-    display:block; float:left; position:relative;
+    display:block;
+    position:relative;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
 }
+
 
 /* MENUS */
 body {

@@ -3,23 +3,22 @@
   <%= render :partial => 'shared/head' %>
   <body>
     <div id="outer">
-        <% if logged_in? %>
+      <div id="content">
+        <div id="secondaryContent">
+          <% if logged_in? %>
           <%= render :partial => 'shared/menu' %>
-        <% else %>
+          <% else %>
+          <%= content_tag(:div, content_tag(link_to(t('menu.login'), new_session_path)), :id => 'options') %>
           <%= front_end_pages %>
-          <% 3.times do %>
-          <br>
           <% end %>
-        <% end %>
-
-        <div id="content">
-          <%= yield  %>
-
-          <div class="clear"></div>
-
-          <%= render :partial => 'shared/footer' %>
-
         </div>
+        <%= yield  %>
+
+        <div class="clear"></div>
+
+        <%= render :partial => 'shared/footer' %>
+
       </div>
-    </body>
-  </html>
+    </div>
+  </body>
+</html>
