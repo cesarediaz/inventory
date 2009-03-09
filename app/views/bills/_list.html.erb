@@ -8,7 +8,8 @@
   <% for bill in @bills %>
   <tr>
     <%= content_tag('td', bill.code) %>
-    <%= content_tag('td', bill.company.name) rescue nil %>
+    <%= content_tag('td', link_to(bill.company.name, '/companies/' + bill.company.id.to_s) ) rescue nil %>
+
     <%= content_tag('td',link_to(t('common-actions.show'), bill)) %>
     <%= content_tag('td',link_to(t('common-actions.edit'), edit_bill_path(bill))) %>
     <%= content_tag('td',link_to(t('common-actions.destroy'), bill, :confirm => 'Are you sure?', :method => :delete)) %>

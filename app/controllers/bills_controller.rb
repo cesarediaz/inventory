@@ -2,10 +2,13 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.xml
   def index
-    @bills = Bill.find(:all)
+    @bills = Bill.paginate(
+                           :page => params[:page],
+                           :per_page => PER_PAGE,
+                           :order => 'created_at DESC')
 
     respond_to do |format|
-      format.html { render :layout => "primary-content" }
+      format.html
       format.xml  { render :xml => @bills }
     end
   end
@@ -82,5 +85,12 @@ class BillsController < ApplicationController
       format.html { redirect_to(bills_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def list_for_company
+    @bills = Bill.list_for_company(params[:company_id]).paginate(
+                                                                 :page => params[:page],
+                                                                 :per_page => PER_PAGE,
+                                                                 :order => 'created_at DESC')
   end
 end

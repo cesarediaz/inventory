@@ -1,7 +1,7 @@
 <% content_tag :div do %>
   <!-- Company name -->
   <%= content_tag('label', t('bill.company')) %>
-  <%= content_tag('b', @bill.company.name) %>
+  <%= content_tag('b', @bill.company.name) rescue nil %>
 
   <!-- Bill code -->
   <%= content_tag('label', t('bill.code')) %>

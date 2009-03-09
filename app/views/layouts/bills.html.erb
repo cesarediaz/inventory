@@ -9,8 +9,9 @@
       <%= render :partial => 'shared/menu' %>
 
       <div id="content">
+        <%= render :partial => 'selector_companies' %>
 
-        <%= render :partial => 'shared/primary_content' %>
+        <%= yield %>
 
       <div class="clear"></div>
 

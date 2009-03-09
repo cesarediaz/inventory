@@ -8,6 +8,7 @@ es:
     back: "Regresar"
     new: "Agregar nuevo recibo"
     show: "Ver"
+    select-by-company: "Seleccione listado por empresa"
 
   company:
     name: "Nombre"

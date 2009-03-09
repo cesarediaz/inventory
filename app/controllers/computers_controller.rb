@@ -142,7 +142,7 @@ class ComputersController < ApplicationController
   def availables_computers
     @computers = Computer.available.paginate(
                                              :page => params[:page],
-                                             :per_page => 5,
+                                             :per_page => PER_PAGE,
                                              :order => 'created_at DESC')
   end
 
@@ -150,7 +150,7 @@ class ComputersController < ApplicationController
   def unavailables_computers
     @computers = Computer.unavailable.paginate(
                                                :page => params[:page],
-                                               :per_page => 5,
+                                               :per_page => PER_PAGE,
                                                :order => 'created_at DESC')
   end
 

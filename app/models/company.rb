@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  has_many :bills
+  has_many :bills, :dependent => :nullify
 
   #################################################
   # VALIDATIONS

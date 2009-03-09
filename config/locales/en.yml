@@ -11,6 +11,7 @@ en:
     back: "Back"
     new: "Add new bill"
     show: "Show"
+    select-by-company: "Select list by company"
 
   company:
     name: "Name"

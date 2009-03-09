@@ -1,0 +1,18 @@
+<% cache(:fragment => "bills/_selector_companies") do %>
+<label><%= t('bill.select-by-company') %></label>
+<% @options = []
+   @options << [t('places.select_one'),'select one']
+   Company.find(:all).collect {|x| @options << [x.name, x.id] }
+                                               %>
+
+<div id='half' >
+<%= select_tag 'sort[]',
+    options_for_select( @options),
+    :include_prompt => false,
+:onchange => remote_function(:url => {:controller => 'bills', :action => 'list_for_company'},
+:with => "'company_id='+this.value",
+:update => "outer")
+%>
+
+</div>
+<% end %>
