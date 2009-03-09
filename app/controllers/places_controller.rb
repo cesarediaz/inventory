@@ -215,7 +215,8 @@ class PlacesController < ApplicationController
                "A4",
                t('common-actions.report-of') + t('menu.places'),
                15,
-               ["col1", "col2", "col3", "col4", "col5"]
+               ["col1", "col2", "col3", "col4", "col5"],
+               'places'
                )
   end
 

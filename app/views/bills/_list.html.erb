@@ -1,18 +1,24 @@
-<table>
+<%= link_to t('common-actions.download'), :controller => 'places',
+:action => 'xls_places' %> |
+<%= link_to  t('common-actions.download-pdf'), :controller => 'bills',
+:action => 'pdf' %>
+
+<% content_tag :table do %>
   <% content_tag :tr do %>
   <%= content_tag('th', t('bill.code')) %>
   <%= content_tag('th', t('bill.company')) %>
+  <%= content_tag('th', t('bill.date')) %>
   <th colspan='3'><%= t 'common-actions.actions' %></th>
   <% end %>
 
   <% for bill in @bills %>
-  <tr>
+  <% content_tag :tr do %>
     <%= content_tag('td', bill.code) %>
     <%= content_tag('td', link_to(bill.company.name, '/companies/' + bill.company.id.to_s) ) rescue nil %>
-
+    <%= content_tag('td', bill.date.strftime("%d/%m/%Y")) %>
     <%= content_tag('td',link_to(t('common-actions.show'), bill)) %>
     <%= content_tag('td',link_to(t('common-actions.edit'), edit_bill_path(bill))) %>
     <%= content_tag('td',link_to(t('common-actions.destroy'), bill, :confirm => 'Are you sure?', :method => :delete)) %>
-</tr>
-<% end %>
-</table>
+  <% end -%>
+<% end -%>
+<% end -%>

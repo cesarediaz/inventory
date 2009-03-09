@@ -12,7 +12,8 @@
   <%= f.text_field :code %>
   <% end %>
 
-  <% content_tag :div, :id => 'quarter' do %>
+  <% content_tag :div, :id => 'ten-percent' do %>
+  <%= t('bill.date') %>
   <%= date_select('bill', 'date', :start_year => 1995, :order => [:day, :month, :year]) %>
   <% end %>
 

@@ -1,4 +1,13 @@
+require 'pdf/writer'
+require 'pdf/simpletable'
+
+require 'spreadsheet/excel'
+include Spreadsheet
+
 class BillsController < ApplicationController
+  include ReportSystem
+  include PdfReportSystem
+
   # GET /bills
   # GET /bills.xml
   def index
@@ -92,5 +101,15 @@ class BillsController < ApplicationController
                                                                  :page => params[:page],
                                                                  :per_page => PER_PAGE,
                                                                  :order => 'created_at DESC')
+  end
+
+  def pdf
+    pdf_report(Bill.find(:all),
+               "A4",
+               t('common-actions.report-of') + t('menu.bills'),
+               15,
+               ["col1", "col2", "col3"],
+               'bills'
+               )
   end
 end

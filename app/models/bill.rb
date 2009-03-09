@@ -13,6 +13,9 @@ class Bill < ActiveRecord::Base
     "#{self.company.name.upcase} #{code}"
   end
 
+  #################################################
+  # VALIDATIONS
+  validates_presence_of :code, :company_id
 
   #################################################
   # Named Scope
