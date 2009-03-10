@@ -4,7 +4,7 @@
   <body>
     <div id="outer">
       <div id="content">
-        <div id="secondaryContent">
+        <div id='left-content' >
           <% if logged_in? %>
           <%= render :partial => 'shared/menu' %>
           <% else %>
@@ -12,7 +12,9 @@
           <%= front_end_pages %>
           <% end %>
         </div>
+        <div id='page-content'>
         <%= yield  %>
+        </div>
 
         <div class="clear"></div>
 

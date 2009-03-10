@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_tag :div, :id => 'page-content' do %>
-  <%= simple_format h(@page.content) %>
+  <%= @page.content %>
 <% end %>
 
 <% if logged_in? %>

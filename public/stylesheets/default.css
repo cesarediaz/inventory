@@ -516,7 +516,7 @@ div.auto_complete ul strong.highlight {
 
 #title
 {
-    margin: 1em 1em 1.5em 10em;
+    margin: 1em 1em 1.5em 1em;
     color: #000;
     background-color: #fff;
     font-size: 18pt;
@@ -529,7 +529,7 @@ div.auto_complete ul strong.highlight {
 
 #page-content
 {
-    margin: 1em 1em 1.5em 20em;
+    margin: 1em 1em 1.5em 10em;
 }
 
 #options

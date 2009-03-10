@@ -1,25 +1,3 @@
-<% form_for(@page) do |f| %>
-<%= f.error_messages %>
-
-  <% content_tag :p do %>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  <% end %>
-
-  <% content_tag :p do %>
-    <%= f.label :permalink %><br />
-    <%= f.text_field :permalink %>
-  <% end %>
-
-  <% content_tag :p do %>
-    <%= f.label :content %><br />
-    <%= f.text_area :content, :cols => 80, :rows => 15 %>
-  <% end %>
-
-  <% content_tag :p do %>
-    <%= f.submit "Create" %>
-  <% end %>
-
-<% end %>
+<%= render :partial => 'form' %>
 
 <%= link_to 'Back', pages_path %>
