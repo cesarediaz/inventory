@@ -118,8 +118,7 @@ Then, if you would like deploy this application in production mode you can choos
 - LHTTPd
 - Apache
 
-Take a look to this website http://rubyonrails.org/deploy
-
+Take a look to this website http://rubyonrails.org/deploy to learn how you can deploy in different modes a Ruby on Rails application.
 
 
 
