@@ -8,22 +8,23 @@ Personal website : http://cesardiaz.com.ar/
 My blog: http://cesarediaz.blogspot.com
 
 
-This web application is oriented to resolve the problem to organize the hardware inventory anywhere you are. If you are in a factory, an education building or your personal corporation(anywhere).  This sofware was thought for use in a education building where was necessary get an adecuate information about the place where each hardware piece was and get information about when and who was the seller of each parts or device in hardware inventory
+   This web application is oriented to resolve the problem to organize the hardware inventory anywhere you are. If you are in a factory, an education building or your personal corporation(anywhere).  This sofware was thought for use in a building where could be necessary an adecuate information about the place where each hardware piece was and get
+information about when and who was the seller of each parts or device in hardware inventory.
+   This application is available in two languages; spanish and english.
 
-This hardware has this modules.
-Features
+This hardware has those modules.
 
-    * Workstations: it means that are togheter almost one pc(computer) and a screen and it can be used to work.
-    * Places: here is listed all diferents places where the hardware could be.
-    * Hardware: there you can add computers, motherboards, hard disks, memories, cds, dvds, screens and so on.
-    * Marks: is a module to add the differents marks more common or present in the technology that you are using or
-             you have in your building
-    * Companies: this is a module to load the seller of hardware from your hardware has been bougth
-    * Bills: here you can get a detail of the bills that the sellers has gave you in each oportunity
-    * Users: there you can add users for your web inventory application in two levels(for now!)as 'admin' user or
-             a common user
-    * Pages: here you can add easily semi statics page that will be showed in the front end of the application
-    * Your account: there you can modify your personal data as password, email and user language.
+    * Workstations: it means that there are together one pc(computer) and a screen and those can be used to work.
+    * Places: here is listed all different places where the hardware could be.
+    * Hardware: there you can add computers, motherboards, hard disks, memories and so on.
+    * Marks: is a module to add the different marks more common or present in the technology that you are using or
+             you have in your building.
+    * Companies: this is a module to load the different seller from your hardware.
+    * Bills: here you can get a detail of the bill that the sellers has gave you in each oportunity
+    * Users: there you can add users for your web inventory application in two levels(for now)as 'admin' user or
+             a common user.
+    * Pages: here you can add easily statics pages that will be showed in the front end of your  web application.
+    * Your account: there you can modify your personal data as password, email and language.
 
 Versions
 
@@ -65,7 +66,7 @@ treetop (1.2.4)
 
 Install
 
-If you got this using git into your rails web directory or your home directory. :
+If you got this using git into your rails web directory or your home directory
 
        user@host:~/ git clone git://github.com/cesarediaz/inventory.git my_inventory_application
 
@@ -80,12 +81,19 @@ and to start the application in development(for proves) state the next steps:
 and then
        user@host:~/ rake db:migrate
 
-and then
+and the next step is to load some basic data that could be used in development mode or just to
+watch the application with some data
+
        user@host:~/ rake db:fixtures:load
 
 and to watch in your local browser
 
        user@host:~/ script/server
+
+and put in your local browser this
+
+       http://127.0.0.1:3000 or http://localhost:3000
+
 
 if you maybe want show this application from another places (your boss screen ;-) ) you need know the ip
 address of your machine and put this for start the shared application:
@@ -104,8 +112,7 @@ http://192.168.0.10:3000
 and enjoy.
 
 
-Then, for deploy in production mode you can choose between differents web servers. It is free for your election,
-and those could be:
+Then, if you would like deploy this application in production mode you can choose between different web servers. It is free for your election, and those could be:
 
 - Nginx + Mongrel
 - LHTTPd
