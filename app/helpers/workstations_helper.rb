@@ -20,7 +20,7 @@ module WorkstationsHelper
     html = html + '</div>'
 
 
-    eval %" @in = #{object}.list_for_place_as_part_a_workstation(id).count.to_s rescue nil";
+    eval %" @in = #{object}.list_for_place_as_part_a_workstation(place).count.to_s rescue nil";
     html = html +  "<div id='stats_data_centered'>"
     html = html +  t('stats.workstation') + ':' + @in rescue nil +  "t('phrases.units')"
     html = html +  '</div>'
