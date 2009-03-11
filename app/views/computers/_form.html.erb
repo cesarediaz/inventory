@@ -26,6 +26,13 @@
     <br>
     <% end %>
 
+    <%= t('computers.inventory_register') %>
+    <%= f.text_field :inventory_register %>
+
+    <% 2.times do %>
+    <br>
+    <% end %>
+
     <%= t('computers.available') %>
     <%= t('computers.y') %> <%= radio_button('computer', 'available', 't') %>
     <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f') %>
@@ -33,6 +40,7 @@
     <% 2.times do %>
     <br>
     <%  end %>
+
 
   <% if not @computer.is_part_of_a_workstation %>
   <div id="quarter" >
@@ -46,7 +54,6 @@
     <%= collection_select 'computer', 'bill_id', Bill.find(:all), 'id', :company_bill,
         {:prompt => true} %>
   </div >
-
 
   <% 2.times do %>
   <br>

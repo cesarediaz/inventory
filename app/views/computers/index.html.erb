@@ -1,12 +1,12 @@
-<div id='right-content' >
+<% content_tag :div, :id => 'right-content' do %>
   <%= link_to t('common-actions.download-all'), :controller => 'computers', :action => 'xls_computers' %>
-</div>
+<% end %>
 
-<br />
+<%= content_tag('br') %>
 <%= render :partial => 'list' %>
 
 <%= will_paginate @computers %>
 
-<br />
+<%= content_tag('br') %>
 
 <%= link_to t('computers.new'), new_computer_path %>

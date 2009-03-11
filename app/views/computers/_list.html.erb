@@ -10,6 +10,7 @@
     <%= content_tag('th', t('computers.place')) %>
     <%= content_tag('th', t('computers.available')) %>
     <%= content_tag('th', t('computers.workstation?')) %>
+    <%= content_tag('th', t('computers.inventory_register')) %>
     <%= content_tag('th', t('computers.bill')) %>
     <th colspan='3'><%= t 'common-actions.actions' %></th>
   <% end %>
@@ -25,6 +26,7 @@
       <%= content_tag('td', link_to(computer.place.title, 'places/' + computer.place.id.to_s) ) rescue nil%>
       <%= content_tag('td', check(computer.available)) %>
       <%= content_tag('td', in_workstation?(computer )) %>
+      <%= content_tag('td', computer.inventory_register) %>
       <%= content_tag('td', link_to(t('computers.bill'), 'bills/'+ computer.bill_id.to_s)) %>
       <td><%= link_to t('common-actions.show') , computer %></td>
       <td><%= link_to t('common-actions.edit') , edit_computer_path(computer) %></td>
