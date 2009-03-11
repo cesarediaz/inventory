@@ -1,38 +1,45 @@
 <%= advice( @printer.is_part_of_a_workstation, t('common-actions.hide-advice'),
- t('help-phrases.in-workstation'))%>
+    t('help-phrases.in-workstation'))%>
 
 <% form_for(@printer) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages %>
 
-  <%= t('printers.model') %>
-  <%= f.text_field :model %>
+<%= t('printers.model') %>
+<%= f.text_field :model %>
 
-  <%= t('printers.sn') %>
-  <%= f.text_field :serialnumber %>
+<%= t('printers.sn') %>
+<%= f.text_field :serialnumber %>
 
-  <div id="quarter" >
-    <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
-        {:prompt => true} %>
-  </div>
+<% 2.times do %>
+<br>
+<% end %>
 
-  <% if not @printer.is_part_of_a_workstation %>
-  <div id="quarter" >
-    <%= collection_select 'printer', 'place_id', Place.find(:all), 'id', 'title',
-        {:prompt => true} %>
-  </div>
+<%= t('printers.inventory_register') %>
+<%= f.text_field :inventory_register %>
+
+<div id="quarter" >
+  <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
+      {:prompt => true} %>
+</div>
+
+<% if not @printer.is_part_of_a_workstation %>
+<div id="quarter" >
+  <%= collection_select 'printer', 'place_id', Place.find(:all), 'id', 'title',
+      {:prompt => true} %>
+</div>
+<% end %>
+
+<div id="quarter" >
+  <%= t 'menu.bills' %><%= t 'bill.code' %>
+  <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', :company_bill,
+      {:prompt => true} %>
+</div >
+
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit  t('common-actions.create') %>
+  <% else %>
+  <%= f.submit  t('common-actions.edit') %>
   <% end %>
-
-  <div id="quarter" >
-    <%= t 'menu.bills' %><%= t 'bill.code' %>
-    <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true} %>
-  </div >
-
-  <p>
-    <% if action_name == 'new' %>
-    <%= f.submit  t('common-actions.create') %>
-    <% else %>
-    <%= f.submit  t('common-actions.edit') %>
-    <% end %>
-  </p>
+</p>
 <% end %>

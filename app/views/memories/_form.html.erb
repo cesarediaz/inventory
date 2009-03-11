@@ -1,53 +1,60 @@
 <% form_for(@memory) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages %>
 
-  <%= f.label 'model' %>
-  <%= f.text_field :model %>
+<%= f.label 'model' %>
+<%= f.text_field :model %>
 
-    <% 2.times do %>
-    <br>
-    <%  end %>
+<% 2.times do %>
+<br>
+<%  end %>
 
-  <%= f.label 'serialnumber' %>
-  <%= f.text_field :serialnumber %>
+<%= f.label 'serialnumber' %>
+<%= f.text_field :serialnumber %>
 
-    <% 2.times do %>
-    <br>
-    <%  end %>
+<% 2.times do %>
+<br>
+<% end %>
 
-    <%= f.label 'size' %>
-    <%= f.text_field :size %>
-    <% content_tag :div, :id => "quarter" do %>
-      <%= select 'memory', 'unit', [['mb', 'mb'], ['gb', 'gb']], {:include_blank => true} %>
-    <% end -%>
+<%= t('memories.inventory_register') %>
+<%= f.text_field :inventory_register %>
 
-    <% 2.times do %>
-    <br>
-    <%  end %>
-  <% content_tag :div, :id => "quarter" do %>
+<% 2.times do %>
+<br>
+<%  end %>
 
-  Computer:
-  <%= collection_select 'memory', 'computer_id', Computer.find(:all), 'id', 'name',
+<%= f.label 'size' %>
+<%= f.text_field :size %>
+<% content_tag :div, :id => "quarter" do %>
+<%= select 'memory', 'unit', [['mb', 'mb'], ['gb', 'gb']], {:include_blank => true} %>
+<% end -%>
+
+<% 2.times do %>
+<br>
+<%  end %>
+<% content_tag :div, :id => "quarter" do %>
+
+Computer:
+<%= collection_select 'memory', 'computer_id', Computer.find(:all), 'id', 'name',
+    {:prompt => true} %>
+<% end -%>
+
+<% content_tag :div, :id => "quarter" do %>
+Mark:
+<%= collection_select 'memory', 'mark_id', Mark.find(:all), 'id', 'name',
+    {:prompt => true} %>
+<% end -%>
+
+<div id="quarter" >
+  <%= t 'menu.bills' %><%= t 'bill.code' %>
+  <%= collection_select 'memory', 'bill_id', Bill.find(:all), 'id', :company_bill,
       {:prompt => true} %>
-  <% end -%>
+</div >
 
-  <% content_tag :div, :id => "quarter" do %>
-  Mark:
-  <%= collection_select 'memory', 'mark_id', Mark.find(:all), 'id', 'name',
-      {:prompt => true} %>
-  <% end -%>
-
-  <div id="quarter" >
-    <%= t 'menu.bills' %><%= t 'bill.code' %>
-    <%= collection_select 'memory', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true} %>
-  </div >
-
-  <p>
-    <% if action_name == 'new' %>
-    <%= f.submit "Create" %>
-    <% else %>
-    <%= f.submit "Edit" %>
-    <% end %>
-  </p>
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit "Create" %>
+  <% else %>
+  <%= f.submit "Edit" %>
+  <% end %>
+</p>
 <% end %>

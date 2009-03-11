@@ -10,6 +10,13 @@ t('help-phrases.in-workstation'))%>
   <%= t('screens.sn') %>
   <%= f.text_field :serialnumber %>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('screens.inventory_register') %>
+  <%= f.text_field :inventory_register %>
+
   <div id="quarter" >
     <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
         {:prompt => true} %>

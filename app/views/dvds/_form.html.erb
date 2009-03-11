@@ -1,33 +1,40 @@
 <% form_for(@dvd) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages %>
 
-  <%= t('dvds.model') %>
-  <%= f.text_field :model %>
+<%= t('dvds.model') %>
+<%= f.text_field :model %>
 
-  <%= t('dvds.sn') %>
-  <%= f.text_field :serialnumber %>
+<%= t('dvds.sn') %>
+<%= f.text_field :serialnumber %>
 
-  Burn <%= radio_button('dvd', 'writable', 't') %>
-  Not burn<%= radio_button('dvd', 'writable', 'f') %>
+<% 2.times do %>
+<br>
+<% end %>
 
-  <%= collection_select 'dvd', 'computer_id', Computer.find(:all), 'id', 'name',
+<%= t('dvs.inventory_register') %>
+<%= f.text_field :inventory_register %>
+
+Burn <%= radio_button('dvd', 'writable', 't') %>
+Not burn<%= radio_button('dvd', 'writable', 'f') %>
+
+<%= collection_select 'dvd', 'computer_id', Computer.find(:all), 'id', 'name',
+    {:prompt => true} %>
+
+<%= collection_select 'dvd', 'mark_id', Mark.find(:all), 'id', 'name',
+    {:prompt => true} %>
+
+<div id="quarter" >
+  <%= t 'bill.code' %>
+  <%= collection_select 'dvd', 'bill_id', Bill.find(:all), 'id', :company_bill,
       {:prompt => true} %>
+</div >
 
-  <%= collection_select 'dvd', 'mark_id', Mark.find(:all), 'id', 'name',
-      {:prompt => true} %>
-
-  <div id="quarter" >
-    <%= t 'bill.code' %>
-    <%= collection_select 'dvd', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true} %>
-  </div >
-
-  <p>
-    <% if action_name == 'new' %>
-    <%= f.submit t('common-actions.create') %>
-    <% else %>
-    <%= f.submit t('common-actions.edit') %>
-    <% end %>
-  </p>
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit t('common-actions.create') %>
+  <% else %>
+  <%= f.submit t('common-actions.edit') %>
+  <% end %>
+</p>
 
 <% end %>

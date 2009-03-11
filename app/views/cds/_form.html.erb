@@ -1,32 +1,39 @@
 <% form_for(@cd) do |f| %>
-  <%= f.error_messages %>
+<%= f.error_messages %>
 
-  <%= t('cds.model') %>
-  <%= f.text_field :model %>
+<%= t('cds.model') %>
+<%= f.text_field :model %>
 
-  <%= t('cds.sn') %>
-  <%= f.text_field :serialnumber %>
+<%= t('cds.sn') %>
+<%= f.text_field :serialnumber %>
 
-  Burn <%= radio_button('cd', 'writable', 't') %>
-  Not burn<%= radio_button('cd', 'writable', 'f') %>
+<% 2.times do %>
+<br>
+<% end %>
+
+<%= t('cds.inventory_register') %>
+<%= f.text_field :inventory_register %>
+
+Burn <%= radio_button('cd', 'writable', 't') %>
+Not burn<%= radio_button('cd', 'writable', 'f') %>
 
 
-  <%= collection_select 'cd', 'computer_id', Computer.find(:all), 'id', 'name',
+<%= collection_select 'cd', 'computer_id', Computer.find(:all), 'id', 'name',
+    {:prompt => true} %>
+
+<%= collection_select 'cd', 'mark_id', Mark.find(:all), 'id', 'name',
+    {:prompt => true} %>
+
+<div id="quarter" >
+  <%= t 'bill.code' %>
+  <%= collection_select 'cd', 'bill_id', Bill.find(:all), 'id', :company_bill,
       {:prompt => true} %>
-
-  <%= collection_select 'cd', 'mark_id', Mark.find(:all), 'id', 'name',
-      {:prompt => true} %>
-
-  <div id="quarter" >
-    <%= t 'bill.code' %>
-    <%= collection_select 'cd', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true} %>
-  </div >
-  <p>
-    <% if action_name == 'new' %>
-    <%= f.submit t('common-actions.create') %>
-    <% else %>
-    <%= f.submit t('common-actions.edit')  %>
-    <% end %>
-  </p>
+</div >
+<p>
+  <% if action_name == 'new' %>
+  <%= f.submit t('common-actions.create') %>
+  <% else %>
+  <%= f.submit t('common-actions.edit')  %>
+  <% end %>
+</p>
 <% end %>
