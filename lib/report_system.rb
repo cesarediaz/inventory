@@ -205,6 +205,7 @@ module ReportSystem
        page.write(row,6,@memories)
        page.write(row,7,@cds)
        page.write(row,8,@dvds)
+       page.write(row,9,object.inventory_register)
        row += 1
      end
   end
