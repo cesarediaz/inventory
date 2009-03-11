@@ -128,8 +128,8 @@ class PrintersController < ApplicationController
                'printers',
                'Printer',
                'printers',
-               "[t('printers.model'), t('printers.serial_number'), t('printers.mark'),
-                 t('printers.place'), t('printers.inventory_register')]",
+               "[t('printers.model'), t('printers.sn'), t('printers.mark'),
+                 'place', t('printers.inventory_register')]",
                params[:places].nil? ? 'find' : params[:places],
                params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
                )
@@ -137,6 +137,4 @@ class PrintersController < ApplicationController
 
 end
 
-#            "[t('computers.name'),'mac','ip',t('computers.workstation?'),
-#                  'montherboard', t('computers.harddisk'), t('computers.memory'),
-#                  'cds', 'dvds', t('computers.inventory_register')]",
+

@@ -128,7 +128,8 @@ class ScreensController < ApplicationController
                'screens',
                'Screen',
                'screens',
-               "['model', 'serial number', 'mark', 'place']",
+               "[t('screens.model'), t('screens.sn'), t('screens.mark'),
+                 'place', t('screens.inventory_register')]",
                params[:places].nil? ? 'find' : params[:places],
                params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
                )
