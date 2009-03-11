@@ -2,6 +2,9 @@
 <%= show_info(t('computers.name'), 'principal-device', 'Computer', @computer.id, 'name') %>
 <%= show_info('Ip', 'data-principal-device', 'Computer', @computer.id, 'ip') %>
 <%= show_info('Mac', 'data-principal-device', 'Computer', @computer.id, 'mac') %>
+<%= show_info(t('computers.inventory_register'), 'data-principal-device',
+    'Computer', @computer.id, 'inventory_register') %>
+
 
 
   <% content_tag :div, :id => 'data-principal-device' do %>

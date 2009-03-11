@@ -8,6 +8,7 @@ one:
   place_id: 1
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 234234242
 
 two:
   id: 2
@@ -17,6 +18,7 @@ two:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 234454441
 
 three:
   id: 3
@@ -26,6 +28,7 @@ three:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 4424354355
 
 four:
   id: 4
@@ -35,6 +38,7 @@ four:
   place_id: 3
   available: false
   is_part_of_a_workstation: false
+  inventory_register : 2423424234
 
 five:
   id: 5
@@ -44,6 +48,7 @@ five:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 42454346
 
 six:
   id: 6
@@ -53,6 +58,7 @@ six:
   place_id: 2
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 54646624545
 
 seven:
   id: 7
@@ -62,6 +68,7 @@ seven:
   place_id: 5
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 245235523454
 
 eigth:
   id: 8
@@ -71,6 +78,7 @@ eigth:
   place_id: 4
   available: false
   is_part_of_a_workstation: false
+  inventory_register : 453253254235
 
 nine:
   id: 9
@@ -80,6 +88,7 @@ nine:
   place_id: 5
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 345235235325
 
 ten:
   id: 10
@@ -89,6 +98,7 @@ ten:
   place_id: 4
   available: true
   is_part_of_a_workstation: false
+  inventory_register : 676576776576
 
 eleven:
   id: 11
@@ -98,3 +108,4 @@ eleven:
   place_id: 5
   available: false
   is_part_of_a_workstation: false
+  inventory_register : 35534535354

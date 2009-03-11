@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090307185050) do
+ActiveRecord::Schema.define(:version => 20090311131747) do
 
   create_table "bills", :force => true do |t|
     t.string   "code"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.datetime "updated_at"
     t.integer  "mark_id"
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "companies", :force => true do |t|
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.integer  "place_id"
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "dvds", :force => true do |t|
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.datetime "updated_at"
     t.integer  "mark_id"
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "harddisks", :force => true do |t|
@@ -70,9 +73,10 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "mark_id"
-    t.integer  "size",         :default => 0
-    t.string   "unit",         :default => "mb"
+    t.integer  "size",               :default => 0
+    t.string   "unit",               :default => "mb"
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "marks", :force => true do |t|
@@ -88,9 +92,10 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.datetime "updated_at"
     t.integer  "computer_id"
     t.integer  "mark_id"
-    t.integer  "size",         :default => 0
-    t.string   "unit",         :default => "mb"
+    t.integer  "size",               :default => 0
+    t.string   "unit",               :default => "mb"
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "mother_boards", :force => true do |t|
@@ -101,6 +106,7 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.integer  "computer_id"
     t.integer  "mark_id"
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "pages", :force => true do |t|
@@ -127,6 +133,7 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.integer  "place_id"
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "screens", :force => true do |t|
@@ -138,6 +145,7 @@ ActiveRecord::Schema.define(:version => 20090307185050) do
     t.integer  "place_id"
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
+    t.string   "inventory_register"
   end
 
   create_table "users", :force => true do |t|

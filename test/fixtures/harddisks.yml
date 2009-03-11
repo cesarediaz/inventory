@@ -5,6 +5,7 @@ one:
   model: WD 23424
   serialnumber: 121232234
   mark_id : 8
+  inventory_register : 2312131231
   computer_id: 1
 
 two:
@@ -12,6 +13,7 @@ two:
   model: WD 324234
   serialnumber: 121234876
   mark_id : 7
+  inventory_register : 2313131323
   computer_id: 2
 
 three:
@@ -19,6 +21,7 @@ three:
   model: WD 2312313
   serialnumber: 121234223
   mark_id : 8
+  inventory_register : 13213123323
   computer_id: 3
 
 four:
@@ -26,4 +29,5 @@ four:
   model: WD 2354454
   serialnumber: 121234000
   mark_id : 8
+  inventory_register : 13131313323
   computer_id: 4

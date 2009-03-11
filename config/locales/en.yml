@@ -68,6 +68,7 @@ en:
     y: "Yes"
     not: "Not"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   places:
     title: "Place"
@@ -102,6 +103,7 @@ en:
     computer: "In computer"
     back: "Back"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   harddisks:
     model: "Model"
@@ -109,6 +111,7 @@ en:
     mark: "Mark"
     size : "Size"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   dvds:
     model: "Model"
@@ -116,6 +119,7 @@ en:
     mark: "Mark"
     burn: "Burn"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   cds:
     model: "Model"
@@ -123,6 +127,7 @@ en:
     mark: "Mark"
     burn: "Burn"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   screens:
     title: "Screens"
@@ -131,6 +136,7 @@ en:
     mark: "Mark"
     workstation?: "Workstation?"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   printers:
     title: "Printers"
@@ -139,6 +145,7 @@ en:
     mark: "Mark"
     workstation?: "Workstation?"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   memories:
     model: "Model"
@@ -146,6 +153,7 @@ en:
     size : "Size"
     mark: "Mark"
     bill: "Bill"
+    inventory_register: 'Inventory register'
 
   marks:
     mark: "Mark"

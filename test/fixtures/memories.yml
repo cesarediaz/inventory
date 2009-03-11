@@ -5,6 +5,7 @@ one:
   model: PC 100
   serialnumber: 121232234
   mark_id : 7
+  inventory_register : 4532523535
   computer_id: 1
 
 two:
@@ -12,6 +13,7 @@ two:
   model: PC 66
   serialnumber: 121234876
   mark_id : 7
+  inventory_register : 354636346
   computer_id: 2
 
 three:
@@ -19,6 +21,7 @@ three:
   model: PC 121
   serialnumber: 121234223
   mark_id : 5
+  inventory_register : 676414124
   computer_id: 3
 
 four:
@@ -26,4 +29,5 @@ four:
   model: PC 256
   serialnumber: 121234000
   mark_id : 6
+  inventory_register : 537686787
   computer_id: 4

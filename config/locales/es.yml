@@ -61,6 +61,7 @@ es:
     y: "Si"
     not: "No"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   places:
     title: "Lugar"
@@ -95,6 +96,7 @@ es:
     computer: "En pc"
     back: "Regresar"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   harddisks:
     model: "Modelo"
@@ -102,6 +104,7 @@ es:
     size : "Capacidad"
     mark: "Marca"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   memories:
     model: "Modelo"
@@ -109,6 +112,7 @@ es:
     size : "Capacidad"
     mark: "Marca"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   dvds:
     model: "Modelo"
@@ -116,6 +120,7 @@ es:
     mark: "Marca"
     burn: "Grabadora"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   cds:
     model: "Modelo"
@@ -123,6 +128,7 @@ es:
     mark: "Marca"
     burn: "Grabadora"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   screens:
     title: "Monitores"
@@ -131,6 +137,7 @@ es:
     mark: "Marca"
     workstation?: "Puesto?"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   printers:
     title: "Impresoras"
@@ -139,6 +146,7 @@ es:
     mark: "Marca"
     workstation?: "Puesto?"
     bill: "Recibo"
+    inventory_register: 'Registro inventario'
 
   marks:
     mark: "Marca"
@@ -147,6 +155,7 @@ es:
     show : "Ver"
     destroy: "Eliminar"
     back: "Regresar"
+    inventory_register: 'Registro inventario'
 
   common-actions:
     actions: "Acciones"

@@ -6,6 +6,7 @@ one:
   serialnumber: 1212324325
   mark_id : 3
   place_id: 1
+  inventory_register : 345446546
 
 two:
   id: 2
@@ -13,6 +14,7 @@ two:
   serialnumber: 12123243434
   mark_id : 3
   place_id: 4
+  inventory_register : 52352353454
 
 three:
   id: 3
@@ -20,4 +22,5 @@ three:
   serialnumber: 1212324322
   mark_id : 3
   place_id: 1
+  inventory_register : 23576576577
 

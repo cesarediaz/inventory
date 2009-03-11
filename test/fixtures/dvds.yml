@@ -6,6 +6,7 @@ one:
   serialnumber: 121232234
   mark_id : 3
   writable: false
+  inventory_register : 42522454
   computer_id: 1
 
 two:
@@ -14,6 +15,7 @@ two:
   serialnumber: 121234876
   mark_id : 5
   writable: false
+  inventory_register : 24352345234
   computer_id: 2
 
 three:
@@ -22,6 +24,7 @@ three:
   serialnumber: 121234223
   mark_id : 7
   writable: false
+  inventory_register : 24523525254
   computer_id: 3
 
 four:
@@ -30,4 +33,5 @@ four:
   serialnumber: 121234000
   mark_id : 8
   writable: true
+  inventory_register : 2523524543
   computer_id: 4
