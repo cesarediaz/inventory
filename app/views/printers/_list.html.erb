@@ -5,6 +5,7 @@
     <%= content_tag('th', t('printers.mark')) %>
     <%= content_tag('th', 'Place') %>
     <%= content_tag('th', t('printers.workstation?')) %>
+    <%= content_tag('th', t('printers.inventory_register')) %>
     <%= content_tag('th', t('screens.bill')) %>
     <th colspan='3'><%= t('common-actions.actions') %></th>
     <% end %>
@@ -16,6 +17,7 @@
     <%= content_tag('td', printer.mark.name) rescue nil  %>
     <%= content_tag('td', link_to(printer.place.title, 'places/' + printer.place.id.to_s)) rescue nil%>
     <%= content_tag('td', printer.is_part_of_a_workstation) rescue nil %>
+    <%= content_tag('td', printer.inventory_register) %>
     <%= content_tag('td', link_to( t('printers.bill'), 'bills/'+ printer.bill_id.to_s)) %>
     <%= content_tag('td', link_to( t('common-actions.show'), printer)) %>
     <%= content_tag('td', link_to( t('common-actions.edit'), edit_printer_path(printer))) %>

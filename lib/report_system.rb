@@ -205,7 +205,7 @@ module ReportSystem
        page.write(row,6,@memories)
        page.write(row,7,@cds)
        page.write(row,8,@dvds)
-       page.write(row,9,object.inventory_register)
+       page.write(row,9,object.inventory_register) rescue nil
        row += 1
      end
   end
@@ -220,6 +220,7 @@ module ReportSystem
        page.write(row,1,object.serialnumber)
        page.write(row,2,object.mark.name)
        page.write(row,3,object.place.title)
+       page.write(row,4,object.inventory_register) rescue nil
        row += 1
      end
   end
