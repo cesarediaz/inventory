@@ -1,4 +1,4 @@
-<% content_tag :div do %>
+<% content_tag :span, :id => 'bill-description' do %>
   <!-- Company name -->
   <%= content_tag('label', t('bill.company')) %>
   <%= content_tag('b', @bill.company.name) rescue nil %>
@@ -18,54 +18,37 @@
 <% end %>
 
 
-<!-- Screens list -->
-<%= content_tag('label', t('menu.computers')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.computers.collect {|x| x.name + ' ' + x.ip.to_s + '<br>' }) %>
+<!-- Computers list -->
+<% if @bill.computers.size > 0 %>
+  <%= content_tag('label', t('menu.computers'), :id => 'bill-content' ) %>
+  <% content_tag :div do %>
+    <%= content_tag('ul', @bill.computers.collect {|x| x.name + '<br>' }) %>
+  <% end -%>
 <% end -%>
 
-<!-- Screens list -->
-<%= content_tag('label', t('menu.screens')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.screens.collect {|x| x.model.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
+<%= show_data(@bill.screens, @bill.screens.size, t('menu.screens')) %>
+
+<%= show_data(@bill.printers, @bill.printers.size, t('menu.printers')) %>
+
+<% if @bill.mother_boards.size > 0 %>
+  <%= content_tag('label', t('menu.motherboards'),  :id => "bill-content" ) %>
+  <% content_tag :div do %>
+    <%= content_tag('ul', @bill.mother_boards.collect {|x| x.title + ' ' + \
+        x.mark.name  + ' ' \
+        + x.serialnumber.to_s + '<br>' }) %>
+  <% end -%>
 <% end -%>
 
-<!-- Printers list -->
-<%= content_tag('label', t('menu.printers')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.printers.collect {|x| x.model.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
-<% end -%>
 
-<!-- Motherboards list -->
-<%= content_tag('label', t('menu.motherboards')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.mother_boards.collect {|x| x.title.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
-<% end -%>
+<%= show_data(@bill.harddisks, @bill.harddisks.size, t('menu.harddisks')) %>
 
-<!-- Harddisks list -->
-<%= content_tag('label', t('menu.harddisks')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.harddisks.collect {|x| x.model.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
-<% end -%>
+<%= show_data(@bill.memories, @bill.memories.size, t('menu.memories')) %>
 
-<!-- Memories list -->
-<%= content_tag('label', t('menu.memories')) %>
-<% content_tag :div do %>
-<%= content_tag ('ul', @bill.memories.collect {|x| x.model.to_s + ' ' + x.size.to_s \
-    + ' ' + x.unit + ' ' + x.serialnumber.to_s + '<br>' }) %>
-<% end -%>
+<%= show_data(@bill.cds, @bill.cds.size, t('menu.cds')) %>
 
-<!-- Cds list -->
-<%= content_tag('label', t('menu.cds')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.cds.collect {|x| x.model.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
-<% end -%>
+<%= show_data(@bill.dvds, @bill.dvds.size, t('menu.dvds')) %>
 
-<!-- Dvds list -->
-<%= content_tag('label', t('menu.dvds')) %>
-<% content_tag :div do %>
-<%= content_tag('ul', @bill.dvds.collect {|x| x.model.to_s + ' ' + x.serialnumber.to_s + '<br>' }) %>
-<% end -%>
+
 
 <%= link_to t('bill.edit'), edit_bill_path(@bill) %> |
 <%= link_to t('bill.back'), bills_path %>
