@@ -1,24 +1,27 @@
-<table>
-  <tr>
-    <th><%= t('screens.model') %></th>
-    <th><%= t('screens.sn') %></th>
-    <th><%= t('screens.mark') %></th>
-    <th>Place</th>
-    <th><%= t('screens.workstation?') %></th>
-    <th><%= t('screens.bill') %></th>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', t('screens.model')) %>
+    <%= content_tag('th', t('screens.sn')) %>
+    <%= content_tag('th', t('screens.mark')) %>
+    <%= content_tag('th', 'Place') %>
+    <%= content_tag('th', t('screens.workstation?')) %>
+    <%= content_tag('th', t('screens.inventory_register')) %>
+    <%= content_tag('th', t('screens.bill')) %>
     <th colspan='3'><%= t('common-actions.actions') %></th>
-  </tr>
-<% for screen in @screens %>
-  <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= screen.model %></td>
-    <td><%= screen.serialnumber %></td>
-    <td><%= screen.mark.name rescue nil  %></td>
-    <%= content_tag('td', link_to(screen.place.title, 'places/' + screen.place.id.to_s) ) rescue nil%>
-    <td><%= screen.is_part_of_a_workstation rescue nil %></td>
-    <td><%= link_to t('screens.bill'), 'bills/'+ screen.bill_id.to_s %></td>
-    <td><%= link_to t('common-actions.show'), screen %></td>
-    <td><%= link_to t('common-actions.edit'), edit_screen_path(screen) %></td>
-    <td><%= link_to t('common-actions.destroy'), screen, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <% end -%>
+  <% for screen in @screens %>
+   <tr  class="<%= cycle("rowA","rowB") %>">
+    <%= content_tag('td', screen.model) %>
+    <%= content_tag('td', screen.serialnumber) %>
+    <%= content_tag('td', screen.mark.name) rescue nil  %>
+    <%= content_tag('td', link_to(screen.place.title, 'places/' + screen.place.id.to_s) ) rescue nil %>
+    <%= content_tag('td', in_workstation?(screen)) rescue nil %>
+    <%= content_tag('td', screen.inventory_register) %>
+    <%= content_tag('td', link_to(t('screens.bill'), 'bills/'+ screen.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('common-actions.show'), screen)) %>
+    <%= content_tag('td', link_to(t('common-actions.edit'), edit_screen_path(screen))) %>
+    <%= content_tag('td', link_to(t('common-actions.destroy'), screen, :confirm => 'Are you sure?', :method => :delete)) %>
+   </tr>
+   <% end %>
+<% end -%>
+
