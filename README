@@ -8,8 +8,10 @@ Personal website : http://cesardiaz.com.ar/
 My blog: http://cesarediaz.blogspot.com
 
 
-   This web application is oriented to resolve the problem to organize the hardware inventory anywhere you are. If you are in a factory, an education building or your personal corporation(anywhere).  This sofware was thought for use in a building where could be necessary an adecuate information about the place where each hardware piece was and get
-information about when and who was the seller of each parts or device in hardware inventory.
+   This web application is oriented to resolve the problem to organize the hardware inventory anywhere you are.
+   If you are in a factory, an education building or your personal corporation(anywhere).  This sofware was thought
+   for use in a building where could be necessary an adecuate information about the place where each hardware
+   piece was and get information about when and who was the seller of each parts or device in hardware inventory.
    This application is available in two languages; spanish and english.
 
 This hardware has those modules.
@@ -66,6 +68,10 @@ treetop (1.2.4)
 
 Install
 
+Remember install before try to use it application the Sqlite3 support to use the application
+in 'development' or 'testing' mode. Of course you can change the database used going to change
+in '/config/database.yml' if you want use another kind of database like MySql, Postgre or another.
+
 If you got this using git into your rails web directory or your home directory
 
        user@host:~/ git clone git://github.com/cesarediaz/inventory.git my_inventory_application
@@ -112,13 +118,15 @@ http://192.168.0.10:3000
 and enjoy.
 
 
-Then, if you would like deploy this application in production mode you can choose between different web servers. It is free for your election, and those could be:
+Then, if you would like deploy this application in production mode you can choose between different web servers.
+It is free for your election, and those could be:
 
 - Nginx + Mongrel
 - LHTTPd
 - Apache
 
-Take a look to this website http://rubyonrails.org/deploy to learn how you can deploy in different modes a Ruby on Rails application.
+Take a look to this website http://rubyonrails.org/deploy to learn how you can deploy in different modes a Ruby
+on Rails application.
 
 
 
