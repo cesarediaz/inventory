@@ -10,7 +10,7 @@
   <% content_tag :div, :id => 'data-principal-device' do %>
 
   <%= content_tag('th', 'Motherboard : ') %>
-                 <%= @computer.mother_board.title  rescue nil%>
+                 <%= @computer.mother_board.model  rescue nil%>
                  <%= content_tag('br') %>
 
   <%= content_tag('th', t('computers.harddisk')) %>

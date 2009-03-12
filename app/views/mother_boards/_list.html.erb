@@ -10,7 +10,7 @@
 
    <% for mother_board in @mother_boards %>
      <tr  class="<%= cycle("rowA","rowB") %>">
-       <%= content_tag('td',mother_board.title) %>
+       <%= content_tag('td',mother_board.model) %>
        <%= content_tag('td',mother_board.serialnumber) %>
        <%= content_tag('td',mother_board.mark.name) rescue nil  %>
        <%= content_tag('td',link_to(mother_board.computer.name , 'computers/' + mother_board.computer.id.to_s))  rescue nil%>

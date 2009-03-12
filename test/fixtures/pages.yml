@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  permalink: MyString
-  content: MyText
+  name: about
+  permalink: About
+  content: 'This is an Inventory Hardware System done by Cesar Diaz signed with the GNU License'
 
 two:
-  name: MyString
-  permalink: MyString
-  content: MyText
+  name: 'developer'
+  permalink: 'Developer info'
+  content: 'You can visit my website in http://www.cesardiaz.com.ar or my blog in http://cesarediaz.blogspot.com'

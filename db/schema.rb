@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090311131747) do
+ActiveRecord::Schema.define(:version => 20090312183110) do
 
   create_table "bills", :force => true do |t|
     t.string   "code"
@@ -99,7 +99,6 @@ ActiveRecord::Schema.define(:version => 20090311131747) do
   end
 
   create_table "mother_boards", :force => true do |t|
-    t.string   "title"
     t.string   "serialnumber"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -107,6 +106,7 @@ ActiveRecord::Schema.define(:version => 20090311131747) do
     t.integer  "mark_id"
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.string   "model"
   end
 
   create_table "pages", :force => true do |t|
