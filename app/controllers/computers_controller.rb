@@ -14,6 +14,8 @@
 #
 #     You should have received a copy of the GNU General Public License
 #     along with this program. If not, see <http://www.gnu.org/licenses/>.
+require 'pdf/writer'
+require 'pdf/simpletable'
 
 require 'spreadsheet/excel'
 include Spreadsheet
@@ -21,6 +23,7 @@ include Spreadsheet
 class ComputersController < ApplicationController
   include ReportSystem
   include ChartSystem
+  include PdfReportSystem
 
   before_filter :login_required
 
@@ -153,6 +156,15 @@ class ComputersController < ApplicationController
                  'cds', 'dvds', t('computers.inventory_register')]",
                params[:places].nil? ? 'find' : params[:places],
                params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
+               )
+  end
+
+  def pdf
+    single_pdf_report(Computer.find(params[:id]),
+               "A4",
+               t('common-actions.report-of') + t('menu.computers'),
+               15,
+               'computer'
                )
   end
 

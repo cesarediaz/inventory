@@ -55,11 +55,52 @@ module PdfReportSystem
         when 'places'
           data << data_places_report(content)
         end
-
       end
 
       tab.data.replace data
       tab.render_on(pdf)
+    end
+
+    send_data pdf.render, :filename => title, :type => 'application/pdf'
+  end
+
+
+  #This method generate a pdf file to download
+  #
+  #Parameters:
+  # element: data to fill the pdf to download
+  # paper: type of paper to generate the printable file(e.g. A4,
+  #        LETTER and so on)
+  # title: title of the pdf file report
+  # font_size: size of the letters in the file
+  # pdf file if this file will show a table with data
+  #
+  #Return a .pdf file with the report
+  def single_pdf_report(element, paper, title, font_size, type)
+    pdf = PDF::Writer.new(:paper => paper)
+    pdf.select_font "Times-Roman"
+    pdf.start_page_numbering(500, 50, 10, nil, nil, 1)
+
+    pdf.image 'public/images/block-pen.jpg', :justification => :right, :resize => 0.30
+    pdf.text title, :font_size => font_size, :justification => :center, :spacing => 2
+
+    PDF::SimpleTable.new do |tab|
+      case type
+      when 'computer'
+        pdf.text t('computers.place') + ': ' + element.place.title
+        pdf.text t('computers.name') + ': ' + element.name
+        pdf.text 'Ip: ' + element.ip
+        pdf.text 'Mac: ' + element.mac
+        pdf.text element.motherboard.model rescue nil
+        pdf.text t('computers.inventory_register') +
+          ' ' + element.inventory_register rescue nil
+        element.memory.collect {|x| pdf.text t('computers.memory') + ': ' + x.model
+          + ' ' + x.size.to_s  + ' ' + x.unit.upcase }  rescue nil
+        element.harddisk.collect {|x| pdf.text t('computers.harddisk') + ': ' +  x.model
+          + ' ' + x.size.to_s + ' ' + x.unit.upcase }  rescue nil
+        element.cd.collect {|x| pdf.text 'Cd: ' + x.model + ' ' +  x.mark.name }  rescue nil
+        element.dvd.collect {|x| pdf.text 'Cd: '+ x.model + ' ' + x.mark.name }  rescue nil
+      end
     end
 
     send_data pdf.render, :filename => title, :type => 'application/pdf'

@@ -1,28 +1,13 @@
-<% content_tag :span, :id => 'bill-description' do %>
-  <!-- Company name -->
-  <%= content_tag('label', t('bill.company')) %>
-  <%= content_tag('b', @bill.company.name) rescue nil %>
-
-  <!-- Bill code -->
-  <%= content_tag('label', t('bill.code')) %>
-  <%= content_tag('b', @bill.code) %>
-
-  <!-- Bill code -->
-  <%= content_tag('label', t('bill.date')) %>
-  <%= content_tag('b', @bill.date.strftime("%d/%m/%Y")) %>
-<% end %>
-
+<%= render :partial => 'bill_head_description' %>
 
 <% 2.times do %>
 <%= content_tag('br') %>
 <% end %>
 
-
-<!-- Computers list -->
 <% if @bill.computers.size > 0 %>
   <%= content_tag('label', t('menu.computers'), :id => 'bill-content' ) %>
   <% content_tag :div do %>
-    <%= content_tag('ul', @bill.computers.collect {|x| x.name + '<br>' }) %>
+    <%= content_tag('ul', @bill.computers.collect {|x| x.name + content_tag('br')  }) %>
   <% end -%>
 <% end -%>
 
@@ -30,15 +15,7 @@
 
 <%= show_data(@bill.printers, @bill.printers.size, t('menu.printers')) %>
 
-<% if @bill.mother_boards.size > 0 %>
-  <%= content_tag('label', t('menu.motherboards'),  :id => "bill-content" ) %>
-  <% content_tag :div do %>
-    <%= content_tag('ul', @bill.mother_boards.collect {|x| x.title + ' ' + \
-        x.mark.name  + ' ' \
-        + x.serialnumber.to_s + '<br>' }) %>
-  <% end -%>
-<% end -%>
-
+<%= show_data(@bill.mother_boards, @bill.mother_boards.size, t('menu.motherboards').pluralize) %>
 
 <%= show_data(@bill.harddisks, @bill.harddisks.size, t('menu.harddisks')) %>
 
