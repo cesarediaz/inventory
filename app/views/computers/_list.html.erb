@@ -28,9 +28,9 @@
       <%= content_tag('td', in_workstation?(computer )) %>
       <%= content_tag('td', computer.inventory_register) %>
       <%= content_tag('td', link_to(t('computers.bill'), 'bills/'+ computer.bill_id.to_s)) %>
-      <td><%= link_to t('common-actions.show') , computer %></td>
-      <td><%= link_to t('common-actions.edit') , edit_computer_path(computer) %></td>
-      <td><%= link_to t('common-actions.destroy') , computer, :confirm => 'Are you sure?', :method => :delete %></td>
+      <%= content_tag('td', link_to(t('common-actions.show') , computer)) %>
+      <%= content_tag('td', link_to(t('common-actions.edit') , edit_computer_path(computer))) %>
+      <%= content_tag('td', link_to(t('common-actions.destroy') , computer, :confirm => 'Are you sure?', :method => :delete)) %>
     </tr>
   <% end %>
 <% end %>

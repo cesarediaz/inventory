@@ -1,20 +1,20 @@
 <% cache(:fragment => "computers/_stats") do %>
 <%= t('computers.stats_paragraph') %>:
 
-<div>
-  <%= link_to t('computers.all'), :controller => "computers", :action => "index" %>
-  <%= @availables_computers.count + @unavailables_computers.count %>
-</div>
+  <% content_tag :div do %>
+    <%= link_to t('computers.all'), :controller => "computers", :action => "index" %>
+    <%= @availables_computers.count + @unavailables_computers.count %>
+  <% end %>
 
-<div>
-  <%= link_to t('computers.available'), :controller => "computers", :action => "available" %>
-  <%= @availables_computers.count %>
-</div>
+  <% content_tag :div do %>
+    <%= link_to t('computers.available').pluralize, :controller => "computers", :action => "available" %>
+    <%= @availables_computers.count %>
+  <% end %>
 
-<div>
-  <%= link_to t('computers.unavailable'), :controller => "computers", :action => "unavailable" %>
-  <%= @unavailables_computers.count %>
-</div>
+  <% content_tag :div do %>
+    <%= link_to t('computers.unavailable').pluralize, :controller => "computers", :action => "unavailable" %>
+    <%= @unavailables_computers.count %>
+  <% end %>
 
 
 <%  @value = GoogleChart.pie_3d_530x200(@chart).to_url %>
