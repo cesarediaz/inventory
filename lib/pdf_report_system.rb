@@ -124,7 +124,7 @@ module PdfReportSystem
 
       tab.columns["col1"] = PDF::SimpleTable::Column.new("col1") { |col|
         col.width = 200
-        col.heading = t('places.description')
+        col.heading = t('places.name')
       }
 
       tab.columns["col2"] = PDF::SimpleTable::Column.new("col2") { |col|
