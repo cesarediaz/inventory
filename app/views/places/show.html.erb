@@ -18,6 +18,28 @@
 <%= render :partial => 'render_computers', :locals => { :account => @computers } %>
 <!-- end -->
 
+
+<!-- Rendering workdstations in place -->
+<%  @workstations = Workstation.list_for_place(params[:id]) %>
+<% if not @workstations.empty? %>
+<a href="#" onclick="Effect.toggle('list_workstations', 'appear'); return false;">
+  <%= t('common-actions.show-hide') %></a>
+|
+<%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
+:id => params[:place_id]  %>
+
+<div id='list_workstations'>
+<%= render :partial => '/workstations/list', :locals => { :workstations => @workstations } %>
+</div>
+<% else %>
+
+<div id='description' >
+  <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
+</div>
+
+<% end %>
+
+
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
 <%= link_to t('places.back'), places_path %> |
 <a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common-actions.top-page') %></a>
