@@ -1,0 +1,403 @@
+# French translations for Ruby on Rails
+# by Christian Lescuyer (christian@flyingcoders.com)
+# contributor: Sebastien Grosjean - ZenCocoon.com
+
+fr:
+  bill:
+    code: 'Code'
+    company: 'Entreprise'
+    date: 'Date de reçu'
+    edit: "Modifier"
+    create: "Ajouter"
+    back: "Rentrer"
+    new: "Ajouter nouveau quittance"
+    show: "Voir"
+    select-by-company: "Choisissez listing par entreprise"
+
+  company:
+    name: "Nom"
+    address: "Direction"
+    phone: "Téléphone"
+    fax: "Fax"
+    email: "Messagerie"
+    edit: "Modifier"
+    create: "Ajouter"
+    back: "Rentrer"
+    new: "Ajouter nouvelle empresa"
+
+  user:
+    confirm-password: "Confirmer code"
+    password: "Code"
+    language: "Langue"
+    edit: "Éditer"
+
+  inventory:
+    title: "Inventaire"
+
+  workstations:
+    computer: "PC"
+    screen: "Moniteur"
+    printer: "Imprimante"
+    action: "Action"
+    new: "Ajouter nouveau equipo"
+    create: "Ajouter"
+    edit: "Modifier"
+    place: "Lieu"
+    select_a_place: "Choisissez un lieu"
+    list_of_equipments: "Listing d'équipements dans"
+    back: "Rentrer"
+
+  computers:
+    title: "Ordinateurs"
+    name: "Nom"
+    stats_paragraph: "Dans des numéros de PC"
+    available: "Disponibles"
+    unavailable: "Non disponibles"
+    all : "Total"
+    new: "Ajouter nouvelle pc"
+    create: "Ajouter"
+    edit: "Éditer"
+    harddisk: "Disque rigide"
+    memory: "Mémoire"
+    place: "Lieu"
+    workstation?: "Poste ?"
+    back: "Rentrer"
+    y: "Si"
+    not: "Non"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  places:
+    title: "Lieu"
+    computer: "Ordinateurs"
+    screen: "Moniteures"
+    printer: "Imprimantes"
+    description: "Descripcion"
+    name: "Nom"
+    edit: "Éditer"
+    create: "Ajouter"
+    place: "Lieu"
+    select_type_of_places: "Choisissez diferentes lieus por descripcion"
+    select_one: "Choisissez una opcion"
+    back: "Rentrer"
+    new: "Ajouter lieu"
+    all: "Todos"
+    departments: "Departamentos"
+    offices: "Oficinas"
+    rooms: "Salas"
+    stores: "Almacenes"
+    confirm: "Estas seguro de eliminar este registro?"
+    graphic_stats_paragraph: "Un grafico en porcentajes de lieus"
+    graphic_stats_in_numbers: "En numeros de lieus"
+    show: "Voir"
+
+
+  motherboards:
+    model: "Modèle"
+    sn: "Numéro de Série"
+    mark: "Marque"
+    new: "Nouvelle plaque mère"
+    computer: "En pc"
+    back: "Rentrer"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  harddisks:
+    model: "Modèle"
+    sn: "Numéro de Série"
+    size : "Capacité"
+    mark: "Marque"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  memories:
+    model: "Modèle"
+    sn: "Numéro de Série"
+    size : "Capacité"
+    mark: "Marque"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  dvds:
+    model: "Modèle"
+    sn: "Numéro de Série"
+    mark: "Marque"
+    burn: "Grabadora"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  cds:
+    model: "Modèle"
+    sn: "Numéro de Série"
+    mark: "Marque"
+    burn: "Grabadora"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  screens:
+    title: "Moniteures"
+    model: "Modèle"
+    sn: "Numéro de Série"
+    mark: "Marque"
+    workstation?: "Poste ?"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  printers:
+    title: "Imprimantes"
+    model: "Modèle"
+    sn: "Numéro de Série"
+    mark: "Marque"
+    workstation?: "Poste ?"
+    bill: "Quittance"
+    inventory_register: 'Registre inventaire'
+
+  marks:
+    mark: "Marque"
+    new: "Nouvelle"
+    edit : "Éditer"
+    show : "Voir"
+    destroy: "Eliminar"
+    back: "Rentrer"
+    inventory_register: 'Registre inventaire'
+
+  common-actions:
+    actions: "Actions"
+    edit: "Modifier"
+    destroy: "Eliminar"
+    show: "Voir"
+    create: "Ajouter"
+    top-page: "Aller au début de page"
+    download-pdf: "Décharger des archives pdf"
+    download: "Décharger des archives xls"
+    download-all: "Décharger tout dans des archives xls"
+    show-hide: "Montrer/Ocultar"
+    show-hide-advice: "Montrer/Dissimuler avis"
+    hide-advice: "Dissimuler avis"
+    report-of: "Rapport de "
+
+  help-phrases:
+    in-workstation: "Ce dispositif est assigné dans un poste de travail.
+    Pour changer l'attribut Lieu il doit aller à la section Équipements."
+    stats-in-place: "Il libère : équipements qui ne font pas partie d'un poste de travail. Dans des équipes : ils intègrent un poste de travail"
+
+
+  search:
+    label: "Chercher"
+
+  stats:
+    available: "Disponibles"
+    unavailable: "En uso"
+    alone: "Libre"
+    workstation: "En equipos"
+
+  phrases:
+    list_of : "Lista de "
+    units: " unidades "
+    has: " tiene "
+    y: "si"
+    n: "no"
+
+
+  menu:
+    companies : "Empresas"
+    list-companies : "Énumérer empresas"
+    company-new : "Nouvelle"
+
+    bills : "Quittances"
+    list-bills : "Énumérer quittances"
+    bill-new : "Nouveau quittance"
+
+    users: "Usuarios"
+    users-list: "Lista de usuarios"
+    users-admin?: "Administrador?"
+    user: "Usuario : "
+
+    account : "Su cuenta"
+    new-account : "Nouvelle cuenta"
+    account-edit : "Publier des données de son compte"
+
+    workstations : "Equipos"
+    list-workstations : "Énumérer los equipos"
+    new : "Nouveau"
+    stats-workstations : "Estadisticas"
+
+    places : "Lieus"
+    list-places : "Lista de lieus"
+    new-place : "Nouveau"
+    stats-places : "Estadisticas"
+
+    #Hardware
+    computers : "Ordinateurs"
+    list-computers : "Énumérer todas las ordinateurs"
+    new-computer : "Nouvelle"
+    availables-computers : "Disponibles"
+    unavailables-computers : "No disponibles"
+    stats-computers: "Estadisticas"
+
+    #MotherBoards
+    motherboards : "Placa madre"
+    list-motherboards : "Énumérer placas madre"
+    new-motherboard : "Nouvelle"
+
+    #Harddisks
+    harddisks : "Disque rigide"
+    list-harddisks : "Énumérer disques"
+    new-harddisk : "Nouveau"
+
+    #Memories
+    memories : "Mémoires"
+    list-memories : "Énumérer mémoires"
+    new-memorie : "Nouveau"
+
+    #Dvds
+    dvds : "R/W dvds"
+    list-dvds : "Énumérer dispositifs"
+    new-dvd : "Nouveau"
+
+    #Cds
+    cds : "R/W cds"
+    list-cds : "Énumérer dispositifs"
+    new-cd : "Nouveau"
+
+    #Screens
+    screens : "Moniteurs"
+    list-screens : "Énumérer moniteurs"
+    new-screen : "Nouveau"
+
+    #Printers
+    printers : "Imprimantes"
+    list-printers : "Énumérer imprimantes"
+    new-printer : "Nouveau"
+
+    #Marks
+    marks : "Marques"
+    list-marks : "Énumérer marques"
+    new-mark : "Nouvelle"
+
+    #Login
+    login : "Ingresar"
+    logout : "Salir"
+
+    #Flash
+    flash :
+      login : "Logueado satisfactoriamente."
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
+      long_ordinal: "%e %B %Y"
+      only_day: "%e"
+
+    day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
+    abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
+    month_names: [~, janvier, fÃ©vrier, mars, avril, mai, juin, juillet, aoÃ»t, septembre, octobre, novembre, dÃ©cembre]
+    abbr_month_names: [~, jan., fÃ©v., mar., avr., mai, juin, juil., aoÃ»t, sept., oct., nov., dÃ©c.]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%d %B %Y %H:%M"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%A %d %B %Y %H:%M:%S %Z"
+      long_ordinal: "%A %d %B %Y %H:%M:%S %Z"
+      only_second: "%S"
+    am: 'am'
+    pm: 'pm'
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "une demi-minute"
+      less_than_x_seconds:
+        zero:  "moins d'une seconde"
+        one:   "moins de 1Â seconde"
+        other: "moins de {{count}}Â secondes"
+      x_seconds:
+        one:   "1Â seconde"
+        other: "{{count}}Â secondes"
+      less_than_x_minutes:
+        zero:  "moins d'une minute"
+        one:   "moins de 1Â minute"
+        other: "moins de {{count}}Â minutes"
+      x_minutes:
+        one:   "1Â minute"
+        other: "{{count}}Â minutes"
+      about_x_hours:
+        one:   "environ une heure"
+        other: "environ {{count}}Â heures"
+      x_days:
+        one:   "1Â jour"
+        other: "{{count}}Â jours"
+      about_x_months:
+        one:   "environ un mois"
+        other: "environ {{count}}Â mois"
+      x_months:
+        one:   "1Â mois"
+        other: "{{count}}Â mois"
+      about_x_years:
+        one:   "environ un an"
+        other: "environ {{count}}Â ans"
+      over_x_years:
+        one:   "plus d'un an"
+        other: "plus de {{count}}Â ans"
+    prompts:
+      year:   "AnnÃ©e"
+      month:  "Mois"
+      day:    "Jour"
+      hour:   "Heure"
+      minute: "Minute"
+      second: "Seconde"
+
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: 'Â '
+    currency:
+      format:
+        unit: 'â‚¬'
+        precision: 2
+        format: '%nÂ %u'
+    human:
+      format:
+        precision: 2
+      storage_units: [ Octet, ko, Mo, Go, To ]
+
+  support:
+    array:
+      sentence_connector: 'et'
+      skip_last_comma: true
+      word_connector: ", "
+      two_words_connector: " et "
+      last_word_connector: " et "
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "Impossible d'enregistrer {{model}}: 1 erreur"
+          other: "Impossible d'enregistrer {{model}}: {{count}} erreurs."
+        body: "Veuillez vÃ©rifier les champs suivantsÂ :"
+      messages:
+        inclusion: "n'est pas inclus(e) dans la liste"
+        exclusion: "n'est pas disponible"
+        invalid: "n'est pas valide"
+        confirmation: "ne concorde pas avec la confirmation"
+        accepted: "doit Ãªtre acceptÃ©(e)"
+        empty: "doit Ãªtre rempli(e)"
+        blank: "doit Ãªtre rempli(e)"
+        too_long: "est trop long (pas plus de {{count}} caractÃ¨res)"
+        too_short: "est trop court (au moins {{count}} caractÃ¨res)"
+        wrong_length: "ne fait pas la bonne longueur (doit comporter {{count}} caractÃ¨res)"
+        taken: "n'est pas disponible"
+        not_a_number: "n'est pas un nom"
+        greater_than: "doit Ãªtre supÃ©rieur Ã  {{count}}"
+        greater_than_or_equal_to: "doit Ãªtre supÃ©rieur ou Ã©gal Ã  {{count}}"
+        equal_to: "doit Ãªtre Ã©gal Ã  {{count}}"
+        less_than: "doit Ãªtre infÃ©rieur Ã  {{count}}"
+        less_than_or_equal_to: "doit Ãªtre infÃ©rieur ou Ã©gal Ã  {{count}}"
+        odd: "doit Ãªtre impair"
+        even: "doit Ãªtre pair"
