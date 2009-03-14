@@ -16,7 +16,7 @@
     <%= content_tag('td', printer.serialnumber) %>
     <%= content_tag('td', printer.mark.name) rescue nil  %>
     <%= content_tag('td', link_to(printer.place.title, '/places/' + printer.place.id.to_s)) rescue nil%>
-    <%= content_tag('td', in_workstation?(printer )) rescue nil %>
+    <%= content_tag('td', in_workstation?(printer, 'printer_id' )) rescue nil %>
     <%= content_tag('td', printer.inventory_register) %>
     <%= content_tag('td', link_to( t('printers.bill'), 'bills/'+ printer.bill_id.to_s)) %>
     <%= content_tag('td', link_to( t('common-actions.show'), printer)) %>

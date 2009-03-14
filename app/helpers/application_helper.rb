@@ -67,13 +67,13 @@ module ApplicationHelper
   #
   #Return: - link if value is true
   #        - no if value is false
-  def in_workstation?(value)
+  def in_workstation?(value, device)
     html = ''
     if value.is_part_of_a_workstation
       html = html +  link_to(t('phrases.y'), :controller => 'workstations',
                              :action => 'show',
                              :id => Workstation.find(:first,
-                                                     :conditions => [ "computer_id = ?", value.id]).id)
+                                                     :conditions => [ "#{device} = ?", value.id]).id)
     else
       html = html +  t('phrases.n')
     end
