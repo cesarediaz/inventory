@@ -20,24 +20,7 @@
 
 
 <!-- Rendering workdstations in place -->
-<%  @workstations = Workstation.list_for_place(params[:id]) %>
-<% if not @workstations.empty? %>
-<a href="#" onclick="Effect.toggle('list_workstations', 'appear'); return false;">
-  <%= t('common-actions.show-hide') %></a>
-|
-<%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
-:id => params[:id]  %>
-
-<% content_tag :div, :id => 'list_workstations' do %>
-<%= render :partial => '/workstations/list', :locals => { :workstations => @workstations } %>
-<% end %>
-<% else %>
-
-<% content_tag :div, :id => 'description' do %>
-  <% content_tag :div do %><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  <% end %>
-<% end %>
-
-<% end %>
+<%= render :partial => 'render_workstations' %>
 
 
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
