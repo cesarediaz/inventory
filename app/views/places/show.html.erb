@@ -26,7 +26,7 @@
   <%= t('common-actions.show-hide') %></a>
 |
 <%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
-:id => params[:place_id]  %>
+:id => params[:id]  %>
 
 <div id='list_workstations'>
 <%= render :partial => '/workstations/list', :locals => { :workstations => @workstations } %>
