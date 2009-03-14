@@ -1,10 +1,10 @@
-<h2>
+<% content_tag :h2 do %>
   <%= @name_of_place %>
-</h2>
+<% end %>
 
-<div id='right-content' >
+<% content_tag :div, :id => 'right-content' do %>
   <%= link_to t('common-actions.download-all'), :controller => 'places', :action => 'all_hardware', :id => params[:id] %>
-</div>
+<% end %>
 
 <!-- Rendering screens in place -->
 <%= render :partial => 'render_screens', :locals => { :account => @screens } %>
@@ -28,14 +28,14 @@
 <%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
 :id => params[:id]  %>
 
-<div id='list_workstations'>
+<% content_tag :div, :id => 'list_workstations' do %>
 <%= render :partial => '/workstations/list', :locals => { :workstations => @workstations } %>
-</div>
+<% end %>
 <% else %>
 
-<div id='description' >
-  <div><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  </div>
-</div>
+<% content_tag :div, :id => 'description' do %>
+  <% content_tag :div do %><%= t('workstations.list_of_equipments') %> <%= @place_name rescue nil %> :  <% end %>
+<% end %>
 
 <% end %>
 
