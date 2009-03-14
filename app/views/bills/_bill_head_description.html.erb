@@ -1,0 +1,13 @@
+<% content_tag :span, :id => 'bill-description' do %>
+  <!-- Company name -->
+  <%= content_tag('label', t('bill.company')) %>
+  <%= content_tag('b', @bill.company.name) rescue nil %>
+
+  <!-- Bill code -->
+  <%= content_tag('label', t('bill.code')) %>
+  <%= content_tag('b', @bill.code) %>
+
+  <!-- Bill code -->
+  <%= content_tag('label', t('bill.date')) %>
+  <%= content_tag('b', @bill.date.strftime("%d/%m/%Y")) %>
+<% end %>
