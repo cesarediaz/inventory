@@ -80,13 +80,17 @@ module PdfReportSystem
     pdf = PDF::Writer.new(:paper => paper)
     pdf.select_font "Times-Roman"
     pdf.start_page_numbering(500, 50, 10, nil, nil, 1)
-
+    pdf.margins_pt(30, 65, 72, 90)
     pdf.image 'public/images/block-pen.jpg', :justification => :right, :resize => 0.30
     pdf.text title, :font_size => font_size, :justification => :center, :spacing => 2
+    pdf.fill_color(Color::RGB.from_fraction(0, 0, 0.1))
+    pdf.rounded_rectangle(80, 800, 450, 40, 5)
+
 
     PDF::SimpleTable.new do |tab|
       case type
       when 'computer'
+        pdf.rectangle(60, 550, 500, 200).stroke
         pdf.text t('computers.place') + ': ' + element.place.title
         pdf.text t('computers.name') + ': ' + element.name
         pdf.text 'Ip: ' + element.ip

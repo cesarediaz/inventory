@@ -163,7 +163,7 @@ class ComputersController < ApplicationController
     single_pdf_report(Computer.find(params[:id]),
                "A4",
                t('common-actions.report-of') + t('menu.computers'),
-               15,
+               12,
                'computer'
                )
   end

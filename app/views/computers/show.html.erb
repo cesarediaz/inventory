@@ -1,6 +1,8 @@
-<%= link_to  t('common-actions.download-pdf'), :controller => 'computers',
-:action => 'pdf', :id => params[:id] %>
-
+<% content_tag :div, :id => 'right-content' do %>
+  <%= link_to  t('common-actions.download-pdf'),
+      :controller => 'computers',
+  :action => 'pdf', :id => params[:id] %>
+<% end %>
 <%= render :partial => 'computer_info' %>
 
 
