@@ -23,7 +23,7 @@ module ApplicationHelper
   # Return: html
   def advice(object, head, message)
     html = ''
-    if  #{object}
+    if  object
       html = html + '<div id="advice-quarter" >'
       html = html + "<a href=\"#\" onclick=\"Effect.toggle('advice-quarter', 'appear'); return false;\">"
       html = html +  head + '</a>'
