@@ -200,7 +200,7 @@ module ReportSystem
        page.write(row,1,object.mac)
        page.write(row,2,object.ip)
        page.write(row,3,object.available == true ? t('phrases.y') : t('phrases.n'))
-       page.write(row,4,object.mother_board.title.nil? ? t('phrases.n') : object.mother_board.title) rescue nil
+       page.write(row,4,object.mother_board.model.nil? ? t('phrases.n') : object.mother_board.model) rescue nil
        page.write(row,5,@disks)
        page.write(row,6,@memories)
        page.write(row,7,@cds)
