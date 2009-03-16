@@ -75,6 +75,7 @@ en:
     computer: "Computers"
     screen: "Screens"
     printer: "Printers"
+    workstations: "Workstations"
     description: "Description"
     name: "Name"
     create: "Create"

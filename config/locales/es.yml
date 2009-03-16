@@ -69,6 +69,7 @@ es:
     screen: "Monitores"
     printer: "Impresoras"
     description: "Descripcion"
+    workstations: "Equipos"
     name: "Nombre"
     edit: "Editar"
     create: "Agregar"

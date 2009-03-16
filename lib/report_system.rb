@@ -67,6 +67,7 @@ module ReportSystem
     get_elements('computers', 'Computer', method, param_id)
     get_elements('screens', 'Screen', method, param_id)
     get_elements('printers', 'Printer', method, param_id)
+    get_elements('workstations', 'Workstation', method, '(' + param_id + ')')
 
     row = 1
     page = workbook.add_worksheet(t('places.computer'))
@@ -78,6 +79,9 @@ module ReportSystem
 
     page = workbook.add_worksheet(t('places.printer'))
     generic_report(page, @printers, row, false)
+
+    page = workbook.add_worksheet('places.workstations')
+    workstations_report(page, @workstations)
 
     workbook.close
     send_file '#{RAILS_ROOT}#{path}'
