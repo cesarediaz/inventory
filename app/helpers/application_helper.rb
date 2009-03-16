@@ -114,4 +114,13 @@ module ApplicationHelper
     return html.to_s
   end
 
+  def set_charset
+    if logged_in? and  I18n.locale === 'fr'
+      @content = '<meta http-equiv="content-type" content= "text/html; charset=iso-8859-1" />'
+    else
+      @content = '<meta http-equiv="content-type" content= "text/html; charset=utf-8" />'
+    end
+    return @content
+  end
+
 end

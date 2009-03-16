@@ -148,6 +148,8 @@ module UsersHelper
       case current_user.language
       when 'es'
         return t('user.language') + ' : ' + image_tag("es.gif")
+      when 'fr'
+        return t('user.language') + ' : ' + image_tag("fr.gif")
       when 'en'
         return t('user.language') + ' : ' + image_tag("en.gif")
       end
