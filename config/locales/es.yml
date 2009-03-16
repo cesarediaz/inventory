@@ -197,6 +197,10 @@ es:
 
 
   menu:
+    pages: "Paginas"
+    list-pages: "Listar paginas"
+    new-page: "Nueva pagina"
+
     companies : "Empresas"
     list-companies : "Listar empresas"
     company-new : "Nueva"
