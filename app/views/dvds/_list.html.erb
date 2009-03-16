@@ -15,7 +15,7 @@
     <%= content_tag('td', dvd.mark.name) rescue nil %>
     <%= content_tag('td', check(dvd.writable) ) %>
     <%= content_tag('td', link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s))  rescue nil %>
-    <%= content_tag('td', link_to(t('computers.bill'), 'bills/'+ dvd.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('computers.bill'), '/bills/'+ dvd.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common-actions.show'), dvd )) %>
     <%= content_tag('td', link_to(t('common-actions.edit'), edit_dvd_path(dvd))) %>
     <%= content_tag('td', link_to(t('common-actions.destroy'), dvd, :confirm => 'Are you sure?', :method => :delete )) %>

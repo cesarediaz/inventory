@@ -17,7 +17,7 @@
     <%= content_tag('td',harddisk.size) rescue nil  %>
     <%= content_tag('td',harddisk.unit.to_s) rescue nil  %>
     <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s))  rescue nil%>
-    <%= content_tag('td', link_to(t('harddisks.bill'), 'bills/'+ harddisk.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('harddisks.bill'), '/bills/'+ harddisk.bill_id.to_s)) %>
     <%= content_tag('td',link_to(t('common-actions.show'), harddisk)) %>
     <%= content_tag('td',link_to(t('common-actions.edit'), edit_harddisk_path(harddisk))) %>
     <%= content_tag('td',link_to(t('common-actions.destroy'), harddisk, :confirm => 'Are you sure?', :method => :delete)) %>

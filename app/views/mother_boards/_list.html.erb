@@ -14,7 +14,7 @@
        <%= content_tag('td',mother_board.serialnumber) %>
        <%= content_tag('td',mother_board.mark.name) rescue nil  %>
        <%= content_tag('td',link_to(mother_board.computer.name , 'computers/' + mother_board.computer.id.to_s))  rescue nil%>
-       <%= content_tag('td', link_to(t('motherboards.bill'), 'bills/'+ mother_board.bill_id.to_s)) %>
+       <%= content_tag('td', link_to(t('motherboards.bill'), '/bills/'+ mother_board.bill_id.to_s)) %>
        <%= content_tag('td', link_to(t('common-actions.show'), mother_board)) %>
        <%= content_tag('td', link_to(t('common-actions.edit'), edit_mother_board_path(mother_board))) %>
        <%= content_tag('td', link_to(link_to t('common-actions.destroy'), mother_board, :confirm => 'Are you sure?', :method => :delete)) %>

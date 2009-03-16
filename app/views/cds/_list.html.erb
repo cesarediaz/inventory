@@ -15,7 +15,7 @@
     <%= content_tag('td', cd.mark.name) rescue nil  %>
     <%= content_tag('td', check(cd.writable)) %>
     <%= content_tag('td', link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s))  rescue nil %>
-    <%= content_tag('td', link_to(t('cds.bill'), 'bills/'+ cd.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('cds.bill'), '/bills/'+ cd.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common-actions.show'), cd )) %>
     <%= content_tag('td', link_to(t('common-actions.edit'), edit_cd_path(cd))) %>
     <%= content_tag('td', link_to(t('common-actions.destroy'), cd, :confirm => 'Are you sure?', :method => :delete)) %>

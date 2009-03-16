@@ -17,7 +17,7 @@
     <%= content_tag('td', link_to(screen.place.title, '/places/' + screen.place.id.to_s) ) rescue nil %>
     <%= content_tag('td', in_workstation?(screen, 'screen_id')) rescue nil%>
     <%= content_tag('td', screen.inventory_register) %>
-    <%= content_tag('td', link_to(t('screens.bill'), 'bills/'+ screen.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('screens.bill'), '/bills/'+ screen.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common-actions.show'), screen)) %>
     <%= content_tag('td', link_to(t('common-actions.edit'), edit_screen_path(screen))) %>
     <%= content_tag('td', link_to(t('common-actions.destroy'), screen, :confirm => 'Are you sure?', :method => :delete)) %>

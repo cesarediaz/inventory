@@ -18,7 +18,7 @@
     <%= content_tag('td', link_to(printer.place.title, '/places/' + printer.place.id.to_s)) rescue nil%>
     <%= content_tag('td', in_workstation?(printer, 'printer_id' )) rescue nil %>
     <%= content_tag('td', printer.inventory_register) %>
-    <%= content_tag('td', link_to( t('printers.bill'), 'bills/'+ printer.bill_id.to_s)) %>
+    <%= content_tag('td', link_to( t('printers.bill'), '/bills/'+ printer.bill_id.to_s)) %>
     <%= content_tag('td', link_to( t('common-actions.show'), printer)) %>
     <%= content_tag('td', link_to( t('common-actions.edit'), edit_printer_path(printer))) %>
     <%= content_tag('td', link_to(t('common-actions.destroy'), printer, :confirm => 'Are you sure?', :method => :delete)) %>

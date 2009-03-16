@@ -16,7 +16,7 @@
     <%= content_tag('td', memory.size) rescue nil  %>
     <%= content_tag('td', memory.unit.to_s) rescue nil  %>
     <%= content_tag('td', link_to(memory.computer.name , 'computers/' + memory.computer.id.to_s))  rescue nil%>
-    <%= content_tag('td', link_to(t('memories.bill'), 'bills/'+ memory.bill_id.to_s)) %>
+    <%= content_tag('td', link_to(t('memories.bill'), '/bills/'+ memory.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common-actions.show'), memory)) %>
     <%= content_tag('td', link_to(t('common-actions.edit'), edit_memory_path(memory))) %>
     <%= content_tag('td', link_to(t('common-actions.destroy'), memory, :confirm => 'Are you sure?', :method => :delete)) %>
