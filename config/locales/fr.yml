@@ -21,7 +21,7 @@ fr:
     email: "Messagerie"
     edit: "Modifier"
     create: "Ajouter"
-    new: "Ajouter nouvelle empresa"
+    new: "Ajouter nouvelle entreprise"
 
   user:
     confirm_password: "Confirmer code"
@@ -70,7 +70,7 @@ fr:
     screen: "Moniteures"
     printer: "Imprimantes"
     workstations: "Equipes"
-    description: "Descripcion"
+    description: "Description"
     name: "Nom"
     edit: "Éditer"
     create: "Ajouter"
@@ -78,14 +78,14 @@ fr:
     select_type_of_places: "Choisissez diferentes lieus por descripcion"
     select_one: "Choisissez una opcion"
     new: "Ajouter lieu"
-    all: "Todos"
-    departments: "Departamentos"
-    offices: "Oficinas"
-    rooms: "Salas"
-    stores: "Almacenes"
+    all: "Tous"
+    departments: "Départements"
+    offices: "Dureaus"
+    rooms: "Salle"
+    stores: "Magasin"
     confirm: "Estas seguro de eliminar este registro?"
-    graphic_stats_paragraph: "Un grafico en porcentajes de lieus"
-    graphic_stats_in_numbers: "En numeros de lieus"
+    graphic_stats_paragraph: "Un graphique dans des pourcentages de lieus"
+    graphic_stats_in_numbers: "Dans des nombres de lieus"
     show: "Voir"
 
 
@@ -186,10 +186,10 @@ fr:
     available: "Disponibles"
     unavailable: "En uso"
     alone: "Libre"
-    workstation: "En equipos"
+    workstation: "En équipements"
 
   phrases:
-    list_of : "Lista de "
+    list_of : "Liste de "
     units: " unidades "
     has: " tiene "
     y: "si"
@@ -197,40 +197,44 @@ fr:
 
 
   menu:
-    companies : "Empresas"
-    list_companies : "Énumérer empresas"
+    pages: "Pages"
+    list_pages: "Énumérer pages"
+    new_page: "Nouvelle page"
+
+    companies : "Entreprises"
+    list_companies : "Énumérer entreprises"
     company_new : "Nouvelle"
 
     bills : "Quittances"
     list_bills : "Énumérer quittances"
     bill_new : "Nouveau quittance"
 
-    users: "Usuarios"
-    users_list: "Lista de usuarios"
+    users: "Usagers"
+    users_list: "Liste de usagers"
     users_admin?: "Administrador?"
-    user: "Usuario : "
+    user: "Usager : "
 
-    account : "Su cuenta"
+    account : "Ton compte"
     new_account : "Nouvelle cuenta"
     account_edit : "Publier des données de son compte"
 
-    workstations : "Equipos"
-    list_workstations : "Énumérer los equipos"
+    workstations : "Équipements"
+    list_workstations : "Énumérer le équipements"
     new : "Nouveau"
-    stats_workstations : "Estadisticas"
+    stats_workstations : "Statistiques"
 
     places : "Lieus"
-    list_places : "Lista de lieus"
+    list_places : "Liste de lieus"
     new_place : "Nouveau"
-    stats_places : "Estadisticas"
+    stats_places : "Statistiques"
 
     #Hardware
     computers : "Ordinateurs"
     list_computers : "Énumérer todas las ordinateurs"
     new_computer : "Nouvelle"
     availables_computers : "Disponibles"
-    unavailables_computers : "No disponibles"
-    stats_computers: "Estadisticas"
+    unavailables_computers : "non disponibles"
+    stats_computers: "Statistiques"
 
     #MotherBoards
     motherboards : "Placa madre"
@@ -273,8 +277,8 @@ fr:
     new_mark : "Nouvelle"
 
     #Login
-    login : "Ingresar"
-    logout : "Salir"
+    login : "Verser"
+    logout : "Sortir"
 
     #Flash
     flash :
