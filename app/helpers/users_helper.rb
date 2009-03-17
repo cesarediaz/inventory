@@ -146,6 +146,8 @@ module UsersHelper
   def language_current_user?
     if logged_in?
       case current_user.language
+      when 'es-AR'
+        return t('user.language') + ' : ' + image_tag("argentina.gif")
       when 'es'
         return t('user.language') + ' : ' + image_tag("es.gif")
       when 'fr'

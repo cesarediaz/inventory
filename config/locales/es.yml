@@ -8,7 +8,7 @@ es:
     back: "Regresar"
     new: "Agregar nuevo recibo"
     show: "Ver"
-    select-by-company: "Seleccione listado por empresa"
+    select_by_company: "Seleccione listado por empresa"
 
   company:
     name: "Nombre"
@@ -22,7 +22,7 @@ es:
     new: "Agregar nueva empresa"
 
   user:
-    confirm-password: "Confirmar clave"
+    confirm_password: "Confirmar clave"
     password: "Clave"
     language: "Idioma"
     edit: "Editar"
@@ -158,25 +158,25 @@ es:
     back: "Regresar"
     inventory_register: 'Registro inventario'
 
-  common-actions:
+  common_actions:
     actions: "Acciones"
     edit: "Modificar"
     destroy: "Eliminar"
     show: "Ver"
     create: "Agregar"
-    top-page: "Ir al inicio de pagina"
-    download-pdf: "Descargar un archivo pdf"
+    top_page: "Ir al inicio de pagina"
+    download_pdf: "Descargar un archivo pdf"
     download: "Descargar un archivo xls"
-    download-all: "Descargar todo en un archivo xls"
-    show-hide: "Mostrar/Ocultar"
-    show-hide-advice: "Mostrar/Ocultar aviso"
-    hide-advice: "Ocultar aviso"
-    report-of: "Informe de "
+    download_all: "Descargar todo en un archivo xls"
+    show_hide: "Mostrar/Ocultar"
+    show_hide_advice: "Mostrar/Ocultar aviso"
+    hide_advice: "Ocultar aviso"
+    report_of: "Informe de "
 
-  help-phrases:
-    in-workstation: "Este dispositivo esta asignado en una estacion de trabajo.
+  help_phrases:
+    in_workstation: "Este dispositivo esta asignado en una estacion de trabajo.
                     Para cambiar el atributo Lugar debe ir a la seccion Equipos."
-    stats-in-place: "Libre: equipos que no forman parte de una estacion de trabajo.
+    stats_in_place: "Libre: equipos que no forman parte de una estacion de trabajo.
                     En equipos: integran una estacion de trabajo"
 
 
@@ -199,83 +199,83 @@ es:
 
   menu:
     pages: "Paginas"
-    list-pages: "Listar paginas"
-    new-page: "Nueva pagina"
+    list_pages: "Listar paginas"
+    new_page: "Nueva pagina"
 
     companies : "Empresas"
-    list-companies : "Listar empresas"
-    company-new : "Nueva"
+    list_companies : "Listar empresas"
+    company_new : "Nueva"
 
     bills : "Recibos"
-    list-bills : "Listar recibos"
-    bill-new : "Nuevo recibo"
+    list_bills : "Listar recibos"
+    bill_new : "Nuevo recibo"
 
     users: "Usuarios"
-    users-list: "Lista de usuarios"
-    users-admin?: "Administrador?"
+    users_list: "Lista de usuarios"
+    users_admin?: "Administrador?"
     user: "Usuario : "
 
     account : "Su cuenta"
-    new-account : "Nueva cuenta"
-    account-edit : "Editar datos de su cuenta"
+    new_account : "Nueva cuenta"
+    account_edit : "Editar datos de su cuenta"
 
     workstations : "Equipos"
-    list-workstations : "Listar los equipos"
+    list_workstations : "Listar los equipos"
     new : "Nuevo"
-    stats-workstations : "Estadisticas"
+    stats_workstations : "Estadisticas"
 
     places : "Lugares"
-    list-places : "Lista de lugares"
-    new-place : "Nuevo"
-    stats-places : "Estadisticas"
+    list_places : "Lista de lugares"
+    new_place : "Nuevo"
+    stats_places : "Estadisticas"
 
     #Hardware
     computers : "Computadoras"
-    list-computers : "Listar todas las computadoras"
-    new-computer : "Nueva"
-    availables-computers : "Disponibles"
-    unavailables-computers : "No disponibles"
-    stats-computers: "Estadisticas"
+    list_computers : "Listar todas las computadoras"
+    new_computer : "Nueva"
+    availables_computers : "Disponibles"
+    unavailables_computers : "No disponibles"
+    stats_computers: "Estadisticas"
 
     #MotherBoards
     motherboards : "Placa madre"
-    list-motherboards : "Listar placas madre"
-    new-motherboard : "Nueva"
+    list_motherboards : "Listar placas madre"
+    new_motherboard : "Nueva"
 
     #Harddisks
     harddisks : "Disco rigido"
-    list-harddisks : "Listar discos"
-    new-harddisk : "Nuevo"
+    list_harddisks : "Listar discos"
+    new_harddisk : "Nuevo"
 
     #Memories
     memories : "Memorias"
-    list-memories : "Listar memorias"
-    new-memorie : "Nuevo"
+    list_memories : "Listar memorias"
+    new_memorie : "Nuevo"
 
     #Dvds
     dvds : "R/W dvds"
-    list-dvds : "Listar dispositivos"
-    new-dvd : "Nuevo"
+    list_dvds : "Listar dispositivos"
+    new_dvd : "Nuevo"
 
     #Cds
     cds : "R/W cds"
-    list-cds : "Listar dispositivos"
-    new-cd : "Nuevo"
+    list_cds : "Listar dispositivos"
+    new_cd : "Nuevo"
 
     #Screens
     screens : "Monitores"
-    list-screens : "Listar monitores"
-    new-screen : "Nuevo"
+    list_screens : "Listar monitores"
+    new_screen : "Nuevo"
 
     #Printers
     printers : "Impresoras"
-    list-printers : "Listar impresoras"
-    new-printer : "Nuevo"
+    list_printers : "Listar impresoras"
+    new_printer : "Nuevo"
 
     #Marks
     marks : "Marcas"
-    list-marks : "Listar marcas"
-    new-mark : "Nueva"
+    list_marks : "Listar marcas"
+    new_mark : "Nueva"
 
     #Login
     login : "Ingresar"

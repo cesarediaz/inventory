@@ -1,5 +1,5 @@
 # Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# See http://github.com/svenfuchs/rails_i18n/tree/master/rails%2Flocale for starting points.
 
 en:
   bill:
@@ -11,7 +11,7 @@ en:
     back: "Back"
     new: "Add new bill"
     show: "Show"
-    select-by-company: "Select list by company"
+    select_by_company: "Select list by company"
 
   company:
     name: "Name"
@@ -25,7 +25,7 @@ en:
     new: "Add new company"
 
   user:
-    confirm-password: "Confirm password"
+    confirm_password: "Confirm password"
     password: "Password"
     language: "Language"
     edit: "Edit"
@@ -164,24 +164,24 @@ en:
     destroy: "Destroy"
     back: "Back"
 
-  common-actions:
+  common_actions:
     actions: "Actions"
     edit: "Edit"
     destroy: "Destroy"
     show: "Show"
     create: "Create"
-    top-page: "Go to top page"
-    download-pdf: "Download a pdf file"
+    top_page: "Go to top page"
+    download_pdf: "Download a pdf file"
     download: "Download a xls file"
-    download-all: "Download all in a xls file"
-    show-hide: "Show/Hide"
-    show-hideadvice: "Show/Hide advice"
-    hide-advice: "Hide advice"
-    report-of: "Report of "
+    download_all: "Download all in a xls file"
+    show_hide: "Show/Hide"
+    show_hideadvice: "Show/Hide advice"
+    hide_advice: "Hide advice"
+    report_of: "Report of "
 
-  help-phrases:
-    in-workstation: "This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations."
-    stats-in-place: "Free: equipment which are not part of a workstation.
+  help_phrases:
+    in_workstation: "This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations."
+    stats_in_place: "Free: equipment which are not part of a workstation.
                      In workstation: equipment which is in a workstation"
 
   search:
@@ -203,89 +203,89 @@ en:
   menu:
     #Pages
     pages: "Pages"
-    list-pages: "List pages"
-    new-page: "New page"
+    list_pages: "List pages"
+    new_page: "New page"
 
     #Companies
     companies : "Companies"
-    list-companies : "List of companies"
-    company-new : "New"
+    list_companies : "List of companies"
+    company_new : "New"
 
     #Bills
     bills : "Bills"
-    list-bills : "List all bills"
-    bill-new : "New bill"
+    list_bills : "List all bills"
+    bill_new : "New bill"
 
     #Users
     users: "Users"
-    users-list: "List of Users"
-    users-admin?: "Administrator?"
+    users_list: "List of Users"
+    users_admin?: "Administrator?"
     user: "User : "
 
     #Account
     account : "Your account"
-    new-account : "New account"
-    account-edit : "Edit data of your account"
+    new_account : "New account"
+    account_edit : "Edit data of your account"
 
     #Workstations
     workstations : "Workstations"
-    list-workstations : "List all workstations"
+    list_workstations : "List all workstations"
     new : "New"
-    stats-workstations : "Stats"
+    stats_workstations : "Stats"
 
     #Places
     places : "Places"
-    list-places : "List all places"
-    new-place : "New"
-    stats-places : "Stats"
+    list_places : "List all places"
+    new_place : "New"
+    stats_places : "Stats"
 
     #Hardware
     computers : "Computers"
-    list-computers : "List all computers"
-    new-computer : "New"
-    availables-computers : "Availables"
-    unavailables-computers : "Unavailables"
-    stats-computers: "Statistics"
+    list_computers : "List all computers"
+    new_computer : "New"
+    availables_computers : "Availables"
+    unavailables_computers : "Unavailables"
+    stats_computers: "Statistics"
 
     #MotherBoards
     motherboards : "Motherboards"
-    list-motherboards : "List all motherboards"
-    new-motherboard : "New"
+    list_motherboards : "List all motherboards"
+    new_motherboard : "New"
 
     #Harddisks
     harddisks : "Hard disk"
-    list-harddisks : "List hard disks"
-    new-harddisk : "New"
+    list_harddisks : "List hard disks"
+    new_harddisk : "New"
 
     #Memories
     memories : "Memories"
-    list-memories : "List memories"
-    new-memorie : "New"
+    list_memories : "List memories"
+    new_memorie : "New"
 
     #Dvds
     dvds : "R/W dvds"
-    list-dvds : "List devices"
-    new-dvd : "New"
+    list_dvds : "List devices"
+    new_dvd : "New"
 
     #Cds
     cds : "R/W cds"
-    list-cds : "List devices"
-    new-cd : "New"
+    list_cds : "List devices"
+    new_cd : "New"
 
     #Screens
     screens : "Screens"
-    list-screens : "List screens"
-    new-screen : "New"
+    list_screens : "List screens"
+    new_screen : "New"
 
     #Printers
     printers : "Printers"
-    list-printers : "Listar printers"
-    new-printer : "New"
+    list_printers : "Listar printers"
+    new_printer : "New"
 
     #Marks
     marks : "Marks"
-    list-marks : "List marks"
-    new-mark : "New"
+    list_marks : "List marks"
+    new_mark : "New"
 
     #Login
     login : "Ingresar"

@@ -1,6 +1,308 @@
 {
   :'es-AR' => {
 
+    :bill => {
+    :code => 'Nro de factura',
+    :company => 'Empresa',
+    :date => 'Fecha de facturacion',
+    :edit => "Modificar",
+    :create => "Agregar",
+    :back => "Regresar",
+    :new => "Agregar nueva factura",
+    :show => "Ver",
+    :select_by_company => "Seleccione listado por empresa",
+   },
+
+  :company => {
+    :name => "Nombre",
+    :address => "Direccion",
+    :phone => "Telefono",
+    :fax => "Fax",
+    :email => "Email",
+    :edit => "Modificar",
+    :create => "Agregar",
+    :back => "Regresar",
+    :new => "Agregar nueva empresa"},
+
+  :user =>{
+    :confirm_password => "Confirmar clave",
+    :password => "Clave",
+    :language => "Idioma",
+    :edit => "Editar",
+  },
+
+  :inventory => {
+    :title => "Inventario de hardware",
+  },
+
+  :workstations => {
+    :computer => "Pc",
+    :screen => "Monitor",
+    :printer => "Impresora",
+    :action => "Accion",
+    :new => "Agregar nuevo equipo",
+    :create => "Agregar",
+    :edit => "Modificar",
+    :place => "Lugar",
+    :select_a_place => "Seleccione un lugar",
+    :list_of_equipments => "Listado de equipos en",
+    :back => "Regresar"
+  },
+
+  :computers => {
+    :title => "Computadoras",
+    :name => "Nombre",
+    :stats_paragraph => "En numeros de pc",
+    :available => "Disponibles",
+    :unavailable => "No disponibles",
+    :all  => "Total",
+    :new => "Agregar nueva pc",
+    :create => "Agregar",
+    :edit => "Editar",
+    :harddisk => "Disco rigido",
+    :memory => "Memoria",
+    :place => "Lugar",
+    :workstation? => "Puesto?",
+    :back => "Regresar",
+    :y => "Si",
+    :not => "No",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+  :places => {
+    :title => "Lugar",
+    :computer => "Computadoras",
+    :screen => "Monitores",
+    :printer => "Impresoras",
+    :description => "Descripcion",
+    :workstations => "Equipos",
+    :name => "Nombre",
+    :edit => "Editar",
+    :create => "Agregar",
+    :place => "Lugar",
+    :select_type_of_places => "Seleccione diferentes lugares por descripcion",
+    :select_one => "Seleccione una opcion",
+    :back => "Regresar",
+    :new => "Agregar lugar",
+    :all => "Todos",
+    :departments => "Departamentos",
+    :offices => "Oficinas",
+    :rooms => "Salas",
+    :stores => "Almacenes",
+    :confirm => "Estas seguro de eliminar este registro?",
+    :graphic_stats_paragraph => "Un grafico en porcentajes de lugares",
+    :graphic_stats_in_numbers => "En numeros de lugares",
+    :show => "Ver",
+ },
+
+  :motherboards => {
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :mark => "Marca",
+    :new => "Nueva placa madre",
+    :computer => "En pc",
+    :back => "Regresar",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :harddisks => {
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :size  => "Capacidad",
+    :mark => "Marca",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :memories => {
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :size  => "Capacidad",
+    :mark => "Marca",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :dvds => {
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :mark => "Marca",
+    :burn => "Grabadora",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :cds => {
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :mark => "Marca",
+    :burn => "Grabadora",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :screens => {
+    :title => "Monitores",
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :mark => "Marca",
+    :workstation? => "Puesto?",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :printers => {
+    :title => "Impresoras",
+    :model => "Modelo",
+    :sn => "Numero de Serie",
+    :mark => "Marca",
+    :workstation? => "Puesto?",
+    :bill => "Factura",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :marks => {
+    :mark => "Marca",
+    :new => "Nueva",
+    :edit  => "Editar",
+    :show  => "Ver",
+    :destroy => "Eliminar",
+    :back => "Regresar",
+    :inventory_register => 'Registro inventario',
+  },
+
+  :common_actions => {
+    :actions => "Acciones",
+    :edit => "Modificar",
+    :destroy => "Eliminar",
+    :show => "Ver",
+    :create => "Agregar",
+    :top_page => "Ir al inicio de pagina",
+    :download_pdf => "Descargar un archivo pdf",
+    :download => "Descargar un archivo xls",
+    :download_all => "Descargar todo en un archivo xls",
+    :show_hide => "Mostrar/Ocultar",
+    :show_hide_advice => "Mostrar/Ocultar aviso",
+    :hide_advice => "Ocultar aviso",
+    :report_of => "Informe de ",
+  },
+
+
+  :help_phrases => {
+    :in_workstation => "Este dispositivo esta asignado en una estacion de trabajo.
+                    Para cambiar el atributo Lugar debe ir a la seccion Equipos.",
+    :stats_in_place => "Libre: equipos que no forman parte de una estacion de trabajo.
+                    En equipos: integran una estacion de trabajo",
+},
+
+
+ :search => {
+   :label => "Buscar",
+},
+
+ :stats => {
+   :available => "Disponibles",
+   :unavailable => "En uso",
+   :alone => "Libre",
+   :workstation => "En equipos",
+},
+
+ :phrases => {
+   :list_of  => "Lista de ",
+   :units => " unidades ",
+   :has => " tiene ",
+   :y => "si",
+   :n => "no",
+},
+
+
+ :menu => {
+   :pages => "Paginas",
+   :list_pages => "Listar paginas",
+   :new_page => "Nueva pagina",
+
+   :companies  => "Empresas",
+   :list_companies  => "Listar empresas",
+   :company_new  => "Nueva",
+
+   :bills  => "Facturas",
+   :list_bills  => "Listar facturas",
+   :bill_new  => "Nuevo factura",
+
+   :users => "Usuarios",
+   :users_list => "Lista de usuarios",
+   :users_admin? => "Administrador?",
+   :user => "Usuario  => ",
+
+   :account  => "Su cuenta",
+   :new_account  => "Nueva cuenta",
+   :account_edit  => "Editar datos de su cuenta",
+
+   :workstations  => "Equipos",
+   :list_workstations  => "Listar los equipos",
+   :new  => "Nuevo",
+   :stats_workstations  => "Estadisticas",
+
+   :places  => "Lugares",
+   :list_places  => "Lista de lugares",
+   :new_place  => "Nuevo",
+   :stats_places  => "Estadisticas",
+
+   :computers  => "Computadoras",
+   :list_computers  => "Listar todas las computadoras",
+   :new_computer  => "Nueva",
+   :availables_computers  => "Disponibles",
+   :unavailables_computers  => "No disponibles",
+   :stats_computers => "Estadisticas",
+
+    #MotherBoards
+   :motherboards  => "Placa madre",
+   :list_motherboards  => "Listar placas madre",
+   :new_motherboard  => "Nueva",
+
+    #Harddisks
+   :harddisks  => "Disco rigido",
+   :list_harddisks  => "Listar discos",
+   :new_harddisk  => "Nuevo",
+
+   #Memories
+   :memories  => "Memorias",
+   :list_memories  => "Listar memorias",
+   :new_memorie  => "Nuevo",
+
+   #Dvds
+   :dvds  => "R/W dvds",
+   :list_dvds  => "Listar dispositivos",
+   :new_dvd  => "Nuevo",
+
+   #Cds
+   :cds  => "R/W cds",
+   :list_cds  => "Listar dispositivos",
+   :new_cd  => "Nuevo",
+
+   #Screens
+   :screens  => "Monitores",
+   :list_screens  => "Listar monitores",
+   :new_screen  => "Nuevo",
+
+   #Printers
+   :printers  => "Impresoras",
+   :list_printers  => "Listar impresoras",
+   :new_printer  => "Nuevo",
+
+   #Marks
+   :marks  => "Marcas",
+   :list_marks  => "Listar marcas",
+   :new_mark  => "Nueva",
+
+   #Login
+   :login  => "Ingresar",
+   :logout  => "Salir",
+
+},
+
+
     :date => {
       :formats => {
         :default => "%e/%m/%Y",

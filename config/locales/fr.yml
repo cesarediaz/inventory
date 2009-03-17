@@ -1,6 +1,6 @@
 # French translations for Ruby on Rails
 # by Christian Lescuyer (christian@flyingcoders.com)
-# contributor: Sebastien Grosjean - ZenCocoon.com
+# contributor: Sebastien Grosjean _ ZenCocoon.com
 
 fr:
   bill:
@@ -12,7 +12,7 @@ fr:
     back: "Rentrer"
     new: "Ajouter nouveau quittance"
     show: "Voir"
-    select-by-company: "Choisissez listing par entreprise"
+    select_by_company: "Choisissez listing par entreprise"
 
   company:
     name: "Nom"
@@ -26,7 +26,7 @@ fr:
     new: "Ajouter nouvelle empresa"
 
   user:
-    confirm-password: "Confirmer code"
+    confirm_password: "Confirmer code"
     password: "Code"
     language: "Langue"
     edit: "Éditer"
@@ -162,25 +162,25 @@ fr:
     back: "Rentrer"
     inventory_register: 'Registre inventaire'
 
-  common-actions:
+  common_actions:
     actions: "Actions"
     edit: "Modifier"
     destroy: "Eliminar"
     show: "Voir"
     create: "Ajouter"
-    top-page: "Aller au début de page"
-    download-pdf: "Décharger des archives pdf"
+    top_page: "Aller au début de page"
+    download_pdf: "Décharger des archives pdf"
     download: "Décharger des archives xls"
-    download-all: "Décharger tout dans des archives xls"
-    show-hide: "Montrer/Ocultar"
-    show-hide-advice: "Montrer/Dissimuler avis"
-    hide-advice: "Dissimuler avis"
-    report-of: "Rapport de "
+    download_all: "Décharger tout dans des archives xls"
+    show_hide: "Montrer/Ocultar"
+    show_hide_advice: "Montrer/Dissimuler avis"
+    hide_advice: "Dissimuler avis"
+    report_of: "Rapport de "
 
-  help-phrases:
-    in-workstation: "Ce dispositif est assigné dans un poste de travail.
+  help_phrases:
+    in_workstation: "Ce dispositif est assigné dans un poste de travail.
     Pour changer l'attribut Lieu il doit aller à la section Équipements."
-    stats-in-place: "Il libère : équipements qui ne font pas partie d'un poste de travail. Dans des équipes : ils intègrent un poste de travail"
+    stats_in_place: "Il libère : équipements qui ne font pas partie d'un poste de travail. Dans des équipes : ils intègrent un poste de travail"
 
 
   search:
@@ -202,79 +202,79 @@ fr:
 
   menu:
     companies : "Empresas"
-    list-companies : "Énumérer empresas"
-    company-new : "Nouvelle"
+    list_companies : "Énumérer empresas"
+    company_new : "Nouvelle"
 
     bills : "Quittances"
-    list-bills : "Énumérer quittances"
-    bill-new : "Nouveau quittance"
+    list_bills : "Énumérer quittances"
+    bill_new : "Nouveau quittance"
 
     users: "Usuarios"
-    users-list: "Lista de usuarios"
-    users-admin?: "Administrador?"
+    users_list: "Lista de usuarios"
+    users_admin?: "Administrador?"
     user: "Usuario : "
 
     account : "Su cuenta"
-    new-account : "Nouvelle cuenta"
-    account-edit : "Publier des données de son compte"
+    new_account : "Nouvelle cuenta"
+    account_edit : "Publier des données de son compte"
 
     workstations : "Equipos"
-    list-workstations : "Énumérer los equipos"
+    list_workstations : "Énumérer los equipos"
     new : "Nouveau"
-    stats-workstations : "Estadisticas"
+    stats_workstations : "Estadisticas"
 
     places : "Lieus"
-    list-places : "Lista de lieus"
-    new-place : "Nouveau"
-    stats-places : "Estadisticas"
+    list_places : "Lista de lieus"
+    new_place : "Nouveau"
+    stats_places : "Estadisticas"
 
     #Hardware
     computers : "Ordinateurs"
-    list-computers : "Énumérer todas las ordinateurs"
-    new-computer : "Nouvelle"
-    availables-computers : "Disponibles"
-    unavailables-computers : "No disponibles"
-    stats-computers: "Estadisticas"
+    list_computers : "Énumérer todas las ordinateurs"
+    new_computer : "Nouvelle"
+    availables_computers : "Disponibles"
+    unavailables_computers : "No disponibles"
+    stats_computers: "Estadisticas"
 
     #MotherBoards
     motherboards : "Placa madre"
-    list-motherboards : "Énumérer placas madre"
-    new-motherboard : "Nouvelle"
+    list_motherboards : "Énumérer placas madre"
+    new_motherboard : "Nouvelle"
 
     #Harddisks
     harddisks : "Disque rigide"
-    list-harddisks : "Énumérer disques"
-    new-harddisk : "Nouveau"
+    list_harddisks : "Énumérer disques"
+    new_harddisk : "Nouveau"
 
     #Memories
     memories : "Mémoires"
-    list-memories : "Énumérer mémoires"
-    new-memorie : "Nouveau"
+    list_memories : "Énumérer mémoires"
+    new_memorie : "Nouveau"
 
     #Dvds
     dvds : "R/W dvds"
-    list-dvds : "Énumérer dispositifs"
-    new-dvd : "Nouveau"
+    list_dvds : "Énumérer dispositifs"
+    new_dvd : "Nouveau"
 
     #Cds
     cds : "R/W cds"
-    list-cds : "Énumérer dispositifs"
-    new-cd : "Nouveau"
+    list_cds : "Énumérer dispositifs"
+    new_cd : "Nouveau"
 
     #Screens
     screens : "Moniteurs"
-    list-screens : "Énumérer moniteurs"
-    new-screen : "Nouveau"
+    list_screens : "Énumérer moniteurs"
+    new_screen : "Nouveau"
 
     #Printers
     printers : "Imprimantes"
-    list-printers : "Énumérer imprimantes"
-    new-printer : "Nouveau"
+    list_printers : "Énumérer imprimantes"
+    new_printer : "Nouveau"
 
     #Marks
     marks : "Marques"
-    list-marks : "Énumérer marques"
-    new-mark : "Nouvelle"
+    list_marks : "Énumérer marques"
+    new_mark : "Nouvelle"
 
     #Login
     login : "Ingresar"

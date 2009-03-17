@@ -1,5 +1,5 @@
 <% cache(:fragment => "bills/_selector_companies") do %>
-<label><%= t('bill.select-by-company') %></label>
+<label><%= t('bill.select_by_company') %></label>
 <% @options = []
    @options << [t('places.select_one'),'select one']
    Company.find(:all).collect {|x| @options << [x.name, x.id] }
