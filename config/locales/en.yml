@@ -8,7 +8,6 @@ en:
     date: 'Date of bill'
     edit: "Modify"
     create: "Create"
-    back: "Back"
     new: "Add new bill"
     show: "Show"
     select_by_company: "Select list by company"
@@ -21,7 +20,6 @@ en:
     email: "Email"
     edit: "Edit"
     create: "Create"
-    back: "Back"
     new: "Add new company"
 
   user:
@@ -45,7 +43,7 @@ en:
     place: "Place"
     select_a_place: "Select a place"
     list_of_equipments: "List of equipments in"
-    back: "Back"
+
 
   computers:
     title: "Computers"
@@ -64,7 +62,6 @@ en:
     memory: "Memory"
     place: "Place"
     workstation?: "Workstation?"
-    back: "Back"
     y: "Yes"
     not: "Not"
     bill: "Bill"
@@ -84,7 +81,6 @@ en:
     place: "Place"
     select_type_of_places: "Select diferents places for description"
     select_one: "Select one"
-    back: "Back"
     all: "All"
     new: "New place"
     departments: "Departments"
@@ -102,7 +98,6 @@ en:
     mark: "Mark"
     new: "New motherboard"
     computer: "In computer"
-    back: "Back"
     bill: "Bill"
     inventory_register: 'Inventory register'
 
@@ -162,7 +157,7 @@ en:
     edit : "Edit"
     show : "Show"
     destroy: "Destroy"
-    back: "Back"
+
 
   common_actions:
     actions: "Actions"
@@ -170,6 +165,7 @@ en:
     destroy: "Destroy"
     show: "Show"
     create: "Create"
+    back: "Back"
     top_page: "Go to top page"
     download_pdf: "Download a pdf file"
     download: "Download a xls file"

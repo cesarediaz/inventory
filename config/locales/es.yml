@@ -5,7 +5,6 @@ es:
     date: 'Fecha de recibo'
     edit: "Modificar"
     create: "Agregar"
-    back: "Regresar"
     new: "Agregar nuevo recibo"
     show: "Ver"
     select_by_company: "Seleccione listado por empresa"
@@ -18,7 +17,6 @@ es:
     email: "Email"
     edit: "Modificar"
     create: "Agregar"
-    back: "Regresar"
     new: "Agregar nueva empresa"
 
   user:
@@ -41,7 +39,7 @@ es:
     place: "Lugar"
     select_a_place: "Seleccione un lugar"
     list_of_equipments: "Listado de equipos en"
-    back: "Regresar"
+
 
   computers:
     title: "Computadoras"
@@ -57,7 +55,6 @@ es:
     memory: "Memoria"
     place: "Lugar"
     workstation?: "Puesto?"
-    back: "Regresar"
     y: "Si"
     not: "No"
     bill: "Recibo"
@@ -76,7 +73,6 @@ es:
     place: "Lugar"
     select_type_of_places: "Seleccione diferentes lugares por descripcion"
     select_one: "Seleccione una opcion"
-    back: "Regresar"
     new: "Agregar lugar"
     all: "Todos"
     departments: "Departamentos"
@@ -95,7 +91,6 @@ es:
     mark: "Marca"
     new: "Nueva placa madre"
     computer: "En pc"
-    back: "Regresar"
     bill: "Recibo"
     inventory_register: 'Registro inventario'
 
@@ -155,7 +150,6 @@ es:
     edit : "Editar"
     show : "Ver"
     destroy: "Eliminar"
-    back: "Regresar"
     inventory_register: 'Registro inventario'
 
   common_actions:
@@ -164,6 +158,7 @@ es:
     destroy: "Eliminar"
     show: "Ver"
     create: "Agregar"
+    back: "Regresar"
     top_page: "Ir al inicio de pagina"
     download_pdf: "Descargar un archivo pdf"
     download: "Descargar un archivo xls"

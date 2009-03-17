@@ -1,28 +1,28 @@
 <p>
-  <b>Name:</b>
+  <b><%= t('company.name') %></b>
   <%=h @company.name %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b><%= t('company.address') %></b>
   <%=h @company.address %>
 </p>
 
 <p>
-  <b>Phone:</b>
+  <b><%= t('company.phone') %></b>
   <%=h @company.phone %>
 </p>
 
 <p>
-  <b>Fax:</b>
+  <b><%= t('company.fax') %></b>
   <%=h @company.fax %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%= t('company.email') %></b>
   <%=h @company.email %>
 </p>
 
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to t('common_actions.edit'), edit_company_path(@company) %> |
+<%= link_to t('common_actions.back'), companies_path %>

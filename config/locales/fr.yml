@@ -9,7 +9,6 @@ fr:
     date: 'Date de reçu'
     edit: "Modifier"
     create: "Ajouter"
-    back: "Rentrer"
     new: "Ajouter nouveau quittance"
     show: "Voir"
     select_by_company: "Choisissez listing par entreprise"
@@ -22,7 +21,6 @@ fr:
     email: "Messagerie"
     edit: "Modifier"
     create: "Ajouter"
-    back: "Rentrer"
     new: "Ajouter nouvelle empresa"
 
   user:
@@ -45,7 +43,7 @@ fr:
     place: "Lieu"
     select_a_place: "Choisissez un lieu"
     list_of_equipments: "Listing d'équipements dans"
-    back: "Rentrer"
+
 
   computers:
     title: "Ordinateurs"
@@ -61,7 +59,6 @@ fr:
     memory: "Mémoire"
     place: "Lieu"
     workstation?: "Poste ?"
-    back: "Rentrer"
     y: "Si"
     not: "Non"
     bill: "Quittance"
@@ -80,7 +77,6 @@ fr:
     place: "Lieu"
     select_type_of_places: "Choisissez diferentes lieus por descripcion"
     select_one: "Choisissez una opcion"
-    back: "Rentrer"
     new: "Ajouter lieu"
     all: "Todos"
     departments: "Departamentos"
@@ -99,7 +95,7 @@ fr:
     mark: "Marque"
     new: "Nouvelle plaque mère"
     computer: "En pc"
-    back: "Rentrer"
+
     bill: "Quittance"
     inventory_register: 'Registre inventaire'
 
@@ -159,7 +155,6 @@ fr:
     edit : "Éditer"
     show : "Voir"
     destroy: "Eliminar"
-    back: "Rentrer"
     inventory_register: 'Registre inventaire'
 
   common_actions:
@@ -168,6 +163,7 @@ fr:
     destroy: "Eliminar"
     show: "Voir"
     create: "Ajouter"
+    back: "Rentrer"
     top_page: "Aller au début de page"
     download_pdf: "Décharger des archives pdf"
     download: "Décharger des archives xls"
