@@ -24,7 +24,7 @@
 <br>
 <% end %>
 
-<%= t('dvs.inventory_register') %>
+<%= t('dvds.inventory_register') %>
 <%= f.text_field :inventory_register %>
 
 Burn <%= radio_button('dvd', 'writable', 't') %>
@@ -44,9 +44,9 @@ Not burn<%= radio_button('dvd', 'writable', 'f') %>
 
 <p>
   <% if action_name == 'new' %>
-  <%= f.submit t('common-actions.create') %>
+  <%= f.submit t('common_actions.create') %>
   <% else %>
-  <%= f.submit t('common-actions.edit') %>
+  <%= f.submit t('common_actions.edit') %>
   <% end %>
 </p>
 

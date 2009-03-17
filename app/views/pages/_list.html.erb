@@ -2,7 +2,7 @@
   <% content_tag :tr do %>
     <%= content_tag('th', 'Name') %>
     <%= content_tag('th', 'Permalink') %>
-    <th colspan='3'><%= t 'common-actions.actions' %></th>
+    <th colspan='3'><%= t 'common_actions.actions' %></th>
   <% end -%>
   <% for page in @pages %>
     <tr  class="<%= cycle("rowA","rowB") %>">
