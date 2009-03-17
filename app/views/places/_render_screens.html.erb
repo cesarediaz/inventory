@@ -1,11 +1,11 @@
 <% if not @screens.empty? %>
 <a href="#" onclick="Effect.toggle('screens', 'appear'); return false;">
-  <%= t('common-actions.show-hide') %></a>
+  <%= t('common_actions.show_hide') %></a>
 <div id="screens" style="border: solid 1px #000;">
   <div id='subtitles' >
     <%= t('phrases.list_of') + ' ' + t('places.screen') %>
     |
-    <%= link_to t('common-actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
+    <%= link_to t('common_actions.download'), :controller => 'places', :action => 'xls_screens', :id => params[:id] %>
   </div>
 
   <%= render :partial => 'screens/list' %>

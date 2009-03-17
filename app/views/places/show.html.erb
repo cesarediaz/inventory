@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_tag :div, :id => 'right-content' do %>
-  <%= link_to t('common-actions.download-all'), :controller => 'places', :action => 'all_hardware', :id => params[:id] %>
+  <%= link_to t('common_actions.download_all'), :controller => 'places', :action => 'all_hardware', :id => params[:id] %>
 <% end %>
 
 <!-- Rendering screens in place -->
@@ -25,4 +25,4 @@
 
 <%= link_to t('places.edit'), edit_place_path(@place) %> |
 <%= link_to t('places.back'), places_path %> |
-<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common-actions.top-page') %></a>
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common_actions.top_page') %></a>

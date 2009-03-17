@@ -7,7 +7,7 @@
     <%= content_tag('th', t('printers.workstation?')) %>
     <%= content_tag('th', t('printers.inventory_register')) %>
     <%= content_tag('th', t('screens.bill')) %>
-    <th colspan='3'><%= t('common-actions.actions') %></th>
+    <th colspan='3'><%= t('common_actions.actions') %></th>
     <% end %>
 
 <% for printer in @printers %>
@@ -19,9 +19,9 @@
     <%= content_tag('td', in_workstation?(printer, 'printer_id' )) rescue nil %>
     <%= content_tag('td', printer.inventory_register) %>
     <%= content_tag('td', link_to( t('printers.bill'), '/bills/'+ printer.bill_id.to_s)) %>
-    <%= content_tag('td', link_to( t('common-actions.show'), printer)) %>
-    <%= content_tag('td', link_to( t('common-actions.edit'), edit_printer_path(printer))) %>
-    <%= content_tag('td', link_to(t('common-actions.destroy'), printer, :confirm => 'Are you sure?', :method => :delete)) %>
+    <%= content_tag('td', link_to( t('common_actions.show'), printer)) %>
+    <%= content_tag('td', link_to( t('common_actions.edit'), edit_printer_path(printer))) %>
+    <%= content_tag('td', link_to(t('common_actions.destroy'), printer, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
 <% end -%>

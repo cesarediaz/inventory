@@ -6,7 +6,7 @@
     <th colspan='2'><%= t('harddisks.size') %></th>
     <%= content_tag('th', 'Pc') %>
     <%= content_tag('th', t('harddisks.bill')) %>
-    <th colspan='3'><%= t('common-actions.actions') %></th>
+    <th colspan='3'><%= t('common_actions.actions') %></th>
   </tr>
  <% end %>
 <% for harddisk in @harddisks %>
@@ -18,9 +18,9 @@
     <%= content_tag('td',harddisk.unit.to_s) rescue nil  %>
     <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s))  rescue nil%>
     <%= content_tag('td', link_to(t('harddisks.bill'), '/bills/'+ harddisk.bill_id.to_s)) %>
-    <%= content_tag('td',link_to(t('common-actions.show'), harddisk)) %>
-    <%= content_tag('td',link_to(t('common-actions.edit'), edit_harddisk_path(harddisk))) %>
-    <%= content_tag('td',link_to(t('common-actions.destroy'), harddisk, :confirm => 'Are you sure?', :method => :delete)) %>
+    <%= content_tag('td',link_to(t('common_actions.show'), harddisk)) %>
+    <%= content_tag('td',link_to(t('common_actions.edit'), edit_harddisk_path(harddisk))) %>
+    <%= content_tag('td',link_to(t('common_actions.destroy'), harddisk, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
 <% end %>

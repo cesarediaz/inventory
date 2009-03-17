@@ -7,7 +7,7 @@
     <%= content_tag('th', t('screens.workstation?')) %>
     <%= content_tag('th', t('screens.inventory_register')) %>
     <%= content_tag('th', t('screens.bill')) %>
-    <th colspan='3'><%= t('common-actions.actions') %></th>
+    <th colspan='3'><%= t('common_actions.actions') %></th>
   <% end -%>
   <% for screen in @screens %>
    <tr  class="<%= cycle("rowA","rowB") %>">
@@ -18,9 +18,9 @@
     <%= content_tag('td', in_workstation?(screen, 'screen_id')) rescue nil%>
     <%= content_tag('td', screen.inventory_register) %>
     <%= content_tag('td', link_to(t('screens.bill'), '/bills/'+ screen.bill_id.to_s)) %>
-    <%= content_tag('td', link_to(t('common-actions.show'), screen)) %>
-    <%= content_tag('td', link_to(t('common-actions.edit'), edit_screen_path(screen))) %>
-    <%= content_tag('td', link_to(t('common-actions.destroy'), screen, :confirm => 'Are you sure?', :method => :delete)) %>
+    <%= content_tag('td', link_to(t('common_actions.show'), screen)) %>
+    <%= content_tag('td', link_to(t('common_actions.edit'), edit_screen_path(screen))) %>
+    <%= content_tag('td', link_to(t('common_actions.destroy'), screen, :confirm => 'Are you sure?', :method => :delete)) %>
    </tr>
    <% end %>
 <% end -%>

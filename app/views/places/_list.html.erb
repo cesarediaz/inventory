@@ -1,9 +1,9 @@
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
-  <%= t('common-actions.show-hide') %></a>
-<div id='right-content' >
-  <%= link_to t('common-actions.download'), :controller => 'places',
+  <%= t('common_actions.show_hide') %></a>
+<div id='right_content' >
+  <%= link_to t('common_actions.download'), :controller => 'places',
   :action => 'xls_places' %> |
-  <%= link_to  t('common-actions.download-pdf'), :controller => 'places',
+  <%= link_to  t('common_actions.download_pdf'), :controller => 'places',
   :action => 'pdf' %>
 </div>
 <div id='toggle_appear_table_list_places' >
@@ -16,7 +16,7 @@
         <%= content_tag('th', t('places.computer')) %>
         <%= content_tag('th', t('places.screen')) %>
         <%= content_tag('th', t('places.printer')) %>
-        <th colspan='3'><%= t('common-actions.actions') %></th>
+        <th colspan='3'><%= t('common_actions.actions') %></th>
       </tr>
       <% for place in @places %>
       <tr  class="<%= cycle("rowA","rowB") %>">
@@ -25,9 +25,9 @@
         <td><%= place.computer.count %></td>
         <td><%= place.screen.count %></td>
         <td><%= place.printer.count %></td>
-        <td><%= link_to t('common-actions.show'), place %></td>
-        <td><%= link_to t('common-actions.edit'), edit_place_path(place) %></td>
-        <td><%= link_to t('common-actions.destroy'), place, :confirm => 'Are you sure?', :method => :delete %></td>
+        <td><%= link_to t('common_actions.show'), place %></td>
+        <td><%= link_to t('common_actions.edit'), edit_place_path(place) %></td>
+        <td><%= link_to t('common_actions.destroy'), place, :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>
       <% end %>
     </table>

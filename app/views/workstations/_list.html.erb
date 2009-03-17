@@ -17,8 +17,8 @@
     <td><%= @s rescue nil  %></td>
     <td><%= @p rescue nil  %></td>
     <%= content_tag('td', link_to(@place.title, '/places/' + @place.id.to_s) ) rescue nil%>
-    <td><%= link_to t('common-actions.edit') , edit_workstation_path(workstation) %></td>
-    <td><%= link_to t('common-actions.destroy'), workstation, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('common_actions.edit') , edit_workstation_path(workstation) %></td>
+    <td><%= link_to t('common_actions.destroy'), workstation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
   <% end %>
 </table>

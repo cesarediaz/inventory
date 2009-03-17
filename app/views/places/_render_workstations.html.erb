@@ -1,11 +1,11 @@
 <a href="#" onclick="Effect.toggle('list_workstations', 'appear'); return false;">
-  <%= t('common-actions.show-hide') %></a>
+  <%= t('common_actions.show_hide') %></a>
 
 <% content_tag :div, :style => 'border: solid 1px #000;' do %>
   <%  @workstations = Workstation.list_for_place(params[:id]) %>
   <% if not @workstations.empty? %>
   <%= t('phrases.list_of') + ' ' + t('menu.workstations') %> |
-    <%= link_to t('common-actions.download'), :controller => 'workstations', :action => 'xls_workstations',
+    <%= link_to t('common_actions.download'), :controller => 'workstations', :action => 'xls_workstations',
     :id => params[:id]  %>
     <% content_tag :div, :id => 'list_workstations' do %>
        <%= render :partial => '/workstations/list', :locals => { :workstations => @workstations } %>
