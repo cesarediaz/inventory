@@ -222,6 +222,7 @@ fr:
     list_workstations : "Énumérer le équipements"
     new : "Nouveau"
     stats_workstations : "Statistiques"
+    change_place: 'Changer lieu'
 
     places : "Lieus"
     list_places : "Liste de lieus"

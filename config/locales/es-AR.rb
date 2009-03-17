@@ -238,6 +238,7 @@
    :list_workstations  => "Listar los equipos",
    :new  => "Nuevo",
    :stats_workstations  => "Estadisticas",
+   :change_place => 'Cambiar ubicacion',
 
    :places  => "Lugares",
    :list_places  => "Lista de lugares",

@@ -218,6 +218,7 @@ es:
     list_workstations : "Listar los equipos"
     new : "Nuevo"
     stats_workstations : "Estadisticas"
+    change_place: 'Cambiar de lugar'
 
     places : "Lugares"
     list_places : "Lista de lugares"

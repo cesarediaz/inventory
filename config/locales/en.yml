@@ -228,6 +228,7 @@ en:
     list_workstations : "List all workstations"
     new : "New"
     stats_workstations : "Stats"
+    change_place: 'Change place'
 
     #Places
     places : "Places"
