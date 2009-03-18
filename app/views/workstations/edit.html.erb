@@ -1,3 +1,9 @@
+<%= render :partial => 'detailed_info_of_workstation' %>
+
+<% 2.times do %>
+<br>
+<% end %>
+
 <% form_for(@workstation) do |f| %>
 <%= f.error_messages %>
  <h3> <%= t('menu.change_place') %> </h3>
