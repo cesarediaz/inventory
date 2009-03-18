@@ -1,15 +1,14 @@
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
   <%= t('common_actions.show_hide') %></a>
-<div id='right_content' >
+<% content_tag :div, :id => 'right-content' do %>
   <%= link_to t('common_actions.download'), :controller => 'places',
   :action => 'xls_places' %> |
   <%= link_to  t('common_actions.download_pdf'), :controller => 'places',
   :action => 'pdf' %>
-</div>
-<div id='toggle_appear_table_list_places' >
-  <div>
+<% end -%>
+<% content_tag :div, :id => 'toggle_appear_table_list_places' do %>
     <h2><%= t('phrases.list_of') + t('menu.places') %></h2>
-    <table>
+    <% content_tag :table do %>
       <tr>
         <%= content_tag('th', t('places.name')) %>
         <%= content_tag('th', t('places.description')) %>
@@ -20,16 +19,17 @@
       </tr>
       <% for place in @places %>
       <tr  class="<%= cycle("rowA","rowB") %>">
-        <td><%= link_to place.title, place %></td>
-        <td><%= which_type_of_place_is?(place.description) %></td>
-        <td><%= place.computer.count %></td>
-        <td><%= place.screen.count %></td>
-        <td><%= place.printer.count %></td>
-        <td><%= link_to t('common_actions.show'), place %></td>
-        <td><%= link_to t('common_actions.edit'), edit_place_path(place) %></td>
-        <td><%= link_to t('common_actions.destroy'), place, :confirm => 'Are you sure?', :method => :delete %></td>
+        <%= content_tag('td', link_to(place.title, place)) %>
+        <%= content_tag('td', which_type_of_place_is?(place.description)) %>
+        <%= content_tag('td', place.computer.count) %>
+        <%= content_tag('td', place.screen.count) %>
+        <%= content_tag('td', place.printer.count) %>
+        <%= content_tag('td', link_to(t('common_actions.show'), place)) %>
+        <%= content_tag('td', link_to(t('common_actions.edit'), edit_place_path(place))) %>
+        <%= content_tag('td', link_to(t('common_actions.destroy'), place,
+            :confirm => 'Are you sure?', :method => :delete)) %>
       </tr>
       <% end %>
-    </table>
-  </div>
-</div>
+    <% end -%>
+
+<% end -%>
