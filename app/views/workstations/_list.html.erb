@@ -1,25 +1,25 @@
 <% if not @workstations.empty? %>
-<table>
-  <tr>
-    <th><%= t 'workstations.computer' %></th>
-    <th><%= t 'workstations.screen' %></th>
-    <th><%= t 'workstations.printer' %></th>
-    <th>Place</th>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+  <%= content_tag('th', t('workstations.computer')) %>
+    <%= content_tag('th', t('workstations.screen')) %>
+    <%= content_tag('th', t('workstations.printer')) %>
+    <%= content_tag('th', 'Place') %>
     <th colspan='3'><%= t 'workstations.action' %></th>
-  </tr>
+  <% end -%>
   <% for workstation in @workstations %>
   <% @c = Computer.find(workstation.computer_id).name rescue nil %>
   <% @s = Screen.find(workstation.screen_id).model rescue nil %>
   <% @p = Printer.find(workstation.printer_id).model  rescue nil %>
   <% @place = Place.find(workstation.place_id)  rescue nil %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= @c rescue nil  %></td>
-    <td><%= @s rescue nil  %></td>
-    <td><%= @p rescue nil  %></td>
+    <%= content_tag('td', @c) rescue nil %>
+    <%= content_tag('td', @s) rescue nil %>
+    <%= content_tag('td', @p) rescue nil %>
     <%= content_tag('td', link_to(@place.title, '/places/' + @place.id.to_s) ) rescue nil%>
-    <td><%= link_to t('common_actions.edit') , edit_workstation_path(workstation) %></td>
-    <td><%= link_to t('common_actions.destroy'), workstation, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td', link_to(t('common_actions.edit') , edit_workstation_path(workstation))) %>
+    <%= content_tag('td', link_to(t('common_actions.destroy'), workstation, :confirm => 'Are you sure?', :method => :delete )) %>
   </tr>
   <% end %>
-</table>
-<% end %>
+  <% end %>
+<% end -%>
