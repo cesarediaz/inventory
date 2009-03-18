@@ -227,14 +227,14 @@ en:
     workstations : "Workstations"
     list_workstations : "List all workstations"
     new : "New"
-    stats_workstations : "Stats"
+    stats_workstations : "Statistics"
     change_place: 'Change place'
 
     #Places
     places : "Places"
     list_places : "List all places"
     new_place : "New"
-    stats_places : "Stats"
+    stats_places : "Statistics"
 
     #Hardware
     computers : "Computers"
