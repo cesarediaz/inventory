@@ -162,7 +162,7 @@ class ComputersController < ApplicationController
   def pdf
     single_pdf_report(Computer.find(params[:id]),
                "A4",
-               t('common-actions.report-of') + t('menu.computers'),
+               t('common_actions.report_of') + t('menu.computers'),
                12,
                'computer'
                )
