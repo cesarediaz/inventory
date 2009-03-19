@@ -1,27 +1,39 @@
-<%= render :partial => 'detailed_info_of_workstation' %>
+<% content_tag :table do %>
 
-<% 2.times do %>
-<br>
-<% end %>
+  <% content_tag :tr, :valign => 'top' do %>
 
-<% form_for(@workstation) do |f| %>
-<%= f.error_messages %>
- <h3> <%= t('menu.change_place') %> </h3>
-<div id='quarter' >
-  <%= t('phrases.list_of') + t('menu.places') %>
-  <%= collection_select(:workstation, :place_id, Place.find(:all, :order => 'title'), :id, :title,{},
-    {:prompt => true, :size => Place.all.count + 1 }) %>
-</div>
 
-<p>
-  <% if action_name == 'new' %>
-  <%= f.submit t('workstations.create') %>
-  <% else %>
-  <%= f.submit t('workstations.edit') %>
+     <!--    List of data for the workstations -->
+     <% content_tag :td, :width => '80%' do %>
+        <%=  render :partial => 'detailed_info_of_workstation' %>
+     <% end %>
+
+
+     <!--    Form with list of places  -->
+     <% content_tag :td do %>
+
+       <% form_for(@workstation) do |f| %>
+          <%= f.error_messages %>
+
+          <%= content_tag('h3',t('menu.change_place')) %>
+
+          <%= t('phrases.list_of') + t('menu.places') %>
+          <%= collection_select(:workstation, :place_id, Place.find(:all, :order => 'title'), :id, :title,{},
+          {:prompt => true, :size => Place.all.count + 1 }) %>
+
+          <% if action_name == 'new' %>
+             <%= f.submit t('workstations.create') %>
+          <% else %>
+             <%= f.submit t('workstations.edit') %>
+          <% end %>
+
+       <% end %>
+
+     <% end %>
+
   <% end %>
-</p>
 
-<% end %>
+<% end -%>
 
 <%= link_to t('common_actions.show'), @workstation %> |
 <%= link_to t('common_actions.back'), workstations_path %>
