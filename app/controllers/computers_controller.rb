@@ -133,17 +133,33 @@ class ComputersController < ApplicationController
   end
 
   def stats
+    @graph = open_flash_chart_object(600,300,"/computers/graph_statistics/show")
     @availables_computers = availables_computers
     @unavailables_computers = unavailables_computers
-    google_chart([Computer.available.count, Computer.unavailable.count],
-                 [t('stats.available'), t('stats.unavailable')],
-                 Computer.find(:all).count, 'chart',
-                 t('computers.title')
-                 )
+
     render :action => "stats", :layout => "primary-content"
 
   end
 
+  def graph_statistics
+    pie_values
+    title = Title.new(t('computers.stats_paragraph'))
+
+    pie = Pie.new
+    pie.start_angle = 35
+    pie.animate = true
+    pie.tooltip = '#val# de #total#<br>#percent# del 100%'
+    pie.colours = ["#5858FA", "#FF0080"]
+    pie.values  = @pie_values
+
+    chart = OpenFlashChart.new
+    chart.title = title
+    chart.add_element(pie)
+
+    chart.x_axis = nil
+
+    render :text => chart.to_s
+  end
 
   def xls_computers
     xls_report('/public/xls/' +
@@ -189,6 +205,18 @@ class ComputersController < ApplicationController
                                    :page => params[:page],
                                    :per_page => PER_PAGE,
                                    :order => 'created_at DESC')
+  end
+
+  def pie_values
+    @pie_values = []
+    Computer.available unless @pie_values <<
+      PieValue.new(Computer.available.count,t('stats.available').pluralize \
+                                                         + '('+ Computer.available.count.to_s + ')')
+
+
+    Computer.unavailable unless @pie_values <<
+      PieValue.new(Computer.unavailable.count,t('stats.unavailable').pluralize \
+                                                         + '('+ Computer.unavailable.count.to_s + ')')
   end
 
 end

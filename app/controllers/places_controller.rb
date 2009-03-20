@@ -36,11 +36,6 @@ class PlacesController < ApplicationController
                                :page => params[:page],
                                :per_page => PER_PAGE,
                                :order => 'created_at DESC')
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @places}
-    end
   end
 
   # GET /places/1
@@ -214,17 +209,27 @@ class PlacesController < ApplicationController
   end
 
   def stats
-    google_chart([Place.departments.count,
-                  Place.offices.count,
-                  Place.stores.count,
-                  Place.rooms.count],
-                 [t('places.departments'),
-                  t('places.offices'),
-                  t('places.stores'),
-                  t('places.rooms')
-                 ],
-                 Place.find(:all).count,
-                 'chart', t('places.graphic_stats_paragraph'))
+    @graph = open_flash_chart_object(500,250,"/places/graph_statistics/show")
+  end
+
+  def graph_statistics
+    pie_values
+    title = Title.new(t('places.graphic_stats_paragraph'))
+
+    pie = Pie.new
+    pie.start_angle = 35
+    pie.animate = true
+    pie.tooltip = '#val# de #total#<br>#percent# del 100%'
+    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.values  = @pie_values
+
+    chart = OpenFlashChart.new
+    chart.title = title
+    chart.add_element(pie)
+
+    chart.x_axis = nil
+
+    render :text => chart.to_s
   end
 
   def pdf
@@ -237,4 +242,21 @@ class PlacesController < ApplicationController
                )
   end
 
+
+  private
+
+  def pie_values
+    @pie_values = []
+    Place.departments unless @pie_values << PieValue.new(Place.departments.count,t('places.departments') \
+                                                         + '('+ Place.departments.count.to_s + ')')
+
+    Place.offices unless @pie_values << PieValue.new(Place.offices.count,t('places.offices') \
+                                                     + '('+ Place.offices.count.to_s + ')')
+
+    Place.stores unless @pie_values << PieValue.new(Place.stores.count,t('places.stores') \
+                                                    + '('+ Place.stores.count.to_s + ')')
+
+    Place.rooms unless @pie_values << PieValue.new(Place.rooms.count, t('places.rooms') \
+                                                   + '('+ Place.rooms.count.to_s + ')')
+  end
 end

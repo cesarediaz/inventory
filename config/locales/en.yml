@@ -184,8 +184,8 @@ en:
     label: "Search"
 
   stats:
-    available: "Disponibles"
-    unavailable: "No disponibles"
+    available: "Available"
+    unavailable: "Unavailable"
     alone: "Alone"
     workstation: "In station"
 
