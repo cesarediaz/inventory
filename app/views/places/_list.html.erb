@@ -7,7 +7,9 @@
   :action => 'pdf' %>
 <% end -%>
 <% content_tag :div, :id => 'toggle_appear_table_list_places' do %>
-    <h2><%= t('phrases.list_of') + t('menu.places') %></h2>
+    <% content_tag :h2 do %>
+     <%= t('phrases.list_of') + t('menu.places').downcase %>
+    <% end -%>
     <% content_tag :table do %>
       <tr>
         <%= content_tag('th', t('places.name')) %>
