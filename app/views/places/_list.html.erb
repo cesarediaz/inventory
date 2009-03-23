@@ -17,6 +17,7 @@
         <%= content_tag('th', t('places.computer')) %>
         <%= content_tag('th', t('places.screen')) %>
         <%= content_tag('th', t('places.printer')) %>
+        <%= content_tag('th', t('places.workstations')) %>
         <th colspan='3'><%= t('common_actions.actions') %></th>
       </tr>
       <% for place in @places %>
@@ -26,6 +27,7 @@
         <%= content_tag('td', place.computer.count) %>
         <%= content_tag('td', place.screen.count) %>
         <%= content_tag('td', place.printer.count) %>
+        <%= content_tag('td', Workstation.list_for_place(place.id).count) %>
         <%= content_tag('td', link_to(t('common_actions.show'), place)) %>
         <%= content_tag('td', link_to(t('common_actions.edit'), edit_place_path(place))) %>
         <%= content_tag('td', link_to(t('common_actions.destroy'), place,
