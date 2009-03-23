@@ -239,6 +239,7 @@ module ReportSystem
        page.write(row,2,object.computer.count)
        page.write(row,3,object.screen.count)
        page.write(row,4,object.printer.count)
+       page.write(row,5,Workstation.list_for_place(object.id).count.to_s)
        row += 1
      end
   end
