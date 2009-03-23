@@ -122,30 +122,35 @@ module PdfReportSystem
     tab.text_color = Color::RGB::Black
     tab.show_lines = :none
 
-      tab.columns["col1"] = PDF::SimpleTable::Column.new("col1") { |col|
-        col.width = 200
-        col.heading = t('places.name')
-      }
+    tab.columns["col1"] = PDF::SimpleTable::Column.new("col1") { |col|
+      col.width = 160
+      col.heading = t('places.name')
+    }
 
-      tab.columns["col2"] = PDF::SimpleTable::Column.new("col2") { |col|
-        col.width = 80
-        col.heading = t('places.description')
-      }
+    tab.columns["col2"] = PDF::SimpleTable::Column.new("col2") { |col|
+      col.width = 70
+      col.heading = t('places.description')
+    }
 
-      tab.columns["col3"] = PDF::SimpleTable::Column.new("col2") { |col|
-        col.width = 80
-        col.heading = t('places.computer')
-      }
-
-      tab.columns["col4"] = PDF::SimpleTable::Column.new("col4") { |col|
-        col.width = 80
-        col.heading = t('places.screen')
-      }
-
-      tab.columns["col5"] = PDF::SimpleTable::Column.new("col5") { |col|
+    tab.columns["col3"] = PDF::SimpleTable::Column.new("col2") { |col|
       col.width = 80
-        col.heading = t('places.printer')
-      }
+      col.heading = t('places.computer')
+    }
+
+    tab.columns["col4"] = PDF::SimpleTable::Column.new("col4") { |col|
+      col.width = 70
+      col.heading = t('places.screen')
+    }
+
+    tab.columns["col5"] = PDF::SimpleTable::Column.new("col5") { |col|
+      col.width = 80
+      col.heading = t('places.printer')
+    }
+
+    tab.columns["col6"] = PDF::SimpleTable::Column.new("col6") { |col|
+      col.width = 80
+      col.heading = t('places.workstations')
+    }
   end
 
   #Data to fill each column in the report
@@ -157,7 +162,7 @@ module PdfReportSystem
   def data_places_report(content)
     { "col1" => "#{content.title}", "col2" => "#{content.description}" \
         , "col3" => "#{content.computer.count}", "col4" => "#{content.screen.count}" \
-        , "col5" => "#{content.printer.count}"}
+        , "col5" => "#{content.printer.count}", "col6" => Workstation.list_for_place(content.id).count.to_s}
   end
 
 
