@@ -13,7 +13,7 @@
     <%= content_tag('th', t('computers.inventory_register')) %>
     <%= content_tag('th', t('computers.bill')) %>
     <th colspan='3'><%= t 'common_actions.actions' %></th>
-  <% end %>
+  <% end -%>
   <% for computer in @computers %>
     <tr  class="<%= cycle("rowA","rowB") %>">
       <%= content_tag('td', computer.name) %>

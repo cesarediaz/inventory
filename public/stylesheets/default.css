@@ -392,6 +392,17 @@ table
     padding: 2.5em 2.5em 1.5em 2.5em;
 }
 
+#show
+{
+    background-color: #FFF;
+    width: 90%;
+    color: #000;
+    float: left;
+    padding: 0.1em 0em 0.1em 0em;
+    margin:0px 0px 1px 40px;
+    font-size: 10pt;
+}
+
 /* Secondary Content */
 
 #secondaryContent

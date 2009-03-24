@@ -1,7 +1,9 @@
-<%= link_to t('common_actions.download'), :controller => 'bills',
-:action => 'xls' %> |
-<%= link_to  t('common_actions.download_pdf'), :controller => 'bills',
-:action => 'pdf' %>
+<% if @bills.count > 0 %>
+  <%= link_to t('common_actions.download'), :controller => 'bills',
+  :action => 'xls' %> |
+  <%= link_to  t('common_actions.download_pdf'), :controller => 'bills',
+  :action => 'pdf' %>
+<% end %>
 
 <% content_tag :table do %>
   <% content_tag :tr do %>

@@ -1,37 +1,38 @@
 <!-- Computer info -->
 
+<% content_tag :div, :id => 'show' do %>
 <%= content_tag('div', t('computers.place')) %>
 <%= content_tag('div', link_to(@computer.place.title, '/places/' + @computer.place.id.to_s) ) rescue nil%>
-<%= show_info(t('computers.name'), 'principal-device', 'Computer', @computer.id, 'name') %>
-<%= show_info('Ip', 'data-principal-device', 'Computer', @computer.id, 'ip') %>
-<%= show_info('Mac', 'data-principal-device', 'Computer', @computer.id, 'mac') %>
-<%= show_info(t('computers.inventory_register'), 'data-principal-device',
+<%= show_info(t('computers.name'), 'show', 'Computer', @computer.id, 'name') %>
+<%= show_info('Ip', 'show', 'Computer', @computer.id, 'ip') %>
+<%= show_info('Mac', 'show', 'Computer', @computer.id, 'mac') %>
+<%= show_info(t('computers.inventory_register'), 'show',
     'Computer', @computer.id, 'inventory_register') %>
 
+  <% content_tag :div, :id => 'show' do %>
 
-
-  <% content_tag :div, :id => 'data-principal-device' do %>
-
-  <%= content_tag('th', 'Motherboard : ') %>
+  <%= content_tag('div', 'Motherboard : ') %>
                  <%= @computer.mother_board.model  rescue nil%>
                  <%= content_tag('br') %>
 
-  <%= content_tag('th', t('computers.harddisk')) %>
+  <%= content_tag('div', t('computers.harddisk')) %>
                  <%= @computer.harddisk.collect {|x| x.model + ' ' + x.size.to_s +
                      ' ' + x.unit.upcase + '<br>' }  rescue nil%>
 
-  <%= content_tag('th', t('computers.memory')) %>
+  <%= content_tag('div', t('computers.memory')) %>
                  <%= @computer.memory.collect {|x| x.model +  ' ' + x.size.to_s +
                      ' ' + x.unit.upcase + '<br>' }  rescue nil %>
 
-  <%= content_tag('th', 'Cd :') %>
+  <%= content_tag('div', 'Cd :') %>
                  <%= @computer.cd.collect {|x| x.model + '<br>' }  rescue nil %>
 
-  <%= content_tag('th', 'Dvd :') %>
+  <%= content_tag('div', 'Dvd :') %>
                  <%= @computer.dvd.collect {|x| x.model + '<br>' }  rescue nil %>
 
 <% end -%>
 
-<% 6.times do %>
+<%= content_tag('div', t('computers.available') + ':' + check(@computer.available)) %>
+<% end -%>
+<% 10.times do %>
 <br>
 <% end %>
