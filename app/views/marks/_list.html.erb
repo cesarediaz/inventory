@@ -7,8 +7,8 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', mark.name) %>
     <%= content_tag('td', link_to(t('common_actions.show'), mark)) %>
-    <td><%= link_to t('common_actions.edit'), edit_mark_path(mark) %></td>
-    <td><%= link_to t('common_actions.destroy'), mark, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%= content_tag('td', link_to(t('common_actions.edit'), edit_mark_path(mark))) %>
+    <%= content_tag('td', link_to(t('common_actions.destroy'), mark, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
 <% end %>
