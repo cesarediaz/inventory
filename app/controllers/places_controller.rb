@@ -42,9 +42,18 @@ class PlacesController < ApplicationController
   # GET /places/1.xml
   def show
     @place = Place.find(params[:id])
-    @computers = Computer.list_for_place(@place.id)
-    @screens = Screen.list_for_place(@place.id)
-    @printers = Printer.list_for_place(@place.id)
+    @computers = Computer.list_for_place(@place.id).paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
+    @screens = Screen.list_for_place(@place.id).paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
+    @printers = Printer.list_for_place(@place.id).paginate(
+                               :page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
     @name_of_place = @place.title
     render :action => "show", :layout => "primary-content"
   end

@@ -5,7 +5,7 @@ one:
   model: Laser 1100
   serialnumber: 1212324000
   mark_id : 1
-  place_id: 1
+  place_id: 2
   inventory_register : 41242445654
 
 two:
@@ -13,7 +13,7 @@ two:
   model: HP Deskjet 690
   serialnumber: 1212324001
   mark_id : 1
-  place_id: 1
+  place_id: 2
   inventory_register : 4245565465
 
 three:
@@ -21,5 +21,5 @@ three:
   model: HP 800
   serialnumber: 1212324002
   mark_id : 1
-  place_id: 1
+  place_id: 2
   inventory_register : 3254576756

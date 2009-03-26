@@ -8,14 +8,17 @@
 
 <!-- Rendering screens in place -->
 <%= render :partial => 'render_screens', :locals => { :account => @screens } %>
+<%= will_paginate @screens %>
 <!-- end -->
 
 <!-- Rendering printers in place -->
 <%= render :partial => 'render_printers', :locals => { :account => @printers } %>
+<%= will_paginate @printers %>
 <!-- end -->
 
 <!-- Rendering computers in place -->
 <%= render :partial => 'render_computers', :locals => { :account => @computers } %>
+<%= will_paginate @computers %>
 <!-- end -->
 
 

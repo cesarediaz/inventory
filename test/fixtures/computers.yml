@@ -62,7 +62,7 @@ six:
 
 seven:
   id: 7
-  name: computer_three
+  name: computer_seven
   mac: '13:23:43:15:53:36'
   ip: 132.54.23.66
   place_id: 5
@@ -109,3 +109,74 @@ eleven:
   available: false
   is_part_of_a_workstation: false
   inventory_register : 35534535354
+
+twelve:
+  id: 12
+  name: computer_twelve
+  mac: '13:23:43:15:53:41'
+  ip: 132.54.23.71
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35534535434
+
+thirteen:
+  id: 13
+  name: computer_thirteen
+  mac: '13:23:43:15:53:42'
+  ip: 132.54.23.72
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35534535444
+
+fourteen:
+  id: 14
+  name: computer_fourteen
+  mac: '13:23:43:15:53:43'
+  ip: 132.54.23.73
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35534535222
+
+fifteen:
+  id: 15
+  name: computer_fifteen
+  mac: '13:23:43:15:53:44'
+  ip: 132.54.23.74
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35554535434
+
+sixteen:
+  id: 16
+  name: computer_sixteen
+  mac: '13:23:43:15:53:45'
+  ip: 132.54.23.75
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35554665434
+
+eigthteen:
+  id: 18
+  name: computer_eigthteen
+  mac: '13:23:43:15:53:46'
+  ip: 132.54.23.76
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35554665466
+
+nineteen:
+  id: 19
+  name: computer_nineteen
+  mac: '13:23:43:15:53:47'
+  ip: 132.54.23.77
+  place_id: 2
+  available: false
+  is_part_of_a_workstation: false
+  inventory_register : 35554665477
+
