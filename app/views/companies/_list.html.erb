@@ -1,19 +1,19 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
-    <%= content_tag('th', t('company.name')) %>
+    <%= content_tag('th', t('company.name'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('company.address')) %>
     <%= content_tag('th', t('company.phone')) %>
     <%= content_tag('th', t('company.fax')) %>
     <%= content_tag('th', t('company.email')) %>
-    <th colspan='3'><%= t 'common_actions.actions' %></th>
+    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end -%>
 <% for company in @companies %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', company.name) %>
-    <%= content_tag('td', company.address) %>
-    <%= content_tag('td', company.phone) %>
-    <%= content_tag('td', company.fax) %>
-    <%= content_tag('td', company.email) %>
+    <%= content_tag('td', company.name, options = {:nowrap => true}) %>
+    <%= content_tag('td', company.address, options = {:nowrap => true}) %>
+    <%= content_tag('td', company.phone, options = {:nowrap => true}) %>
+    <%= content_tag('td', company.fax, options = {:nowrap => true}) %>
+    <%= content_tag('td', company.email, options = {:nowrap => true}) %>
     <%= content_tag('td', link_to(t('common_actions.show'), company)) %>
     <%= content_tag('td', link_to(t('common_actions.edit'), edit_company_path(company))) %>
     <%= content_tag('td', link_to(t('common_actions.destroy'), company, :confirm => 'Are you sure?', :method => :delete)) %>
