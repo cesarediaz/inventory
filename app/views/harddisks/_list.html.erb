@@ -1,22 +1,23 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
     <%= content_tag('th', t('harddisks.model')) %>
-    <%= content_tag('th', t('harddisks.sn')) %>
+    <%= content_tag('th', t('harddisks.sn'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('harddisks.mark')) %>
-    <th colspan='2'><%= t('harddisks.size') %></th>
+    <%= content_tag('th', t('harddisks.size'), options = {:colspan => 2}) %>
     <%= content_tag('th', 'Pc') %>
     <%= content_tag('th', t('harddisks.bill')) %>
-    <th colspan='3'><%= t('common_actions.actions') %></th>
+    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   </tr>
  <% end %>
 <% for harddisk in @harddisks %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td',harddisk.model) %>
-    <%= content_tag('td',harddisk.serialnumber) %>
-    <%= content_tag('td',harddisk.mark.name) rescue nil  %>
-    <%= content_tag('td',harddisk.size) rescue nil  %>
-    <%= content_tag('td',harddisk.unit.to_s) rescue nil  %>
-    <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s))  rescue nil%>
+    <%= content_tag('td',harddisk.model, options = {:nowrap => true}) %>
+    <%= content_tag('td',harddisk.serialnumber, options = {:nowrap => true}) %>
+    <%= content_tag('td',harddisk.mark.name, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td',harddisk.size, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td',harddisk.unit.to_s, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s),
+        options = {:nowrap => true})  rescue nil%>
     <%= content_tag('td', link_to(t('harddisks.bill'), '/bills/'+ harddisk.bill_id.to_s)) %>
     <%= content_tag('td',link_to(t('common_actions.show'), harddisk)) %>
     <%= content_tag('td',link_to(t('common_actions.edit'), edit_harddisk_path(harddisk))) %>

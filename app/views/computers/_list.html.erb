@@ -12,18 +12,23 @@
     <%= content_tag('th', t('computers.workstation?')) %>
     <%= content_tag('th', t('computers.inventory_register')) %>
     <%= content_tag('th', t('computers.bill')) %>
-    <th colspan='3'><%= t 'common_actions.actions' %></th>
+    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end -%>
   <% for computer in @computers %>
     <tr  class="<%= cycle("rowA","rowB") %>">
-      <%= content_tag('td', computer.name) %>
-      <%= content_tag('td', computer.mac) %>
-      <%= content_tag('td', computer.ip) %>
-      <%= content_tag('td', computer.memory.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' } ) rescue nil%>
-      <%= content_tag('td', computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' } ) rescue nil %>
-      <%= content_tag('td', computer.cd.collect {|x| x.model + '<br>' } ) rescue nil%>
-      <%= content_tag('td', computer.dvd.collect {|x| x.model + '<br>' } ) rescue nil %>
-      <%= content_tag('td', link_to(computer.place.title, '/places/' + computer.place.id.to_s) ) rescue nil%>
+      <%= content_tag('td', computer.name, options = {:nowrap => true}) %>
+      <%= content_tag('td', computer.mac, options = {:nowrap => true}) %>
+      <%= content_tag('td', computer.ip, options = {:nowrap => true}) %>
+      <%= content_tag('td', computer.memory.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' },
+          options = {:nowrap => true} ) rescue nil%>
+      <%= content_tag('td', computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' },
+          options = {:nowrap => true} ) rescue nil %>
+      <%= content_tag('td', computer.cd.collect {|x| x.model + '<br>' },
+          options = {:nowrap => true} ) rescue nil%>
+      <%= content_tag('td', computer.dvd.collect {|x| x.model + '<br>' },
+          options = {:nowrap => true} ) rescue nil %>
+      <%= content_tag('td', link_to(computer.place.title, '/places/' + computer.place.id.to_s),
+          options = {:nowrap => true})  rescue nil %>
       <%= content_tag('td', check(computer.available)) %>
       <%= content_tag('td', in_workstation?(computer, 'computer_id' )) %>
       <%= content_tag('td', computer.inventory_register) %>

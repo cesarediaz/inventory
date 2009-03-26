@@ -1,17 +1,17 @@
-<table>
-  <tr>
-    <th><%= t('menu.users_list') %></th>
-    <th><%= t('menu.users_admin?') %></th>
-    <th colspan='2'><%= t('common_actions.actions') %></th>
-  </tr>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', t('menu.users_list')) %>
+    <%= content_tag('th', t('menu.users_admin?')) %>
+    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 2}) %>
+  <% end %>
 <% for user in @users %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <td><%= user.login %></td>
-    <td><%= check(user.is_admin) %></td>
-    <td><%= link_to t('common_actions.edit'), edit_user_path(user) %></td>
+    <%= content_tag('td',  user.login, options = {:nowrap => true}) %>
+    <%= content_tag('td',  check(user.is_admin)) %>
+    <%= content_tag('td',  link_to(t('common_actions.edit'), edit_user_path(user))) %>
     <% if is_admin?  && user.login != 'admin'  %>
     <td><%= link_to t('common_actions.destroy'), user, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
   </tr>
 <% end %>
-</table>
+<% end %>
