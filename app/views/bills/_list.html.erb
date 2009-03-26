@@ -8,7 +8,7 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
     <%= content_tag('th', t('bill.company')) %>
-    <%= content_tag('th', t('bill.date')) %>
+    <%= content_tag('th', t('bill.date'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('bill.code')) %>
     <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end %>
