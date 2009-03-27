@@ -22,7 +22,7 @@
       </tr>
       <% for place in @places %>
       <tr  class="<%= cycle("rowA","rowB") %>">
-        <%= content_tag('td', link_to(place.title, place)) %>
+        <%= content_tag('td', link_to(place.title, place), options = {:nowrap => true}) %>
         <%= content_tag('td', which_type_of_place_is?(place.description)) %>
         <%= content_tag('td', place.computer.count) %>
         <%= content_tag('td', place.screen.count) %>
