@@ -36,6 +36,8 @@ class PlacesController < ApplicationController
                                :page => params[:page],
                                :per_page => PER_PAGE,
                                :order => 'created_at DESC')
+
+
   end
 
   # GET /places/1
@@ -218,10 +220,14 @@ class PlacesController < ApplicationController
   end
 
   def stats
-    @graph = open_flash_chart_object(500,250,"/places/graph_statistics/show")
+    @graph = open_flash_chart_object(500,250,"/places/graph_types_places/show")
+    @computers_by_place = open_flash_chart_object(1100,300,"/places/graph_place_by_place/show", true, "/",
+                                                  "open-flash-chart-bar-clicking.swf")
+    render :layout => "primary-content"
+
   end
 
-  def graph_statistics
+  def graph_types_places
     pie_values
     title = Title.new(t('places.graphic_stats_paragraph'))
 
@@ -235,9 +241,40 @@ class PlacesController < ApplicationController
     chart = OpenFlashChart.new
     chart.title = title
     chart.add_element(pie)
-
     chart.x_axis = nil
+    render :text => chart.to_s
+  end
 
+  def graph_place_by_place
+    @places = Place.find(:all)
+
+    title = Title.new("Grafico de computadoras por lugar")
+    bar = BarGlass.new
+    bar_values = @places.collect{|x| bv = BarValue.new(x.computer.count);
+                                     bv.on_click = "alert('#{x.id} hello, my value is #{x.computer.count}')";
+                                     bv}
+    bar.set_values(bar_values)
+    bar.colour  = '#47092E'
+
+    y_axis = YAxis.new
+    y_axis.set_range(0, 20, 10)
+
+    tmp = []
+    @places.collect{|x|
+      tmp << XAxisLabel.new(x.title, '#0000ff', 10, 'horizontal')
+    }
+
+    x_labels = XAxisLabels.new
+    x_labels.labels = tmp
+    x_axis = XAxis.new
+    x_axis.set_labels(x_labels)
+
+
+    chart = OpenFlashChart.new
+    chart.x_axis = x_axis
+    chart.y_axis = y_axis
+    chart.set_title(title)
+    chart.add_element(bar)
     render :text => chart.to_s
   end
 

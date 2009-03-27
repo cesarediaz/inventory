@@ -27,5 +27,30 @@ five:
 
 six:
    id: 6
-   title: Departmento de Matematicas
+   title: Contabilidad
+   description: department
+
+seven:
+   id: 7
+   title: Cooperadora
+   description: office
+
+eigth:
+   id: 8
+   title: Finanzas
+   description: department
+
+nine:
+   id: 9
+   title: Creditos
+   description: department
+
+ten:
+   id: 10
+   title: Financiera
+   description: department
+
+eleven:
+   id: 11
+   title: Sala C
    description: department

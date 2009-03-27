@@ -1,52 +1,25 @@
 <% cache(:fragment => "places/_stats") do %>
 
+<%= render :partial => 'search' %>
+
+<%= javascript_include_tag('swfobject') %>
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
   <%= t('common_actions.show_hide') %></a>
 <div id='toggle_appear_table_list_places' style='border: solid 1px #eee;'  >
-  <div>
-
-    <%= t('places.graphic_stats_in_numbers') %>
-
-    <div id='stats_data'>
-      <%= link_to  t('places.all'), :controller => "places", :action => "index" %>
-      <%=
-         Place.rooms.count + Place.rooms.count +
-         Place.departments.count + Place.stores.count \
-         rescue nil
-         %>
-
-    </div>
-
-    <div id='stats_data'>
-      <%= t('places.rooms') %>
-      <%= Place.rooms.count %>
-    </div>
-
-    <div id='stats_data'>
-      <%= t('places.departments') %>
-      <%= Place.departments.count %>
-    </div>
-
-    <div id='stats_data'>
-      <%= t('places.offices') %>
-      <%= Place.offices.count %>
-    </div>
-
-    <div id='stats_data'>
-      <%= t('places.stores') %>
-      <%= Place.stores.count %>
-    </div>
-
-  </div>
+    <%= @graph %>
 </div>
 
 <br/>
 <a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
   <%= t('common_actions.show_hide') %></a>
 <div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
-<%= javascript_include_tag('swfobject') %>
 
-<%= @graph %>
+
+
+
+<br>
+
+<%= @computers_by_place %>
 </div>
 <% end %>
 
