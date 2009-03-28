@@ -221,10 +221,9 @@ class PlacesController < ApplicationController
 
   def stats
     @graph = open_flash_chart_object(500,250,"/places/graph_types_places/show")
-    @computers_by_place = open_flash_chart_object(500,300,"/places/graph_computers_by_place/show", true, "/",
-                                                  "open-flash-chart-bar-clicking.swf")
-    @printers_by_place = open_flash_chart_object(500,250,"/places/graph_printers_by_place/show")
-    @screens_by_place = open_flash_chart_object(500,250,"/places/graph_screens_by_place/show")
+    @computers_by_place = open_flash_chart_object(400,250,"/places/graph_computers_by_place/show")
+    @printers_by_place = open_flash_chart_object(400,250,"/places/graph_printers_by_place/show")
+    @screens_by_place = open_flash_chart_object(400,250,"/places/graph_screens_by_place/show")
     render :layout => "primary-content"
 
   end
@@ -307,39 +306,6 @@ class PlacesController < ApplicationController
 
   end
 
-#   def graph_place_by_place
-#     @places = Place.find(:all)
-
-#     title = Title.new("Grafico de computadoras por lugar")
-#     bar = BarGlass.new
-#     bar_values = @places.collect{|x| bv = BarValue.new(x.computer.count);
-#                                      bv.on_click = "alert('#{x.id} hello, my value is #{x.computer.count}')";
-#                                      bv}
-#     bar.set_values(bar_values)
-#     bar.colour  = '#47092E'
-
-#     y_axis = YAxis.new
-#     y_axis.set_range(0, 20, 10)
-
-#     tmp = []
-#     @places.collect{|x|
-#       tmp << XAxisLabel.new(x.title, '#0000ff', 10, 'horizontal')
-#     }
-
-#     x_labels = XAxisLabels.new
-#     x_labels.labels = tmp
-#     x_axis = XAxis.new
-#     x_axis.set_labels(x_labels)
-
-
-#     chart = OpenFlashChart.new
-#     chart.x_axis = x_axis
-#     chart.y_axis = y_axis
-#     chart.set_title(title)
-#     chart.add_element(bar)
-#     render :text => chart.to_s
-#   end
-
   def pdf
     pdf_report(Place.find(:all),
                "A4",
@@ -383,7 +349,7 @@ class PlacesController < ApplicationController
       if not x.computer.count == 0
           @pie_values_computers_by_place << PieValue.new(x.computer.count, x.title.to_s \
                                                          + '('+ x.computer.count.to_s + ')')
-        end
+      end
     }
 
   end

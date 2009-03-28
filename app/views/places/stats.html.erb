@@ -3,33 +3,50 @@
 <%= render :partial => 'search' %>
 
 <%= javascript_include_tag('swfobject') %>
-<a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
-  <%= t('common_actions.show_hide') %></a>
-<div id='toggle_appear_table_list_places' style='border: solid 1px #eee;'  >
-    <%= @graph %>
-</div>
+
+<% content_tag :table do %>
+      <% content_tag :tr do %>
+        <% content_tag :td  do %>
+            <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
+              <%= t('common_actions.show_hide') %></a>
+            <div id='toggle_appear_table_list_places' style='border: solid 1px #eee;'  >
+              <%= @graph %>
+            </div>
+            <% end -%>
+      <% end -%>
+<% end -%>
+
+<% content_tag :table do %>
+      <% content_tag :tr do %>
+        <% content_tag :td  do %>
+          <a href="#" onclick="Effect.toggle('pie_computers', 'appear'); return false;">
+            <%= t('common_actions.show_hide') %></a>
+          <div id='pie_computers' style='border: solid 1px #eee;' >
+            <%= @computers_by_place %>
+          </div>
+         <% end -%>
+        <% content_tag :td  do %>
+         <a href="#" onclick="Effect.toggle('pie_printers', 'appear'); return false;">
+           <%= t('common_actions.show_hide') %></a>
+         <div id='pie_printers' style='border: solid 1px #eee;' >
+           <%= @printers_by_place %>
+         </div>
+        <% end -%>
+        <% content_tag :td  do %>
+        <a href="#" onclick="Effect.toggle('pie_screens', 'appear'); return false;">
+          <%= t('common_actions.show_hide') %></a>
+        <div id='pie_screens' style='border: solid 1px #eee;' >
+          <%= @screens_by_place %>
+        </div>
+        <% end -%>
+      <% end -%>
+<% end -%>
 
 <br/>
-<a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
-  <%= t('common_actions.show_hide') %></a>
-<div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
-<%= @computers_by_place %>
-</div>
 
 
 <br/>
-<a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
-  <%= t('common_actions.show_hide') %></a>
-<div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
-<%= @printers_by_place %>
-</div>
 
-<br/>
-<a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
-  <%= t('common_actions.show_hide') %></a>
-<div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
-<%= @screens_by_place %>
-</div>
 
 
 <% end %>

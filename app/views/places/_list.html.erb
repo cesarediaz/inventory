@@ -11,15 +11,15 @@
      <%= t('phrases.list_of') + t('menu.places').downcase %>
     <% end -%>
     <% content_tag :table do %>
-      <tr>
+      <% content_tag :tr do %>
         <%= content_tag('th', t('places.name')) %>
         <%= content_tag('th', t('places.description')) %>
         <%= content_tag('th', t('places.computer')) %>
         <%= content_tag('th', t('places.screen')) %>
         <%= content_tag('th', t('places.printer')) %>
         <%= content_tag('th', t('places.workstations')) %>
-        <th colspan='3'><%= t('common_actions.actions') %></th>
-      </tr>
+        <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
+      <% end -%>
       <% for place in @places %>
       <tr  class="<%= cycle("rowA","rowB") %>">
         <%= content_tag('td', link_to(place.title, place), options = {:nowrap => true}) %>
