@@ -293,16 +293,24 @@ class PlacesController < ApplicationController
 
   def pie_values
     @pie_values = []
-    Place.departments unless @pie_values << PieValue.new(Place.departments.count,t('places.departments') \
-                                                         + '('+ Place.departments.count.to_s + ')')
+    if not Place.departments.empty?
+      @pie_values << PieValue.new(Place.departments.count,t('places.departments') \
+                                  + '('+ Place.departments.count.to_s + ')')
+    end
 
-    Place.offices unless @pie_values << PieValue.new(Place.offices.count,t('places.offices') \
-                                                     + '('+ Place.offices.count.to_s + ')')
+    if not Place.offices.empty?
+      @pie_values << PieValue.new(Place.offices.count,t('places.offices') \
+                                  + '('+ Place.offices.count.to_s + ')')
+    end
 
-    Place.stores unless @pie_values << PieValue.new(Place.stores.count,t('places.stores') \
-                                                    + '('+ Place.stores.count.to_s + ')')
+    if not Place.stores.empty?
+      @pie_values << PieValue.new(Place.stores.count,t('places.stores') \
+                                  + '('+ Place.stores.count.to_s + ')')
+    end
 
-    Place.rooms unless @pie_values << PieValue.new(Place.rooms.count, t('places.rooms') \
-                                                   + '('+ Place.rooms.count.to_s + ')')
+    if not Place.rooms.empty?
+      @pie_values << PieValue.new(Place.rooms.count, t('places.rooms') \
+                                  + '('+ Place.rooms.count.to_s + ')')
+    end
   end
 end
