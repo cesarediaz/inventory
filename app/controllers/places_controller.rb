@@ -221,8 +221,10 @@ class PlacesController < ApplicationController
 
   def stats
     @graph = open_flash_chart_object(500,250,"/places/graph_types_places/show")
-    @computers_by_place = open_flash_chart_object(500,300,"/places/graph_place_by_place/show", true, "/",
+    @computers_by_place = open_flash_chart_object(500,300,"/places/graph_computers_by_place/show", true, "/",
                                                   "open-flash-chart-bar-clicking.swf")
+    @printers_by_place = open_flash_chart_object(500,250,"/places/graph_printers_by_place/show")
+    @screens_by_place = open_flash_chart_object(500,250,"/places/graph_screens_by_place/show")
     render :layout => "primary-content"
 
   end
@@ -245,7 +247,7 @@ class PlacesController < ApplicationController
     render :text => chart.to_s
   end
 
-  def graph_place_by_place
+  def graph_computers_by_place
     pie_values_computers_by_place
 
     title = Title.new(t('places.computer'))
@@ -256,6 +258,46 @@ class PlacesController < ApplicationController
     pie.tooltip = '#val# de #total#<br>#percent# del 100%'
     pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
     pie.values  =  @pie_values_computers_by_place
+
+    chart = OpenFlashChart.new
+    chart.title = title
+    chart.add_element(pie)
+    chart.x_axis = nil
+    render :text => chart.to_s
+
+  end
+
+  def graph_printers_by_place
+    pie_values_printers_by_place
+
+    title = Title.new(t('places.printer'))
+
+    pie = Pie.new
+    pie.start_angle = 35
+    pie.animate = true
+    pie.tooltip = '#val# de #total#<br>#percent# del 100%'
+    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.values  =  @pie_values_printers_by_place
+
+    chart = OpenFlashChart.new
+    chart.title = title
+    chart.add_element(pie)
+    chart.x_axis = nil
+    render :text => chart.to_s
+
+  end
+
+  def graph_screens_by_place
+    pie_values_screens_by_place
+
+    title = Title.new(t('places.screen'))
+
+    pie = Pie.new
+    pie.start_angle = 35
+    pie.animate = true
+    pie.tooltip = '#val# de #total#<br>#percent# del 100%'
+    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.values  =  @pie_values_screens_by_place
 
     chart = OpenFlashChart.new
     chart.title = title
@@ -341,6 +383,30 @@ class PlacesController < ApplicationController
       if not x.computer.count == 0
           @pie_values_computers_by_place << PieValue.new(x.computer.count, x.title.to_s \
                                                          + '('+ x.computer.count.to_s + ')')
+        end
+    }
+
+  end
+
+  def pie_values_printers_by_place
+    @pie_values_printers_by_place = []
+
+    Place.find(:all).collect { |x|
+      if not x.printer.count == 0
+          @pie_values_printers_by_place << PieValue.new(x.printer.count, x.title.to_s \
+                                                         + '('+ x.printer.count.to_s + ')')
+        end
+    }
+
+  end
+
+  def pie_values_screens_by_place
+    @pie_values_screens_by_place = []
+
+    Place.find(:all).collect { |x|
+      if not x.screen.count == 0
+          @pie_values_screens_by_place << PieValue.new(x.screen.count, x.title.to_s \
+                                                         + '('+ x.screen.count.to_s + ')')
         end
     }
 

@@ -4,6 +4,7 @@
 
 <%= render :partial => 'list' %>
 
+<%= will_paginate @screens %>
 <br />
 
 <%= link_to t('common_actions.create'), new_screen_path %>

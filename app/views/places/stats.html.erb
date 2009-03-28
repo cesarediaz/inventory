@@ -9,16 +9,27 @@
     <%= @graph %>
 </div>
 
-
-
-
 <br/>
 <a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
   <%= t('common_actions.show_hide') %></a>
 <div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
 <%= @computers_by_place %>
 </div>
+
+
+<br/>
+<a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
+  <%= t('common_actions.show_hide') %></a>
+<div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
+<%= @printers_by_place %>
+</div>
+
+<br/>
+<a href="#" onclick="Effect.toggle('toggle_appear_pie_3d_graph', 'appear'); return false;">
+  <%= t('common_actions.show_hide') %></a>
+<div id='toggle_appear_pie_3d_graph' style='border: solid 1px #eee;' >
+<%= @screens_by_place %>
+</div>
+
+
 <% end %>
-
-
-
