@@ -221,7 +221,7 @@ class PlacesController < ApplicationController
 
   def stats
     @graph = open_flash_chart_object(500,250,"/places/graph_types_places/show")
-    @computers_by_place = open_flash_chart_object(1100,300,"/places/graph_place_by_place/show", true, "/",
+    @computers_by_place = open_flash_chart_object(500,300,"/places/graph_place_by_place/show", true, "/",
                                                   "open-flash-chart-bar-clicking.swf")
     render :layout => "primary-content"
 
@@ -246,37 +246,57 @@ class PlacesController < ApplicationController
   end
 
   def graph_place_by_place
-    @places = Place.find(:all)
+    pie_values_computers_by_place
 
-    title = Title.new("Grafico de computadoras por lugar")
-    bar = BarGlass.new
-    bar_values = @places.collect{|x| bv = BarValue.new(x.computer.count);
-                                     bv.on_click = "alert('#{x.id} hello, my value is #{x.computer.count}')";
-                                     bv}
-    bar.set_values(bar_values)
-    bar.colour  = '#47092E'
+    title = Title.new(t('places.computer'))
 
-    y_axis = YAxis.new
-    y_axis.set_range(0, 20, 10)
-
-    tmp = []
-    @places.collect{|x|
-      tmp << XAxisLabel.new(x.title, '#0000ff', 10, 'horizontal')
-    }
-
-    x_labels = XAxisLabels.new
-    x_labels.labels = tmp
-    x_axis = XAxis.new
-    x_axis.set_labels(x_labels)
-
+    pie = Pie.new
+    pie.start_angle = 35
+    pie.animate = true
+    pie.tooltip = '#val# de #total#<br>#percent# del 100%'
+    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.values  =  @pie_values_computers_by_place
 
     chart = OpenFlashChart.new
-    chart.x_axis = x_axis
-    chart.y_axis = y_axis
-    chart.set_title(title)
-    chart.add_element(bar)
+    chart.title = title
+    chart.add_element(pie)
+    chart.x_axis = nil
     render :text => chart.to_s
+
   end
+
+#   def graph_place_by_place
+#     @places = Place.find(:all)
+
+#     title = Title.new("Grafico de computadoras por lugar")
+#     bar = BarGlass.new
+#     bar_values = @places.collect{|x| bv = BarValue.new(x.computer.count);
+#                                      bv.on_click = "alert('#{x.id} hello, my value is #{x.computer.count}')";
+#                                      bv}
+#     bar.set_values(bar_values)
+#     bar.colour  = '#47092E'
+
+#     y_axis = YAxis.new
+#     y_axis.set_range(0, 20, 10)
+
+#     tmp = []
+#     @places.collect{|x|
+#       tmp << XAxisLabel.new(x.title, '#0000ff', 10, 'horizontal')
+#     }
+
+#     x_labels = XAxisLabels.new
+#     x_labels.labels = tmp
+#     x_axis = XAxis.new
+#     x_axis.set_labels(x_labels)
+
+
+#     chart = OpenFlashChart.new
+#     chart.x_axis = x_axis
+#     chart.y_axis = y_axis
+#     chart.set_title(title)
+#     chart.add_element(bar)
+#     render :text => chart.to_s
+#   end
 
   def pdf
     pdf_report(Place.find(:all),
@@ -312,5 +332,17 @@ class PlacesController < ApplicationController
       @pie_values << PieValue.new(Place.rooms.count, t('places.rooms') \
                                   + '('+ Place.rooms.count.to_s + ')')
     end
+  end
+
+  def pie_values_computers_by_place
+    @pie_values_computers_by_place = []
+
+    Place.find(:all).collect { |x|
+      if not x.computer.count == 0
+          @pie_values_computers_by_place << PieValue.new(x.computer.count, x.title.to_s \
+                                                         + '('+ x.computer.count.to_s + ')')
+        end
+    }
+
   end
 end
