@@ -236,7 +236,10 @@ class PlacesController < ApplicationController
     pie.start_angle = 35
     pie.animate = true
     pie.tooltip = '#val# de #total#<br>#percent# del 100%'
-    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.colours = [generateUniqueHexCode( 6 ),
+                   generateUniqueHexCode( 6 ),
+                   generateUniqueHexCode( 6 ),
+                   generateUniqueHexCode( 6 )]
     pie.values  = @pie_values
 
     chart = OpenFlashChart.new
@@ -255,7 +258,7 @@ class PlacesController < ApplicationController
     pie.start_angle = 35
     pie.animate = true
     pie.tooltip = '#val# de #total#<br>#percent# del 100%'
-    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.colours = @colors
     pie.values  =  @pie_values_computers_by_place
 
     chart = OpenFlashChart.new
@@ -275,7 +278,7 @@ class PlacesController < ApplicationController
     pie.start_angle = 35
     pie.animate = true
     pie.tooltip = '#val# de #total#<br>#percent# del 100%'
-    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.colours = @colors
     pie.values  =  @pie_values_printers_by_place
 
     chart = OpenFlashChart.new
@@ -295,7 +298,7 @@ class PlacesController < ApplicationController
     pie.start_angle = 35
     pie.animate = true
     pie.tooltip = '#val# de #total#<br>#percent# del 100%'
-    pie.colours = ["#d01f3c", "#356aa0", "#C79810", "#d01fff"]
+    pie.colours =  @colors
     pie.values  =  @pie_values_screens_by_place
 
     chart = OpenFlashChart.new
@@ -344,11 +347,13 @@ class PlacesController < ApplicationController
 
   def pie_values_computers_by_place
     @pie_values_computers_by_place = []
+    @colors = []
 
     Place.find(:all).collect { |x|
       if not x.computer.count == 0
-          @pie_values_computers_by_place << PieValue.new(x.computer.count, x.title.to_s \
+        @pie_values_computers_by_place << PieValue.new(x.computer.count, x.title.to_s \
                                                          + '('+ x.computer.count.to_s + ')')
+        @colors << generateUniqueHexCode( 6 )
       end
     }
 
@@ -356,25 +361,35 @@ class PlacesController < ApplicationController
 
   def pie_values_printers_by_place
     @pie_values_printers_by_place = []
-
+    @colors = []
     Place.find(:all).collect { |x|
       if not x.printer.count == 0
-          @pie_values_printers_by_place << PieValue.new(x.printer.count, x.title.to_s \
+        @pie_values_printers_by_place << PieValue.new(x.printer.count, x.title.to_s \
                                                          + '('+ x.printer.count.to_s + ')')
-        end
+        @colors << generateUniqueHexCode( 6 )
+      end
     }
 
   end
 
   def pie_values_screens_by_place
     @pie_values_screens_by_place = []
-
+    @colors = []
     Place.find(:all).collect { |x|
       if not x.screen.count == 0
-          @pie_values_screens_by_place << PieValue.new(x.screen.count, x.title.to_s \
-                                                         + '('+ x.screen.count.to_s + ')')
-        end
+        @pie_values_screens_by_place << PieValue.new(x.screen.count, x.title.to_s \
+                                                       + '('+ x.screen.count.to_s + ')')
+        @colors << generateUniqueHexCode( 6 )
+      end
     }
 
+  end
+
+  def generateUniqueHexCode( codeLength )
+    validChars = ("A".."F").to_a + ("0".."9").to_a
+    length = validChars.size
+    hexCode = ""
+    1.upto(codeLength) { |i| hexCode << validChars[rand(length-1)] }
+    hexCode
   end
 end
