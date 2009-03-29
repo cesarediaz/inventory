@@ -33,10 +33,10 @@ class BillsController < ApplicationController
                            :per_page => PER_PAGE,
                            :order => 'created_at DESC')
 
-    respond_to do |format|
-      format.html
-      format.xml  { render :xml => @bills }
-    end
+     respond_to do |format|
+       format.html
+       format.xml  { render :xml => @bills }
+     end
   end
 
   # GET /bills/1
@@ -139,5 +139,45 @@ class BillsController < ApplicationController
                params[:company_id].nil? ? 'find' : params[:comapay_id],
                params[:company_id].nil? ? '(:all)' : '(' + params[:company_id] + ')'
                )
+  end
+
+  def stats
+    @bills_by_company = open_flash_chart_object(400,250,"/bills/graph_bills_by_company/show")
+    render :layout => "primary-content"
+  end
+
+
+  def graph_bills_by_company
+    pie_values_bills
+
+    title = Title.new(t('menu.bills'))
+
+    pie = Pie.new
+    pie.start_angle = 35
+    pie.animate = true
+    pie.tooltip = '#val# de #total#<br>#percent# del 100%'
+    pie.colours = @colors
+    pie.values  =  @pie_values_bills
+
+    chart = OpenFlashChart.new
+    chart.title = title
+    chart.add_element(pie)
+    chart.x_axis = nil
+    render :text => chart.to_s
+
+  end
+
+  private
+
+  def pie_values_bills
+    @pie_values_bills = []
+    @colors = []
+    Company.find(:all).collect { |x|
+      if not x.bills.count == 0
+        @pie_values_bills << PieValue.new(x.bills.count, x.name \
+                                          + '('+ x.bills.count.to_s + ')')
+        @colors << generateUniqueHexCode( 6 )
+      end
+    }
   end
 end
