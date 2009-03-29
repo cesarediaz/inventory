@@ -155,7 +155,7 @@ class ComputersController < ApplicationController
     chart = OpenFlashChart.new
     chart.title = title
     chart.add_element(pie)
-
+    chart.bg_colour="#FFFFFF"
     chart.x_axis = nil
 
     render :text => chart.to_s
