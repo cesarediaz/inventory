@@ -197,10 +197,12 @@
 },
 
  :stats => {
-   :available => "Disponibles",
-   :unavailable => "En uso",
-   :alone => "Libre",
-   :workstation => "En equipos",
+  :available => "Disponibles",
+  :unavailable => "En uso",
+  :alone => "Libre",
+  :workstation => "En equipos",
+  :places_statistic => "Aqui puede ver la distribucion en tipos de lugares",
+  :pc_statistic => "Aqui puede ver la distribucion de computadoras por lugares"
 },
 
  :phrases => {

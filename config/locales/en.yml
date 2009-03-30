@@ -188,6 +188,8 @@ en:
     unavailable: "Unavailable"
     alone: "Alone"
     workstation: "In station"
+    places_statistic : "Here you can see the distribution of places for kind"
+    pc_statistic : "Here you can see the distribution of computers in each place"
 
   phrases:
     list_of : "List of "

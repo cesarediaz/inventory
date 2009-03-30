@@ -187,6 +187,8 @@ fr:
     unavailable: "En uso"
     alone: "Libre"
     workstation: "En équipements"
+    places_statistic : "This need to be translated"
+    pc_statistic : "This need to be translated"
 
   phrases:
     list_of : "Liste de "

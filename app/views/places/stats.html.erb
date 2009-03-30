@@ -7,6 +7,10 @@
 <% content_tag :table do %>
       <% content_tag :tr do %>
         <% content_tag :td  do %>
+          <%= advice( true, t('common_actions.hide_advice'),
+              t('stats.places_statistic')) %>
+        <% end -%>
+        <% content_tag :td  do %>
             <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
               <%= t('common_actions.show_hide') %></a>
             <div id='toggle_appear_table_list_places' style='border: solid 1px #eee;'  >
