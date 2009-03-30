@@ -221,9 +221,9 @@ class PlacesController < ApplicationController
 
   def stats
     @graph = open_flash_chart_object(500,250,"/places/graph_types_places/show")
-    @computers_by_place = open_flash_chart_object(400,250,"/places/graph_computers_by_place/show")
-    @printers_by_place = open_flash_chart_object(400,250,"/places/graph_printers_by_place/show")
-    @screens_by_place = open_flash_chart_object(400,250,"/places/graph_screens_by_place/show")
+    @computers_by_place = open_flash_chart_object(500,250,"/places/graph_computers_by_place/show")
+    @printers_by_place = open_flash_chart_object(500,250,"/places/graph_printers_by_place/show")
+    @screens_by_place = open_flash_chart_object(500,250,"/places/graph_screens_by_place/show")
     render :layout => "primary-content"
 
   end

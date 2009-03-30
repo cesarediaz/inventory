@@ -25,6 +25,8 @@
             <%= @computers_by_place %>
           </div>
          <% end -%>
+      <% end -%>
+      <% content_tag :tr do %>
         <% content_tag :td  do %>
          <a href="#" onclick="Effect.toggle('pie_printers', 'appear'); return false;">
            <%= t('common_actions.show_hide') %></a>
@@ -32,6 +34,8 @@
            <%= @printers_by_place %>
          </div>
         <% end -%>
+      <% end -%>
+      <% content_tag :tr do %>
         <% content_tag :td  do %>
         <a href="#" onclick="Effect.toggle('pie_screens', 'appear'); return false;">
           <%= t('common_actions.show_hide') %></a>
