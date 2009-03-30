@@ -6,7 +6,7 @@
 
 <% content_tag :table do %>
       <% content_tag :tr do %>
-        <% content_tag :td  do %>
+        <% content_tag :td, options = {:valign => 'top'}  do %>
           <%= advice( true, t('common_actions.hide_advice'),
               t('stats.places_statistic')) %>
         <% end -%>
