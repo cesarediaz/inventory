@@ -2,21 +2,21 @@
 
 <%= render :partial => 'search' %>
 
-<%= javascript_include_tag('swfobject') %>
+<br/>
+<br/>
 
+<%= javascript_include_tag('swfobject') %>
 <% content_tag :table do %>
       <% content_tag :tr do %>
         <% content_tag :td  do %>
             <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
               <%= t('common_actions.show_hide') %></a>
             <div id='toggle_appear_table_list_places' style='border: solid 1px #eee;'  >
+              <%= advice( true, t('common_actions.hide_advice'), t('stats.places_statistic'),
+                  'advice-a-hundred-percent', 'places') %>
               <%= @graph %>
             </div>
             <% end -%>
-        <% content_tag :td, options = {:valign => 'top'}  do %>
-          <%= advice( true, t('common_actions.hide_advice'), t('stats.places_statistic'),
-              'advice-a-hundred-percent', 'places') %>
-        <% end -%>
       <% end -%>
 <% end -%>
 
@@ -26,25 +26,21 @@
           <a href="#" onclick="Effect.toggle('pie_computers', 'appear'); return false;">
             <%= t('common_actions.show_hide') %></a>
           <div id='pie_computers' style='border: solid 1px #eee;' >
+            <%= advice( true, t('common_actions.hide_advice'), t('stats.pc_statistic'),
+                'advice-a-hundred-percent','computers') %>
             <%= @computers_by_place %>
           </div>
          <% end -%>
-        <% content_tag :td, options = {:valign => 'top'}  do %>
-          <%= advice( true, t('common_actions.hide_advice'), t('stats.pc_statistic'),
-              'advice-a-hundred-percent','computers') %>
-        <% end -%>
       <% end -%>
       <% content_tag :tr do %>
         <% content_tag :td  do %>
          <a href="#" onclick="Effect.toggle('pie_printers', 'appear'); return false;">
            <%= t('common_actions.show_hide') %></a>
          <div id='pie_printers' style='border: solid 1px #eee;' >
+           <%= advice( true, t('common_actions.hide_advice'), t('stats.printers_statistic'),
+               'advice-a-hundred-percent','printers') %>
            <%= @printers_by_place %>
          </div>
-        <% end -%>
-        <% content_tag :td, options = {:valign => 'top'}  do %>
-          <%= advice( true, t('common_actions.hide_advice'), t('stats.printers_statistic'),
-              'advice-a-hundred-percent','printers') %>
         <% end -%>
       <% end -%>
       <% content_tag :tr do %>
@@ -52,21 +48,12 @@
         <a href="#" onclick="Effect.toggle('pie_screens', 'appear'); return false;">
           <%= t('common_actions.show_hide') %></a>
         <div id='pie_screens' style='border: solid 1px #eee;' >
+          <%= advice( true, t('common_actions.hide_advice'), t('stats.printers_statistic'),
+              'advice-a-hundred-percent', 'screens') %>
           <%= @screens_by_place %>
         </div>
         <% end -%>
-        <% content_tag :td, options = {:valign => 'top'}  do %>
-          <%= advice( true, t('common_actions.hide_advice'), t('stats.printers_statistic'),
-              'advice-a-hundred-percent', 'screens') %>
-        <% end -%>
       <% end -%>
 <% end -%>
-
-<br/>
-
-
-<br/>
-
-
 
 <% end %>
