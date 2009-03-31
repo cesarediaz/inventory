@@ -12,7 +12,7 @@
 <!--      along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 
 <%= advice( @computer.is_part_of_a_workstation,t('common_actions.hide_advice'),
- t('help_phrases.in_workstation'))%>
+ t('help_phrases.in_workstation'),'quarter', 'computer')%>
 
 <% form_for(@computer) do |f| %>
 <%= f.error_messages %>

@@ -189,7 +189,9 @@ en:
     alone: "Alone"
     workstation: "In station"
     places_statistic : "Here you can see the distribution of places for kind"
-    pc_statistic : "Here you can see the distribution of computers in each place"
+    pc_statistic : "Here you can see the distribution of computers for each place"
+    screens_statistic : "Here you can see the distribution of screens for each place"
+    printers_statistic : "Here you can see the distribution of printers for each place"
 
   phrases:
     list_of : "List of "

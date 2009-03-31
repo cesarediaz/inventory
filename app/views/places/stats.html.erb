@@ -6,10 +6,6 @@
 
 <% content_tag :table do %>
       <% content_tag :tr do %>
-        <% content_tag :td, options = {:valign => 'top'}  do %>
-          <%= advice( true, t('common_actions.hide_advice'),
-              t('stats.places_statistic')) %>
-        <% end -%>
         <% content_tag :td  do %>
             <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
               <%= t('common_actions.show_hide') %></a>
@@ -17,6 +13,10 @@
               <%= @graph %>
             </div>
             <% end -%>
+        <% content_tag :td, options = {:valign => 'top'}  do %>
+          <%= advice( true, t('common_actions.hide_advice'), t('stats.places_statistic'),
+              'advice-a-hundred-percent', 'places') %>
+        <% end -%>
       <% end -%>
 <% end -%>
 
@@ -29,6 +29,10 @@
             <%= @computers_by_place %>
           </div>
          <% end -%>
+        <% content_tag :td, options = {:valign => 'top'}  do %>
+          <%= advice( true, t('common_actions.hide_advice'), t('stats.pc_statistic'),
+              'advice-a-hundred-percent','computers') %>
+        <% end -%>
       <% end -%>
       <% content_tag :tr do %>
         <% content_tag :td  do %>
@@ -38,6 +42,10 @@
            <%= @printers_by_place %>
          </div>
         <% end -%>
+        <% content_tag :td, options = {:valign => 'top'}  do %>
+          <%= advice( true, t('common_actions.hide_advice'), t('stats.printers_statistic'),
+              'advice-a-hundred-percent','printers') %>
+        <% end -%>
       <% end -%>
       <% content_tag :tr do %>
         <% content_tag :td  do %>
@@ -46,6 +54,10 @@
         <div id='pie_screens' style='border: solid 1px #eee;' >
           <%= @screens_by_place %>
         </div>
+        <% end -%>
+        <% content_tag :td, options = {:valign => 'top'}  do %>
+          <%= advice( true, t('common_actions.hide_advice'), t('stats.printers_statistic'),
+              'advice-a-hundred-percent', 'screens') %>
         <% end -%>
       <% end -%>
 <% end -%>

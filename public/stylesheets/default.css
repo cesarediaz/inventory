@@ -433,11 +433,47 @@ table
     width: 75%;
 }
 
+#a-hundred-percent
+{
+    width: 100%;
+}
+
 #advice-quarter
 {
     border: solid 1px #000;
     background-color: #FFFF99;
     width: 25%;
+    float: right;
+}
+
+.half
+{
+    width: 50%;
+}
+
+.third-quarter
+{
+    width: 75%;
+}
+
+.a-hundred-percent
+{
+    width: 100%;
+}
+
+.advice-quarter
+{
+    border: solid 1px #000;
+    background-color: #FFFF99;
+    width: 25%;
+    float: right;
+}
+
+.advice-a-hundred-percent
+{
+    border: solid 1px #000;
+    background-color: #FFFF99;
+    width: 100%;
     float: right;
 }
 

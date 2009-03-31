@@ -21,11 +21,11 @@ module ApplicationHelper
   # Take and object and depending if it is true make a help advice
   #
   # Return: html
-  def advice(object, head, message)
+  def advice(object, head, message, width, id)
     html = ''
     if  object
-      html = html + '<div id="advice-quarter" >'
-      html = html + "<a href=\"#\" onclick=\"Effect.toggle('advice-quarter', 'appear'); return false;\">"
+      html = html + '<div class="' + width + '" id="' + id + '" >'
+      html = html + "<a href=\"#\" onclick=\"Effect.toggle('" + id + "', 'appear'); return false;\">"
       html = html +  head + '</a>'
       html = html +  '<br>'
       html = html +  message

@@ -202,7 +202,9 @@
   :alone => "Libre",
   :workstation => "En equipos",
   :places_statistic => "Aqui puede ver la distribucion en tipos de lugares",
-  :pc_statistic => "Aqui puede ver la distribucion de computadoras por lugares"
+  :pc_statistic => "Aqui puede ver la distribucion de computadoras por lugares",
+  :screens_statistic => "Aqui puede ver la distribucion de monitores por lugares",
+  :printers_statistic => "Aqui puede ver la distribucion de impresoras por lugares"
 },
 
  :phrases => {

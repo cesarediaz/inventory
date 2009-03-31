@@ -189,6 +189,8 @@ fr:
     workstation: "En équipements"
     places_statistic : "This need to be translated"
     pc_statistic : "This need to be translated"
+    screens_statistic : "This need to be translated"
+    printers_statistic : "This need to be translated"
 
   phrases:
     list_of : "Liste de "
