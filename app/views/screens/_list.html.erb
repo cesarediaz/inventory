@@ -13,9 +13,9 @@
    <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', screen.model, options = {:nowrap => true}) %>
     <%= content_tag('td', screen.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td', screen.mark.name, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td', screen.mark.name, options = {:nowrap => true})%>
     <%= content_tag('td', link_to(screen.place.title, '/places/' + screen.place.id.to_s),
-        options = {:nowrap => true} ) rescue nil %>
+        options = {:nowrap => true} )%>
     <%= content_tag('td', in_workstation?(screen, 'screen_id')) rescue nil%>
     <%= content_tag('td', screen.inventory_register) %>
     <%= content_tag('td', link_to(t('screens.bill'), '/bills/'+ screen.bill_id.to_s)) %>
