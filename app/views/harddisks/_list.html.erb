@@ -13,11 +13,12 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td',harddisk.model, options = {:nowrap => true}) %>
     <%= content_tag('td',harddisk.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td',harddisk.mark.name, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td',harddisk.mark.nil? ? ' ' : harddisk.mark.name , options = {:nowrap => true})  %>
     <%= content_tag('td',harddisk.size, options = {:nowrap => true}) rescue nil  %>
-    <%= content_tag('td',harddisk.unit.to_s, options = {:nowrap => true}) rescue nil  %>
-    <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' + harddisk.computer.id.to_s),
-        options = {:nowrap => true})  rescue nil%>
+    <%= content_tag('td',harddisk.unit.nil? ? '0' : harddisk.unit.to_s,
+        options = {:nowrap => true})  %>
+    <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' +
+        harddisk.computer.id.to_s), options = {:nowrap => true})  rescue nil%>
     <%= content_tag('td', link_to(t('harddisks.bill'), '/bills/'+ harddisk.bill_id.to_s)) %>
     <%= content_tag('td',link_to(t('common_actions.show'), harddisk)) %>
     <%= content_tag('td',link_to(t('common_actions.edit'), edit_harddisk_path(harddisk))) %>
