@@ -5,7 +5,7 @@ describe Memory do
   end
 
   it "should create a new instance given valid attributes" do
-    memory = Memory.create({:model => 'Kingston', :serialnumber => 'a123456' })
+    memory = Memory.create({:model => 'Kingston', :serialnumber => 'a123456', :mark_id => 1 })
     memory.should be_valid
     memory.errors.should be_empty
   end
@@ -21,8 +21,8 @@ describe Memory do
   end
 
   it "should not create a new instance given two equals attributes of serial number" do
-    memory1 = Memory.create({:model => 'Kingston', :serialnumber => '1234567890' })
-    memory2 = Memory.create({:model => 'Dell', :serialnumber => '1234567890' })
+    memory1 = Memory.create({:model => 'Kingston', :serialnumber => '1234567890', :mark_id => 1 })
+    memory2 = Memory.create({:model => 'Dell', :serialnumber => '1234567890', :mark_id => 2 })
     memory2.should have(1).errors_on(:serialnumber)
   end
 
