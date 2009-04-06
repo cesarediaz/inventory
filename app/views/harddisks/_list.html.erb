@@ -19,7 +19,7 @@
         options = {:nowrap => true})  %>
     <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' +
         harddisk.computer.id.to_s), options = {:nowrap => true})  rescue nil%>
-    <%= content_tag('td', harddisk.bill_id.nil? ? ' ' : link_to(t('harddisks.bill'), \
+    <%= content_tag('td', harddisk.bill_id.nil? ? '-' : link_to(t('harddisks.bill'), \
         '/bills/'+ harddisk.bill_id.to_s)) %>
     <%= content_tag('td',link_to(t('common_actions.show'), harddisk)) %>
     <%= content_tag('td',link_to(t('common_actions.edit'), edit_harddisk_path(harddisk))) %>
