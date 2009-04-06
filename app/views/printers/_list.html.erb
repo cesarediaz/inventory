@@ -14,12 +14,13 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', printer.model, options = {:nowrap => true}) %>
     <%= content_tag('td', printer.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td', printer.mark.name, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td', printer.mark.name, options = {:nowrap => true}) %>
     <%= content_tag('td', link_to(printer.place.title, '/places/' + printer.place.id.to_s),
-        options = {:nowrap => true}) rescue nil%>
+        options = {:nowrap => true})%>
     <%= content_tag('td', in_workstation?(printer, 'printer_id' )) rescue nil %>
     <%= content_tag('td', printer.inventory_register) %>
-    <%= content_tag('td', link_to( t('printers.bill'), '/bills/'+ printer.bill_id.to_s)) %>
+    <%= content_tag('td', printer.bill_id.nil? ? '-' : link_to( t('printers.bill'),
+        '/bills/'+ printer.bill_id.to_s)) %>
     <%= content_tag('td', link_to( t('common_actions.show'), printer)) %>
     <%= content_tag('td', link_to( t('common_actions.edit'), edit_printer_path(printer))) %>
     <%= content_tag('td', link_to(t('common_actions.destroy'), printer, :confirm => 'Are you sure?', :method => :delete)) %>
