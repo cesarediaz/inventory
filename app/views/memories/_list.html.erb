@@ -17,7 +17,8 @@
     <%= content_tag('td', memory.unit.to_s, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.computer.nil? ? ' ': link_to(memory.computer.name , \
         'computers/' +  memory.computer.id.to_s), options = {:nowrap => true}) %>
-    <%= content_tag('td', link_to(t('memories.bill'), '/bills/'+ memory.bill_id.to_s)) %>
+    <%= content_tag('td', memory.bill_id.nil? ? ' ' : link_to(t('memories.bill'), \
+        '/bills/'+ memory.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common_actions.show'), memory)) %>
     <%= content_tag('td', link_to(t('common_actions.edit'), edit_memory_path(memory))) %>
     <%= content_tag('td', link_to(t('common_actions.destroy'), memory, :confirm => 'Are you sure?', :method => :delete)) %>

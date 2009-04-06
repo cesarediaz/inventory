@@ -20,19 +20,21 @@
       <%= content_tag('td', computer.mac, options = {:nowrap => true}) %>
       <%= content_tag('td', computer.ip, options = {:nowrap => true}) %>
       <%= content_tag('td', computer.memory.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' },
-          options = {:nowrap => true} ) rescue nil%>
-      <%= content_tag('td', computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' },
-          options = {:nowrap => true} ) rescue nil %>
-      <%= content_tag('td', computer.cd.collect {|x| x.model + '<br>' },
-          options = {:nowrap => true} ) rescue nil%>
-      <%= content_tag('td', computer.dvd.collect {|x| x.model + '<br>' },
-          options = {:nowrap => true} ) rescue nil %>
+          options = {:nowrap => true} ) %>
+      <%= content_tag('td', computer.harddisk.empty? ? '-' :
+          computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' },
+          options = {:nowrap => true} ) %>
+      <%= content_tag('td', computer.cd.empty? ? '-' :computer.cd.collect {|x| x.model + '<br>' },
+          options = {:nowrap => true} )%>
+      <%= content_tag('td', computer.dvd.empty? ? '-' :computer.dvd.collect {|x| x.model + '<br>' },
+          options = {:nowrap => true} ) %>
       <%= content_tag('td', link_to(computer.place.title, '/places/' + computer.place.id.to_s),
-          options = {:nowrap => true})  rescue nil %>
+          options = {:nowrap => true}) %>
       <%= content_tag('td', check(computer.available)) %>
       <%= content_tag('td', in_workstation?(computer, 'computer_id' )) %>
       <%= content_tag('td', computer.inventory_register) %>
-      <%= content_tag('td', link_to(t('computers.bill'), '/bills/'+ computer.bill_id.to_s)) %>
+      <%= content_tag('td', computer.bill_id.nil? ? ' ' : link_to(t('computers.bill'), \
+          '/bills/'+ computer.bill_id.to_s)) %>
       <%= content_tag('td', link_to(t('common_actions.show') , computer)) %>
       <%= content_tag('td', link_to(t('common_actions.edit') , edit_computer_path(computer))) %>
       <%= content_tag('td', link_to(t('common_actions.destroy') , computer, :confirm => 'Are you sure?', :method => :delete)) %>

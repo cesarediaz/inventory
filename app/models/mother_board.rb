@@ -7,6 +7,6 @@ class MotherBoard < ActiveRecord::Base
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :serialnumber
-  validates_presence_of :model, :serialnumber
+  validates_presence_of :model, :serialnumber, :mark_id
   validates_size_of :serialnumber, :within => 8..15
 end
