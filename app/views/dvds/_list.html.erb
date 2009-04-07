@@ -12,11 +12,11 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', dvd.model, options = {:nowrap => true} ) %>
     <%= content_tag('td', dvd.serialnumber, options = {:nowrap => true} ) %>
-    <%= content_tag('td', dvd.mark.name, options = {:nowrap => true}) rescue nil %>
+    <%= content_tag('td', dvd.mark.name, options = {:nowrap => true}) %>
     <%= content_tag('td', check(dvd.writable) ) %>
-    <%= content_tag('td', link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s),
-        options = {:nowrap => true})  rescue nil %>
-    <%= content_tag('td', link_to(t('computers.bill'), '/bills/'+ dvd.bill_id.to_s)) %>
+    <%= content_tag('td', dvd.computer.nil? ? '-': link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s),
+        options = {:nowrap => true})%>
+    <%= content_tag('td', dvd.bill_id.nil? ? '-': link_to(t('computers.bill'), '/bills/'+ dvd.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common_actions.show'), dvd )) %>
     <%= content_tag('td', link_to(t('common_actions.edit'), edit_dvd_path(dvd))) %>
     <%= content_tag('td', link_to(t('common_actions.destroy'), dvd, :confirm => 'Are you sure?', :method => :delete )) %>

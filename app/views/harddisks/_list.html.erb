@@ -17,8 +17,8 @@
     <%= content_tag('td',harddisk.size, options = {:nowrap => true}) rescue nil  %>
     <%= content_tag('td',harddisk.unit.nil? ? '-' : harddisk.unit.to_s,
         options = {:nowrap => true})  %>
-    <%= content_tag('td', link_to(harddisk.computer.name , 'computers/' +
-        harddisk.computer.id.to_s), options = {:nowrap => true})  rescue nil%>
+    <%= content_tag('td', harddisk.computer.nil? ? '-': link_to(harddisk.computer.name , 'computers/' +
+        harddisk.computer.id.to_s), options = {:nowrap => true}) %>
     <%= content_tag('td', harddisk.bill_id.nil? ? '-' : link_to(t('harddisks.bill'), \
         '/bills/'+ harddisk.bill_id.to_s)) %>
     <%= content_tag('td',link_to(t('common_actions.show'), harddisk)) %>

@@ -12,7 +12,7 @@
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', cd.model, options = {:nowrap => true}) %>
     <%= content_tag('td', cd.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td', cd.mark.name, options = {:nowrap => true}) rescue nil  %>
+    <%= content_tag('td', cd.mark.name, options = {:nowrap => true})%>
     <%= content_tag('td', check(cd.writable)) %>
     <%= content_tag('td', link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s),
         options = {:nowrap => true})  rescue nil %>
