@@ -17,7 +17,7 @@
     <%= content_tag('td', printer.mark.name, options = {:nowrap => true}) %>
     <%= content_tag('td', link_to(printer.place.title, '/places/' + printer.place.id.to_s),
         options = {:nowrap => true})%>
-    <%= content_tag('td', in_workstation?(printer, 'printer_id' )) rescue nil %>
+    <%= content_tag('td', in_workstation?(printer, 'printer_id' )) %>
     <%= content_tag('td', printer.inventory_register) %>
     <%= content_tag('td', printer.bill_id.nil? ? '-' : link_to( t('printers.bill'),
         '/bills/'+ printer.bill_id.to_s)) %>

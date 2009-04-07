@@ -6,6 +6,6 @@ class Cd < ActiveRecord::Base
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :serialnumber
-  validates_presence_of :serialnumber, :model
+  validates_presence_of :serialnumber, :model, :mark_id
 
 end
