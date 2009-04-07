@@ -53,7 +53,7 @@ class MemoriesController < ApplicationController
     @memory = Memory.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @memory }
     end
   end
