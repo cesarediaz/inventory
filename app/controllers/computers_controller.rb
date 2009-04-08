@@ -204,7 +204,7 @@ class ComputersController < ApplicationController
     @computers = Computer.paginate(
                                    :page => params[:page],
                                    :per_page => PER_PAGE,
-                                   :order => 'created_at DESC')
+                                   :order => 'created_at DESC', :include => [:place])
   end
 
   def pie_values
