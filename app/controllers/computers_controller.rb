@@ -189,7 +189,8 @@ class ComputersController < ApplicationController
     @computers = Computer.available.paginate(
                                              :page => params[:page],
                                              :per_page => PER_PAGE,
-                                             :order => 'created_at DESC')
+                                             :order => 'created_at DESC',
+                                             :include => [:place, :memory, :harddisk, :cd, :dvd, :mother_board])
   end
 
 
@@ -197,14 +198,16 @@ class ComputersController < ApplicationController
     @computers = Computer.unavailable.paginate(
                                                :page => params[:page],
                                                :per_page => PER_PAGE,
-                                               :order => 'created_at DESC')
+                                               :order => 'created_at DESC',
+                                               :include => [:place, :memory, :harddisk, :cd, :dvd, :mother_board])
   end
 
   def all_computers
     @computers = Computer.paginate(
                                    :page => params[:page],
                                    :per_page => PER_PAGE,
-                                   :order => 'created_at DESC', :include => [:place])
+                                   :order => 'created_at DESC',
+                                   :include => [:place, :memory, :harddisk, :cd, :dvd, :mother_board])
   end
 
   def pie_values
