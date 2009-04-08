@@ -33,11 +33,11 @@ class PlacesController < ApplicationController
   # GET /places.xml
   def index
     @places = Place.paginate(
-                               :page => params[:page],
-                               :per_page => PER_PAGE,
-                               :order => 'created_at DESC')
-
-
+                             :page => params[:page],
+                             :per_page => PER_PAGE,
+                             :order => 'created_at DESC',
+                             :include => [:screen, :printer]
+                             )
   end
 
   # GET /places/1
