@@ -21,7 +21,7 @@ require 'pdf/simpletable'
 require 'spreadsheet/excel'
 include Spreadsheet
 
-INCLUDE = [:screen, :printer]
+INCLUDE_PLACE = [:screen, :printer]
 INCLUDE_MARK = [:mark]
 INCLUDE_IN_COMPUTER = [:place, :memory, :harddisk, :cd, :dvd, :mother_board]
 
@@ -40,7 +40,7 @@ class PlacesController < ApplicationController
                              :page => params[:page],
                              :per_page => PER_PAGE,
                              :order => 'created_at DESC',
-                             :include => INCLUDE
+                             :include => INCLUDE_PLACE
                              )
   end
 

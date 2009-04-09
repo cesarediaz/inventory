@@ -1,8 +1,8 @@
 <!-- Computer info -->
 
 <% content_tag :div, :id => 'show' do %>
-<%= content_tag('div', t('computers.place')) %>
-<%= content_tag('div', link_to(@computer.place.title, '/places/' + @computer.place.id.to_s) ) rescue nil%>
+<%= content_tag('p', t('computers.place')) %>
+<%= content_tag('h3', link_to(@computer.place.title, '/places/' + @computer.place.id.to_s) ) rescue nil%>
 <%= show_info(t('computers.name'), 'show', 'Computer', @computer.id, 'name') %>
 <%= show_info('Ip', 'show', 'Computer', @computer.id, 'ip') %>
 <%= show_info('Mac', 'show', 'Computer', @computer.id, 'mac') %>
