@@ -27,10 +27,12 @@ describe "computers/show.html.erb" do
   end
 
  end
+
  describe "computers/_search.html.erb" do
   it "should display the text link to Show/Hide the search" do
     render "computers/_search.html.erb"
     assert_select 'a', 'Show/Hide'
+    assert_select 'td', 'Name'
   end
 
 end
