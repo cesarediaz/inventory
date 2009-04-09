@@ -13,7 +13,7 @@
 
   <%= content_tag('div', 'Motherboard : ') %>
                  <%= @computer.mother_board.model  rescue nil%>
-                 <%= content_tag('br') %>
+
 
   <%= content_tag('div', t('computers.harddisk')) %>
                  <%= @computer.harddisk.collect {|x| x.model + ' ' + x.size.to_s +
