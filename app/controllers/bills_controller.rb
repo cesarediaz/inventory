@@ -21,6 +21,8 @@ require 'pdf/simpletable'
 require 'spreadsheet/excel'
 include Spreadsheet
 
+INCLUDE = [:company]
+
 class BillsController < ApplicationController
   include ReportSystem
   include PdfReportSystem
@@ -31,6 +33,7 @@ class BillsController < ApplicationController
     @bills = Bill.paginate(
                            :page => params[:page],
                            :per_page => PER_PAGE,
+                           :include => INCLUDE,
                            :order => 'created_at DESC')
 
      respond_to do |format|
