@@ -20,6 +20,8 @@ require 'pdf/simpletable'
 require 'spreadsheet/excel'
 include Spreadsheet
 
+INCLUDE = [:place, :memory, :harddisk, :cd, :dvd, :mother_board]
+
 class ComputersController < ApplicationController
   include ReportSystem
   include ChartSystem
@@ -190,7 +192,7 @@ class ComputersController < ApplicationController
                                              :page => params[:page],
                                              :per_page => PER_PAGE,
                                              :order => 'created_at DESC',
-                                             :include => [:place, :memory, :harddisk, :cd, :dvd, :mother_board])
+                                             :include => INCLUDE)
   end
 
 
@@ -199,7 +201,7 @@ class ComputersController < ApplicationController
                                                :page => params[:page],
                                                :per_page => PER_PAGE,
                                                :order => 'created_at DESC',
-                                               :include => [:place, :memory, :harddisk, :cd, :dvd, :mother_board])
+                                               :include => INCLUDE)
   end
 
   def all_computers
@@ -207,7 +209,7 @@ class ComputersController < ApplicationController
                                    :page => params[:page],
                                    :per_page => PER_PAGE,
                                    :order => 'created_at DESC',
-                                   :include => [:place, :memory, :harddisk, :cd, :dvd, :mother_board])
+                                   :include => INCLUDE)
   end
 
   def pie_values

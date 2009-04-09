@@ -21,6 +21,10 @@ require 'pdf/simpletable'
 require 'spreadsheet/excel'
 include Spreadsheet
 
+INCLUDE = [:screen, :printer]
+INCLUDE_MARK = [:mark]
+INCLUDE_IN_COMPUTER = [:place, :memory, :harddisk, :cd, :dvd, :mother_board]
+
 class PlacesController < ApplicationController
   include ChartSystem
   include ReportSystem
@@ -36,25 +40,28 @@ class PlacesController < ApplicationController
                              :page => params[:page],
                              :per_page => PER_PAGE,
                              :order => 'created_at DESC',
-                             :include => [:screen, :printer]
+                             :include => INCLUDE
                              )
   end
 
   # GET /places/1
   # GET /places/1.xml
   def show
-    @place = Place.find(params[:id])
+    @place = Place.find(params[:id], :select => 'id, title')
     @computers = Computer.list_for_place(@place.id).paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,
+                               :include => INCLUDE_IN_COMPUTER,
                                :order => 'created_at DESC')
     @screens = Screen.list_for_place(@place.id).paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,
+                               :include => INCLUDE_MARK,
                                :order => 'created_at DESC')
     @printers = Printer.list_for_place(@place.id).paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,
+                               :include => INCLUDE_MARK,
                                :order => 'created_at DESC')
     @name_of_place = @place.title
     render :action => "show", :layout => "primary-content"
