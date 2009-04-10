@@ -1,5 +1,6 @@
 <% cache(:fragment => "places/_selector_places_list") do %>
-<label><%= t('places.select_type_of_places') %></label>
+
+<%= content_tag('label', t('places.select_type_of_places')) %>
 <% @options = [
    [t('places.select_one'),'select one'],
    [t('places.all'),'all'],

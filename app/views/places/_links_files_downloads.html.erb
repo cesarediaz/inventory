@@ -1,0 +1,6 @@
+<% content_tag :div, :id => 'right-content' do %>
+  <%= link_to t('common_actions.download'), :controller => 'places',
+  :action => 'xls_places' %> |
+  <%= link_to  t('common_actions.download_pdf'), :controller => 'places',
+  :action => 'pdf' %>
+<% end -%>
