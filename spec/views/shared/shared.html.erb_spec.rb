@@ -9,13 +9,13 @@ describe "shared/_head.html.erb" do
     assert_select 'title', 'Inventory of hardware'
   end
 
-  it "should has a meta tag keywords empty" do
+  it "should has a three metatags, three script" do
     assert_select "head" do |elements|
       elements.each do |element|
         assert_select element, "meta", 3
+        assert_select element, "script", 3
+        assert_select element, "link", 2
       end
     end
   end
  end
-
-
