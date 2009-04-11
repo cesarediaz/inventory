@@ -17,8 +17,8 @@ describe PrintersController do
   end
 
   def mock_printers
-    @printer_one = mock_model(Printer, :model => "pc_1", :sn => '12345678', :available => true)
-    @printer_two = mock_model(Printer, :model => "pc_2", :sn => '01020304', :available => false)
+    @printer_one = mock_model(Printer, :id => 1, :model => "Laser 1100", :sn => '12345678', :available => true)
+    @printer_two = mock_model(Printer, :id => 2, :model => "pc_2", :sn => '01020304', :available => false)
     @printers = [@printer_one, @printer_two]
     Printer.stub!(:search).and_return(@printers)
     @printers.stub!(:find).and_return(@printers)
@@ -30,7 +30,7 @@ describe PrintersController do
 
   describe "get index" do
     before(:each) do
-      @printer = [mock_model(Printer)]
+      @printer = [mock_model(Printer),mock_model(Printer),mock_model(Printer)]
       Printer.stub!(:paginate).and_return(@printer)
     end
 
@@ -43,7 +43,7 @@ describe PrintersController do
     it "should have n records" do
       login
       do_get_index
-      @printer.should have(1).items
+      @printer.should have(3).items
     end
 
     it "should assings printers" do

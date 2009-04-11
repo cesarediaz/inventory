@@ -208,11 +208,12 @@
 },
 
  :phrases => {
-   :list_of  => "Lista de ",
-   :units => " unidades ",
-   :has => " tiene ",
-   :y => "si",
-   :n => "no",
+  :list_of  => "Lista de ",
+  :units => " unidades ",
+  :has => " tiene ",
+  :y => "si",
+  :n => "no",
+  :result_search => 'Resultado de busqueda'
 },
 
 

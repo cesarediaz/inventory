@@ -199,6 +199,7 @@ en:
     has: " has "
     y: "yes"
     n: "no"
+    result_search: 'Result of search'
 
   menu:
     #Pages

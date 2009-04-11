@@ -624,6 +624,29 @@ div.auto_complete ul strong.highlight {
     border-bottom: solid 1px #000;
 }
 
+.advice
+{
+border: 1px solid #aaffaa;
+background-color: #ddffdd;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-position: 0% 0%;
+padding-top: 0.2em;
+padding-right: 0.2em;
+padding-bottom: 0.2em;
+padding-left: 0.2em;
+width: 100%;
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-top-style: solid;
+border-right-style-value: solid;
+border-bottom-style: solid;
+border-left-style-value: solid;
+}
+
 
 /* MENUS */
 body {

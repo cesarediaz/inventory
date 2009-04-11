@@ -120,6 +120,7 @@ class PrintersController < ApplicationController
     if not params[:printer][:serialnumber].nil?
       search_by('printers', 'Printer', params[:printer][:serialnumber], 'serialnumber', 10)
     end
+    flash[:notice] = t('phrases.result_search')
   end
 
 

@@ -198,6 +198,7 @@ fr:
     has: " tiene "
     y: "si"
     n: "no"
+    result_search: "Resulte de chercher"
 
 
   menu:
