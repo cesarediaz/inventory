@@ -5,7 +5,7 @@ class AddAdminUser < ActiveRecord::Migration
 
     user = User.create(:login => 'admin', :email => "admin@inventory.com",
                 :password => "testing", :password_confirmation => "testing",
-                :first_name => "Administrator", :last_name => "admin")
+                :name => "admin")
 
     user.save!
   end

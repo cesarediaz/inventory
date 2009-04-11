@@ -1,4 +1,9 @@
 es:
+  login:
+    succesfully: "Se a logueado"
+    error: "Reintente nuevamente tipeando su usuario y clave"
+    out: "Saliste de la aplicacion"
+
   bill:
     code: 'Codigo'
     company: 'Empresa'
@@ -284,7 +289,8 @@ es:
 
     #Flash
     flash :
-      login : "Logueado satisfactoriamente."
+      succefully : "Logueado satisfactoriamente."
+      error : "No se puede logear. Corrija su usuario o clave en intente nuevamente"
 
 
   number:

@@ -2,6 +2,11 @@
 # See http://github.com/svenfuchs/rails_i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  login:
+    succesfully: "Succesfully loged in"
+    error: "Retype your user or password and try again"
+    out: "You have been logged out."
+
   bill:
     code: 'Code'
     company: 'Company'
@@ -297,6 +302,3 @@ en:
     login : "Login"
     logout : "Logout"
 
-    #Flash
-    flash:
-      login : "Logged in succesfully."

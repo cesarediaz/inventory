@@ -216,6 +216,11 @@
   :result_search => 'Resultado de busqueda'
 },
 
+:flash => {
+  :succefully => "Logueado satisfactoriamente.",
+  :error => "No se puede logear. Corrija su usuario o clave en intente nuevamente"
+},
+
 
  :menu => {
    :pages => "Paginas",
