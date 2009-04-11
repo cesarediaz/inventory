@@ -172,6 +172,7 @@ fr:
     show_hide_advice: "Montrer/Dissimuler avis"
     hide_advice: "Dissimuler avis"
     report_of: "Rapport de "
+    successfully: " its need be translated"
 
   help_phrases:
     in_workstation: "Ce dispositif est assigné dans un poste de travail.

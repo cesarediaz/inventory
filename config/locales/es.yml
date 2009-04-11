@@ -172,6 +172,7 @@ es:
     show_hide_advice: "Mostrar/Ocultar aviso"
     hide_advice: "Ocultar aviso"
     report_of: "Informe de "
+    successfully: "El registro fue satisfactoriamente creado"
 
   help_phrases:
     in_workstation: "Este dispositivo esta asignado en una estacion de trabajo.

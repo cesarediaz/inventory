@@ -213,7 +213,8 @@
   :has => " tiene ",
   :y => "si",
   :n => "no",
-  :result_search => 'Resultado de busqueda'
+  :result_search => 'Resultado de busqueda',
+  :successfully => "El registro fue satisfactoriamente creado"
 },
 
 :flash => {

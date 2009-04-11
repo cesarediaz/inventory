@@ -179,6 +179,7 @@ en:
     show_hideadvice: "Show/Hide advice"
     hide_advice: "Hide advice"
     report_of: "Report of "
+    successfully: "The register was successfully created"
 
   help_phrases:
     in_workstation: "This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations."

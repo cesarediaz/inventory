@@ -85,7 +85,7 @@ class ComputersController < ApplicationController
 
     respond_to do |format|
       if @computer.save
-        flash[:notice] = 'Computer was successfully created.'
+        flash[:notice] = t('common_actions.successfully')
         format.html { redirect_to(@computer) }
         format.xml  { render :xml => @computer, :status => :created, :location => @computer }
       else
