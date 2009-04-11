@@ -123,4 +123,10 @@ module ApplicationHelper
     return @content
   end
 
+  def notice
+    content_tag :div, options = {:class => 'advice'} do
+      content_tag('h4', flash[:notice])
+    end
+  end
+
 end

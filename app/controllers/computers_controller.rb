@@ -35,7 +35,7 @@ class ComputersController < ApplicationController
 
   def index
     @computers = all_computers
-
+    flash[:notice] = t('computers.title')
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @computers }
@@ -45,7 +45,7 @@ class ComputersController < ApplicationController
 
   def available
     @computers = availables_computers
-
+    flash[:notice] = t('phrases.list_of') + ' ' + t('places.computer') + ' ' + t('computers.available')
     respond_to do |format|
       format.html { render :action => "available", :layout => "primary-content" }
       format.xml  { render :xml => @computers }
@@ -54,7 +54,7 @@ class ComputersController < ApplicationController
 
   def unavailable
     @computers = unavailables_computers
-
+    flash[:notice] = t('phrases.list_of') + ' ' + t('places.computer') + ' ' + t('computers.unavailable')
     respond_to do |format|
       format.html { render :action => "unavailable", :layout => "primary-content" }
       format.xml  { render :xml => @computers }

@@ -1,7 +1,4 @@
-<% content_tag :div, options = {:class => 'advice'} do %>
-  <%= content_tag('h4', flash[:notice]) %>
-<% end %>
-
+<%= render :partial => 'search' %>
 <% content_tag :div, :id => 'right-content' do %>
   <%= link_to t('common_actions.download_all'), :controller => 'computers', :action => 'xls_computers' %>
 <% end %>

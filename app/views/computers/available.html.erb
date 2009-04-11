@@ -1,16 +1,9 @@
 <%= render :partial => 'search' %>
-
-<% content_tag :div, :id => 'subtitles' do %>
-  <%= t('phrases.list_of') + ' ' + t('places.computer') + ' ' + t('computers.available') %>
-<% end %>
-
-<% content_tag :div, :id => 'left-content' do %>
-  <%= render :partial => 'list' %>
-<% end %>
-
+<%= render :partial => 'list' %>
 
 <%= will_paginate @computers %>
 
-<%= content_tag('br') %>
-
-<%= link_to t('computers.new'), new_computer_path %>
+<% content_tag :div do %>
+  <%= link_to t('computers.new'), new_computer_path %> |
+  <%= link_to t('common_actions.back'), computers_path %>
+<% end %>
