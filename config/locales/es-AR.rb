@@ -239,7 +239,7 @@
    :users => "Usuarios",
    :users_list => "Lista de usuarios",
    :users_admin? => "Administrador?",
-   :user => "Usuario  => ",
+   :user => "Usuario : ",
 
    :account  => "Su cuenta",
    :new_account  => "Nueva cuenta",
