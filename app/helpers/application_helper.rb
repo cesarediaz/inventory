@@ -51,13 +51,11 @@ module ApplicationHelper
   #Return: - yes if value is true
   #        - no if value is false
   def check(value)
-    html = ''
     if value
-      html = html +  t('phrases.y')
+      content_tag('div', t('phrases.y'))
     else
-      html = html +  t('phrases.n')
+      content_tag('div', t('phrases.n'))
     end
-    return html
   end
 
   #Get a value and depending of the value return a link or a phrase
@@ -72,7 +70,7 @@ module ApplicationHelper
                              :id => Workstation.find(:first,
                                                      :conditions => [ "#{device} = ?", value.id]).id)
     else
-      html = html +  t('phrases.n')
+      html = t('phrases.n')
     end
     return html
   end
@@ -96,19 +94,17 @@ module ApplicationHelper
   #
   # Return: html
   def which_type_of_place_is?(place)
-    html = ''
+
     case place
     when 'store'
-      html = html + t('places.stores')
+      content_tag('div',  t('places.stores'))
     when 'office'
-      html = html + t('places.offices')
+      content_tag('div',  t('places.offices'))
     when 'room'
-      html = html + t('places.rooms')
+      content_tag('div', t('places.rooms'))
     when 'department'
-      html = html + t('places.departments')
+      content_tag('div', t('places.departments'))
     end
-
-    return html.to_s
   end
 
   def set_charset
