@@ -39,14 +39,11 @@ module ApplicationHelper
   #
   # Return: html
   def front_end_pages()
-    html = ''
-
     Page.find(:all).collect { |page|
-      html = html + '<div id="options" >'
-      html = html + link_to(page.permalink, '/' + page.permalink )
-      html = html +  '</div>'
+      content_tag :div, :id => 'options' do
+        link_to(page.permalink, '/' + page.permalink )
+      end
     }
-    return html
   end
 
   #Get a value and depending of the value return a phrase
