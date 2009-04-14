@@ -8,41 +8,12 @@
 
       <%= render :partial => 'shared/menu' %>
 
-      <div id="content">
+      <%= render :partial => 'search' %>
+      <%= render :partial => 'selector_places_list' %>
+      <%= yield  %>
+      <div class="clear"></div>
 
-        <%= render :partial => 'shared/primary_content' %>
-
-        <div id='search' style='background:#eee;' >
-          <div>
-            <div id="secondaryContent">
-              <% if (controller.action_name != 'edit' && controller.action_name != 'show' &&
-                 controller.action_name != 'new' && controller.action_name != 'create') ||
-                 (controller.action_name == 'list') %>
-              <div class="box boxB">
-                <div class="boxContent">
-                  <%= render :partial => 'search' %>
-                  <br>
-                    <%= render :partial => 'selector_places_list' %>
-                  </div>
-                </div>
-                <% else %>
-                <div class="box boxB">
-                  <div class="boxContent">
-                    <h2><%= controller.controller_name %> : <%= controller.action_name %></h2>
-                  </div>
-                </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <a href="#" onclick="Effect.toggle('search', 'appear'); return false;">
-          <%= t('common_actions.show_hide') %></a>
-        <div class="clear"></div>
-
-        <%= render :partial => 'shared/footer' %>
-      </div>
-    </body>
-  </html>
+      <%= render :partial => 'shared/footer' %>
+    </div>
+  </body>
+</html>
