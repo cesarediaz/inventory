@@ -3,6 +3,8 @@
   <%= link_to t('common_actions.download_all'), :controller => 'computers', :action => 'xls_computers' %>
 <% end %>
 
+<%= notice %>
+
 <%= content_tag('br') %>
 <%= render :partial => 'list' %>
 

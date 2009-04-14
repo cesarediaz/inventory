@@ -27,6 +27,7 @@ class WorkstationsController < ApplicationController
   # GET /workstations
   # GET /workstations.xml
   def index
+    flash[:notice] = t('phrases.list_of') + ' ' + t('menu.workstations')
     hardware_in_place
     @workstations = Workstation.find(:all)
 
