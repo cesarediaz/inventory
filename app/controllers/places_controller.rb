@@ -227,6 +227,7 @@ class PlacesController < ApplicationController
   end
 
   def stats
+    flash[:notice] = t('stats.places_statistic')
     @graph = open_flash_chart_object(500,300,"/places/graph_types_places/show")
     @computers_by_place = open_flash_chart_object(500,300,"/places/graph_computers_by_place/show")
     @printers_by_place = open_flash_chart_object(500,300,"/places/graph_printers_by_place/show")
