@@ -36,6 +36,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.places').downcase
     @places = Place.paginate(
                              :page => params[:page],
                              :per_page => PER_PAGE,
@@ -215,14 +216,19 @@ class PlacesController < ApplicationController
       @places = Place.paginate(:page => params[:page],
                                :per_page => PER_PAGE,
                                :order => 'created_at DESC')
+      flash[:notice] = t('phrases.list_of') + t('menu.places').downcase
     when 'stores'
       @places = Place.stores
+      flash[:notice] = t('phrases.list_of') + t('places.stores').downcase
     when 'offices'
       @places = Place.offices
+      flash[:notice] = t('phrases.list_of') + t('places.offices').downcase
     when 'rooms'
       @places = Place.rooms
+      flash[:notice] = t('phrases.list_of') + t('places.rooms').downcase
     when 'departments'
       @places = Place.departments
+      flash[:notice] = t('phrases.list_of') + t('places.departments').downcase
     end
   end
 

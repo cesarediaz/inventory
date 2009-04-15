@@ -1,10 +1,6 @@
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
   <%= t('common_actions.show_hide') %></a>
-  <%= render :partial => 'links_files_downloads' %>
 <% content_tag :div, :id => 'toggle_appear_table_list_places' do %>
-    <% content_tag :h2 do %>
-     <%= t('phrases.list_of') + t('menu.places').downcase %>
-    <% end -%>
     <% content_tag :table do %>
       <% content_tag :tr do %>
         <%= content_tag('th', t('places.name')) %>
