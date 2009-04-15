@@ -25,6 +25,7 @@ class MemoriesController < ApplicationController
   # GET /memories
   # GET /memories.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.memories').downcase
     @memories = Memory.paginate(
                                 :page => params[:page],
                                 :per_page => PER_PAGE,
