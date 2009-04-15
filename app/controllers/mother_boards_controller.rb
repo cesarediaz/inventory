@@ -22,6 +22,7 @@ class MotherBoardsController < ApplicationController
   # GET /mother_boards
   # GET /mother_boards.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.motherboards').downcase
     @mother_boards = MotherBoard.paginate(
                                    :page => params[:page],
                                    :per_page => PER_PAGE,
