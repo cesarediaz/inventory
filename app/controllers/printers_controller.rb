@@ -27,6 +27,7 @@ class PrintersController < ApplicationController
   # GET /printers
   # GET /printers.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.printers').downcase
     @printers = Printer.paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,

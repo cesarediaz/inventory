@@ -1,7 +1,11 @@
-<div id='right-content' >
-  <%= link_to t('common_actions.download_all'), :controller => 'printers', :action => 'xls_printers' %>
-</div>
+<br />
+<%= notice %>
+<% content_tag :div, :id => 'right-content' do %>
+    <%= link_to t('common_actions.download_all'),
+    :controller => 'printers', :action => 'xls_printers' %>
+<% end %>
 
+<br />
 <%= render :partial => 'list' %>
 
 <br />

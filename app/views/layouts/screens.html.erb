@@ -8,25 +8,10 @@
 
       <div id="content">
 
-        <%= render :partial => 'shared/primary_content' %>
+        <%= render :partial => 'search' %>
+        <%= yield %>
 
-        <div id="secondaryContent">
-          <% if controller.action_name != 'edit' && controller.action_name != 'show' &&
-             controller.action_name != 'new' && controller.action_name != 'create' %>
-          <div class="box boxB">
-            <div class="boxContent">
-              <%= render :partial => 'search' %>
-            </div>
-          </div>
-          <% else %>
-          <div class="box boxB">
-            <div class="boxContent">
-              <h2><%= controller.controller_name %> : <%= controller.action_name %></h2>
-            </div>
-          </div>
-          <% end %>
-        </div>
-      </div>
+
       <div class="clear"></div>
 
       <%= render :partial => 'shared/footer' %>

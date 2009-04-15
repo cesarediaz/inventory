@@ -28,6 +28,7 @@ class ScreensController < ApplicationController
   # GET /screens
   # GET /screens.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.screens').downcase
     @screens = Screen.paginate(
                                :page => params[:page],
                                :per_page => PER_PAGE,

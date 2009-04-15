@@ -1,6 +1,11 @@
-<div id='right-content' >
-  <%= link_to t('common_actions.download_all'), :controller => 'screens', :action => 'xls_screens' %>
-</div>
+<br>
+<%= notice %>
+
+</br>
+
+<%= link_to t('common_actions.download_all'),
+    :controller => 'screens', :action => 'xls_screens' %>
+
 
 <%= render :partial => 'list' %>
 
