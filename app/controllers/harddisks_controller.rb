@@ -24,6 +24,7 @@ class HarddisksController < ApplicationController
   # GET /harddisks
   # GET /harddisks.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.harddisks').downcase
     @harddisks = Harddisk.paginate(
                                    :page => params[:page],
                                    :per_page => PER_PAGE,
