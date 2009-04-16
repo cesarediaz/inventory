@@ -22,7 +22,7 @@ class MarksController < ApplicationController
   # GET /marks
   # GET /marks.xml
   def index
-    @marks = Mark.find(:all, :select => 'id, name')
+    @marks = Mark.find(:all, :select => 'id, name', :order => 'name ASC')
 
     respond_to do |format|
       format.html # index.html.erb

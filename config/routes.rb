@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :pages
 
   map.resources :bills, :collection => {:list_for_company => :get, :pdf => :get, :xls  => :get,
-    :stats => :get}
+    :stats => :get, :auto_complete_for_bill_code => :get, :search => :get}
 
 
   map.resources :workstations, :collection => {:stats => :get, :xls_workstations  => :get}

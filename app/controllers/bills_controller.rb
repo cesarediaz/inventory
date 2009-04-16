@@ -27,6 +27,8 @@ class BillsController < ApplicationController
   include ReportSystem
   include PdfReportSystem
 
+  auto_complete_for :bill, :code
+
   # GET /bills
   # GET /bills.xml
   def index
@@ -121,6 +123,12 @@ class BillsController < ApplicationController
                                                                  :page => params[:page],
                                                                  :per_page => PER_PAGE,
                                                                  :order => 'created_at DESC')
+  end
+
+  def search
+    if not params[:bill][:code].nil?
+      search_by('bills', 'Bill', params[:bill][:code], 'code', 10)
+    end
   end
 
   def pdf
