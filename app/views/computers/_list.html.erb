@@ -4,13 +4,13 @@
     <%= content_tag('th', 'Mac') %>
     <%= content_tag('th', 'Ip') %>
     <%= content_tag('th', t('computers.memory')) %>
-    <%= content_tag('th', t('computers.harddisk')) %>
+    <%= content_tag('th', t('computers.harddisk'), options = {:nowrap => true}) %>
     <%= content_tag('th', 'Cd') %>
     <%= content_tag('th', 'Dvd') %>
     <%= content_tag('th', t('computers.place')) %>
     <%= content_tag('th', t('computers.available')) %>
     <%= content_tag('th', t('computers.workstation?')) %>
-    <%= content_tag('th', t('computers.inventory_register')) %>
+    <%= content_tag('th', t('computers.inventory_register'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('computers.bill')) %>
     <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end -%>
