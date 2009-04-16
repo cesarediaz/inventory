@@ -24,6 +24,7 @@ class DvdsController < ApplicationController
   # GET /dvds
   # GET /dvds.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.dvds').downcase
     @dvds = Dvd.paginate(
                           :page => params[:page],
                           :per_page => PER_PAGE,
