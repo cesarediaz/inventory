@@ -22,6 +22,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.companies').downcase
     @companies = Company.paginate(
                                   :page => params[:page],
                                   :per_page => PER_PAGE,
