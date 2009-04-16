@@ -23,6 +23,7 @@ class CdsController < ApplicationController
   # GET /cds
   # GET /cds.xml
   def index
+    flash[:notice] = t('phrases.list_of') + t('menu.cds').downcase
     @cds = Cd.paginate(
                        :page => params[:page],
                        :per_page => PER_PAGE,
