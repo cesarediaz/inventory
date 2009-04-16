@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
 
   # render new.rhtml
   def new
+    flash[:notice] = t('login.in')
   end
 
   def create

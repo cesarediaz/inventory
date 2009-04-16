@@ -3,6 +3,7 @@ es:
     succesfully: "Se a logueado"
     error: "Reintente nuevamente tipeando su usuario y clave"
     out: "Saliste de la aplicacion"
+    in: "Escriba su usuario y clave para ingresar a la aplicacion"
 
   bill:
     code: 'Codigo'

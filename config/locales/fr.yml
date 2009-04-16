@@ -286,6 +286,7 @@ fr:
     #Login
     login : "Verser"
     logout : "Sortir"
+    in: "It needs be translated"
 
     #Flash
     flash :
