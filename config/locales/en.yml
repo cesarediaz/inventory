@@ -207,6 +207,7 @@ en:
     y: "yes"
     n: "no"
     result_search: 'Result of search'
+    by: " by "
 
   menu:
     #Pages

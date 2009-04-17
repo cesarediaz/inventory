@@ -123,14 +123,17 @@ class ComputersController < ApplicationController
   def search
     if not params[:computer][:name].nil?
       search_by('computers', 'Computer', params[:computer][:name], 'name', 10)
+      flash[:notice] = t('phrases.result_search') + t('phrases.by') + t('computers.name')
     end
 
     if not params[:computer][:ip].nil?
       search_by('computers', 'Computer', params[:computer][:ip], 'ip', 10)
+      flash[:notice] = t('phrases.result_search') + t('phrases.by') + 'ip.'
     end
 
     if not params[:computer][:mac].nil?
       search_by('computers', 'Computer', params[:computer][:mac], 'mac', 10)
+      flash[:notice] = t('phrases.result_search') + t('phrases.by') + 'mac.'
     end
   end
 

@@ -214,7 +214,8 @@
   :y => "si",
   :n => "no",
   :result_search => 'Resultado de busqueda',
-  :successfully => "El registro fue satisfactoriamente creado"
+  :successfully => "El registro fue satisfactoriamente creado",
+  :by => " por "
 },
 
 :flash => {

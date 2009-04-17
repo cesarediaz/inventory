@@ -200,6 +200,7 @@ fr:
     y: "si"
     n: "no"
     result_search: "Resulte de chercher"
+    by: " par "
 
 
   menu:
