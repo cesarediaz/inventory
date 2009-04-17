@@ -40,7 +40,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :companies, :collection => {:auto_complete_for_company_name => :get,
     :auto_complete_for_company_email => :get}
 
-  map.resources :marks
+  map.resources :marks, :collection => {:auto_complete_for_mark_name => :get}
 
   map.root :controller => 'computers'
 

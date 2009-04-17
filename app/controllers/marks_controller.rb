@@ -19,6 +19,8 @@ class MarksController < ApplicationController
   before_filter :login_required
   layout "primary-content"
 
+  auto_complete_for :mark, :name
+
   # GET /marks
   # GET /marks.xml
   def index
@@ -100,6 +102,12 @@ class MarksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(marks_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def search
+    if not params[:mark][:name].nil?
+      search_by('marks', 'Mark', params[:mark][:name], 'name', 10)
     end
   end
 end
