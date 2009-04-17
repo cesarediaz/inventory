@@ -23,35 +23,35 @@
 
 <%= hidden_field(:workstation, :place_id, :value => @place_id) %>
 
-<table>
-  <tr>
-    <td valign='top'>
+
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @computers.empty? %>
       <%= label_tag('computers', t('phrases.list_of') + ' ' + t('computers.title')) %>
       <br>
       <%= collection_select 'workstation', 'computer_id', @computers, 'id', 'name',{},
           {:prompt => true, :size => @computers.count + 1 } %>
       <% end %>
-    </td>
-    <td valign='top'>
+    <% end %>
+    <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @screens.empty? %>
       <%= label_tag('screens',  t('phrases.list_of') + ' ' + t('screens.title')) %>
       <br>
       <%= collection_select 'workstation', 'screen_id', @screens, 'id', 'model',{},
           {:prompt => true, :size => @screens.count + 1 } %>
       <% end %>
-    </td>
-    <td valign='top'>
-
+    <% end %>
+    <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @printers.empty? %>
       <%= label_tag('printers',  t('phrases.list_of') + ' ' + t('printers.title')) %>
       <br>
       <%= collection_select 'workstation', 'printer_id', @printers, 'id', 'model',{},
           {:prompt => true, :size => @printers.count + 1 } %>
       <% end %>
-    </td>
-  </tr>
-</table>
+    <% end %>
+  <% end %>
+<% end %>
 
 
 <p>
