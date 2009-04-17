@@ -10,10 +10,12 @@
 
       <%= render :partial => 'search' %>
       <%= render :partial => 'selector_places_list' %>
-      <%= yield  %>
-      <div class="clear"></div>
+      <div id="content">
+        <%= yield  %>
+        <div class="clear"></div>
 
       <%= render :partial => 'shared/footer' %>
+      </div>
     </div>
   </body>
 </html>
