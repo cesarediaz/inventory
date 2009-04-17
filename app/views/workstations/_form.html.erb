@@ -16,16 +16,24 @@
   </select>
 </div >
 
-<div class="clear" ></div>
+
+<% 2.times do %>
+<br>
+<% end %>
+
 <div id="left-content" >
   <%= @place_name rescue nil %>
 </div>
 
 <%= hidden_field(:workstation, :place_id, :value => @place_id) %>
 
+<% 2.times do %>
+<br>
+<% end %>
 
 <% content_tag :table do %>
   <% content_tag :tr do %>
+
     <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @computers.empty? %>
       <%= label_tag('computers', t('phrases.list_of') + ' ' + t('computers.title')) %>
@@ -34,6 +42,8 @@
           {:prompt => true, :size => @computers.count + 1 } %>
       <% end %>
     <% end %>
+
+
     <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @screens.empty? %>
       <%= label_tag('screens',  t('phrases.list_of') + ' ' + t('screens.title')) %>
@@ -42,6 +52,8 @@
           {:prompt => true, :size => @screens.count + 1 } %>
       <% end %>
     <% end %>
+
+
     <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @printers.empty? %>
       <%= label_tag('printers',  t('phrases.list_of') + ' ' + t('printers.title')) %>
@@ -50,6 +62,7 @@
           {:prompt => true, :size => @printers.count + 1 } %>
       <% end %>
     <% end %>
+
   <% end %>
 <% end %>
 
