@@ -1,8 +1,12 @@
 <%= render :partial => 'search' %>
 <br />
 
+<%= notice %>
+<br />
+
 <%= render :partial => 'list' %>
 
 <br />
 
-<%= link_to 'New cd', new_cd_path %>
+<%= link_to t('common_actions.show'), @mark %> |
+<%= link_to t('common_actions.back'), marks_path %>

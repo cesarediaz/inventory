@@ -26,6 +26,8 @@ class MarksController < ApplicationController
   def index
     @marks = Mark.find(:all, :select => 'id, name', :order => 'name ASC')
 
+    flash[:notice] = t('phrases.list_of') + ' ' + t('marks.mark')
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @marks }
@@ -109,5 +111,7 @@ class MarksController < ApplicationController
     if not params[:mark][:name].nil?
       search_by('marks', 'Mark', params[:mark][:name], 'name', 10)
     end
+
+    flash[:notice] = t('phrases.result_search')
   end
 end
