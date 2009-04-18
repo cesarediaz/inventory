@@ -40,7 +40,7 @@ class HarddisksController < ApplicationController
   # GET /harddisks/1.xml
   def show
     @harddisk = Harddisk.find(params[:id])
-
+    flash[:notice] = t('menu.harddisks')
     respond_to do |format|
       format.html { render :action => "show", :layout => "primary-content"}
       format.xml  { render :xml => @harddisk }

@@ -63,7 +63,7 @@ class ComputersController < ApplicationController
 
   def show
     @computer = Computer.find(params[:id])
-
+    flash[:notice] = t('menu.computers')
     respond_to do |format|
       format.html { render :action => "show", :layout => "primary-content" }
       format.xml  { render :xml => @computer }
