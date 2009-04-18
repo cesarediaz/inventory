@@ -1,2 +1,29 @@
+<%= notice %>
+
+<% content_tag :div, :id => 'show' do %>
+
+
+<%= content_tag('h4', t('marks.mark')) %>
+<%= content_tag('p',@mother_board.mark.name) %>
+
+<%= content_tag('h4', t('motherboards.model')) %>
+<%= content_tag('p',@mother_board.model) %>
+
+<%= content_tag('h4',t('motherboards.sn')) %>
+<%= content_tag('p',@mother_board.serialnumber) %>
+
+<%= content_tag('h4',t('motherboards.computer')) %>
+<%= content_tag('p',@mother_board.computer.nil? ?
+    '-': link_to(@mother_board.computer.name , '/computers/' +
+    @mother_board.computer.id.to_s)) %>
+
+<%= content_tag('h4',t('motherboards.bill')) %>
+<%= content_tag('p', @mother_board.bill_id.nil? ?
+    '-' : link_to(t('motherboards.bill'),
+    '/bills/'+ @mother_board.bill_id.to_s)) %>
+
+<% end %>
+
+
 <%= link_to 'Edit', edit_mother_board_path(@mother_board) %> |
 <%= link_to 'Back', mother_boards_path %>

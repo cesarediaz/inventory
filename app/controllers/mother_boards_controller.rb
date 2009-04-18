@@ -37,6 +37,7 @@ class MotherBoardsController < ApplicationController
   # GET /mother_boards/1
   # GET /mother_boards/1.xml
   def show
+    flash[:notice] = t('menu.motherboards')
     @mother_board = MotherBoard.find(params[:id])
 
     respond_to do |format|
