@@ -44,7 +44,7 @@ class ScreensController < ApplicationController
   # GET /screens/1.xml
   def show
     @screen = Screen.find(params[:id])
-
+    flash[:notice] = t('menu.screens')
     respond_to do |format|
       format.html { render :action => "show", :layout => "primary-content"}
       format.xml  { render :xml => @screen }
