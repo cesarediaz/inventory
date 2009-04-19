@@ -41,7 +41,7 @@ class MemoriesController < ApplicationController
   # GET /memories/1.xml
   def show
     @memory = Memory.find(params[:id])
-
+    flash[:notice] = t('menu.memories')
     respond_to do |format|
       format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @memory }
