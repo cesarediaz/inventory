@@ -40,7 +40,7 @@ class DvdsController < ApplicationController
   # GET /dvds/1.xml
   def show
     @dvd = Dvd.find(params[:id])
-
+    flash[:notice] = t('menu.dvds')
     respond_to do |format|
       format.html { render :action => "show", :layout => "primary-content" }
       format.xml  { render :xml => @dvd }

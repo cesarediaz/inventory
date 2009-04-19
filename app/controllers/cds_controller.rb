@@ -39,7 +39,7 @@ class CdsController < ApplicationController
   # GET /cds/1.xml
   def show
     @cd = Cd.find(params[:id])
-
+    flash[:notice] = t('menu.cds')
     respond_to do |format|
       format.html { render :action => "show", :layout => "primary-content"}
       format.xml  { render :xml => @cd }

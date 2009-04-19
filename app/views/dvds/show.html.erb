@@ -1,3 +1,23 @@
+<%= notice %>
+
+<% content_tag :div, :id => 'show' do %>
+
+<%= content_tag('h4', t('dvds.model')) %>
+<%= content_tag('p', @dvd.model) %>
+
+<%= content_tag('h4', t('dvds.mark')) %>
+<%= content_tag('p', @dvd.mark.name) %>
+
+<%= content_tag('h4',t('dvds.sn')) %>
+<%= content_tag('p',@dvd.serialnumber) %>
+
+<%= content_tag('h4',t('menu.computers')) %>
+
+<%= content_tag('p',@dvd.computer.nil? ?
+    '-': link_to(@dvd.computer.name , '/computers/' +
+    @dvd.computer.id.to_s)) %>
+
+<% end %>
 
 <%= link_to t('common_actions.edit'), edit_dvd_path(@dvd) %> |
 <%= link_to t('common_actions.back'), dvds_path %>
