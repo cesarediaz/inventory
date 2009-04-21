@@ -2,16 +2,22 @@
 
 one:
   id: 1
-  name: one
-  address: an address
+  name: OnlyHardware
+  street: San Lorenzo
+  number: 3350
+  city: Santa Fe
+  Country: Argentina
   phone: 4555555
   fax: 4555556
   email: one@one.com
 
 two:
   id: 2
-  name: two
-  address: other address
+  name: AllSoftware
+  street: San Martin
+  number: 2750
+  city: Santa Fe
+  Country: Argentina
   phone: 4333333
   fax: 4333336
   email: two@two.com
