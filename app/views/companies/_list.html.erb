@@ -10,7 +10,7 @@
 <% for company in @companies %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', company.name, options = {:nowrap => true}) %>
-    <%= content_tag('td', company.address, options = {:nowrap => true}) %>
+    <%= content_tag('td', company.complete_address, options = {:nowrap => true}) %>
     <%= content_tag('td', company.phone, options = {:nowrap => true}) %>
     <%= content_tag('td', company.fax, options = {:nowrap => true}) %>
     <%= content_tag('td', company.email, options = {:nowrap => true}) %>

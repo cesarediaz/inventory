@@ -16,6 +16,8 @@
 #     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 class CompaniesController < ApplicationController
+  include Countries
+
   auto_complete_for :company, :name
   auto_complete_for :company, :email
 
@@ -39,6 +41,14 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
 
+    countries
+    place_coordinates = GoogleGeocoder.geocode(@company.street + ',' + @company.city \
+                                               + ',' + @company.country + ' ' + @company.number)
+    @map = GMap.new("map")
+    @map.center_zoom_init([place_coordinates.lat, place_coordinates.lng], 15)
+    place_icon = GMarker.new([place_coordinates.lat,place_coordinates.lng])
+    @map.overlay_init(place_icon)
+
     respond_to do |format|
       format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @company }
@@ -49,7 +59,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new.xml
   def new
     @company = Company.new
-
+    countries
     respond_to do |format|
       format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @company }
@@ -58,6 +68,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
+    countries
     @company = Company.find(params[:id])
     render  :layout => "primary-content"
   end

@@ -1,31 +1,36 @@
 <% form_for(@company) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= t('company.name') %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= t('company.address') %><br />
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= t('company.phone') %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= t('company.fax') %><br />
-    <%= f.text_field :fax %>
-  </p>
-  <p>
-    <%= t('company.email') %><br />
-    <%= f.text_field :email %>
-  </p>
+    <p>
+     <%= t('company.name') %><br />
+     <%= f.text_field :name %>
+    </p>
+    <p>
+     <%= t('company.address') %><br />
+     <%= f.text_field :street %>
+     <%= f.text_field :number %>
+     <%= f.text_field :city %>
+    </p>
 
-  <% if action_name == 'new' %>
-  <%= f.submit t('company.create') %>
-  <% else %>
-  <%= f.submit t('company.edit') %>
-  <% end %>
+    <%= select(:company, :country, @countries.to_a.collect {|p| [p,p]} ) %>
+
+    <p>
+     <%= t('company.phone') %><br />
+     <%= f.text_field :phone %>
+    </p>
+    <p>
+     <%= t('company.fax') %><br />
+     <%= f.text_field :fax %>
+    </p>
+    <p>
+     <%= t('company.email') %><br />
+     <%= f.text_field :email %>
+    </p>
+
+    <% if action_name == 'new' %>
+    <%= f.submit t('company.create') %>
+    <% else %>
+    <%= f.submit t('company.edit') %>
+    <% end %>
 
 <% end %>

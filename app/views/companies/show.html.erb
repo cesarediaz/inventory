@@ -1,3 +1,7 @@
+
+<% content_tag :table do %>
+  <% content_tag :tr, option = {:valign => 'top'}  do %>
+   <% content_tag :td do %>
 <p>
   <b><%= t('company.name') %></b>
   <%=h @company.name %>
@@ -5,7 +9,7 @@
 
 <p>
   <b><%= t('company.address') %></b>
-  <%=h @company.address %>
+  <%=h @company.complete_address %>
 </p>
 
 <p>
@@ -22,6 +26,15 @@
   <b><%= t('company.email') %></b>
   <%=h @company.email %>
 </p>
+   <% end %>
+
+   <% content_tag :td do %>
+    <%= GMap.header %>
+    <%= @map.to_html %>
+    <%= @map.div(:width => 600, :height => 400) %>
+   <% end %>
+  <% end %>
+ <% end %>
 
 
 <%= link_to t('common_actions.edit'), edit_company_path(@company) %> |
