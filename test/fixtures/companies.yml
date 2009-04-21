@@ -3,7 +3,10 @@
 one:
   id: 1
   name: one
-  address: an address
+  street: San Martin
+  number: 1800
+  city: Santa Fe
+  country: Argentina
   phone: 4555555
   fax: 4555556
   email: one@one.com
@@ -11,7 +14,10 @@ one:
 two:
   id: 2
   name: two
-  address: other address
+  street: Moreno
+  number: 2775
+  city: Santa Fe
+  country: Argentina
   phone: 4333333
   fax: 4333336
   email: two@two.com
