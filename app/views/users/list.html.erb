@@ -3,3 +3,9 @@
     <%= render :partial => 'list' %>
   <% end %>
 <% end %>
+
+<%= will_paginate @users %>
+
+<%= content_tag('br') %>
+
+<%= link_to t('menu.new_account'), :controller => 'users', :action => 'new' %>
