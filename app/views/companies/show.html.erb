@@ -28,6 +28,12 @@
 </p>
    <% end %>
 
+   <html><head><title>Test</title>
+   <%= Mapstraction.header(:google) %>
+        <%= @map.to_html %>
+        </head><body>
+        <%= @map.div(:width => 600, :height => 400) %>
+
    <% content_tag :td do %>
     <%= GMap.header %>
     <%= @map.to_html %>

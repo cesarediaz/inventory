@@ -2,22 +2,22 @@
 
 one:
   id: 1
-  name: OnlyHardware
-  street: San Lorenzo
-  number: 3350
+  name: one
+  street: San Martin
+  number: 1800
   city: Santa Fe
-  Country: Argentina
+  country: Argentina
   phone: 4555555
   fax: 4555556
   email: one@one.com
 
 two:
   id: 2
-  name: AllSoftware
-  street: San Martin
-  number: 2750
+  name: two
+  street: Moreno
+  number: 2775
   city: Santa Fe
-  Country: Argentina
+  country: Argentina
   phone: 4333333
   fax: 4333336
   email: two@two.com

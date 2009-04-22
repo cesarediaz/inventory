@@ -44,10 +44,16 @@ class CompaniesController < ApplicationController
     countries
     place_coordinates = GoogleGeocoder.geocode(@company.street + ',' + @company.city \
                                                + ',' + @company.country + ' ' + @company.number)
-    @map = GMap.new("map")
-    @map.center_zoom_init([place_coordinates.lat, place_coordinates.lng], 15)
-    place_icon = GMarker.new([place_coordinates.lat,place_coordinates.lng])
-    @map.overlay_init(place_icon)
+
+    @map = Mapstraction.new("map_div",:google)
+    @map.control_init(:small => true)
+    @map.center_zoom_init([place_coordinates.lat, place_coordinates.lng], 16)
+    @map.marker_init(Marker.new([place_coordinates.lat, place_coordinates.lng],:label => "Hello", :info_bubble => "Info! Info!"))
+
+    # @map = GMap.new("map")
+    # @map.center_zoom_init([place_coordinates.lat, place_coordinates.lng], 15)
+    # place_icon = GMarker.new([place_coordinates.lat,place_coordinates.lng])
+    # @map.overlay_init(place_icon)
 
     respond_to do |format|
       format.html { render :layout => "primary-content" }
