@@ -7,14 +7,24 @@ en:
     workstations_module_is: "Is the place where you can join a computer more a screen and a printer.
                             This will show you the stations that are prepared to work immediatly, it
                             means that a user can use this machine to work right now."
+
     which_are_the_rules_to_have_a_workstation: "Which are the rules to have a workstation?"
     rules_to_consider_in_a_workstation: "It must has one computer and one screen."
+
     what_in_statistics_of_workstations: "What are there in statistics for workstations?"
     workstations_statistics_show: "It shows text and graphical information for each place showing
                                   computers, screens and printers alone or as part of a workstation "
+
     what_is_places_module: "What are in the option places?"
     place_module_is: "Is the module where you can add different kinds of places how stores, offices,
                      departments or rooms with a name for each one."
+
+    what_can_i_do_there: "What can I do there?"
+    there_you_can: "There you can see the complete list of places at the 'index' page, search places
+                   by name or for more general concepts how offices, stores and so on selecting
+                   those by description. In the list for each place you could be read information
+                   about the 'Name' of the place, 'Description', number of 'Computers', number of
+                   'Screens', number of 'Printers' and links to download a file in xls o pdf format"
 
 
 
