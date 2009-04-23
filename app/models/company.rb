@@ -7,7 +7,7 @@ class Company < ActiveRecord::Base
   # VALIDATIONS
   validates_uniqueness_of :name
   validates_numericality_of :number
-  validates_presence_of :name, :phone, :email, :street, :number, :city, :country
+  validates_presence_of :name, :street, :number, :city, :country
   validates_format_of :email, :with =>
     %r{^(?:[_a-z0-9-]+)(\.[_a-z0-9-]+)*@([a-z0-9-]+)(\.[a-zA-Z0-9\-\.]+)*(\.[a-z]{2,4})$}i
 

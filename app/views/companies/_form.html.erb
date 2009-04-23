@@ -7,17 +7,17 @@
     </p>
      <% content_tag :div, :id => 'quarter'  do %>
        <%= t('company.street') %>
-       <%= f.text_field :street %>
+       <%= f.text_field :street, :value => '-' %>
 
        <%= content_tag('br') %>
 
        <%= t('company.number') %>
-       <%= f.text_field :number %>
+       <%= f.text_field :number, :value => 0 %>
 
        <%= content_tag('br') %>
 
        <%= t('company.city') %>
-       <%= f.text_field :city %>
+       <%= f.text_field :city, :value => '-' %>
 
        <%= content_tag('br') %>
 
@@ -35,7 +35,7 @@
     </p>
     <p>
      <%= t('company.email') %><br />
-     <%= f.text_field :email %>
+     <%= f.text_field :email, :value => 'without@email.com' %>
     </p>
 
     <% if action_name == 'new' %>
