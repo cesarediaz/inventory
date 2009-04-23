@@ -1,33 +1,61 @@
-<%= content_tag('h2', t('menu.workstations')) %>
+<!-- Workstations -->
 
-<% content_tag :div do %>
-  <%= content_tag('b', t('faq.what_are_workstations_module')) %>
-  <%= content_tag('p', t('faq.workstations_module_is')) %>
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= t('menu.workstations') %>
 <% end %>
 
 <% content_tag :div do %>
-  <%= content_tag('b', t('faq.which_are_the_rules_to_have_a_workstation')) %>
-  <%= content_tag('p', t('faq.rules_to_consider_in_a_workstation')) %>
+  <%= content_tag('b', ' - ' + t('faq.what_are_workstations_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.workstations_module_is'), :class => 'identation_help') %>
 <% end %>
 
 <% content_tag :div do %>
-  <%= content_tag('b', t('faq.what_in_statistics_of_workstations')) %>
-  <%= content_tag('p', t('faq.workstations_statistics_show')) %>
-<% end %>
-
-
-<%= content_tag('h2', t('menu.places')) %>
-
-<% content_tag :div do %>
-  <%= content_tag('b', t('faq.what_is_places_module')) %>
-  <%= content_tag('p', t('faq.place_module_is')) %>
+  <%= content_tag('b',' - ' + t('faq.which_are_the_rules_to_have_a_workstation'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.rules_to_consider_in_a_workstation'), :class => 'identation_help') %>
 <% end %>
 
 <% content_tag :div do %>
-  <%= content_tag('b', t('faq.what_can_i_do_there')) %>
-  <%= content_tag('p', t('faq.there_you_can')) %>
+  <%= content_tag('b', ' - ' + t('faq.what_in_statistics_of_workstations'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.workstations_statistics_show'), :class => 'identation_help') %>
 <% end %>
 
 
 
-<%= content_tag('h2', 'Hardware') %>
+<!-- Places -->
+
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= t('menu.places') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_is_places_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.place_module_is'), :class => 'identation_help') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_can_i_do_there'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.there_you_can'), :class => 'identation_help') %>
+<% end %>
+
+
+
+<!-- Hardware -->
+
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= 'Hardware' %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_in_statistics_of_places'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_statistics_of_places'), :class => 'identation_help') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_is_hardware_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_hardware_has'), :class => 'identation_help') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_in_submodule_computers'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_computers_has'), :class => 'identation_help') %>
+<% end %>
