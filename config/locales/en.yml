@@ -2,6 +2,19 @@
 # See http://github.com/svenfuchs/rails_i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  faq:
+    what_are_workstations_module: "What is Workstations module?"
+    workstations_module_is: "Is the place where you can join a computer more a screen and a printer.
+                            This will show you the stations that are prepared to work immediatly, it
+                            means that a user can use this machine to work right now."
+    which_are_the_rules_to_have_a_workstation: "Which are the rules to have a workstation?"
+    rules_to_consider_in_a_workstation: "It must has one computer and one screen."
+    what_in_statistics_of_workstations: "What are there in statistics for workstations?"
+    workstations_statistics_show: "It shows text and graphical information for each place showing
+                                  computers, screens and printers alone or as part of a workstation "
+
+
+
   login:
     succesfully: "Succesfully loged in"
     error: "Retype your user or password and try again"

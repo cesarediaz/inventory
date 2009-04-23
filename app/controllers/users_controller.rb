@@ -98,4 +98,7 @@ class UsersController < ApplicationController
     logged_in? ? load_user : redirect_to('/')
   end
 
+  def help
+  end
+
 end

@@ -60,7 +60,7 @@ ruby-ole (1.2.8.2)
 spreadsheet (0.6.3)
 term-ansicolor (1.0.3)
 treetop (1.2.4)
-
+geokit
 
 Install
 
@@ -123,6 +123,3 @@ It is free for your election, and those could be:
 
 Take a look to this website http://rubyonrails.org/deploy to learn how you can deploy in different modes a Ruby
 on Rails application.
-
-
-
