@@ -5,14 +5,25 @@
      <%= t('company.name') %><br />
      <%= f.text_field :name %>
     </p>
-    <p>
-     <%= t('company.address') %><br />
-     <%= f.text_field :street %>
-     <%= f.text_field :number %>
-     <%= f.text_field :city %>
-    </p>
+     <% content_tag :div, :id => 'quarter'  do %>
+       <%= t('company.street') %>
+       <%= f.text_field :street %>
 
-    <%= select(:company, :country, @countries.to_a.collect {|p| [p,p]} ) %>
+       <%= content_tag('br') %>
+
+       <%= t('company.number') %>
+       <%= f.text_field :number %>
+
+       <%= content_tag('br') %>
+
+       <%= t('company.city') %>
+       <%= f.text_field :city %>
+
+       <%= content_tag('br') %>
+
+       <%= t('company.country') %>
+       <%= select(:company, :country, @countries.to_a.collect {|p| [p,p]} ) %>
+    <% end %>
 
     <p>
      <%= t('company.phone') %><br />

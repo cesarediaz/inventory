@@ -17,6 +17,8 @@
 
 class CompaniesController < ApplicationController
   include Countries
+  before_filter :countries
+
 
   auto_complete_for :company, :name
   auto_complete_for :company, :email
@@ -41,7 +43,6 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
 
-    countries
     place_coordinates = GoogleGeocoder.geocode(@company.street + ',' + @company.city \
                                                + ',' + @company.country + ' ' + @company.number)
 
@@ -65,7 +66,6 @@ class CompaniesController < ApplicationController
   # GET /companies/new.xml
   def new
     @company = Company.new
-    countries
     respond_to do |format|
       format.html { render :layout => "primary-content" }
       format.xml  { render :xml => @company }
@@ -74,7 +74,6 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
-    countries
     @company = Company.find(params[:id])
     render  :layout => "primary-content"
   end

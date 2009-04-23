@@ -3,6 +3,7 @@ module Countries
 
   def countries
     @countries = [
+     ['Argentina'],
      ['Spain'],
      ['France'],
      ['Germany'],
@@ -19,7 +20,6 @@ module Countries
      ['Anguilla'],
      ['Antarctica'],
      ['Antigua and Barbuda'],
-     ['Argentina'],
      ['Armenia'],
      ['Aruba'],
      ['Ascension Island'],

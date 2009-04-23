@@ -14,6 +14,10 @@
 
   :company => {
     :name => "Nombre",
+    :street => "Calle",
+    :number => "Numero",
+    :city => "Ciudad",
+    :country => "Pais",
     :address => "Direccion",
     :phone => "Telefono",
     :fax => "Fax",

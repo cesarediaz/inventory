@@ -15,6 +15,10 @@ fr:
 
   company:
     name: "Nom"
+    street: "Street"
+    number: "Number"
+    city: "City"
+    country: "Country"
     address: "Direction"
     phone: "Téléphone"
     fax: "Fax"
