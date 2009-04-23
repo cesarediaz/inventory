@@ -12,6 +12,9 @@ en:
     what_in_statistics_of_workstations: "What are there in statistics for workstations?"
     workstations_statistics_show: "It shows text and graphical information for each place showing
                                   computers, screens and printers alone or as part of a workstation "
+    what_is_places_module: "What are in the option places?"
+    place_module_is: "Is the module where you can add different kinds of places how stores, offices,
+                     departments or rooms with a name for each one."
 
 
 
