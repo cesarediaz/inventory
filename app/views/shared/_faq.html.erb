@@ -1,3 +1,5 @@
+<% cache(:fragment => "shared/_faq") do %>
+
 <!-- Workstations -->
 
 <% content_tag :h2, option = {:class => 'advice'}  do %>
@@ -57,3 +59,11 @@
   <%= content_tag('b', ' - ' + t('faq.what_in_submodule_computers'), :class => 'identation_help') %>
   <%= content_tag('p', t('faq.in_computers_has'), :class => 'identation_help') %>
 <% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_in_submodule_motherboards'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_motherboards_has'), :class => 'identation_help') %>
+<% end %>
+
+<% end %>
+
