@@ -33,15 +33,26 @@
                                   how the percent of places for each kind, percents of
                                   computers, screens and printers in each place too',
 
-     :what_is_hardware_module => "What has Hardware module?",
-     :in_hardware_has => "There you will find all types of hardware that  now are included
+  :what_is_hardware_module => "What has Hardware module?",
+  :in_hardware_has => "There you will find all types of hardware that  now are included
                      in the system.If some kind of hardware is not present please let me know
                       at cesare.diaz@gmail.com",
 
-     :what_in_submodule_computers => 'What has in computers?',
-     :in_computers_has => "Here it is possible to observe a list with all the computers for each place( Available plus Unavailable), other list with only those which are available, other with  those which are unavailable and another option to see statistics.",
-    :what_in_submodule_motherboards => 'What has in motherboards?',
+  :what_in_submodule_computers => 'What has in computers?',
+  :in_computers_has => "Here it is possible to observe a list with all the computers for each place( Available plus Unavailable), other list with only those which are available, other with  those which are unavailable and another option to see statistics.",
+
+  :what_in_submodule_motherboards => 'What has in motherboards?',
   :in_motherboards_has => 'Here it is possible to observe a list with all the motherboards for
+                           each computer if it is using by a computer o without a PC name in
+                          case that it still alone',
+
+  :what_in_submodule_harddisks => 'What has in harddisks?',
+  :in_harddisks_has => 'Here it is possible to observe a list with all the harddisks for
+                           each computer if it is using by a computer o without a PC name in
+                          case that it still alone',
+
+  :what_in_submodule_memories => 'What has in memories?',
+  :in_memories_has => 'Here it is possible to observe a list with all the memories for
                            each computer if it is using by a computer o without a PC name in
                           case that it still alone',
     },
