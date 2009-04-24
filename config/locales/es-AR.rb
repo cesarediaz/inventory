@@ -1,6 +1,44 @@
 {
   :'es-AR' => {
 
+     :faq => {
+      :what_are_workstations_module=> "What has Workstations module?",
+      :workstations_module_is=> "Is the place where you can join a computer more a screen and a printer.
+                             This will show you the stations that are prepared to work immediatly, it
+                             means that a user can use this machine to work right now.",
+
+      :which_are_the_rules_to_have_a_workstation => "Which are the rules to have a workstation?",
+     :rules_to_consider_in_a_workstation => "It must has one computer and one screen.",
+     :what_in_statistics_of_workstations => "What has in statistics for workstations?",
+     :workstations_statistics_show => "It shows text and graphical information for each place showing
+                                   computers, screens and printers alone or as part of a workstation ",
+
+     :what_is_places_module => "What has in the places options?",
+     :place_module_is => "Is the module where you can add different kinds of places how stores, offices,
+                      departments or rooms with a name for each one.",
+     :what_can_i_do_there => "What can I do there?",
+     :there_you_can => "There you can see the complete list of places at the 'index' page, search places
+                   by name or for more general concepts how offices, stores and so on selecting
+                   those by description. In the list for each place you could be read information
+                   about the 'Name' of the place, 'Description', number of 'Computers', number of
+                   'Screens', number of 'Printers' and links to download a file in xls o pdf format",
+
+     :what_in_statistics_of_places => 'What can I find in statistics options?',
+     :in_statistics_of_places => 'There you can see diferent graphics about specific information how
+                             the percent of places for each kind, percents of computers, screens
+                             and printers in each place too',
+
+     :what_is_hardware_module => "What has Hardware module?",
+     :in_hardware_has => "There you will find all types of hardware that  now are included in the system.
+                     If some kind of hardware is not present please let me know at cesare.diaz@gmail.com",
+
+     :what_in_submodule_computers => 'What has in computers?',
+     :in_computers_has => "It has the posibility of see a list with all the computers for each
+                      place(Availables plus Unavailables), other list with only the availables,
+                      other with only the inavailables and other options to see statistics.",
+    },
+
+
     :bill => {
     :code => 'Nro de factura',
     :company => 'Empresa',
