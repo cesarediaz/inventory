@@ -164,10 +164,14 @@
           <span class="down"><%= t 'menu.account' %></span>
           <!--[if gte IE 7]><!--></a><!--<![endif]-->
         <!--[if lte IE 6]><table><tr><td><![endif]-->
-        <ul class="sub">
-          <li><a href="/users/<%= current_user.id %>/edit"><%= t 'menu.account_edit' %></a></li>
-          <li><a href="/users/help">Help</a></li>
-        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+
+      <li class="top">
+        <a href="/users/help" id="telmex" class="top_link">
+          <span class="down">Help</span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
       </li>
 
