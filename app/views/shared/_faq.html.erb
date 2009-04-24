@@ -37,17 +37,15 @@
   <%= content_tag('p', t('faq.there_you_can'), :class => 'identation_help') %>
 <% end %>
 
-
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_in_statistics_of_places'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_statistics_of_places'), :class => 'identation_help') %>
+<% end %>
 
 <!-- Hardware -->
 
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= 'Hardware' %>
-<% end %>
-
-<% content_tag :div do %>
-  <%= content_tag('b', ' - ' + t('faq.what_in_statistics_of_places'), :class => 'identation_help') %>
-  <%= content_tag('p', t('faq.in_statistics_of_places'), :class => 'identation_help') %>
 <% end %>
 
 <% content_tag :div do %>
