@@ -2,6 +2,29 @@
 
 <!-- Workstations -->
 
+<% content_tag :table do %>
+<% content_tag :tr, option = {:valign => 'top'} do %>
+<% content_tag :td do %>
+<% content_tag :h3 do %>
+<a href="#<%= t('menu.workstations') %>"><%= t('menu.workstations') %></a>
+<%= content_tag('br') %>
+<a href="#<%= t('menu.places') %>"><%= t('menu.places') %></a>
+<%= content_tag('br') %>
+<a href="#Hardware">Hardware</a>
+<%= content_tag('br') %>
+<a href="#<%= t('menu.marks') %>"><%= t('menu.marks') %></a>
+<%= content_tag('br') %>
+<a href="#<%= t('menu.bills') %>"><%= t('menu.bills') %></a>
+<%= content_tag('br') %>
+<a href="#<%= t('menu.pages') %>"><%= t('menu.pages') %></a>
+<% end %>
+<% end %>
+
+<% content_tag :td do %>
+
+<!-- Workstations -->
+
+<a name="<%= t('menu.workstations') %>" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= t('menu.workstations') %>
 <% end %>
@@ -25,6 +48,7 @@
 
 <!-- Places -->
 
+<a name="<%= t('menu.places') %>" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= t('menu.places') %>
 <% end %>
@@ -46,6 +70,7 @@
 
 <!-- Hardware -->
 
+<a name="Hardware" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= 'Hardware' %>
 <% end %>
@@ -99,6 +124,7 @@
 
 <!-- Marks -->
 
+<a name="<%= t('menu.marks') %>" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= t('menu.marks') %>
 <% end %>
@@ -111,6 +137,7 @@
 
 <!-- Companies -->
 
+<a name="<%= t('menu.companies') %>" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= t('menu.companies') %>
 <% end %>
@@ -122,6 +149,7 @@
 
 <!-- Bill -->
 
+<a name="<%= t('menu.bills') %>" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= t('menu.bills') %>
 <% end %>
@@ -133,6 +161,7 @@
 
 <!-- Pages -->
 
+<a name="<%= t('menu.pages') %>" id="a"></a>
 <% content_tag :h2, option = {:class => 'advice'}  do %>
   <%= t('menu.pages') %>
 <% end %>
@@ -140,6 +169,11 @@
 <% content_tag :div do %>
   <%= content_tag('b', ' - ' + t('faq.what_is_pages_module'), :class => 'identation_help') %>
   <%= content_tag('p', t('faq.in_pages_has'), :class => 'identation_help') %>
+<% end %>
+
+
+<% end %>
+<% end %>
 <% end %>
 
 
