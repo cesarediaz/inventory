@@ -1,6 +1,7 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
     <%= content_tag('th', t('company.name'), options = {:nowrap => true}) %>
+    <%= content_tag('th', t('company.contact')) %>
     <%= content_tag('th', t('company.address')) %>
     <%= content_tag('th', t('company.phone')) %>
     <%= content_tag('th', t('company.fax')) %>
@@ -10,6 +11,7 @@
 <% for company in @companies %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', company.name, options = {:nowrap => true}) %>
+    <%= content_tag('td', company.contact, options = {:nowrap => true}) %>
     <%= content_tag('td', company.complete_address, options = {:nowrap => true}) %>
     <%= content_tag('td', company.phone, options = {:nowrap => true}) %>
     <%= content_tag('td', company.fax, options = {:nowrap => true}) %>

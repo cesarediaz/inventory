@@ -21,6 +21,11 @@
 
        <%= content_tag('br') %>
 
+       <%= t('company.contact') %>
+       <%= f.text_field :contact, :value => '-' %>
+
+       <%= content_tag('br') %>
+
        <%= t('company.country') %>
        <%= select(:company, :country, @countries.to_a.collect {|p| [p,p]} ) %>
     <% end %>

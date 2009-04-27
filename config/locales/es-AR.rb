@@ -109,6 +109,7 @@
     :number => "Numero",
     :city => "Ciudad",
     :country => "Pais",
+    :contact => "Contacto",
     :address => "Direccion",
     :phone => "Telefono",
     :fax => "Fax",

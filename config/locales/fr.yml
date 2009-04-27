@@ -20,6 +20,7 @@ fr:
     city: "City"
     country: "Country"
     address: "Direction"
+    contact: "Contact"
     phone: "Téléphone"
     fax: "Fax"
     email: "Messagerie"

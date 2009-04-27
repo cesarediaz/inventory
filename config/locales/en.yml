@@ -123,6 +123,7 @@ en:
     city: "City"
     country: "Country"
     address: "Address"
+    contact: "Contact"
     phone: "Phone"
     fax: "Fax"
     email: "Email"
