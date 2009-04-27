@@ -103,6 +103,8 @@ module ApplicationHelper
       content_tag('div',  t('places.offices'))
     when 'room'
       content_tag('div', t('places.rooms'))
+    when 'classroom'
+      content_tag('div', t('places.classrooms'))
     when 'department'
       content_tag('div', t('places.departments'))
     end
