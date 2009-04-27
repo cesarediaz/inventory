@@ -55,6 +55,26 @@
   :in_memories_has => 'Here it is possible to observe a list with all the memories for
                            each computer if it is using by a computer o without a PC name in
                           case that it still alone',
+
+  :what_in_submodule_cds => 'What has in cds?',
+  :in_cds_has => 'Here it is possible to observe a list with all the cds devices for
+                           each computer if it is using by a computer o without a PC name in
+                          case that it still alone',
+
+  :what_in_submodule_dvds => 'What has in dvds?',
+  :in_dvds_has => 'Here it is possible to observe a list with all the dvds devices for
+                           each computer if it is using by a computer o without a PC name in
+                          case that it still alone',
+
+  :what_in_submodule_screens => 'What has in screens?',
+  :in_screens_has => 'Here it is possible to observe a list with all the screens devices for
+                           each computer if it is using by a computer o without a PC name in
+                          case that it still alone',
+
+  :what_in_submodule_printers => 'What has in printers?',
+  :in_printers_has => 'Here it is possible to observe a list with all the printers devices for
+                           each computer if it is using by a computer o without a PC name in
+                          case that it still alone',
     },
 
 
