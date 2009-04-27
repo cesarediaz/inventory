@@ -5,7 +5,9 @@
 <br />
 
 <%= render :partial => 'list' %>
+<br />
 
+<%= will_paginate @marks %>
 <br />
 
 <%= link_to t('marks.new'), new_mark_path %>

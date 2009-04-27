@@ -24,7 +24,11 @@ class MarksController < ApplicationController
   # GET /marks
   # GET /marks.xml
   def index
-    @marks = Mark.find(:all, :select => 'id, name', :order => 'name ASC')
+    @marks = Mark.paginate(
+                       :page => params[:page],
+                       :per_page => PER_PAGE,
+                       :select => 'id, name',
+                       :order => 'name ASC')
 
     flash[:notice] = t('phrases.list_of') + ' ' + t('marks.mark')
 
