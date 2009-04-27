@@ -16,6 +16,7 @@ class Place < ActiveRecord::Base
   named_scope :departments, :conditions => ["description = 'department'"]
   named_scope :offices, :conditions => ["description = 'office'"]
   named_scope :rooms, :conditions => ["description = 'room'"]
+  named_scope :classrooms, :conditions => ["description = 'classroom'"]
   named_scope :stores, :conditions => ["description = 'store'"]
 
 end

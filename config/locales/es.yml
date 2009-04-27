@@ -88,6 +88,7 @@ es:
     departments: "Departamentos"
     offices: "Oficinas"
     rooms: "Salas"
+    classrooms: "Aulas"
     stores: "Almacenes"
     confirm: "Estas seguro de eliminar este registro?"
     graphic_stats_paragraph: "Un grafico en porcentajes de lugares"

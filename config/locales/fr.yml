@@ -86,6 +86,7 @@ fr:
     departments: "Départements"
     offices: "Dureaus"
     rooms: "Salle"
+    classrooms: "Classrooms"
     stores: "Magasin"
     confirm: "Estas seguro de eliminar este registro?"
     graphic_stats_paragraph: "Un graphique dans des pourcentages de lieus"

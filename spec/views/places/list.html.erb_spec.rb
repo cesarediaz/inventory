@@ -23,7 +23,7 @@ describe "places/_selector_places_list.html.erb" do
   it "should display a select tag with six options" do
     assert_select "select" do |elements|
       elements.each do |element|
-        assert_select element, "option", 6
+        assert_select element, "option", 7
       end
     end
   end

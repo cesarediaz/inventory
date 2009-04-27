@@ -226,6 +226,9 @@ class PlacesController < ApplicationController
     when 'rooms'
       @places = Place.rooms
       flash[:notice] = t('phrases.list_of') + t('places.rooms').downcase
+    when 'classrooms'
+      @places = Place.classrooms
+      flash[:notice] = t('phrases.list_of') + t('places.classrooms').downcase
     when 'departments'
       @places = Place.departments
       flash[:notice] = t('phrases.list_of') + t('places.departments').downcase
