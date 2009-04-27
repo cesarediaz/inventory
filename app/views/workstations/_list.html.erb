@@ -5,7 +5,7 @@
     <%= content_tag('th', t('workstations.screen')) %>
     <%= content_tag('th', t('workstations.printer')) %>
     <%= content_tag('th', 'Place') %>
-    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 2}) %>
+    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end -%>
   <% for workstation in @workstations %>
   <% @c = Computer.find(workstation.computer_id).name rescue nil %>
@@ -18,6 +18,7 @@
     <%= content_tag('td', @p, options = {:nowrap => true}) rescue nil %>
     <%= content_tag('td', link_to(@place.title, '/places/' + @place.id.to_s),
         options = {:nowrap => true} ) rescue nil%>
+      <%= content_tag('td', link_to(t('common_actions.show') , workstation)) %>
     <%= content_tag('td', link_to(t('common_actions.edit') , edit_workstation_path(workstation))) %>
     <%= content_tag('td', link_to(t('common_actions.destroy'), workstation, :confirm => 'Are you sure?', :method => :delete )) %>
   </tr>

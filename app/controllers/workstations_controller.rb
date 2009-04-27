@@ -40,6 +40,7 @@ class WorkstationsController < ApplicationController
   # GET /workstations/1
   # GET /workstations/1.xml
   def show
+    flash[:notice] = t('menu.workstations')
     @workstation = Workstation.find(params[:id])
 
     respond_to do |format|

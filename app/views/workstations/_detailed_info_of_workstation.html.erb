@@ -1,6 +1,12 @@
-<%= show_info(t('workstations.place'), 'principal-device', 'Place', @workstation.place_id, 'title') %>
+<%= notice %>
+
+<%= content_tag('h2',show_info(t('workstations.place'), 'principal-device', 'Place', @workstation.place_id, 'title')) %>
+
+
+<%= content_tag('br') %>
 
 <!-- Computer info -->
+<%= content_tag('p', t('menu.computers').singularize) %>
 <%= show_info(t('workstations.computer'), 'principal-device', 'Computer', @workstation.computer_id, 'name') %>
 
 <%= show_info('Ip', 'data-principal-device', 'Computer', @workstation.computer_id, 'ip') %>
@@ -13,6 +19,7 @@
 <% end %>
 
 <!-- Screen info -->
+<%= content_tag('p', t('menu.screens')) %>
 <%= show_info(t('workstations.screen'), 'principal-device', 'Screen', @workstation.screen_id, 'model')%>
 
 <%= show_info('Sn', 'data-principal-device', 'Screen', @workstation.screen_id, 'serialnumber') %>
@@ -22,6 +29,7 @@
 <% end %>
 
 <!-- Printer info -->
+<%= content_tag('p', t('menu.printers')) %>
 <%= show_info(t('workstations.printer'), 'principal-device', 'Printer', @workstation.printer_id, 'model')  rescue nil %>
 
 <%= show_info('Sn', 'data-principal-device', 'Printer', @workstation.printer_id, 'serialnumber')  rescue nil %>
