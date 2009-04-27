@@ -67,14 +67,22 @@
                           case that it still alone',
 
   :what_in_submodule_screens => 'What has in screens?',
-  :in_screens_has => 'Here it is possible to observe a list with all the screens devices for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :in_screens_has => 'Here it is possible to observe a list with all the screens showing
+                      information about where is it and if it is as part of a workstation',
 
   :what_in_submodule_printers => 'What has in printers?',
-  :in_printers_has => 'Here it is possible to observe a list with all the printers devices for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :in_printers_has => 'Here it is possible to observe a list with all the printers  showing
+                      information about where is it and if it is as part of a workstation',
+
+  :what_is_mark_module => "What has Mark module?",
+  :in_mark_has => "There you will find all name of marks present between the hardware
+                      that you have in your place of work.",
+
+  :what_is_company_module => "What has Company module?",
+  :in_company_has => "There you will find all names of companies which sell devices that
+                      you have in your place of work. Other extra information are phone number
+                       , address and email contact. If you fill this form with the exact information
+                      for address information you could see a map with the exact location for this company",
     },
 
 

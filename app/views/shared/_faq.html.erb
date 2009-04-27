@@ -96,5 +96,31 @@
   <%= content_tag('p', t('faq.in_printers_has'), :class => 'identation_help') %>
 <% end %>
 
+
+<!-- Marks -->
+
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= t('menu.marks') %>
 <% end %>
 
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_is_mark_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_mark_has'), :class => 'identation_help') %>
+<% end %>
+
+
+<!-- Companies -->
+
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= t('menu.companies') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_is_company_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_company_has'), :class => 'identation_help') %>
+<% end %>
+
+
+
+
+<% end %>
