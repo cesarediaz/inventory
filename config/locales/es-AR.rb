@@ -83,7 +83,13 @@
                       you have in your place of work. Other extra information are phone number
                        , address and email contact. If you fill this form with the exact information
                       for address information you could see a map with the exact location for this company",
-    },
+
+  :what_is_bill_module => "What has Bill module?",
+  :in_bill_has => "There you will find all bills where is write in detail what is bougth and in what date",
+
+  :what_is_pages_module => "What has Pages module?",
+  :in_pages_has => "There you can add new pages for the frontend application site",
+},
 
 
     :bill => {

@@ -120,7 +120,28 @@
   <%= content_tag('p', t('faq.in_company_has'), :class => 'identation_help') %>
 <% end %>
 
+<!-- Bill -->
+
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= t('menu.bills') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_is_bill_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_bill_has'), :class => 'identation_help') %>
+<% end %>
+
+<!-- Pages -->
+
+<% content_tag :h2, option = {:class => 'advice'}  do %>
+  <%= t('menu.pages') %>
+<% end %>
+
+<% content_tag :div do %>
+  <%= content_tag('b', ' - ' + t('faq.what_is_pages_module'), :class => 'identation_help') %>
+  <%= content_tag('p', t('faq.in_pages_has'), :class => 'identation_help') %>
+<% end %>
 
 
-
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common_actions.top_page') %></a>
 <% end %>
