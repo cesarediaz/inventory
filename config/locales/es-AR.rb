@@ -281,11 +281,14 @@
   },
 
 
-  :help_phrases => {
-    :in_workstation => "Este dispositivo esta asignado en una estacion de trabajo.
+:help_phrases => {
+  :in_workstation => "Este dispositivo esta asignado en una estacion de trabajo.
                     Para cambiar el atributo Lugar debe ir a la seccion Equipos.",
-    :stats_in_place => "Libre: equipos que no forman parte de una estacion de trabajo.
+  :stats_in_place => "Libre: equipos que no forman parte de una estacion de trabajo.
                     En equipos: integran una estacion de trabajo",
+  :msg_text => 'Debes poner un guion (\'-\') donde deberias poner texto si no conoces esos datos',
+  :msg_number =>  'Debes poner un numero cero(\'0\') donde deberias poner datos numericos
+                   si no conoces esos datos',
 },
 
 

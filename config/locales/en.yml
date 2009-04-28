@@ -290,6 +290,8 @@ en:
     in_workstation: "This is asigned how a station of work. To change the attribute Place you have to go to the section Workstations."
     stats_in_place: "Free: equipment which are not part of a workstation.
                      In workstation: equipment which is in a workstation"
+    msg_text: "You must put a hyphen sign where is need put a text if you don't have this data"
+    msg_number: "You must put a cero(0) number where is need put a number if you don\'t have this data"
 
   search:
     label: "Search"
