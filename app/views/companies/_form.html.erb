@@ -6,17 +6,17 @@
      <%= f.text_field :name %>
     </p>
      <% content_tag :div, :id => 'quarter'  do %>
-       <%= t('company.street') %>
+       <%= t('company.street') %> *
        <%= f.text_field :street %>
 
        <%= content_tag('br') %>
 
-       <%= t('company.number') %>
+       <%= t('company.number') %> **
        <%= f.text_field :number %>
 
        <%= content_tag('br') %>
 
-       <%= t('company.city') %>
+       <%= t('company.city') %> *
        <%= f.text_field :city %>
 
        <%= content_tag('br') %>
