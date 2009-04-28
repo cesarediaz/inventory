@@ -11,7 +11,7 @@
   <%= render :partial => 'screens/list' %>
 </div>
 <% else %>
-<%= t('phrases.list_of') + t('places.screen')+  t('phrases.has') + @screens.count.to_s +  t('phrases.units') %>
+<%= t('phrases.list_of') + t('places.screen')+  t('phrases.has') + @screens.size.to_s +  t('phrases.units') %>
 <% end %>
 
 <% 2.times do %>

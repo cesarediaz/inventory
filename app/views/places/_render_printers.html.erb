@@ -11,7 +11,7 @@
  <%= render :partial => 'printers/list' %>
  </div>
 <% else %>
- <%= t('phrases.list_of') + t('places.printer')+  t('phrases.has') + @printers.count.to_s +  t('phrases.units') %>
+ <%= t('phrases.list_of') + t('places.printer')+  t('phrases.has') + @printers.size.to_s +  t('phrases.units') %>
 <% end %>
 
 <% 2.times do %>

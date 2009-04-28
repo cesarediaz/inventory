@@ -1,4 +1,4 @@
-<% if @bills.count > 0 %>
+<% if @bills.size > 0 %>
   <%= link_to t('common_actions.download'), :controller => 'bills',
   :action => 'xls' %> |
   <%= link_to  t('common_actions.download_pdf'), :controller => 'bills',

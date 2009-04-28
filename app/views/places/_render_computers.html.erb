@@ -11,7 +11,7 @@
   <%= render :partial => 'computers/list' %>
 </div>
 <% else %>
-<%= t('phrases.list_of') + t('places.computer')+  t('phrases.has') + @computers.count.to_s +  t('phrases.units') %>
+<%= t('phrases.list_of') + t('places.computer')+  t('phrases.has') + @computers.size.to_s +  t('phrases.units') %>
 <% end %>
 
 <% 2.times do %>
