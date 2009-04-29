@@ -2,15 +2,17 @@
   <% content_tag :tr do %>
     <%= content_tag('th', 'Name') %>
     <%= content_tag('th', 'Permalink') %>
+    <%= content_tag('th', t('common_actions.show')) %>
     <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end -%>
   <% for page in @pages %>
     <tr  class="<%= cycle("rowA","rowB") %>">
       <%= content_tag('td', page.name, options = {:nowrap => true}) %>
       <%= content_tag('td', page.permalink, options = {:nowrap => true}) %>
-      <%= content_tag('td', link_to('Show', page)) %>
-      <%= content_tag('td', link_to('Edit', edit_page_path(page))) %>
-      <%= content_tag('td', link_to('Destroy', page, :confirm => 'Are you sure?', :method => :delete)) %>
+      <%= content_tag('td', check(page.frontend)) %>
+      <%= content_tag('td', link_to(t('common_actions.show'), page)) %>
+      <%= content_tag('td', link_to(t('common_actions.edit'), edit_page_path(page))) %>
+      <%= content_tag('td', link_to(t('common_actions.destroy'), page, :confirm => 'Are you sure?', :method => :delete)) %>
     </tr>
   <% end %>
 <% end -%>

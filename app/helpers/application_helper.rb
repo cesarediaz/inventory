@@ -40,8 +40,10 @@ module ApplicationHelper
   # Return: html
   def front_end_pages()
     Page.find(:all).collect { |page|
-      content_tag :div, :id => 'options' do
-        link_to(page.permalink, '/' + page.permalink )
+      unless page.frontend == false
+        content_tag :div, :id => 'options' do
+          link_to(page.permalink, '/' + page.permalink )
+        end
       end
     }
   end

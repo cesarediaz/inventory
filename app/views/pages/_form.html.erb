@@ -19,6 +19,11 @@
     <%#= f.text_area :content, :cols => 80, :rows => 15 %>
   <% end %>
 
+  <% content_tag :p do %>
+      <%= f.label :frontend %><br />
+      <%= f.check_box :frontend %>
+  <% end %>
+
   <% if action_name == 'new' %>
   <%= f.submit t('bill.create') %>
   <% else %>
