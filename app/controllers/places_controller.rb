@@ -218,19 +218,29 @@ class PlacesController < ApplicationController
                                :order => 'created_at DESC')
       flash[:notice] = t('phrases.list_of') + t('menu.places').downcase
     when 'stores'
-      @places = Place.stores
+      @places = Place.stores.paginate(:page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
       flash[:notice] = t('phrases.list_of') + t('places.stores').downcase
     when 'offices'
-      @places = Place.offices
+      @places = Place.offices.paginate(:page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
       flash[:notice] = t('phrases.list_of') + t('places.offices').downcase
     when 'rooms'
-      @places = Place.rooms
+      @places = Place.rooms.paginate(:page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
       flash[:notice] = t('phrases.list_of') + t('places.rooms').downcase
     when 'classrooms'
-      @places = Place.classrooms
+      @places = Place.classrooms.paginate(:page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
       flash[:notice] = t('phrases.list_of') + t('places.classrooms').downcase
     when 'departments'
-      @places = Place.departments
+      @places = Place.departments.paginate(:page => params[:page],
+                               :per_page => PER_PAGE,
+                               :order => 'created_at DESC')
       flash[:notice] = t('phrases.list_of') + t('places.departments').downcase
     end
   end

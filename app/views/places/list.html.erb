@@ -4,7 +4,8 @@
 <%= render :partial => 'links_files_downloads' %>
 
 <%= render :partial => 'list' %>
-
 <br />
+
+<%= will_paginate @places %>
 
 <%= link_to 'New place', new_place_path %>
