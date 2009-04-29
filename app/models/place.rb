@@ -13,10 +13,19 @@ class Place < ActiveRecord::Base
 
   #################################################
   # Named Scope
-  named_scope :departments, :conditions => ["description = 'department'"]
-  named_scope :offices, :conditions => ["description = 'office'"]
-  named_scope :rooms, :conditions => ["description = 'room'"]
-  named_scope :classrooms, :conditions => ["description = 'classroom'"]
-  named_scope :stores, :conditions => ["description = 'store'"]
+  named_scope :departments, :select => 'title, id, description',
+  :conditions => ["description = 'department'"]
+
+  named_scope :offices, :select => 'title, id, description',
+  :conditions => ["description = 'office'"], :order => 'title'
+
+  named_scope :rooms, :select => 'title, id, description',
+  :conditions => ["description = 'room'"], :order => 'title'
+
+  named_scope :classrooms, :select => 'title, id, description' ,
+  :conditions => ["description = 'classroom'"], :order => 'title'
+
+  named_scope :stores, :select => 'title, id, description',
+  :conditions => ["description = 'store'"], :order => 'title'
 
 end
