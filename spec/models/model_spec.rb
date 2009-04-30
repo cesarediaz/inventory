@@ -16,6 +16,12 @@ describe Model do
     model.should have(1).errors_on(:description)
   end
 
+  it "should not create a new instance if both fields are nil" do
+    model = Model.create({:description => nil, :mark_id => nil })
+    model.should have(1).errors_on(:description)
+    model.should have(2).errors_on(:mark_id)
+  end
+
   it "should not create a new instance given invalid attributes without mark of model" do
     model = Model.create({:description => 'one model', :mark_id => nil })
     model.should have(2).errors_on(:mark_id)
