@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090428152402) do
+ActiveRecord::Schema.define(:version => 20090430121958) do
 
   create_table "bills", :force => true do |t|
     t.string   "code"
@@ -100,6 +100,11 @@ ActiveRecord::Schema.define(:version => 20090428152402) do
     t.string   "unit",               :default => "mb"
     t.integer  "bill_id"
     t.string   "inventory_register"
+  end
+
+  create_table "models", :force => true do |t|
+    t.text    "description"
+    t.integer "mark_id"
   end
 
   create_table "mother_boards", :force => true do |t|
