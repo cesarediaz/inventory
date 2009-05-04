@@ -1,0 +1,7 @@
+<% content_tag :div, :id => "quarter" do %>
+<select name='mother_board[model_id]'>
+<% for model in @models %>
+    <option value="<%= model.id %>"><%= model.description %></option>
+<% end %>
+</select>
+<% end -%>

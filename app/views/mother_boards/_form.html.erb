@@ -14,8 +14,6 @@
 <% form_for(@mother_board) do |f| %>
   <%= f.error_messages %>
 
-  <%= t('motherboards.model') %>
-  <%= f.text_field :model %>
 
   <%= t('motherboards.sn') %>
   <%= f.text_field :serialnumber %>
@@ -38,6 +36,14 @@
   <div id="quarter" >
   <%= collection_select 'mother_board', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
+  </div>
+
+  <%= observe_field "mother_board_mark_id", :update => "model_id_container",
+  :with => "mark_id", :url => { :controller => "mother_boards",
+  :action => "models" } %>
+
+  Modelo
+  <div id="model_id_container">
   </div>
 
   <div id="quarter" >

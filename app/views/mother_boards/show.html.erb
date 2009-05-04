@@ -7,7 +7,7 @@
 <%= content_tag('p',@mother_board.mark.name) %>
 
 <%= content_tag('h4', t('motherboards.model')) %>
-<%= content_tag('p',@mother_board.model) %>
+<%= content_tag('p',@mother_board.model.description) %>
 
 <%= content_tag('h4',t('motherboards.sn')) %>
 <%= content_tag('p',@mother_board.serialnumber) %>

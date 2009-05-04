@@ -120,5 +120,10 @@ class MotherBoardsController < ApplicationController
 
   end
 
+  def models
+    @models = Model.find(:all, :select => 'id, description',
+                           :conditions => [ "mark_id = ?", params[:mark_id]])
+    render  :partial => 'models'
+  end
 
 end

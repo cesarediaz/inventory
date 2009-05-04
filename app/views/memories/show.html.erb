@@ -3,7 +3,7 @@
 <% content_tag :div, :id => 'show' do %>
 
 <%= content_tag('h4', t('memories.model')) %>
-<%= content_tag('p', @memory.model) %>
+<%= content_tag('p', @memory.model.description) %>
 
 <%= content_tag('h4', t('memories.mark')) %>
 <%= content_tag('p', @memory.mark.name) %>
