@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
     :auto_complete_for_mother_board_serialnumber => :get}
 
   map.resources :harddisks, :collection => {:auto_complete_for_harddisk_model => :get,
-    :auto_complete_for_harddisk_serialnumber => :get}
+    :auto_complete_for_harddisk_serialnumber => :get, :models => :get}
 
   map.resources :memories, :collection => {:auto_complete_for_memory_model => :get,
     :auto_complete_for_memory_serialnumber => :get}

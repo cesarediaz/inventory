@@ -1,8 +1,8 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
-    <%= content_tag('th', t('memories.model')) %>
     <%= content_tag('th', t('memories.sn'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('memories.mark')) %>
+    <%= content_tag('th', t('memories.model')) %>
     <%= content_tag('th', t('memories.size'), options = {:colspan => 2}) %>
     <%= content_tag('th', 'Pc') %>
     <%= content_tag('th', t('memories.bill')) %>
@@ -10,9 +10,9 @@
   <% end -%>
 <% for memory in @memories %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', memory.model, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.serialnumber, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.mark.name, options = {:nowrap => true}) %>
+    <%= content_tag('td', memory.model_id.nil? ? '-' : memory.model.description, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.size, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.unit.to_s, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.computer.nil? ? '-': link_to(memory.computer.name , \

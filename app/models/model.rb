@@ -1,5 +1,7 @@
 class Model < ActiveRecord::Base
   belongs_to :mark
+  has_many :harddisk
+  has_many :memory
 
   #################################################
   # VALIDATIONS

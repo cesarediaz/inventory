@@ -127,4 +127,14 @@ module ApplicationHelper
     end
   end
 
+  def select_models(models)
+    content_tag :select, options = {:name => 'harddisk[model_id]'} do
+       for model in models
+         content_tag :option, options = {:value =>  model.id } do
+          model.description
+        end
+      end
+    end
+  end
+
 end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090430121958) do
+ActiveRecord::Schema.define(:version => 20090504134832) do
 
   create_table "bills", :force => true do |t|
     t.string   "code"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.integer  "mark_id"
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.integer  "model_id"
   end
 
   create_table "companies", :force => true do |t|
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.integer  "mark_id"
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.integer  "model_id"
   end
 
   create_table "harddisks", :force => true do |t|
@@ -81,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.string   "unit",               :default => "mb"
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.integer  "model_id"
   end
 
   create_table "marks", :force => true do |t|
@@ -100,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.string   "unit",               :default => "mb"
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.integer  "model_id"
   end
 
   create_table "models", :force => true do |t|
@@ -118,6 +122,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.integer  "bill_id"
     t.string   "inventory_register"
     t.string   "model"
+    t.integer  "model_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -146,6 +151,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.integer  "model_id"
   end
 
   create_table "screens", :force => true do |t|
@@ -158,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.integer  "model_id"
   end
 
   create_table "users", :force => true do |t|

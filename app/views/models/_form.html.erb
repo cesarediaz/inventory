@@ -19,7 +19,7 @@
   <% 2.times do %>
   <br>
   <% end %>
-
+  <%= t('marks.mark') %>
   <div id="quarter" >
     <%= collection_select 'model', 'mark_id', Mark.find(:all, :select => 'name,id'), 'id', 'name',
         {:prompt => true} %>

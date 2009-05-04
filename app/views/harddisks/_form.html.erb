@@ -14,26 +14,11 @@
 <% form_for(@harddisk) do |f| %>
   <%= f.error_messages %>
 
-  <%= t('harddisks.model') %>
-  <%= f.text_field :model %>
-
-    <% 2.times do %>
-    <br>
-    <%  end %>
-
   <%= t('harddisks.sn') %>
   <%= f.text_field :serialnumber %>
 
-    <% 2.times do %>
-    <br>
-    <% end %>
-
-    <%= t('harddisks.inventory_register') %>
-    <%= f.text_field :inventory_register %>
-
-    <% 2.times do %>
-    <br>
-    <%  end %>
+  <%= t('harddisks.inventory_register') %>
+  <%= f.text_field :inventory_register %>
 
   <%= f.label 'size' %>
   <%= f.text_field :size %>
@@ -41,29 +26,32 @@
   <%= select 'harddisk', 'unit', [['mb', 'mb'], ['gb', 'gb']], {:include_blank => true} %>
   <% end -%>
 
-    <% 2.times do %>
-    <br>
-    <%  end %>
-
-  <div id="quarter" >
+  Computer
+  <% content_tag :div, :id => "quarter" do %>
   <%= collection_select 'harddisk', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
-  </div>
+  <% end -%>
 
-    <% 2.times do %>
-    <br>
-    <%  end %>
-
-  <div id="quarter" >
+  Marca
+  <% content_tag :div, :id => "quarter" do %>
   <%= collection_select 'harddisk', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
+  <% end -%>
+
+  <%= observe_field "harddisk_mark_id", :update => "model_id_container",
+  :with => "mark_id", :url => { :controller => "harddisks",
+  :action => "models" } %>
+
+  Modelo
+  <div id="model_id_container">
   </div>
 
-  <div id="quarter" >
-    <%= t 'bill.code' %>
-    <%= collection_select 'harddisk', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true} %>
-  </div >
+  <%= t 'bill.code' %>
+  <% content_tag :div, :id => "quarter" do %>
+  <%= collection_select 'harddisk', 'bill_id', Bill.find(:all), 'id', :company_bill,
+      {:prompt => true} %>
+  <% end -%>
+
 
   <p>
     <% if action_name == 'new' %>
@@ -73,3 +61,5 @@
     <% end %>
   </p>
 <% end %>
+
+
