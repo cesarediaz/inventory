@@ -72,10 +72,6 @@ class ModelsController < ApplicationController
     end
   end
 
-  # GET /models/1/edit
-  def edit
-    @model = Model.find(params[:id])
-  end
 
   # POST /models
   # POST /models.xml
@@ -91,6 +87,18 @@ class ModelsController < ApplicationController
         format.html { render :action => "new" }
         format.xml  { render :xml => @model.errors, :status => :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /harddisks/1
+  # DELETE /models/1.xml
+  def destroy
+    @model = Model.find(params[:id])
+    @model.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(models_url) }
+      format.xml  { head :ok }
     end
   end
 end

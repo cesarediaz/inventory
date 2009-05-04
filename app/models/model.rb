@@ -1,8 +1,8 @@
 class Model < ActiveRecord::Base
   belongs_to :mark
-  has_many :harddisk
-  has_many :memory
-  has_many :mother_board
+  has_many :harddisk, :dependent => :nullify
+  has_many :memory, :dependent => :nullify
+  has_many :mother_board, :dependent => :nullify
 
   #################################################
   # VALIDATIONS
