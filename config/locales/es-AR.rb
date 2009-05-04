@@ -325,6 +325,10 @@
 
 
  :menu => {
+   :models => "Modelos",
+   :list_models =>  "Listar modelos",
+   :new_model => "Nuevo modelo",
+
    :pages => "Paginas",
    :list_pages => "Listar paginas",
    :new_page => "Nueva pagina",

@@ -100,9 +100,16 @@
           <!--[if gte IE 7]><!--></a><!--<![endif]-->
         <!--[if lte IE 6]><table><tr><td><![endif]-->
         <ul class="sub">
-          <li><a href="/marks"><%= t 'menu.list_marks' %></a></li>
-          <li><a href="/marks/new"><%= t 'menu.new_mark' %></a></li>
-        </ul>
+              <li><a href="/marks"><%= t 'menu.list_marks' %></a></li>
+              <li><a href="/marks/new"><%= t 'menu.new_mark' %></a></li>
+
+              <li><a href="/models" class="fly"><%= t 'menu.models' %></a>
+                <ul>
+                  <li><a href="/models"><%= t 'menu.list_models' %></a></li>
+                  <li><a href="/models/new"><%= t 'menu.new_model' %></a></li>
+                </ul>
+              </li>
+            </ul>
         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
       </li>
 

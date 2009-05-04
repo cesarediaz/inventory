@@ -316,6 +316,11 @@ en:
     by: " by "
 
   menu:
+    #Models
+    models: "Models"
+    list_models: "List models"
+    new_model: "New model"
+
     #Pages
     pages: "Pages"
     list_pages: "List pages"
@@ -401,7 +406,7 @@ en:
     #Marks
     marks : "Marks"
     list_marks : "List marks"
-    new_mark : "New"
+    new_mark : "New mark"
 
     #Login
     login : "Ingresar"

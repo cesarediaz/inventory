@@ -211,6 +211,10 @@ fr:
 
 
   menu:
+    models: "Models"
+    list_models: "List models"
+    new_model: "New model"
+
     pages: "Pages"
     list_pages: "Énumérer pages"
     new_page: "Nouvelle page"
