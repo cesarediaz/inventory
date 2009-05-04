@@ -25,6 +25,12 @@ class ApplicationController < ActionController::Base
     hexCode
   end
 
+  def models
+    @models = Model.find(:all, :select => 'id, description',
+                           :conditions => [ "mark_id = ?", params[:mark_id]])
+    render  :partial => 'models'
+  end
+
   PER_PAGE = 10
 
 

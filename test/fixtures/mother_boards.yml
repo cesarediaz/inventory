@@ -3,28 +3,28 @@
 
 one:
   id: 1
-  model: PM 4003
   serialnumber: 121232234
-  mark_id : 7
+  model_id: 3
+  mark_id : 1
   computer_id: 1
 
 two:
   id: 2
-  model: PM 403
   serialnumber: 121234876
-  mark_id : 7
+  model_id: 3
+  mark_id : 1
   computer_id: 2
 
 three:
   id: 3
-  model: PM 4035
   serialnumber: 121234223
-  mark_id : 5
+  model_id: 3
+  mark_id : 1
   computer_id: 3
 
 four:
   id: 4
-  model: PM 4032
   serialnumber: 121234000
-  mark_id : 6
+  model_id: 3
+  mark_id : 1
   computer_id: 4

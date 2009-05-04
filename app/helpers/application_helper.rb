@@ -127,14 +127,15 @@ module ApplicationHelper
     end
   end
 
-  def select_models(models)
-    content_tag :select, options = {:name => 'harddisk[model_id]'} do
-       for model in models
-         content_tag :option, options = {:value =>  model.id } do
-          model.description
-        end
+  def select_models(models, object)
+      html = ''
+      html = html + "<select name='" + object + "'>"
+      for model in models
+        html = html + "<option value=" + model.id.to_s + ">" + model.description + "</option>"
       end
-    end
+      html = html + "</select>"
+      return html
   end
+
 
 end

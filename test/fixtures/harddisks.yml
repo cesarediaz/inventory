@@ -18,7 +18,6 @@ two:
 
 three:
   id: 3
-  model_id: WD 2312313
   serialnumber: 121234223
   mark_id : 3
   model_id: 2
@@ -27,7 +26,6 @@ three:
 
 four:
   id: 4
-  model_id: WD 2354454
   serialnumber: 121234000
   mark_id : 3
   model_id: 1
