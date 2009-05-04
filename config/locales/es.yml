@@ -1,4 +1,11 @@
 es:
+  models:
+    model: 'Modelo'
+    mark: 'Marca'
+    new: 'Agregar modelo'
+    description: 'Descripcion'
+    mark: 'Marca'
+
   login:
     succesfully: "Se a logueado"
     error: "Reintente nuevamente tipeando su usuario y clave"

@@ -91,6 +91,13 @@
   :in_pages_has => "There you can add new pages for the frontend application site",
 },
 
+  :models => {
+    :model => 'Model',
+    :mark => 'Mark',
+    :new => 'Agregar modelo',
+    :description => 'Descripcion',
+    :mark => 'Marca',
+},
 
     :bill => {
     :code => 'Nro de factura',

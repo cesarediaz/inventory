@@ -3,6 +3,13 @@
 # contributor: Sebastien Grosjean _ ZenCocoon.com
 
 fr:
+  models:
+    model: 'Model'
+    mark: 'Mark'
+    new: 'New model'
+    description: 'Description'
+    mark: 'Mark'
+
   bill:
     code: 'Code'
     company: 'Entreprise'
