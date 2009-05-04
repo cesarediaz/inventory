@@ -2,7 +2,7 @@
   <%= content_tag('h4', flash[:notice]) %>
 <% end %>
 
-<%= content_tag('div', t('printers.model')) %> <%= @printer.model %>
+<%= content_tag('div', t('printers.model')) %> <%= @printer.model.description %>
 <%= content_tag('div', t('printers.mark')) %> <%= @printer.mark.name %>
 <%= content_tag('div', t('places.title')) %> <%= @printer.place.title %>
 

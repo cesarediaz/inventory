@@ -1,12 +1,13 @@
 class Screen < ActiveRecord::Base
   belongs_to :place
   belongs_to :mark
+  belongs_to :model
   has_one :bill
 
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :serialnumber
-  validates_presence_of :serialnumber, :model, :mark_id, :place_id
+  validates_presence_of :serialnumber, :model_id, :mark_id, :place_id
 
   #################################################
   # Named Scope

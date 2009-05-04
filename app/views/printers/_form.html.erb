@@ -17,9 +17,6 @@
 <% form_for(@printer) do |f| %>
 <%= f.error_messages %>
 
-<%= t('printers.model') %>
-<%= f.text_field :model %>
-
 <%= t('printers.sn') %>
 <%= f.text_field :serialnumber %>
 
@@ -34,6 +31,15 @@
   <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
 </div>
+
+<%= observe_field "printer_mark_id", :update => "model_id_container",
+:with => "mark_id", :url => { :controller => "printers",
+:action => "models" } %>
+
+Modelo
+<div id="model_id_container">
+</div>
+
 
 <% if not @printer.is_part_of_a_workstation %>
 <div id="quarter" >

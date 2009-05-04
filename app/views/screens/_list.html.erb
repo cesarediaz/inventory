@@ -1,8 +1,8 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
-    <%= content_tag('th', t('screens.model')) %>
     <%= content_tag('th', t('screens.sn'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('screens.mark')) %>
+    <%= content_tag('th', t('screens.model')) %>
     <%= content_tag('th', 'Place') %>
     <%= content_tag('th', t('screens.workstation?')) %>
     <%= content_tag('th', t('screens.inventory_register'), options = {:nowrap => true}) %>
@@ -11,9 +11,9 @@
   <% end -%>
   <% for screen in @screens %>
    <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', screen.model, options = {:nowrap => true}) %>
     <%= content_tag('td', screen.serialnumber, options = {:nowrap => true}) %>
     <%= content_tag('td', screen.mark.name, options = {:nowrap => true})%>
+    <%= content_tag('td', screen.model_id.nil? ? '-' : screen.model.description, options = {:nowrap => true}) %>
     <%= content_tag('td', link_to(screen.place.title, '/places/' + screen.place.id.to_s),
         options = {:nowrap => true} )%>
     <%= content_tag('td', in_workstation?(screen, 'screen_id')) %>

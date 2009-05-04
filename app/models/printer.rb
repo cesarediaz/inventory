@@ -1,12 +1,13 @@
 class Printer < ActiveRecord::Base
   belongs_to :mark
+  belongs_to :model
   belongs_to :place
   has_one :bill
 
   #################################################
   # VALIDATIONS
   validates_uniqueness_of :serialnumber
-  validates_presence_of :serialnumber, :model, :place_id, :mark_id
+  validates_presence_of :serialnumber, :model_id, :place_id, :mark_id
 
   #################################################
   # Named Scope

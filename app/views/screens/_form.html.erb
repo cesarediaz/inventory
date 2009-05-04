@@ -17,9 +17,6 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
 <% form_for(@screen) do |f| %>
   <%= f.error_messages %>
 
-  <%= t('screens.model') %>
-  <%= f.text_field :model %>
-
   <%= t('screens.sn') %>
   <%= f.text_field :serialnumber %>
 
@@ -34,6 +31,14 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
     <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
         {:prompt => true} %>
   </div >
+
+  <%= observe_field "screen_mark_id", :update => "model_id_container",
+  :with => "mark_id", :url => { :controller => "screens",
+  :action => "models" } %>
+
+  Modelo
+  <div id="model_id_container">
+  </div>
 
   <% if not @screen.is_part_of_a_workstation %>
   <div id="quarter" >

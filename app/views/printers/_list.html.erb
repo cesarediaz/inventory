@@ -1,8 +1,8 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
-    <%= content_tag('th', t('printers.model')) %>
     <%= content_tag('th', t('printers.sn'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('printers.mark')) %>
+    <%= content_tag('th', t('printers.model')) %>
     <%= content_tag('th', 'Place') %>
     <%= content_tag('th', t('printers.workstation?')) %>
     <%= content_tag('th', t('printers.inventory_register'), options = {:nowrap => true}) %>
@@ -12,9 +12,9 @@
 
 <% for printer in @printers %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', printer.model, options = {:nowrap => true}) %>
     <%= content_tag('td', printer.serialnumber, options = {:nowrap => true}) %>
     <%= content_tag('td', printer.mark.name, options = {:nowrap => true}) %>
+    <%= content_tag('td', printer.model_id.nil? ? '-' : printer.model.description, options = {:nowrap => true}) %>
     <%= content_tag('td', link_to(printer.place.title, '/places/' + printer.place.id.to_s),
         options = {:nowrap => true})%>
     <%= content_tag('td', in_workstation?(printer, 'printer_id' )) %>

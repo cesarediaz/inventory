@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  description: Laser
+  mark_id : 3
+
+dos:
+  id: 2
+  description: Samsumg500
+  mark_id : 3
+
+tres:
+  id: 3
+  description: Samsumg551
+  mark_id : 3
