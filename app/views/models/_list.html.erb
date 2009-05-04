@@ -1,0 +1,17 @@
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <%= content_tag('th', 'Description') %>
+    <%= content_tag('th', 'Mark') %>
+    <%= content_tag('th', t('common_actions.show')) %>
+    <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
+  <% end -%>
+  <% for model in @models %>
+    <tr  class="<%= cycle("rowA","rowB") %>">
+      <%= content_tag('td', model.description, options = {:nowrap => true}) %>
+      <%= content_tag('td', model.mark.nil? ? '-' : model.mark.name , options = {:nowrap => true}) %>
+      <%= content_tag('td', link_to(t('common_actions.show'), model)) %>
+      <%= content_tag('td', link_to(t('common_actions.edit'), edit_model_path(model))) %>
+      <%= content_tag('td', link_to(t('common_actions.destroy'), model, :confirm => 'Are you sure?', :method => :delete)) %>
+    </tr>
+  <% end %>
+<% end -%>

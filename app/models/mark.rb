@@ -5,6 +5,8 @@ class Mark < ActiveRecord::Base
   has_many :memory, :dependent => :nullify
   has_many :cd, :dependent => :nullify
   has_many :dvd, :dependent => :nullify
+  has_many :model
+
 
   #################################################
   # VALIDATIONS

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <%= render :partial => 'shared/head' %>
+  <body>
+    <div id="outer">
+
+      <% 3.times do %>
+      <br>
+        <% end %>
+
+        <% if logged_in? %>
+        <%= render :partial => 'shared/menu' %>
+        <% end %>
+
+        <div id="content">
+          <%= yield  %>
+
+          <div class="clear"></div>
+
+          <%= render :partial => 'shared/footer' %>
+
+        </div>
+      </div>
+    </body>
+  </html>
