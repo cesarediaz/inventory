@@ -1,8 +1,9 @@
 class AddTableModels < ActiveRecord::Migration
    def self.up
       create_table :models do |t|
-        t.text  :description
-        t.integer  :mark_id
+       t.text  :description
+       t.integer  :mark_id
+       t.timestamps
       end
     end
 

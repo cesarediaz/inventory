@@ -103,8 +103,10 @@ ActiveRecord::Schema.define(:version => 20090430121958) do
   end
 
   create_table "models", :force => true do |t|
-    t.text    "description"
-    t.integer "mark_id"
+    t.text     "description"
+    t.integer  "mark_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "mother_boards", :force => true do |t|
