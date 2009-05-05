@@ -2,7 +2,7 @@
 
 one:
   id: 1
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324325
   mark_id : 3
   place_id: 2
@@ -10,7 +10,7 @@ one:
 
 two:
   id: 2
-  model: SyncMaster 400Nb
+  model_id: 2
   serialnumber: 12123243434
   mark_id : 3
   place_id: 2
@@ -18,7 +18,7 @@ two:
 
 three:
   id: 3
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324333
   mark_id : 3
   place_id: 2
@@ -26,7 +26,7 @@ three:
 
 four:
   id: 4
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324311
   mark_id : 3
   place_id: 2
@@ -34,7 +34,7 @@ four:
 
 five:
   id: 5
-  model: SyncMaster 400Nb
+  model_id: 2
   serialnumber: 12123243477
   mark_id : 3
   place_id: 2
@@ -42,7 +42,7 @@ five:
 
 six:
   id: 6
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324386
   mark_id : 3
   place_id: 2
@@ -50,7 +50,7 @@ six:
 
 seven:
   id: 7
-  model: SyncMaster 400Nb
+  model_id: 2
   serialnumber: 12123243437
   mark_id : 3
   place_id: 2
@@ -58,7 +58,7 @@ seven:
 
 eigth:
   id: 8
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324338
   mark_id : 3
   place_id: 2
@@ -66,7 +66,7 @@ eigth:
 
 nine:
   id: 9
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324319
   mark_id : 3
   place_id: 2
@@ -74,7 +74,7 @@ nine:
 
 ten:
   id: 10
-  model: SyncMaster 400Nb
+  model_id: 2
   serialnumber: 12123243471
   mark_id : 3
   place_id: 2
@@ -82,7 +82,7 @@ ten:
 
 eleven:
   id: 11
-  model: SyncMaster 3v
+  model_id: 1
   serialnumber: 1212324300
   mark_id : 3
   place_id: 2
