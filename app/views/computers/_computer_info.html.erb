@@ -1,37 +1,63 @@
 <!-- Computer info -->
 
 <% content_tag :div, :id => 'show' do %>
-<%= content_tag('p', t('computers.place')) %>
-<%= content_tag('h3', link_to(@computer.place.title, '/places/' + @computer.place.id.to_s) ) rescue nil%>
-<%= show_info(t('computers.name'), 'show', 'Computer', @computer.id, 'name') %>
-<%= show_info('Ip', 'show', 'Computer', @computer.id, 'ip') %>
-<%= show_info('Mac', 'show', 'Computer', @computer.id, 'mac') %>
-<%= show_info(t('computers.inventory_register'), 'show',
+  <%= content_tag('p', t('computers.place')) %>
+    <%= content_tag('h3', link_to(@computer.place.title, '/places/' + @computer.place.id.to_s) ) rescue nil%>
+
+    <!-- START -    Computer information -->
+
+    <%= show_info(t('computers.name'), 'show', 'Computer', @computer.id, 'name') %>
+    <%= show_info('Ip', 'show', 'Computer', @computer.id, 'ip') %>
+    <%= show_info('Mac', 'show', 'Computer', @computer.id, 'mac') %>
+    <%= show_info(t('computers.inventory_register'), 'show',
     'Computer', @computer.id, 'inventory_register') %>
-
-  <% content_tag :div, :id => 'show' do %>
-
-  <%= content_tag('div', 'Motherboard : ') %>
-                 <%= @computer.mother_board.model  rescue nil%>
+    <!-- END -->
 
 
-  <%= content_tag('div', t('computers.harddisk')) %>
-                 <%= @computer.harddisk.collect {|x| x.model + ' ' + x.size.to_s +
-                     ' ' + x.unit.upcase + '<br>' }  rescue nil%>
+    <% content_tag :div, :id => 'show' do %>
+    <!-- START -   Motherboard information -->
+    <% content_tag 'div' do %>
+      Motherboard :
+      <%= @computer.mother_board.mark.name  rescue nil%>
+      <%= @computer.mother_board.model.description  rescue nil%>
+    <% end %>
+    <!-- END -->
 
-  <%= content_tag('div', t('computers.memory')) %>
-                 <%= @computer.memory.collect {|x| x.model +  ' ' + x.size.to_s +
-                     ' ' + x.unit.upcase + '<br>' }  rescue nil %>
+    <!-- START -   Harddisk information -->
+    <%  content_tag 'div' do %>
+      <%= t('computers.harddisk') + ' : ' %>
+      <%= @computer.harddisk.collect {|x| x.model.description + ' ' + x.size.to_s +
+          ' ' + x.unit.upcase + '<br>' }  rescue nil %>
+    <% end %>
+    <!-- END -->
 
-  <%= content_tag('div', 'Cd :') %>
-                 <%= @computer.cd.collect {|x| x.model + '<br>' }  rescue nil %>
+    <!-- START -   Memory information -->
+    <% content_tag 'div' do %>
+      <%= t('computers.memory') + ' : ' %>
+      <%= @computer.memory.collect {|x| x.model.description +  ' ' + x.size.to_s +
+          ' ' + x.unit.upcase + '<br>' }  rescue nil %>
+    <% end %>
+    <!-- END -->
 
-  <%= content_tag('div', 'Dvd :') %>
-                 <%= @computer.dvd.collect {|x| x.model + '<br>' }  rescue nil %>
+    <!-- START -   Cds information -->
+    <% content_tag 'div' do %>
+      Cd :
+      <%= @computer.cd.collect {|x| x.model + '<br>' }  rescue nil %>
+    <% end %>
+    <!-- END -->
 
+    <!-- START -   Dvds information -->
+    <% content_tag 'div' do %>
+      Dvd :
+      <%= @computer.dvd.collect {|x| x.model + '<br>' }  rescue nil %>
+    <% end %>
+    <!-- END -->
+
+    <br>
+    <%= content_tag('div', t('computers.available') + ':' + check(@computer.available)) %>
 <% end -%>
 
-<%= content_tag('div', t('computers.available') + ':' + check(@computer.available)) %>
+
 <% end -%>
 <% 10.times do %>
 <br>
