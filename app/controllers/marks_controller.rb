@@ -15,6 +15,8 @@
 #     You should have received a copy of the GNU General Public License
 #     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+INCLUDE_MARK_MODEL = [:mark]
+
 class MarksController < ApplicationController
   before_filter :login_required
   layout "primary-content"
@@ -41,12 +43,9 @@ class MarksController < ApplicationController
   # GET /marks/1
   # GET /marks/1.xml
   def show
+    @models = list_models_by_mark
     @mark = Mark.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @mark }
-    end
+    render :layout => "primary-content"
   end
 
   # GET /marks/new
@@ -117,5 +116,14 @@ class MarksController < ApplicationController
     end
 
     flash[:notice] = t('phrases.result_search')
+  end
+
+  private
+
+  def list_models_by_mark
+    @models = Model.list_for_mark.paginate(:page => params[:page],
+                                           :per_page => PER_PAGE,
+                                           :order => 'created_at DESC',
+                                           :include => INCLUDE_MARK_MODEL)
   end
 end

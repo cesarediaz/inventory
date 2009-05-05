@@ -11,4 +11,8 @@ class Model < ActiveRecord::Base
   validates_uniqueness_of :description
   validates_presence_of :description, :mark_id
   validates_numericality_of :mark_id
+
+  #################################################
+  # Named Scope
+  named_scope :list_for_mark, lambda { |*args| { :conditions => ['mark_id = ?', args]}}
 end
