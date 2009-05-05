@@ -1,4 +1,4 @@
-<% content_tag :h4  do %>
+<% content_tag :div  do %>
   <%= t('menu.marks').singularize  %>
 <% end %>
 <% content_tag :h2  do %>
@@ -6,8 +6,10 @@
 <% end %>
 <%=content_tag('br') %>
 
-<% content_tag :h4  do %>
-  <%= t('menu.models')  %>
+<% if not @mark.model.empty? %>
+  <% content_tag :h4  do %>
+    <%= t('menu.models')  %>
+  <% end %>
 <% end %>
 
 <%= models(@mark) %>
