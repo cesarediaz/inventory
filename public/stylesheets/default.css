@@ -649,25 +649,9 @@ div.auto_complete ul strong.highlight {
 
 .background_simple_lists
 {
-    border: 1px solid #BCB8B8;
     background-color: #F3F0F0;
-    background-image: none;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0% 0%;
-    padding-top: 0.2em;
-    padding-right: 0.2em;
-    padding-bottom: 0.2em;
-    padding-left: 0.2em;
-    width: 80%;
-    border-top-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-top-style: solid;
-    border-right-style-value: solid;
     border-bottom-style: solid;
-    border-left-style-value: solid;
+    border-bottom-width: 1px;
 }
 
 .identation_help

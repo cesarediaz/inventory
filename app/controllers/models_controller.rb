@@ -50,8 +50,9 @@ class ModelsController < ApplicationController
 
     respond_to do |format|
       if @model.update_attributes(params[:model])
+        @mark = Mark.find(params[:model][:mark_id])
         flash[:notice] = 'Model was successfully updated.'
-        format.html { redirect_to(@model) }
+        format.html { redirect_to(@mark) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit", :layout => "primary-content" }
@@ -80,8 +81,9 @@ class ModelsController < ApplicationController
 
     respond_to do |format|
       if @model.save
+        @mark = Mark.find(params[:model][:mark_id])
         flash[:notice] = 'Model was successfully created.'
-        format.html { redirect_to(@model) }
+        format.html { redirect_to(@mark) }
         format.xml  { render :xml => @model, :status => :created, :location => @model }
       else
         format.html { render :action => "new" }
@@ -95,9 +97,10 @@ class ModelsController < ApplicationController
   def destroy
     @model = Model.find(params[:id])
     @model.destroy
+    @mark = Mark.find(@model.mark_id)
 
     respond_to do |format|
-      format.html { redirect_to(models_url) }
+      format.html { redirect_to(@mark) }
       format.xml  { head :ok }
     end
   end

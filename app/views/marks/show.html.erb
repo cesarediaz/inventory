@@ -1,3 +1,6 @@
+<% content_tag :div, options = {:id => 'models'}  do %>
+
+
 <% content_tag :div  do %>
   <%= t('menu.marks').singularize  %>
 <% end %>
@@ -12,7 +15,11 @@
   <% end %>
 <% end %>
 
-<%= models(@mark) %>
+<%= list(@mark) %>
+
+<% end %>
+
+
 <%=content_tag('br') %>
 
 <%= link_to t('common_actions.edit'), edit_mark_path(@mark) %> |
