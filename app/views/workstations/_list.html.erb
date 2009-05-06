@@ -9,8 +9,8 @@
   <% end -%>
   <% for workstation in @workstations %>
   <% @c = Computer.find(workstation.computer_id).name rescue nil %>
-  <% @s = Screen.find(workstation.screen_id).model rescue nil %>
-  <% @p = Printer.find(workstation.printer_id).model  rescue nil %>
+  <% @s = Screen.find(workstation.screen_id).description_model rescue nil %>
+  <% @p = Printer.find(workstation.printer_id).description_model  rescue nil %>
   <% @place = Place.find(workstation.place_id)  rescue nil %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', @c, options = {:nowrap => true}) rescue nil %>

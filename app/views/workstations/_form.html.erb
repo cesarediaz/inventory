@@ -44,12 +44,14 @@
     <% end %>
 
 
+
     <% content_tag :td, option = {:valign =>'top'} do %>
       <% if not @screens.empty? %>
       <%= label_tag('screens',  t('phrases.list_of') + ' ' + t('screens.title')) %>
       <br>
-      <%= collection_select 'workstation', 'screen_id', @screens, 'id', 'model',{},
+      <%= collection_select 'workstation', 'screen_id', @screens, 'id', :description_model ,{},
           {:prompt => true, :size => @screens.count + 1 } %>
+
       <% end %>
     <% end %>
 
@@ -58,7 +60,7 @@
       <% if not @printers.empty? %>
       <%= label_tag('printers',  t('phrases.list_of') + ' ' + t('printers.title')) %>
       <br>
-      <%= collection_select 'workstation', 'printer_id', @printers, 'id', 'model',{},
+      <%= collection_select 'workstation', 'printer_id', @printers, 'id', :description_model,{},
           {:prompt => true, :size => @printers.count + 1 } %>
       <% end %>
     <% end %>
