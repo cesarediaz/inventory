@@ -1,8 +1,7 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
-    <%= content_tag('th', t('dvds.model'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('dvds.sn'), options = {:nowrap => true}) %>
-    <%= content_tag('th', t('dvds.mark')) %>
+    <%= content_tag('th', t('dvds.mark') + ' / ' + t('dvds.model'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('dvds.burn')) %>
     <%= content_tag('th', 'Pc') %>
     <%= content_tag('th', t('dvds.bill')) %>
@@ -10,9 +9,8 @@
     <% end -%>
 <% for dvd in @dvds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', dvd.model, options = {:nowrap => true} ) %>
     <%= content_tag('td', dvd.serialnumber, options = {:nowrap => true} ) %>
-    <%= content_tag('td', dvd.mark.name, options = {:nowrap => true}) %>
+    <%= content_tag('td', dvd.model_id.nil? ? '-' : dvd.model.description, options = {:nowrap => true}) %>
     <%= content_tag('td', check(dvd.writable) ) %>
     <%= content_tag('td', dvd.computer.nil? ? '-': link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s),
         options = {:nowrap => true})%>

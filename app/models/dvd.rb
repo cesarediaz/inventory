@@ -9,4 +9,8 @@ class Dvd < ActiveRecord::Base
   validates_uniqueness_of :serialnumber
   validates_presence_of :serialnumber, :model, :mark_id
 
+
+  def description_model
+    "#{self.mark.name} #{self.model.description}" unless self.model_id.nil?
+  end
 end

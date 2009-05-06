@@ -1,8 +1,7 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
-  <%= content_tag('th', t('cds.model')) %>
   <%= content_tag('th', t('cds.sn'), options = {:nowrap => true}) %>
-  <%= content_tag('th', t('cds.mark')) %>
+  <%= content_tag('th', t('cds.mark') + ' / ' + t('cds.model'), options = {:nowrap => true}) %>
   <%= content_tag('th', t('cds.burn')) %>
   <%= content_tag('th', 'Pc') %>
   <%= content_tag('th', t('cds.bill')) %>
@@ -10,9 +9,8 @@
   <% end -%>
 <% for cd in @cds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', cd.model, options = {:nowrap => true}) %>
     <%= content_tag('td', cd.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td', cd.mark.name, options = {:nowrap => true})%>
+    <%= content_tag('td', cd.model_id.nil? ? '-' : cd.model.description, options = {:nowrap => true}) %>
     <%= content_tag('td', check(cd.writable)) %>
     <%= content_tag('td', link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s),
         options = {:nowrap => true})  rescue nil %>
