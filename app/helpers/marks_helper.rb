@@ -6,7 +6,7 @@ module MarksHelper
           content_tag :div do
             x.description
           end
-       }
+        }
       end
     end
   end
@@ -20,7 +20,7 @@ module MarksHelper
             :url  => model_url(x), :method => :delete,
             :update => { :success => "outer", :failure => "error" }
           end
-       }
+        }
       end
     end
   end
@@ -32,7 +32,7 @@ module MarksHelper
           content_tag :div do
             link_to(t('common_actions.edit'), edit_model_path(x.id))
           end
-       }
+        }
       end
     end
   end

@@ -649,9 +649,7 @@ div.auto_complete ul strong.highlight {
 
 .background_simple_lists
 {
-    background-color: #F3F0F0;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    background-color: #F1F1F1;
 }
 
 .identation_help
