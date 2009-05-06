@@ -3,7 +3,7 @@
 <% content_tag :div, :id => 'show' do %>
 
 <%= content_tag('h4', t('cds.model')) %>
-<%= content_tag('p', @cd.model) %>
+<%= content_tag('p', @cd.model.description) %>
 
 <%= content_tag('h4', t('cds.mark')) %>
 <%= content_tag('p', @cd.mark.name) %>

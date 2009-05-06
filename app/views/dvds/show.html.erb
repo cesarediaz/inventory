@@ -3,7 +3,7 @@
 <% content_tag :div, :id => 'show' do %>
 
 <%= content_tag('h4', t('dvds.model')) %>
-<%= content_tag('p', @dvd.model) %>
+<%= content_tag('p', @dvd.model.description) %>
 
 <%= content_tag('h4', t('dvds.mark')) %>
 <%= content_tag('p', @dvd.mark.name) %>
