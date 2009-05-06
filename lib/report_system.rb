@@ -189,22 +189,23 @@ module ReportSystem
      for object in elements
        @disks = ''
        object.harddisk.empty? ? t('phrases.n') : object.harddisk.collect {|x|
-       @disks = @disks + x.model + " - " + x.size.to_s + " " + x.unit} rescue nil
+       @disks = @disks + x.description_model + " - " + x.size.to_s + " " + x.unit} rescue nil
        @memories = ''
        object.memory.empty? ? t('phrases.n') : object.memory.collect {|x|
-       @memories = @memories + x.model + " - " + x.size.to_s + " " + x.unit} rescue nil
+       @memories = @memories + x.description_model + " - " + x.size.to_s + " " + x.unit} rescue nil
        @cds = ''
        object.cd.empty? ? t('phrases.n') : object.cd.collect {|x|
-       @cds = @cds + x.model + " "} rescue nil
+       @cds = @cds + x.description_model + " "} rescue nil
        @dvds = ''
        object.dvd.empty? ? t('phrases.n') : object.dvd.collect {|x|
-       @dvds = @dvds + x.model + " "} rescue nil
+       @dvds = @dvds + x.description_model + " "} rescue nil
 
        page.write(row,0,object.name)
        page.write(row,1,object.mac)
        page.write(row,2,object.ip)
        page.write(row,3,object.available == true ? t('phrases.y') : t('phrases.n'))
-       page.write(row,4,object.mother_board.model.nil? ? t('phrases.n') : object.mother_board.model) rescue nil
+       page.write(row,4,object.mother_board.model_id.nil? ? t('phrases.n') :
+                  object.mother_board.description_model) rescue nil
        page.write(row,5,@disks)
        page.write(row,6,@memories)
        page.write(row,7,@cds)
@@ -220,11 +221,14 @@ module ReportSystem
   def generic_report(page, elements, row, with_place)
     row.nil? ? row = 1 : row = row
      for object in elements
-       page.write(row,0,object.model)
+       if not object.model_id.nil?
+         page.write(row,0,object.description_model)
+       else
+         page.write(row,0, '')
+       end
        page.write(row,1,object.serialnumber)
-       page.write(row,2,object.mark.name)
-       page.write(row,3,object.place.title)
-       page.write(row,4,object.inventory_register) rescue nil
+       page.write(row,2,object.place.title)
+       page.write(row,3,object.inventory_register) rescue nil
        row += 1
      end
   end
