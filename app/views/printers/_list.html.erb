@@ -1,20 +1,18 @@
 <% content_tag :table do %>
   <% content_tag :tr do %>
     <%= content_tag('th', t('printers.sn'), options = {:nowrap => true}) %>
-    <%= content_tag('th', t('printers.mark')) %>
-    <%= content_tag('th', t('printers.model')) %>
+    <%= content_tag('th', t('printers.mark') + '/' + t('printers.model')) %>
     <%= content_tag('th', 'Place') %>
     <%= content_tag('th', t('printers.workstation?')) %>
     <%= content_tag('th', t('printers.inventory_register'), options = {:nowrap => true}) %>
-    <%= content_tag('th', t('screens.bill')) %>
+    <%= content_tag('th', t('printers.bill')) %>
     <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end %>
 
 <% for printer in @printers %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', printer.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td', printer.mark.name, options = {:nowrap => true}) %>
-    <%= content_tag('td', printer.model_id.nil? ? '-' : printer.model.description, options = {:nowrap => true}) %>
+    <%= content_tag('td', printer.model_id.nil? ? '-' : printer.description_model, options = {:nowrap => true}) %>
     <%= content_tag('td', link_to(printer.place.title, '/places/' + printer.place.id.to_s),
         options = {:nowrap => true})%>
     <%= content_tag('td', in_workstation?(printer, 'printer_id' )) %>

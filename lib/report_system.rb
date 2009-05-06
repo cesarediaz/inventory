@@ -267,9 +267,9 @@ module ReportSystem
        page.write(row,0,@computer.name)
        page.write(row,1,@computer.ip)
        page.write(row,2,@computer.mac)
-       page.write(row,3,@screen.model)
+       page.write(row,3,@screen.description_model)
        page.write(row,4,@screen.serialnumber)
-       page.write(row,5,@printer.model) rescue nil
+       page.write(row,5,@printer.description_model) rescue nil
        page.write(row,6,@printer.serialnumber) rescue nil
        page.write(row,7,@place.title)
        row += 1
