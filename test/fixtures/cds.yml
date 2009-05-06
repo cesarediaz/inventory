@@ -2,7 +2,7 @@
 
 one:
   id: 1
-  model: Cd 32
+  model_id: 1
   serialnumber: 121232234
   mark_id : 3
   writable: false
@@ -11,27 +11,27 @@ one:
 
 two:
   id: 2
-  model: Cd 64
+  model_id: 1
   serialnumber: 121234876
-  mark_id : 5
+  mark_id : 3
   writable: false
   inventory_register : 1412413434
   computer_id: 2
 
 three:
   id: 3
-  model: Cd 132
+  model_id: 2
   serialnumber: 121234223
-  mark_id : 7
+  mark_id : 3
   writable: false
   inventory_register : 13434141431
   computer_id: 3
 
 four:
   id: 4
-  model: Cd 543
+  model_id: 2
   serialnumber: 121234000
-  mark_id : 8
+  mark_id : 3
   writable: false
   inventory_register : 1412412414
   computer_id: 4

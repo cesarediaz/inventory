@@ -2,7 +2,7 @@
 
 one:
   id: 1
-  model: Dvd 32
+  model_id: 2
   serialnumber: 121232234
   mark_id : 3
   writable: false
@@ -11,27 +11,27 @@ one:
 
 two:
   id: 2
-  model: Dvd 64
+  model_id: 1
   serialnumber: 121234876
-  mark_id : 5
+  mark_id : 3
   writable: false
   inventory_register : 24352345234
   computer_id: 2
 
 three:
   id: 3
-  model: Dvd 132
+  model_id: 1
   serialnumber: 121234223
-  mark_id : 7
+  mark_id : 3
   writable: false
   inventory_register : 24523525254
   computer_id: 3
 
 four:
   id: 4
-  model: Dvd 543
+  model_id: 1
   serialnumber: 121234000
-  mark_id : 8
+  mark_id : 3
   writable: true
   inventory_register : 2523524543
   computer_id: 4

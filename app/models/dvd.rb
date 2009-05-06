@@ -1,6 +1,7 @@
 class Dvd < ActiveRecord::Base
   belongs_to :computer
   belongs_to :mark
+  belongs_to :model
   has_one :bill
 
 

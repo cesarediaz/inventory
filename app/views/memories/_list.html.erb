@@ -11,7 +11,7 @@
 <% for memory in @memories %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', memory.serialnumber, options = {:nowrap => true}) %>
-    <%= content_tag('td', memory.model_id.nil? ? '-' : memory.model.description, options = {:nowrap => true}) %>
+    <%= content_tag('td', memory.model_id.nil? ? '-' : memory.description_model, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.size, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.unit.to_s, options = {:nowrap => true}) %>
     <%= content_tag('td', memory.computer.nil? ? '-': link_to(memory.computer.name , \
