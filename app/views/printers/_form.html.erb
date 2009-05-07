@@ -14,45 +14,67 @@
 <%= advice( @printer.is_part_of_a_workstation, t('common_actions.hide_advice'),
     t('help_phrases.in_workstation'),'quarter', 'printer')%>
 
-<% form_for(@printer) do |f| %>
-<%= f.error_messages %>
+  <% form_for(@printer) do |f| %>
+  <%= f.error_messages %>
 
-<%= t('printers.sn') %>
-<%= f.text_field :serialnumber %>
+  <%= t('printers.sn') %>
+  <%= f.text_field :serialnumber %>
 
-<% 2.times do %>
-<br>
-<% end %>
+  <% 2.times do %>
+  <br>
+  <% end %>
 
-<%= t('printers.inventory_register') %>
-<%= f.text_field :inventory_register %>
+  <%= t('printers.inventory_register') %>
+  <%= f.text_field :inventory_register %>
 
-<div id="quarter" >
-  <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
-      {:prompt => true} %>
-</div>
-
-<%= observe_field "printer_mark_id", :update => "model_id_container",
-:with => "mark_id", :url => { :controller => "printers",
-:action => "models" } %>
-
-Modelo
-<div id="model_id_container">
-</div>
+  <% 2.times do %>
+  <br>
+  <% end %>
 
 
-<% if not @printer.is_part_of_a_workstation %>
-<div id="quarter" >
-  <%= collection_select 'printer', 'place_id', Place.find(:all), 'id', 'title',
-      {:prompt => true} %>
-</div>
-<% end %>
+  <%= t('printers.sn') %>
+  <div id="quarter" >
+    <%= collection_select 'printer', 'mark_id', Mark.find(:all), 'id', 'name',
+        {:prompt => true} %>
+  </div>
 
-<div id="quarter" >
-  <%= t 'menu.bills' %><%= t 'bill.code' %>
-  <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', :company_bill,
-      {:prompt => true} %>
-</div >
+  <%= observe_field "printer_mark_id", :update => "model_id_container",
+  :with => "mark_id", :url => { :controller => "printers",
+  :action => "models" } %>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('printers.model') %>
+  <div id="model_id_container">
+  </div>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('menu.places') %>
+  <% if not @printer.is_part_of_a_workstation %>
+  <div id="quarter" >
+    <%= collection_select 'printer', 'place_id', Place.find(:all), 'id', 'title',
+        {:prompt => true} %>
+  </div>
+  <% end %>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <div id="quarter" >
+    <%= t 'menu.bills' %><%= t 'bill.code' %>
+    <%= collection_select 'printer', 'bill_id', Bill.find(:all), 'id', :company_bill,
+        {:prompt => true} %>
+  </div >
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
 <p>
   <% if action_name == 'new' %>
