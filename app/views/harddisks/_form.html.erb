@@ -17,14 +17,26 @@
   <%= t('harddisks.sn') %>
   <%= f.text_field :serialnumber %>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
+
   <%= t('harddisks.inventory_register') %>
   <%= f.text_field :inventory_register %>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <% content_tag :div, :id => "quarter" do %>
   <%= f.label 'size' %>
   <%= f.text_field :size %>
-  <% content_tag :div, :id => "quarter" do %>
   <%= select 'harddisk', 'unit', [['mb', 'mb'], ['gb', 'gb']], {:include_blank => true} %>
   <% end -%>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   Computer
   <% content_tag :div, :id => "quarter" do %>
@@ -32,7 +44,11 @@
       {:prompt => true} %>
   <% end -%>
 
-  Marca
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('harddisks.mark') %>
   <% content_tag :div, :id => "quarter" do %>
   <%= collection_select 'harddisk', 'mark_id', Mark.find(:all), 'id', 'name',
       {:prompt => true} %>
@@ -42,9 +58,17 @@
   :with => "mark_id", :url => { :controller => "harddisks",
   :action => "models" } %>
 
-  Modelo
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('motherboards.model') %>
   <div id="model_id_container">
   </div>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <%= t 'bill.code' %>
   <% content_tag :div, :id => "quarter" do %>
@@ -52,6 +76,9 @@
       {:prompt => true} %>
   <% end -%>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <p>
     <% if action_name == 'new' %>
@@ -61,5 +88,3 @@
     <% end %>
   </p>
 <% end %>
-
-

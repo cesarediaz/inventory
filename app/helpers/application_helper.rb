@@ -128,13 +128,15 @@ module ApplicationHelper
   end
 
   def select_models(models, object)
-      html = ''
-      html = html + "<select name='" + object + "'>"
-      for model in models
-        html = html + "<option value=" + model.id.to_s + ">" + model.description + "</option>"
-      end
-      html = html + "</select>"
-      return html
+    html = ''
+    html = html + '<div id="quarter" >'
+    html = html + "<select name='" + object + "'>"
+    for model in models
+      html = html + "<option value=" + model.id.to_s + ">" + model.description + "</option>"
+    end
+    html = html + "</select>"
+    html = html + '</div>'
+    return html
   end
 
 

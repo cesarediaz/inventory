@@ -18,19 +18,26 @@
   <%= t('motherboards.sn') %>
   <%= f.text_field :serialnumber %>
 
-    <% 2.times do %>
-    <br>
-    <% end %>
+  <% 2.times do %>
+  <br>
+  <% end %>
 
-    <%= t('motherboards.inventory_register') %>
-    <%= f.text_field :inventory_register %>
+  <%= t('motherboards.inventory_register') %>
+  <%= f.text_field :inventory_register %>
 
-  <%= t('motherboards.computer') %>
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <div id="quarter" >
+  <%= t('motherboards.computer') %>
   <%= collection_select 'mother_board', 'computer_id', Computer.find(:all), 'id', 'name',
       {:prompt => true} %>
   </div>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <%= t('motherboards.mark') %>
   <div id="quarter" >
@@ -42,15 +49,27 @@
   :with => "mark_id", :url => { :controller => "mother_boards",
   :action => "models" } %>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
+
   Modelo
   <div id="model_id_container">
   </div>
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <div id="quarter" >
     <%= t 'bill.code' %>
     <%= collection_select 'mother_board', 'bill_id', Bill.find(:all), 'id', :company_bill,
         {:prompt => true} %>
   </div >
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <p>
 
