@@ -24,14 +24,30 @@
 <%= t('dvds.inventory_register') %>
 <%= f.text_field :inventory_register %>
 
+<% 2.times do %>
+<br>
+<% end %>
+
 Burn <%= radio_button('dvd', 'writable', 't') %>
 Not burn<%= radio_button('dvd', 'writable', 'f') %>
 
+<% 2.times do %>
+<br>
+<% end %>
+
+<% content_tag :div, :id => "quarter" do %>
+Pc:
 <%= collection_select 'dvd', 'computer_id', Computer.find(:all), 'id', 'name',
     {:prompt => true} %>
 
+<% 2.times do %>
+<br>
+<% end %>
+<% end -%>
+
 <% content_tag :div, :id => "quarter" do %>
-Mark:
+
+<%= t('dvds.mark') %>
 <%= collection_select 'dvd', 'mark_id', Mark.find(:all), 'id', 'name',
     {:prompt => true} %>
 <% end -%>
@@ -40,15 +56,27 @@ Mark:
 :with => "mark_id", :url => { :controller => "dvds",
 :action => "models" } %>
 
-Modelo
+<% 2.times do %>
+<br>
+<% end %>
+
+<%= t('dvds.model') %>
 <div id="model_id_container">
 </div>
+
+<% 2.times do %>
+<br>
+<% end %>
 
 <div id="quarter" >
   <%= t 'bill.code' %>
   <%= collection_select 'dvd', 'bill_id', Bill.find(:all), 'id', :company_bill,
       {:prompt => true} %>
 </div >
+
+<% 2.times do %>
+<br>
+<% end %>
 
 <p>
   <% if action_name == 'new' %>

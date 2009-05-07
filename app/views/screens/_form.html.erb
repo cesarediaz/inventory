@@ -27,6 +27,11 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
   <%= t('screens.inventory_register') %>
   <%= f.text_field :inventory_register %>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('screens.mark') %>
   <div id="quarter" >
     <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
         {:prompt => true} %>
@@ -36,10 +41,21 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
   :with => "mark_id", :url => { :controller => "screens",
   :action => "models" } %>
 
-  Modelo
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+
+  <%= t('screens.model') %>
   <div id="model_id_container">
   </div>
 
+
+  <% 2.times do %>
+  <br>
+  <% end %>
+
+  <%= t('menu.places') %>
   <% if not @screen.is_part_of_a_workstation %>
   <div id="quarter" >
     <%= collection_select 'screen', 'place_id', Place.find(:all), 'id', 'title',
@@ -47,11 +63,19 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
   </div>
   <% end %>
 
+  <% 2.times do %>
+  <br>
+  <% end %>
+
   <div id="quarter" >
     <%= t 'bill.code' %>
     <%= collection_select 'screen', 'bill_id', Bill.find(:all), 'id', :company_bill,
         {:prompt => true} %>
   </div >
+
+  <% 2.times do %>
+  <br>
+  <% end %>
 
   <p>
     <% if action_name == 'new' %>
