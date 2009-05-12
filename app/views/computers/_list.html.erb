@@ -25,9 +25,9 @@
       <%= content_tag('td', computer.harddisk.empty? ? '-' :
           computer.harddisk.collect {|x| x.size.to_s + ' ' + x.unit.upcase + '<br>' },
           options = {:nowrap => true} ) %>
-      <%= content_tag('td', computer.cd.empty? ? '-' :computer.cd.collect {|x| x.description_model + '<br>' },
+      <%= content_tag('td', computer.cd.empty? ? '-' :computer.cd.collect {|x| x.description_model unless x.description_model.nil? },
           options = {:nowrap => true} )%>
-      <%= content_tag('td', computer.dvd.empty? ? '-' :computer.dvd.collect {|x| x.description_model + '<br>' },
+      <%= content_tag('td', computer.dvd.empty? ? '-' :computer.dvd.collect {|x| x.description_model  unless x.description_model },
           options = {:nowrap => true} ) %>
       <%= content_tag('td',  link_to(computer.place.title, '/places/' + computer.place.id.to_s),
           options = {:nowrap => true}) %>

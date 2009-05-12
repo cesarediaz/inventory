@@ -3,8 +3,11 @@ class Model < ActiveRecord::Base
   has_many :harddisk, :dependent => :nullify
   has_many :memory, :dependent => :nullify
   has_many :mother_board, :dependent => :nullify
+  has_many :cd, :dependent => :nullify
+  has_many :dvd, :dependent => :nullify
   has_many :screen, :dependent => :nullify
   has_many :printer, :dependent => :nullify
+
 
   #################################################
   # VALIDATIONS
