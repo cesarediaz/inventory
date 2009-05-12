@@ -8,13 +8,27 @@ describe "/workstations/new" do
 end
 
 describe "/workstations/_form.html.erb" do
+
+  def places_mocks
+    @place_one = mock_model(Place, :id => 1, :title => 'oficina')
+    @place_two = mock_model(Place, :id => 2, :title => 'deposito')
+    @places = [@place_one, @place_two]
+  end
+
+  def computers_mocks
+    @computer_one = mock_model(Computer, :id => 1, :name => "pc_1", :ip => '132.54.23.61', :mac => '13:23:43:15:53:31',
+                           :available => true)
+    @computer_two = mock_model(Computer, :id => 2, :name => "pc_2", :ip => '132.54.23.62', :mac => '13:23:43:15:53:32',
+                               :available => true)
+    @computers = [@computer_one, @computer_two]
+    @computers.stub!(:find).and_return(@computers)
+  end
+
   before do
     @workstation = mock_model(Workstation)
     assigns[:workstation] = @workstation
 
-    @place_one = mock_model(Place, :id => 1, :title => 'oficina')
-    @place_two = mock_model(Place, :id => 2, :title => 'deposito')
-    @places = [@place_one, @place_two]
+    places_mocks
 
     assigns[:places] = @places
 
@@ -43,8 +57,6 @@ describe "/workstations/_form.html.erb" do
   it "should display select options" do
     with_tag("option[value=1]")
     with_tag("option[value=2]")
-   # with_tag(:select, :html=>"<option>oficina</option>")
-   # with_tag(:select, :html=>"<option>deposito</option>")
 
     response.should have_tag("select") { |elements|
       elements.size.should == 1
