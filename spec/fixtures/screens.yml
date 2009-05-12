@@ -1,7 +1,91 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+one:
+  id: 1
+  model_id: 1
+  serialnumber: 1212324325
+  mark_id : 3
+  place_id: 2
+  inventory_register : 345446546
+
+two:
+  id: 2
+  model_id: 2
+  serialnumber: 12123243434
+  mark_id : 3
+  place_id: 2
+  inventory_register : 52352353454
+
+three:
+  id: 3
+  model_id: 1
+  serialnumber: 1212324333
+  mark_id : 3
+  place_id: 2
+  inventory_register : 23576576577
+
+four:
+  id: 4
+  model_id: 1
+  serialnumber: 1212324311
+  mark_id : 3
+  place_id: 2
+  inventory_register : 345446546
+
+five:
+  id: 5
+  model_id: 2
+  serialnumber: 12123243477
+  mark_id : 3
+  place_id: 2
+  inventory_register : 52352353454
+
+six:
+  id: 6
+  model_id: 1
+  serialnumber: 1212324386
+  mark_id : 3
+  place_id: 2
+  inventory_register : 23576576515
+
+seven:
+  id: 7
+  model_id: 2
+  serialnumber: 12123243437
+  mark_id : 3
+  place_id: 2
+  inventory_register : 52352353453
+
+eigth:
+  id: 8
+  model_id: 1
+  serialnumber: 1212324338
+  mark_id : 3
+  place_id: 2
+  inventory_register : 235765765734
+
+nine:
+  id: 9
+  model_id: 1
+  serialnumber: 1212324319
+  mark_id : 3
+  place_id: 2
+  inventory_register : 3454465432
+
+ten:
+  id: 10
+  model_id: 2
+  serialnumber: 12123243471
+  mark_id : 3
+  place_id: 2
+  inventory_register : 52352353442
+
+eleven:
+  id: 11
+  model_id: 1
+  serialnumber: 1212324300
+  mark_id : 3
+  place_id: 2
+  inventory_register : 23576576511
+
+
