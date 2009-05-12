@@ -34,10 +34,27 @@ describe "/workstations/_form.html.erb" do
 
   it "should display form fiels" do
 
-    response.should have_tag("form") do
+    response.should have_tag("form[action=?][method=post]", workstation_path(@workstation)) do
       with_tag("select[id=places]")
       with_tag("input[id=workstation_submit]")
     end
   end
-end
 
+  it "should display select options" do
+    with_tag("option[value=1]")
+    with_tag("option[value=2]")
+   # with_tag(:select, :html=>"<option>oficina</option>")
+   # with_tag(:select, :html=>"<option>deposito</option>")
+
+    response.should have_tag("select") { |elements|
+      elements.size.should == 1
+      with_tag('select',
+               :html=>"<option value=\"\">Select a place</option>\n    \n    <option value=\"1\">\n      oficina\n    </option>\n    \n    <option value=\"2\">\n      deposito\n    </option>")
+    }
+    assert_select "select" do |elements|
+      elements.each do |element|
+        assert_select element, "option", 3
+      end
+    end
+  end
+end
