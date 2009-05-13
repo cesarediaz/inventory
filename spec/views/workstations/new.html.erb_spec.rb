@@ -7,66 +7,71 @@ describe "/workstations/new" do
   end
 end
 
+
 describe "/workstations/_form.html.erb" do
+  fixtures :computers, :screens, :printers, :places
 
-  def places_mocks
-    @place_one = mock_model(Place, :id => 1, :title => 'oficina')
-    @place_two = mock_model(Place, :id => 2, :title => 'deposito')
-    @places = [@place_one, @place_two]
+  def login
+    @user = mock_model(User)
+    @login_params = { :login => 'admin', :password => 'testing' }
+    post :create, @login_params
+    User.stub!(:authenticate).with(@login_params[:login],
+                                   @login_params[:password]).and_return(@user)
+    controller.stub!(:logged_in?).and_return(true)
+    controller.stub!(:set_user_language).and_return('en')
   end
 
-  def computers_mocks
-    @computer_one = mock_model(Computer, :id => 1, :name => "pc_1", :ip => '132.54.23.61', :mac => '13:23:43:15:53:31',
-                           :available => true)
-    @computer_two = mock_model(Computer, :id => 2, :name => "pc_2", :ip => '132.54.23.62', :mac => '13:23:43:15:53:32',
-                               :available => true)
-    @computers = [@computer_one, @computer_two]
-    @computers.stub!(:find).and_return(@computers)
+  def do_get
+    get :new, :place_id => "2"
   end
 
-  before do
+  before(:each) do
     @workstation = mock_model(Workstation)
     assigns[:workstation] = @workstation
 
-    places_mocks
-
+    @places = Place.find(:all)
     assigns[:places] = @places
 
-    assigns[:place_id] = 1
+    assigns[:place_id] = 2
 
-    @computers = Computer.find(:all)
+    @computers = Computer.list_for_place_are_not_part_a_workstation(params[:place_id])
     assigns[:computers] = @computers
 
-    @screens = Computer.find(:all)
+    @screens = Screen.list_for_place_are_not_part_a_workstation(params[:place_id])
     assigns[:screens] = @screens
 
-    @printers = Computer.find(:all)
+    @printers = Printer.list_for_place_are_not_part_a_workstation(params[:place_id])
     assigns[:printers] = @printers
 
-    render '/workstations/_form.html.erb'
   end
 
   it "should display form fiels" do
-
+    render '/workstations/_form.html.erb'
     response.should have_tag("form[action=?][method=post]", workstation_path(@workstation)) do
       with_tag("select[id=places]")
       with_tag("input[id=workstation_submit]")
     end
   end
 
-  it "should display select options" do
+  it "should display select options for places" do
+    render '/workstations/_form.html.erb'
+
     with_tag("option[value=1]")
-    with_tag("option[value=2]")
 
     response.should have_tag("select") { |elements|
       elements.size.should == 1
       with_tag('select',
-               :html=>"<option value=\"\">Select a place</option>\n    \n    <option value=\"1\">\n      oficina\n    </option>\n    \n    <option value=\"2\">\n      deposito\n    </option>")
+               :html=>"<option value=\"\">Select a place</option>\n    \n    <option value=\"1\">\n      Oficina de Personal\n    </option>\n    \n    <option value=\"2\">\n      Oficina de Pasantias\n    </option>\n    \n    <option value=\"3\">\n      Sala A\n    </option>\n    \n    <option value=\"4\">\n      Sala B\n    </option>\n    \n    <option value=\"5\">\n      Deposito Informatica\n    </option>\n    \n    <option value=\"6\">\n      Contabilidad\n    </option>\n    \n    <option value=\"7\">\n      Cooperadora\n    </option>\n    \n    <option value=\"8\">\n      Finanzas\n    </option>\n    \n    <option value=\"9\">\n      Creditos\n    </option>\n    \n    <option value=\"10\">\n      Financiera\n    </option>\n    \n    <option value=\"11\">\n      Sala C\n    </option>")
     }
+
     assert_select "select" do |elements|
       elements.each do |element|
-        assert_select element, "option", 3
+        assert_select element, "option", 12
       end
     end
+
+
   end
+
+
 end
