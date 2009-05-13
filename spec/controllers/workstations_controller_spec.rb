@@ -4,7 +4,6 @@ require File.dirname(__FILE__) + '/../spec_helper'
 # Then, you can remove it from this and the units test.
 include AuthenticatedTestHelper
 
-
 describe ComputersController do
   fixtures :computers, :screens, :printers
 
@@ -19,21 +18,31 @@ describe ComputersController do
   end
 
   before do
-    assigns[:place_id] = 2
-    @places = Place.find(:all)
+  end
+
+  def do_get
+    get :new, :place_id => "2"
+  end
+
+  it "for this place it should have n computers" do
+    login
+    do_get
     @computers = Computer.list_for_place_are_not_part_a_workstation(params[:place_id])
+    @computers.should have(11).items
+  end
+
+  it "for this place it should have n screens" do
+    login
+    do_get
     @screens = Screen.list_for_place_are_not_part_a_workstation(params[:place_id])
+    @screens.should have(11).items
+  end
+
+  it "for this place it should have n printers" do
+    login
+    do_get
     @printers = Printer.list_for_place_are_not_part_a_workstation(params[:place_id])
-
-    @workstation = mock_model(Workstation)
-    assigns[:workstation] = @workstation
-
-    assigns[:places] = @places
-    assigns[:computers] = @computers
-    assigns[:screens] = @screens
-    assigns[:printers] = @printers
-
-    @computers.stub!(:list_for_place_are_not_part_a_workstation).with(:place_id => '2').and_return(@computers)
+    @printers.should have(3).items
   end
 
 end
