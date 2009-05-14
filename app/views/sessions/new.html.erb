@@ -1,2 +1,12 @@
 <%= notice %>
 <%= render :partial => 'new' %>
+
+<%= content_tag('br')%>
+
+<% content_tag :div, options = {:class => 'background_frontend'} do %>
+<%= image_tag('chart.png') %>
+You can get statistics of distribution, availability, unavailability
+each kind of devices  as computers, screens, printers and places
+separated by types of places represented statistics graphics
+
+<% end %>

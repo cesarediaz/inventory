@@ -652,6 +652,14 @@ div.auto_complete ul strong.highlight {
     background-color: #F1F1F1;
 }
 
+.background_frontend
+{
+    border: 1px solid #000;
+    background-color: #8A4B08;
+    color: #fff;
+    width: 70%;
+}
+
 .identation_help
 {
     padding-left: 1.2em;
