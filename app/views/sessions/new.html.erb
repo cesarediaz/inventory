@@ -42,7 +42,22 @@ an rich editor online.
 <%= content_tag('br')%>
 <%= content_tag('br')%>
 
+<!-- Providers advice -->
+<% content_tag :div, options = {:class => 'background_frontend'} do %>
 
+<%= image_tag('provider.png', :align => 'left') %>
+
+
+<% content_tag :div, :align => 'rigth' do %>
+<%= content_tag('text', 'Information about providers', options = {:class => 'background_frontend_title'}) %>
+ , to know who sold the things that you have in your building or wherever you are. It permit you have adecuate information about who sell you each part or advice that is present between your hardware. Also, you can write information about the companies so you can make fast contact.
+
+<% end %>
+<% end %>
+
+
+<%= content_tag('br')%>
+<%= content_tag('br')%>
 
 
 <!-- Statistics advice -->
@@ -59,5 +74,24 @@ each kind of devices  as computers, screens, printers and places
 separated by types of places represented statistics graphics. This is only
 an extra tools that can give you a visual idea about the density of the content
 inside a building.
+<% end %>
+<% end %>
+
+
+<%= content_tag('br')%>
+<%= content_tag('br')%>
+
+<!-- The browsers -->
+<% content_tag :div, options = {:class => 'background_frontend'} do %>
+
+<%= image_tag('firefox.png', :align => 'left') %>
+<%= image_tag('ie.png', :align => 'left') %>
+<%= image_tag('chrome.png', :align => 'left') %>
+
+
+<% content_tag :div, :align => 'rigth' do %>
+<%= content_tag('text', 'The browsers ', options = {:class => 'background_frontend_title'}) %>
+
+where was tested the application were Internet Explorer, Chrome and Iceweasel mostly.
 <% end %>
 <% end %>
