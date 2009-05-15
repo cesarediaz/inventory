@@ -3,21 +3,61 @@
 
 <%= content_tag('br')%>
 
-<% content_tag :div, options = {:class => 'background_frontend'} do %>
-<%= image_tag('chart.png') %>
-You can get statistics of distribution, availability, unavailability
-each kind of devices  as computers, screens, printers and places
-separated by types of places represented statistics graphics
 
+<!-- Information advice -->
+<% content_tag :div, options = {:class => 'background_frontend'} do %>
+
+<%= image_tag('file.png', :align => 'left') %>
+
+<% content_tag :div, :align => 'rigth' do %>
+<%= content_tag('text', 'Getting digital data', options = {:class => 'background_frontend_title'}) %>
+
+,you can download a pdf or spreedsheet file to have a complete list
+of devices in your company or whatever you are. Those can be lists of a
+specific place such as an office or an complete description for a computer
+with all of its components.
+
+<% end %>
 <% end %>
 
 <%= content_tag('br')%>
 <%= content_tag('br')%>
 
+
+
+<!-- Statistics advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-<%= image_tag('spreadsheet.png') %>
-You can download a pdf or spreedsheet file to have a complete list
-of devices in your company or whatever you are.
+<%= image_tag('settings.png', :align => 'left') %>
+
+<% content_tag :div, :align => 'rigth' do %>
+<%= content_tag('text', 'Setting your inventory system', options = {:class => 'background_frontend_title'}) %>
+, you can add users for work with this software in two levels, admins or
+simple users. Also, you can add web pages semi statics for the frontend or
+backend if you like easily and fast where you can add rich format using
+an rich editor online.
+
+<% end %>
+<% end %>
+
+<%= content_tag('br')%>
+<%= content_tag('br')%>
 
 
+
+
+<!-- Statistics advice -->
+<% content_tag :div, options = {:class => 'background_frontend'} do %>
+
+<%= image_tag('chart.png', :align => 'left') %>
+
+
+<% content_tag :div, :align => 'rigth' do %>
+<%= content_tag('text', 'Getting statistics', options = {:class => 'background_frontend_title'}) %>
+
+,you can get statistics of distribution, availability, unavailability
+each kind of devices  as computers, screens, printers and places
+separated by types of places represented statistics graphics. This is only
+an extra tools that can give you a visual idea about the density of the content
+inside a building.
+<% end %>
 <% end %>
