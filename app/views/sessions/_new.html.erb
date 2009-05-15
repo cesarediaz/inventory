@@ -1,5 +1,13 @@
-<% content_tag :div, :id => 'right-content' do %>
-  <% content_tag :div, :id => 'quarter' do %>
+<% content_tag :table do %>
+  <% content_tag :tr do %>
+    <% content_tag :td do %>
+
+
+    <%= content_tag('div',notice, options = {:width => '50px'}) %>
+
+    <% content_tag :div, :id => 'right-content' do %>
+
+    <% content_tag :div, :id => 'quarter' do %>
     <% form_tag session_path do -%>
       <p><%= label_tag 'login' %><br />
        <%= text_field_tag 'login', @login %></p>
@@ -13,6 +21,10 @@
             -->
 
         <p><%= submit_tag 'Log in' %></p>
-     <% end -%>
-  <% end -%>
-<% end -%>
+        <% end -%>
+        <% end -%>
+        <% end -%>
+        <% end -%>
+        <% end -%>
+        <% end -%>
+

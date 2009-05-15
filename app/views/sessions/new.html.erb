@@ -1,7 +1,6 @@
-<%= notice %>
-<%= render :partial => 'new' %>
-
-<%= content_tag('br')%>
+<% content_tag :table, options = {:width => '80%'} do %>
+  <% content_tag :tr, options = {:valign => 'top'} do %>
+    <% content_tag :td, options = {:width => '1000px'} do %>
 
 
 <!-- Information advice -->
@@ -17,12 +16,10 @@ of devices in your company or whatever you are. Those can be lists of a
 specific place such as an office or an complete description for a computer
 with all of its components.
 
-<% end %>
-<% end %>
+<% end -%>
+<% end -%>
 
 <%= content_tag('br')%>
-<%= content_tag('br')%>
-
 
 
 <!-- Statistics advice -->
@@ -36,12 +33,10 @@ simple users. Also, you can add web pages semi statics for the frontend or
 backend if you like easily and fast where you can add rich format using
 an rich editor online.
 
-<% end %>
-<% end %>
+<% end -%>
+<% end -%>
 
 <%= content_tag('br')%>
-<%= content_tag('br')%>
-
 
 <!-- Providers advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
@@ -53,13 +48,10 @@ an rich editor online.
 <%= content_tag('text', 'Information about providers', options = {:class => 'background_frontend_title'}) %>
  , to know who sold the things that you have in your building or wherever you are. It permit you have adecuate information about who sell you each part or advice that is present between your hardware. Also, you can write information about the companies so you can make fast contact.
 
-<% end %>
-<% end %>
-
+<% end -%>
+<% end -%>
 
 <%= content_tag('br')%>
-<%= content_tag('br')%>
-
 
 <!-- Statistics advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
@@ -75,11 +67,9 @@ each kind of devices  as computers, screens, printers and places
 separated by types of places represented statistics graphics. This is only
 an extra tools that can give you a visual idea about the density of the content
 inside a building.
-<% end %>
-<% end %>
+<% end -%>
+<% end -%>
 
-
-<%= content_tag('br')%>
 <%= content_tag('br')%>
 
 <!-- Database advice -->
@@ -90,10 +80,9 @@ inside a building.
 <%= content_tag('text', 'As database engine', options = {:class => 'background_frontend_title'}) %>
 , you can chose between at least three options. This software was think to work with few amount of traffic where you don't need a big support. This software was tested using SQLite database but perfectly you can chose work with MySql or Postgres databases . For this is necesary little changes in configuration.
 
-<% end %>
-<% end %>
+<% end -%>
+<% end -%>
 
-<%= content_tag('br')%>
 <%= content_tag('br')%>
 
 <!-- The browsers -->
@@ -108,5 +97,16 @@ inside a building.
 <%= content_tag('text', 'The browsers ', options = {:class => 'background_frontend_title'}) %>
 
 where was tested the application were Internet Explorer, Chrome and Iceweasel mostly.
-<% end %>
-<% end %>
+<% end -%>
+<% end -%>
+
+<% end -%>
+<% content_tag :td, options = {:width => '100px'} do %>
+
+<%= render :partial => 'new' %>
+
+<%= content_tag('br')%>
+
+<% end -%>
+<% end -%>
+<% end -%>

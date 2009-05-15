@@ -371,12 +371,12 @@ table
 {
     float: right;
     padding: 0.1em;
+    width: 100%;
 }
 
 #left-content
 {
     float: left;
-    padding: 0.1em;
 }
 
 #left-content-small-resume-of-statsxb
@@ -652,6 +652,19 @@ div.auto_complete ul strong.highlight {
     background-color: #F1F1F1;
 }
 
+
+/* FRONT END PAGE */
+#front-end-page-content
+{
+    margin: -1em -1em 1em 0em;
+}
+
+#front-end-page-content
+{
+    padding-left: -10em;
+    padding-right: 3em;
+}
+
 .background_frontend_title
 {
     font-size: 14pt;
@@ -664,10 +677,11 @@ div.auto_complete ul strong.highlight {
     border: 1px solid #000;
     background-color: #151515;
     color: #fff;
-    width: 70%;
+    width: 90%;
     padding: 1em;
 }
 
+/* END FRONT PAGE  */
 .identation_help
 {
     padding-left: 1.2em;

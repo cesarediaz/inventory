@@ -3,7 +3,7 @@
   <%= render :partial => 'shared/head' %>
   <body>
     <div id="outer">
-      <div id="content">
+      <div id="front-end-page-content">
         <div id='left-content' >
           <% if logged_in? %>
           <%= render :partial => 'shared/menu' %>
@@ -12,7 +12,7 @@
           <%= front_end_pages %>
           <% end %>
         </div>
-        <div id='page-content'>
+        <div id='front-end-page-content'>
         <%= yield  %>
         </div>
 
