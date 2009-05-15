@@ -42,6 +42,7 @@ an rich editor online.
 <%= content_tag('br')%>
 <%= content_tag('br')%>
 
+
 <!-- Providers advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
 
@@ -77,6 +78,20 @@ inside a building.
 <% end %>
 <% end %>
 
+
+<%= content_tag('br')%>
+<%= content_tag('br')%>
+
+<!-- Database advice -->
+<% content_tag :div, options = {:class => 'background_frontend'} do %>
+<%= image_tag('active_database.png', :align => 'left') %>
+
+<% content_tag :div, :align => 'rigth' do %>
+<%= content_tag('text', 'As database engine', options = {:class => 'background_frontend_title'}) %>
+, you can chose between at least three options. This software was think to work with few amount of traffic where you don't need a big support. This software was tested using SQLite database but perfectly you can chose work with MySql or Postgres databases . For this is necesary little changes in configuration.
+
+<% end %>
+<% end %>
 
 <%= content_tag('br')%>
 <%= content_tag('br')%>
