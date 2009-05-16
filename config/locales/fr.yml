@@ -307,6 +307,11 @@ fr:
     logout : "Sortir"
     in: "It needs be translated"
 
+
+    #FrontEnd
+    home: 'Home'
+
+
     #Flash
     flash :
       login : "Logueado satisfactoriamente."

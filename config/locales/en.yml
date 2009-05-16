@@ -416,10 +416,9 @@ en:
     new_mark : "New mark"
 
     #Login
-    login : "Ingresar"
-    logout : "Cerrar sesion"
-
-    #Login
     login : "Login"
     logout : "Logout"
+
+    #FrontEnd
+    home: 'Home'
 

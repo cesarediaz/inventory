@@ -311,6 +311,9 @@ es:
     login : "Ingresar"
     logout : "Salir"
 
+    #FrontEnd
+    home: 'Principal'
+
     #Flash
     flash :
       succefully : "Logueado satisfactoriamente."

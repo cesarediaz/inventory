@@ -8,7 +8,7 @@
           <% if logged_in? %>
           <%= render :partial => 'shared/menu' %>
           <% else %>
-          <%= content_tag(:div, content_tag(link_to(t('menu.login'), new_session_path)), :id => 'options') %>
+          <%= content_tag(:div, content_tag(link_to(t('menu.home'), new_session_path)), :id => 'options') %>
           <%= front_end_pages %>
           <% end %>
         </div>
