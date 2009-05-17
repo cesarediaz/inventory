@@ -1,3 +1,4 @@
+
 /* Basic */
 
 *
@@ -654,15 +655,21 @@ div.auto_complete ul strong.highlight {
 
 
 /* FRONT END PAGE */
-#front-end-page-content
-{
-    margin: -1em -1em 1em 0em;
-}
 
 #front-end-page-content
 {
     padding-left: -10em;
     padding-right: 3em;
+}
+
+
+.background_frontend_yellow_title
+{
+    margin-bottom: 0.5em;
+    width: 90%;
+    font-size: 16pt;
+    background-color: #151515;
+    color: #F3F781;
 }
 
 .background_frontend_title

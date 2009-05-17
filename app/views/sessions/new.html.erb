@@ -4,8 +4,10 @@
 
 
 <!-- Information advice -->
-<% content_tag :div, options = {:class => 'background_frontend'} do %>
 
+
+<% content_tag :div, options = {:id => 'digital', :class => 'background_frontend'} do %>
+<%= content_tag :div, 'Digital data', options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('file.png', :align => 'left') %>
 
 <% content_tag :div, :align => 'rigth' do %>
@@ -24,6 +26,7 @@ with all of its components.
 
 <!-- Statistics advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
+<%= content_tag :div, 'Settings', options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('settings.png', :align => 'left') %>
 
 <% content_tag :div, :align => 'rigth' do %>
@@ -40,7 +43,7 @@ an rich editor online.
 
 <!-- Providers advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-
+<%= content_tag :div, 'Providers', options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('provider.png', :align => 'left') %>
 
 
@@ -55,7 +58,7 @@ an rich editor online.
 
 <!-- Statistics advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-
+<%= content_tag :div, 'Statistics', options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('chart.png', :align => 'left') %>
 
 
@@ -74,6 +77,7 @@ inside a building.
 
 <!-- Database advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
+<%= content_tag :div, 'Databases', options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('active_database.png', :align => 'left') %>
 
 <% content_tag :div, :align => 'rigth' do %>
@@ -87,6 +91,7 @@ inside a building.
 
 <!-- The browsers -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
+<%= content_tag :div, 'Browser', options = {:class => 'background_frontend_yellow_title'} %>
 
 <%= image_tag('firefox.png', :align => 'left') %>
 <%= image_tag('ie.png', :align => 'left') %>
