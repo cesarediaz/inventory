@@ -5,16 +5,39 @@ require File.dirname(__FILE__) + '/../spec_helper'
 include AuthenticatedTestHelper
 
 
-describe ComputersController do
-
   def login
     @user = mock_model(User)
     @login_params = { :login => 'admin', :password => 'testing' }
     post :create, @login_params
-    User.stub!(:authenticate).with(@login_params[:login], @login_params[:password]).and_return(@user)
+    User.stub!(:authenticate).with(@login_params[:login],
+                                   @login_params[:password]).and_return(@user)
     controller.stub!(:logged_in?).and_return(true)
     controller.stub!(:set_user_language).and_return('en')
   end
+
+describe ComputersController do
+  fixtures :computers
+
+  describe "get list of computers" do
+    before do
+    end
+
+    it "it should have n computers availables" do
+      login
+      @computers = Computer.available
+      @computers.should have(8).items
+    end
+
+    it "it should have n computers unavailables" do
+      login
+      @computers = Computer.unavailable
+      @computers.should have(10).items
+    end
+
+  end
+end
+
+describe ComputersController do
 
   def mock_computers
     @computer_one = mock_model(Computer, :name => "pc_1", :ip => '132.54.23.60', :mac => '13:23:43:15:53:30',
