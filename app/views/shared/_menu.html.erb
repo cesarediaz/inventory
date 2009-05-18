@@ -141,26 +141,24 @@
       <% if is_an_admin_user? %>
       <li class="top">
         <a href="#" id="telmex" class="top_link">
-          <span class="down"><%= t 'menu.users' %></span>
-          <!--[if gte IE 7]><!--></a><!--<![endif]-->
-        <!--[if lte IE 6]><table><tr><td><![endif]-->
-        <ul class="sub">
-          <li><a href="/users/list"><%= t 'menu.users_list' %></a></li>
-          <li><a href="/signup"><%= t 'menu.new_account' %></a></li>
-        </ul>
-        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-      </li>
-
-
-
-      <li class="top">
-        <a href="#" id="telmex" class="top_link">
           <span class="down"><%= t 'menu.pages' %></span>
           <!--[if gte IE 7]><!--></a><!--<![endif]-->
         <!--[if lte IE 6]><table><tr><td><![endif]-->
         <ul class="sub">
           <li><a href="/pages/"><%= t 'menu.list_pages' %></a></li>
           <li><a href="/pages/new"><%= t 'menu.new_page' %></a></li>
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+
+      <li class="top">
+        <a href="#" id="telmex" class="top_link">
+          <span class="down"><%= t 'menu.users' %></span>
+          <!--[if gte IE 7]><!--></a><!--<![endif]-->
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="sub">
+          <li><a href="/users/list"><%= t 'menu.users_list' %></a></li>
+          <li><a href="/signup"><%= t 'menu.new_account' %></a></li>
         </ul>
         <!--[if lte IE 6]></td></tr></table></a><![endif]-->
       </li>
