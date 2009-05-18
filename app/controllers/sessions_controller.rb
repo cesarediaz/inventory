@@ -4,8 +4,6 @@ class SessionsController < ApplicationController
   include AuthenticatedSystem
   layout "front-page"
 
-
-
   # render new.rhtml
   def new
     flash[:notice] = t('login.in')
@@ -36,6 +34,7 @@ class SessionsController < ApplicationController
   def destroy
     logout_killing_session!
     redirect_back_or_default('/')
+    clean_cache
   end
 
 protected
@@ -43,5 +42,9 @@ protected
   def note_failed_signin
     flash[:error] = "Couldn't log you in as '#{params[:login]}'"
     logger.warn "Failed login for '#{params[:login]}' from #{request.remote_ip} at #{Time.now.utc}"
+  end
+
+  def clean_cache
+    system "run rake tmp:cache:clear"
   end
 end
