@@ -32,7 +32,7 @@ describe ScreensController do
       get :index, :place_id => "2"
     end
 
-    it "it should have none screens" do
+    it "it should not have screens" do
       login
       do_get_office_one
       @screens = Screen.list_for_place(params[:place_id])

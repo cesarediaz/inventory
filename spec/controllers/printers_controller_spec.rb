@@ -5,16 +5,60 @@ require File.dirname(__FILE__) + '/../spec_helper'
 include AuthenticatedTestHelper
 
 
-describe PrintersController do
-
-  def login
+def login
     @user = mock_model(User)
     @login_params = { :login => 'admin', :password => 'testing' }
     post :create, @login_params
     User.stub!(:authenticate).with(@login_params[:login], @login_params[:password]).and_return(@user)
     controller.stub!(:logged_in?).and_return(true)
     controller.stub!(:set_user_language).and_return('en')
+end
+
+describe PrintersController do
+  fixtures :printers
+
+  describe "get list of printers" do
+    before do
+    end
+
+    def do_get
+      get :index
+    end
+
+    def do_get_office_one
+      get :index, :place_id => "1"
+    end
+
+    def do_get_office_two
+      get :index, :place_id => "2"
+    end
+
+    it "it should not have printers" do
+      login
+      do_get_office_one
+      @printers = Printer.list_for_place(params[:place_id])
+      @printers.should have(0).items
+    end
+
+    it "it should have n printers" do
+      login
+      do_get_office_two
+      @printers = Printer.list_for_place(params[:place_id])
+      @printers.should have(3).items
+    end
+
+    it "for index list it should have n printers" do
+      login
+      do_get
+      @printers = Printer.find(:all)
+      @printers.should have(3).items
+    end
+
   end
+end
+
+
+describe PrintersController do
 
   def mock_printers
     @printer_one = mock_model(Printer, :id => 1, :model => "Laser 1100", :sn => '12345678', :available => true)
