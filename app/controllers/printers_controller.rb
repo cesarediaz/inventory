@@ -21,7 +21,6 @@ include Spreadsheet
 class PrintersController < ApplicationController
   include ReportSystem
   before_filter :login_required
-  auto_complete_for :printer, :model
   auto_complete_for :printer, :serialnumber
 
   # GET /printers
@@ -114,10 +113,6 @@ class PrintersController < ApplicationController
   end
 
   def search
-    if not params[:printer][:model].nil?
-      search_by('printers', 'Printer', params[:printer][:model], 'model', 10)
-    end
-
     if not params[:printer][:serialnumber].nil?
       search_by('printers', 'Printer', params[:printer][:serialnumber], 'serialnumber', 10)
     end
