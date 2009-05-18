@@ -18,7 +18,6 @@
 class MemoriesController < ApplicationController
   before_filter :login_required
 
-  auto_complete_for :memory, :model
   auto_complete_for :memory, :serialnumber
 
 
@@ -112,13 +111,6 @@ class MemoriesController < ApplicationController
   end
 
   def search
-    if not params[:memory][:model].nil?
-        @memories = Memory.find(:all,
-                                   :conditions => [ 'LOWER(model) LIKE ?',
-                                                    '%' + params[:memory][:model].downcase + '%' ],
-                                   :order => 'model ASC',
-                                   :limit => 8)
-    end
     if not params[:memory][:serialnumber].nil?
         @memories = Memory.find(:all,
                                    :conditions => [ 'serialnumber LIKE ?',
