@@ -1,7 +1,33 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+one:
+  id: 1
+  serialnumber: 121232234
+  mark_id : 3
+  model_id: 2
+  inventory_register : 2312131231
+  computer_id: 1
+
+two:
+  id: 2
+  serialnumber: 121234876
+  mark_id : 3
+  model_id: 1
+  inventory_register : 2313131323
+  computer_id: 2
+
+three:
+  id: 3
+  serialnumber: 121234223
+  mark_id : 3
+  model_id: 2
+  inventory_register : 13213123323
+  computer_id: 3
+
+four:
+  id: 4
+  serialnumber: 121234000
+  mark_id : 3
+  model_id: 1
+  inventory_register : 13131313323
+  computer_id: 4
