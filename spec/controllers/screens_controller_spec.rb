@@ -4,17 +4,59 @@ require File.dirname(__FILE__) + '/../spec_helper'
 # Then, you can remove it from this and the units test.
 include AuthenticatedTestHelper
 
+def login
+  @user = mock_model(User)
+  @login_params = { :login => 'admin', :password => 'testing' }
+  post :create, @login_params
+  User.stub!(:authenticate).with(@login_params[:login], @login_params[:password]).and_return(@user)
+  controller.stub!(:logged_in?).and_return(true)
+  controller.stub!(:set_user_language).and_return('en')
+end
 
 describe ScreensController do
+  fixtures :screens
 
-  def login
-    @user = mock_model(User)
-    @login_params = { :login => 'admin', :password => 'testing' }
-    post :create, @login_params
-    User.stub!(:authenticate).with(@login_params[:login], @login_params[:password]).and_return(@user)
-    controller.stub!(:logged_in?).and_return(true)
-    controller.stub!(:set_user_language).and_return('en')
+  describe "get list of screens" do
+    before do
+    end
+
+    def do_get
+      get :index
+    end
+
+    def do_get_office_one
+      get :index, :place_id => "1"
+    end
+
+    def do_get_office_two
+      get :index, :place_id => "2"
+    end
+
+    it "it should have none screens" do
+      login
+      do_get_office_one
+      @screens = Screen.list_for_place(params[:place_id])
+      @screens.should have(0).items
+    end
+
+    it "it should have n screens" do
+      login
+      do_get_office_two
+      @screens = Screen.list_for_place(params[:place_id])
+      @screens.should have(11).items
+    end
+
+    it "for index list it should have n screens" do
+      login
+      do_get
+      @screens = Screen.find(:all)
+      @screens.should have(11).items
+    end
+
   end
+end
+
+describe ScreensController do
 
   def mock_screens
     @screen_one = mock_model(Screen, :model => "pc_1", :sn => '12345678', :available => true)
