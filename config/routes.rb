@@ -30,8 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :dvds, :collection => {:auto_complete_for_dvd_model => :get,
     :auto_complete_for_dvd_serialnumber => :get}
 
-  map.resources :screens, :collection => {:auto_complete_for_screen_model => :get,
-    :auto_complete_for_screen_serialnumber => :get, :xls_screens => :get}
+  map.resources :screens, :collection => {:auto_complete_for_screen_serialnumber => :get, :xls_screens => :get}
 
   map.resources :printers, :collection => {:auto_complete_for_printer_serialnumber =>
     :get, :xls_printers => :get}

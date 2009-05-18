@@ -22,7 +22,6 @@ class ScreensController < ApplicationController
   include ReportSystem
 
   before_filter :login_required
-  auto_complete_for :screen, :model
   auto_complete_for :screen, :serialnumber
 
   # GET /screens
@@ -115,10 +114,6 @@ class ScreensController < ApplicationController
   end
 
   def search
-    if not params[:screen][:model].nil?
-      search_by('screens', 'Screen', params[:screen][:model], 'model', 10)
-    end
-
     if not params[:screen][:serialnumber].nil?
       search_by('screens', 'Screen', params[:screen][:serialnumber], 'serialnumber', 10)
     end
