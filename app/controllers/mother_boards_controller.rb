@@ -16,7 +16,6 @@
 #     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 class MotherBoardsController < ApplicationController
-  auto_complete_for :mother_board, :title
   auto_complete_for :mother_board, :serialnumber
 
   # GET /mother_boards
@@ -110,10 +109,6 @@ class MotherBoardsController < ApplicationController
   end
 
   def search
-    if not params[:mother_board][:title].nil?
-      search_by('mother_boards', 'MotherBoard', params[:mother_board][:title], 'title', 10)
-    end
-
     if not params[:mother_board][:serialnumber].nil?
       search_by('mother_boards', 'MotherBoard', params[:mother_board][:serialnumber], 'serialnumber', 10)
     end
