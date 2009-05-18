@@ -17,7 +17,6 @@
 class CdsController < ApplicationController
   before_filter :login_required
 
-  auto_complete_for :cd, :model
   auto_complete_for :cd, :serialnumber
 
   # GET /cds
@@ -110,9 +109,6 @@ class CdsController < ApplicationController
   end
 
   def search
-    if not params[:cd][:model].nil?
-      search_by('cds', 'Cd', params[:cd][:model], 'model', 10)
-    end
     if not params[:cd][:serialnumber].nil?
       search_by('cds', 'Cd', params[:cd][:serialnumber], 'serialnumber', 10)
     end

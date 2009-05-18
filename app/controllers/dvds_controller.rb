@@ -18,7 +18,6 @@
 class DvdsController < ApplicationController
   before_filter :login_required
 
-  auto_complete_for :dvd, :model
   auto_complete_for :dvd, :serialnumber
 
   # GET /dvds
@@ -111,9 +110,6 @@ class DvdsController < ApplicationController
   end
 
   def search
-    if not params[:dvd][:model].nil?
-      search_by('dvds', 'Dvd', params[:dvd][:model], 'model', 10)
-    end
     if not params[:dvd][:serialnumber].nil?
       search_by('dvds', 'Dvd', params[:dvd][:serialnumber], 'serialnumber', 10)
     end
