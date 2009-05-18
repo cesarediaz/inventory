@@ -5,7 +5,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 include AuthenticatedTestHelper
 
 describe PlacesController do
-  fixtures :computers, :screens, :printers
+  fixtures :computers, :screens, :printers, :places
 
   def login
     @user = mock_model(User)
@@ -17,6 +17,35 @@ describe PlacesController do
     controller.stub!(:set_user_language).and_return('en')
   end
 
+
+  describe "get list of places" do
+    before do
+    end
+
+    it "it should have n departments" do
+      login
+      @places = Place.departments
+      @places.should have(5).items
+    end
+
+    it "it should have n offices" do
+      login
+      @places = Place.offices
+      @places.should have(3).items
+    end
+
+    it "it should have n rooms" do
+      login
+      @places = Place.rooms
+      @places.should have(2).items
+    end
+
+    it "it should have n stores" do
+      login
+      @places = Place.stores
+      @places.should have(1).items
+    end
+  end
 
   describe "get list of computers, screens and printers" do
     before do
