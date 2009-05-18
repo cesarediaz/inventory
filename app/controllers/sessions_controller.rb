@@ -33,8 +33,8 @@ class SessionsController < ApplicationController
 
   def destroy
     logout_killing_session!
-    redirect_back_or_default('/')
     clean_cache
+    redirect_back_or_default('/')
   end
 
 protected
@@ -45,6 +45,6 @@ protected
   end
 
   def clean_cache
-    system "run rake tmp:cache:clear"
+    system "rake tmp:cache:clear"
   end
 end
