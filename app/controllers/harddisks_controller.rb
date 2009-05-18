@@ -18,7 +18,6 @@
 class HarddisksController < ApplicationController
   before_filter :login_required
 
-  auto_complete_for :harddisk, :model
   auto_complete_for :harddisk, :serialnumber
 
   # GET /harddisks
@@ -111,9 +110,6 @@ class HarddisksController < ApplicationController
   end
 
   def search
-    if not params[:harddisk][:model].nil?
-      search_by('harddisks', 'Harddisk', params[:harddisk][:model], 'model', 10)
-    end
     if not params[:harddisk][:serialnumber].nil?
       search_by('harddisks', 'Harddisk', params[:harddisk][:serialnumber], 'serialnumber', 10)
     end
