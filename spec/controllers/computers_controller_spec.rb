@@ -1,19 +1,14 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-# Be sure to include AuthenticatedTestHelper in spec/spec_helper.rb instead
-# Then, you can remove it from this and the units test.
-include AuthenticatedTestHelper
-
-
-  def login
-    @user = mock_model(User)
-    @login_params = { :login => 'admin', :password => 'testing' }
-    post :create, @login_params
-    User.stub!(:authenticate).with(@login_params[:login],
+def login
+  @user = mock_model(User)
+  @login_params = { :login => 'admin', :password => 'testing' }
+  post :create, @login_params
+  User.stub!(:authenticate).with(@login_params[:login],
                                    @login_params[:password]).and_return(@user)
-    controller.stub!(:logged_in?).and_return(true)
-    controller.stub!(:set_user_language).and_return('en')
-  end
+  controller.stub!(:logged_in?).and_return(true)
+  controller.stub!(:set_user_language).and_return('en')
+end
 
 describe ComputersController do
   fixtures :computers
