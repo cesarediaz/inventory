@@ -196,6 +196,8 @@ es:
     msg_text: "Debes poner un guion ('-') donde deberias poner texto si no conoces esos datos"
     msg_number:  "Debes poner un numero cero('0') donde deberias poner datos numericos
                    si no conoces esos datos"
+    msg_email: 'Si no tienes una direccion de email definida completa con un email ficticio
+                como el siguiente ejemplo, without@email.com'
 
 
   search:

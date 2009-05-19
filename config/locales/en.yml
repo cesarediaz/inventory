@@ -299,6 +299,8 @@ en:
                      In workstation: equipment which is in a workstation"
     msg_text: "You must put a hyphen sign where is need put a text if you don't have this data"
     msg_number: "You must put a cero(0) number where is need put a number if you don\'t have this data"
+    msg_email: 'If you do not have an email address complete this field with something how the next
+    example, without@email.com'
 
   search:
     label: "Search"
