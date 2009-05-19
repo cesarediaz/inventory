@@ -114,6 +114,12 @@ class WorkstationsController < ApplicationController
     end
   end
 
+  def inventory_number
+    @registers_code_screen = Screen.find(:first,
+                         :conditions => [ "id = ?", params[:workstation_screen_id]])
+    render  :partial => 'registers_code_screen'
+  end
+
   def stats
     hardware_in_place
     if not params[:place_id].nil?

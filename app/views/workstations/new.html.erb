@@ -3,4 +3,12 @@
 <%= observe_field("places", :update => "outer",
 :url => { :controller => 'workstations', :action => :new },
 :with => "'place_id='+value") %>
+
+
+<%= observe_field "workstation_screen_id", :update => "inventory_number",
+:with => "workstation_screen_id", :url => { :controller => "workstations",
+:action => "inventory_number" } %>
+
+
 <%= link_to t('common_actions.back'), workstations_path %>
+
