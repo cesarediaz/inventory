@@ -1,7 +1,7 @@
 <%= t('screens.sn') %>
-<%= @registers_code_screen.serialnumber %>
+<%= @registers_code_screen.serialnumber unless @registers_code_screen.nil? %>
 
 <%= content_tag('br') %>
 
 <%= t('screens.inventory_register') %>
-<%= @registers_code_screen.inventory_register %>
+<%= @registers_code_screen.inventory_register unless @registers_code_screen.nil? %>

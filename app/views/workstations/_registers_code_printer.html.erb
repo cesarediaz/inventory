@@ -1,0 +1,7 @@
+<%= t('printers.sn') %>
+<%= @registers_code_printer.serialnumber unless @registers_code_printer.nil? %>
+
+<%= content_tag('br') %>
+
+<%= t('printers.inventory_register') %>
+<%= @registers_code_printer.inventory_register unless @registers_code_printer.nil? %>

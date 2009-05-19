@@ -114,10 +114,16 @@ class WorkstationsController < ApplicationController
     end
   end
 
-  def inventory_number
+  def registers_code_screen
     @registers_code_screen = Screen.find(:first,
                          :conditions => [ "id = ?", params[:workstation_screen_id]])
     render  :partial => 'registers_code_screen'
+  end
+
+  def registers_code_printer
+    @registers_code_printer = Printer.find(:first,
+                         :conditions => [ "id = ?", params[:workstation_printer_id]])
+    render  :partial => 'registers_code_printer'
   end
 
   def stats

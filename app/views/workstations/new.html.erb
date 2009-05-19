@@ -5,9 +5,14 @@
 :with => "'place_id='+value") %>
 
 
-<%= observe_field "workstation_screen_id", :update => "inventory_number",
+<%= observe_field "workstation_screen_id", :update => "registers_code_screen",
 :with => "workstation_screen_id", :url => { :controller => "workstations",
-:action => "inventory_number" } %>
+:action => "registers_code_screen" } %>
+
+
+<%= observe_field "workstation_printer_id", :update => "registers_code_printer",
+:with => "workstation_printer_id", :url => { :controller => "workstations",
+:action => "registers_code_printer" } %>
 
 
 <%= link_to t('common_actions.back'), workstations_path %>
