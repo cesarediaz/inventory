@@ -168,10 +168,10 @@ module UsersHelper
     File.open("#{RAILS_ROOT}" + '/log/audit.log') do |file|
       file.each_line { |line|
 
-        html = html + image_tag('user_enabled.png', :size => '20x20') \
+        html = html + image_tag('user_disabled.png', :size => '20x20') \
         + content_tag('span',line, :class => 'logout') + "<br>" if line =~ /(Logout)/
 
-        html = html + image_tag('user_disabled.png', :size => '20x20') \
+        html = html + image_tag('user_enabled.png', :size => '20x20') \
         + content_tag('span',line, :class => 'loggin') + "<br>" if line =~ /(Logged)/
 
         html = html + image_tag('file.png', :size => '20x20') \
