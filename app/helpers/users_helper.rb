@@ -159,10 +159,7 @@ module UsersHelper
 
   end
 
-  #Check if an user is logged in and if
-  # the language
-  #
-  #Return: tag image with a flag
+
   def action
     html = ''
     File.open("#{RAILS_ROOT}" + '/log/audit.log') do |file|
@@ -174,14 +171,28 @@ module UsersHelper
         html = html + image_tag('user_enabled.png', :size => '20x20') \
         + content_tag('span',line, :class => 'loggin') + "<br>" if line =~ /(Logged)/
 
-        html = html + image_tag('file.png', :size => '20x20') \
+        html = html + image_tag('delete.png', :size => '20x20') \
         + content_tag('span',line, :class => 'destroy') + "<br>" if line =~ /(destroy)/
 
-        html = html + image_tag('spreadsheet.png', :size => '20x20') \
+        html = html + image_tag('add.png', :size => '20x20') \
         + content_tag('span',line, :class => 'create') + "<br>" if line =~ /(create)/
 
         html = html + image_tag('notebook.png', :size => '20x20') \
         +  content_tag('span',line, :class => 'update') + "<br>" if line =~ /(update)/
+      }
+    end
+
+    return html
+  end
+
+  def action_by_user(user)
+    html = ''
+    File.open("#{RAILS_ROOT}" + '/log/audit.log') do |file|
+      file.each_line { |line|
+
+        html = html + image_tag('bullet-gray.jpg') \
+        + content_tag('span',line, :class => 'logout') + "<br>" if line =~ /(#{user})/
+
       }
     end
 

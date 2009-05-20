@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
 
   def history
+    @user_log = params[:user]
   end
 
   def new

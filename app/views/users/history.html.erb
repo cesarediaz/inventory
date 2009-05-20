@@ -1,1 +1,20 @@
-<%= action %>
+<%= content_tag('label', t('places.select_type_of_places')) %>
+
+<% @options = [[t('places.select_one'),'select one']] %>
+<% User.find(:all, :select => 'login', :order => 'login').collect \
+{|x| @options << [x.login, x.login] } %>
+
+<div id='half' >
+  <%= select_tag 'sort[]',
+      options_for_select( @options),
+      :include_prompt => false,
+  :onchange => remote_function(:url => {:controller => 'users', :action => 'history'},
+  :with => "'user='+this.value",
+  :update => "outer")
+  %>
+</div>
+
+
+<%= action_by_user(@user_log) unless @user_log.nil? %>
+
+<%= action if @user_log.nil? %>
