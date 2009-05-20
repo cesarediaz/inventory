@@ -74,6 +74,7 @@ class ScreensController < ApplicationController
 
     respond_to do |format|
       if @screen.save
+        created_by(self.controller_name, self.action_name, current_user.login, params[:screen])
         flash[:notice] = 'Screen was successfully created.'
         format.html { redirect_to(@screen) }
         format.xml  { render :xml => @screen, :status => :created, :location => @screen }
@@ -91,6 +92,7 @@ class ScreensController < ApplicationController
 
     respond_to do |format|
       if @screen.update_attributes(params[:screen])
+        update_done_by(self.controller_name, self.action_name, current_user.login, params[:screen])
         flash[:notice] = 'Screen was successfully updated.'
         format.html { redirect_to(@screen) }
         format.xml  { head :ok }
@@ -105,6 +107,7 @@ class ScreensController < ApplicationController
   # DELETE /screens/1.xml
   def destroy
     @screen = Screen.find(params[:id])
+    deleted_by(self.controller_name, self.action_name, current_user.login, @screen.serialnumber)
     @screen.destroy
 
     respond_to do |format|

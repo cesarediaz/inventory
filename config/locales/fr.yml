@@ -238,6 +238,7 @@ fr:
 
     users: "Usagers"
     users_list: "Liste de usagers"
+    users_history: "Historical"
     users_admin?: "Administrador?"
     user: "Usager : "
 

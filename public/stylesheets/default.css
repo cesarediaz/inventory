@@ -560,6 +560,35 @@ div.auto_complete ul strong.highlight {
 }
 
 
+/* Loggin */
+.loggin
+{
+color: black;
+}
+
+.logout
+{
+color: brown;
+}
+
+.create
+{
+color: green;
+}
+
+.update
+{
+color: orange;
+}
+
+.destroy
+{
+color: red;
+}
+
+/* end */
+
+
 /* Bills */
 
 #bill-description

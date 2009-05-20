@@ -348,6 +348,7 @@ en:
     #Users
     users: "Users"
     users_list: "List of Users"
+    users_history: "Historical"
     users_admin?: "Administrator?"
     user: "User : "
 

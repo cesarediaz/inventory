@@ -352,6 +352,7 @@
 
    :users => "Usuarios",
    :users_list => "Lista de usuarios",
+   :users_history => "Historial",
    :users_admin? => "Administrador?",
    :user => "Usuario : ",
 
