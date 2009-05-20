@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
       handle_remember_cookie! new_cookie_flag
       redirect_back_or_default('/')
       flash[:notice] = t('login.succesfully')
+      login_as(current_user.login)
     else
       note_failed_signin
       @login       = params[:login]
@@ -32,6 +33,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    logout_as(current_user.login)
     logout_killing_session!
     clean_cache
     redirect_back_or_default('/')

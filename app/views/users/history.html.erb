@@ -1,0 +1,11 @@
+<%
+  File.open("#{RAILS_ROOT}" + '/log/audit.log') do |file|
+  file.each_line { |line|
+%>
+
+<%= content_tag('div', line)%>
+
+<%
+}
+end
+%>

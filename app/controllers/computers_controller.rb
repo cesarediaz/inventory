@@ -85,6 +85,7 @@ class ComputersController < ApplicationController
 
     respond_to do |format|
       if @computer.save
+        created_by(self.controller_name, self.action_name, current_user.login, params[:computer])
         flash[:notice] = t('common_actions.successfully')
         format.html { redirect_to(@computer) }
         format.xml  { render :xml => @computer, :status => :created, :location => @computer }
@@ -100,7 +101,8 @@ class ComputersController < ApplicationController
 
     respond_to do |format|
       if @computer.update_attributes(params[:computer])
-        flash[:notice] = 'Computer was successfully updated.'
+        update_done_by(self.controller_name, self.action_name, current_user.login, params[:computer])
+        flash[:notice] = t('common_actions.successfully')
         format.html { redirect_to(@computer) }
         format.xml  { head :ok }
       else
@@ -112,6 +114,7 @@ class ComputersController < ApplicationController
 
   def destroy
     @computer = Computer.find(params[:id])
+    deleted_by(self.controller_name, self.action_name, current_user.login, @computer.name)
     @computer.destroy
 
     respond_to do |format|

@@ -56,7 +56,7 @@ ActionController::Routing::Routes.draw do |map|
 #   map.login '/login', :controller => 'sessions', :action => 'new'
 #   map.register '/register', :controller => 'users', :action => 'create'
 #   map.signup '/signup', :controller => 'users', :action => 'new'
-  map.resources :users, :collection => { :list => :get, :help => :get}
+  map.resources :users, :collection => { :list => :get, :help => :get, :history => :get}
 
   map.resource :session
 

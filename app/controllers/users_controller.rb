@@ -32,6 +32,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def history
+  end
+
   def new
     @user = User.new
   end

@@ -1,7 +1,15 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
+class AuditLogger < Logger
+  def format_message(severity, timestamp, progname, msg)
+    "#{msg} #{timestamp.to_formatted_s(:db)}\n"
+  end
+end
+
 class ApplicationController < ActionController::Base
+  filter_parameter_logging :password
+
   helper :all # include all helpers, all the time
 
   include AuthenticatedSystem
@@ -41,6 +49,41 @@ class ApplicationController < ActionController::Base
 
   def set_user_language
       I18n.locale = current_user.language if logged_in?
+  end
+
+
+  def login_as(user)
+    logfile = File.open("#{RAILS_ROOT}" + '/log/audit.log', 'a')
+    audit_log = AuditLogger.new(logfile)
+    audit_log.info 'Logged in as ' + user
+  end
+
+  def logout_as(user)
+    logfile = File.open("#{RAILS_ROOT}" + '/log/audit.log', 'a')
+    audit_log = AuditLogger.new(logfile)
+    audit_log.info 'Logout as ' + user
+  end
+
+  def update_done_by(controller, action, user, params)
+    logfile = File.open("#{RAILS_ROOT}" + '/log/audit.log', 'a')
+    audit_log = AuditLogger.new(logfile)
+    text = ''
+    params.collect { |x| text = text + '|' + x[0].to_s + ' = ' + x[1].to_s}
+    audit_log.info user + '|' + controller + '|' + action + text
+  end
+
+  def created_by(controller, action, user, params)
+    logfile = File.open("#{RAILS_ROOT}" + '/log/audit.log', 'a')
+    audit_log = AuditLogger.new(logfile)
+    text = ''
+    params.collect { |x| text = text + '|' + x[0].to_s + ' = ' + x[1].to_s + '|'}
+    audit_log.info user + '|' + controller + '|' + action + text
+  end
+
+  def deleted_by(controller, action, user, params)
+    logfile = File.open("#{RAILS_ROOT}" + '/log/audit.log', 'a')
+    audit_log = AuditLogger.new(logfile)
+    audit_log.info user + '|' + controller + '|' + action + '|' + params
   end
 
 end
