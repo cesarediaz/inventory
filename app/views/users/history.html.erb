@@ -1,9 +1,8 @@
-<%= content_tag('label', t('places.select_type_of_places')) %>
+<%= content_tag('label', t('menu.users')) %>
 
 <% @options = [[t('places.select_one'),'select one']] %>
 <% User.find(:all, :select => 'login', :order => 'login').collect \
 {|x| @options << [x.login, x.login] } %>
-
 <div id='half' >
   <%= select_tag 'sort[]',
       options_for_select( @options),

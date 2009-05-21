@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
 
   def history
-    @user_log = params[:user]
+    @user_log = params[:user] unless params[:user].nil?
   end
 
   def new

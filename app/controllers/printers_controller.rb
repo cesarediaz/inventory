@@ -73,6 +73,8 @@ class PrintersController < ApplicationController
 
     respond_to do |format|
       if @printer.save
+        created_by(self.controller_name, self.action_name,
+                   current_user.login, params[:printer])
         flash[:notice] = 'Printer was successfully created.'
         format.html { redirect_to(@printer) }
         format.xml  { render :xml => @printer, :status => :created, :location => @printer }
@@ -90,6 +92,8 @@ class PrintersController < ApplicationController
 
     respond_to do |format|
       if @printer.update_attributes(params[:printer])
+        update_done_by(self.controller_name, self.action_name,
+                       current_user.login, params[:printer])
         flash[:notice] = 'Printer was successfully updated.'
         format.html { redirect_to(@printer) }
         format.xml  { head :ok }
@@ -104,6 +108,8 @@ class PrintersController < ApplicationController
   # DELETE /printers/1.xml
   def destroy
     @printer = Printer.find(params[:id])
+    deleted_by(self.controller_name, self.action_name,
+               current_user.login, @printer.serialnumber)
     @printer.destroy
 
     respond_to do |format|
