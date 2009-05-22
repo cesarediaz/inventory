@@ -172,9 +172,21 @@
 <% end %>
 
 
+
 <% end %>
 <% end %>
 <% end %>
+
+<% content_tag :p, options = {:class => 'background_hotkeys'} do %>
+
+<%= content_tag('p','HotKeys:') %>
+<%= content_tag('div','Alt-Shift-0 go to Computers') %>
+<%= content_tag('div','Alt-Shift-1 go to Workstations') %>
+<%= content_tag('div','Alt-Shift-2 go to Places') %>
+
+<% end %>
+
+
 
 
 <a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common_actions.top_page') %></a>

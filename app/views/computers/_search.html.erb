@@ -21,21 +21,21 @@
      <% form_tag :action => 'search' do %>
        <% content_tag :tr do %>
          <%= content_tag('td', t('computers.name')) %>
-         <%= content_tag('td',text_field_with_auto_complete(:computer, :name, {:size => 20}, {:method => :get})) %>
+         <%= content_tag('td',text_field_with_auto_complete(:computer, :name, {:size => 20, :accesskey => 'n'}, {:method => :get})) %>
          <%= content_tag('td', submit_tag(t('search.label'))) %>
        <% end %>
      <% end %>
      <% content_tag :tr do %>
        <% form_tag :action => 'search' do %>
          <%= content_tag('td', 'Ip:') %>
-         <%= content_tag('td',text_field_with_auto_complete(:computer, :ip, {:size => 20}, {:method => :get})) %>
+         <%= content_tag('td',text_field_with_auto_complete(:computer, :ip, {:size => 20, :accesskey => 'i'}, {:method => :get})) %>
          <%= content_tag('td', submit_tag(t('search.label'))) %>
        <% end %>
      <% end %>
        <% content_tag :tr do %>
          <% form_tag :action => 'search' do %>
            <%= content_tag('td', 'Mac:') %>
-           <%= content_tag('td',text_field_with_auto_complete(:computer, :mac, {:size => 20}, {:method => :get})) %>
+           <%= content_tag('td',text_field_with_auto_complete(:computer, :mac, {:size => 20, :accesskey => 'm'}, {:method => :get})) %>
            <%= content_tag('td', submit_tag(t('search.label'))) %>
          <% end %>
        <% end %>
