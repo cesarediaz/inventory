@@ -17,8 +17,7 @@
 
 class CompaniesController < ApplicationController
   include Countries
-  before_filter :countries
-
+  before_filter  :login_required, :countries
 
   auto_complete_for :company, :name
   auto_complete_for :company, :email

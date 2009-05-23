@@ -16,6 +16,7 @@
 #     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 class MotherBoardsController < ApplicationController
+  before_filter  :login_required
   auto_complete_for :mother_board, :serialnumber
 
   # GET /mother_boards

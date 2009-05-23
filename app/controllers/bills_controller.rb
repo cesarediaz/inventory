@@ -27,6 +27,7 @@ class BillsController < ApplicationController
   include ReportSystem
   include PdfReportSystem
 
+  before_filter  :login_required
   auto_complete_for :bill, :code
 
   # GET /bills
