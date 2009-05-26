@@ -27,6 +27,8 @@ class ComputersController < ApplicationController
   include ChartSystem
   include PdfReportSystem
 
+  protect_from_forgery :only => [:create, :update, :destroy]
+
   before_filter :login_required
 
   auto_complete_for :computer, :name
