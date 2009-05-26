@@ -1,4 +1,9 @@
-<%= content_tag('div','HotKeys:', :class => 'background_hotkeys') %>
+<a href="#" onclick="Effect.toggle('hotkeys', 'appear'); return false;">
+  <%= content_tag('div','HotKeys:' + '+/-',
+      :class => 'background_hotkeys') %></a>
+
+
+<% content_tag :div, options = {:id => 'hotkeys'} do %>
 
 <% content_tag :table, contents = {:width => '100%'} do %>
 
@@ -41,5 +46,7 @@
   <% end %>
 
   <% end %>
+
+<% end %>
 
 <% end %>
