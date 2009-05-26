@@ -298,6 +298,9 @@
                    si no conoces esos datos',
   :msg_email => 'Si no tienes una direccion de email definida completa con un email ficticio
                 como el siguiente ejemplo, without@email.com',
+  :accesskeys_firefox => 'By Firefox pressing',
+  :accesskeys_iexplorer => 'By Internet Explorer pressing',
+  :accesskeys_chrome => 'By Chrone pressing',
 },
 
 

@@ -195,6 +195,9 @@ fr:
     msg_number: "You must put a cero(0) number where is need put a number if you don\'t have this data"
     msg_email: 'If you do not have an email address complete this field with something how the next
     example, without@email.com'
+    accesskeys_firefox : 'By Firefox pressing'
+    accesskeys_iexplorer : 'By Internet Explorer pressing'
+    accesskeys_chrome : 'By Chrone pressing'
 
   search:
     label: "Chercher"
