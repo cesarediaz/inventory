@@ -10,10 +10,10 @@
     <% content_tag :div, :id => 'quarter' do %>
     <% form_tag session_path do -%>
       <p><%= label_tag 'login' %><br />
-       <%= text_field_tag 'login', @login %></p>
+       <%= text_field_tag 'login', @login, :tabindex => '1' %></p>
 
        <p><%= label_tag 'password' %><br/>
-       <%= password_field_tag 'password', nil %></p>
+       <%= password_field_tag 'password', nil, :tabindex => '2' %></p>
 
        <!-- Uncomment this if you want this functionality
             <p><%= label_tag 'remember_me', 'Remember me' %>
@@ -22,7 +22,7 @@
 
        <%= content_tag('br') %>
 
-<p><%= submit_tag 'Log in' %></p>
+<p><%= submit_tag 'Log in', :tabindex => '3' %></p>
 <% end -%>
 <% end -%>
 <% end -%>
