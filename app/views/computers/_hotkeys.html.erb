@@ -4,38 +4,42 @@
 
   <% content_tag :tr do %>
 
-    <% content_tag :td, :class => 'background_hotkeys' do %>
-    <%= content_tag('div',t('help_phrases.accesskeys_firefox'),
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-Shift-N go to search by Name',
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-Shift-M go to search by Mac',
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-Shift-I go to search by Ip',
-        :class => 'background_hotkeys') %>
-    <% end %>
+  <!-- Firefox -->
+  <% content_tag :td, :class => 'background_hotkeys' do %>
+  <%= content_tag('div',t('help_phrases.accesskeys_firefox'),
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-Shift-N go to search by Name',
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-Shift-M go to search by Mac',
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-Shift-I go to search by Ip',
+      :class => 'background_hotkeys') %>
+  <% end %>
 
-    <% content_tag :td, :class => 'background_hotkeys' do %>
-    <%= content_tag('div',t('help_phrases.accesskeys_iexplorer'),
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-N go to search by Name',
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-M go to search by Mac',
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-I go to search by Ip',
-        :class => 'background_hotkeys') %>
-    <% end %>
+  <!-- IExplorer -->
+  <% content_tag :td, :class => 'background_hotkeys' do %>
+  <%= content_tag('div',t('help_phrases.accesskeys_iexplorer'),
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-N go to search by Name',
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-M go to search by Mac',
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-I go to search by Ip',
+      :class => 'background_hotkeys') %>
+  <% end %>
 
-    <% content_tag :td, :class => 'background_hotkeys' do %>
-    <%= content_tag('div',t('help_phrases.accesskeys_chrome'),
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-N go to search by Name',
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-M go to search by Mac',
-        :class => 'background_hotkeys') %>
-    <%= content_tag('div','Alt-I go to search by Ip',
-        :class => 'background_hotkeys') %>
-    <% end %>
+  <!-- Chrome -->
+  <% content_tag :td, :class => 'background_hotkeys' do %>
+  <%= content_tag('div',t('help_phrases.accesskeys_chrome'),
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-N go to search by Name',
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-M go to search by Mac',
+      :class => 'background_hotkeys') %>
+  <%= content_tag('div','Alt-I go to search by Ip',
+      :class => 'background_hotkeys') %>
+  <% end %>
 
   <% end %>
+
 <% end %>
