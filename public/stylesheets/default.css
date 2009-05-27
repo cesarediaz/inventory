@@ -45,6 +45,15 @@ input.text
     margin-bottom: 0.5em;
 }
 
+input:focus {
+    background: #FEFEFE;
+    color: #000111;
+    border: 1px dotted black;
+    font-size: 1em;
+
+}
+
+
 a
 {
     text-decoration: none;
