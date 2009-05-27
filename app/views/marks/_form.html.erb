@@ -2,7 +2,7 @@
   <%= f.error_messages %>
 
   <%= t('marks.mark') %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :focus => true %>
   <p>
     <% if action_name == 'new' %>
     <%= f.submit t('marks.new') %>

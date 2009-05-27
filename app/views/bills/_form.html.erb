@@ -5,12 +5,12 @@
   <%= t('bill.company') %>
   <%= collection_select 'bill', 'company_id',
       Company.find(:all, :select => 'name,id', :order => 'name ASC'), 'id', 'name',
-      {:prompt => true} %>
+      {:prompt => true}  %>
   <% end %>
 
   <% content_tag :div, :id => 'quarter' do %>
   <%= t('bill.code') %>
-  <%= f.text_field :code %>
+  <%= f.text_field :code, :focus => true %>
   <% end %>
 
   <% content_tag :div, :id => 'ten-percent' do %>
