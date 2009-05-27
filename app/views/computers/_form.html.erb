@@ -19,36 +19,36 @@
 
 
     <%= t('computers.name') %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :tabindex => '1' %>
 
     <% 2.times do %>
     <br>
     <%  end %>
 
     <%= f.label 'mac' %>
-    <%= f.text_field :mac %>
+    <%= f.text_field :mac, :tabindex => '2' %>
 
     <% 2.times do %>
     <br>
     <% end %>
 
     <%= f.label 'ip' %>
-    <%= f.text_field :ip %>
+    <%= f.text_field :ip, :tabindex => '3' %>
 
     <% 2.times do %>
     <br>
     <% end %>
 
     <%= t('computers.inventory_register') %>
-    <%= f.text_field :inventory_register %>
+    <%= f.text_field :inventory_register, :tabindex => '4' %>
 
     <% 2.times do %>
     <br>
     <% end %>
 
     <%= t('computers.available') %>
-    <%= t('computers.y') %> <%= radio_button('computer', 'available', 't') %>
-    <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f') %>
+    <%= t('computers.y') %> <%= radio_button('computer', 'available', 't', :tabindex => '5') %>
+    <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f', :tabindex => '6') %>
 
     <% 2.times do %>
     <br>
@@ -58,14 +58,14 @@
   <% if not @computer.is_part_of_a_workstation %>
   <div id="quarter" >
     <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
-    {:prompt => true} %>
+    {:prompt => true}, :tabindex => '7' %>
   </div>
   <% end %>
 
   <div id="quarter" >
     <%= t 'bill.code' %>
     <%= collection_select 'computer', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true} %>
+        {:prompt => true}, :tabindex => '8' %>
   </div >
 
   <% 2.times do %>
@@ -73,9 +73,9 @@
   <%  end %>
 
   <% if action_name == 'new' %>
-  <%= f.submit t('computers.create') %>
+  <%= f.submit t('computers.create'), :tabindex => '9' %>
   <% else %>
-  <%= f.submit t('computers.edit') %>
+  <%= f.submit t('computers.edit'), :tabindex => '10' %>
   <% end %>
 
 <% end %>
