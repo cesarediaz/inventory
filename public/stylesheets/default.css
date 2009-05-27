@@ -46,7 +46,7 @@ input.text
 }
 
 input:focus {
-    background: #FEFEFE;
+    background: #FEF;
     color: #000111;
     border: 1px dotted black;
     font-size: 1em;
@@ -69,6 +69,13 @@ a:hover
 a:visited
 {
     color: #D90000;
+}
+
+a:focus {
+    color: #000111;
+    border: 1px ridge;
+    font-size: 1.2em;
+
 }
 
 td
