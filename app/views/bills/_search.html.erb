@@ -8,7 +8,7 @@
       <% end %>
       <% content_tag :td do %>
         <%= text_field_with_auto_complete :bill, :code,
-          {:size => 20}, {:method => :get} %>
+          {:size => 20, :focus => true}, {:method => :get} %>
       <% end %>
       <% content_tag :td do %>
         <%= submit_tag   t 'search.label' %>

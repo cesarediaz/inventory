@@ -5,7 +5,7 @@
   <% form_tag :action => 'search' do %>
   <tr>
     <td><label><%= t 'computers.name' %></label></td>
-    <td><%= text_field_with_auto_complete :company, :name, {:size => 20}, {:method => :get} %></td>
+    <td><%= text_field_with_auto_complete :company, :name, {:size => 20, :focus => true}, {:method => :get} %></td>
     <td><%= submit_tag t 'search.label' %></td>
     <% end %>
   </tr>

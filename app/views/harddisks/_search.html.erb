@@ -4,7 +4,7 @@
   <tr>
     <% form_tag :action => 'search' do %>
     <td><label><%= t 'harddisks.sn' %></label></td>
-    <td><%= text_field_with_auto_complete :harddisk, :serialnumber, {:size => 20}, {:method => :get} %></td>
+    <td><%= text_field_with_auto_complete :harddisk, :serialnumber, {:size => 20, :focus => true}, {:method => :get} %></td>
     <td><%= submit_tag  t 'search.label' %></td>
   </tr>
   <% end %>
