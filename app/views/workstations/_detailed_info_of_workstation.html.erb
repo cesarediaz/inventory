@@ -20,7 +20,7 @@
 
 <!-- Screen info -->
 <%= content_tag('p', t('menu.screens')) %>
-<%= show_info(t('workstations.screen'), 'principal-device', 'Screen', @workstation.screen_id, 'model')%>
+<%= show_info(t('workstations.screen'), 'principal-device', 'Screen', @workstation.screen_id, 'description_model')%>
 
 <%= show_info('Sn', 'data-principal-device', 'Screen', @workstation.screen_id, 'serialnumber') %>
 
@@ -30,6 +30,6 @@
 
 <!-- Printer info -->
 <%= content_tag('p', t('menu.printers')) %>
-<%= show_info(t('workstations.printer'), 'principal-device', 'Printer', @workstation.printer_id, 'model')  rescue nil %>
+<%= show_info(t('workstations.printer'), 'principal-device', 'Printer', @workstation.printer_id, 'description_model')  rescue nil %>
 
 <%= show_info('Sn', 'data-principal-device', 'Printer', @workstation.printer_id, 'serialnumber')  rescue nil %>
