@@ -1,0 +1,53 @@
+Adds :focus option to various rails helpers.
+
+Makes this code:
+
+	<%= text_field :user, :name, :focus => true %>
+
+generate this:	
+
+	<input id="user_name" name="user[name]" size="30" type="text" />
+	<script type="text/javascript">
+	  //<![CDATA[
+	  $('user_name').focus()
+	  //]]>
+	</script>
+	
+### Installation ###
+	
+	./script/plugin install http://svn.depixelate.com/plugins/focus_fu
+
+### Supported helpers ###
+text_field 
+password_field
+file_field
+text_area
+check_box
+radio_button
+text_field_tag
+password_field_tag
+file_field_tag
+text_area_tag
+check_box_tag
+radio_button_tag
+select
+select_tag
+
+### Usage ###
+
+Add :focus => true to the end of a supported Rails helper.
+	
+### Examples ###
+
+	<%= text_field :user, :name, :focus => true %>
+	<%= text_field_tag :user_name, nil, :focus => true %>
+	<%= select :post, :category, %w(rails python), :focus => true %>
+	
+### Known Issues ###
+
+The check_box form helper does not work when used in the form_for format.
+
+	<% form_for :user, :url => users_path do |f| %>
+	   <%= f.check_box :admin, :focus => true %>        # doesn't work
+	   <%= check_box :user, :admin, :focus => true %>   # works
+	<% end %>

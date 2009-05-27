@@ -21,7 +21,7 @@
      <% form_tag :action => 'search' do %>
        <% content_tag :tr do %>
          <%= content_tag('td', t('computers.name')) %>
-         <%= content_tag('td',text_field_with_auto_complete(:computer, :name, {:size => 20, :accesskey => 'n', :tabindex => '1'}, {:method => :get})) %>
+         <%= content_tag('td',text_field_with_auto_complete(:computer, :name, {:size => 20, :accesskey => 'n', :tabindex => '1', :focus => true}, {:method => :get})) %>
          <%= content_tag('td', submit_tag(t('search.label')), :tabindex => '2') %>
        <% end %>
      <% end %>
