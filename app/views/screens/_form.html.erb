@@ -18,7 +18,7 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
   <%= f.error_messages %>
 
   <%= t('screens.sn') %>
-  <%= f.text_field :serialnumber %>
+  <%= f.text_field :serialnumber, :focus => true %>
 
   <% 2.times do %>
   <br>
