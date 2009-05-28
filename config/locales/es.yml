@@ -201,6 +201,9 @@ es:
     accesskeys_firefox : 'Para Firefox utilizando'
     accesskeys_iexplorer : 'Para Internet Explorer utilizando'
     accesskeys_chrome : 'Para Chrone utilizand'
+    do_you_want_destroy_a_workstation: 'Es parte de una estacion de trabajo,
+    si eliminas esto la estacion de trabajo debe desmantelarse,
+    estas seguro de que es eso lo que queres?'
 
 
   search:

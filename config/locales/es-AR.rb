@@ -301,6 +301,9 @@
   :accesskeys_firefox => 'By Firefox pressing',
   :accesskeys_iexplorer => 'By Internet Explorer pressing',
   :accesskeys_chrome => 'By Chrone pressing',
+  :do_you_want_destroy_a_workstation => 'Es parte de una estacion de trabajo,
+  si eliminas esto la estacion de trabajo debe desmantelarse,
+  estas seguro de que es eso lo que queres?',
 },
 
 

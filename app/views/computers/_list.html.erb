@@ -38,7 +38,15 @@
           '/bills/'+ computer.bill_id.to_s)) %>
       <%= content_tag('td', link_to(t('common_actions.show') , computer)) %>
       <%= content_tag('td', link_to(t('common_actions.edit') , edit_computer_path(computer))) %>
-      <%= content_tag('td', link_to(t('common_actions.destroy') , computer, :confirm => 'Are you sure?', :method => :delete)) %>
+
+      <% if computer.is_part_of_a_workstation %>
+        <%= content_tag('td', link_to(t('common_actions.destroy') , computer,
+            :confirm => t('help_phrases.do_you_want_destroy_a_workstation'), :method => :delete)) %>
+      <% else %>
+        <%= content_tag('td', link_to(t('common_actions.destroy') , computer,
+            :confirm => 'Are you sure?', :method => :delete)) %>
+      <% end %>
+
     </tr>
   <% end %>
 <% end %>

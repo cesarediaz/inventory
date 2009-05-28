@@ -19,7 +19,15 @@
     <%= content_tag('td', screen.bill_id.nil? ? '-' : link_to(t('screens.bill'), '/bills/'+ screen.bill_id.to_s)) %>
     <%= content_tag('td', link_to(t('common_actions.show'), screen)) %>
     <%= content_tag('td', link_to(t('common_actions.edit'), edit_screen_path(screen))) %>
-    <%= content_tag('td', link_to(t('common_actions.destroy'), screen, :confirm => 'Are you sure?', :method => :delete)) %>
+
+    <% if screen.is_part_of_a_workstation %>
+    <%= content_tag('td', link_to(t('common_actions.destroy') , screen,
+        :confirm => t('help_phrases.do_you_want_destroy_a_workstation'), :method => :delete)) %>
+    <% else %>
+    <%= content_tag('td', link_to(t('common_actions.destroy') , screen,
+        :confirm => 'Are you sure?', :method => :delete)) %>
+    <% end %>
+
    </tr>
    <% end %>
 <% end -%>

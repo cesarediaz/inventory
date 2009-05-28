@@ -304,6 +304,9 @@ en:
     accesskeys_firefox : 'By Firefox pressing'
     accesskeys_iexplorer : 'By Internet Explorer pressing'
     accesskeys_chrome : 'By Chrone pressing'
+    do_you_want_destroy_a_workstation: 'This is part of a workstation,
+    if you delete this the workstation will be delete too,
+    are you sure that this is that you want?'
 
 
   search:
