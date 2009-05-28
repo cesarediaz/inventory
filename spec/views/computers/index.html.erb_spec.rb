@@ -23,7 +23,7 @@ describe "computers/show.html.erb" do
 
   it "should display the text of the place" do
     render "computers/show.html.erb"
-    assert_select 'p', 'Place'
+    assert_select 'p', 'Lugar'
   end
 
  end
@@ -31,8 +31,8 @@ describe "computers/show.html.erb" do
  describe "computers/_search.html.erb" do
   it "should display the text link to Show/Hide the search" do
     render "computers/_search.html.erb"
-    assert_select 'a', 'Show/Hide'
-    assert_select 'td', 'Name'
+    assert_select 'a', 'Mostrar/Ocultar'
+    assert_select 'td', 'Nombre'
   end
 
 end

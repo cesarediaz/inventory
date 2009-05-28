@@ -5,8 +5,8 @@ describe "shared/_head.html.erb" do
     render "shared/_head.html.erb"
   end
 
-  it "should display the title text 'Inventory of hardware'" do
-    assert_select 'title', 'Inventory of hardware'
+  it "should display the title text 'Inventario de hardware'" do
+    assert_select 'title', 'Inventario de hardware'
   end
 
   it "should has a three metatags, three script" do

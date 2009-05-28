@@ -3,20 +3,21 @@
     <% content_tag :td, options = {:width => '1000px'} do %>
 
 
+    <%= link_to(image_tag("es.gif", :border => '0'), '/login') %>
+    <%= link_to(image_tag("en.gif", :border => '0'), '/login_en') %>
+
 <!-- Information advice -->
 
 
 <% content_tag :div, options = {:id => 'digital', :class => 'background_frontend'} do %>
-<%= content_tag :div, 'Digital data', options = {:class => 'background_frontend_yellow_title'} %>
+<%= content_tag :div, t('front_end.digital_data'), options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('file.png', :align => 'left') %>
 
 <% content_tag :div, :align => 'rigth' do %>
-<%= content_tag('text', 'Getting digital data', options = {:class => 'background_frontend_subtitle'}) %>
+<%= content_tag('text',  t('front_end.getting_digital_data'),
+    options = {:class => 'background_frontend_subtitle'}) %>
 
-,you can download a pdf or spreedsheet file to have a complete list
-of devices in your company or whatever you are. Those can be lists of a
-specific place such as an office or an complete description for a computer
-with all of its components.
+ <%=  t('front_end.you_can_with_digital_data') %>
 
 <% end -%>
 <% end -%>
@@ -26,15 +27,13 @@ with all of its components.
 
 <!-- Statistics advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-<%= content_tag :div, 'Settings', options = {:class => 'background_frontend_yellow_title'} %>
+<%= content_tag :div, t('front_end.settings'), options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('settings.png', :align => 'left') %>
 
 <% content_tag :div, :align => 'rigth' do %>
-<%= content_tag('text', 'Setting your inventory system', options = {:class => 'background_frontend_subtitle'}) %>
-, you can add users for work with this software in two levels, admins or
-simple users. Also, you can add web pages semi statics for the frontend or
-backend if you like easily and fast where you can add rich format using
-an rich editor online.
+<%= content_tag('text', t('front_end.setting_your_inventory_system'), options = {:class => 'background_frontend_subtitle'}) %>
+
+ <%=  t('front_end.you_can_add_users') %>
 
 <% end -%>
 <% end -%>

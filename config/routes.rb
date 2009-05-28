@@ -50,6 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login  '/login',  :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login_en '/login_en', {:locale => "en", :controller=>"sessions", :action=>"new"}
 
 
 #   map.logout '/logout', :controller => 'sessions', :action => 'destroy'

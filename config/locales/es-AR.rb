@@ -307,6 +307,18 @@
 },
 
 
+ :front_end => {
+  :digital_data => 'Informacion digital',
+  :getting_digital_data => 'Obteniendo informacion digital',
+  :you_can_with_digital_data => 'puedes descargar archivos pdf u hojas de calculo
+  para tener un listado completo de dispositivos en su empresa o donde quiera
+  que este. Estos pueden ser listados de lugares especificos tal como una oficina
+  o  una completa descripcion de una computadora con todos sus componentes internos.',
+
+  :settings => 'Configuraciones',
+},
+
+
  :search => {
    :label => "Buscar",
 },

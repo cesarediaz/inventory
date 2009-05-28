@@ -202,6 +202,14 @@ fr:
     if you delete this the workstation will be delete too,
     are you sure that this is that you want?'
 
+  front_end:
+    digital_data: 'Digital data'
+    getting_digital_data: 'Getting digital data'
+    you_can_with_digital_data: 'you can download a pdf or spreedsheet file to
+    have a complete list of devices in your company or whatever you are.
+    Those can be lists of a specific place such as an office or an complete
+    description for a computer with all of its components.'
+
   search:
     label: "Chercher"
 

@@ -219,6 +219,21 @@ es:
     screens_statistic : "Aqui puede ver la distribucion de monitores por lugares"
     printers_statistic : "Aqui puede ver la distribucion de impresoras por lugares"
 
+  front_end:
+    digital_data: 'Informacion digital'
+    getting_digital_data: 'Obteniendo informacion digital'
+    you_can_with_digital_data: 'puedes descargar archivos pdf u hojas de calculo
+    para tener un listado completo de dispositivos en su empresa o donde quiera
+    que este. Estos pueden ser listados de lugares especificos tal como una oficina
+    o  una completa descripcion de una computadora con todos sus componentes internos.'
+
+    settings: 'Configuraciones'
+    setting_your_inventory_system: 'Configurando su sistema de inventario'
+    you_can_add_users: ', puedes agregar usuarios para trabajar con este software en dos niveles,
+    como administradore o simples usuarios. Tambien, puede agregar paginas web semi estaticas
+    tanto en el frontend como en el backend si lo desea facilmente y rapido donde puede agregar
+    contenido con un editor online.'
+
   phrases:
     list_of : "Lista de "
     units: " unidades "

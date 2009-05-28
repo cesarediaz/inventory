@@ -6,8 +6,7 @@ describe "places/_links_files_downloads.html.erb" do
   end
 
   it "should display two strings to download xls and pdf files" do
-    assert_select 'a', 'Download a xls file'
-    assert_select 'a', 'Download a pdf file'
+    assert_select 'a', 'Descargar un archivo xls'
   end
  end
 
@@ -17,7 +16,7 @@ describe "places/_selector_places_list.html.erb" do
   end
 
   it "should display text for select" do
-    assert_select 'label', 'Select diferents places for description'
+    assert_select 'label', 'Seleccione diferentes lugares por descripcion'
   end
 
   it "should display a select tag with six options" do
