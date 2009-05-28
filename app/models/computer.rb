@@ -1,4 +1,8 @@
 class Computer < ActiveRecord::Base
+  before_destroy :delete_workstation_before_destroy
+
+  ################################################
+  # RELATIONSHIPS
   has_one :mother_board ,  :dependent => :nullify
   has_many :harddisk, :dependent => :nullify
   has_many :memory, :dependent => :nullify
@@ -29,4 +33,15 @@ class Computer < ActiveRecord::Base
       :conditions => ['place_id = ? and is_part_of_a_workstation = ?', args, true]}}
   named_scope :in_workstation,  lambda { |*args| {
       :conditions => ['id = ? and is_part_of_a_workstation = ?', args, true]}}
+
+  private
+
+  #This must delete workstation belong to this computer that will be deleted too
+  def delete_workstation_before_destroy
+    if self.id
+      @workstation = Workstation.find(:first, :conditions => ['computer_id = ?', self.id])
+      @workstation.destroy
+    end
+
+  end
 end

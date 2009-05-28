@@ -31,7 +31,7 @@
 <br>
 <% end %>
 
-<% content_tag :table, option = {:width => '50%', :cellspacing => '20px'} do %>
+<% content_tag :table, option = {:width => '100%', :cellspacing => '20px'} do %>
   <% content_tag :tr do %>
 
     <% content_tag :td, option = {:valign =>'top'} do %>
@@ -53,9 +53,11 @@
           {:prompt => true, :size => @screens.count + 1 } %>
 
       <% end %>
+
+      <br>
+      <div id="registers_code_screen">
+      </div>
     <% end %>
-    <div id="registers_code_screen">
-    </div>
 
 
     <% content_tag :td, option = {:valign =>'top'} do %>
@@ -65,11 +67,11 @@
       <%= collection_select 'workstation', 'printer_id', @printers, 'id', :description_model,{},
           {:prompt => true, :size => @printers.count + 1 } %>
       <% end %>
+
+      <br>
+      <div id="registers_code_printer">
+      </div>
     <% end %>
-
-    <div id="registers_code_printer">
-    </div>
-
   <% end %>
 <% end %>
 
