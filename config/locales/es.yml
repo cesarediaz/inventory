@@ -234,6 +234,13 @@ es:
     tanto en el frontend como en el backend si lo desea facilmente y rapido donde puede agregar
     contenido con un editor online.'
 
+    providers: 'Proveedores'
+    information_about_providers: 'Informacion sobre proveedores'
+    to_know_who_sold_us: ', para saber quien vendio los dispositivos que tiene en su empresa
+    o  donde usted este ubicado. Ello permite a usted tener informacion adecuada acerca de
+    quien vendio cada parte que es presente en su stock de hardware. Tambien, usted puede
+    registrar informacion acerca de estos proveedores para lograr un rapido contacto.'
+
   phrases:
     list_of : "Lista de "
     units: " unidades "

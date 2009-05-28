@@ -337,6 +337,10 @@ en:
     backend if you like easily and fast where you can add rich format using
     an rich editor online.'
 
+    providers: 'Providers'
+    information_about_providers: 'Information about providers'
+    to_know_who_sold_us: ', to know who sold the things that you have in your building or wherever you are. It permit you have adecuate information about who sell you each part or advice that is present between your hardware. Also, you can write information about the companies so you can make fast contact.'
+
 
   phrases:
     list_of : "List of "

@@ -42,14 +42,14 @@
 
 <!-- Providers advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-<%= content_tag :div, 'Providers', options = {:class => 'background_frontend_yellow_title'} %>
+<%= content_tag :div, t('front_end.providers'), options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('provider.png', :align => 'left') %>
 
 
 <% content_tag :div, :align => 'rigth' do %>
-<%= content_tag('text', 'Information about providers', options = {:class => 'background_frontend_subtitle'}) %>
- , to know who sold the things that you have in your building or wherever you are. It permit you have adecuate information about who sell you each part or advice that is present between your hardware. Also, you can write information about the companies so you can make fast contact.
+<%= content_tag('text',  t('front_end.information_about_providers'), options = {:class => 'background_frontend_subtitle'}) %>
 
+<%= t('front_end.to_know_who_sold_us') %>
 <% end -%>
 <% end -%>
 
