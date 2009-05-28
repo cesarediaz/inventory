@@ -257,6 +257,10 @@ es:
     por trabajar con MySql o Postgres . Para ello es necesario unos pocos cambios en la
     configuracion.'
 
+    the_browsers: 'Los navegadores '
+    where_was_tested: 'donde fue testeado la aplicacion fueron Internet Explorer, Chrome
+    and Iceweasel mayoritariamente.'
+
   phrases:
     list_of : "Lista de "
     units: " unidades "

@@ -339,7 +339,10 @@ en:
 
     providers: 'Providers'
     information_about_providers: 'Information about providers'
-    to_know_who_sold_us: ', to know who sold the things that you have in your building or wherever you are. It permit you have adecuate information about who sell you each part or advice that is present between your hardware. Also, you can write information about the companies so you can make fast contact.'
+    to_know_who_sold_us: ', to know who sold the things that you have in your building
+    or wherever you are. It permit you have adecuate information about who sell you each
+    part or advice that is present between your hardware. Also, you can write information
+    about the companies so you can make fast contact.'
 
     statistics: 'Statistics'
     getting_statistics: 'Getting statistics'
@@ -351,7 +354,14 @@ en:
 
     databases: 'Databases'
     as_database_engine: 'As database engine'
-    you_can_chose: ', you can chose between at least three options. This software was think to work with few amount of traffic where you do not need a big support. This software was tested using SQLite database but perfectly you can chose work with MySql or Postgres databases . For this is necesary little changes in configuration.'
+    you_can_chose: ', you can chose between at least three options. This software was think to
+    work with few amount of traffic where you do not need a big support. This software was
+    tested using SQLite database but perfectly you can chose work with MySql or Postgres
+    databases . For this is necesary little changes in configuration.'
+
+    the_browsers: 'The browsers '
+    where_was_tested: 'where was tested the application were Internet Explorer, Chrome
+    and Iceweasel mostly.'
 
 
   phrases:
