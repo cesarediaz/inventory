@@ -38,7 +38,7 @@ class Computer < ActiveRecord::Base
 
   #This must delete workstation belong to this computer that will be deleted too
   def delete_workstation_before_destroy
-    if self.id
+    if self.is_part_of_a_workstation
       @workstation = Workstation.find(:first, :conditions => ['computer_id = ?', self.id])
       @workstation.destroy
     end

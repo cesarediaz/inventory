@@ -1,4 +1,8 @@
 class Screen < ActiveRecord::Base
+  before_destroy :delete_workstation_before_destroy
+
+  ################################################
+  # RELATIONSHIPS
   belongs_to :place
   belongs_to :mark
   belongs_to :model
@@ -22,4 +26,11 @@ class Screen < ActiveRecord::Base
     "#{self.mark.name} #{self.model.description}" unless self.model_id.nil?
   end
 
+  #This must delete workstation belong to this computer that will be deleted too
+  def delete_workstation_before_destroy
+    if self.is_part_of_a_workstation
+      @workstation = Workstation.find(:first, :conditions => ['screen_id = ?', self.id])
+      @workstation.destroy
+    end
+  end
 end
