@@ -72,12 +72,13 @@
 
 <!-- Database advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-<%= content_tag :div, 'Databases', options = {:class => 'background_frontend_yellow_title'} %>
+<%= content_tag :div, t('front_end.databases'), options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('active_database.png', :align => 'left') %>
 
 <% content_tag :div, :align => 'rigth' do %>
-<%= content_tag('text', 'As database engine', options = {:class => 'background_frontend_subtitle'}) %>
-, you can chose between at least three options. This software was think to work with few amount of traffic where you don't need a big support. This software was tested using SQLite database but perfectly you can chose work with MySql or Postgres databases . For this is necesary little changes in configuration.
+<%= content_tag('text', t('front_end.as_database_engine'), options = {:class => 'background_frontend_subtitle'}) %>
+
+<%= t('front_end.you_can_chose') %>
 
 <% end -%>
 <% end -%>

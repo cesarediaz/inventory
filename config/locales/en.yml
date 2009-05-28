@@ -349,6 +349,10 @@ en:
     an extra tools that can give you a visual idea about the density of the content
     inside a building.'
 
+    databases: 'Databases'
+    as_database_engine: 'As database engine'
+    you_can_chose: ', you can chose between at least three options. This software was think to work with few amount of traffic where you do not need a big support. This software was tested using SQLite database but perfectly you can chose work with MySql or Postgres databases . For this is necesary little changes in configuration.'
+
 
   phrases:
     list_of : "List of "

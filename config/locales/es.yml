@@ -249,6 +249,14 @@ es:
     es solo una herramienta extra que puede darle una rapida idea visual acerca de la
     densidad de contenido dentro del edificio.'
 
+    databases: 'Bases de Datos'
+    as_database_engine: 'Como motor de bases de datos'
+    you_can_chose: ', usted puede elejir entre al menos tres opciones. Este software fue
+    pensado para trabajar con poco trafico donde usted no necesita gran soporte . Este software
+    fue testeado utilizando SQLite como base de datos pero perfectamente puede optar
+    por trabajar con MySql o Postgres . Para ello es necesario unos pocos cambios en la
+    configuracion.'
+
   phrases:
     list_of : "Lista de "
     units: " unidades "
