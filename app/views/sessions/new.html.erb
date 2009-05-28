@@ -57,18 +57,14 @@
 
 <!-- Statistics advice -->
 <% content_tag :div, options = {:class => 'background_frontend'} do %>
-<%= content_tag :div, 'Statistics', options = {:class => 'background_frontend_yellow_title'} %>
+<%= content_tag :div, t('front_end.statistics'), options = {:class => 'background_frontend_yellow_title'} %>
 <%= image_tag('chart.png', :align => 'left') %>
 
 
 <% content_tag :div, :align => 'rigth' do %>
-<%= content_tag('text', 'Getting statistics', options = {:class => 'background_frontend_subtitle'}) %>
+<%= content_tag('text', t('front_end.getting_statistics'), options = {:class => 'background_frontend_subtitle'}) %>
 
-,you can get statistics of distribution, availability, unavailability
-each kind of devices  as computers, screens, printers and places
-separated by types of places represented statistics graphics. This is only
-an extra tools that can give you a visual idea about the density of the content
-inside a building.
+<%= t('front_end.you_can_get_statistics') %>
 <% end -%>
 <% end -%>
 

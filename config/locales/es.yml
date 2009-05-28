@@ -241,6 +241,14 @@ es:
     quien vendio cada parte que es presente en su stock de hardware. Tambien, usted puede
     registrar informacion acerca de estos proveedores para lograr un rapido contacto.'
 
+    statistics: 'Estadisticas'
+    getting_statistics: 'Obteniendo estadisticas'
+    you_can_get_statistics: ', puede obtener estadisticas de distribucion, disponibilidad,
+    indisponibilidad para tipos de dispositivos como computadoras, monitores, impresoras y
+    lugares separados por tipos de lugares represantdos en graficos estadisticos. Esto
+    es solo una herramienta extra que puede darle una rapida idea visual acerca de la
+    densidad de contenido dentro del edificio.'
+
   phrases:
     list_of : "Lista de "
     units: " unidades "
