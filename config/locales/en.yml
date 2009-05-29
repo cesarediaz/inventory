@@ -112,6 +112,8 @@ en:
     error: "Retype your user or password and try again"
     out: "You have been logged out."
     in: "You must write your user and password to go inside the application"
+    login: 'User'
+    password: 'Password'
 
   bill:
     code: 'Code'

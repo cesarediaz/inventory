@@ -11,6 +11,8 @@ es:
     error: "Reintente nuevamente tipeando su usuario y clave"
     out: "Saliste de la aplicacion"
     in: "Escriba su usuario y clave para ingresar a la aplicacion"
+    login: 'Usuario'
+    password: 'Clave'
 
   bill:
     code: 'Codigo'

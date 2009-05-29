@@ -323,6 +323,8 @@ fr:
     login : "Verser"
     logout : "Sortir"
     in: "It needs be translated"
+    login: 'User'
+    password: 'Password'
 
 
     #FrontEnd

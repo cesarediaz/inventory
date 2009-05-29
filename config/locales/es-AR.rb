@@ -440,6 +440,8 @@
    :login  => "Ingresar",
    :logout  => "Salir",
    :in => "Escriba su usuario y clave para ingresar a la aplicacion",
+   :login => 'User',
+   :password => 'Password',
 
 
    #FrontEnd

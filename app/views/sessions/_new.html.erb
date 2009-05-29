@@ -1,3 +1,5 @@
+<% content_tag :div, :class => 'background_loggin' do %>
+
 <% content_tag :table do %>
   <% content_tag :tr do %>
     <% content_tag :td do %>
@@ -9,11 +11,11 @@
 
     <% content_tag :div, :id => 'quarter' do %>
     <% form_tag session_path do -%>
-      <p><%= label_tag 'login' %><br />
+      <p><%= label_tag t('login.login') %><br />
        <%= text_field_tag 'login', @login, :focus => true, :tabindex => '1' %></p>
 
-       <p><%= label_tag 'password' %><br/>
-       <%= password_field_tag 'password', nil, :tabindex => '2' %></p>
+       <%= label_tag t('login.password') %><br/>
+       <%= password_field_tag 'password', nil, :tabindex => '2' %>
 
        <!-- Uncomment this if you want this functionality
             <p><%= label_tag 'remember_me', 'Remember me' %>
@@ -29,4 +31,7 @@
 <% end -%>
 <% end -%>
 <% end -%>
+
+<% end -%>
+
 

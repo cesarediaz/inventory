@@ -739,6 +739,18 @@ color: red;
     padding: 1em;
 }
 
+
+.background_loggin
+{
+    border: 1px solid #660033;
+    background-color: #FFFFFF;
+    color: #fff;
+    width: 90%;
+    padding: 1em;
+}
+
+
+
 /* END FRONT PAGE  */
 .identation_help
 {
