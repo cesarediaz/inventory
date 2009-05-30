@@ -4,15 +4,17 @@
   <% content_tag :tr do %>
     <% content_tag :td do %>
 
+    <%= flash[:notice] %>
 
-    <%= content_tag('div',notice, options = {:width => '50px'}) %>
+    <%= content_tag('br') %>
+    <%= content_tag('br') %>
 
     <% content_tag :div, :id => 'right-content' do %>
 
     <% content_tag :div, :id => 'quarter' do %>
     <% form_tag session_path do -%>
-      <p><%= label_tag t('login.login') %><br />
-       <%= text_field_tag 'login', @login, :focus => true, :tabindex => '1' %></p>
+      <%= label_tag t('login.login') %><br />
+       <%= text_field_tag 'login', @login, :focus => true, :tabindex => '1' %>
 
        <%= label_tag t('login.password') %><br/>
        <%= password_field_tag 'password', nil, :tabindex => '2' %>

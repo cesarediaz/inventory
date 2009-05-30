@@ -46,7 +46,6 @@ input.text
 }
 
 input:focus {
-    background: #FEF;
     color: #000111;
     border: 1px dotted black;
 }
@@ -717,21 +716,21 @@ color: red;
     margin-bottom: 0.5em;
     width: 90%;
     font-size: 16pt;
-    background-color: #151515;
+    background-color: #191919;
     color: #F3F781;
 }
 
 .background_frontend_subtitle
 {
     font-size: 12pt;
-    background-color: #151515;
+    background-color: #191919;
     color: #fff;
     margin: 0.2em;
 }
 .background_frontend
 {
     border: 1px solid #000;
-    background-color: #151515;
+    background-color: #191919;
     color: #fff;
     width: 90%;
     padding: 1em;
@@ -741,8 +740,8 @@ color: red;
 .background_loggin
 {
     border: 1px solid #660033;
-    background-color: #FFFFFF;
-    color: #fff;
+    background-color: #B8B4D2;
+    color: yellow;
     width: 90%;
     padding: 1em;
 }

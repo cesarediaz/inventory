@@ -242,6 +242,8 @@ es:
     o  donde usted este ubicado. Ello permite a usted tener informacion adecuada acerca de
     quien vendio cada parte que es presente en su stock de hardware. Tambien, usted puede
     registrar informacion acerca de estos proveedores para lograr un rapido contacto.'
+    to_know_the_address_with_gmaps: 'Si usted escribe la informacion correcta acerca de la
+    direccion de un proveedor tendra un mapa para ver online'
 
     statistics: 'Estadisticas'
     getting_statistics: 'Obteniendo estadisticas'

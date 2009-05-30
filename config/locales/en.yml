@@ -345,6 +345,8 @@ en:
     or wherever you are. It permit you have adecuate information about who sell you each
     part or advice that is present between your hardware. Also, you can write information
     about the companies so you can make fast contact.'
+    to_know_the_address_with_gmaps: 'If you write the correct information about the address
+    you will see the map'
 
     statistics: 'Statistics'
     getting_statistics: 'Getting statistics'
