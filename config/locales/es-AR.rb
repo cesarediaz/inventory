@@ -33,13 +33,16 @@
                                   as el porcentaje de lugares para cada tipo de lugar, porcentajes
                                   de computadoras, monitores o impresoras en cada lugar tambien',
 
-  :what_is_hardware_module => "What has Hardware module?",
-  :in_hardware_has => "There you will find all types of hardware that  now are included
-                     in the system.If some kind of hardware is not present please let me know
-                      at cesare.diaz@gmail.com",
+  :what_is_hardware_module => "Que tiene el modulo Hardware?",
+  :in_hardware_has => "Ahí encontrara todos los tipos de hardware incluidos en el sitema.
+                       Si algun tipo de hardware no esta presente deberia ser agregado
+                       desarrollando esa parte del sistema.",
 
-  :what_in_submodule_computers => 'What has in computers?',
-  :in_computers_has => "Here it is possible to observe a list with all the computers for each place( Available plus Unavailable), other list with only those which are available, other with  those which are unavailable and another option to see statistics.",
+  :what_in_submodule_computers => 'Que tiene en computadoras?',
+  :in_computers_has => "Allí es posigle observar una lista con todas las computadoras
+                        por cada lugar(Disponibles mas No Disponibles), otra lista con solo
+                        las Disponibles, una con solo las No Disponibles y otra opcion para
+                        ver estadisticas con respecto a estos datos.",
 
   :what_in_submodule_motherboards => 'What has in motherboards?',
   :in_motherboards_has => 'Here it is possible to observe a list with all the motherboards for
