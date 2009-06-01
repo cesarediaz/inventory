@@ -78,17 +78,19 @@
   :in_printers_has => 'Ahí es posible observar una lista con todas las impresoras mostrando
                       informacion acerca de donde esta ubicada y si es parte de un equipo.',
 
-  :what_is_mark_module => "What has Mark module?",
-  :in_mark_has => "There you will find all name of marks present between the hardware
-                      that you have in your place of work.",
+  :what_is_mark_module => "Que tiene el modulo Marcas?",
+  :in_mark_has => "Ahí encontraras todos los nombres de marcas presentes entre el
+                   hardware que usted tiene en el lugar.",
 
-  :what_is_company_module => "What has Company module?",
-  :in_company_has => "There you will find all names of companies which sell devices that
-                      you have in your place of work. Other extra information are phone number
-                       , address and email contact. If you fill this form with the exact information
-                      for address information you could see a map with the exact location for this company",
+  :what_is_company_module => "Que tiene en el modulo Empresas?",
+  :in_company_has => "Ahí encontrara la lista completa de empresas las cuales vendieron lo
+                     que usted tiene en su lugar. Otra informacion extra son los datos
+                     de contacto como el telefono, la dirección o el email de la empresa.
+                     Si usted completa este formulario con la informacion de direccion
+                     (ciudad, calle, número) podra obtener un mapa para conocer la direccion
+                     exacta de forma visual de la compania que se trate.",
 
-  :what_is_bill_module => "What has Bill module?",
+  :what_is_bill_module => "Que hay en el modulo Facturacion?",
   :in_bill_has => "There you will find all bills where is write in detail what is bougth and in what date",
 
   :what_is_pages_module => "What has Pages module?",
