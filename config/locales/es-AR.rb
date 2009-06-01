@@ -2,36 +2,36 @@
   :'es-AR' => {
 
      :faq => {
-      :what_are_workstations_module=> "What has Workstations module?",
-      :workstations_module_is=> "Is the place where you can join a computer more
-                                  a screen and a printer.
-                             This will show you the stations that are prepared to
-                             work immediatly, it
-                             means that a user can use this machine to work right now.",
+      :what_are_workstations_module=> "Que tiene el modulo Equipos?",
+      :workstations_module_is=> "Es el lugar donde usted puede reunir una computadora mas
+                                  un monitor mas una impresora.
+                                 Esto le mostrara las estaciones de trabajo que estan
+                                 preparadas para trabajar inmediatamente. Esto significa
+                                 que un usuario puede utilizar esta maquina para trabajar
+                                 ya mismo si es necesario.",
 
-      :which_are_the_rules_to_have_a_workstation => "Which are the rules to have a workstation?",
-     :rules_to_consider_in_a_workstation => "It must has one computer and one screen.",
-     :what_in_statistics_of_workstations => "What has in statistics for workstations?",
-     :workstations_statistics_show => "It shows text and graphical information for each place
-                              showing computers, screens and printers alone or as part of a
-                              workstation ",
+      :which_are_the_rules_to_have_a_workstation => "Cuales son las reglas para tener un equipo?",
+      :rules_to_consider_in_a_workstation => "Este debe estar compuesto por una computadora y un monitor.",
+      :what_in_statistics_of_workstations => "Que hay en estadisticas para equipos?",
+      :workstations_statistics_show => "Esto muestra informacion escrita y grafica para cada lugar
+                                        mostrando computadoras, monitores e impresoras que esta solas
+                                        como tambien las que son parte de equipos ",
 
-     :what_is_places_module => "What has in the places options?",
-     :place_module_is => "Is the module where you can add different kinds of
-                          places how stores, offices,
-                      departments or rooms with a name for each one.",
-     :what_can_i_do_there => "What can I do there?",
-     :there_you_can => "There you can see the complete list of places at the 'index' page,
-                     search places
-                   by name or for more general concepts how offices, stores and so on selecting
-                   those by description. In the list for each place you could be read information
-                   about the 'Name' of the place, 'Description', number of 'Computers', number of
-                   'Screens', number of 'Printers' and links to download a file in xls o pdf format",
-
-     :what_in_statistics_of_places => 'What can I find in statistics options?',
-     :in_statistics_of_places => 'There you can see diferent graphics about specific information
-                                  how the percent of places for each kind, percents of
-                                  computers, screens and printers in each place too',
+      :what_is_places_module => "Que tiene en opciones de Lugares?",
+      :place_module_is => "Este es el modulo donde usted puede agregar diferentes tipos de
+                          lugares como depositos, oficinas, aulas, departamentos o salas
+                          con un nombre para cada una.",
+      :what_can_i_do_there => "Que puedes hacer ahi?",
+      :there_you_can => "Ahi puedes observar la lista completa de lugarese, buscar lugares
+                         por nombre o por conceptos mas generales como 'oficinas', 'departamentos'
+                         , etc. seleccionando estos por descripcion. En la lista por cada lugar
+                         usted puede leer informacion acerca del 'Nombre' de lugar, 'Descripcion'
+                         , numero de 'computadoras', numero de 'monitores', numero de impresoras
+                         y enlaces para descargar archivos xls o pdf ",
+     :what_in_statistics_of_places => 'Que puedo encontrar en la opcion de estadisticas?',
+     :in_statistics_of_places => 'Ahi puedes ver diferentes graficos acerca de informacion especifica
+                                  as el porcentaje de lugares para cada tipo de lugar, porcentajes
+                                  de computadoras, monitores o impresoras en cada lugar tambien',
 
   :what_is_hardware_module => "What has Hardware module?",
   :in_hardware_has => "There you will find all types of hardware that  now are included
