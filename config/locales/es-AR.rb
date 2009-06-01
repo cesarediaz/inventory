@@ -91,10 +91,12 @@
                      exacta de forma visual de la compania que se trate.",
 
   :what_is_bill_module => "Que hay en el modulo Facturacion?",
-  :in_bill_has => "There you will find all bills where is write in detail what is bougth and in what date",
+  :in_bill_has => "Ahí puede encontrar todas las facturas donde esta escrito en detalle
+                   que fue comprado y en que fecha.",
 
-  :what_is_pages_module => "What has Pages module?",
-  :in_pages_has => "There you can add new pages for the frontend application site",
+  :what_is_pages_module => "Que hay en el modulo Paginas?",
+  :in_pages_has => "Ahí usted puede agregar nuevas paginas para el frontend de su sitio
+                    como tambien paginas internas",
 },
 
   :models => {
