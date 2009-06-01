@@ -44,38 +44,39 @@
                         las Disponibles, una con solo las No Disponibles y otra opcion para
                         ver estadisticas con respecto a estos datos.",
 
-  :what_in_submodule_motherboards => 'What has in motherboards?',
-  :in_motherboards_has => 'Here it is possible to observe a list with all the motherboards for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :what_in_submodule_motherboards => 'Que tiene en placas madres?',
+  :in_motherboards_has => 'Ahí es posible observar una lista con todas las placas madres
+                           indicando en que computadora esta siendo utilizada
+                           o solo la informacion de la placa madre en caso de que no este
+                           siendo utilizada.',
 
-  :what_in_submodule_harddisks => 'What has in harddisks?',
-  :in_harddisks_has => 'Here it is possible to observe a list with all the harddisks for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :what_in_submodule_harddisks => 'Que tiene en discos rigidos?',
+  :in_harddisks_has => 'Ahí es posible observar una lista con todas los discos rigidos por
+                        cada computadora si esta siendo usada por una computadora o sin un
+                        nombre de PC en caso de que este continue sin uso.',
 
-  :what_in_submodule_memories => 'What has in memories?',
-  :in_memories_has => 'Here it is possible to observe a list with all the memories for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :what_in_submodule_memories => 'Que tiene en memorias?',
+  :in_memories_has => 'Ahí es posible observar una lista con todas las memorias para
+                       cada computadora si esta siendo usada por una computadora o sin
+                       el detalle del nombre de PC en caso de que no este usandose.',
 
-  :what_in_submodule_cds => 'What has in cds?',
-  :in_cds_has => 'Here it is possible to observe a list with all the cds devices for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :what_in_submodule_cds => 'Que tiene en cds?',
+  :in_cds_has => 'Ahí es posible observar una lista con todas los lectoras/grabadoras de cds
+                  por cada computadora si esta esta siendo usada por una computadora o sin un
+                  nombre de computadora en caso de que no este utilizandose.',
 
-  :what_in_submodule_dvds => 'What has in dvds?',
-  :in_dvds_has => 'Here it is possible to observe a list with all the dvds devices for
-                           each computer if it is using by a computer o without a PC name in
-                          case that it still alone',
+  :what_in_submodule_dvds => 'Que tiene en dvds?',
+  :in_dvds_has => 'Ahí es posible observar una lista con todas los lectoras/grabadoras de dvds
+                  por cada computadora si esta esta siendo usada por una computadora o sin un
+                  nombre de computadora en caso de que no este utilizandose.',
 
-  :what_in_submodule_screens => 'What has in screens?',
-  :in_screens_has => 'Here it is possible to observe a list with all the screens showing
-                      information about where is it and if it is as part of a workstation',
+  :what_in_submodule_screens => 'Que tiene en monitores?',
+  :in_screens_has => 'Ahí es posible observar una lista con todas los monitores mostrando
+                      informacion acerca de donde esta ubicado y si es parte de un equipo.',
 
-  :what_in_submodule_printers => 'What has in printers?',
-  :in_printers_has => 'Here it is possible to observe a list with all the printers  showing
-                      information about where is it and if it is as part of a workstation',
+  :what_in_submodule_printers => 'Que tiene en impresoras?',
+  :in_printers_has => 'Ahí es posible observar una lista con todas las impresoras mostrando
+                      informacion acerca de donde esta ubicada y si es parte de un equipo.',
 
   :what_is_mark_module => "What has Mark module?",
   :in_mark_has => "There you will find all name of marks present between the hardware
