@@ -1,4 +1,101 @@
 es:
+  faq:
+      what_are_workstations_module: "Que tiene el modulo Equipos?"
+      workstations_module_is: "Es el lugar donde usted puede reunir una computadora mas
+                                  un monitor mas una impresora.
+                                 Esto le mostrara las estaciones de trabajo que están
+                                 preparadas para trabajar inmediatamente. Esto significa
+                                 que un usuario puede utilizar esta maquina para trabajar
+                                 ya mismo si es necesario."
+
+      which_are_the_rules_to_have_a_workstation: "Cuales son las reglas para tener un equipo?"
+      rules_to_consider_in_a_workstation: "Este debe estar compuesto por una computadora y un monitor."
+      what_in_statistics_of_workstations: "Que hay en estadísticas para equipos?"
+      workstations_statistics_show: "Esto muestra información escrita y gráfica para cada lugar
+                                        mostrando computadoras, monitores e impresoras que esta solas
+                                        como también las que son parte de equipos "
+
+      what_is_places_module: "Que tiene en opciones de Lugares?"
+      place_module_is: "Este es el modulo donde usted puede agregar diferentes tipos de
+                          lugares como depositos, oficinas, aulas, departamentos o salas
+                          con un nombre para cada una."
+      what_can_i_do_there: "Que puedes hacer ahí?"
+      there_you_can: "Ahí puedes observar la lista completa de lugares, buscar lugares
+                         por nombre o por conceptos mas generales como oficinas, departamentos
+                         , etc. seleccionando estos por descripción. En la lista por cada lugar
+                         usted puede leer información acerca del Nombre de lugar, Descripción
+                         , numero de computadoras, numero de monitores, numero de impresoras
+                         y enlaces para descargar archivos xls o pdf."
+      what_in_statistics_of_places: "Que puedo encontrar en la opción de estadísticas?"
+      in_statistics_of_places: "Ahí puedes ver diferentes gráficos acerca de información especifica
+                                  as el porcentaje de lugares para cada tipo de lugar, porcentajes
+                                  de computadoras, monitores o impresoras en cada lugar también"
+      what_is_hardware_module: "Que tiene el modulo Hardware?"
+      in_hardware_has: "Ahí encontrara todos los tipos de hardware incluidos en el sistema.
+                       Si algún tipo de hardware no esta presente debería ser agregado
+                       desarrollando esa parte del sistema."
+
+      what_in_submodule_computers: "Que tiene en computadoras?"
+      in_computers_has: "Allí es posible observar una lista con todas las computadoras
+                        por cada lugar(Disponibles mas No Disponibles), otra lista con solo
+                        las Disponibles, una con solo las No Disponibles y otra opción para
+                        ver estadísticas con respecto a estos datos."
+
+      what_in_submodule_motherboards: "Que tiene en placas madres?"
+      in_motherboards_has: "Ahí es posible observar una lista con todas las placas madres
+                           indicando en que computadora esta siendo utilizada
+                           o solo la informacion de la placa madre en caso de que no este
+                           siendo utilizada."
+
+      what_in_submodule_harddisks: "Que tiene en discos rígidos?"
+      in_harddisks_has: "Ahí es posible observar una lista con todas los discos rígidos por
+                        cada computadora si esta siendo usada por una computadora o sin un
+                        nombre de PC en caso de que este continue sin uso."
+
+      what_in_submodule_memories: "Que tiene en memorias?"
+      in_memories_has: "Ahí es posible observar una lista con todas las memorias para
+                       cada computadora si esta siendo usada por una computadora o sin
+                       el detalle del nombre de PC en caso de que no este usandose."
+
+      what_in_submodule_cds: "Que tiene en cds?"
+      in_cds_has: "Ahí es posible observar una lista con todas los lectoras/grabadoras de cds
+                  por cada computadora si esta esta siendo usada por una computadora o sin un
+                  nombre de computadora en caso de que no este utilizandose."
+
+      what_in_submodule_dvds: "Que tiene en dvds?"
+      in_dvds_has: "Ahí es posible observar una lista con todas los lectoras/grabadoras de dvds
+                  por cada computadora si esta esta siendo usada por una computadora o sin un
+                  nombre de computadora en caso de que no este utilizandose."
+
+      what_in_submodule_screens: "Que tiene en monitores?"
+      in_screens_has: "Ahí es posible observar una lista con todas los monitores mostrando
+                      informacion acerca de donde esta ubicado y si es parte de un equipo."
+
+      what_in_submodule_printers: "Que tiene en impresoras?"
+      in_printers_has: "Ahí es posible observar una lista con todas las impresoras mostrando
+                      informacion acerca de donde esta ubicada y si es parte de un equipo."
+
+      what_is_mark_module: "Que tiene el modulo Marcas?"
+      in_mark_has: "Ahí encontraras todos los nombres de marcas presentes entre el
+                   hardware que usted tiene en el lugar."
+
+      what_is_company_module: "Que tiene en el modulo Empresas?"
+      in_company_has: "Ahí encontrara la lista completa de empresas las cuales vendieron lo
+                     que usted tiene en su lugar. Otra información extra son los datos
+                     de contacto como el telefono, la dirección o el email de la empresa.
+                     Si usted completa este formulario con la información de dirección
+                     (ciudad, calle, número) podra obtener un mapa para conocer la dirección
+                     exacta de forma visual de la compania que se trate."
+
+      what_is_bill_module: "Que hay en el modulo Facturación?"
+      in_bill_has: "Ahí puede encontrar todas las facturas donde esta escrito en detalle
+                   que fue comprado y en que fecha."
+
+      what_is_pages_module: "Que hay en el modulo Paginas?"
+      in_pages_has: "Ahí usted puede agregar nuevas paginas para el frontend de su sitio
+                    como también paginas internas"
+
+
   models:
     model: 'Modelo'
     mark: 'Marca'
@@ -391,7 +488,7 @@ es:
       format:
         # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
         format: "%n %u"
-        unit: "�"
+        unit: "â‚¬"
         # These three are to override number.format and are optional
         separator: ","
         delimiter: "."
@@ -441,8 +538,8 @@ es:
         one: "alrededor de 1 hora"
         other: "alrededor de {{count}} horas"
       x_days:
-        one: "1 d�a"
-        other: "{{count}} d�as"
+        one: "1 dÃ­a"
+        other: "{{count}} dÃ­as"
       about_x_months:
         one: "alrededor de 1 mes"
         other: "alrededor de {{count}} meses"
@@ -450,17 +547,17 @@ es:
         one: "1 mes"
         other: "{{count}} meses"
       about_x_years:
-        one: "alrededor de 1 a�o"
-        other: "alrededor de {{count}} a�os"
+        one: "alrededor de 1 aÃ±o"
+        other: "alrededor de {{count}} aÃ±os"
       over_x_years:
-        one: "m�s de 1 a�o"
-        other: "m�s de {{count}} a�os"
+        one: "mÃ¡s de 1 aÃ±o"
+        other: "mÃ¡s de {{count}} aÃ±os"
 
   activerecord:
     errors:
       template:
         header:
-          one: "no se pudo guardar este {{model}} porque se encontr� 1 error"
+          one: "no se pudo guardar este {{model}} porque se encontrÃ³ 1 error"
           other: "no se pudo guardar este {{model}} porque se encontraron {{count}} errores"
         # The variable :count is also available
         body: "Se encontraron problemas con los siguientes campos:"
@@ -468,18 +565,18 @@ es:
       # The values :model, :attribute and :value are always available for interpolation
       # The value :count is available when applicable. Can be used for pluralization.
       messages:
-        inclusion: "no est� incluido en la lista"
-        exclusion: "est� reservado"
-        invalid: "no es v�lido"
-        confirmation: "no coincide con la confirmaci�n"
+        inclusion: "no estÃ¡ incluido en la lista"
+        exclusion: "estÃ¡ reservado"
+        invalid: "no es vÃ¡lido"
+        confirmation: "no coincide con la confirmaciÃ³n"
         accepted: "debe ser aceptado"
-        empty: "no puede estar vac�o"
+        empty: "no puede estar vacÃ­o"
         blank: "no puede estar en blanco"
-        too_long: "es demasiado largo ({{count}} caracteres m�ximo)"
-        too_short: "es demasiado corto ({{count}} caracteres m�nimo)"
+        too_long: "es demasiado largo ({{count}} caracteres mÃ¡ximo)"
+        too_short: "es demasiado corto ({{count}} caracteres mÃ­nimo)"
         wrong_length: "no tiene la longitud correcta ({{count}} caracteres exactos)"
-        taken: "ya est� en uso"
-        not_a_number: "no es un n�mero"
+        taken: "ya estÃ¡ en uso"
+        not_a_number: "no es un nÃºmero"
         greater_than: "debe ser mayor que {{count}}"
         greater_than_or_equal_to: "debe ser mayor que o igual a {{count}}"
         equal_to: "debe ser igual a {{count}}"
@@ -505,7 +602,7 @@ es:
       short: "%d de %b"
       long: "%d de %B de %Y"
 
-    day_names: [Domingo, Lunes, Martes, Mi�rcoles, Jueves, Viernes, S�bado]
+    day_names: [Domingo, Lunes, Martes, MiÃ©rcoles, Jueves, Viernes, SÃ¡bado]
     abbr_day_names: [Dom, Lun, Mar, Mie, Jue, Vie, Sab]
 
     # Don"t forget the nil at the beginning; there's no such thing as a 0th month
