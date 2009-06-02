@@ -1,8 +1,101 @@
-# French translations for Ruby on Rails
-# by Christian Lescuyer (christian@flyingcoders.com)
-# contributor: Sebastien Grosjean _ ZenCocoon.com
-
 fr:
+  faq:
+      what_are_workstations_module: "Module qui a l'équipement?"
+      workstations_module_is: "C'est l'endroit où l'on peut assembler un ordinateur et de
+                               suivre plus d'une imprimante. Cela montre le travail des
+                               stations qui sont prêts à travailler immédiatement. Cela
+                               signifie qu'un utilisateur peut utiliser cette machine pour
+                               travailler dès maintenant, si nécessaire."
+
+      which_are_the_rules_to_have_a_workstation: "Quelles sont les règles d'une équipe?"
+      rules_to_consider_in_a_workstation: "Cela devrait être composé d'un ordinateur et le moniteur."
+      what_in_statistics_of_workstations: "Quelles statistiques pour les équipes?"
+      workstations_statistics_show: "Cela montre écrites et graphiques pour chaque
+                                     emplacement montrant les ordinateurs, les écrans
+                                     et les imprimantes que cela, ainsi que les équipes
+                                     qui font partie de"
+
+      what_is_places_module: "Les options qui sont dans des lieux?"
+      place_module_is: "C'est le module où vous pouvez ajouter différents types
+                        de lieux tels que les entrepôts, des bureaux, des salles
+                        de classe, des appartements ou des chambres avec un nom
+                        pour chacun."
+      what_can_i_do_there: "Vous pouvez y faire?"
+      there_you_can: "Ici vous pouvez voir la liste complète des lieux, des lieux à la
+                      recherche par nom ou par des concepts plus généraux tels que les
+                      bureaux, départements, etc. en sélectionnant la description.
+                      La liste de chaque lieu, vous pouvez lire sur la place le nom,
+                      la description, le nombre d'ordinateurs, de moniteurs, les imprimantes,
+                      et le nombre de liens pour télécharger des fichiers pdf ou xls"
+      what_in_statistics_of_places: "Je peux trouver des statistiques sur l'option?"
+      in_statistics_of_places: "Là vous pouvez voir les différents tableaux que des
+                                renseignements précis sur le pourcentage de sites pour
+                                chaque type d'établissement, le pourcentage d'ordinateurs,
+                                les moniteurs et les imprimantes à chaque endroit aussi"
+      what_is_hardware_module: "Cela a le module matériel?"
+      in_hardware_has: "Vous y trouverez tous les types de matériel dans le système.
+                        Si tout le matériel n'est pas présent, il convient d'ajouter
+                        que le développement du système.."
+
+      what_in_submodule_computers: "Qui prend en ordinateurs?"
+      in_computers_has: "On peut voir une liste de tous les ordinateurs sur chaque site
+                         (disponibles mais ne sont pas disponibles), une autre liste, avec
+                         seulement ceux qui sont disponibles à l'inaccessible et la seule
+                         autre option pour voir les statistiques concernant les données.."
+
+      what_in_submodule_motherboards: "Qui tient les cartes mères?"
+      in_motherboards_has: "Ici vous pouvez voir une liste de toutes les cartes mères qui
+                            indique que l'ordinateur est utilisé ou que l'information de la
+                            carte mère si ce n'est pas utilisé."
+
+      what_in_submodule_harddisks: "Cela prend des disques durs?"
+      in_harddisks_has: "Ici vous pouvez voir une liste de tous les disques durs
+                         de chaque ordinateur, si il est utilisé par un ordinateur ou un
+                         PC sans nom ne doit pas continuer cette utilisation."
+
+      what_in_submodule_memories: "Qui prend en souvenirs?"
+      in_memories_has: "Ici vous pouvez voir une liste de tous les rapports pour
+                        chaque ordinateur, si il est utilisé par un ordinateur, sans le
+                         détail ou le nom de la PC ne doit pas être utilisé."
+
+      what_in_submodule_cds: "Qui prend en cds?"
+      in_cds_has: "Ici vous pouvez voir une liste de tous les lecteur / graveur de CD
+                  pour chaque ordinateur si cela est utilisé par un ordinateur ou sans
+                  le nom d'un ordinateur si vous n'utilisez pas."
+
+      what_in_submodule_dvds: "Qui prend en dvds?"
+      in_dvds_has: "Ici vous pouvez voir une liste de tous les lecteur / graveur
+                   dvd pour chaque ordinateur si cela est utilisé par un ordinateur
+                   ou sans le nom d'un ordinateur si vous n'utilisez pas."
+
+      what_in_submodule_screens: "Les écrans qui sont en?"
+      in_screens_has: "Ici vous pouvez voir une liste de tous les écrans d'information
+                      sur l'endroit où il se trouve et si elle fait partie d'une équipe."
+
+      what_in_submodule_printers: "Que tiene en impresoras?"
+      in_printers_has: "Ici vous pouvez voir une liste de toutes les imprimantes,
+                       d'afficher des informations sur l'endroit où il se trouve et si
+                       elle fait partie d'une équipe."
+
+      what_is_mark_module: "Qui a le module de marques?"
+      in_mark_has: "Ici vous trouverez tous les noms de marques, du matériel que vous avez mis en place."
+
+      what_is_company_module: "Qui prend la forme Companies?"
+      in_company_has: "Ici vous trouverez la liste complète des compagnies qui vendent ce que
+                      vous avez mis en place. Un autre extra est l'information que le numéro
+                      de téléphone, d'adresse ou de courriel de l'entreprise. Si vous remplissez ce
+                      formulaire avec les informations d'adresse (ville, rue, numéro) peut obtenir
+                      une carte pour connaître l'adresse exacte de l'entreprise en cause visuellement."
+
+      what_is_bill_module: "Est dans le module de facturation??"
+      in_bill_has: "Ici vous pouvez trouver toutes les factures qui est écrit dans le détail
+                   qui a été acheté et à quelle date."
+
+      what_is_pages_module: "Est-page dans le module?"
+      in_pages_has: "Ici, vous pouvez ajouter de nouvelles pages de l'interface de votre site
+                    ainsi que les pages intérieures"
+
+
   models:
     model: 'Model'
     mark: 'Mark'
@@ -13,7 +106,7 @@ fr:
   bill:
     code: 'Code'
     company: 'Entreprise'
-    date: 'Date de re�u'
+    date: 'Date de reçu'
     edit: "Modifier"
     create: "Ajouter"
     new: "Ajouter nouveau quittance"
@@ -28,7 +121,7 @@ fr:
     country: "Country"
     address: "Direction"
     contact: "Contact"
-    phone: "T�l�phone"
+    phone: "Téléphone"
     fax: "Fax"
     email: "Messagerie"
     edit: "Modifier"
@@ -39,7 +132,7 @@ fr:
     confirm_password: "Confirmer code"
     password: "Code"
     language: "Langue"
-    edit: "�diter"
+    edit: "Éditer"
 
   inventory:
     title: "Inventaire"
@@ -54,21 +147,21 @@ fr:
     edit: "Modifier"
     place: "Lieu"
     select_a_place: "Choisissez un lieu"
-    list_of_equipments: "Listing d'�quipements dans"
+    list_of_equipments: "Listing d'équipements dans"
 
 
   computers:
     title: "Ordinateurs"
     name: "Nom"
-    stats_paragraph: "Dans des num�ros de PC"
+    stats_paragraph: "Dans des numéros de PC"
     available: "Disponibles"
     unavailable: "Non disponibles"
     all : "Total"
     new: "Ajouter nouvelle pc"
     create: "Ajouter"
-    edit: "�diter"
+    edit: "Éditer"
     harddisk: "Disque rigide"
-    memory: "M�moire"
+    memory: "Mémoire"
     place: "Lieu"
     workstation?: "Poste ?"
     y: "Si"
@@ -84,14 +177,14 @@ fr:
     workstations: "Equipes"
     description: "Description"
     name: "Nom"
-    edit: "�diter"
+    edit: "Éditer"
     create: "Ajouter"
     place: "Lieu"
     select_type_of_places: "Choisissez diferentes lieus por descripcion"
     select_one: "Choisissez una opcion"
     new: "Ajouter lieu"
     all: "Tous"
-    departments: "D�partements"
+    departments: "Départements"
     offices: "Dureaus"
     rooms: "Salle"
     classrooms: "Classrooms"
@@ -103,42 +196,42 @@ fr:
 
 
   motherboards:
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
+    model: "Modèle"
+    sn: "Numéro de Série"
     mark: "Marque"
-    new: "Nouvelle plaque m�re"
+    new: "Nouvelle plaque mère"
     computer: "En pc"
 
     bill: "Quittance"
     inventory_register: 'Registre inventaire'
 
   harddisks:
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
-    size : "Capacit�"
+    model: "Modèle"
+    sn: "Numéro de Série"
+    size : "Capacité"
     mark: "Marque"
     bill: "Quittance"
     inventory_register: 'Registre inventaire'
 
   memories:
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
-    size : "Capacit�"
+    model: "Modèle"
+    sn: "Numéro de Série"
+    size : "Capacité"
     mark: "Marque"
     bill: "Quittance"
     inventory_register: 'Registre inventaire'
 
   dvds:
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
+    model: "Modèle"
+    sn: "Numéro de Série"
     mark: "Marque"
     burn: "Grabadora"
     bill: "Quittance"
     inventory_register: 'Registre inventaire'
 
   cds:
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
+    model: "Modèle"
+    sn: "Numéro de Série"
     mark: "Marque"
     burn: "Grabadora"
     bill: "Quittance"
@@ -146,8 +239,8 @@ fr:
 
   screens:
     title: "Moniteures"
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
+    model: "Modèle"
+    sn: "Numéro de Série"
     mark: "Marque"
     workstation?: "Poste ?"
     bill: "Quittance"
@@ -155,8 +248,8 @@ fr:
 
   printers:
     title: "Imprimantes"
-    model: "Mod�le"
-    sn: "Num�ro de S�rie"
+    model: "Modèle"
+    sn: "Numéro de Série"
     mark: "Marque"
     workstation?: "Poste ?"
     bill: "Quittance"
@@ -165,7 +258,7 @@ fr:
   marks:
     mark: "Marque"
     new: "Nouvelle"
-    edit : "�diter"
+    edit : "Éditer"
     show : "Voir"
     destroy: "Eliminar"
     inventory_register: 'Registre inventaire'
@@ -177,10 +270,10 @@ fr:
     show: "Voir"
     create: "Ajouter"
     back: "Rentrer"
-    top_page: "Aller au d�but de page"
-    download_pdf: "D�charger des archives pdf"
-    download: "D�charger des archives xls"
-    download_all: "D�charger tout dans des archives xls"
+    top_page: "Aller au début de page"
+    download_pdf: "Décharger des archives pdf"
+    download: "Décharger des archives xls"
+    download_all: "Décharger tout dans des archives xls"
     show_hide: "Montrer/Ocultar"
     show_hide_advice: "Montrer/Dissimuler avis"
     hide_advice: "Dissimuler avis"
@@ -188,9 +281,9 @@ fr:
     successfully: " its need be translated"
 
   help_phrases:
-    in_workstation: "Ce dispositif est assign� dans un poste de travail.
-    Pour changer l'attribut Lieu il doit aller � la section �quipements."
-    stats_in_place: "Il lib�re : �quipements qui ne font pas partie d'un poste de travail. Dans des �quipes : ils int�grent un poste de travail"
+    in_workstation: "Ce dispositif est assigné dans un poste de travail.
+    Pour changer l'attribut Lieu il doit aller à la section Équipements."
+    stats_in_place: "Il libère : équipements qui ne font pas partie d'un poste de travail. Dans des équipes : ils intègrent un poste de travail"
     msg_text: "You must put a hyphen sign where is need put a text if you don't have this data"
     msg_number: "You must put a cero(0) number where is need put a number if you don\'t have this data"
     msg_email: 'If you do not have an email address complete this field with something how the next
@@ -217,7 +310,7 @@ fr:
     available: "Disponibles"
     unavailable: "En uso"
     alone: "Libre"
-    workstation: "En �quipements"
+    workstation: "En équipements"
     places_statistic : "This need to be translated"
     pc_statistic : "This need to be translated"
     screens_statistic : "This need to be translated"
@@ -239,15 +332,15 @@ fr:
     new_model: "New model"
 
     pages: "Pages"
-    list_pages: "�num�rer pages"
+    list_pages: "Énumérer pages"
     new_page: "Nouvelle page"
 
     companies : "Entreprises"
-    list_companies : "�num�rer entreprises"
+    list_companies : "Énumérer entreprises"
     company_new : "Nouvelle"
 
     bills : "Quittances"
-    list_bills : "�num�rer quittances"
+    list_bills : "Énumérer quittances"
     bill_new : "Nouveau quittance"
 
     users: "Usagers"
@@ -258,10 +351,10 @@ fr:
 
     account : "Ton compte"
     new_account : "Nouvelle cuenta"
-    account_edit : "Publier des donn�es de son compte"
+    account_edit : "Publier des données de son compte"
 
-    workstations : "�quipements"
-    list_workstations : "�num�rer le �quipements"
+    workstations : "Équipements"
+    list_workstations : "Énumérer le équipements"
     new : "Nouveau"
     stats_workstations : "Statistiques"
     change_place: 'Changer lieu'
@@ -273,7 +366,7 @@ fr:
 
     #Hardware
     computers : "Ordinateurs"
-    list_computers : "�num�rer todas las ordinateurs"
+    list_computers : "Énumérer todas las ordinateurs"
     new_computer : "Nouvelle"
     availables_computers : "Disponibles"
     unavailables_computers : "non disponibles"
@@ -281,42 +374,42 @@ fr:
 
     #MotherBoards
     motherboards : "Placa madre"
-    list_motherboards : "�num�rer placas madre"
+    list_motherboards : "Énumérer placas madre"
     new_motherboard : "Nouvelle"
 
     #Harddisks
     harddisks : "Disque rigide"
-    list_harddisks : "�num�rer disques"
+    list_harddisks : "Énumérer disques"
     new_harddisk : "Nouveau"
 
     #Memories
-    memories : "M�moires"
-    list_memories : "�num�rer m�moires"
+    memories : "Mémoires"
+    list_memories : "Énumérer mémoires"
     new_memorie : "Nouveau"
 
     #Dvds
     dvds : "R/W dvds"
-    list_dvds : "�num�rer dispositifs"
+    list_dvds : "Énumérer dispositifs"
     new_dvd : "Nouveau"
 
     #Cds
     cds : "R/W cds"
-    list_cds : "�num�rer dispositifs"
+    list_cds : "Énumérer dispositifs"
     new_cd : "Nouveau"
 
     #Screens
     screens : "Moniteurs"
-    list_screens : "�num�rer moniteurs"
+    list_screens : "Énumérer moniteurs"
     new_screen : "Nouveau"
 
     #Printers
     printers : "Imprimantes"
-    list_printers : "�num�rer imprimantes"
+    list_printers : "Énumérer imprimantes"
     new_printer : "Nouveau"
 
     #Marks
     marks : "Marques"
-    list_marks : "�num�rer marques"
+    list_marks : "Énumérer marques"
     new_mark : "Nouvelle"
 
     #Login
@@ -345,8 +438,8 @@ fr:
 
     day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
     abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
-    month_names: [~, janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
-    abbr_month_names: [~, jan., fév., mar., avr., mai, juin, juil., août, sept., oct., nov., déc.]
+    month_names: [~, janvier, fÃ©vrier, mars, avril, mai, juin, juillet, aoÃ»t, septembre, octobre, novembre, dÃ©cembre]
+    abbr_month_names: [~, jan., fÃ©v., mar., avr., mai, juin, juil., aoÃ»t, sept., oct., nov., dÃ©c.]
     order: [ :day, :month, :year ]
 
   time:
@@ -365,38 +458,38 @@ fr:
       half_a_minute: "une demi-minute"
       less_than_x_seconds:
         zero:  "moins d'une seconde"
-        one:   "moins de 1 seconde"
-        other: "moins de {{count}} secondes"
+        one:   "moins de 1Â seconde"
+        other: "moins de {{count}}Â secondes"
       x_seconds:
-        one:   "1 seconde"
-        other: "{{count}} secondes"
+        one:   "1Â seconde"
+        other: "{{count}}Â secondes"
       less_than_x_minutes:
         zero:  "moins d'une minute"
-        one:   "moins de 1 minute"
-        other: "moins de {{count}} minutes"
+        one:   "moins de 1Â minute"
+        other: "moins de {{count}}Â minutes"
       x_minutes:
-        one:   "1 minute"
-        other: "{{count}} minutes"
+        one:   "1Â minute"
+        other: "{{count}}Â minutes"
       about_x_hours:
         one:   "environ une heure"
-        other: "environ {{count}} heures"
+        other: "environ {{count}}Â heures"
       x_days:
-        one:   "1 jour"
-        other: "{{count}} jours"
+        one:   "1Â jour"
+        other: "{{count}}Â jours"
       about_x_months:
         one:   "environ un mois"
-        other: "environ {{count}} mois"
+        other: "environ {{count}}Â mois"
       x_months:
-        one:   "1 mois"
-        other: "{{count}} mois"
+        one:   "1Â mois"
+        other: "{{count}}Â mois"
       about_x_years:
         one:   "environ un an"
-        other: "environ {{count}} ans"
+        other: "environ {{count}}Â ans"
       over_x_years:
         one:   "plus d'un an"
-        other: "plus de {{count}} ans"
+        other: "plus de {{count}}Â ans"
     prompts:
-      year:   "Année"
+      year:   "AnnÃ©e"
       month:  "Mois"
       day:    "Jour"
       hour:   "Heure"
@@ -407,12 +500,12 @@ fr:
     format:
       precision: 3
       separator: ','
-      delimiter: ' '
+      delimiter: 'Â '
     currency:
       format:
-        unit: '€'
+        unit: 'â‚¬'
         precision: 2
-        format: '%n %u'
+        format: '%nÂ %u'
     human:
       format:
         precision: 2
@@ -432,24 +525,24 @@ fr:
         header:
           one: "Impossible d'enregistrer {{model}}: 1 erreur"
           other: "Impossible d'enregistrer {{model}}: {{count}} erreurs."
-        body: "Veuillez vérifier les champs suivants :"
+        body: "Veuillez vÃ©rifier les champs suivantsÂ :"
       messages:
         inclusion: "n'est pas inclus(e) dans la liste"
         exclusion: "n'est pas disponible"
         invalid: "n'est pas valide"
         confirmation: "ne concorde pas avec la confirmation"
-        accepted: "doit être accepté(e)"
-        empty: "doit être rempli(e)"
-        blank: "doit être rempli(e)"
-        too_long: "est trop long (pas plus de {{count}} caractères)"
-        too_short: "est trop court (au moins {{count}} caractères)"
-        wrong_length: "ne fait pas la bonne longueur (doit comporter {{count}} caractères)"
+        accepted: "doit Ãªtre acceptÃ©(e)"
+        empty: "doit Ãªtre rempli(e)"
+        blank: "doit Ãªtre rempli(e)"
+        too_long: "est trop long (pas plus de {{count}} caractÃ¨res)"
+        too_short: "est trop court (au moins {{count}} caractÃ¨res)"
+        wrong_length: "ne fait pas la bonne longueur (doit comporter {{count}} caractÃ¨res)"
         taken: "n'est pas disponible"
         not_a_number: "n'est pas un nom"
-        greater_than: "doit être supérieur à {{count}}"
-        greater_than_or_equal_to: "doit être supérieur ou égal à {{count}}"
-        equal_to: "doit être égal à {{count}}"
-        less_than: "doit être inférieur à {{count}}"
-        less_than_or_equal_to: "doit être inférieur ou égal à {{count}}"
-        odd: "doit être impair"
-        even: "doit être pair"
+        greater_than: "doit Ãªtre supÃ©rieur Ã  {{count}}"
+        greater_than_or_equal_to: "doit Ãªtre supÃ©rieur ou Ã©gal Ã  {{count}}"
+        equal_to: "doit Ãªtre Ã©gal Ã  {{count}}"
+        less_than: "doit Ãªtre infÃ©rieur Ã  {{count}}"
+        less_than_or_equal_to: "doit Ãªtre infÃ©rieur ou Ã©gal Ã  {{count}}"
+        odd: "doit Ãªtre impair"
+        even: "doit Ãªtre pair"
