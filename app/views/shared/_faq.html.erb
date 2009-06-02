@@ -68,6 +68,8 @@
   <%= content_tag('p', t('faq.in_statistics_of_places'), :class => 'identation_help') %>
 <% end %>
 
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= image_tag('uparrow.png', :border => '0') %></a>
+
 <!-- Hardware -->
 
 <a name="Hardware" id="a"></a>
@@ -121,6 +123,7 @@
   <%= content_tag('p', t('faq.in_printers_has'), :class => 'identation_help') %>
 <% end %>
 
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= image_tag('uparrow.png', :border => '0') %></a>
 
 <!-- Marks -->
 
@@ -134,6 +137,7 @@
   <%= content_tag('p', t('faq.in_mark_has'), :class => 'identation_help') %>
 <% end %>
 
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= image_tag('uparrow.png', :border => '0') %></a>
 
 <!-- Companies -->
 
@@ -147,6 +151,8 @@
   <%= content_tag('p', t('faq.in_company_has'), :class => 'identation_help') %>
 <% end %>
 
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= image_tag('uparrow.png', :border => '0') %></a>
+
 <!-- Bill -->
 
 <a name="<%= t('menu.bills') %>" id="a"></a>
@@ -158,6 +164,8 @@
   <%= content_tag('b', ' - ' + t('faq.what_is_bill_module'), :class => 'identation_help') %>
   <%= content_tag('p', t('faq.in_bill_has'), :class => 'identation_help') %>
 <% end %>
+
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= image_tag('uparrow.png', :border => '0') %></a>
 
 <!-- Pages -->
 
@@ -171,6 +179,7 @@
   <%= content_tag('p', t('faq.in_pages_has'), :class => 'identation_help') %>
 <% end %>
 
+<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= image_tag('uparrow.png', :border => '0') %></a>
 
 <%= render :partial => 'shared/shortcuts' %>
 
@@ -179,5 +188,5 @@
 <% end %>
 
 
-<a href='#' onclick='effect.ScrollTo('article_top'); return false;'> <%= t('common_actions.top_page') %></a>
+
 <% end %>
