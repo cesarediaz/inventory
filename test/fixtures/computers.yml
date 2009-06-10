@@ -22,17 +22,17 @@ two:
 
 three:
   id: 3
-  name: computer_three
+  name: computer_room_a_three
   mac: '13:23:43:15:53:32'
   ip: 132.54.23.62
-  place_id: 2
+  place_id: 3
   available: true
   is_part_of_a_workstation: false
   inventory_register : 4424354355
 
 four:
   id: 4
-  name: computer_four
+  name: computer_room_a_four
   mac: '13:23:43:15:53:33'
   ip: 132.54.23.63
   place_id: 3
@@ -72,7 +72,7 @@ seven:
 
 eigth:
   id: 8
-  name: computer_eigth
+  name: computer_room_b_eight
   mac: '13:23:43:15:53:37'
   ip: 132.54.23.67
   place_id: 4

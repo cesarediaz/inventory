@@ -7,7 +7,8 @@ ActionController::Routing::Routes.draw do |map|
     :stats => :get, :auto_complete_for_bill_code => :get, :search => :get}
 
 
-  map.resources :workstations, :collection => {:stats => :get, :xls_workstations  => :get}
+  map.resources :workstations, :collection => {:stats => :get, :xls_workstations  => :get,
+    :devices_options => :get}
 
 
   map.resources :computers, :collection => { :available => :get, :unavailable => :get,

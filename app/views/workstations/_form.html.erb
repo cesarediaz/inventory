@@ -31,49 +31,9 @@
 <br>
 <% end %>
 
-<% content_tag :table, option = {:width => '100%', :cellspacing => '20px'} do %>
-  <% content_tag :tr do %>
-
-    <% content_tag :td, option = {:valign =>'top'} do %>
-      <% if not @computers.empty? %>
-      <%= label_tag('computers', t('phrases.list_of') + ' ' + t('computers.title')) %>
-      <br>
-      <%= collection_select 'workstation', 'computer_id', @computers, 'id', 'name',{},
-          {:prompt => true, :size => @computers.count + 1 } %>
-      <% end %>
-    <% end %>
+<%= render :partial => 'devices_options' %>
 
 
-
-    <% content_tag :td, option = {:valign =>'top'} do %>
-      <% if not @screens.empty? %>
-      <%= label_tag('screens',  t('phrases.list_of') + ' ' + t('screens.title')) %>
-      <br>
-      <%= collection_select 'workstation', 'screen_id', @screens, 'id', :description_model ,{},
-          {:prompt => true, :size => @screens.count + 1 } %>
-
-      <% end %>
-
-      <br>
-      <div id="registers_code_screen">
-      </div>
-    <% end %>
-
-
-    <% content_tag :td, option = {:valign =>'top'} do %>
-      <% if not @printers.empty? %>
-      <%= label_tag('printers',  t('phrases.list_of') + ' ' + t('printers.title')) %>
-      <br>
-      <%= collection_select 'workstation', 'printer_id', @printers, 'id', :description_model,{},
-          {:prompt => true, :size => @printers.count + 1 } %>
-      <% end %>
-
-      <br>
-      <div id="registers_code_printer">
-      </div>
-    <% end %>
-  <% end %>
-<% end %>
 
 
 <p>

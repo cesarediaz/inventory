@@ -5,15 +5,15 @@ one:
   model_id: 1
   serialnumber: 1212324325
   mark_id : 3
-  place_id: 2
+  place_id: 3
   inventory_register : 345446546
 
 two:
   id: 2
   model_id: 2
   serialnumber: 12123243434
-  mark_id : 3
-  place_id: 2
+  mark_id : 1
+  place_id: 3
   inventory_register : 52352353454
 
 three:

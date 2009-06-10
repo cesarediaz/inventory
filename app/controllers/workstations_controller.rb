@@ -24,6 +24,7 @@ class WorkstationsController < ApplicationController
 
   before_filter :login_required
 
+
   # GET /workstations
   # GET /workstations.xml
   def index
@@ -75,7 +76,6 @@ class WorkstationsController < ApplicationController
 
     respond_to do |format|
       if @workstation.save
-        flash[:notice] = 'Workstation was successfully created.'
         format.html { redirect_to(workstations_url) }
         format.xml  { render :xml => @workstation, :status => :created, :location => @workstation }
       else
@@ -92,7 +92,10 @@ class WorkstationsController < ApplicationController
 
     respond_to do |format|
       if @workstation.update_attributes(params[:workstation])
-        flash[:notice] = 'Workstation was successfully updated.'
+        update_old_values(params[:before][:old_computer_id],
+                          params[:before][:old_screen_id],
+                          params[:before][:old_printer_id],
+                          @workstation)
         format.html { redirect_to(@workstation) }
         format.xml  { head :ok }
       else
@@ -146,6 +149,11 @@ class WorkstationsController < ApplicationController
                             )
   end
 
+  def devices_options
+    hardware_in_place
+    render  :partial => 'devices_options'
+  end
+
   private
 
   def hardware_in_place
@@ -169,6 +177,35 @@ class WorkstationsController < ApplicationController
                    chart_type, t('workstations.#{element.downcase}'))
 
     ";
+  end
+
+  def update_old_values(old_computer_id,
+                        old_screen_id,
+                        old_printer_id,
+                        workstation)
+
+
+
+    if workstation.computer_id != old_computer_id
+      @computer = Computer.find(old_computer_id)
+      @computer.is_part_of_a_workstation = false
+      @computer.save!
+    end
+
+    if not old_printer_id == 'nothing'
+      if workstation.printer_id != old_printer_id
+        @printer = Printer.find(old_printer_id)
+        @printer.is_part_of_a_workstation = false
+        @printer.save!
+      end
+    end
+
+    if workstation.screen_id != old_screen_id
+      @screen = Screen.find(old_screen_id)
+      @screen.is_part_of_a_workstation = false
+      @screen.save!
+    end
+
   end
 
 end

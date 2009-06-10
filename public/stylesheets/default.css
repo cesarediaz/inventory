@@ -740,10 +740,10 @@ color: red;
 .background_loggin
 {
     border: 1px solid #660033;
-    background-color: #B8B4D2;
     color: yellow;
     width: 90%;
     padding: 1em;
+    background: #FEFEFE url(../images/a1.gif) repeat-x;
 }
 
 
