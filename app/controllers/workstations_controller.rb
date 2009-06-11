@@ -93,7 +93,7 @@ class WorkstationsController < ApplicationController
 
     respond_to do |format|
       if @workstation.update_attributes(params[:workstation])
-        update_old_values(params[:workstation],params[:before], @workstation)
+        restore_device_status(params[:workstation],params[:before], @workstation)
         format.html { redirect_to(@workstation) }
         format.xml  { head :ok }
       else
@@ -177,24 +177,24 @@ class WorkstationsController < ApplicationController
     ";
   end
 
-  def update_old_values(h,old,workstation)
 
+  def restore_device_status(new_workstation_values,old_values,workstation)
 
-
-    if h.has_key?("computer_id")
-      @computer = Computer.find(old[:old_computer_id])
+    if new_workstation_values.has_key?("computer_id")
+      @computer = Computer.find(old_values[:old_computer_id])
       @computer.is_part_of_a_workstation = false
       @computer.save!
     end
 
-    if h.has_key?("printer_id") and not old[:old_printer_id] == 'nothing'
-        @printer = Printer.find(old[:old_printer_id])
+    if new_workstation_values.has_key?("printer_id") and
+        not old_values[:old_printer_id] == 'nothing'
+        @printer = Printer.find(old_values[:old_printer_id])
         @printer.is_part_of_a_workstation = false
         @printer.save!
     end
 
-    if h.has_key?("screen_id")
-      @screen = Screen.find(old[:old_screen_id])
+    if new_workstation_values.has_key?("screen_id")
+      @screen = Screen.find(old_values[:old_screen_id])
       @screen.is_part_of_a_workstation = false
       @screen.save!
     end
