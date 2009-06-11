@@ -24,11 +24,22 @@
               Place.find(:all, :order => 'title'), :id, :title,{},
           {:prompt => true, :size => Place.all.count + 1 }) %>
 
-          <%= hidden_field(:before, :old_computer_id,
-              :value => @workstation.computer_id) %>
 
-          <%= hidden_field(:before, :old_screen_id,
-              :value => @workstation.screen_id) %>
+          <% if @workstation.computer_id.nil? %>
+              <%= hidden_field(:before, :old_computer_id,
+                  :value => 'nothing') %>
+          <% else %>
+              <%= hidden_field(:before, :old_computer_id,
+                  :value => @workstation.computer_id) %>
+          <% end %>
+
+          <% if @workstation.screen_id.nil? %>
+              <%= hidden_field(:before, :old_screen_id,
+                  :value => 'nothing') %>
+          <% else %>
+              <%= hidden_field(:before, :old_screen_id,
+                 :value => @workstation.screen_id) %>
+          <% end %>
 
           <% if @workstation.printer_id.nil? %>
               <%= hidden_field(:before, :old_printer_id,

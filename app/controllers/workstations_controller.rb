@@ -90,12 +90,10 @@ class WorkstationsController < ApplicationController
   def update
     @workstation = Workstation.find(params[:id])
 
+
     respond_to do |format|
       if @workstation.update_attributes(params[:workstation])
-        update_old_values(params[:before][:old_computer_id],
-                          params[:before][:old_screen_id],
-                          params[:before][:old_printer_id],
-                          @workstation)
+        update_old_values(params[:workstation],params[:before], @workstation)
         format.html { redirect_to(@workstation) }
         format.xml  { head :ok }
       else
@@ -179,29 +177,24 @@ class WorkstationsController < ApplicationController
     ";
   end
 
-  def update_old_values(old_computer_id,
-                        old_screen_id,
-                        old_printer_id,
-                        workstation)
+  def update_old_values(h,old,workstation)
 
 
 
-    if workstation.computer_id != old_computer_id
-      @computer = Computer.find(old_computer_id)
+    if h.has_key?("computer_id")
+      @computer = Computer.find(old[:old_computer_id])
       @computer.is_part_of_a_workstation = false
       @computer.save!
     end
 
-    if not old_printer_id == 'nothing'
-      if workstation.printer_id != old_printer_id
-        @printer = Printer.find(old_printer_id)
+    if h.has_key?("printer_id") and not old[:old_printer_id] == 'nothing'
+        @printer = Printer.find(old[:old_printer_id])
         @printer.is_part_of_a_workstation = false
         @printer.save!
-      end
     end
 
-    if workstation.screen_id != old_screen_id
-      @screen = Screen.find(old_screen_id)
+    if h.has_key?("screen_id")
+      @screen = Screen.find(old[:old_screen_id])
       @screen.is_part_of_a_workstation = false
       @screen.save!
     end
