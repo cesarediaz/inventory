@@ -1,35 +1,34 @@
-<%= notice %>
-
-<%= content_tag('h2',show_info(t('workstations.place'), 'principal-device', 'Place', @workstation.place_id, 'title')) %>
-
-
-<%= content_tag('br') %>
-
-<!-- Computer info -->
-<%= content_tag('p', t('menu.computers').singularize) %>
-<%= show_info(t('workstations.computer'), 'principal-device', 'Computer', @workstation.computer_id, 'name') %>
-
-<%= show_info('Ip', 'data-principal-device', 'Computer', @workstation.computer_id, 'ip') %>
-
-<%= show_info('Mac', 'data-principal-device', 'Computer', @workstation.computer_id, 'mac') %>
+<%= content_tag('h2',show_info(t('workstations.place'), 'principal-device', 'Place',
+    @workstation.place_id, 'title')) %>
 
 
-<% 2.times do %>
-<br>
-<% end %>
+<table width='500px'>
+  <tr valign='top'>
+    <td>
+      <!-- Computer info -->
+      <%= content_tag('p', t('menu.computers').singularize) %>
+      <%= show_info(t('workstations.computer'), 'principal-device', 'Computer',
+          @workstation.computer_id, 'name') %>
+      <%= show_info('Ip', 'data-principal-device', 'Computer', @workstation.computer_id,
+          'ip') %>
+      <%= show_info('Mac', 'data-principal-device', 'Computer', @workstation.computer_id, 'mac') %>
+    </td>
 
-<!-- Screen info -->
-<%= content_tag('p', t('menu.screens')) %>
-<%= show_info(t('workstations.screen'), 'principal-device', 'Screen', @workstation.screen_id, 'description_model')%>
+    <td>
+      <!-- Screen info -->
+      <%= content_tag('p', t('menu.screens').singularize) %>
+      <%= show_info(t('workstations.screen'), 'principal-device', 'Screen',
+          @workstation.screen_id, 'description_model')%>
+      <%= show_info('Sn', 'data-principal-device', 'Screen', @workstation.screen_id, 'serialnumber') %>
+    </td>
 
-<%= show_info('Sn', 'data-principal-device', 'Screen', @workstation.screen_id, 'serialnumber') %>
-
-<% 2.times do %>
-<br>
-<% end %>
-
-<!-- Printer info -->
-<%= content_tag('p', t('menu.printers')) %>
-<%= show_info(t('workstations.printer'), 'principal-device', 'Printer', @workstation.printer_id, 'description_model')  rescue nil %>
-
-<%= show_info('Sn', 'data-principal-device', 'Printer', @workstation.printer_id, 'serialnumber')  rescue nil %>
+    <td>
+      <!-- Printer info -->
+      <%= content_tag('p', t('menu.printers').singularize) %>
+      <%= show_info(t('workstations.printer'), 'principal-device', 'Printer',
+          @workstation.printer_id, 'description_model')  rescue nil %>
+      <%= show_info('Sn', 'data-principal-device', 'Printer', @workstation.printer_id,
+          'serialnumber')  rescue nil %>
+    </td>
+  </tr>
+</table>

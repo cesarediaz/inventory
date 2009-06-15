@@ -1,64 +1,58 @@
 <%= javascript_include_tag "prototype" %>
 
-<% content_tag :table do %>
+<table>
+  <tr valign='top'>
+    <td>
+      <!--    List of data for the workstations -->
+      <%=  render :partial => 'detailed_info_of_workstation' %>
+    </td>
+  </tr>
+  <tr valign='top'>
+    <!--    Form with list of places  -->
+    <td>
+      <% form_for(@workstation) do |f| %>
+      <%= f.error_messages %>
+      <table>
+        <tr valign='top'>
+          <td>
+            <% if action_name == 'new' %>
+            <%= f.submit t('workstations.create') %>
+            <% else %>
+            <%= f.submit t('workstations.edit') %>
+            <% end %>
+          </td>
+          <td>
+            <%= t('phrases.list_of') + t('menu.places') %>
+            <%= collection_select(:workstation, :place_id,
+                Place.find(:all, :order => 'title'), :id, :title,{},
+            {:prompt => true, :size => Place.all.count + 1, :focus => true }) %>
+          </td>
+          <td>
+            <%= hidden_field(:before, :old_computer_id,
+                :value => @workstation.computer_id) %>
 
-  <% content_tag :tr, :valign => 'top' do %>
+            <%= hidden_field(:before, :old_screen_id,
+                :value => @workstation.screen_id) %>
 
-
-     <!--    List of data for the workstations -->
-     <% content_tag :td, :width => '80%' do %>
-        <%=  render :partial => 'detailed_info_of_workstation' %>
-     <% end %>
-
-
-     <!--    Form with list of places  -->
-     <% content_tag :td do %>
-
-       <% form_for(@workstation) do |f| %>
-          <%= f.error_messages %>
-
-          <%= content_tag('h3',t('menu.change_place')) %>
-
-          <%= t('phrases.list_of') + t('menu.places') %>
-          <%= collection_select(:workstation, :place_id,
-              Place.find(:all, :order => 'title'), :id, :title,{},
-          {:prompt => true, :size => Place.all.count + 1 }) %>
-
-          <%= hidden_field(:before, :old_computer_id,
-              :value => @workstation.computer_id) %>
-
-          <%= hidden_field(:before, :old_screen_id,
-              :value => @workstation.screen_id) %>
-
-          <% if @workstation.printer_id.nil? %>
-              <%= hidden_field(:before, :old_printer_id,
-                  :value => 'nothing') %>
-          <% else %>
-              <%= hidden_field(:before, :old_printer_id,
-                  :value => @workstation.printer_id) %>
-          <% end %>
-
-
-           <div id="edit_workstation">
-           </div>
-
-
-          <% if action_name == 'new' %>
-             <%= f.submit t('workstations.create') %>
-          <% else %>
-             <%= f.submit t('workstations.edit') %>
-          <% end %>
+            <% if @workstation.printer_id.nil? %>
+            <%= hidden_field(:before, :old_printer_id,
+                :value => 'nothing') %>
+            <% else %>
+            <%= hidden_field(:before, :old_printer_id,
+                :value => @workstation.printer_id) %>
+            <% end %>
 
 
+            <div id="edit_workstation">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 
-
-       <% end %>
-
-     <% end %>
-
-  <% end %>
-
-<% end -%>
+<% end %>
 
 <%= link_to t('common_actions.show'), @workstation %> |
 <%= link_to t('common_actions.back'), workstations_path %>

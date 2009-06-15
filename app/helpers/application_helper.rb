@@ -83,11 +83,10 @@ module ApplicationHelper
   def show_info(label, css, object, value, field)
     content_tag :div, :id => '#{css}' do
       content_tag :div do
-        label + ' : '
         eval %"
         @value = #{object}.find(:first, :conditions => [ 'id = ?', #{value}]).#{field}
         ";
-        @value
+        label + ' : ' + @value
       end
     end
   end
