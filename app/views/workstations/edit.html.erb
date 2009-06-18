@@ -1,20 +1,17 @@
 <%= javascript_include_tag "prototype" %>
 
-<table>
-  <tr valign='top'>
-    <td>
-      <!--    List of data for the workstations -->
-      <%=  render :partial => 'detailed_info_of_workstation' %>
-    </td>
-  </tr>
-  <tr valign='top'>
-    <!--    Form with list of places  -->
-    <td>
-      <% form_for(@workstation) do |f| %>
+     <% form_for(@workstation) do |f| %>
       <%= f.error_messages %>
       <table>
         <tr valign='top'>
+          <td colspan='3'>
+            <!--    List of data for the workstations -->
+            <%=  render :partial => 'detailed_info_of_workstation' %>
+          </td>
+        </tr>
+        <tr valign='top'>
           <td>
+
             <% if action_name == 'new' %>
             <%= f.submit t('workstations.create') %>
             <% else %>
@@ -25,7 +22,7 @@
             <%= t('phrases.list_of') + t('menu.places') %>
             <%= collection_select(:workstation, :place_id,
                 Place.find(:all, :order => 'title'), :id, :title,{},
-            {:prompt => true, :size => Place.all.count + 1, :focus => true }) %>
+            {:prompt => true, :size => Place.all.size + 1, :focus => true }) %>
           </td>
           <td>
             <%= hidden_field(:before, :old_computer_id,
@@ -48,9 +45,7 @@
           </td>
         </tr>
       </table>
-    </td>
-  </tr>
-</table>
+
 
 <% end %>
 

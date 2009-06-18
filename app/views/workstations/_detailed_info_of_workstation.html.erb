@@ -29,6 +29,11 @@
           @workstation.printer_id, 'description_model')  rescue nil %>
       <%= show_info('Sn', 'data-principal-device', 'Printer', @workstation.printer_id,
           'serialnumber')  rescue nil %>
+
+      <%= continue_as_part_of_this_workstation() unless
+           @workstation.printer_id.nil? %>
+
+      <%= hidden_field(:device, :still_there, :value => 'yes') if @workstation.printer_id.nil? %>
     </td>
   </tr>
 </table>

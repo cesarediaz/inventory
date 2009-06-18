@@ -45,4 +45,10 @@ module WorkstationsHelper
     return html
   end
 
+
+  def continue_as_part_of_this_workstation()
+   'Continue as part of this workstation?<BR>' \
+    + check_box("device", "still_there",options = {:checked => true}, "yes", "no")
+  end
+
 end
