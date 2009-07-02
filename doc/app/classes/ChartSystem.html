@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: ChartSystem</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">ChartSystem</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/chart_system_rb.html">
+                lib/chart_system.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This file is part of Hardware Inventory.
+</p>
+<pre>
+    Copyright (C) 2009 Cesar Diaz
+
+    Hardware Inventory is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.
+</pre>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000191">google_chart</a>&nbsp;&nbsp;
+      <a href="#M000192">pie3d</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000191" class="method-detail">
+        <a name="M000191"></a>
+
+        <div class="method-heading">
+          <a href="#M000191" class="method-signature">
+          <span class="method-name">google_chart</span><span class="method-args">(collect_values, collect_strings, total_count, elements, title)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Take the collected values and strings, total_count where is the value of
+the sum between all the elements for the stats and elements what is a
+string to make the instance variable in the <a
+href="ChartSystem.html#M000192">pie3d</a> method
+</p>
+<p>
+Return a pie_3d chart link to get the chart graph from Google Api
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000191-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000191-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chart_system.rb, line 26</span>
+26:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">google_chart</span>(<span class="ruby-identifier">collect_values</span>, <span class="ruby-identifier">collect_strings</span>, <span class="ruby-identifier">total_count</span>, <span class="ruby-identifier">elements</span>, <span class="ruby-identifier">title</span>)
+27:     <span class="ruby-ivar">@data</span> = []
+28:     <span class="ruby-ivar">@labels</span> = []
+29:     <span class="ruby-ivar">@elements</span> = <span class="ruby-identifier">elements</span>
+30: 
+31:     <span class="ruby-ivar">@collect_values_position</span> = <span class="ruby-value">0</span>
+32:     <span class="ruby-ivar">@chart_values_position</span> = <span class="ruby-value">0</span>
+33:     <span class="ruby-identifier">collect_values</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+34:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+35:         <span class="ruby-ivar">@percent</span> = (<span class="ruby-identifier">x</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">total_count</span>
+36:         <span class="ruby-ivar">@data</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@percent</span>
+37:         <span class="ruby-ivar">@labels</span>[<span class="ruby-ivar">@chart_values_position</span>] = <span class="ruby-identifier">collect_strings</span>[<span class="ruby-ivar">@collect_values_position</span>] <span class="ruby-operator">+</span> <span class="ruby-value str">' '</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@percent</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'%'</span>
+38:         <span class="ruby-ivar">@chart_values_position</span> = <span class="ruby-ivar">@chart_values_position</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+39:       <span class="ruby-keyword kw">end</span>
+40:       <span class="ruby-ivar">@collect_values_position</span> = <span class="ruby-ivar">@collect_values_position</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+41:     }
+42: 
+43:     <span class="ruby-identifier">pie3d</span>(<span class="ruby-ivar">@data</span>, <span class="ruby-ivar">@labels</span>, <span class="ruby-ivar">@elements</span>, <span class="ruby-identifier">title</span>)
+44:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000192" class="method-detail">
+        <a name="M000192"></a>
+
+        <div class="method-heading">
+          <a href="#M000192" class="method-signature">
+          <span class="method-name">pie3d</span><span class="method-args">(data, labels, elements, title)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the below params: data: values to make the chart portions in the graph
+labels: to show the labels in the graph elements: to make the instance var
+in the eval function
+</p>
+<p>
+Return: the instance var with the values to use in Google Api
+</p>
+<pre>
+        Chart method
+</pre>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000192-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000192-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chart_system.rb, line 53</span>
+53:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pie3d</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">labels</span>, <span class="ruby-identifier">elements</span>, <span class="ruby-identifier">title</span>)
+54:     <span class="ruby-identifier">eval</span> <span class="ruby-node">%&quot;
+55: 
+56:     @#{elements} = GoogleChart.new
+57:     @#{elements}.title = title
+58:     @#{elements}.type = :pie_3d
+59:     @#{elements}.data = data
+60:     @#{elements}.colors = '346000'
+61:     @#{elements}.labels = labels
+62: 
+63:     &quot;</span>;
+64:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

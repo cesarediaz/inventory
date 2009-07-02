@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Countries</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Countries</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/countries_rb.html">
+                lib/countries.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000236">countries</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000236" class="method-detail">
+        <a name="M000236"></a>
+
+        <div class="method-heading">
+          <a href="#M000236" class="method-signature">
+          <span class="method-name">countries</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000236-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000236-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/countries.rb, line 4</span>
+  4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">countries</span>
+  5:     <span class="ruby-ivar">@countries</span> = [
+  6:      [<span class="ruby-value str">'Argentina'</span>],
+  7:      [<span class="ruby-value str">'Spain'</span>],
+  8:      [<span class="ruby-value str">'France'</span>],
+  9:      [<span class="ruby-value str">'Germany'</span>],
+ 10:      [<span class="ruby-value str">'Italy'</span>],
+ 11:      [<span class="ruby-value str">'United Kingdom'</span>],
+ 12:      [<span class="ruby-value str">'United States of America'</span>],
+ 13:      [<span class="ruby-value str">'--'</span>, <span class="ruby-value str">' - - - - - - - - - - - - - - -'</span>],
+ 14:      [<span class="ruby-value str">'Afghanistan'</span>],
+ 15:      [<span class="ruby-value str">'Albania'</span>],
+ 16:      [<span class="ruby-value str">'Algeria'</span>],
+ 17:      [<span class="ruby-value str">'American Samoa'</span>],
+ 18:      [<span class="ruby-value str">'Andorra'</span>],
+ 19:      [<span class="ruby-value str">'Angola'</span>],
+ 20:      [<span class="ruby-value str">'Anguilla'</span>],
+ 21:      [<span class="ruby-value str">'Antarctica'</span>],
+ 22:      [<span class="ruby-value str">'Antigua and Barbuda'</span>],
+ 23:      [<span class="ruby-value str">'Armenia'</span>],
+ 24:      [<span class="ruby-value str">'Aruba'</span>],
+ 25:      [<span class="ruby-value str">'Ascension Island'</span>],
+ 26:      [<span class="ruby-value str">'Australia'</span>],
+ 27:      [<span class="ruby-value str">'Austria'</span>],
+ 28:      [<span class="ruby-value str">'Azerbaijan'</span>],
+ 29:      [<span class="ruby-value str">'Bahamas'</span>],
+ 30:      [<span class="ruby-value str">'Bahrain'</span>],
+ 31:      [<span class="ruby-value str">'Bangladesh'</span>],
+ 32:      [<span class="ruby-value str">'Barbados'</span>],
+ 33:      [<span class="ruby-value str">'Belarus'</span>],
+ 34:      [<span class="ruby-value str">'Belgium'</span>],
+ 35:      [<span class="ruby-value str">'Belize'</span>],
+ 36:      [<span class="ruby-value str">'Benin'</span>],
+ 37:      [<span class="ruby-value str">'Bermuda'</span>],
+ 38:      [<span class="ruby-value str">'Bhutan'</span>],
+ 39:      [<span class="ruby-value str">'Bolivia'</span>],
+ 40:      [<span class="ruby-value str">'Bosnia and Herzegovina'</span>],
+ 41:      [<span class="ruby-value str">'Botswana'</span>],
+ 42:      [<span class="ruby-value str">'Bouvet Island'</span>],
+ 43:      [<span class="ruby-value str">'Brazil'</span>],
+ 44:      [<span class="ruby-value str">'British Virgin Islands'</span>],
+ 45:      [<span class="ruby-value str">'British Indian Ocean Territory'</span>],
+ 46:      [<span class="ruby-value str">'Brunei Darussalam'</span>],
+ 47:      [<span class="ruby-value str">'Bulgaria'</span>],
+ 48:      [<span class="ruby-value str">'Burkina Faso'</span>],
+ 49:      [<span class="ruby-value str">'Burundi'</span>],
+ 50:      [<span class="ruby-value str">'Cambodia'</span>],
+ 51:      [<span class="ruby-value str">'Cameroon'</span>],
+ 52:      [<span class="ruby-value str">'Canada'</span>],
+ 53:      [<span class="ruby-value str">'Cape Verde'</span>],
+ 54:      [<span class="ruby-value str">'ky'</span>, <span class="ruby-value str">'Cayman Islands'</span>],
+ 55:      [<span class="ruby-value str">'Central African Republic'</span>],
+ 56:      [<span class="ruby-value str">'Chad'</span>],
+ 57:      [<span class="ruby-value str">'Chile'</span>],
+ 58:      [<span class="ruby-value str">'China'</span>],
+ 59:      [<span class="ruby-value str">'Christmas Island'</span>],
+ 60:      [<span class="ruby-value str">'Cocos (Keeling],  Island'</span>],
+ 61:      [<span class="ruby-value str">'Colombia'</span>],
+ 62:      [<span class="ruby-value str">'Comoros'</span>],
+ 63:      [<span class="ruby-value str">'Congo, Republic of'</span>],
+ 64:      [<span class="ruby-value str">'Congo, Democratic Republic of'</span>],
+ 65:      [<span class="ruby-value str">'Cook Islands'</span>],
+ 66:      [<span class="ruby-value str">'Costa Rica'</span>],
+ 67:      [<span class="ruby-value str">'Croatia'</span>],
+ 68:      [<span class="ruby-value str">'Cuba'</span>],
+ 69:      [<span class="ruby-value str">'Cyprus'</span>],
+ 70:      [<span class="ruby-value str">'Czech Republic'</span>],
+ 71:      [<span class="ruby-value str">'Denmark'</span>],
+ 72:      [<span class="ruby-value str">'Djibouti'</span>],
+ 73:      [<span class="ruby-value str">'Dominica'</span>],
+ 74:      [<span class="ruby-value str">'Dominican Republic'</span>],
+ 75:      [<span class="ruby-value str">'Ecuador'</span>],
+ 76:      [<span class="ruby-value str">'Egypt'</span>],
+ 77:      [<span class="ruby-value str">'El Salvador'</span>],
+ 78:      [<span class="ruby-value str">'Equatorial Guinea'</span>],
+ 79:      [<span class="ruby-value str">'Eritrea'</span>],
+ 80:      [<span class="ruby-value str">'Estonia'</span>],
+ 81:      [<span class="ruby-value str">'Ethiopia'</span>],
+ 82:      [<span class="ruby-value str">'Falkland Islands (Malvinas], '</span>],
+ 83:      [<span class="ruby-value str">'Faroe Islands'</span>],
+ 84:      [<span class="ruby-value str">'Fiji'</span>],
+ 85:      [<span class="ruby-value str">'Finland'</span>],
+ 86:      [<span class="ruby-value str">'French Guiana'</span>],
+ 87:      [<span class="ruby-value str">'French Polynesia'</span>],
+ 88:      [<span class="ruby-value str">'French Southern Territories'</span>],
+ 89:      [<span class="ruby-value str">'Gabon'</span>],
+ 90:      [<span class="ruby-value str">'Gambia'</span>],
+ 91:      [<span class="ruby-value str">'Georgia'</span>],
+ 92:      [<span class="ruby-value str">'Ghana'</span>],
+ 93:      [<span class="ruby-value str">'Gibraltar'</span>],
+ 94:      [<span class="ruby-value str">'Greece'</span>],
+ 95:      [<span class="ruby-value str">'Greenland'</span>],
+ 96:      [<span class="ruby-value str">'Grenada'</span>],
+ 97:      [<span class="ruby-value str">'Guadeloupe'</span>],
+ 98:      [<span class="ruby-value str">'Guam'</span>],
+ 99:      [<span class="ruby-value str">'Guatemala'</span>],
+100:      [<span class="ruby-value str">'Guernsey'</span>],
+101:      [<span class="ruby-value str">'Guinea'</span>],
+102:      [<span class="ruby-value str">'Guinea-Bissau'</span>],
+103:      [<span class="ruby-value str">'Guyana'</span>],
+104:      [<span class="ruby-value str">'Haiti'</span>],
+105:      [<span class="ruby-value str">'Heard and McDonald Islands'</span>],
+106:      [<span class="ruby-value str">'Honduras'</span>],
+107:      [<span class="ruby-value str">'Hong Kong'</span>],
+108:      [<span class="ruby-value str">'Hungary'</span>],
+109:      [<span class="ruby-value str">'Iceland'</span>],
+110:      [<span class="ruby-value str">'India'</span>],
+111:      [<span class="ruby-value str">'Indonesia'</span>],
+112:      [<span class="ruby-value str">'Iran'</span>],
+113:      [<span class="ruby-value str">'Iraq'</span>],
+114:      [<span class="ruby-value str">'Ireland'</span>],
+115:      [<span class="ruby-value str">'Isle of Man'</span>],
+116:      [<span class="ruby-value str">'Israel'</span>],
+117:      [<span class="ruby-value str">'Jamaica'</span>],
+118:      [<span class="ruby-value str">'Japan'</span>],
+119:      [<span class="ruby-value str">'Jersey'</span>],
+120:      [<span class="ruby-value str">'Jordan'</span>],
+121:      [<span class="ruby-value str">'Kazakhstan'</span>],
+122:      [<span class="ruby-value str">'Kenya'</span>],
+123:      [<span class="ruby-value str">'Kiribati'</span>],
+124:      [<span class="ruby-value str">'Korea, North'</span>],
+125:      [<span class="ruby-value str">'Korea, South'</span>],
+126:      [<span class="ruby-value str">'Kuwait'</span>],
+127:      [<span class="ruby-value str">'Kyrgyzstan'</span>],
+128:      [<span class="ruby-value str">'Laos'</span>],
+129:      [<span class="ruby-value str">'Latvia'</span>],
+130:      [<span class="ruby-value str">'Lebanon'</span>],
+131:      [<span class="ruby-value str">'Lesotho'</span>],
+132:      [<span class="ruby-value str">'Liberia'</span>],
+133:      [<span class="ruby-value str">'Libya'</span>],
+134:      [<span class="ruby-value str">'Liechtenstein'</span>],
+135:      [<span class="ruby-value str">'Lithuania'</span>],
+136:      [<span class="ruby-value str">'Luxembourg'</span>],
+137:      [<span class="ruby-value str">'Macau'</span>],
+138:      [<span class="ruby-value str">'Macedonia'</span>],
+139:      [<span class="ruby-value str">'Madagascar'</span>],
+140:      [<span class="ruby-value str">'Malawi'</span>],
+141:      [<span class="ruby-value str">'Malaysia'</span>],
+142:      [<span class="ruby-value str">'Maldives'</span>],
+143:      [<span class="ruby-value str">'Mali'</span>],
+144:      [<span class="ruby-value str">'Malta'</span>],
+145:      [<span class="ruby-value str">'Marshall Islands'</span>],
+146:      [<span class="ruby-value str">'Martinique'</span>],
+147:      [<span class="ruby-value str">'Mauritania'</span>],
+148:      [<span class="ruby-value str">'Mauritius'</span>],
+149:      [<span class="ruby-value str">'Mayotte'</span>],
+150:      [<span class="ruby-value str">'Mexico'</span>],
+151:      [<span class="ruby-value str">'Micronesia'</span>],
+152:      [<span class="ruby-value str">'Moldova'</span>],
+153:      [<span class="ruby-value str">'Monaco'</span>],
+154:      [<span class="ruby-value str">'Mongolia'</span>],
+155:      [<span class="ruby-value str">'Montserrat'</span>],
+156:      [<span class="ruby-value str">'Morocco'</span>],
+157:      [<span class="ruby-value str">'Mozambique'</span>],
+158:      [<span class="ruby-value str">'Myanmar'</span>],
+159:      [<span class="ruby-value str">'Namibia'</span>],
+160:      [<span class="ruby-value str">'Nauru'</span>],
+161:      [<span class="ruby-value str">'Nepal'</span>],
+162:      [<span class="ruby-value str">'Netherlands'</span>],
+163:      [<span class="ruby-value str">'Netherlands Antilles'</span>],
+164:      [<span class="ruby-value str">'New Caledonia'</span>],
+165:      [<span class="ruby-value str">'New Zealand'</span>],
+166:      [<span class="ruby-value str">'Nicaragua'</span>],
+167:      [<span class="ruby-value str">'Niue'</span>],
+168:      [<span class="ruby-value str">'Niger'</span>],
+169:      [<span class="ruby-value str">'Nigeria'</span>],
+170:      [<span class="ruby-value str">'Norfolk Island'</span>],
+171:      [<span class="ruby-value str">'Northern Mariana Islands'</span>],
+172:      [<span class="ruby-value str">'Norway'</span>],
+173:      [<span class="ruby-value str">'Oman'</span>],
+174:      [<span class="ruby-value str">'Pakistan'</span>],
+175:      [<span class="ruby-value str">'Palau'</span>],
+176:      [<span class="ruby-value str">'Palestinian Territory, Occupied'</span>],
+177:      [<span class="ruby-value str">'Panama'</span>],
+178:      [<span class="ruby-value str">'Papua New Guinea'</span>],
+179:      [<span class="ruby-value str">'Paraguay'</span>],
+180:      [<span class="ruby-value str">'Peru'</span>],
+181:      [<span class="ruby-value str">'Philippines'</span>],
+182:      [<span class="ruby-value str">'Pitcairn Island'</span>],
+183:      [<span class="ruby-value str">'Poland'</span>],
+184:      [<span class="ruby-value str">'Portugal'</span>],
+185:      [<span class="ruby-value str">'Puerto Rico'</span>],
+186:      [<span class="ruby-value str">'Qatar'</span>],
+187:      [<span class="ruby-value str">'Reunion'</span>],
+188:      [<span class="ruby-value str">'Romania'</span>],
+189:      [<span class="ruby-value str">'Russia'</span>],
+190:      [<span class="ruby-value str">'Rwanda'</span>],
+191:      [<span class="ruby-value str">'Saint Helena'</span>],
+192:      [<span class="ruby-value str">'Saint Kitts and Nevis'</span>],
+193:      [<span class="ruby-value str">'Saint Lucia'</span>],
+194:      [<span class="ruby-value str">'Saint Pierre and Miquelon'</span>],
+195:      [<span class="ruby-value str">'Saint Vincent and the Grenadines'</span>],
+196:      [<span class="ruby-value str">'Samoa'</span>],
+197:      [<span class="ruby-value str">'San Marino'</span>],
+198:      [<span class="ruby-value str">'Sao Tome and Principe'</span>],
+199:      [<span class="ruby-value str">'Saudia Arabia'</span>],
+200:      [<span class="ruby-value str">'Senegal'</span>],
+201:      [<span class="ruby-value str">'Serbia'</span>],
+202:      [<span class="ruby-value str">'Seychelles'</span>],
+203:      [<span class="ruby-value str">'Sierra Leone'</span>],
+204:      [<span class="ruby-value str">'Singapore'</span>],
+205:      [<span class="ruby-value str">'Slovakia'</span>],
+206:      [<span class="ruby-value str">'Slovenia'</span>],
+207:      [<span class="ruby-value str">'Solomon Islands'</span>],
+208:      [<span class="ruby-value str">'Somalia'</span>],
+209:      [<span class="ruby-value str">'South Africa'</span>],
+210:      [<span class="ruby-value str">'Georgia and Sandwich Islands'</span>],
+211:      [<span class="ruby-value str">'Sri Lanka'</span>],
+212:      [<span class="ruby-value str">'Sudan'</span>],
+213:      [<span class="ruby-value str">'Suriname'</span>],
+214:      [<span class="ruby-value str">'Svalbard and Jan Mayen Islands'</span>],
+215:      [<span class="ruby-value str">'Swaziland'</span>],
+216:      [<span class="ruby-value str">'Sweden'</span>],
+217:      [<span class="ruby-value str">'Switzerland'</span>],
+218:      [<span class="ruby-value str">'Syria'</span>],
+219:      [<span class="ruby-value str">'Taiwan'</span>],
+220:      [<span class="ruby-value str">'Tajikistan'</span>],
+221:      [<span class="ruby-value str">'Tanzania'</span>],
+222:      [<span class="ruby-value str">'Thailand'</span>],
+223:      [<span class="ruby-value str">'Timor-Leste'</span>],
+224:      [<span class="ruby-value str">'Togo'</span>],
+225:      [<span class="ruby-value str">'Tokelau'</span>],
+226:      [<span class="ruby-value str">'Tonga'</span>],
+227:      [<span class="ruby-value str">'Trinidad and Tobago'</span>],
+228:      [<span class="ruby-value str">'Tunisia'</span>],
+229:      [<span class="ruby-value str">'Turkey'</span>],
+230:      [<span class="ruby-value str">'Turkmenistan'</span>],
+231:      [<span class="ruby-value str">'Turks and Caicos Islands'</span>],
+232:      [<span class="ruby-value str">'Tuvalu'</span>],
+233:      [<span class="ruby-value str">'Uganda'</span>],
+234:      [<span class="ruby-value str">'Ukraine'</span>],
+235:      [<span class="ruby-value str">'United Arab Emirates'</span>],
+236:      [<span class="ruby-value str">'United States Virgin Islands'</span>],
+237:      [<span class="ruby-value str">'Uruguay'</span>],
+238:      [<span class="ruby-value str">'US Minor Outlying Islands'</span>],
+239:      [<span class="ruby-value str">'USSR'</span>],
+240:      [<span class="ruby-value str">'Uzbekistan'</span>],
+241:      [<span class="ruby-value str">'Vanuatu'</span>],
+242:      [<span class="ruby-value str">'Vatican City State'</span>],
+243:      [<span class="ruby-value str">'Venezuela'</span>],
+244:      [<span class="ruby-value str">'Vietnam'</span>],
+245:      [<span class="ruby-value str">'Wallis and Futuna Islands'</span>],
+246:      [<span class="ruby-value str">'Western Sahara'</span>],
+247:      [<span class="ruby-value str">'Yemen'</span>],
+248:      [<span class="ruby-value str">'Yugoslavia'</span>],
+249:      [<span class="ruby-value str">'Zambia'</span>],
+250:      [<span class="ruby-value str">'Zimbabwe'</span>]]
+251: 
+252: 
+253:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

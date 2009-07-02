@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README_FOR_APP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README_FOR_APP</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>doc/README_FOR_APP
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Thu Jul 02 18:19:08 +0300 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Hardware Inventory Web Application
+</p>
+<p>
+Copyright (C) 2008 Cesar Diaz
+</p>
+<p>
+cesare.diaz [at] gmail [dot] com
+</p>
+<p>
+Website for this project : <a
+href="http://inventory.cesardiaz.com.ar">inventory.cesardiaz.com.ar</a>/
+Personal website : <a href="http://cesardiaz.com.ar">cesardiaz.com.ar</a>/
+My blog: <a
+href="http://cesarediaz.blogspot.com">cesarediaz.blogspot.com</a>
+</p>
+<pre>
+   This web application is oriented to resolve the problem to organize the hardware inventory anywhere you are.
+   If you are in a factory, an education building or your personal corporation(anywhere).  This sofware was thought
+   for use in a building where could be necessary an adecuate information about the place where each hardware
+   piece was and get information about when and who was the seller of each parts or device in hardware inventory.
+   This application is available in two languages; spanish and english.
+</pre>
+<p>
+This hardware has those modules.
+</p>
+<pre>
+    * Workstations: it means that there are together one pc(computer) and a screen and those can be used to work.
+    * Places: here is listed all different places where the hardware could be.
+    * Hardware: there you can add computers, motherboards, hard disks, memories and so on.
+    * Marks: is a module to add the different marks more common or present in the technology that you are using or
+             you have in your building.
+    * Companies: this is a module to load the different seller from your hardware.
+    * Bills: here you can get a detail of the bill that the sellers has gave you in each oportunity
+    * Users: there you can add users for your web inventory application in two levels(for now)as 'admin' user or
+             a common user.
+    * Pages: here you can add easily statics pages that will be showed in the front end of your  web application.
+    * Your account: there you can modify your personal data as password, email and language.
+</pre>
+<p>
+Versions
+</p>
+<p>
+This application is tested with:
+</p>
+<pre>
+    * Rails 2.2.2
+    * Ruby 1.8.7 (2008-08-11 patchlevel 72) [x86_64-linux]
+</pre>
+<p>
+You will need have installed the next gems to have all the functions
+working well:
+</p>
+<p>
+actionmailer (2.2.2) actionpack (2.2.2) activerecord (2.2.2) activeresource
+(2.2.2) activesupport (2.2.2) archive-tar-minitar (0.5.2) cucumber (0.1.16)
+diff-lcs (1.1.2) faker (0.3.1) hoe (1.9.0) json (1.1.3) pdf-writer (1.1.8)
+polyglot (0.2.4) populator (0.2.5) rails (2.2.2) rspec (1.1.12, 1.1.11)
+rspec-rails (1.1.12) ruby-ole (1.2.8.2) spreadsheet (0.6.3) term-ansicolor
+(1.0.3) treetop (1.2.4) geokit
+</p>
+<p>
+Install
+</p>
+<p>
+Remember install before try to use it application the Sqlite3 support to
+use the application in &#8216;development&#8217; or &#8216;testing&#8217;
+mode. Of course you can change the database used going to change in
+&#8217;/config/database.yml&#8217; if you want use another kind of database
+like MySql, Postgre or another.
+</p>
+<p>
+If you got this using git into your rails web directory or your home
+directory
+</p>
+<pre>
+       user@host:~/ git clone git://github.com/cesarediaz/inventory.git my_inventory_application
+</pre>
+<p>
+Then in a command line you should go inside the
+&#8216;my_inventory_application&#8217; .
+</p>
+<pre>
+       user@host:~/ cd my_inventory_application
+</pre>
+<p>
+and to start the application in development(for proves) state the next
+steps:
+</p>
+<pre>
+       user@host:~/ rake db:migrate VERSION=0
+</pre>
+<p>
+and then
+</p>
+<pre>
+       user@host:~/ rake db:migrate
+</pre>
+<p>
+and the next step is to load some basic data that could be used in
+development mode or just to watch the application with some data
+</p>
+<pre>
+       user@host:~/ rake db:fixtures:load
+</pre>
+<p>
+and to watch in your local browser
+</p>
+<pre>
+       user@host:~/ script/server
+</pre>
+<p>
+and put in your local browser this
+</p>
+<pre>
+       http://127.0.0.1:3000 or http://localhost:3000
+</pre>
+<p>
+if you maybe want show this application from another places (your boss
+screen ;-) ) you need know the ip address of your machine and put this for
+start the shared application:
+</p>
+<pre>
+       user@host:~/ script/server -b here_your_ip_address -p here_the_port_address
+</pre>
+<p>
+for example if your ip is 192.168.0.10 and the port is 3000 (or another
+port chose for you), well, you have type something similar to the next
+</p>
+<pre>
+       user@host:~/ script/server -b  192.168.0.10 -p 3000
+</pre>
+<p>
+and in the remote browser of your &#8216;client&#8217; put this
+</p>
+<p>
+<a href="http://192.168.0.10:3000">192.168.0.10:3000</a>
+</p>
+<p>
+and enjoy.
+</p>
+<p>
+Then, if you would like deploy this application in production mode you can
+choose between different web servers. It is free for your election, and
+those could be:
+</p>
+<ul>
+<li>Nginx + Mongrel
+
+</li>
+<li>LHTTPd
+
+</li>
+<li>Apache
+
+</li>
+</ul>
+<p>
+Take a look to this website <a
+href="http://rubyonrails.org/deploy">rubyonrails.org/deploy</a> to learn
+how you can deploy in different modes a Ruby on Rails application.
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

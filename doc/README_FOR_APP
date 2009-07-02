@@ -1,49 +1,52 @@
-== Welcome to Inventory
 
-Inventory is a web-application that includes everything needed to mantain
-a database-backed web application which manage the data about an informatic
-inventory. With ths software you will have a detailed control about the
-things(devices) availables how the unavailables too.
+Hardware Inventory Web Application
 
+Copyright (C) 2008 Cesar Diaz
 
-This application has control of access to the administration part. For default
-the application generate an user account with the below data:
+cesare.diaz [at] gmail [dot] com
 
-user: admin
-password: testing
-
-,generate a key value for security site
-
-rake auth:gen:site_key
-
-then you must run the migration task how first step before to try to use the application:
-
-rake db:migrate
-
-and then go to the root path in the application to use with Webrick for local proves
-
-user@machine:~/ cd 'application_path'
-
-and so
-
-user@machine:~/ script/server
-
-          to watch in http://127.0.0.1:3000 the application running
+Website for this project : http://inventory.cesardiaz.com.ar/
+Personal website : http://cesardiaz.com.ar/
+My blog: http://cesarediaz.blogspot.com
 
 
+   This web application is oriented to resolve the problem to organize the hardware inventory anywhere you are.
+   If you are in a factory, an education building or your personal corporation(anywhere).  This sofware was thought
+   for use in a building where could be necessary an adecuate information about the place where each hardware
+   piece was and get information about when and who was the seller of each parts or device in hardware inventory.
+   This application is available in two languages; spanish and english.
 
-== Ruby  ==
-ruby 1.8.7 (2008-08-11 patchlevel 72) [x86_64-linux]
+This hardware has those modules.
+
+    * Workstations: it means that there are together one pc(computer) and a screen and those can be used to work.
+    * Places: here is listed all different places where the hardware could be.
+    * Hardware: there you can add computers, motherboards, hard disks, memories and so on.
+    * Marks: is a module to add the different marks more common or present in the technology that you are using or
+             you have in your building.
+    * Companies: this is a module to load the different seller from your hardware.
+    * Bills: here you can get a detail of the bill that the sellers has gave you in each oportunity
+    * Users: there you can add users for your web inventory application in two levels(for now)as 'admin' user or
+             a common user.
+    * Pages: here you can add easily statics pages that will be showed in the front end of your  web application.
+    * Your account: there you can modify your personal data as password, email and language.
+
+Versions
+
+This application is tested with:
+
+    * Rails 2.2.2
+    * Ruby 1.8.7 (2008-08-11 patchlevel 72) [x86_64-linux]
 
 
-== Gems that the application use  ==
+You will need have installed the next gems to have all the functions working well:
+
+
 actionmailer (2.2.2)
 actionpack (2.2.2)
 activerecord (2.2.2)
 activeresource (2.2.2)
 activesupport (2.2.2)
 archive-tar-minitar (0.5.2)
-color (1.4.0)
 cucumber (0.1.16)
 diff-lcs (1.1.2)
 faker (0.3.1)
@@ -53,14 +56,72 @@ pdf-writer (1.1.8)
 polyglot (0.2.4)
 populator (0.2.5)
 rails (2.2.2)
-rake (0.8.3)
 rspec (1.1.12, 1.1.11)
 rspec-rails (1.1.12)
 ruby-ole (1.2.8.2)
-rubyforge (1.0.3)
-shooting_star (3.2.7)
-simple-rss (1.1)
 spreadsheet (0.6.3)
 term-ansicolor (1.0.3)
-transaction-simple (1.4.0)
 treetop (1.2.4)
+geokit
+
+Install
+
+Remember install before try to use it application the Sqlite3 support to use the application
+in 'development' or 'testing' mode. Of course you can change the database used going to change
+in '/config/database.yml' if you want use another kind of database like MySql, Postgre or another.
+
+If you got this using git into your rails web directory or your home directory
+
+       user@host:~/ git clone git://github.com/cesarediaz/inventory.git my_inventory_application
+
+Then in a command line you should go inside the 'my_inventory_application' .
+
+       user@host:~/ cd my_inventory_application
+
+and to start the application in development(for proves) state the next steps:
+
+       user@host:~/ rake db:migrate VERSION=0
+
+and then
+       user@host:~/ rake db:migrate
+
+and the next step is to load some basic data that could be used in development mode or just to
+watch the application with some data
+
+       user@host:~/ rake db:fixtures:load
+
+and to watch in your local browser
+
+       user@host:~/ script/server
+
+and put in your local browser this
+
+       http://127.0.0.1:3000 or http://localhost:3000
+
+
+if you maybe want show this application from another places (your boss screen ;-) ) you need know the ip
+address of your machine and put this for start the shared application:
+
+       user@host:~/ script/server -b here_your_ip_address -p here_the_port_address
+
+for example if your ip is 192.168.0.10 and the port is 3000 (or another port chose for you), well, you have
+type something similar to the next
+
+       user@host:~/ script/server -b  192.168.0.10 -p 3000
+
+and in the remote browser of your 'client' put this
+
+http://192.168.0.10:3000
+
+and enjoy.
+
+
+Then, if you would like deploy this application in production mode you can choose between different web servers.
+It is free for your election, and those could be:
+
+- Nginx + Mongrel
+- LHTTPd
+- Apache
+
+Take a look to this website http://rubyonrails.org/deploy to learn how you can deploy in different modes a Ruby
+on Rails application.
