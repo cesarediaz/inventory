@@ -140,6 +140,12 @@
     :edit => "Editar",
   },
 
+  :pages =>{
+    :name_page => "Nombre de la pagina",
+    :content_page => "Contenido de la pagina",
+    :front_end? => "Mostrar al frente",
+  },
+
   :inventory => {
     :title => "Inventario de hardware",
   },

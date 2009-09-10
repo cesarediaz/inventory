@@ -270,6 +270,11 @@ es:
     destroy: "Eliminar"
     inventory_register: 'Registro inventario'
 
+  pages:
+    name_page: "Nombre de la pagina"
+    content_page: "Contenido de la pagina"
+    front_end? : "Mostrar al frente"
+
   common_actions:
     actions: "Acciones"
     edit: "Modificar"
