@@ -1,4 +1,6 @@
-<% content_tag :table do %>
+<% content_tag :table, :id => 'printers', :class => 'tablesorter',
+:border => '0', :cellpadding => '0', :cellspacing => '1' do %>
+<thead>
   <% content_tag :tr do %>
     <%= content_tag('th', t('printers.sn'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('printers.mark') + '/' + t('printers.model')) %>
@@ -8,7 +10,8 @@
     <%= content_tag('th', t('printers.bill')) %>
     <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end %>
-
+</thead>
+<tbody>
 <% for printer in @printers %>
   <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', printer.serialnumber, options = {:nowrap => true}) %>
@@ -24,5 +27,13 @@
     <%= content_tag('td', link_to(t('common_actions.destroy'), printer, :confirm => 'Are you sure?', :method => :delete)) %>
   </tr>
 <% end %>
+</tbody>
 <% end -%>
 
+
+<script type="text/javascript" charset="utf-8">
+  jQuery(document).ready(function()
+  {
+  jQuery("#printers").tablesorter();
+  });
+</script>

@@ -1,4 +1,6 @@
-<% content_tag :table do %>
+<% content_tag :table, :id => 'screens', :class => 'tablesorter',
+:border => '0', :cellpadding => '0', :cellspacing => '1' do %>
+<thead>
   <% content_tag :tr do %>
     <%= content_tag('th', t('screens.sn'), options = {:nowrap => true}) %>
     <%= content_tag('th', t('screens.mark') + '/' + t('screens.model')) %>
@@ -8,6 +10,8 @@
     <%= content_tag('th', t('screens.bill')) %>
     <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
   <% end -%>
+</thead>
+<tbody>
   <% for screen in @screens %>
    <tr  class="<%= cycle("rowA","rowB") %>">
     <%= content_tag('td', screen.serialnumber, options = {:nowrap => true}) %>
@@ -30,5 +34,12 @@
 
    </tr>
    <% end %>
+</tbody>
 <% end -%>
 
+<script type="text/javascript" charset="utf-8">
+  jQuery(document).ready(function()
+  {
+  jQuery("#screens").tablesorter();
+  });
+</script>
