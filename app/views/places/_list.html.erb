@@ -1,7 +1,9 @@
 <a href="#" onclick="Effect.toggle('toggle_appear_table_list_places', 'appear'); return false;">
   <%= t('common_actions.show_hide') %></a>
 <% content_tag :div, :id => 'toggle_appear_table_list_places' do %>
-    <% content_tag :table do %>
+    <% content_tag :table, :id => 'places', :class => 'tablesorter',
+    :border => '0', :cellpadding => '0', :cellspacing => '1'  do %>
+<thead>
       <% content_tag :tr do %>
         <%= content_tag('th', t('places.name')) %>
         <%= content_tag('th', t('places.description')) %>
@@ -11,6 +13,8 @@
         <%= content_tag('th', t('places.workstations')) %>
         <%= content_tag('th', t('common_actions.actions'), options = {:colspan => 3}) %>
       <% end -%>
+</thead>
+<tbody>
       <% for place in @places %>
       <tr  class="<%= cycle("rowA","rowB") %>">
         <%= content_tag('td', link_to(place.title, place), options = {:nowrap => true}) %>
@@ -25,6 +29,14 @@
             :confirm => 'Are you sure?', :method => :delete)) %>
       </tr>
       <% end %>
+</tbody>
     <% end -%>
 
 <% end -%>
+
+<script type="text/javascript" charset="utf-8">
+  jQuery(document).ready(function()
+  {
+  jQuery("#places").tablesorter();
+  });
+</script>
