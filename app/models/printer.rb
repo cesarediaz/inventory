@@ -6,8 +6,7 @@ class Printer < ActiveRecord::Base
 
   #################################################
   # VALIDATIONS
-  validates_uniqueness_of :serialnumber
-  validates_presence_of :serialnumber, :model_id, :place_id, :mark_id
+  validates_presence_of :model_id, :place_id, :mark_id
 
   #################################################
   # Named Scope
