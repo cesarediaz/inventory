@@ -11,7 +11,7 @@
  <% end %>
 <% for harddisk in @harddisks %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td',harddisk.serialnumber, options = {:nowrap => true}) %>
+    <%= content_tag('td',harddisk.serialnumber.nil? ? '-' : harddisk.serialnumber, options = {:nowrap => true}) %>
     <%= content_tag('td', harddisk.model_id.nil? ? '-' : harddisk.description_model, options = {:nowrap => true}) %>
     <%= content_tag('td',harddisk.size, options = {:nowrap => true}) rescue nil  %>
     <%= content_tag('td',harddisk.unit.nil? ? '-' : harddisk.unit.to_s,

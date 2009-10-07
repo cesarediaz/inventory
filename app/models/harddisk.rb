@@ -7,8 +7,7 @@ class Harddisk < ActiveRecord::Base
 
   #################################################
   # VALIDATIONS
-  validates_uniqueness_of :serialnumber
-  validates_presence_of :serialnumber, :size, :mark_id, :model_id
+  validates_presence_of :size, :mark_id, :model_id
   validates_numericality_of   :size
 
   def description_model
