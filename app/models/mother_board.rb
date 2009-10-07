@@ -7,9 +7,7 @@ class MotherBoard < ActiveRecord::Base
 
   #################################################
   # VALIDATIONS
-  validates_uniqueness_of :serialnumber
-  validates_presence_of :model_id, :serialnumber, :mark_id
-  validates_size_of :serialnumber, :within => 8..15
+  validates_presence_of :model_id, :mark_id
 
   def description_model
     "#{self.mark.name} #{self.model.description}" unless self.model_id.nil?

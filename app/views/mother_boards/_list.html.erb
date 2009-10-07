@@ -9,7 +9,7 @@
 
    <% for mother_board in @mother_boards %>
      <tr  class="<%= cycle("rowA","rowB") %>">
-       <%= content_tag('td',mother_board.serialnumber, options = {:nowrap => true}) %>
+       <%= content_tag('td',mother_board.serialnumber.nil? ? '-' : mother_board.serialnumber, options = {:nowrap => true}) %>
        <%= content_tag('td', mother_board.model_id.nil? ? '-' : mother_board.description_model, options = {:nowrap => true}) %>
        <%= content_tag('td',mother_board.computer.nil? ? '-': link_to(mother_board.computer.name , '/computers/' +
            mother_board.computer.id.to_s), options = {:nowrap => true}) %>
