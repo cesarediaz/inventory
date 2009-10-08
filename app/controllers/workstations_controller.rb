@@ -158,7 +158,7 @@ class WorkstationsController < ApplicationController
     @place_name = Place.find(params[:place_id]).title rescue nil
     @place_id = params[:place_id] rescue nil
 
-    @places = Place.all
+    @places = Place.find(:all, :select => 'id, title', :order => 'title ASC')
     @computers = Computer.list_for_place_are_not_part_a_workstation(params[:place_id])
     @screens = Screen.list_for_place_are_not_part_a_workstation(params[:place_id])
     @printers = Printer.list_for_place_are_not_part_a_workstation(params[:place_id])
