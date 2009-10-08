@@ -9,7 +9,7 @@
     <% end -%>
 <% for dvd in @dvds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', dvd.serialnumber, options = {:nowrap => true} ) %>
+    <%= content_tag('td', dvd.serialnumber.empty? ? '-' : dvd.serialnumber, options = {:nowrap => true} ) %>
     <%= content_tag('td', dvd.model_id.nil? ? '-' : dvd.description_model, options = {:nowrap => true}) %>
     <%= content_tag('td', check(dvd.writable) ) %>
     <%= content_tag('td', dvd.computer.nil? ? '-': link_to(dvd.computer.name , 'computers/' + dvd.computer.id.to_s),

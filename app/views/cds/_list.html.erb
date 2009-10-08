@@ -9,7 +9,7 @@
   <% end -%>
 <% for cd in @cds %>
   <tr  class="<%= cycle("rowA","rowB") %>">
-    <%= content_tag('td', cd.serialnumber, options = {:nowrap => true}) %>
+    <%= content_tag('td', cd.serialnumber.empty? ? '-' : cd.serialnumber , options = {:nowrap => true}) %>
     <%= content_tag('td', cd.model_id.nil? ? '-' : cd.description_model, options = {:nowrap => true}) %>
     <%= content_tag('td', check(cd.writable)) %>
     <%= content_tag('td', link_to(cd.computer.name , 'computers/' + cd.computer.id.to_s),

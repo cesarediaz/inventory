@@ -6,8 +6,7 @@ class Cd < ActiveRecord::Base
 
   #################################################
   # VALIDATIONS
-  validates_uniqueness_of :serialnumber
-  validates_presence_of :serialnumber, :model_id, :mark_id
+  validates_presence_of :model_id, :mark_id
 
   def description_model
     "#{self.mark.name} #{self.model.description}" unless self.model_id.nil?
