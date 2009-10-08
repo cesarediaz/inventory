@@ -47,7 +47,7 @@ Pc
 
 <% content_tag :div, :id => "quarter" do %>
 <%= t('cds.mark') %>
-<%= collection_select 'cd', 'mark_id', Mark.find(:all), 'id', 'name',
+<%= collection_select 'cd', 'mark_id', Mark.find(:all, :select => 'id, name', :order => 'name ASC'), 'id', 'name',
     {:prompt => true} %>
 <% end -%>
 

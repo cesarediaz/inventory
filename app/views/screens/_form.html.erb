@@ -33,7 +33,7 @@ t('help_phrases.in_workstation'),'quarter', 'screen')%>
 
   <%= t('screens.mark') %>
   <div id="quarter" >
-    <%= collection_select 'screen', 'mark_id', Mark.find(:all), 'id', 'name',
+    <%= collection_select 'screen', 'mark_id', Mark.find(:all, :select => 'id, name', :order => 'name ASC'), 'id', 'name',
         {:prompt => true} %>
   </div >
 

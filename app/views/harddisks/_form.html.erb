@@ -50,7 +50,7 @@
 
   <%= t('harddisks.mark') %>
   <% content_tag :div, :id => "quarter" do %>
-  <%= collection_select 'harddisk', 'mark_id', Mark.find(:all), 'id', 'name',
+  <%= collection_select 'harddisk', 'mark_id', Mark.find(:all, :select => 'id, name', :order => 'name ASC'), 'id', 'name',
       {:prompt => true} %>
   <% end -%>
 

@@ -52,7 +52,7 @@ Pc:
 
 <% content_tag :div, :id => "quarter" do %>
 <%= t('memories.mark') %>
-<%= collection_select 'memory', 'mark_id', Mark.find(:all), 'id', 'name',
+<%= collection_select 'memory', 'mark_id', Mark.find(:all, :select => 'id, name', :order => 'name ASC'), 'id', 'name',
     {:prompt => true} %>
 <% end -%>
 
