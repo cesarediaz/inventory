@@ -57,7 +57,7 @@
 
   <% if not @computer.is_part_of_a_workstation %>
   <div id="quarter" >
-    <%= collection_select 'computer', 'place_id', Place.find(:all), 'id', 'title',
+    <%= collection_select 'computer', 'place_id', Place.find(:all, :select => 'id, title', :order => 'title ASC'), 'id', 'title',
     {:prompt => true}, :tabindex => '7' %>
   </div>
   <% end %>
