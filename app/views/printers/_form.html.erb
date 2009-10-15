@@ -32,7 +32,7 @@
   <% end %>
 
 
-  <%= t('printers.sn') %>
+  <%= t('printers.mark') %>
   <div id="quarter" >
     <%= collection_select 'printer', 'mark_id', Mark.find(:all, :select => 'id, name', :order => 'name ASC'), 'id', 'name',
         {:prompt => true} %>
