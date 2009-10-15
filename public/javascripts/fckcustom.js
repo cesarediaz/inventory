@@ -1,5 +1,6 @@
 // CHANGE FOR APPS HOSTED IN SUBDIRECTORY
-FCKRelativePath = '/apps/inventory';
+FCKRelativePath = '';
+
 // DON'T CHANGE THESE
 FCKConfig.LinkBrowserURL = FCKConfig.BasePath + 'filemanager/browser/default/browser.html?Connector='+FCKRelativePath+'/fckeditor/command';
 FCKConfig.ImageBrowserURL = FCKConfig.BasePath + 'filemanager/browser/default/browser.html?Type=Image&Connector='+FCKRelativePath+'/fckeditor/command';

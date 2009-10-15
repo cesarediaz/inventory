@@ -184,6 +184,7 @@ en:
     not: "Not"
     bill: "Bill"
     inventory_register: 'Inventory register'
+    description: 'Description'
 
   places:
     title: "Place"

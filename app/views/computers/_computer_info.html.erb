@@ -53,6 +53,13 @@
     <% end %>
     <!-- END -->
 
+    <!-- START -   Description information -->
+    <% content_tag 'div' do %>
+      <b><%= t('computers.description') %></b>
+      <%= @computer.description  rescue nil %>
+    <% end %>
+    <!-- END -->
+
     <br>
     <%= content_tag('div', t('computers.available') + ':' + check(@computer.available)) %>
 <% end -%>

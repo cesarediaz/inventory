@@ -176,6 +176,7 @@ es:
     not: "No"
     bill: "Recibo"
     inventory_register: 'Registro inventario'
+    description: 'Descripción de estado'
 
   places:
     title: "Lugar"

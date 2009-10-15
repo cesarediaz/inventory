@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
   :'es-AR' => {
 
@@ -182,6 +183,7 @@
     :not => "No",
     :bill => "Factura",
     :inventory_register => 'Registro inventario',
+    :description => 'Descripción acerca de la computadora',
   },
   :places => {
     :title => "Lugar",

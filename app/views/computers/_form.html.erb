@@ -11,12 +11,13 @@
 <!--      You should have received a copy of the GNU General Public License -->
 <!--      along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 
+<%= javascript_include_tag :fckeditor %>
+
 <%= advice( @computer.is_part_of_a_workstation,t('common_actions.hide_advice'),
  t('help_phrases.in_workstation'),'quarter', 'computer')%>
 
 <% form_for(@computer) do |f| %>
 <%= f.error_messages %>
-
 
     <%= t('computers.name') %>
     <%= f.text_field :name, :tabindex => '1', :focus => true %>
@@ -71,6 +72,14 @@
   <% 2.times do %>
   <br>
   <%  end %>
+
+  <%= t('computers.description') %>
+  <%= fckeditor_textarea("computer", "description", :toolbarSet => 'Simple', :width => '100%', :height => '200px') %>
+
+  <% 2.times do %>
+  <br>
+  <%  end %>
+
 
   <% if action_name == 'new' %>
   <%= f.submit t('computers.create'), :tabindex => '9' %>

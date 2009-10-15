@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090504134832) do
+ActiveRecord::Schema.define(:version => 20091015220021) do
 
   create_table "bills", :force => true do |t|
     t.string   "code"
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20090504134832) do
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
     t.string   "inventory_register"
+    t.text     "descripton"
+    t.text     "description"
   end
 
   create_table "dvds", :force => true do |t|
