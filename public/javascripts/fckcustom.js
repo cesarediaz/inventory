@@ -30,15 +30,12 @@ FCKConfig.ToolbarSets["Easy"] = [
 FCKConfig.ToolbarSets["Simple"] = [
         ['Source','-','-','Templates'],
         ['Cut','Copy','Paste','PasteWord','-','Print','SpellCheck'],
-        ['Undo','Redo','-','Find','Replace','-','SelectAll'],
+        ['Undo','Redo','-','Find','Replace','-','SelectAll','Table','Rule','Smiley'],
         '/',
         ['Bold','Italic','Underline','StrikeThrough','-','Subscript','Superscript'],
         ['OrderedList','UnorderedList','-','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
         ['Link','Unlink'],
-        '/',
-        ['Image','Table','Rule','Smiley'],
-        ['FontName','FontSize'],
-        ['TextColor','BGColor'],
-        ['-','About']
+	['FontName','FontSize'],
+        ['TextColor','BGColor']
 ] ;

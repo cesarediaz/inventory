@@ -18,73 +18,82 @@
 
 <% form_for(@computer) do |f| %>
 <%= f.error_messages %>
+<table>
+  <tr>
+    <td>
+      <%= t('computers.name') %>
+      <%= f.text_field :name, :tabindex => '1', :focus => true %>
 
-    <%= t('computers.name') %>
-    <%= f.text_field :name, :tabindex => '1', :focus => true %>
+      <% 2.times do %>
+      <br>
+      <%  end %>
 
-    <% 2.times do %>
-    <br>
-    <%  end %>
+      <%= f.label 'mac' %>
+      <%= f.text_field :mac, :tabindex => '2' %>
 
-    <%= f.label 'mac' %>
-    <%= f.text_field :mac, :tabindex => '2' %>
+      <% 2.times do %>
+      <br>
+      <% end %>
 
-    <% 2.times do %>
-    <br>
-    <% end %>
+      <%= f.label 'ip' %>
+      <%= f.text_field :ip, :tabindex => '3' %>
 
-    <%= f.label 'ip' %>
-    <%= f.text_field :ip, :tabindex => '3' %>
+      <% 2.times do %>
+      <br>
+      <% end %>
 
-    <% 2.times do %>
-    <br>
-    <% end %>
+      <%= t('computers.inventory_register') %>
+      <%= f.text_field :inventory_register, :tabindex => '4' %>
 
-    <%= t('computers.inventory_register') %>
-    <%= f.text_field :inventory_register, :tabindex => '4' %>
+      <% 2.times do %>
+      <br>
+      <% end %>
 
-    <% 2.times do %>
-    <br>
-    <% end %>
+      <%= t('computers.available') %>
+      <%= t('computers.y') %> <%= radio_button('computer', 'available', 't', :tabindex => '5') %>
+      <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f', :tabindex => '6') %>
 
-    <%= t('computers.available') %>
-    <%= t('computers.y') %> <%= radio_button('computer', 'available', 't', :tabindex => '5') %>
-    <%= t('computers.not') %> <%= radio_button('computer', 'available', 'f', :tabindex => '6') %>
-
-    <% 2.times do %>
-    <br>
-    <%  end %>
-
-
-  <% if not @computer.is_part_of_a_workstation %>
-  <div id="quarter" >
-    <%= collection_select 'computer', 'place_id', Place.find(:all, :select => 'id, title', :order => 'title ASC'), 'id', 'title',
-    {:prompt => true}, :tabindex => '7' %>
-  </div>
-  <% end %>
-
-  <div id="quarter" >
-    <%= t 'bill.code' %>
-    <%= collection_select 'computer', 'bill_id', Bill.find(:all), 'id', :company_bill,
-        {:prompt => true}, :tabindex => '8' %>
-  </div >
-
-  <% 2.times do %>
-  <br>
-  <%  end %>
-
-  <%= t('computers.description') %>
-  <%= fckeditor_textarea("computer", "description", :toolbarSet => 'Simple', :width => '100%', :height => '200px') %>
-
-  <% 2.times do %>
-  <br>
-  <%  end %>
+      <% 2.times do %>
+      <br>
+      <%  end %>
 
 
-  <% if action_name == 'new' %>
-  <%= f.submit t('computers.create'), :tabindex => '9' %>
-  <% else %>
-  <%= f.submit t('computers.edit'), :tabindex => '10' %>
-  <% end %>
+      <% if not @computer.is_part_of_a_workstation %>
+      <div id="quarter" >
+	<%= collection_select 'computer', 'place_id', Place.find(:all, :select => 'id, title', :order => 'title ASC'), 'id', 'title',
+	{:prompt => true}, :tabindex => '7' %>
+      </div>
+      <% end %>
+
+      <div id="quarter" >
+	<%= t 'bill.code' %>
+	<%= collection_select 'computer', 'bill_id', Bill.find(:all), 'id', :company_bill,
+            {:prompt => true}, :tabindex => '8' %>
+      </div >
+
+      <% 2.times do %>
+      <br>
+      <%  end %>
+    </td>
+    <td>
+
+
+      <%= t('computers.description') %>
+      <%= fckeditor_textarea("computer", "description", :toolbarSet => 'Easy', :width => '100%', :height => '300px') %>
+      <% 2.times do %>
+      <br>
+      <%  end %>
+
+
+      <% if action_name == 'new' %>
+      <%= f.submit t('computers.create'), :tabindex => '9' %>
+      <% else %>
+      <%= f.submit t('computers.edit'), :tabindex => '10' %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+
 
 <% end %>
