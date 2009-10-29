@@ -21,7 +21,7 @@
   <% end %>
   <%= t('marks.mark') %>
   <div id="quarter" >
-    <%= collection_select 'model', 'mark_id', Mark.find(:all, :select => 'name,id'), 'id', 'name',
+    <%= collection_select 'model', 'mark_id', Mark.find(:all, :select => 'name,id', :order => 'name ASC'), 'id', 'name',
         {:prompt => true} %>
   </div>
 
