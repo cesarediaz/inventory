@@ -49,27 +49,10 @@ describe Computer do
 
 
   it "should be valid " do
-    computer = create_computer({:name => 'name', :ip => '123.232.23.32', :mac => '13:23:43:15:53:30'})
+    computer = create_computer({:name => 'name', :ip => '123.232.23.32', :mac => '13:23:43:15:53:30', :place_id => 3})
     computer.should be_valid
     computer.errors.should be_empty
   end
 
-  it "should not be valid with the same mac data" do
-    computer1 = create_computer({:name => 'name1', :ip => '123.232.23.31', :mac => '13:23:43:15:53:30'})
-    computer2 = create_computer({:name => 'name2', :ip => '123.232.23.32', :mac => '13:23:43:15:53:30'})
-    computer2.should have(1).errors_on(:mac)
-  end
-
-  it "should not be valid with the same ip data" do
-    computer1 = create_computer({:name => 'name1', :ip => '123.232.23.31', :mac => '13:23:43:15:53:30'})
-    computer2 = create_computer({:name => 'name2', :ip => '123.232.23.31', :mac => '13:23:43:15:53:31'})
-    computer2.should have(1).errors_on(:ip)
-  end
-
-  it "should not be valid with the same name data" do
-    computer1 = create_computer({:name => 'name1', :ip => '123.232.23.30', :mac => '13:23:43:15:53:30'})
-    computer2 = create_computer({:name => 'name1', :ip => '123.232.23.31', :mac => '13:23:43:15:53:31'})
-    computer2.should have(1).errors_on(:name)
-  end
 
 end
