@@ -8,6 +8,7 @@
 <br />
 <%= render :partial => 'list' %>
 
+<%= will_paginate @printers %>
 <br />
 
 <%= link_to t('common_actions.create'), new_printer_path %>
