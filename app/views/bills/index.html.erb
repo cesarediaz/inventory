@@ -1,5 +1,6 @@
 <%= render :partial => 'list' %>
 
+<%= will_paginate @bills %>
 <br />
 
 <%= link_to t('bill.new'), new_bill_path %>
