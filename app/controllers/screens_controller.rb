@@ -23,6 +23,7 @@ class ScreensController < ApplicationController
 
   before_filter :login_required
   auto_complete_for :screen, :serialnumber
+  auto_complete_for :screen, :inventory_register
 
   # GET /screens
   # GET /screens.xml
@@ -121,6 +122,9 @@ class ScreensController < ApplicationController
   def search
     if not params[:screen][:serialnumber].nil?
       search_by('screens', 'Screen', params[:screen][:serialnumber], 'serialnumber', 10)
+    end
+    if not params[:screen][:inventory_register].nil?
+      search_by('screens', 'Screen', params[:screen][:inventory_register], 'inventory_register', 10)
     end
   end
 
