@@ -34,7 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :screens, :collection => {:auto_complete_for_screen_serialnumber => :get, :auto_complete_for_screen_inventory_register => :get, :xls_screens => :get}
 
   map.resources :printers, :collection => {:auto_complete_for_printer_serialnumber =>
-    :get, :xls_printers => :get}
+    :get, :auto_complete_for_printer_inventory_register => :get, :xls_printers => :get}
 
   map.resources :places, :collection => {:auto_complete_for_place_title => :get, :list => :get,
     :stats => :get, :xls => :get, :xls_places => :get, :pdf => :get }

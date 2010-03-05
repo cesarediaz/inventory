@@ -8,4 +8,11 @@
     <td><%= submit_tag   t 'search.label' %></td>
   </tr>
   <% end %>
+<tr>
+    <% form_tag :action => 'search' do %>
+    <td><label><%= t('printers.inventory_register') %></label></td>
+    <td><%= text_field_with_auto_complete :printer, :inventory_register, {:size => 20}, {:method => :get} %></td>
+    <td><%= submit_tag   t 'search.label' %></td>
+  </tr>
+  <% end %>
 </table>

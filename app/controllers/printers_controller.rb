@@ -22,6 +22,7 @@ class PrintersController < ApplicationController
   include ReportSystem
   before_filter :login_required
   auto_complete_for :printer, :serialnumber
+  auto_complete_for :printer, :inventory_register
 
   # GET /printers
   # GET /printers.xml
@@ -121,6 +122,9 @@ class PrintersController < ApplicationController
   def search
     if not params[:printer][:serialnumber].nil?
       search_by('printers', 'Printer', params[:printer][:serialnumber], 'serialnumber', 10)
+    end
+    if not params[:printer][:inventory_register].nil?
+      search_by('printers', 'Printer', params[:printer][:inventory_register], 'inventory_register', 10)
     end
     flash[:notice] = t('phrases.result_search')
   end
