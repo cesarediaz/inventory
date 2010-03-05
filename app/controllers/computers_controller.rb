@@ -34,6 +34,7 @@ class ComputersController < ApplicationController
   auto_complete_for :computer, :name
   auto_complete_for :computer, :ip
   auto_complete_for :computer, :mac
+  auto_complete_for :computer, :inventory_register
 
   def index
     @computers = all_computers
@@ -139,6 +140,11 @@ class ComputersController < ApplicationController
     if not params[:computer][:mac].nil?
       search_by('computers', 'Computer', params[:computer][:mac], 'mac', 10)
       flash[:notice] = t('phrases.result_search') + t('phrases.by') + 'mac.'
+    end
+
+    if not params[:computer][:inventory_register].nil?
+      search_by('computers', 'Computer', params[:computer][:inventory_register], 'inventory_register', 10)
+      flash[:notice] = t('phrases.result_search') + t('phrases.by') + t('computers.inventory_register')
     end
   end
 

@@ -39,6 +39,13 @@
            <%= content_tag('td', submit_tag(t('search.label')), :tabindex => '6') %>
          <% end %>
        <% end %>
-   <% end %>
+       <% content_tag :tr do %>
+         <% form_tag :action => 'search' do %>
+           <%= content_tag('td', t('computers.inventory_register')) %>
+           <%= content_tag('td',text_field_with_auto_complete(:computer, :inventory_register, {:size => 20, :accesskey => 'r', :tabindex => '5'}, {:method => :get})) %>
+           <%= content_tag('td', submit_tag(t('search.label')), :tabindex => '6') %>
+         <% end %>
+       <% end %>
+     <% end %>
   <% end %>
 <% end %>
