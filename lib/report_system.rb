@@ -211,6 +211,8 @@ module ReportSystem
        page.write(row,7,@cds)
        page.write(row,8,@dvds)
        page.write(row,9,object.inventory_register) rescue nil
+       page.write(row,10, object.place.title)
+
        row += 1
      end
   end

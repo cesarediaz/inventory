@@ -179,7 +179,7 @@ class ComputersController < ApplicationController
                'computers',
                "[t('computers.name'),'mac','ip',t('computers.available'),
                  'montherboard', t('computers.harddisk'), t('computers.memory'),
-                 'cds', 'dvds', t('computers.inventory_register')]",
+                 'cds', 'dvds', t('computers.inventory_register'), t('computers.place')]",
                params[:places].nil? ? 'find' : params[:places],
                params[:places].nil? ? '(:all)' : '(' + params[:id] + ')'
                )
