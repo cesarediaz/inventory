@@ -15,15 +15,5 @@ describe Memory do
     memory.should have(1).errors_on(:model_id)
   end
 
-  it "should not create a new instance given invalid attributes without a serial number" do
-    memory = Memory.create({:model_id => 1, :serialnumber => nil })
-    memory.should have(1).errors_on(:serialnumber)
-  end
-
-  it "should not create a new instance given two equals attributes of serial number" do
-    memory1 = Memory.create({:model_id => 1, :serialnumber => '1234567890', :mark_id => 1 })
-    memory2 = Memory.create({:model_id => 2, :serialnumber => '1234567890', :mark_id => 2 })
-    memory2.should have(1).errors_on(:serialnumber)
-  end
 
 end
