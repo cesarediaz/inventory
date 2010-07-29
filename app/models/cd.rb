@@ -9,6 +9,6 @@ class Cd < ActiveRecord::Base
   validates_presence_of :model_id, :mark_id
 
   def description_model
-    "#{self.mark.name} #{self.model.description}" unless self.model_id.nil?
+    "#{self.mark.name} #{self.model.description}" unless (self.model_id.nil? || self.mark.name.nil?)
   end
 end
