@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20091015220021) do
     t.boolean  "is_part_of_a_workstation", :default => false
     t.integer  "bill_id"
     t.string   "inventory_register"
-    t.text     "descripton"
     t.text     "description"
   end
 

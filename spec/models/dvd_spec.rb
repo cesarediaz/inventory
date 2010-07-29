@@ -15,15 +15,9 @@ describe Dvd do
     dvd.should have(1).errors_on(:model_id)
   end
 
-  it "should not create a new instance given invalid attributes without a serial number" do
+  it "should create a new instance given invalid attributes without a serial number" do
     dvd = Dvd.create({:model_id => 1, :serialnumber => nil, :mark_id => 3  })
-    dvd.should have(1).errors_on(:serialnumber)
-  end
-
-  it "should not create a new instance given two equals attributes of serial number" do
-    dvd1 = Dvd.create({:model_id => 1, :serialnumber => '1234567890', :mark_id => 3  })
-    dvd2 = Dvd.create({:model_id => 'Dell', :serialnumber => '1234567890', :mark_id => 3  })
-    dvd2.should have(1).errors_on(:serialnumber)
+    dvd.should have(0).errors_on(:serialnumber)
   end
 
 end
